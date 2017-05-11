@@ -1,0 +1,80 @@
+/**********************
+VARIABLE
+**********************/
+
+
+
+$font: "Exo";
+$color-1: #00B3D3;
+$color-2: #002B4C;
+$color-3: #00BB96;
+$color-4: #D9E021;
+$color-5: #B4CD36;
+
+$text-color: #141412;
+$link-color :#000;
+$link-hover :#000;
+
+
+
+$alert-yellow: #ebe16f;
+$alert-red: #fbe3e4;
+$alert-green: #e6efc2;
+$alert-blue: #d5edf8;
+$bones-pink: #f01d4f;
+$black: #000;
+$white: #fff;
+$brown: #534741;
+$light-gray: #f8f9fa;
+$gray: #eaedf2;
+
+$meta-gray: #9fa6b4;
+$tan: #eceee5;
+
+
+$alert-yellow:      #ebe16f;
+$alert-red:         #fbe3e4;
+$alert-green:       #e6efc2;
+$alert-blue:        #d5edf8;
+
+$black:             #323944;
+$white:             #fff;
+
+$light-gray:        #f8f9fa;
+$gray:              #201C1B;
+$text-color:        #5c6b80;
+$meta-gray:         #9fa6b4;
+
+$tan:               #eceee5;
+
+$green:             #7dd667;
+
+$bones-pink:        #f01d4f;
+$blue:              #2980b9;
+
+$border-color:      #ccc;
+$disabled-gray:     #cfcfcf;
+
+
+/* Tools */
+@import "tools/mixins";
+
+/* Base */
+@import "base/base";
+@import "base/normalize";
+
+/* Layout */
+@import "layout/grid";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/sidebar";
+
+/* Modules */
+@import "modules/btn";
+@import "modules/input";
+@import "modules/form";
+@import "modules/home";
+@import "modules/form";
+
+
+

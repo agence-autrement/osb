@@ -1,0 +1,349 @@
+/***********************
+GLOBAL
+***********************/
+
+#content {
+  margin-left:200px;
+  overflow: hidden;
+  @include transition(0.6s);
+  &.active{
+    margin-left: 400px;
+  }
+}
+
+.contenu_grid{
+  max-width: 1600px;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/***********************
+LANDING
+***********************/
+
+
+#landing {
+  height: 90vh;
+  overflow: hidden;
+  background-image: url('../images/front.jpg');
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.top_landing{
+  width: 100%;
+  height: 146px;
+  background-color: rgba(0,0,0,0.5);
+  //background-image: url('../images/bg_top.png');
+}
+
+#calendrier_top{
+  //overflow: hidden;
+  margin: 0;
+  li{
+    float: left;
+    margin-right: 45px;
+    width: 231px;
+    position: relative;
+    &:hover{
+      cursor: pointer;
+      .img_hover{
+        height: 200px;
+      }
+    }
+  }
+}
+
+.left_date{
+  width: 75%;
+  float: left;
+  color: white;
+  padding-left: 12px;
+  padding-top: 25px;
+}
+
+.right_date{
+  width: 25%;
+  float: left;
+  color: white;
+  text-align: center;
+  position: relative;
+  padding-top: 25px;
+  &:before{
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: -15px;
+    height: 50px;
+    width: 1px;
+    background-color: white;
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    transform: rotate(30deg);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711)";
+    filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711);
+  }
+}
+
+.type{
+  font-size: 10px;
+  color: #FFE500;
+}
+
+.titre{
+  font-size: 15px;
+}
+
+.artiste{
+  font-size: 12px;
+  font-style: italic;
+}
+
+.date_jours{
+  font-size: 22px;
+}
+
+.date_mois{
+  font-size: 10px;
+}
+
+.lieu{
+  font-size: 10px;
+  color: #FFE500;
+  font-style: italic;
+}
+
+.img_hover {
+  background-image: url('../images/image1.jpg');
+  -webkit-background-size: auto 200px;
+  background-size: auto 200px;
+  width: 100%;
+  height: 0px;
+  //overflow: hidden;
+  @include transition(0.3s);
+
+}
+
+.savoir_plus_calendrier{
+  padding-top: 126px;
+}
+
+/***********************
+PLUG-IN CALENDAR
+***********************/
+
+#plugin_calendar {
+  width: 100%;
+  //height: 195px;
+  //text-align: center;
+  background-color: white;
+  font-size: 15px;
+  ul{
+    overflow: hidden;
+    li{
+      float: left;
+      width: 230px;
+      margin-right: 50px;
+    }
+  }
+}
+
+/***********************
+CALL TO ACTION
+***********************/
+
+.call_to_action {
+  width: 100%;
+  height: 186px;
+  background-color: #A5C9E5;
+  overflow: hidden;
+  position: relative;
+  z-index: 500;
+}
+
+#left_callto{
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  //background-image: url('../images/image1.jpg');
+  -webkit-background-size: 430px 186px;
+  background-size: 430px 186px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  div:nth-of-type(1){
+    font-size: 15px;
+    color: black;
+    font-weight: 400;
+  }
+  div:nth-of-type(2){
+    font-size: 32px;
+    color: black;
+    font-weight: 300;
+  }
+  div{
+    line-height: 22px;
+  }
+  .btn_savoir{
+    border: thin black solid;
+    padding: 2px 10px;
+    width: 100px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin: 15px auto;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+}
+
+/************ Slider Style
+
+#slider_callto {
+  width: 350px;
+  height: 100%;
+  float: right;
+  position: relative;
+}
+
+.previous_btn{
+  position: absolute;
+  height: 33px;
+  width: 10px;
+  background-image: url("../images/left_slide.svg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  left: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-indent: -5000px;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.next_btn{
+  position: absolute;
+  height: 33px;
+  width: 10px;
+  background-image: url("../images/right_slide.svg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  right: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-indent: -5000px;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.slideshow {
+  width: 350px;
+  height: 186px;
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+  overflow: hidden;
+  ul {
+    height: 186px;
+    padding:0;
+    margin: 0;
+    li {
+      float: left;
+      list-style-type: none;
+      text-align: center;
+      height: 100%;
+      img{
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+}
+
+**********************/
+
+/***********************
+ARTICLES
+***********************/
+
+#articles{
+  //height: 370px;
+  width: 100%;
+  padding: 35px;
+  overflow: hidden;
+}
+
+#first_article{
+  height: 290px;
+  width: calc(100% - 310px);
+  margin-right: 20px;
+  border: 1px solid lightgrey;
+  float: left;
+  overflow: hidden;
+}
+
+.first_article_thumbnail{
+  float: left;
+  background-image: url('../images/loutre.jpg');
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 50%;
+  height: 100%;
+}
+
+.first_article_content{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+#second_article{
+  height: 290px;
+  width: 290px;
+  border: 1px solid lightgrey;
+  float: left;
+}
+
+.second_article_thumbnail{
+  background-image: url('../images/loutre.jpg');
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 50%;
+}
+
+.second_article_content{
+  width: 100%;
+  height: 50%;
+}
+
+
+/***********************
+RESPONSIVE
+***********************/
+
+.contenu_grid{
+  max-width: 1600px;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/*1024px*/
+
+
+@media screen and (max-width: 1024px) {
+
+  #content{
+    margin-left: 0;
+  }
+}
