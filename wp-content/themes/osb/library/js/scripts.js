@@ -160,6 +160,5 @@ jQuery(document).ready(function($) {
 		$('#content').toggleClass('active');
 		$('.footer').toggleClass('active');
 	});
-
-
+	
 }); /* end of as page load scripts */

@@ -32,6 +32,7 @@
 		<?php wp_head(); ?>
 		<?php // end of wordpress head ?>
 		<?php // drop Google Analytics Here ?>
+		<?php // drop Google Analytics Here hello ?>
 		<?php // end analytics ?>
 	</head>
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
