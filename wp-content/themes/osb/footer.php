@@ -32,7 +32,7 @@
 					lastSlide,
 					lastCommand,
 					gotoslide;
-				visuelActif 	= 2;
+				visuelActif 	= 
 				nbVisuels 		= $('.slideshow .slider li').length;
 				firstSlide 		= $('.slideshow .slider li:first-child').html();
 				lastSlide 		= $('.slideshow .slider li:last-child').html();
