@@ -1,0 +1,40 @@
+#datepicker{
+  height: 216px;
+}
+.ui-datepicker {
+  width: 216px;
+  height: auto;
+  margin: 5px auto 0;
+  background-color: #EFEDEC;
+}
+
+.ui-datepicker-header{
+  .ui-datepicker-title{
+    text-align: center;
+  }
+}
+
+.ui-datepicker-calendar{
+  width: 100%;
+  tr{
+    height: 28px;
+    td{
+      text-align: center;
+      border: white 1px solid;
+      height: 100%;
+      a{
+        font-size: 12px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding-top: 4px;
+        @include transition(0.2s);
+        &:hover{
+          text-decoration: none;
+          font-weight: 700;
+          background-color: #FAEA2D;
+        }
+      }
+    }
+  }
+}

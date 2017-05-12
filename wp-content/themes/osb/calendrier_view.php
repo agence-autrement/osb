@@ -2,7 +2,8 @@
     <div class="contenu_grid">
         <? getInputByLieu(); ?>
         <br><br>
-        Date: <input type="text" id="datepicker" name="date" readonly>
+        <div id="datepicker"></div>
+        <input type="text" id="date_value" name="date" readonly >
         <br><br>
         <div id="resultAjax"></div>
     </div>
