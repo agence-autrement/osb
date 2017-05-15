@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
 
-
 <div id="content">
     <section id="landing">
         <div class="top_landing">
@@ -52,45 +51,26 @@
             </div>
         </div>
     </section>
-
-
-
-
-
-
     <? get_template_part('calendrier_view'); ?>
-
-
-
-
-
-
-
     <section class="call_to_action">
         <div class="contenu_grid">
             <div id="left_callto">
                <div>Entreprises, soutenez l'Orchestre</div>
                <div>Rejoignez-nous !</div>
                <a class="btn_savoir" href="###">En savoir +</a>
-            </div>
-
-            <!--
-
-            <div id="slider_callto">
-                <span class="previous_btn">left</span>
-                <span class="next_btn">right</span>
-                <div class="slideshow">
-                    <ul class="slider">
-                        <li><img src="<?php bloginfo("template_url") ?>/library/images/logo_slide.png" alt="" /></li>
-                        <li><img src="<?php bloginfo("template_url") ?>/library/images/logo_slide.png" alt="" /></li>
-                        <li><img src="<?php bloginfo("template_url") ?>/library/images/logo_slide.png" alt="" /></li>
-                        <li><img src="<?php bloginfo("template_url") ?>/library/images/logo_slide.png" alt="" /></li>
-                    </ul>
+                <div id="slider_callto">
+                    <span class="previous_btn">left</span>
+                    <span class="next_btn">right</span>
+                    <div class="slideshow">
+                        <ul class="slider">
+                            <li><img src="<?php bloginfo("template_url") ?>/library/images/logo_slide.png" alt="" /></li>
+                            <li><img src="<?php bloginfo("template_url") ?>/library/images/logo_slide.png" alt="" /></li>
+                            <li><img src="<?php bloginfo("template_url") ?>/library/images/logo_slide.png" alt="" /></li>
+                            <li><img src="<?php bloginfo("template_url") ?>/library/images/logo_slide.png" alt="" /></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
-            -->
-
         </div>
     </section>
     <section id="articles">

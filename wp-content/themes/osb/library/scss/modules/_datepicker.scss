@@ -1,21 +1,75 @@
-#datepicker{
-  height: 216px;
+/****Style Datepicker****/
+
+#plugin_calendar{
+  overflow: hidden;
+  width: 100%;
+  padding: 35px;
 }
+
+#selector{
+  margin-right: 75px;
+  height: 278px;
+  width: 216px;
+  float: left;
+}
+
+#date_value{
+  display: none;
+}
+
 .ui-datepicker {
   width: 216px;
   height: auto;
-  margin: 5px auto 0;
+  //margin: 5px auto 0;
   background-color: #EFEDEC;
+  position: relative;
 }
 
 .ui-datepicker-header{
+  height: 25px;
+  color: black;
   .ui-datepicker-title{
     text-align: center;
   }
 }
 
+.ui-datepicker-next{
+  width:10px;
+  position: absolute;
+  right: 5px;
+  top: 0px;
+  display: inline-block;
+  cursor: pointer;
+  text-indent: -5000px;
+  background-image: url("../images/calendrier-right.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.ui-datepicker-prev{
+  width:10px;
+  position: absolute;
+  left: 5px;
+  top: 0px;
+  display: inline-block;
+  cursor: pointer;
+  text-indent: -5000px;
+  background-image: url("../images/calendrier-left.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
 .ui-datepicker-calendar{
   width: 100%;
+  thead{
+    tr{
+      th{
+        span{
+          font-weight: 400;
+        }
+      }
+    }
+  }
   tr{
     height: 28px;
     td{
@@ -31,10 +85,114 @@
         @include transition(0.2s);
         &:hover{
           text-decoration: none;
-          font-weight: 700;
+          cursor: pointer;
+          font-weight: 400;
           background-color: #FAEA2D;
         }
       }
     }
   }
 }
+
+
+/****Style réponse Ajax****/
+
+#resultAjax{
+  width: calc(100% - 291px);
+  float: left;
+
+  .left_event{
+    width: 75%;
+    float: left;
+    color: white;
+    padding-left: 12px;
+    padding-top: 25px;
+  }
+
+  .right_event{
+    width: 25%;
+    float: left;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding-top: 25px;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 30px;
+      left: -15px;
+      height: 50px;
+      width: 1px;
+      background-color: white;
+      -webkit-transform: rotate(30deg);
+      -moz-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
+      -o-transform: rotate(30deg);
+      transform: rotate(30deg);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711)";
+      filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711);
+    }
+  }
+  ul {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  li{
+    width: 30%;
+    color: white;
+    background-color: darkslategrey;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 50px;
+    float: left;
+    &:last-of-type{
+      margin-right: 0;
+    }
+  }
+
+  p{
+    margin-bottom: 0;
+    &.cat_calendrier{
+      color: #FDE608;
+      font-size: 12px;
+    }
+    &.titre_calendrier{
+      font-size: 18px;
+    }
+    &.day_calendrier{
+      font-size: 25px;
+      font-weight: 500;
+    }
+    &.month_calendrier, &.lieu_calendrier{
+      font-size: 12px;
+    }
+    &:nth-of-type(3){
+      margin-bottom: 50px;
+    }
+  }
+  .link_calendrier{
+    display: block;
+    margin-bottom: 25px;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      background-color: white;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      @include transition(0.6s);
+    }
+    &:hover{
+      font-weight: inherit;
+      &:after{
+        width: 100px;
+      }
+    }
+  }
+}
+
+

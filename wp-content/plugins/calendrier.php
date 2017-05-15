@@ -1,7 +1,7 @@
 <?php
 
 /*
-Plugin Name: calendrier
+Plugin Name: Calendrier
 */
 
 /************************ Création Custom Post types ************************/
@@ -35,7 +35,6 @@ function create_event_post_type() {
     );
 }
 add_action( 'init', 'create_event_post_type' );
-
 
 /************************ Création des Customs fields ************************/
 
@@ -72,7 +71,6 @@ function add_event_details_event_meta_box()
     <?php
 }
 
-
 /************************ Sauvegarde des Customs fields ************************/
 
 function save_event_custom_fields(){
@@ -90,9 +88,7 @@ function save_event_custom_fields(){
 add_action( 'admin_init', 'add_event_meta_boxes' );
 add_action( 'save_post', 'save_event_custom_fields' );
 
-
 /************************ Fonctions Globales ************************/
-
 
 /*Fonction de filtre*/
 function array_filter_by_value($my_array, $index, $value)
@@ -110,7 +106,6 @@ function array_filter_by_value($my_array, $index, $value)
     return $new_array;
 };
 
-
 /*Remove Value from Array*/
 function removeElementWithValue($array, $key, $value){
     foreach($array as $subKey => $subArray){
@@ -120,7 +115,6 @@ function removeElementWithValue($array, $key, $value){
     }
     return $array;
 };
-
 
 /*Remove Value inferieur*/
 function removeElementWithInferiorValue($array, $key, $value){
@@ -132,19 +126,16 @@ function removeElementWithInferiorValue($array, $key, $value){
     return $array;
 };
 
-
 /*Tri par date*/
 function sortByDate($a,$b){
-    return ($a[1] <= $b[1]) ? -1 : 1;
+    return ($a['date_calendrier'] <= $b['date_calendrier']) ? -1 : 1;
 };
-
 
 /*Array sans doublon*/
 function unique_multidim_array($array, $key) {
     $temp_array = array();
     $i = 0;
     $key_array = array();
-
     foreach($array as $val) {
         if (!in_array($val[$key], $key_array)) {
             $key_array[$i] = $val[$key];
@@ -155,15 +146,12 @@ function unique_multidim_array($array, $key) {
     return $temp_array;
 };
 
-
 /*Généré Input en remontant le CF lieu*/
 function getInputByLieu(){
     $args = array('post_type' => 'events');
     $the_query = new WP_Query($args);
-
     if ( $the_query->have_posts() ) {
         $table = array();
-
         while ($the_query->have_posts()) {
             $the_query->the_post();
 
@@ -172,52 +160,14 @@ function getInputByLieu(){
             array_push($table, array($lieu[0]));
         };
         $table = unique_multidim_array($table,'0');
-
         foreach($table as $table_un => $values){
-
             foreach($values as $value){
                 echo "<input type='submit' name='ville' value='".$value."' >";
             };
-
         };
         wp_reset_postdata();
     };
 };
-
-
-/*Généré Input en remontant le CF date*/
-function getInputByDate(){
-    $args = array('post_type' => 'events');
-    $the_query = new WP_Query($args);
-
-    if ( $the_query->have_posts() ) {
-        $table = array();
-
-        while ($the_query->have_posts()) {
-            $the_query->the_post();
-
-            $post_id = get_the_ID();
-            $date = get_post_meta($post_id, 'date');
-            array_push($table, $date[0]);
-        };
-        asort($table);
-        //$table = unique_multidim_array($table,'0');
-
-        var_dump($table);
-
-
-
-        foreach($table as $value){
-            echo "<input type='submit' name='date' value='".$value."' >";
-        };
-
-
-        wp_reset_postdata();
-    };
-};
-
-
-
 
 /************************ AJAX ************************/
 
@@ -241,40 +191,46 @@ add_action( 'wp_ajax_nopriv_mon_action_date', 'mon_action_date' );
 
 /*Affichage des postes filtré par ville*/
 function mon_action() {
-
     global $_POST;
     $ville = $_POST['ville'];
-
     $args = array('post_type' => 'events');
     $the_query = new WP_Query($args);
     if ( $the_query->have_posts() ) {
         $table = array();
-
         while ($the_query->have_posts()) {
             $the_query->the_post();
-
             $post_id = get_the_ID();
+            $titre = get_the_title($post_id);
+            $link = get_the_permalink($post_id);
+            $thumbnail = get_the_post_thumbnail_url($post_id);
             $date = get_post_meta($post_id, 'date');
             $artiste = get_post_meta($post_id, 'artiste');
             $lieu = get_post_meta($post_id, 'lieu');
             $prix = get_post_meta($post_id, 'prix');
             $cat = get_post_meta($post_id, 'cat');
-            array_push($table, array($post_id, $date[0], $artiste[0], $lieu[0], $prix[0], $cat[0]));
+            array_push($table, array(
+                'id_calendrier'         =>$post_id,
+                'titre_calendrier'      => $titre,
+                'date_calendrier'       => $date[0],
+                'artiste_calendrier'    => $artiste[0],
+                'lieu_calendrier'       => $lieu[0],
+                'prix_calendrier'       => $prix[0],
+                'cat_calendrier'        => $cat[0],
+                'thumbnail_calendrier'  => $thumbnail,
+                'link'                  => $link)
+            );
         };
 
         usort($table, "sortByDate");
-
         $delete_if_less = date("Y-m-d");
-        $clear_date = removeElementWithInferiorValue($table,'1',$delete_if_less);
-        $clear_table = array_filter_by_value($clear_date,'3', $ville );
-
+        $clear_date = removeElementWithInferiorValue($table,'date_calendrier',$delete_if_less);
+        $clear_table = array_filter_by_value($clear_date,'lieu_calendrier', $ville );
         $count = count($clear_table);
-
         if($count > 3){
             $sliced = array_slice($clear_table, 0, 3);
         }elseif($count < 3){
             $array_merge_value = removeElementWithValue($table, 3, $ville);
-            $clear_array_to_add = removeElementWithInferiorValue($array_merge_value,'1',$delete_if_less);
+            $clear_array_to_add = removeElementWithInferiorValue($array_merge_value,'date_calendrier',$delete_if_less);
             $merge = array_merge($clear_table, $clear_array_to_add);
             $sliced = array_slice($merge, 0, 3);
         }else{
@@ -283,9 +239,42 @@ function mon_action() {
 
         echo '<ul>';
         foreach($sliced as $table_un => $values){
-            echo '<li>';
-            foreach($values as $value){ echo '<p>'.$value.'</p>'; };
-            echo '</li>';
+            setlocale(LC_ALL, "fr_FR");
+            $timestamp = $values['date_calendrier'];
+            $translate_Day = strftime ( '%e' , strtotime($timestamp));
+            $translate_Month = strftime ( '%B' , strtotime($timestamp));
+
+            if($values['thumbnail_calendrier'] == false){
+
+                echo '<li>';
+
+            }else{
+                $bgImage = $values['thumbnail_calendrier'];
+                echo '<li style="background-image:url('.$bgImage.'); ">';
+
+            }?>
+
+            <div class="left_event">
+                <p class="cat_calendrier"><? echo $values['cat_calendrier']; ?></p>
+                <p class="titre_calendrier"><? echo $values['titre_calendrier']; ?></p>
+                <p class="artiste_calendrier"><? echo $values['artiste_calendrier']; ?></p>
+                <a href="<? echo $values['link']; ?>" class="link_calendrier">EN SAVOIR +</a>
+            </div>
+            <div class="right_event">
+                <!-- <p class="id_calendrier"><? echo $values['id_calendrier']; ?></p>     -->
+                <p class="day_calendrier"><?
+                    if($translate_Day == '1'){
+                        echo $translate_Day;
+                        echo "<sup>er</sup>";
+                    }else{
+                        echo $translate_Day;
+                    } ?>
+                </p>
+                <p class="month_calendrier"><? echo $translate_Month; ?></p>
+                <p class="lieu_calendrier"><? echo $values['lieu_calendrier'];?></p>
+                <!-- <p class="prix_calendrier"><? echo $values['prix_calendrier']; ?></p> -->
+            </div>
+            <? echo '</li>';
         };
         echo '</ul>';
     };
@@ -296,65 +285,88 @@ function mon_action() {
 
 /*Affichage des postes filtré par date*/
 function mon_action_date() {
-
     global $_POST;
-
     $date_event = $_POST['date'];
-
-
     $args = array('post_type' => 'events');
     $the_query = new WP_Query($args);
-
     if ( $the_query->have_posts() ) {
         $table = array();
-
         while ($the_query->have_posts()) {
             $the_query->the_post();
-
             $post_id = get_the_ID();
+            $titre = get_the_title($post_id);
+            $link = get_the_permalink($post_id);
+            $thumbnail = get_the_post_thumbnail_url($post_id);
             $date = get_post_meta($post_id, 'date');
             $artiste = get_post_meta($post_id, 'artiste');
             $lieu = get_post_meta($post_id, 'lieu');
             $prix = get_post_meta($post_id, 'prix');
             $cat = get_post_meta($post_id, 'cat');
-            array_push($table, array($post_id, $date[0], $artiste[0], $lieu[0], $prix[0], $cat[0]));
+            array_push($table, array(
+                'id_calendrier'         =>$post_id,
+                'titre_calendrier'      => $titre,
+                'date_calendrier'       => $date[0],
+                'artiste_calendrier'    => $artiste[0],
+                'lieu_calendrier'       => $lieu[0],
+                'prix_calendrier'       => $prix[0],
+                'cat_calendrier'        => $cat[0],
+                'thumbnail_calendrier'  => $thumbnail,
+                'link'                  => $link)
+            );
         };
-
         usort($table, "sortByDate");
         $delete_if_less = date("Y-m-d");
-        $clear_date = removeElementWithInferiorValue($table,'1',$delete_if_less);
-        $clear_table = array_filter_by_value($clear_date,'1', $date_event );
+        $clear_date = removeElementWithInferiorValue($table,'date_calendrier',$delete_if_less);
+        $clear_table = array_filter_by_value($clear_date,'date_calendrier', $date_event );
         $count = count($clear_table);
         if($count > 3){
             $sliced = array_slice($clear_table, 0, 3);
         }elseif($count < 3){
-
-
-
             $array_merge_value = removeElementWithValue($table, 1, $date_event);
-            $clear_array_to_add = removeElementWithInferiorValue($array_merge_value,'1',$delete_if_less);
+            $clear_array_to_add = removeElementWithInferiorValue($array_merge_value,'date_calendrier',$delete_if_less);
             $merge = array_merge($clear_table, $clear_array_to_add);
             $sliced = array_slice($merge, 0, 3);
-
-
-
-
         }else{
             $sliced = $clear_table;
         };
-
         echo '<ul>';
         foreach($sliced as $table_un => $values){
-            echo '<li>';
-            foreach($values as $value){ echo '<p>'.$value.'</p>'; };
-            echo '</li>';
+            setlocale(LC_ALL, "fr_FR");
+            $timestamp = $values['date_calendrier'];
+            $translate_Day = strftime ( '%e' , strtotime($timestamp));
+            $translate_Month = strftime ( '%B' , strtotime($timestamp));
+            if($values['thumbnail_calendrier'] == false){
+                echo '<li>';
+            }else{
+                $bgImage = $values['thumbnail_calendrier'];
+                echo '<li style="background-image:url('.$bgImage.'); ">';
+            }?>
+            <div class="left_event">
+                <p class="cat_calendrier"><? echo $values['cat_calendrier']; ?></p>
+                <p class="titre_calendrier"><? echo $values['titre_calendrier']; ?></p>
+                <p class="artiste_calendrier"><? echo $values['artiste_calendrier']; ?></p>
+                <a href="<? echo $values['link']; ?>" class="link_calendrier">EN SAVOIR +</a>
+            </div>
+            <div class="right_event">
+                <!-- <p class="id_calendrier"><? echo $values['id_calendrier']; ?></p>     -->
+                <p class="day_calendrier"><?
+                    if($translate_Day == '1'){
+                        echo $translate_Day;
+                        echo "<sup>er</sup>";
+                    }else{
+                        echo $translate_Day;
+                    } ?>
+                </p>
+                <p class="month_calendrier"><? echo $translate_Month; ?></p>
+                <p class="lieu_calendrier"><? echo $values['lieu_calendrier'];?></p>
+                <!-- <p class="prix_calendrier"><? echo $values['prix_calendrier']; ?></p> -->
+            </div>
+            <? echo '</li>';
         };
         echo '</ul>';
     };
-
-    /*reset*/
-    wp_reset_postdata();
-    die();
+/*reset*/
+wp_reset_postdata();
+die();
 };
-
 ?>
