@@ -145,7 +145,7 @@
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-right: 50px;
+    margin-right: 3%;
     float: left;
     &:last-of-type{
       margin-right: 0;
@@ -194,5 +194,52 @@
     }
   }
 }
+
+/***********************
+RESPONSIVE
+***********************/
+
+/*****1600px*****/
+
+@media screen and (max-width: 1600px) {
+
+}
+
+/*****1200px*****/
+
+@media screen and (max-width: 1200px) {
+
+}
+
+
+/*****1024px*****/
+
+
+@media screen and (max-width: 1024px) {
+
+  #selector{
+    margin: 0 auto;
+    float: none;
+  }
+
+  #resultAjax{
+    width: 100%;
+    ul{
+      li{
+        width: 100%;
+        float: none;
+        overflow: hidden;
+        margin-bottom: 35px;
+      }
+    }
+  }
+}
+
+/*****768px*****/
+
+@media screen and (max-width: 768px) {
+
+}
+
 
 

@@ -41,8 +41,9 @@ jQuery(document).ready(function($) {
     });
 
     var ville;
-    $('input[name="ville"]').on('click', function(){
+    $('button[type="submit"]').on('click', function(){
         ville = $(this).val();
+        console.log(ville);
         jQuery.ajax({
             type:"POST",
             url: ajaxtest,
@@ -56,4 +57,5 @@ jQuery(document).ready(function($) {
             },
         });
     });
+
 }); /* end of as page load scripts */

@@ -1,5 +1,58 @@
 .footer {
+  margin-left: 200px;
+  background-color: #1C1A19;
+  @include transition(0.6s);
   @include clearfix();
+  .grid_footer{
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    position: relative;
+    padding-top: 35px;
+    .footer_content{
+      text-transform: uppercase;
+      font-size: 14px;
+      &:nth-of-type(1), &:nth-of-type(6){
+        &:after{
+          content: '';
+          background-color: white;
+          position: absolute;
+          top: -10px;
+          right: 0;
+          height: 95%;
+          width: 1px;
+        }
+      }
+      li{
+        margin-bottom: 25px;
+      }
+    }
+    &:after{
+      content: '';
+      background-color: white;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;
+    }
+  }
+  .contact{
+    height: 150px;
+    width: 150px;
+    float: left;
+    text-align: left;
+  }
+  .billet{
+    height: 150px;
+    width: 150px;
+    float: right;
+    text-align: right;
+  }
+  &.active{
+    margin-left: 400px;
+  }
 }
 
 /**********************
@@ -29,6 +82,12 @@ Media Queries
 
 @media screen and (max-width: 990px) and (min-width: 768px) {
 
+}
+
+@media screen and (max-width: 1024px) {
+  .footer{
+    margin-left: 0;
+  }
 }
 
 @media screen and (max-width: 1100px) {

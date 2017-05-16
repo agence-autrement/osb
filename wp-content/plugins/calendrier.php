@@ -45,8 +45,9 @@ function add_event_details_event_meta_box()
 {
     global $post;
     $custom = get_post_custom( $post->ID );
-
+    $departement = $custom["departement"][0];
     ?>
+
     <style>.width99 {width:99%;}</style>
     <p>
         <label>Date:</label><br />
@@ -59,6 +60,15 @@ function add_event_details_event_meta_box()
     <p>
         <label>lieu:</label><br />
         <input type="text" name="lieu" value="<?= @$custom["lieu"][0] ?>" class="width99" />
+    </p>
+    <p>
+        <label for="my_meta_box_select">Département</label><br>
+        <select name="departement" id="departement">
+            <option value="22"<?php selected($departement, '22'); ?>>Côtes d'armor</option>
+            <option value="29"<?php selected($departement, '29'); ?>>Finistère</option>
+            <option value="35"<?php selected($departement, '35'); ?>>Ille-et-Vilaine</option>
+            <option value="56"<?php selected($departement, '56'); ?>>Morbihan</option>
+        </select>
     </p>
     <p>
         <label>Prix:</label><br />
@@ -81,6 +91,7 @@ function save_event_custom_fields(){
         update_post_meta($post->ID, "date", @$_POST["date"]);
         update_post_meta($post->ID, "artiste", @$_POST["artiste"]);
         update_post_meta($post->ID, "lieu", @$_POST["lieu"]);
+        update_post_meta($post->ID, "departement", @$_POST["departement"]);
         update_post_meta($post->ID, "prix", @$_POST["prix"]);
         update_post_meta($post->ID, "cat", @$_POST["cat"]);
     }
@@ -154,19 +165,53 @@ function getInputByLieu(){
         $table = array();
         while ($the_query->have_posts()) {
             $the_query->the_post();
-
             $post_id = get_the_ID();
-            $lieu = get_post_meta($post_id, 'lieu');
-            array_push($table, array($lieu[0]));
+            $departement = get_post_meta($post_id, 'departement');
+            array_push($table, array($departement[0]));
         };
         $table = unique_multidim_array($table,'0');
         foreach($table as $table_un => $values){
             foreach($values as $value){
-                echo "<input type='submit' name='ville' value='".$value."' >";
+                if($value == 22){
+                    echo "<button type='submit' name='ville' value='".$value."'>Côte d'Armor</button>";
+                }elseif($value == 29){
+                    echo "<button type='submit' name='ville' value='".$value."'>Finistère</button>";
+                }elseif($value == 35){
+                    echo "<button type='submit' name='ville' value='".$value."'>Ille-et-Vilaine</button>";
+                }elseif($value == 56){
+                    echo "<button type='submit' name='ville' value='".$value."'>Morbihan</button>";
+                }
             };
         };
         wp_reset_postdata();
     };
+};
+
+function getInputByTheme()
+{
+    $args = array('post_type' => 'events');
+    $the_query = new WP_Query($args);
+    if ($the_query->have_posts()) {
+        $table = array();
+        while ($the_query->have_posts()) {
+            $the_query->the_post();
+
+            $post_id = get_the_ID();
+            $theme = get_post_meta($post_id, 'cat');
+            array_push($table, array($theme[0]));
+        };
+        $table = unique_multidim_array($table, '0');
+        foreach ($table as $table_un => $values) {
+            foreach ($values as $value) {
+                echo "<input type='submit' name='cat' value='" . $value . "'><br>";
+            };
+            wp_reset_postdata();
+        };
+    };
+};
+
+function getTable(){
+
 };
 
 /************************ AJAX ************************/
@@ -193,6 +238,8 @@ add_action( 'wp_ajax_nopriv_mon_action_date', 'mon_action_date' );
 function mon_action() {
     global $_POST;
     $ville = $_POST['ville'];
+
+
     $args = array('post_type' => 'events');
     $the_query = new WP_Query($args);
     if ( $the_query->have_posts() ) {
@@ -203,6 +250,7 @@ function mon_action() {
             $titre = get_the_title($post_id);
             $link = get_the_permalink($post_id);
             $thumbnail = get_the_post_thumbnail_url($post_id);
+            $departement = get_post_meta($post_id, 'departement');
             $date = get_post_meta($post_id, 'date');
             $artiste = get_post_meta($post_id, 'artiste');
             $lieu = get_post_meta($post_id, 'lieu');
@@ -217,14 +265,16 @@ function mon_action() {
                 'prix_calendrier'       => $prix[0],
                 'cat_calendrier'        => $cat[0],
                 'thumbnail_calendrier'  => $thumbnail,
-                'link'                  => $link)
+                'link'                  => $link,
+                'departement'           => $departement[0],
+                )
+
             );
         };
-
         usort($table, "sortByDate");
         $delete_if_less = date("Y-m-d");
         $clear_date = removeElementWithInferiorValue($table,'date_calendrier',$delete_if_less);
-        $clear_table = array_filter_by_value($clear_date,'lieu_calendrier', $ville );
+        $clear_table = array_filter_by_value($clear_date,'departement', $ville );
         $count = count($clear_table);
         if($count > 3){
             $sliced = array_slice($clear_table, 0, 3);
@@ -236,24 +286,18 @@ function mon_action() {
         }else{
             $sliced = $clear_table;
         };
-
         echo '<ul>';
         foreach($sliced as $table_un => $values){
             setlocale(LC_ALL, "fr_FR");
             $timestamp = $values['date_calendrier'];
             $translate_Day = strftime ( '%e' , strtotime($timestamp));
             $translate_Month = strftime ( '%B' , strtotime($timestamp));
-
             if($values['thumbnail_calendrier'] == false){
-
                 echo '<li>';
-
             }else{
                 $bgImage = $values['thumbnail_calendrier'];
                 echo '<li style="background-image:url('.$bgImage.'); ">';
-
             }?>
-
             <div class="left_event">
                 <p class="cat_calendrier"><? echo $values['cat_calendrier']; ?></p>
                 <p class="titre_calendrier"><? echo $values['titre_calendrier']; ?></p>
@@ -261,7 +305,6 @@ function mon_action() {
                 <a href="<? echo $values['link']; ?>" class="link_calendrier">EN SAVOIR +</a>
             </div>
             <div class="right_event">
-                <!-- <p class="id_calendrier"><? echo $values['id_calendrier']; ?></p>     -->
                 <p class="day_calendrier"><?
                     if($translate_Day == '1'){
                         echo $translate_Day;
@@ -272,7 +315,6 @@ function mon_action() {
                 </p>
                 <p class="month_calendrier"><? echo $translate_Month; ?></p>
                 <p class="lieu_calendrier"><? echo $values['lieu_calendrier'];?></p>
-                <!-- <p class="prix_calendrier"><? echo $values['prix_calendrier']; ?></p> -->
             </div>
             <? echo '</li>';
         };
@@ -348,7 +390,6 @@ function mon_action_date() {
                 <a href="<? echo $values['link']; ?>" class="link_calendrier">EN SAVOIR +</a>
             </div>
             <div class="right_event">
-                <!-- <p class="id_calendrier"><? echo $values['id_calendrier']; ?></p>     -->
                 <p class="day_calendrier"><?
                     if($translate_Day == '1'){
                         echo $translate_Day;
@@ -359,7 +400,6 @@ function mon_action_date() {
                 </p>
                 <p class="month_calendrier"><? echo $translate_Month; ?></p>
                 <p class="lieu_calendrier"><? echo $values['lieu_calendrier'];?></p>
-                <!-- <p class="prix_calendrier"><? echo $values['prix_calendrier']; ?></p> -->
             </div>
             <? echo '</li>';
         };
