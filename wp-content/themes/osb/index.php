@@ -54,16 +54,7 @@
     </section>
 
 
-
-
-
-
     <? get_template_part('calendrier_view'); ?>
-
-
-
-
-
 
 
     <section class="call_to_action">

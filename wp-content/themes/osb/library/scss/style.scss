@@ -4,14 +4,17 @@ VARIABLE
 
 
 
-$font: "Exo";
+$font: "Kanit";
+$font2: "Montserrat";
 $color-1: #00B3D3;
-$color-2: #002B4C;
+$color-2: #C8AB58;
 $color-3: #00BB96;
 $color-4: #D9E021;
 $color-5: #B4CD36;
+$grey: #F3F1F1;
+$grey-text: #999999;
 
-$text-color: #141412;
+$text-color: #000;
 $link-color :#000;
 $link-hover :#000;
 
@@ -42,7 +45,7 @@ $white:             #fff;
 
 $light-gray:        #f8f9fa;
 $gray:              #201C1B;
-$text-color:        #5c6b80;
+
 $meta-gray:         #9fa6b4;
 
 $tan:               #eceee5;
@@ -73,6 +76,12 @@ $disabled-gray:     #cfcfcf;
 @import "modules/btn";
 @import "modules/input";
 @import "modules/form";
+@import "modules/event";
+@import "modules/event-menu";
+@import "modules/event-desc";
+@import "modules/event-partners";
+@import "modules/event-focus";
+@import "modules/event-program";
 @import "modules/home";
 @import "modules/datepicker";
 

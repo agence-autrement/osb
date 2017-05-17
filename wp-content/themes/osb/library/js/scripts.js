@@ -150,9 +150,6 @@ jQuery(document).ready(function($) {
 			$('.slideshow .slider').animate({'margin-left':'-'+((visuelActif-1)*largeurslider)+'px'}, 500);
 		}
 	});
-
-
-
 	/*SIDEBAR ESPACE PERSO*/
 	$("#espace").on("click", function(){
 		$('.sidebar_mon_espace').toggleClass('active');
@@ -160,5 +157,17 @@ jQuery(document).ready(function($) {
 		$('#content').toggleClass('active');
 		$('.footer').toggleClass('active');
 	});
+
+	/* Hover photo_descrition event */
+
+	$('.event-desc__image__play').on('click', function() {
+		$('.event-desc__spotify').show('fast');
+	})
+
+	$('.event-desc__spotify__close').on('click', function() {
+		$('.event-desc__spotify').hide('fast');
+	})
+
+
 
 }); /* end of as page load scripts */

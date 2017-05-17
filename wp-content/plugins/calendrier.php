@@ -298,9 +298,7 @@ function mon_action() {
 function mon_action_date() {
 
     global $_POST;
-
     $date_event = $_POST['date'];
-
 
     $args = array('post_type' => 'events');
     $the_query = new WP_Query($args);
