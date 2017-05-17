@@ -1,11 +1,6 @@
 /**********AJAX**********/
 jQuery(document).ready(function($) {
 
-    //var date;
-
-
-
-
     $( function() {
         $( "#datepicker" ).datepicker({
             altField: "#datepicker",
@@ -29,12 +24,6 @@ jQuery(document).ready(function($) {
                 var cleanMonth = ('0' + month1).slice(-2);
                 var year1 = $("#datepicker").datepicker('getDate').getFullYear();
                 var fullDate = year1 + "-" + cleanMonth + "-" + cleanDay;
-                //console.log(cleanDay);
-                //console.log(cleanMonth);
-                //console.log(fullDate);
-                //$('#date_value').attr('value', fullDate);
-
-                //console.log(fullDate),
                 jQuery.ajax({
                     type:"POST",
                     url: ajaxtest,
@@ -52,10 +41,9 @@ jQuery(document).ready(function($) {
     });
 
     var ville;
-    //var date;
-
-    $('input[name="ville"]').on('click', function(){
+    $('button[type="submit"]').on('click', function(){
         ville = $(this).val();
+        console.log(ville);
         jQuery.ajax({
             type:"POST",
             url: ajaxtest,
@@ -69,8 +57,5 @@ jQuery(document).ready(function($) {
             },
         });
     });
-
-
-
 
 }); /* end of as page load scripts */
