@@ -4,101 +4,6 @@
 Plugin Name: Calendrier
 */
 
-/************************ Création Custom Post types ************************/
-function create_event_post_type() {
-    register_post_type( 'events',
-        array(
-            'labels'=> array(
-                'name'              => 'Events',
-                'singular_name'     => 'Event',
-                'add_new'           => 'Add New',
-                'add_new_item'      => 'Add New Event',
-                'edit_item'         => 'Edit Event',
-                'new_item'          => 'New Event',
-                'view_item'         => 'View Cafe',
-                'search_items'      => 'Search Cafes',
-                'not_found'         =>  'Nothing Found',
-                'not_found_in_trash'=> 'Nothing found in the Trash',
-                'parent_item_colon' => ''
-            ),
-            'public'            => true,
-            'publicly_queryable'=> true,
-            'show_ui'           => true,
-            'query_var'         => true,
-            'menu_icon'         => 'dashicons-calendar',
-            'rewrite'           => true,
-            'capability_type'   => 'post',
-            'hierarchical'      => false,
-            'menu_position'     => null,
-            'supports'          => array('title','editor','thumbnail')
-        )
-    );
-}
-add_action( 'init', 'create_event_post_type' );
-
-/************************ Création des Customs fields ************************/
-
-function add_event_meta_boxes() {
-    add_meta_box("event_details_meta", "Détails de l'évènement", "add_event_details_event_meta_box", "events", "normal", "low");
-}
-function add_event_details_event_meta_box()
-{
-    global $post;
-    $custom = get_post_custom( $post->ID );
-    $departement = $custom["departement"][0];
-    ?>
-
-    <style>.width99 {width:99%;}</style>
-    <p>
-        <label>Date:</label><br />
-        <input type="date" name="date" value="<?= @$custom["date"][0] ?>" class="width99" />
-    </p>
-    <p>
-        <label>Artiste:</label><br />
-        <input type="text" name="artiste" value="<?= @$custom["artiste"][0] ?>" class="width99" />
-    </p>
-    <p>
-        <label>lieu:</label><br />
-        <input type="text" name="lieu" value="<?= @$custom["lieu"][0] ?>" class="width99" />
-    </p>
-    <p>
-        <label for="my_meta_box_select">Département</label><br>
-        <select name="departement" id="departement">
-            <option value="22"<?php selected($departement, '22'); ?>>Côtes d'armor</option>
-            <option value="29"<?php selected($departement, '29'); ?>>Finistère</option>
-            <option value="35"<?php selected($departement, '35'); ?>>Ille-et-Vilaine</option>
-            <option value="56"<?php selected($departement, '56'); ?>>Morbihan</option>
-        </select>
-    </p>
-    <p>
-        <label>Prix:</label><br />
-        <input type="text" name="prix" value="<?= @$custom["prix"][0] ?>" class="width99" />
-    </p>
-    <p>
-        <label>Catégorie:</label><br />
-        <input type="text" name="cat" value="<?= @$custom["cat"][0] ?>" class="width99" />
-    </p>
-    <?php
-}
-
-/************************ Sauvegarde des Customs fields ************************/
-
-function save_event_custom_fields(){
-    global $post;
-
-    if ( $post )
-    {
-        update_post_meta($post->ID, "date", @$_POST["date"]);
-        update_post_meta($post->ID, "artiste", @$_POST["artiste"]);
-        update_post_meta($post->ID, "lieu", @$_POST["lieu"]);
-        update_post_meta($post->ID, "departement", @$_POST["departement"]);
-        update_post_meta($post->ID, "prix", @$_POST["prix"]);
-        update_post_meta($post->ID, "cat", @$_POST["cat"]);
-    }
-}
-add_action( 'admin_init', 'add_event_meta_boxes' );
-add_action( 'save_post', 'save_event_custom_fields' );
-
 /************************ Fonctions Globales ************************/
 
 /*Fonction de filtre*/
@@ -159,16 +64,24 @@ function unique_multidim_array($array, $key) {
 
 /*Généré Input en remontant le CF lieu*/
 function getInputByLieu(){
-    $args = array('post_type' => 'events');
+    $args = array('post_type' => 'spectacles');
     $the_query = new WP_Query($args);
     if ( $the_query->have_posts() ) {
         $table = array();
         while ($the_query->have_posts()) {
             $the_query->the_post();
             $post_id = get_the_ID();
-            $departement = get_post_meta($post_id, 'departement');
-            array_push($table, array($departement[0]));
+
+            if( have_rows('representations') ):
+                while ( have_rows('representations') ) : the_row();
+                   $departement = get_sub_field('departement');
+                endwhile;
+            else :
+                // no rows found
+            endif;
+            array_push($table, array($departement));
         };
+
         $table = unique_multidim_array($table,'0');
         foreach($table as $table_un => $values){
             foreach($values as $value){
@@ -195,7 +108,6 @@ function getInputByTheme()
         $table = array();
         while ($the_query->have_posts()) {
             $the_query->the_post();
-
             $post_id = get_the_ID();
             $theme = get_post_meta($post_id, 'cat');
             array_push($table, array($theme[0]));
@@ -208,10 +120,6 @@ function getInputByTheme()
             wp_reset_postdata();
         };
     };
-};
-
-function getTable(){
-
 };
 
 /************************ AJAX ************************/
@@ -234,52 +142,55 @@ add_action( 'wp_ajax_nopriv_mon_action', 'mon_action' );
 add_action( 'wp_ajax_mon_action_date', 'mon_action_date' );
 add_action( 'wp_ajax_nopriv_mon_action_date', 'mon_action_date' );
 
+
 /*Affichage des postes filtré par ville*/
 function mon_action() {
     global $_POST;
     $ville = $_POST['ville'];
 
-
-    $args = array('post_type' => 'events');
-    $the_query = new WP_Query($args);
-    if ( $the_query->have_posts() ) {
+    $args = array('post_type' => 'spectacles');
+    $the_query = new WP_Query( $args );
+    if( $the_query->have_posts() ){
         $table = array();
-        while ($the_query->have_posts()) {
+        while ( $the_query->have_posts() ) {
             $the_query->the_post();
+
             $post_id = get_the_ID();
             $titre = get_the_title($post_id);
             $link = get_the_permalink($post_id);
             $thumbnail = get_the_post_thumbnail_url($post_id);
-            $departement = get_post_meta($post_id, 'departement');
-            $date = get_post_meta($post_id, 'date');
-            $artiste = get_post_meta($post_id, 'artiste');
-            $lieu = get_post_meta($post_id, 'lieu');
-            $prix = get_post_meta($post_id, 'prix');
-            $cat = get_post_meta($post_id, 'cat');
-            array_push($table, array(
-                'id_calendrier'         =>$post_id,
-                'titre_calendrier'      => $titre,
-                'date_calendrier'       => $date[0],
-                'artiste_calendrier'    => $artiste[0],
-                'lieu_calendrier'       => $lieu[0],
-                'prix_calendrier'       => $prix[0],
-                'cat_calendrier'        => $cat[0],
-                'thumbnail_calendrier'  => $thumbnail,
-                'link'                  => $link,
-                'departement'           => $departement[0],
-                )
 
+            if( have_rows('representations') ){
+                while ( have_rows('representations') ) : the_row();
+                    $departement        = get_sub_field('departement');
+                    $date               = get_sub_field('date');
+                    $lieu               = get_sub_field('lieu');
+                    $ville_calendrier   = get_sub_field('ville');
+                endwhile;
+            };
+            array_push($table, array(
+                    'id_calendrier'         => $post_id,
+                    'titre_calendrier'      => $titre,
+                    'date_calendrier'       => $date,
+                    'ville_calendrier'      => $ville_calendrier,
+                    'lieu_calendrier'       => $lieu,
+                    'thumbnail_calendrier'  => $thumbnail,
+                    'link'                  => $link,
+                    'departement'           => $departement,
+                )
             );
         };
         usort($table, "sortByDate");
         $delete_if_less = date("Y-m-d");
+        echo $delete_if_less;
         $clear_date = removeElementWithInferiorValue($table,'date_calendrier',$delete_if_less);
         $clear_table = array_filter_by_value($clear_date,'departement', $ville );
         $count = count($clear_table);
+
         if($count > 3){
             $sliced = array_slice($clear_table, 0, 3);
         }elseif($count < 3){
-            $array_merge_value = removeElementWithValue($table, 3, $ville);
+            $array_merge_value = removeElementWithValue($table, 'departement', $ville);
             $clear_array_to_add = removeElementWithInferiorValue($array_merge_value,'date_calendrier',$delete_if_less);
             $merge = array_merge($clear_table, $clear_array_to_add);
             $sliced = array_slice($merge, 0, 3);
@@ -314,57 +225,64 @@ function mon_action() {
                     } ?>
                 </p>
                 <p class="month_calendrier"><? echo $translate_Month; ?></p>
-                <p class="lieu_calendrier"><? echo $values['lieu_calendrier'];?></p>
+                <p class="lieu_calendrier"><? echo $values['ville_calendrier'];?></p>
             </div>
             <? echo '</li>';
         };
         echo '</ul>';
     };
-    /*reset*/
     wp_reset_postdata();
-    die();
+    //die();
 };
 
 /*Affichage des postes filtré par date*/
 function mon_action_date() {
     global $_POST;
     $date_event = $_POST['date'];
-    $args = array('post_type' => 'events');
-    $the_query = new WP_Query($args);
-    if ( $the_query->have_posts() ) {
+
+    $args = array('post_type' => 'spectacles');
+    $the_query = new WP_Query( $args );
+    if( $the_query->have_posts() ){
         $table = array();
-        while ($the_query->have_posts()) {
+        while ( $the_query->have_posts() ) {
             $the_query->the_post();
+
             $post_id = get_the_ID();
             $titre = get_the_title($post_id);
             $link = get_the_permalink($post_id);
             $thumbnail = get_the_post_thumbnail_url($post_id);
-            $date = get_post_meta($post_id, 'date');
-            $artiste = get_post_meta($post_id, 'artiste');
-            $lieu = get_post_meta($post_id, 'lieu');
-            $prix = get_post_meta($post_id, 'prix');
-            $cat = get_post_meta($post_id, 'cat');
+
+            if( have_rows('representations') ){
+                while ( have_rows('representations') ) : the_row();
+                    $departement        = get_sub_field('departement');
+                    $date               = get_sub_field('date');
+                    $lieu               = get_sub_field('lieu');
+                    $ville_calendrier   = get_sub_field('ville');
+                endwhile;
+            };
             array_push($table, array(
-                'id_calendrier'         =>$post_id,
-                'titre_calendrier'      => $titre,
-                'date_calendrier'       => $date[0],
-                'artiste_calendrier'    => $artiste[0],
-                'lieu_calendrier'       => $lieu[0],
-                'prix_calendrier'       => $prix[0],
-                'cat_calendrier'        => $cat[0],
-                'thumbnail_calendrier'  => $thumbnail,
-                'link'                  => $link)
+                    'id_calendrier'         => $post_id,
+                    'titre_calendrier'      => $titre,
+                    'date_calendrier'       => $date,
+                    'ville_calendrier'      => $ville_calendrier,
+                    'lieu_calendrier'       => $lieu,
+                    'thumbnail_calendrier'  => $thumbnail,
+                    'link'                  => $link,
+                    'departement'           => $departement,
+                )
             );
         };
         usort($table, "sortByDate");
         $delete_if_less = date("Y-m-d");
+        echo $delete_if_less;
         $clear_date = removeElementWithInferiorValue($table,'date_calendrier',$delete_if_less);
         $clear_table = array_filter_by_value($clear_date,'date_calendrier', $date_event );
         $count = count($clear_table);
+
         if($count > 3){
             $sliced = array_slice($clear_table, 0, 3);
         }elseif($count < 3){
-            $array_merge_value = removeElementWithValue($table, 1, $date_event);
+            $array_merge_value = removeElementWithValue($table, 'date_calendrier', $date_event);
             $clear_array_to_add = removeElementWithInferiorValue($array_merge_value,'date_calendrier',$delete_if_less);
             $merge = array_merge($clear_table, $clear_array_to_add);
             $sliced = array_slice($merge, 0, 3);
@@ -399,14 +317,13 @@ function mon_action_date() {
                     } ?>
                 </p>
                 <p class="month_calendrier"><? echo $translate_Month; ?></p>
-                <p class="lieu_calendrier"><? echo $values['lieu_calendrier'];?></p>
+                <p class="lieu_calendrier"><? echo $values['ville_calendrier'];?></p>
             </div>
             <? echo '</li>';
         };
         echo '</ul>';
     };
-/*reset*/
-wp_reset_postdata();
-die();
+    wp_reset_postdata();
+    //die();
 };
 ?>
