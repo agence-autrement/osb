@@ -111,6 +111,7 @@ function loadGravatars() {
 jQuery(document).ready(function($) {
 
 	/* SLIDER HOMEPAGE */
+
 	var visuelActif,
 		nbVisuels,
 		firstSlide,
@@ -150,7 +151,9 @@ jQuery(document).ready(function($) {
 			$('.slideshow .slider').animate({'margin-left':'-'+((visuelActif-1)*largeurslider)+'px'}, 500);
 		}
 	});
+
 	/*SIDEBAR ESPACE PERSO*/
+
 	$("#espace").on("click", function(){
 		$('.sidebar_mon_espace').toggleClass('active');
 		$('.sidebar_1').toggleClass('active');

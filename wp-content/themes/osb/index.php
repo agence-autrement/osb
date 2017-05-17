@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
 
-<div id="content">
+<div class="main">
     <section id="landing">
         <div class="top_landing">
             <div class="contenu_grid">
@@ -78,19 +78,27 @@
             <div id="first_article">
                 <div class="first_article_thumbnail"></div>
                 <div class="first_article_content">
-                    <div class="titre">+ Saison Piccolo</div>
-                    <div class="extrait_1"></div>
-                    <div class="extrait_2"></div>
-                    <div class="tarif"></div>
-                    <a class="btn_savoir" href="###">En savoir +</a>
+                    <div class="titre_article">+ Saison Piccolo</div>
+                    <div class="extrait_1">
+                        En se réveillant un matin après des rêves agités, Gregor Samsa se retrouva, dans son lit, métamorphosé en un monstrueux insecte. Il était sur le dos, un dos aussi dur qu’une carapace, et, en relevant un peu la tête, il vit, bombé, brun, cloisonné par des [...]
+                    </div>
+                    <div class="extrait_2">
+                        Ce n’était pas un rêve. Sa chambre, une vraie chambre humaine, juste un peu trop petite, était là tranquille entre les quatre murs qu’il connaissait bien.
+                    </div>
+                    <div class="tarif">
+                        Tarif unique : 5 euros
+                    </div>
+                    <a class="btn" href="###">En savoir +</a>
                 </div>
             </div>
             <div id="second_article">
                 <div class="second_article_thumbnail"></div>
                 <div class="second_article_content">
-                    <div class="titre">+ Le Jacobins</div>
-                    <div class="extrait_1"></div>
-                    <a class="btn_savoir" href="###">En savoir +</a>
+                    <div class="titre_article">+ Le Jacobins</div>
+                    <div class="extrait_1">
+                        En se réveillant un matin après des rêves agités, Gregor Samsa se retrouva, dans son lit, [...]
+                    </div>
+                    <a class="btn" href="###">En savoir +</a>
                 </div>
             </div>
         </div>

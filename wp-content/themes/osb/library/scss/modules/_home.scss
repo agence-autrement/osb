@@ -3,7 +3,7 @@ GLOBAL
 ***********************/
 
 #content {
-  margin-left:200px;
+  margin-left:130px;
   overflow: hidden;
   @include transition(0.6s);
   &.active{
@@ -259,6 +259,22 @@ ARTICLES
   overflow: hidden;
 }
 
+.titre_article{
+  font-size: 26px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.extrait_1{
+  margin-bottom: 15px;
+}
+
+.extrait_2{
+  color: #818080;
+  margin-bottom: 15px;
+}
+
+
 #first_article{
   height: 290px;
   width: calc(100% - 310px);
@@ -281,6 +297,14 @@ ARTICLES
   width: 50%;
   height: 100%;
   float: left;
+  padding:15px;
+  font-size: 12px;
+}
+
+
+.tarif{
+  color: #818080;
+  margin-bottom: 15px;
 }
 
 #second_article{
@@ -301,6 +325,8 @@ ARTICLES
 .second_article_content{
   width: 100%;
   height: 50%;
+  padding:15px;
+  font-size: 12px;
 }
 
 
@@ -317,10 +343,64 @@ RESPONSIVE
 
 /*1024px*/
 
-
 @media screen and (max-width: 1024px) {
 
   #content{
     margin-left: 0;
+  }
+ 
+  /*landing top*/
+  .top_landing{
+    height:auto;
+    padding-bottom: 35px;
+  }
+
+  #calendrier_top{
+    li{
+      width: 90%;
+      margin: 0 auto;
+      position: relative;
+      &:hover{
+        .img_hover{
+          display: none;
+        }
+      }
+    }
+  }
+  
+  /*Article*/
+  #first_article{
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 35px;
+  }
+
+  #second_article{
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .second_article_thumbnail{
+    float: right;
+    background-image: url('../images/loutre.jpg');
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+  }
+
+  .second_article_content{
+    width: 50%;
+    height: 100%;
+    float: right;
+  }
+}
+
+/*1024px*/
+
+@media screen and (max-width: 480px) {
+  .first_article_thumbnail, .second_article_thumbnail{
+    display: none;
   }
 }

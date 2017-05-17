@@ -11,6 +11,7 @@
   height: 278px;
   width: 216px;
   float: left;
+
 }
 
 #date_value{
@@ -28,6 +29,7 @@
 .ui-datepicker-header{
   height: 25px;
   color: black;
+  padding-top: 5px;
   .ui-datepicker-title{
     text-align: center;
   }
@@ -37,7 +39,7 @@
   width:10px;
   position: absolute;
   right: 5px;
-  top: 0px;
+  top: 5px;
   display: inline-block;
   cursor: pointer;
   text-indent: -5000px;
@@ -50,7 +52,7 @@
   width:10px;
   position: absolute;
   left: 5px;
-  top: 0px;
+  top: 5px;
   display: inline-block;
   cursor: pointer;
   text-indent: -5000px;
@@ -81,7 +83,7 @@
         display: block;
         width: 100%;
         height: 100%;
-        padding-top: 4px;
+        padding: 5px;
         @include transition(0.2s);
         &:hover{
           text-decoration: none;
@@ -220,6 +222,8 @@ RESPONSIVE
   #selector{
     margin: 0 auto;
     float: none;
+    overflow: hidden;
+    width: 100%;
   }
 
   #resultAjax{

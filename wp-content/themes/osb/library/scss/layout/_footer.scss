@@ -1,5 +1,5 @@
 .footer {
-  margin-left: 200px;
+  margin-left: 130px;
   background-color: #1C1A19;
   @include transition(0.6s);
   @include clearfix();
@@ -51,7 +51,7 @@
     text-align: right;
   }
   &.active{
-    margin-left: 400px;
+    margin-left: 330px;
   }
 }
 
@@ -81,7 +81,10 @@ Media Queries
 }
 
 @media screen and (max-width: 990px) and (min-width: 768px) {
-
+  .footer_content{
+    width: 50%;
+    float: left;
+  }
 }
 
 @media screen and (max-width: 1024px) {

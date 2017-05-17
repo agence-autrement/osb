@@ -80,7 +80,7 @@ img {
   border: 0; }
 
 .main {
-  margin-left: 200px; }
+  margin-left: 130px; }
 
 .vcenter {
   display: inline-block;
@@ -447,6 +447,10 @@ span.amp {
 /**********************
 Media Queries
 **********************/
+@media screen and (max-width: 1024px) {
+  .main {
+    margin-left: 0; } }
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   /* Retina-specific stuff here */ }
 
@@ -1433,7 +1437,7 @@ MEDIA QUERIES
   /* Retina-specific stuff here */ }
 
 .footer {
-  margin-left: 200px;
+  margin-left: 130px;
   background-color: #1C1A19;
   -webkit-transition: 0.6s;
   -khtml-transition: 0.6s;
@@ -1485,11 +1489,16 @@ MEDIA QUERIES
     float: right;
     text-align: right; }
   .footer.active {
-    margin-left: 400px; }
+    margin-left: 330px; }
 
 /**********************
 Media Queries
 **********************/
+@media screen and (max-width: 990px) and (min-width: 768px) {
+  .footer_content {
+    width: 50%;
+    float: left; } }
+
 @media screen and (max-width: 1024px) {
   .footer {
     margin-left: 0; } }
@@ -1571,7 +1580,7 @@ SIDEBAR MON ESPACE
 SIDEBAR MENU
 *****************************/
 .sidebar_1 {
-  width: 200px;
+  width: 130px;
   height: 100vh;
   margin-top: 0;
   position: fixed;
@@ -1579,7 +1588,7 @@ SIDEBAR MENU
   left: 0;
   text-align: center;
   background-color: black;
-  font-size: calc(10px + 0.4vw);
+  font-size: calc(10px + 0.3vw);
   text-transform: uppercase;
   color: #FFF;
   z-index: 1000;
@@ -1613,7 +1622,7 @@ SIDEBAR MENU
     content: '';
     position: absolute;
     top: 0;
-    left: 115px;
+    left: 80px;
     height: 40px;
     width: 1px;
     background-color: white;
@@ -1628,7 +1637,7 @@ SIDEBAR MENU
     content: '';
     position: absolute;
     bottom: 0;
-    left: 80px;
+    left: 45px;
     height: 40px;
     width: 1px;
     background-color: white;
@@ -1648,8 +1657,8 @@ SIDEBAR MENU
   height: 33%; }
 
 #logo_sidebar {
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   text-indent: -5000px;
   margin: 0 auto;
   background-image: url("../images/osb_logo.svg");
@@ -1662,8 +1671,8 @@ SIDEBAR MENU
   margin: 15px auto 0; }
   #reseaux_sociaux li {
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    width: 17px;
+    height: 16px;
     background-image: url("../images/reseaux.svg");
     -webkit-background-size: cover;
     background-size: cover; }
@@ -2276,7 +2285,7 @@ textarea {
 GLOBAL
 ***********************/
 #content {
-  margin-left: 200px;
+  margin-left: 130px;
   overflow: hidden;
   -webkit-transition: 0.6s;
   -khtml-transition: 0.6s;
@@ -2495,6 +2504,18 @@ ARTICLES
   padding: 35px;
   overflow: hidden; }
 
+.titre_article {
+  font-size: 26px;
+  font-weight: 300;
+  margin-bottom: 10px; }
+
+.extrait_1 {
+  margin-bottom: 15px; }
+
+.extrait_2 {
+  color: #818080;
+  margin-bottom: 15px; }
+
 #first_article {
   height: 290px;
   width: calc(100% - 310px);
@@ -2514,7 +2535,13 @@ ARTICLES
 .first_article_content {
   width: 50%;
   height: 100%;
-  float: left; }
+  float: left;
+  padding: 15px;
+  font-size: 12px; }
+
+.tarif {
+  color: #818080;
+  margin-bottom: 15px; }
 
 #second_article {
   height: 290px;
@@ -2531,7 +2558,9 @@ ARTICLES
 
 .second_article_content {
   width: 100%;
-  height: 50%; }
+  height: 50%;
+  padding: 15px;
+  font-size: 12px; }
 
 /***********************
 RESPONSIVE
@@ -2545,7 +2574,43 @@ RESPONSIVE
 /*1024px*/
 @media screen and (max-width: 1024px) {
   #content {
-    margin-left: 0; } }
+    margin-left: 0; }
+  /*landing top*/
+  .top_landing {
+    height: auto;
+    padding-bottom: 35px; }
+  #calendrier_top li {
+    width: 90%;
+    margin: 0 auto;
+    position: relative; }
+    #calendrier_top li:hover .img_hover {
+      display: none; }
+  /*Article*/
+  #first_article {
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 35px; }
+  #second_article {
+    float: none;
+    width: 90%;
+    margin: 0 auto; }
+  .second_article_thumbnail {
+    float: right;
+    background-image: url("../images/loutre.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 50%;
+    height: 100%; }
+  .second_article_content {
+    width: 50%;
+    height: 100%;
+    float: right; } }
+
+/*1024px*/
+@media screen and (max-width: 480px) {
+  .first_article_thumbnail, .second_article_thumbnail {
+    display: none; } }
 
 /****Style Datepicker****/
 #plugin_calendar {
@@ -2570,7 +2635,8 @@ RESPONSIVE
 
 .ui-datepicker-header {
   height: 25px;
-  color: black; }
+  color: black;
+  padding-top: 5px; }
   .ui-datepicker-header .ui-datepicker-title {
     text-align: center; }
 
@@ -2578,7 +2644,7 @@ RESPONSIVE
   width: 10px;
   position: absolute;
   right: 5px;
-  top: 0px;
+  top: 5px;
   display: inline-block;
   cursor: pointer;
   text-indent: -5000px;
@@ -2590,7 +2656,7 @@ RESPONSIVE
   width: 10px;
   position: absolute;
   left: 5px;
-  top: 0px;
+  top: 5px;
   display: inline-block;
   cursor: pointer;
   text-indent: -5000px;
@@ -2613,7 +2679,7 @@ RESPONSIVE
         display: block;
         width: 100%;
         height: 100%;
-        padding-top: 4px;
+        padding: 5px;
         -webkit-transition: 0.2s;
         -khtml-transition: 0.2s;
         -moz-transition: 0.2s;
@@ -2718,7 +2784,9 @@ RESPONSIVE
 @media screen and (max-width: 1024px) {
   #selector {
     margin: 0 auto;
-    float: none; }
+    float: none;
+    overflow: hidden;
+    width: 100%; }
   #resultAjax {
     width: 100%; }
     #resultAjax ul li {

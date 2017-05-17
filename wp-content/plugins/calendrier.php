@@ -23,7 +23,8 @@ function array_filter_by_value($my_array, $index, $value)
 };
 
 /*Remove Value from Array*/
-function removeElementWithValue($array, $key, $value){
+function removeElementWithValue($array, $key, $value)
+{
     foreach($array as $subKey => $subArray){
         if($subArray[$key] == $value){
             unset($array[$subKey]);
@@ -33,7 +34,8 @@ function removeElementWithValue($array, $key, $value){
 };
 
 /*Remove Value inferieur*/
-function removeElementWithInferiorValue($array, $key, $value){
+function removeElementWithInferiorValue($array, $key, $value)
+{
     foreach($array as $subKey => $subArray){
         if($subArray[$key] < $value){
             unset($array[$subKey]);
@@ -43,12 +45,14 @@ function removeElementWithInferiorValue($array, $key, $value){
 };
 
 /*Tri par date*/
-function sortByDate($a,$b){
+function sortByDate($a,$b)
+{
     return ($a['date_calendrier'] <= $b['date_calendrier']) ? -1 : 1;
 };
 
 /*Array sans doublon*/
-function unique_multidim_array($array, $key) {
+function unique_multidim_array($array, $key)
+{
     $temp_array = array();
     $i = 0;
     $key_array = array();
@@ -63,7 +67,8 @@ function unique_multidim_array($array, $key) {
 };
 
 /*Généré Input en remontant le CF lieu*/
-function getInputByLieu(){
+function getInputByLieu()
+{
     $args = array('post_type' => 'spectacles');
     $the_query = new WP_Query($args);
     if ( $the_query->have_posts() ) {
@@ -120,6 +125,83 @@ function getInputByTheme()
             wp_reset_postdata();
         };
     };
+};
+
+function resultDateDefault()
+{
+    $args = array('post_type' => 'spectacles');
+    $the_query = new WP_Query( $args );
+    if( $the_query->have_posts() ){
+        $table = array();
+        while ( $the_query->have_posts() ) {
+            $the_query->the_post();
+
+            $post_id = get_the_ID();
+            $titre = get_the_title($post_id);
+            $link = get_the_permalink($post_id);
+            $thumbnail = get_the_post_thumbnail_url($post_id);
+
+            if( have_rows('representations') ){
+                while ( have_rows('representations') ) : the_row();
+                    $departement        = get_sub_field('departement');
+                    $date               = get_sub_field('date');
+                    $lieu               = get_sub_field('lieu');
+                    $ville_calendrier   = get_sub_field('ville');
+                endwhile;
+            };
+            array_push($table, array(
+                    'id_calendrier'         => $post_id,
+                    'titre_calendrier'      => $titre,
+                    'date_calendrier'       => $date,
+                    'ville_calendrier'      => $ville_calendrier,
+                    'lieu_calendrier'       => $lieu,
+                    'thumbnail_calendrier'  => $thumbnail,
+                    'link'                  => $link,
+                    'departement'           => $departement,
+                )
+            );
+        };
+        usort($table, "sortByDate");
+        $delete_if_less = date("Y-m-d");
+        $clear_date = removeElementWithInferiorValue($table,'date_calendrier',$delete_if_less);
+        $sliced = array_slice($clear_date, 0, 3);
+        echo '<ul>';
+        foreach($sliced as $table_un => $values){
+            setlocale(LC_ALL, "fr_FR");
+            $timestamp = $values['date_calendrier'];
+            $translate_Day = strftime ( '%e' , strtotime($timestamp));
+            $translate_Month = strftime ( '%B' , strtotime($timestamp));
+            if($values['thumbnail_calendrier'] == false){
+                echo '<li>';
+            }else{
+                $bgImage = $values['thumbnail_calendrier'];
+                echo '<li style="background-image:url('.$bgImage.'); ">';
+            }?>
+            <div class="left_event">
+                <p class="cat_calendrier"><? echo $values['cat_calendrier']; ?></p>
+                <p class="titre_calendrier"><? echo $values['titre_calendrier']; ?></p>
+                <p class="artiste_calendrier"><? echo $values['artiste_calendrier']; ?></p>
+                <a href="<? echo $values['link']; ?>" class="link_calendrier">EN SAVOIR +</a>
+            </div>
+            <div class="right_event">
+                <p class="day_calendrier"><?
+                    if($translate_Day == '1'){
+                        echo $translate_Day;
+                        echo "<sup>er</sup>";
+                    }else{
+                        echo $translate_Day;
+                    } ?>
+                </p>
+                <p class="month_calendrier"><? echo $translate_Month; ?></p>
+                <p class="lieu_calendrier"><? echo $values['ville_calendrier'];?></p>
+            </div>
+            <? echo '</li>';
+        };
+        echo '</ul>';
+    };
+    wp_reset_postdata();
+    //die();
+
 };
 
 /************************ AJAX ************************/
@@ -182,7 +264,6 @@ function mon_action() {
         };
         usort($table, "sortByDate");
         $delete_if_less = date("Y-m-d");
-        echo $delete_if_less;
         $clear_date = removeElementWithInferiorValue($table,'date_calendrier',$delete_if_less);
         $clear_table = array_filter_by_value($clear_date,'departement', $ville );
         $count = count($clear_table);
@@ -274,7 +355,6 @@ function mon_action_date() {
         };
         usort($table, "sortByDate");
         $delete_if_less = date("Y-m-d");
-        echo $delete_if_less;
         $clear_date = removeElementWithInferiorValue($table,'date_calendrier',$delete_if_less);
         $clear_table = array_filter_by_value($clear_date,'date_calendrier', $date_event );
         $count = count($clear_table);
