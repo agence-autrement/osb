@@ -43,7 +43,6 @@ jQuery(document).ready(function($) {
     var ville;
     $('button[type="submit"]').on('click', function(){
         ville = $(this).val();
-        console.log(ville);
         jQuery.ajax({
             type:"POST",
             url: ajaxtest,
@@ -57,5 +56,18 @@ jQuery(document).ready(function($) {
             },
         });
     });
+
+
+    $('.tte').on('click', function(){
+        value = '.'+$(this).val();
+        console.log(value);
+        $('.droite div').css('display', 'none');
+        $(value).css('display','inline');
+    });
+
+    $('#close').on('click', function(){
+        $('.datepicker').css('display','none');
+        $(this).css('display','inline');
+    })
 
 }); /* end of as page load scripts */
