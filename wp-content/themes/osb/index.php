@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
 
-<div class="main">
+<div id="content">
     <section id="landing">
         <div class="top_landing">
             <div class="contenu_grid">
@@ -43,7 +43,13 @@
             </div>
         </div>
     </section>
+
+
+
+
+
     <? get_template_part('calendrier_view'); ?>
+
 
 
 

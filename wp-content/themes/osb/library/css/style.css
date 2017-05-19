@@ -858,19 +858,11 @@ BOOTSTRAP GRID
 
 @media (min-width: 1100px) {
   .container {
-<<<<<<< HEAD
-    width: 750px; } }
-
-@media (min-width: 992px) {
-  .container {
-    width: 970px; } }
-=======
     width: 960px; } }
 
 @media (min-width: 1300px) {
   .container {
     width: 1100px; } }
->>>>>>> master
 
 .container-fluid {
   padding-right: 15px;
@@ -1474,11 +1466,8 @@ MEDIA QUERIES
         width: 1px; }
       .footer .grid_footer .footer_content li {
         margin-bottom: 25px; }
-<<<<<<< HEAD
       .footer .grid_footer .footer_content img {
         max-width: 125px; }
-=======
->>>>>>> master
     .footer .grid_footer:after {
       content: '';
       background-color: white;
@@ -1498,24 +1487,17 @@ MEDIA QUERIES
     float: right;
     text-align: right; }
   .footer.active {
-<<<<<<< HEAD
     margin-left: 330px; }
-=======
-    margin-left: 400px; }
->>>>>>> master
 
 /**********************
 Media Queries
 **********************/
-<<<<<<< HEAD
 @media screen and (max-width: 990px) and (min-width: 768px) {
   .footer_content {
     width: 50%;
     float: left; } }
 
-=======
->>>>>>> master
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
   .footer {
     margin-left: 0; } }
 
@@ -1687,8 +1669,8 @@ SIDEBAR MENU
   margin: 15px auto 0; }
   #reseaux_sociaux li {
     display: inline-block;
-    width: 17px;
-    height: 16px;
+    width: 15px;
+    height: 15px;
     background-image: url("../images/reseaux.svg");
     -webkit-background-size: cover;
     background-size: cover; }
@@ -1721,7 +1703,7 @@ SIDEBAR MENU
     #side_nav ul li:before {
       content: '';
       position: absolute;
-      left: -30px;
+      left: -35px;
       bottom: 0;
       width: 15px;
       height: 20px;
@@ -1738,11 +1720,11 @@ SIDEBAR MENU
 
 #bouton_sidebar {
   border: thin white solid;
-  font-size: calc(10px + 0.3vw);
+  font-size: calc(10px + 0.2vw);
   padding: 5px;
   color: white;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 400;
   display: block;
   width: 80%;
   margin: 30px auto;
@@ -1999,157 +1981,6 @@ select {
   background-repeat: no-repeat;
   background-position: 98.5% center; }
 
-/**********************
-FORMS
-**********************/
-input, textarea, button {
-  /* -webkit-appearance: none;*/
-  border-radius: 0;
-  outline: none; }
-
-/**
- * Define consistent border, margin, and padding.
- */
-fieldset {
-  padding: .35em .625em .75em;
-  margin: 0 2px;
-  border: 1px solid #c0c0c0; }
-
-/**
- * 1. Correct `color` not being inherited in IE 8/9.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
- */
-legend {
-  /* 1 */
-  padding: 0;
-  border: 0;
-  /* 2 */ }
-
-/**
- * 1. Correct font family not being inherited in all browsers.
- * 2. Correct font size not being inherited in all browsers.
- * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
- */
-button,
-input,
-select,
-textarea {
-  /* 2 */
-  margin: 0;
-  font-family: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 3 */ }
-
-/**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
- */
-button,
-input {
-  line-height: normal; }
-
-/**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
- * Correct `select` style inheritance in Firefox 4+ and Opera.
- */
-button,
-select {
-  text-transform: none; }
-
-/**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- */
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
-  cursor: pointer;
-  /* 3 */ }
-
-/**
- * Re-set default cursor for disabled elements.
- */
-button[disabled],
-html input[disabled] {
-  cursor: default; }
-
-/**
- * 1. Address box sizing set to `content-box` in IE 8/9/10.
- * 2. Remove excess padding in IE 8/9/10.
- */
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */ }
-
-/**
- * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
- *    (include `-moz` to future-proof).
- */
-input[type="search"] {
-  -webkit-box-sizing: content-box;
-  /* 1 */
-  -moz-box-sizing: content-box;
-  /* 2 */
-  box-sizing: content-box;
-  -webkit-appearance: textfield; }
-
-/**
- * Remove inner padding and search cancel button in Safari 5 and Chrome
- * on OS X.
- */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
-
-/**
- * Remove inner padding and border in Firefox 4+.
- */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  padding: 0;
-  border: 0; }
-
-/**
- * 1. Remove default vertical scrollbar in IE 8/9.
- * 2. Improve readability and alignment in all browsers.
- */
-textarea {
-  overflow: auto;
-  /* 1 */
-  vertical-align: top;
-  /* 2 */ }
-
-.section-event-title {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 2rem;
-  line-height: 2.1rem;
-  margin-bottom: 3.5rem; }
-
-.section-menu-event {
-  background-color: #F3F1F1; }
-
-.menu-event__inner {
-  padding: 1.5rem 0; }
-
-.menu-event__item {
-  display: inline-block;
-  margin: 0.4rem 4rem 0.4rem 0;
-  color: #000; }
-
 .event-desc__inner {
   margin: 8rem 0 4.5rem; }
   .event-desc__inner:before, .event-desc__inner:after {
@@ -2207,33 +2038,6 @@ textarea {
   font-size: 1.5rem;
   color: #000;
   text-align: justify; }
-
-.section-event-partners {
-  background-color: #C8AB58; }
-
-.event-partners__inner {
-  padding: 4.5rem 0 4rem;
-  overflow: hidden; }
-
-.event-partners__item {
-  overflow: hidden;
-  width: 100%; }
-  .event-partners__item__text {
-    font-family: "Montserrat";
-    font-weight: 300;
-    margin-bottom: 0; }
-
-.event-partners__join {
-  text-align: center; }
-  .event-partners__join__text {
-    font-family: "Montserrat";
-    font-size: 2.2rem;
-    line-height: 2.3rem;
-    margin-bottom: 1.4rem; }
-    .event-partners__join__text span {
-      font-size: 4.6rem;
-      line-height: 4.7rem;
-      font-weight: 300; }
 
 .section-event-focus {
   padding: 2.8rem 0 8.3rem; }
@@ -2468,7 +2272,8 @@ LANDING
 .top_landing {
   width: 100%;
   height: 146px;
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 35px; }
 
 #calendrier_top {
   margin: 0; }
@@ -2486,21 +2291,17 @@ LANDING
 .left_date {
   width: 75%;
   float: left;
-  color: white;
-  padding-left: 12px;
-  padding-top: 25px; }
+  color: white; }
 
 .right_date {
   width: 25%;
   float: left;
   color: white;
   text-align: center;
-  position: relative;
-  padding-top: 25px; }
+  position: relative; }
   .right_date:before {
     content: '';
     position: absolute;
-    top: 30px;
     left: -15px;
     height: 50px;
     width: 1px;
@@ -2728,7 +2529,6 @@ RESPONSIVE
 /*1024px*/
 @media screen and (max-width: 1100px) {
   #content {
-<<<<<<< HEAD
     margin-left: 0; }
   /*landing top*/
   .top_landing {
@@ -2782,6 +2582,11 @@ RESPONSIVE
     width: 100%; } }
 
 /****Style Datepicker****/
+#plugin_calendar {
+  overflow: hidden;
+  width: 100%;
+  padding: 35px; }
+
 .contenu_grid {
   /****Style réponse Ajax****/
   /***********************
@@ -2792,16 +2597,11 @@ RESPONSIVE
   /*****1024px*****/
   /*****768px*****/ }
   .contenu_grid.calendar {
-    overflow: inherit;
-    padding-top: 35px; }
+    overflow: inherit; }
     .contenu_grid.calendar:after {
       content: '';
       display: block;
       clear: both; }
-  .contenu_grid #plugin_calendar {
-    overflow: hidden;
-    width: 100%;
-    padding: 35px; }
   .contenu_grid #selector {
     margin-right: 35px;
     height: 278px;
@@ -2817,74 +2617,13 @@ RESPONSIVE
       float: right;
       width: 50%; }
     .contenu_grid #selector button {
+      padding: 5px;
       border: none;
       width: 90%;
       margin: 0 auto;
       margin-bottom: 10px;
-=======
-    margin-left: 0; } }
-
-/****Style Datepicker****/
-#plugin_calendar {
-  overflow: hidden;
-  width: 100%;
-  padding: 35px; }
-
-#selector {
-  margin-right: 75px;
-  height: 278px;
-  width: 216px;
-  float: left; }
-
-#date_value {
-  display: none; }
-
-.ui-datepicker {
-  width: 216px;
-  height: auto;
-  background-color: #EFEDEC;
-  position: relative; }
-
-.ui-datepicker-header {
-  height: 25px;
-  color: black; }
-  .ui-datepicker-header .ui-datepicker-title {
-    text-align: center; }
-
-.ui-datepicker-next {
-  width: 10px;
-  position: absolute;
-  right: 5px;
-  top: 0px;
-  display: inline-block;
-  cursor: pointer;
-  text-indent: -5000px;
-  background-image: url("../images/calendrier-right.svg");
-  background-repeat: no-repeat;
-  background-position: right; }
-
-.ui-datepicker-prev {
-  width: 10px;
-  position: absolute;
-  left: 5px;
-  top: 0px;
-  display: inline-block;
-  cursor: pointer;
-  text-indent: -5000px;
-  background-image: url("../images/calendrier-left.svg");
-  background-repeat: no-repeat;
-  background-position: right; }
-
-.ui-datepicker-calendar {
-  width: 100%; }
-  .ui-datepicker-calendar thead tr th span {
-    font-weight: 400; }
-  .ui-datepicker-calendar tr {
-    height: 28px; }
-    .ui-datepicker-calendar tr td {
->>>>>>> master
       text-align: center;
-      background-color: #EFEDEC;
+      background-color: #EDEDED;
       -webkit-transition: 0.3s;
       -khtml-transition: 0.3s;
       -moz-transition: 0.3s;
@@ -2895,17 +2634,28 @@ RESPONSIVE
         background-color: black;
         color: white; }
   .contenu_grid .datepicker {
+    height: 0;
+    width: 0;
     position: absolute;
+    overflow: hidden;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%; }
+    -webkit-transition: 0.2s;
+    -khtml-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s; }
+    .contenu_grid .datepicker.active {
+      height: 100%;
+      width: 100%; }
     .contenu_grid .datepicker #close {
       height: 30px;
       width: 30px;
-      background-color: black;
       position: absolute;
-      left: -30px; }
+      right: 10px;
+      cursor: pointer;
+      background-image: url("../images/close.svg"); }
   .contenu_grid #date_value {
     display: none; }
   .contenu_grid .ui-datepicker {
@@ -3062,127 +2812,8 @@ RESPONSIVE
       width: 100%; }
       .contenu_grid #resultAjax ul li {
         width: 100%;
-<<<<<<< HEAD
         float: none;
         overflow: hidden;
         margin-bottom: 35px; } }
-=======
-        height: 100%;
-        padding-top: 4px;
-        -webkit-transition: 0.2s;
-        -khtml-transition: 0.2s;
-        -moz-transition: 0.2s;
-        -ms-transition: 0.2s;
-        -o-transition: 0.2s;
-        transition: 0.2s; }
-        .ui-datepicker-calendar tr td a:hover {
-          text-decoration: none;
-          cursor: pointer;
-          font-weight: 400;
-          background-color: #FAEA2D; }
-
-/****Style réponse Ajax****/
-#resultAjax {
-  width: calc(100% - 291px);
-  float: left; }
-  #resultAjax .left_event {
-    width: 75%;
-    float: left;
-    color: white;
-    padding-left: 12px;
-    padding-top: 25px; }
-  #resultAjax .right_event {
-    width: 25%;
-    float: left;
-    color: white;
-    text-align: center;
-    position: relative;
-    padding-top: 25px; }
-    #resultAjax .right_event:before {
-      content: '';
-      position: absolute;
-      top: 30px;
-      left: -15px;
-      height: 50px;
-      width: 1px;
-      background-color: white;
-      -webkit-transform: rotate(30deg);
-      -moz-transform: rotate(30deg);
-      -ms-transform: rotate(30deg);
-      -o-transform: rotate(30deg);
-      transform: rotate(30deg);
-      -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711)";
-      filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711); }
-  #resultAjax ul {
-    overflow: hidden;
-    width: 100%; }
-  #resultAjax li {
-    width: 30%;
-    color: white;
-    background-color: darkslategrey;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-right: 3%;
-    float: left; }
-    #resultAjax li:last-of-type {
-      margin-right: 0; }
-  #resultAjax p {
-    margin-bottom: 0; }
-    #resultAjax p.cat_calendrier {
-      color: #FDE608;
-      font-size: 12px; }
-    #resultAjax p.titre_calendrier {
-      font-size: 18px; }
-    #resultAjax p.day_calendrier {
-      font-size: 25px;
-      font-weight: 500; }
-    #resultAjax p.month_calendrier, #resultAjax p.lieu_calendrier {
-      font-size: 12px; }
-    #resultAjax p:nth-of-type(3) {
-      margin-bottom: 50px; }
-  #resultAjax .link_calendrier {
-    display: block;
-    margin-bottom: 25px;
-    position: relative; }
-    #resultAjax .link_calendrier:after {
-      content: '';
-      position: absolute;
-      background-color: white;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 1px;
-      -webkit-transition: 0.6s;
-      -khtml-transition: 0.6s;
-      -moz-transition: 0.6s;
-      -ms-transition: 0.6s;
-      -o-transition: 0.6s;
-      transition: 0.6s; }
-    #resultAjax .link_calendrier:hover {
-      font-weight: inherit; }
-      #resultAjax .link_calendrier:hover:after {
-        width: 100px; }
-
-/***********************
-RESPONSIVE
-***********************/
-/*****1600px*****/
-/*****1200px*****/
-/*****1024px*****/
-@media screen and (max-width: 1024px) {
-  #selector {
-    margin: 0 auto;
-    float: none; }
-  #resultAjax {
-    width: 100%; }
-    #resultAjax ul li {
-      width: 100%;
-      float: none;
-      overflow: hidden;
-      margin-bottom: 35px; } }
-
-/*****768px*****/
->>>>>>> master
 
 /*# sourceMappingURL=maps/style.css.map */

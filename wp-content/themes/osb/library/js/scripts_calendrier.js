@@ -1,6 +1,11 @@
 /**********AJAX**********/
 jQuery(document).ready(function($) {
 
+    var ville;
+    var theme;
+    var type;
+
+
     $( function() {
         $( "#datepicker" ).datepicker({
             altField: "#datepicker",
@@ -23,7 +28,7 @@ jQuery(document).ready(function($) {
                 var month1 = $("#datepicker").datepicker('getDate').getMonth() + 1;
                 var cleanMonth = ('0' + month1).slice(-2);
                 var year1 = $("#datepicker").datepicker('getDate').getFullYear();
-                var fullDate = year1 + "-" + cleanMonth + "-" + cleanDay;
+                var fullDate = year1+cleanMonth+cleanDay;
                 jQuery.ajax({
                     type:"POST",
                     url: ajaxtest,
@@ -40,7 +45,6 @@ jQuery(document).ready(function($) {
         });
     });
 
-    var ville;
     $('button[type="submit"]').on('click', function(){
         ville = $(this).val();
         jQuery.ajax({
@@ -58,15 +62,48 @@ jQuery(document).ready(function($) {
     });
 
 
-    $('.tte').on('click', function(){
+    $('.theme').on('click', function(){
+        theme = $(this).val();
+        jQuery.ajax({
+            type:"POST",
+            url: ajaxtest,
+            dataType: 'html',
+            data: {
+                action: "mon_action_theme",
+                theme: theme,
+            },
+            success:function(response){
+                $('#resultAjax').html(response);
+            },
+        });
+    });
+
+    $('.type_calendar').on('click', function(){
+        type = $(this).val();
+        jQuery.ajax({
+            type:"POST",
+            url: ajaxtest,
+            dataType: 'html',
+            data: {
+                action: "mon_action_type",
+                type: type,
+            },
+            success:function(response){
+                $('#resultAjax').html(response);
+            },
+        });
+    });
+
+
+    $('.btn_gauche').on('click', function(){
         value = '.'+$(this).val();
-        console.log(value);
         $('.droite div').css('display', 'none');
         $(value).css('display','inline');
+        $(value).addClass('active');
     });
 
     $('#close').on('click', function(){
-        $('.datepicker').css('display','none');
+        $('.datepicker').removeClass('active');
         $(this).css('display','inline');
     })
 

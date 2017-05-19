@@ -87,7 +87,7 @@ SIDEBAR MENU
   left:0;
   text-align: center;
   background-color: black;
-  font-size: calc(10px + 0.4vw);
+  font-size: calc(10px + 0.3vw);
   text-transform: uppercase;
   color: #FFF;
   z-index: 1000;
@@ -123,7 +123,7 @@ SIDEBAR MENU
     content: '';
     position: absolute;
     top: 0;
-    left: 115px;
+    left: 80px;
     height: 40px;
     width: 1px;
     background-color: white;
@@ -139,7 +139,7 @@ SIDEBAR MENU
     content: '';
     position: absolute;
     bottom: 0;
-    left: 80px;
+    left: 45px;
     height: 40px;
     width: 1px;
     background-color: white;
@@ -164,8 +164,8 @@ SIDEBAR MENU
 }
 
 #logo_sidebar {
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   text-indent: -5000px;
   margin: 0 auto;
   background-image: url('../images/osb_logo.svg');
@@ -178,8 +178,8 @@ SIDEBAR MENU
   margin: 15px auto 0;
   li{
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    width: 15px;
+    height: 15px;
     background-image: url('../images/reseaux.svg');
     -webkit-background-size: cover;
     background-size: cover;
@@ -240,11 +240,11 @@ SIDEBAR MENU
 
 #bouton_sidebar{
   border: thin white solid;
-  font-size: calc(10px + 0.3vw);
+  font-size: calc(10px + 0.2vw);
   padding: 5px;
   color: white;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 400;
   display: block;
   width: 80%;
   margin: 30px auto;
