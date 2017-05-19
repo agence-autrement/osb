@@ -158,6 +158,9 @@ jQuery(document).ready(function($) {
 		$('.footer').toggleClass('active');
 	});
 
+	/* Event menu Scroll to fixed */
+	$('.section-menu-event').scrollToFixed();
+
 	/* Hover photo_descrition event */
 
 	$('.event-desc__image__play').on('click', function() {

@@ -1,0 +1,26 @@
+.section-event-media {
+
+}
+
+
+.event-media {
+  &__item {
+
+    p {
+      width:380px;
+
+      &:after {
+        display: block;
+        content:'';
+        height:75px;
+        width: 28px;
+        background-color: #fff;
+        position: absolute;
+        bottom:0;
+        right: 67px;
+        transform: skew(-30deg);
+
+      }
+    }
+  }
+}

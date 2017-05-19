@@ -3,7 +3,7 @@ GLOBAL
 ***********************/
 
 #content {
-  margin-left:200px;
+  margin-left:130px;
   overflow: hidden;
   @include transition(0.6s);
   &.active{
@@ -318,7 +318,7 @@ RESPONSIVE
 /*1024px*/
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
 
   #content{
     margin-left: 0;

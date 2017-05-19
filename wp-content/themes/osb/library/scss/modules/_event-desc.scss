@@ -12,6 +12,7 @@
   &__image{
     position: relative;
     height:280px;
+    width: 300px;
 
 
     &__play {
@@ -48,8 +49,8 @@
 
   &__content {
     &__title {
-      font-size: 2.9rem;
-      line-height: 3rem;
+      font-size: 3.1rem;
+      line-height: 3.2rem;
       margin-top: 0;
       font-family: $font2;
       font-weight: 300;
@@ -67,9 +68,9 @@
     }
 
     &__text {
-      font-size:1.3rem;
-      line-height:1.4rem;
+      font-size:1.5rem;
       color: #000;
+      text-align: justify;
     }
   }
 }

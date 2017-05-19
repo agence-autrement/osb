@@ -1,0 +1,35 @@
+.section-event-joinus {
+  background-color: $color-2;
+  padding:4.5rem 0 4rem;
+  overflow: hidden;
+  text-align: center;
+
+}
+
+.event-joinus {
+
+  &__title {
+    font-family:$font2;
+    font-size:4.6rem;
+    line-height:4.7rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  &__btn {
+    &--third {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+
+  &__item {
+
+
+
+  }
+
+
+}
+

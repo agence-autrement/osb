@@ -241,7 +241,7 @@ can replace these fonts, change it in your scss files
 and be up and running in seconds.
 */
 function bones_fonts() {
-  wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Montserrat:200,300,400,600,700,400italic,700');
+  wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,600,700');
 }
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
