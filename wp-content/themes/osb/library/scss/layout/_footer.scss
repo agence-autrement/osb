@@ -27,6 +27,9 @@
       li{
         margin-bottom: 25px;
       }
+      img{
+        max-width: 125px;
+      }
     }
     &:after{
       content: '';
@@ -51,7 +54,7 @@
     text-align: right;
   }
   &.active{
-    margin-left: 400px;
+    margin-left: 330px;
   }
 }
 
@@ -81,17 +84,16 @@ Media Queries
 }
 
 @media screen and (max-width: 990px) and (min-width: 768px) {
-
-}
-
-@media screen and (max-width: 1024px) {
-  .footer{
-    margin-left: 0;
+  .footer_content{
+    width: 50%;
+    float: left;
   }
 }
 
 @media screen and (max-width: 1100px) {
-
+  .footer{
+    margin-left: 0;
+  }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),

@@ -15,6 +15,8 @@ $action = esc_attr(trim($_REQUEST['action']));
 
 $allowed_actions = array(
     'mon_action_date',
+    'mon_action_theme',
+    'mon_action_type',
     'mon_action'
 );
 

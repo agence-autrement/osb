@@ -1,7 +1,7 @@
 <footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 	<div class="contenu_grid">
 		<div class="grid_footer">
-			<div class="footer_content col-lg-2 col-md-2 col-sm-12 col-xs-12">
+			<div class="footer_content col-md-2">
 				<ul>
 					<li>La saison</li>
 					<li>Découvrir</li>
@@ -11,7 +11,7 @@
 					<li>Espace musicien</li>
 				</ul>
 			</div>
-			<div class="footer_content col-lg-2 col-md-2 col-xs-12 col-sm-12">
+			<div class="footer_content col-md-2">
 				<ul>
 					<li>Ecouter & voir</li>
 					<li>Discographie</li>
@@ -20,12 +20,12 @@
 					<li>Galerie photo</li>
 				</ul>
 			</div>
-			<div class="col-lg-1 col-md-1 col-xs-12 col-sm-12"></div>
-				<div class="footer_content col-lg-2 col-md-2 col-xs-12 col-sm-12">
+			<div class="col-md-1"></div>
+				<div class="footer_content col-md-2">
 					<img src="<?php bloginfo('template_url') ?>/library/images/osb_logo.svg" alt="logo">
 				</div>
-			<div class="col-lg-1 col-md-1 col-xs-12 col-sm-12"></div>
-			<div class="footer_content col-lg-2 col-md-2 col-xs-12 col-sm-12">
+			<div class="col-md-1"></div>
+			<div class="footer_content col-md-2">
 				<ul>
 					<li>Nous soutenir</li>
 					<li>Symphonia</li>
@@ -35,7 +35,7 @@
 					<li>Vente aux enchères</li>
 				</ul>
 			</div>
-			<div class="footer_content col-lg-2 col-md-2 col-sm-12 col-xs-12">
+			<div class="footer_content col-md-2">
 				<ul>
 					<li>Mentions légales</li>
 					<li>Crédits</li>
@@ -44,7 +44,7 @@
 				</ul>
 			</div>
 		</div>
-		<div class="contenu_grid">
+		<div class="containetr">
 			<div class="contact">
 				ADMINISTRATION
 			</div>

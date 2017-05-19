@@ -80,7 +80,7 @@ img {
   border: 0; }
 
 .main {
-  margin-left: 200px; }
+  margin-left: 130px; }
 
 .vcenter {
   display: inline-block;
@@ -443,6 +443,10 @@ span.amp {
 /**********************
 Media Queries
 **********************/
+@media screen and (max-width: 1024px) {
+  .main {
+    margin-left: 0; } }
+
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   /* Retina-specific stuff here */ }
 
@@ -1462,6 +1466,8 @@ MEDIA QUERIES
         width: 1px; }
       .footer .grid_footer .footer_content li {
         margin-bottom: 25px; }
+      .footer .grid_footer .footer_content img {
+        max-width: 125px; }
     .footer .grid_footer:after {
       content: '';
       background-color: white;
@@ -1481,12 +1487,17 @@ MEDIA QUERIES
     float: right;
     text-align: right; }
   .footer.active {
-    margin-left: 400px; }
+    margin-left: 330px; }
 
 /**********************
 Media Queries
 **********************/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 990px) and (min-width: 768px) {
+  .footer_content {
+    width: 50%;
+    float: left; } }
+
+@media screen and (max-width: 1100px) {
   .footer {
     margin-left: 0; } }
 
@@ -1575,7 +1586,7 @@ SIDEBAR MENU
   left: 0;
   text-align: center;
   background-color: black;
-  font-size: calc(10px + 0.4vw);
+  font-size: calc(10px + 0.3vw);
   text-transform: uppercase;
   color: #FFF;
   z-index: 1000;
@@ -1609,7 +1620,7 @@ SIDEBAR MENU
     content: '';
     position: absolute;
     top: 0;
-    left: 115px;
+    left: 80px;
     height: 40px;
     width: 1px;
     background-color: white;
@@ -1624,7 +1635,7 @@ SIDEBAR MENU
     content: '';
     position: absolute;
     bottom: 0;
-    left: 80px;
+    left: 45px;
     height: 40px;
     width: 1px;
     background-color: white;
@@ -1644,8 +1655,8 @@ SIDEBAR MENU
   height: 33%; }
 
 #logo_sidebar {
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   text-indent: -5000px;
   margin: 0 auto;
   background-image: url("../images/osb_logo.svg");
@@ -1658,8 +1669,8 @@ SIDEBAR MENU
   margin: 15px auto 0; }
   #reseaux_sociaux li {
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    width: 15px;
+    height: 15px;
     background-image: url("../images/reseaux.svg");
     -webkit-background-size: cover;
     background-size: cover; }
@@ -1709,11 +1720,11 @@ SIDEBAR MENU
 
 #bouton_sidebar {
   border: thin white solid;
-  font-size: calc(10px + 0.3vw);
+  font-size: calc(10px + 0.2vw);
   padding: 5px;
   color: white;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 400;
   display: block;
   width: 80%;
   margin: 30px auto;
@@ -1970,6 +1981,7 @@ select {
   background-repeat: no-repeat;
   background-position: 98.5% center; }
 
+<<<<<<< HEAD
 /**********************
 FORMS
 **********************/
@@ -2396,6 +2408,8 @@ RESPONSIVE
   margin: 0.4rem 4rem 0.4rem 0;
   color: #000; }
 
+=======
+>>>>>>> master
 .event-desc__inner {
   margin: 8rem 0 4.5rem; }
   .event-desc__inner:before, .event-desc__inner:after {
@@ -2453,33 +2467,6 @@ RESPONSIVE
   font-size: 1.5rem;
   color: #000;
   text-align: justify; }
-
-.section-event-partners {
-  background-color: #C8AB58; }
-
-.event-partners__inner {
-  padding: 4.5rem 0 4rem;
-  overflow: hidden; }
-
-.event-partners__item {
-  overflow: hidden;
-  width: 100%; }
-  .event-partners__item__text {
-    font-family: "Montserrat";
-    font-weight: 300;
-    margin-bottom: 0; }
-
-.event-partners__join {
-  text-align: center; }
-  .event-partners__join__text {
-    font-family: "Montserrat";
-    font-size: 2.2rem;
-    line-height: 2.3rem;
-    margin-bottom: 1.4rem; }
-    .event-partners__join__text span {
-      font-size: 4.6rem;
-      line-height: 4.7rem;
-      font-weight: 300; }
 
 .section-event-focus {
   padding: 2.8rem 0 8.3rem; }
@@ -2577,6 +2564,8 @@ RESPONSIVE
 .event-program__grid--4 {
   width: 32%;
   display: inline-block; }
+<<<<<<< HEAD
+=======
 
 .event-program__grid--3 {
   width: 24%;
@@ -2678,6 +2667,316 @@ RESPONSIVE
     right: 67px;
     transform: skew(-30deg); }
 
+/***********************
+GLOBAL
+***********************/
+#content {
+  margin-left: 130px;
+  overflow: hidden;
+  -webkit-transition: 0.6s;
+  -khtml-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s; }
+  #content.active {
+    margin-left: 400px; }
+
+.contenu_grid {
+  max-width: 1600px;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto; }
+
+/***********************
+LANDING
+***********************/
+#landing {
+  height: 90vh;
+  overflow: hidden;
+  background-image: url("../images/front.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.top_landing {
+  width: 100%;
+  height: 146px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 35px; }
+
+#calendrier_top {
+  margin: 0; }
+  #calendrier_top li {
+    float: left;
+    margin-right: 45px;
+    width: 231px;
+    position: relative;
+    min-height: 90px; }
+    #calendrier_top li:hover {
+      cursor: pointer; }
+      #calendrier_top li:hover .img_hover {
+        height: 200px; }
+
+.left_date {
+  width: 75%;
+  float: left;
+  color: white; }
+
+.right_date {
+  width: 25%;
+  float: left;
+  color: white;
+  text-align: center;
+  position: relative; }
+  .right_date:before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    height: 50px;
+    width: 1px;
+    background-color: white;
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    transform: rotate(30deg);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711)";
+    filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711); }
+
+.type {
+  font-size: 10px;
+  color: #FFE500; }
+
+.titre {
+  font-size: 15px; }
+>>>>>>> master
+
+.event-program__grid--3 {
+  width: 24%;
+  display: inline-block; }
+
+.section-event-date {
+  padding: 2.9rem 0 3rem;
+  text-align: center; }
+
+.event-date__title {
+  color: #fff; }
+
+.event-date__item {
+  height: 265px;
+  border: 1px solid #fff;
+  margin: 0 9px;
+  position: relative; }
+  .event-date__item__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%; }
+
+<<<<<<< HEAD
+.event-date__date {
+  font-size: 2.7rem;
+  line-height: 3.5rem;
+  font-family: "Montserrat";
+  margin: 0 0 19px 0;
+  color: #fff; }
+  .event-date__date span {
+    font-weight: 300; }
+=======
+.img_hover {
+  -webkit-background-size: auto 200px;
+  background-size: auto 200px;
+  width: 100%;
+  height: 0;
+  -webkit-transition: 0.3s;
+  -khtml-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+>>>>>>> master
+
+.event-date__city {
+  color: yellow;
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 1.6rem;
+  margin: 0 0 1px; }
+
+<<<<<<< HEAD
+.event-date__place {
+  font-weight: 300;
+  font-family: "Montserrat";
+  font-style: italic;
+  font-size: 1.6rem;
+  color: #fff;
+  margin: 0 0 30px; }
+
+.event-date__btn {
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: 600; }
+
+.event-date__grid--12 {
+  width: 100%;
+  display: inline-block; }
+
+.event-date__grid--6 {
+  width: 49%;
+  display: inline-block; }
+
+.event-date__grid--4 {
+  width: 33%;
+  display: inline-block; }
+=======
+/***********************
+CALL TO ACTION
+***********************/
+.call_to_action {
+  width: 100%;
+  padding: 35px;
+  background-color: #A5C9E5;
+  position: relative; }
+
+#left_callto {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  position: relative;
+  padding-top: 50px;
+  height: 180px; }
+  #left_callto div:nth-of-type(1) {
+    font-size: 18px;
+    color: black;
+    font-weight: 400; }
+  #left_callto div:nth-of-type(2) {
+    font-size: 45px;
+    color: black;
+    font-weight: 300; }
+  #left_callto .btn_savoir {
+    border: thin black solid;
+    padding: 2px 10px;
+    width: 100px;
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin: 15px auto;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 12px; }
+
+/************ Slider Style */
+#slider_callto {
+  width: 350px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  float: right; }
+
+.previous_btn {
+  position: absolute;
+  height: 33px;
+  width: 10px;
+  background-image: url("../images/left_slide.svg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  left: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-indent: -5000px; }
+  .previous_btn:hover {
+    cursor: pointer; }
+
+.next_btn {
+  position: absolute;
+  height: 33px;
+  width: 10px;
+  background-image: url("../images/right_slide.svg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  right: 64px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-indent: -5000px; }
+  .next_btn:hover {
+    cursor: pointer; }
+>>>>>>> master
+
+.event-date__grid--3 {
+  width: 24%;
+  display: inline-block;
+  margin-bottom: 25px; }
+
+.section-event-joinus {
+  background-color: #C8AB58;
+  padding: 4.5rem 0 4rem;
+  overflow: hidden;
+  text-align: center; }
+
+<<<<<<< HEAD
+.event-joinus__title {
+  font-family: "Montserrat";
+  font-size: 4.6rem;
+  line-height: 4.7rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 3rem; }
+=======
+.titre_article {
+  font-size: 26px;
+  font-weight: 300;
+  margin-bottom: 10px; }
+
+.extrait_1 {
+  margin-bottom: 15px; }
+
+.extrait_2 {
+  color: #818080;
+  margin-bottom: 15px; }
+
+#first_article {
+  height: 290px;
+  width: calc(100% - 310px);
+  margin-right: 20px;
+  border: 1px solid lightgrey;
+  float: left;
+  overflow: hidden; }
+>>>>>>> master
+
+.event-joinus__btn--third {
+  background-color: #000;
+  color: #fff; }
+
+<<<<<<< HEAD
+.event-media__item p {
+  width: 380px; }
+  .event-media__item p:after {
+    display: block;
+    content: '';
+    height: 75px;
+    width: 28px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 67px;
+    transform: skew(-30deg); }
+=======
+.first_article_content {
+  width: 50%;
+  height: 100%;
+  float: left;
+  padding: 15px;
+  font-size: 12px; }
+
+.tarif {
+  color: #818080;
+  margin-bottom: 15px; }
+>>>>>>> master
+
 .slideshow--bonus {
   height: 225px;
   width: 395px; }
@@ -2685,16 +2984,88 @@ RESPONSIVE
 .slideshow .slider--bonus {
   height: 225px; }
 
+<<<<<<< HEAD
 .previous_btn--bonus {
   left: 15px; }
+=======
+.second_article_content {
+  width: 100%;
+  height: 50%;
+  padding: 15px;
+  font-size: 12px; }
+>>>>>>> master
 
 .next_btn--bonus {
   right: 17px; }
 
+<<<<<<< HEAD
 .cta__stop {
   padding: 0 !important;
   position: static !important;
   background-color: #fff !important; }
+=======
+/*1200px*/
+@media screen and (max-width: 1200px) {
+  #left_callto div:nth-of-type(1) {
+    font-size: 16px; }
+  #left_callto div:nth-of-type(2) {
+    font-size: 30px; } }
+
+/*1024px*/
+@media screen and (max-width: 1100px) {
+  #content {
+    margin-left: 0; }
+  /*landing top*/
+  .top_landing {
+    height: auto;
+    padding-bottom: 35px; }
+  #calendrier_top li {
+    width: 90%;
+    margin: 0 auto;
+    position: relative; }
+    #calendrier_top li:hover .img_hover {
+      display: none; }
+  /*Slider*/
+  #left_callto {
+    height: auto; }
+    #left_callto #slider_callto {
+      float: none;
+      position: inherit;
+      margin: 0 auto; }
+  /*Article*/
+  #first_article {
+    float: none;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 35px; }
+  #second_article {
+    float: none;
+    width: 90%;
+    margin: 0 auto; }
+  .second_article_thumbnail {
+    float: right;
+    background-image: url("../images/loutre.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    width: 50%;
+    height: 100%; }
+  .second_article_content {
+    width: 50%;
+    height: 100%;
+    float: right; } }
+
+/*480px*/
+@media screen and (max-width: 480px) {
+  .footer_content {
+    margin-top: 25px;
+    margin-bottom: 25px; }
+    .footer_content:after {
+      display: none; }
+  .first_article_thumbnail, .second_article_thumbnail {
+    display: none; }
+  .first_article_content, .second_article_content {
+    width: 100%; } }
+>>>>>>> master
 
 /****Style Datepicker****/
 #plugin_calendar {
@@ -2702,180 +3073,233 @@ RESPONSIVE
   width: 100%;
   padding: 35px; }
 
-#selector {
-  margin-right: 75px;
-  height: 278px;
-  width: 216px;
-  float: left; }
-
-#date_value {
-  display: none; }
-
-.ui-datepicker {
-  width: 216px;
-  height: auto;
-  background-color: #EFEDEC;
-  position: relative; }
-
-.ui-datepicker-header {
-  height: 25px;
-  color: black; }
-  .ui-datepicker-header .ui-datepicker-title {
-    text-align: center; }
-
-.ui-datepicker-next {
-  width: 10px;
-  position: absolute;
-  right: 5px;
-  top: 0px;
-  display: inline-block;
-  cursor: pointer;
-  text-indent: -5000px;
-  background-image: url("../images/calendrier-right.svg");
-  background-repeat: no-repeat;
-  background-position: right; }
-
-.ui-datepicker-prev {
-  width: 10px;
-  position: absolute;
-  left: 5px;
-  top: 0px;
-  display: inline-block;
-  cursor: pointer;
-  text-indent: -5000px;
-  background-image: url("../images/calendrier-left.svg");
-  background-repeat: no-repeat;
-  background-position: right; }
-
-.ui-datepicker-calendar {
-  width: 100%; }
-  .ui-datepicker-calendar thead tr th span {
-    font-weight: 400; }
-  .ui-datepicker-calendar tr {
-    height: 28px; }
-    .ui-datepicker-calendar tr td {
-      text-align: center;
-      border: white 1px solid;
-      height: 100%; }
-      .ui-datepicker-calendar tr td a {
-        font-size: 12px;
-        display: block;
-        width: 100%;
-        height: 100%;
-        padding-top: 4px;
-        -webkit-transition: 0.2s;
-        -khtml-transition: 0.2s;
-        -moz-transition: 0.2s;
-        -ms-transition: 0.2s;
-        -o-transition: 0.2s;
-        transition: 0.2s; }
-        .ui-datepicker-calendar tr td a:hover {
-          text-decoration: none;
-          cursor: pointer;
-          font-weight: 400;
-          background-color: #FAEA2D; }
-
-/****Style réponse Ajax****/
-#resultAjax {
-  width: calc(100% - 291px);
-  float: left; }
-  #resultAjax .left_event {
-    width: 75%;
-    float: left;
-    color: white;
-    padding-left: 12px;
-    padding-top: 25px; }
-  #resultAjax .right_event {
-    width: 25%;
-    float: left;
-    color: white;
-    text-align: center;
-    position: relative;
-    padding-top: 25px; }
-    #resultAjax .right_event:before {
+.contenu_grid {
+  /****Style réponse Ajax****/
+  /***********************
+  RESPONSIVE
+  ***********************/
+  /*****1600px*****/
+  /*****1200px*****/
+  /*****1024px*****/
+  /*****768px*****/ }
+  .contenu_grid.calendar {
+    overflow: inherit; }
+    .contenu_grid.calendar:after {
       content: '';
-      position: absolute;
-      top: 30px;
-      left: -15px;
-      height: 50px;
-      width: 1px;
-      background-color: white;
-      -webkit-transform: rotate(30deg);
-      -moz-transform: rotate(30deg);
-      -ms-transform: rotate(30deg);
-      -o-transform: rotate(30deg);
-      transform: rotate(30deg);
-      -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711)";
-      filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711); }
-  #resultAjax ul {
-    overflow: hidden;
-    width: 100%; }
-  #resultAjax li {
-    width: 30%;
-    color: white;
-    background-color: darkslategrey;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-right: 3%;
-    float: left; }
-    #resultAjax li:last-of-type {
-      margin-right: 0; }
-  #resultAjax p {
-    margin-bottom: 0; }
-    #resultAjax p.cat_calendrier {
-      color: #FDE608;
-      font-size: 12px; }
-    #resultAjax p.titre_calendrier {
-      font-size: 18px; }
-    #resultAjax p.day_calendrier {
-      font-size: 25px;
-      font-weight: 500; }
-    #resultAjax p.month_calendrier, #resultAjax p.lieu_calendrier {
-      font-size: 12px; }
-    #resultAjax p:nth-of-type(3) {
-      margin-bottom: 50px; }
-  #resultAjax .link_calendrier {
-    display: block;
-    margin-bottom: 25px;
+      display: block;
+      clear: both; }
+  .contenu_grid #selector {
+    margin-right: 35px;
+    height: 278px;
+    width: 256px;
+    float: left;
     position: relative; }
-    #resultAjax .link_calendrier:after {
-      content: '';
+    .contenu_grid #selector .gauche {
+      float: left;
+      width: 50%; }
+      .contenu_grid #selector .gauche button {
+        text-transform: uppercase; }
+    .contenu_grid #selector .droite {
+      float: right;
+      width: 50%; }
+    .contenu_grid #selector button {
+      padding: 5px;
+      border: none;
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      text-align: center;
+      background-color: #EDEDED;
+      -webkit-transition: 0.3s;
+      -khtml-transition: 0.3s;
+      -moz-transition: 0.3s;
+      -ms-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
+      .contenu_grid #selector button:hover {
+        background-color: black;
+        color: white; }
+  .contenu_grid .datepicker {
+    height: 0;
+    width: 0;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    -webkit-transition: 0.2s;
+    -khtml-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s; }
+    .contenu_grid .datepicker.active {
+      height: 100%;
+      width: 100%; }
+    .contenu_grid .datepicker #close {
+      height: 30px;
+      width: 30px;
       position: absolute;
-      background-color: white;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 1px;
-      -webkit-transition: 0.6s;
-      -khtml-transition: 0.6s;
-      -moz-transition: 0.6s;
-      -ms-transition: 0.6s;
-      -o-transition: 0.6s;
-      transition: 0.6s; }
-    #resultAjax .link_calendrier:hover {
-      font-weight: inherit; }
-      #resultAjax .link_calendrier:hover:after {
-        width: 100px; }
-
-/***********************
-RESPONSIVE
-***********************/
-/*****1600px*****/
-/*****1200px*****/
-/*****1024px*****/
-@media screen and (max-width: 1024px) {
-  #selector {
-    margin: 0 auto;
-    float: none; }
-  #resultAjax {
+      right: 10px;
+      cursor: pointer;
+      background-image: url("../images/close.svg"); }
+  .contenu_grid #date_value {
+    display: none; }
+  .contenu_grid .ui-datepicker {
+    width: 216px;
+    height: auto;
+    background-color: #EFEDEC;
+    position: relative; }
+  .contenu_grid .ui-datepicker-header {
+    height: 25px;
+    color: black;
+    padding-top: 5px; }
+    .contenu_grid .ui-datepicker-header .ui-datepicker-title {
+      text-align: center; }
+  .contenu_grid .ui-datepicker-next {
+    width: 10px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: inline-block;
+    cursor: pointer;
+    text-indent: -5000px;
+    background-image: url("../images/calendrier-right.svg");
+    background-repeat: no-repeat;
+    background-position: right; }
+  .contenu_grid .ui-datepicker-prev {
+    width: 10px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    display: inline-block;
+    cursor: pointer;
+    text-indent: -5000px;
+    background-image: url("../images/calendrier-left.svg");
+    background-repeat: no-repeat;
+    background-position: right; }
+  .contenu_grid .ui-datepicker-calendar {
     width: 100%; }
-    #resultAjax ul li {
-      width: 100%;
+    .contenu_grid .ui-datepicker-calendar thead tr th span {
+      font-weight: 400; }
+    .contenu_grid .ui-datepicker-calendar tr {
+      height: 28px; }
+      .contenu_grid .ui-datepicker-calendar tr td {
+        text-align: center;
+        border: white 1px solid;
+        height: 100%; }
+        .contenu_grid .ui-datepicker-calendar tr td a {
+          font-size: 12px;
+          display: block;
+          width: 100%;
+          height: 100%;
+          padding: 5px;
+          -webkit-transition: 0.2s;
+          -khtml-transition: 0.2s;
+          -moz-transition: 0.2s;
+          -ms-transition: 0.2s;
+          -o-transition: 0.2s;
+          transition: 0.2s; }
+          .contenu_grid .ui-datepicker-calendar tr td a:hover {
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: 400;
+            background-color: #FAEA2D; }
+  .contenu_grid #resultAjax {
+    width: calc(100% - 291px);
+    float: left; }
+    .contenu_grid #resultAjax .left_event {
+      width: 75%;
+      float: left;
+      color: white;
+      padding-left: 12px;
+      padding-top: 25px; }
+    .contenu_grid #resultAjax .right_event {
+      width: 25%;
+      float: left;
+      color: white;
+      text-align: center;
+      position: relative;
+      padding-top: 25px; }
+      .contenu_grid #resultAjax .right_event:before {
+        content: '';
+        position: absolute;
+        top: 30px;
+        left: 0;
+        height: 50px;
+        width: 1px;
+        background-color: white;
+        -webkit-transform: rotate(30deg);
+        -moz-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+        -o-transform: rotate(30deg);
+        transform: rotate(30deg);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711)";
+        filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711); }
+    .contenu_grid #resultAjax ul {
+      overflow: hidden;
+      width: 100%; }
+    .contenu_grid #resultAjax li {
+      width: 31.3%;
+      min-height: 175px;
+      color: white;
+      background-color: darkslategrey;
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 3%;
+      float: left; }
+      .contenu_grid #resultAjax li:last-of-type {
+        margin-right: 0; }
+    .contenu_grid #resultAjax p {
+      margin-bottom: 0; }
+      .contenu_grid #resultAjax p.cat_calendrier {
+        color: #FDE608;
+        font-size: 12px; }
+      .contenu_grid #resultAjax p.titre_calendrier {
+        max-width: 250px;
+        font-size: 18px; }
+      .contenu_grid #resultAjax p.day_calendrier {
+        font-size: 25px;
+        font-weight: 500; }
+      .contenu_grid #resultAjax p.month_calendrier, .contenu_grid #resultAjax p.lieu_calendrier {
+        font-size: 12px; }
+      .contenu_grid #resultAjax p:nth-of-type(3) {
+        margin-bottom: 50px; }
+    .contenu_grid #resultAjax .link_calendrier {
+      display: block;
+      margin-bottom: 25px;
+      position: relative; }
+      .contenu_grid #resultAjax .link_calendrier:after {
+        content: '';
+        position: absolute;
+        background-color: white;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        -webkit-transition: 0.6s;
+        -khtml-transition: 0.6s;
+        -moz-transition: 0.6s;
+        -ms-transition: 0.6s;
+        -o-transition: 0.6s;
+        transition: 0.6s; }
+      .contenu_grid #resultAjax .link_calendrier:hover {
+        font-weight: inherit; }
+        .contenu_grid #resultAjax .link_calendrier:hover:after {
+          width: 100px; }
+  @media screen and (max-width: 1024px) {
+    .contenu_grid #selector {
+      margin: 0 auto;
       float: none;
       overflow: hidden;
-      margin-bottom: 35px; } }
-
-/*****768px*****/
+      width: 100%; }
+    .contenu_grid #resultAjax {
+      width: 100%; }
+      .contenu_grid #resultAjax ul li {
+        width: 100%;
+        float: none;
+        overflow: hidden;
+        margin-bottom: 35px; } }
 
 /*# sourceMappingURL=maps/style.css.map */

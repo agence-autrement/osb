@@ -27,7 +27,7 @@ img
 
 
 .main {
-    margin-left: 200px;
+    margin-left: 130px;
 }
 
 .vcenter {
@@ -609,6 +609,13 @@ Media Queries
 
 @media screen and (max-width: 990px) and (min-width: 768px)
 {
+}
+
+@media screen and (max-width: 1024px)
+{
+    .main{
+        margin-left: 0;
+    }
 }
 
 @media screen and (max-width: 1100px)

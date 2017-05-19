@@ -1,244 +1,310 @@
 /****Style Datepicker****/
-
 #plugin_calendar{
   overflow: hidden;
   width: 100%;
   padding: 35px;
 }
 
-#selector{
-  margin-right: 75px;
-  height: 278px;
-  width: 216px;
-  float: left;
-}
-
-#date_value{
-  display: none;
-}
-
-.ui-datepicker {
-  width: 216px;
-  height: auto;
-  //margin: 5px auto 0;
-  background-color: #EFEDEC;
-  position: relative;
-}
-
-.ui-datepicker-header{
-  height: 25px;
-  color: black;
-  .ui-datepicker-title{
-    text-align: center;
-  }
-}
-
-.ui-datepicker-next{
-  width:10px;
-  position: absolute;
-  right: 5px;
-  top: 0px;
-  display: inline-block;
-  cursor: pointer;
-  text-indent: -5000px;
-  background-image: url("../images/calendrier-right.svg");
-  background-repeat: no-repeat;
-  background-position: right;
-}
-
-.ui-datepicker-prev{
-  width:10px;
-  position: absolute;
-  left: 5px;
-  top: 0px;
-  display: inline-block;
-  cursor: pointer;
-  text-indent: -5000px;
-  background-image: url("../images/calendrier-left.svg");
-  background-repeat: no-repeat;
-  background-position: right;
-}
-
-.ui-datepicker-calendar{
-  width: 100%;
-  thead{
-    tr{
-      th{
-        span{
-          font-weight: 400;
-        }
-      }
-    }
-  }
-  tr{
-    height: 28px;
-    td{
-      text-align: center;
-      border: white 1px solid;
-      height: 100%;
-      a{
-        font-size: 12px;
-        display: block;
-        width: 100%;
-        height: 100%;
-        padding-top: 4px;
-        @include transition(0.2s);
-        &:hover{
-          text-decoration: none;
-          cursor: pointer;
-          font-weight: 400;
-          background-color: #FAEA2D;
-        }
-      }
-    }
-  }
-}
-
-
-/****Style réponse Ajax****/
-
-#resultAjax{
-  width: calc(100% - 291px);
-  float: left;
-
-  .left_event{
-    width: 75%;
-    float: left;
-    color: white;
-    padding-left: 12px;
-    padding-top: 25px;
-  }
-
-  .right_event{
-    width: 25%;
-    float: left;
-    color: white;
-    text-align: center;
-    position: relative;
-    padding-top: 25px;
-    &:before{
-      content: '';
-      position: absolute;
-      top: 30px;
-      left: -15px;
-      height: 50px;
-      width: 1px;
-      background-color: white;
-      -webkit-transform: rotate(30deg);
-      -moz-transform: rotate(30deg);
-      -ms-transform: rotate(30deg);
-      -o-transform: rotate(30deg);
-      transform: rotate(30deg);
-      -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711)";
-      filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711);
-    }
-  }
-  ul {
-    overflow: hidden;
-    width: 100%;
-  }
-
-  li{
-    width: 30%;
-    color: white;
-    background-color: darkslategrey;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-right: 3%;
-    float: left;
-    &:last-of-type{
-      margin-right: 0;
-    }
-  }
-
-  p{
-    margin-bottom: 0;
-    &.cat_calendrier{
-      color: #FDE608;
-      font-size: 12px;
-    }
-    &.titre_calendrier{
-      font-size: 18px;
-    }
-    &.day_calendrier{
-      font-size: 25px;
-      font-weight: 500;
-    }
-    &.month_calendrier, &.lieu_calendrier{
-      font-size: 12px;
-    }
-    &:nth-of-type(3){
-      margin-bottom: 50px;
-    }
-  }
-  .link_calendrier{
-    display: block;
-    margin-bottom: 25px;
-    position: relative;
+.contenu_grid{
+  &.calendar {
+    overflow: inherit;
     &:after{
       content: '';
-      position: absolute;
-      background-color: white;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 1px;
-      @include transition(0.6s);
-    }
-    &:hover{
-      font-weight: inherit;
-      &:after{
-        width: 100px;
-      }
-    }
+      display: block;
+      clear: both;
   }
 }
 
-/***********************
-RESPONSIVE
-***********************/
-
-/*****1600px*****/
-
-@media screen and (max-width: 1600px) {
-
-}
-
-/*****1200px*****/
-
-@media screen and (max-width: 1200px) {
-
-}
-
-
-/*****1024px*****/
-
-
-@media screen and (max-width: 1024px) {
 
   #selector{
-    margin: 0 auto;
-    float: none;
-  }
+    margin-right: 35px;
+    height: 278px;
+    width: 256px;
+    float: left;
+    position: relative;
+    .gauche{
+      float: left;
+      width: 50%;
+      button{
+        text-transform: uppercase;
+      }
+    }
+    .droite{
+      float: right;
+      width: 50%;
+    }
 
-  #resultAjax{
-    width: 100%;
-    ul{
-      li{
-        width: 100%;
-        float: none;
-        overflow: hidden;
-        margin-bottom: 35px;
+    button{
+      padding: 5px;
+      border: none;
+      width: 90%;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      text-align: center;
+      background-color: #EDEDED;
+      @include transition(0.3s);
+      &:hover{
+        background-color: black;
+        color: white;
       }
     }
   }
-}
 
-/*****768px*****/
+  .datepicker{
+    height: 0;
+    width: 0;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    @include transition(0.2s);
+    &.active{
+      height: 100%;
+      width: 100%;
+    }
+    #close{
+      height: 30px;
+      width: 30px;
+      //background-color: black;
+      position: absolute;
+      right: 10px;
+      cursor: pointer;
+      background-image: url('../images/close.svg');
+    }
+  }
 
-@media screen and (max-width: 768px) {
+  #date_value{
+    display: none;
+  }
 
+  .ui-datepicker {
+    width: 216px;
+    height: auto;
+    background-color: #EFEDEC;
+    position: relative;
+  }
+
+  .ui-datepicker-header{
+    height: 25px;
+    color: black;
+    padding-top: 5px;
+    .ui-datepicker-title{
+      text-align: center;
+    }
+  }
+
+  .ui-datepicker-next{
+    width:10px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: inline-block;
+    cursor: pointer;
+    text-indent: -5000px;
+    background-image: url("../images/calendrier-right.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  .ui-datepicker-prev{
+    width:10px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    display: inline-block;
+    cursor: pointer;
+    text-indent: -5000px;
+    background-image: url("../images/calendrier-left.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  .ui-datepicker-calendar{
+    width: 100%;
+    thead{
+      tr{
+        th{
+          span{
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    tr{
+      height: 28px;
+      td{
+        text-align: center;
+        border: white 1px solid;
+        height: 100%;
+        a{
+          font-size: 12px;
+          display: block;
+          width: 100%;
+          height: 100%;
+          padding: 5px;
+          @include transition(0.2s);
+          &:hover{
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: 400;
+            background-color: #FAEA2D;
+          }
+        }
+      }
+    }
+  }
+
+
+  /****Style réponse Ajax****/
+
+  #resultAjax{
+    width: calc(100% - 291px);
+    float: left;
+
+    .left_event{
+      width: 75%;
+      float: left;
+      color: white;
+      padding-left: 12px;
+      padding-top: 25px;
+    }
+
+    .right_event{
+      width: 25%;
+      float: left;
+      color: white;
+      text-align: center;
+      position: relative;
+      padding-top: 25px;
+      &:before{
+        content: '';
+        position: absolute;
+        top: 30px;
+        left: 0;
+        height: 50px;
+        width: 1px;
+        background-color: white;
+        -webkit-transform: rotate(30deg);
+        -moz-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+        -o-transform: rotate(30deg);
+        transform: rotate(30deg);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711)";
+        filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711);
+      }
+    }
+    ul {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    li{
+      width: 31.3%;
+      min-height: 175px;
+      color: white;
+      background-color: darkslategrey;
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 3%;
+      float: left;
+      &:last-of-type{
+        margin-right: 0;
+      }
+    }
+
+    p{
+      margin-bottom: 0;
+      &.cat_calendrier{
+        color: #FDE608;
+        font-size: 12px;
+      }
+      &.titre_calendrier{
+        max-width: 250px;
+        font-size: 18px;
+      }
+      &.day_calendrier{
+        font-size: 25px;
+        font-weight: 500;
+      }
+      &.month_calendrier, &.lieu_calendrier{
+        font-size: 12px;
+      }
+      &:nth-of-type(3){
+        margin-bottom: 50px;
+      }
+    }
+    .link_calendrier{
+      display: block;
+      margin-bottom: 25px;
+      position: relative;
+      &:after{
+        content: '';
+        position: absolute;
+        background-color: white;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        @include transition(0.6s);
+      }
+      &:hover{
+        font-weight: inherit;
+        &:after{
+          width: 100px;
+        }
+      }
+    }
+  }
+
+  /***********************
+  RESPONSIVE
+  ***********************/
+
+  /*****1600px*****/
+
+  @media screen and (max-width: 1600px) {
+
+  }
+
+  /*****1200px*****/
+
+  @media screen and (max-width: 1200px) {
+
+  }
+
+
+  /*****1024px*****/
+
+
+  @media screen and (max-width: 1024px) {
+
+    #selector{
+      margin: 0 auto;
+      float: none;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    #resultAjax{
+      width: 100%;
+      ul{
+        li{
+          width: 100%;
+          float: none;
+          overflow: hidden;
+          margin-bottom: 35px;
+        }
+      }
+    }
+  }
+
+  /*****768px*****/
+
+  @media screen and (max-width: 768px) {
+
+  }
 }
 
 

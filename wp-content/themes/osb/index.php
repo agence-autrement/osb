@@ -5,55 +5,57 @@
     <section id="landing">
         <div class="top_landing">
             <div class="contenu_grid">
-                <ul id="calendrier_top">
-                    <li>
-                        <div class="content_date">
-                            <div class="left_date">
-                                <div class="type">Les essentiels #9</div>
-                                <div class="titre">Beethoven le compagnon</div>
-                                <div class="artiste">avec Cédric Thibergien</div>
-                            </div>
-                            <div class="right_date">
-                                <div class="date_jours">16</div>
-                                <div class="date_mois">Mars</div>
-                                <div class="lieu">Rennes</div>
-                            </div>
-                        </div>
-                        <div class="img_hover"></div>
-                    </li>
-                    <li>
+                <?
+                $table          = queryPosts();
+                usort($table, "sortByDate");
+                $delete_if_less = date("Y-m-d");
+                $clear_date     = removeElementWithInferiorValue($table,'date_calendrier',$delete_if_less);
+                $sliced         = array_slice($clear_date, 0, 3);
+
+                echo '<ul id="calendrier_top">';
+
+                    foreach($sliced as $table_un => $values){
+                    setlocale(LC_ALL, "fr_FR");
+                    $timestamp          = $values['date_calendrier'];
+                    $translate_Day      = strftime ( '%e' , strtotime($timestamp));
+                    $translate_Month    = strftime ( '%B' , strtotime($timestamp));
+
+                    echo '<li>'; ?>
                         <div class="left_date">
-                            <div class="type">Les essentiels #9</div>
-                            <div class="titre">Beethoven le compagnon</div>
-                            <div class="artiste">avec Cédric Thibergien</div>
+                            <div class="type"><? echo $values['cat_calendrier']; ?></div>
+                            <div class="titre"><? echo $values['titre_calendrier']; ?></div>
+                            <div class="artiste"><? echo $values['artiste_calendrier']; ?></div>
                         </div>
                         <div class="right_date">
-                            <div class="date_jours">16</div>
-                            <div class="date_mois">Mars</div>
-                            <div class="lieu">Rennes</div>
+                            <div class="date_jours">
+                               <? if($translate_Day == '1'){ echo $translate_Day; echo "<sup>er</sup>"; }else{ echo $translate_Day; } ?>
+                            </div>
+                            <div class="date_mois"><? echo $translate_Month; ?></div>
+                            <div class="lieu"><? echo $values['ville_calendrier'];?></div>
                         </div>
-                        <div class="img_hover"></div>
-                    </li>
-                    <li>
-                        <div class="left_date">
-                            <div class="type">Les essentiels #9</div>
-                            <div class="titre">Beethoven le compagnon</div>
-                            <div class="artiste">avec Cédric Thibergien</div>
-                        </div>
-                        <div class="right_date">
-                            <div class="date_jours">16</div>
-                            <div class="date_mois">Mars</div>
-                            <div class="lieu">Rennes</div>
-                        </div>
-                        <div class="img_hover"></div>
-                    </li>
-                </ul>
+                        <div class="img_hover" style="background-image: url('<? echo $values['thumbnail_calendrier'] ?>')"></div>
+                        <?
+                        echo '</li>';
+                        };
+                    echo '</ul>';
+                    wp_reset_postdata();
+                    ?>
             </div>
         </div>
     </section>
+
+
+
+
+
     <? get_template_part('calendrier_view'); ?>
+
+
+
+
     <section class="call_to_action">
         <div class="contenu_grid">
+
             <div id="left_callto">
                <div>Entreprises, soutenez l'Orchestre</div>
                <div>Rejoignez-nous !</div>
@@ -73,28 +75,45 @@
             </div>
         </div>
     </section>
+
+
+
+
+
     <section id="articles">
         <div class="contenu_grid">
             <div id="first_article">
                 <div class="first_article_thumbnail"></div>
                 <div class="first_article_content">
-                    <div class="titre">+ Saison Piccolo</div>
-                    <div class="extrait_1"></div>
-                    <div class="extrait_2"></div>
-                    <div class="tarif"></div>
-                    <a class="btn_savoir" href="###">En savoir +</a>
+                    <div class="titre_article">+ Saison Piccolo</div>
+                    <div class="extrait_1">
+                        En se réveillant un matin après des rêves agités, Gregor Samsa se retrouva, dans son lit, métamorphosé en un monstrueux insecte. Il était sur le dos, un dos aussi dur qu’une carapace, et, en relevant un peu la tête, il vit, bombé, brun, cloisonné par des [...]
+                    </div>
+                    <div class="extrait_2">
+                        Ce n’était pas un rêve. Sa chambre, une vraie chambre humaine, juste un peu trop petite, était là tranquille entre les quatre murs qu’il connaissait bien.
+                    </div>
+                    <div class="tarif">
+                        Tarif unique : 5 euros
+                    </div>
+                    <a class="btn" href="###">En savoir +</a>
                 </div>
             </div>
             <div id="second_article">
                 <div class="second_article_thumbnail"></div>
                 <div class="second_article_content">
-                    <div class="titre">+ Le Jacobins</div>
-                    <div class="extrait_1"></div>
-                    <a class="btn_savoir" href="###">En savoir +</a>
+                    <div class="titre_article">+ Le Jacobins</div>
+                    <div class="extrait_1">
+                        En se réveillant un matin après des rêves agités, Gregor Samsa se retrouva, dans son lit, [...]
+                    </div>
+                    <a class="btn" href="###">En savoir +</a>
                 </div>
             </div>
         </div>
     </section>
+
+
+
+
 </div>
 
 <?php get_footer(); ?>
