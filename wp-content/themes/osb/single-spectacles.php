@@ -345,16 +345,46 @@ Event template
                         </div>
 
                         <div class="row">
+
                             <div class="col-sm-offset-1 col-sm-5">
                                 <div class="event-media__item">
                                     <?php echo get_field('video_bonus') ?>
                                 </div>
                             </div>
                             <div class="col-sm-5">
-                                <a class="event-joinus__btn btn" href="#">
-                                    Professionnel
-                                </a>
+                                <span class="previous_btn previous_btn--bonus">left</span>
+                                <span class="next_btn next_btn--bonus">right</span>
+                                <div class="slideshow slideshow--bonus">
+                                    <ul class="slider slider--bonus">
+
+                                        <?php
+
+                                        // check if the repeater field has rows of data
+                                        if (have_rows('gallerie_bonus')):
+
+                                            // loop through the rows of data
+                                            while (have_rows('gallerie_bonus')) : the_row();
+
+                                                $imgBonus = get_sub_field('image_bonus');
+
+
+                                                ?>
+
+                                                <li><img src="<?php echo $imgBonus['sizes']['thumb-395'] ?>" alt="">
+                                                </li><?php
+
+                                            endwhile;
+
+                                        else :
+
+                                        endif;
+
+                                        ?>
+
+                                    </ul>
+                                </div>
                             </div>
+
 
                         </div>
                     </div>

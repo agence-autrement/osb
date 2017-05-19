@@ -74,6 +74,7 @@ if ( ! isset( $content_width ) ) {
 
 // Thumbnail sizes
 add_image_size( 'thumb-330', 330);
+add_image_size( 'thumb-395', 395, 225, true);
 add_image_size( 'thumb-600', 600);
 add_image_size( 'thumb-900', 900);
 
@@ -103,6 +104,7 @@ function bones_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
         'thumb-900' => __('900px by 9999px'),
         'thumb-600' => __('600px by 9999px'),
+        'thumb-395' => __('395px by 225px'),
         'thumb-330' => __('330px by 9999px'),
     ) );
 }

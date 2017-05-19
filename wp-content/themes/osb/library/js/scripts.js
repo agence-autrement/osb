@@ -128,7 +128,7 @@ jQuery(document).ready(function($) {
 	$('.slideshow li').css('width', largeurslider+'px');
 	$('.slideshow .slider').css('width', (largeurslider*(nbVisuels+2))+'px');
 	$('.slideshow .slider').css('margin-left','-'+(largeurslider)+'px');
-	$('.call_to_action .next_btn').bind('click', function(){
+	$('.next_btn').bind('click', function(){
 		if(visuelActif <= nbVisuels){
 			$('.slideshow .slider').animate({'margin-left':'-'+((visuelActif)*largeurslider)+'px'}, 500, function(){
 				visuelActif++;
@@ -140,7 +140,7 @@ jQuery(document).ready(function($) {
 			});
 		}
 	})
-	$('.call_to_action .previous_btn').bind('click', function(){
+	$('.previous_btn').bind('click', function(){
 		if(visuelActif > 1){
 			visuelActif--;
 			$('.slideshow .slider').animate({'margin-left':'-'+((visuelActif-1)*largeurslider)+'px'}, 500);
@@ -150,6 +150,8 @@ jQuery(document).ready(function($) {
 			$('.slideshow .slider').animate({'margin-left':'-'+((visuelActif-1)*largeurslider)+'px'}, 500);
 		}
 	});
+
+
 	/*SIDEBAR ESPACE PERSO*/
 	$("#espace").on("click", function(){
 		$('.sidebar_mon_espace').toggleClass('active');

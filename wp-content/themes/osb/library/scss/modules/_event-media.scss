@@ -23,4 +23,39 @@
       }
     }
   }
+
+
+}
+
+.slideshow {
+  &--bonus {
+    height:225px;
+    width:395px;
+  }
+
+  .slider {
+    &--bonus {
+      height:225px;
+
+    }
+  }
+}
+
+.previous_btn {
+  &--bonus {
+    left:15px;
+  }
+}
+
+.next_btn {
+  &--bonus {
+    right:17px;
+  }
+}
+
+.cta__stop {
+  padding:0 !important;
+  position: static !important;
+  background-color: #fff !important;
+
 }
