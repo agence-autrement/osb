@@ -75,18 +75,15 @@ $disabled-gray:     #cfcfcf;
 /* Modules */
 @import "modules/btn";
 @import "modules/input";
-<<<<<<< HEAD
+
 @import "modules/form";
 @import "modules/home";
 @import "modules/event";
 @import "modules/event-menu";
-=======
-//@import "modules/form";
-//@import "modules/event";
-//@import "modules/event-menu";
->>>>>>> master
+
+
 @import "modules/event-desc";
-//@import "modules/event-partners";
+@import "modules/event-partners";
 @import "modules/event-focus";
 @import "modules/event-program";
 @import "modules/event-date";
