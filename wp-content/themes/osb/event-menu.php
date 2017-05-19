@@ -1,7 +1,7 @@
 <section class="section-menu-event">
     <div class="container">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-offset-1 col-sm-10">
 
                 <div class="menu-event__inner">
                     <a href="#" class="menu-event__item">

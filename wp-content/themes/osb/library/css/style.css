@@ -93,10 +93,6 @@ LINK STYLES
 a,
 a:visited {
   /* mobile tap color */ }
-  a:hover, a:focus,
-  a:visited:hover,
-  a:visited:focus {
-    font-weight: 800; }
   a:link,
   a:visited:link {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
@@ -860,13 +856,21 @@ BOOTSTRAP GRID
   .container:after {
     clear: both; }
 
-@media (min-width: 768px) {
+@media (min-width: 1100px) {
   .container {
+<<<<<<< HEAD
     width: 750px; } }
 
 @media (min-width: 992px) {
   .container {
     width: 970px; } }
+=======
+    width: 960px; } }
+
+@media (min-width: 1300px) {
+  .container {
+    width: 1100px; } }
+>>>>>>> master
 
 .container-fluid {
   padding-right: 15px;
@@ -1470,8 +1474,11 @@ MEDIA QUERIES
         width: 1px; }
       .footer .grid_footer .footer_content li {
         margin-bottom: 25px; }
+<<<<<<< HEAD
       .footer .grid_footer .footer_content img {
         max-width: 125px; }
+=======
+>>>>>>> master
     .footer .grid_footer:after {
       content: '';
       background-color: white;
@@ -1491,16 +1498,23 @@ MEDIA QUERIES
     float: right;
     text-align: right; }
   .footer.active {
+<<<<<<< HEAD
     margin-left: 330px; }
+=======
+    margin-left: 400px; }
+>>>>>>> master
 
 /**********************
 Media Queries
 **********************/
+<<<<<<< HEAD
 @media screen and (max-width: 990px) and (min-width: 768px) {
   .footer_content {
     width: 50%;
     float: left; } }
 
+=======
+>>>>>>> master
 @media screen and (max-width: 1024px) {
   .footer {
     margin-left: 0; } }
@@ -1746,7 +1760,7 @@ SIDEBAR MENU
 RESPONSIVE
 *****************************/
 /*1024px*/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
   .sidebar_mon_espace, .sidebar_1 {
     display: none; } }
 
@@ -2146,7 +2160,8 @@ textarea {
 
 .event-desc__image {
   position: relative;
-  height: 280px; }
+  height: 280px;
+  width: 300px; }
   .event-desc__image__play {
     position: absolute;
     top: 0;
@@ -2174,8 +2189,8 @@ textarea {
     cursor: pointer; }
 
 .event-desc__content__title {
-  font-size: 2.9rem;
-  line-height: 3rem;
+  font-size: 3.1rem;
+  line-height: 3.2rem;
   margin-top: 0;
   font-family: "Montserrat";
   font-weight: 300;
@@ -2189,9 +2204,9 @@ textarea {
     left: 10px; }
 
 .event-desc__content__text {
-  font-size: 1.3rem;
-  line-height: 1.4rem;
-  color: #000; }
+  font-size: 1.5rem;
+  color: #000;
+  text-align: justify; }
 
 .section-event-partners {
   background-color: #C8AB58; }
@@ -2230,7 +2245,8 @@ textarea {
 
 .event-focus__image {
   position: relative;
-  height: 210px; }
+  height: 210px;
+  width: 300px; }
   .event-focus__image:after {
     display: block;
     content: '';
@@ -2281,7 +2297,140 @@ textarea {
 
 .section-event-program {
   background-color: #F3F1F1;
-  padding: 2.9rem 0 4rem; }
+  padding: 2.9rem 0 4rem;
+  text-align: center; }
+
+.event-program__item {
+  margin-bottom: 40px; }
+
+.event-program__name {
+  font-size: 2rem;
+  line-height: 2.1rem;
+  font-family: "Montserrat";
+  font-weight: 300;
+  margin: 0 0 2px 0; }
+
+.event-program__subname {
+  font-style: italic;
+  font-size: 1.5rem;
+  margin: 0 0 10px 0; }
+
+.event-program__more {
+  font-size: 1.1rem;
+  text-decoration: underline;
+  text-transform: uppercase; }
+
+.event-program__grid--12 {
+  width: 100%;
+  display: inline-block; }
+
+.event-program__grid--6 {
+  width: 49%;
+  display: inline-block; }
+
+.event-program__grid--4 {
+  width: 32%;
+  display: inline-block; }
+
+.event-program__grid--3 {
+  width: 24%;
+  display: inline-block; }
+
+.section-event-date {
+  padding: 2.9rem 0 3rem;
+  text-align: center; }
+
+.event-date__title {
+  color: #fff; }
+
+.event-date__item {
+  height: 265px;
+  border: 1px solid #fff;
+  margin: 0 9px;
+  position: relative; }
+  .event-date__item__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%; }
+
+.event-date__date {
+  font-size: 2.7rem;
+  line-height: 3.5rem;
+  font-family: "Montserrat";
+  margin: 0 0 19px 0;
+  color: #fff; }
+  .event-date__date span {
+    font-weight: 300; }
+
+.event-date__city {
+  color: yellow;
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-size: 1.6rem;
+  margin: 0 0 1px; }
+
+.event-date__place {
+  font-weight: 300;
+  font-family: "Montserrat";
+  font-style: italic;
+  font-size: 1.6rem;
+  color: #fff;
+  margin: 0 0 30px; }
+
+.event-date__btn {
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: 600; }
+
+.event-date__grid--12 {
+  width: 100%;
+  display: inline-block; }
+
+.event-date__grid--6 {
+  width: 49%;
+  display: inline-block; }
+
+.event-date__grid--4 {
+  width: 33%;
+  display: inline-block; }
+
+.event-date__grid--3 {
+  width: 24%;
+  display: inline-block;
+  margin-bottom: 25px; }
+
+.section-event-joinus {
+  background-color: #C8AB58;
+  padding: 4.5rem 0 4rem;
+  overflow: hidden;
+  text-align: center; }
+
+.event-joinus__title {
+  font-family: "Montserrat";
+  font-size: 4.6rem;
+  line-height: 4.7rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 3rem; }
+
+.event-joinus__btn--third {
+  background-color: #000;
+  color: #fff; }
+
+.event-media__item p {
+  width: 380px; }
+  .event-media__item p:after {
+    display: block;
+    content: '';
+    height: 75px;
+    width: 28px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 67px;
+    transform: skew(-30deg); }
 
 /***********************
 GLOBAL
@@ -2577,8 +2726,9 @@ RESPONSIVE
     font-size: 30px; } }
 
 /*1024px*/
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
   #content {
+<<<<<<< HEAD
     margin-left: 0; }
   /*landing top*/
   .top_landing {
@@ -2671,6 +2821,68 @@ RESPONSIVE
       width: 90%;
       margin: 0 auto;
       margin-bottom: 10px;
+=======
+    margin-left: 0; } }
+
+/****Style Datepicker****/
+#plugin_calendar {
+  overflow: hidden;
+  width: 100%;
+  padding: 35px; }
+
+#selector {
+  margin-right: 75px;
+  height: 278px;
+  width: 216px;
+  float: left; }
+
+#date_value {
+  display: none; }
+
+.ui-datepicker {
+  width: 216px;
+  height: auto;
+  background-color: #EFEDEC;
+  position: relative; }
+
+.ui-datepicker-header {
+  height: 25px;
+  color: black; }
+  .ui-datepicker-header .ui-datepicker-title {
+    text-align: center; }
+
+.ui-datepicker-next {
+  width: 10px;
+  position: absolute;
+  right: 5px;
+  top: 0px;
+  display: inline-block;
+  cursor: pointer;
+  text-indent: -5000px;
+  background-image: url("../images/calendrier-right.svg");
+  background-repeat: no-repeat;
+  background-position: right; }
+
+.ui-datepicker-prev {
+  width: 10px;
+  position: absolute;
+  left: 5px;
+  top: 0px;
+  display: inline-block;
+  cursor: pointer;
+  text-indent: -5000px;
+  background-image: url("../images/calendrier-left.svg");
+  background-repeat: no-repeat;
+  background-position: right; }
+
+.ui-datepicker-calendar {
+  width: 100%; }
+  .ui-datepicker-calendar thead tr th span {
+    font-weight: 400; }
+  .ui-datepicker-calendar tr {
+    height: 28px; }
+    .ui-datepicker-calendar tr td {
+>>>>>>> master
       text-align: center;
       background-color: #EFEDEC;
       -webkit-transition: 0.3s;
@@ -2850,8 +3062,127 @@ RESPONSIVE
       width: 100%; }
       .contenu_grid #resultAjax ul li {
         width: 100%;
+<<<<<<< HEAD
         float: none;
         overflow: hidden;
         margin-bottom: 35px; } }
+=======
+        height: 100%;
+        padding-top: 4px;
+        -webkit-transition: 0.2s;
+        -khtml-transition: 0.2s;
+        -moz-transition: 0.2s;
+        -ms-transition: 0.2s;
+        -o-transition: 0.2s;
+        transition: 0.2s; }
+        .ui-datepicker-calendar tr td a:hover {
+          text-decoration: none;
+          cursor: pointer;
+          font-weight: 400;
+          background-color: #FAEA2D; }
+
+/****Style réponse Ajax****/
+#resultAjax {
+  width: calc(100% - 291px);
+  float: left; }
+  #resultAjax .left_event {
+    width: 75%;
+    float: left;
+    color: white;
+    padding-left: 12px;
+    padding-top: 25px; }
+  #resultAjax .right_event {
+    width: 25%;
+    float: left;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding-top: 25px; }
+    #resultAjax .right_event:before {
+      content: '';
+      position: absolute;
+      top: 30px;
+      left: -15px;
+      height: 50px;
+      width: 1px;
+      background-color: white;
+      -webkit-transform: rotate(30deg);
+      -moz-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
+      -o-transform: rotate(30deg);
+      transform: rotate(30deg);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711)";
+      filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711); }
+  #resultAjax ul {
+    overflow: hidden;
+    width: 100%; }
+  #resultAjax li {
+    width: 30%;
+    color: white;
+    background-color: darkslategrey;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 3%;
+    float: left; }
+    #resultAjax li:last-of-type {
+      margin-right: 0; }
+  #resultAjax p {
+    margin-bottom: 0; }
+    #resultAjax p.cat_calendrier {
+      color: #FDE608;
+      font-size: 12px; }
+    #resultAjax p.titre_calendrier {
+      font-size: 18px; }
+    #resultAjax p.day_calendrier {
+      font-size: 25px;
+      font-weight: 500; }
+    #resultAjax p.month_calendrier, #resultAjax p.lieu_calendrier {
+      font-size: 12px; }
+    #resultAjax p:nth-of-type(3) {
+      margin-bottom: 50px; }
+  #resultAjax .link_calendrier {
+    display: block;
+    margin-bottom: 25px;
+    position: relative; }
+    #resultAjax .link_calendrier:after {
+      content: '';
+      position: absolute;
+      background-color: white;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      -webkit-transition: 0.6s;
+      -khtml-transition: 0.6s;
+      -moz-transition: 0.6s;
+      -ms-transition: 0.6s;
+      -o-transition: 0.6s;
+      transition: 0.6s; }
+    #resultAjax .link_calendrier:hover {
+      font-weight: inherit; }
+      #resultAjax .link_calendrier:hover:after {
+        width: 100px; }
+
+/***********************
+RESPONSIVE
+***********************/
+/*****1600px*****/
+/*****1200px*****/
+/*****1024px*****/
+@media screen and (max-width: 1024px) {
+  #selector {
+    margin: 0 auto;
+    float: none; }
+  #resultAjax {
+    width: 100%; }
+    #resultAjax ul li {
+      width: 100%;
+      float: none;
+      overflow: hidden;
+      margin-bottom: 35px; } }
+
+/*****768px*****/
+>>>>>>> master
 
 /*# sourceMappingURL=maps/style.css.map */
