@@ -1036,7 +1036,7 @@ BOOTSTRAP GRID
 .col-xs-offset-0 {
   margin-left: 0; }
 
-@media (min-width: 768px) {
+@media (min-width: 1100px) {
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left; }
   .col-sm-12 {
@@ -1142,7 +1142,7 @@ BOOTSTRAP GRID
   .col-sm-offset-0 {
     margin-left: 0; } }
 
-@media (min-width: 992px) {
+@media (min-width: 1300px) {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left; }
   .col-md-12 {
@@ -2476,6 +2476,21 @@ RESPONSIVE
   display: inline-block;
   margin: 0.4rem 4rem 0.4rem 0;
   color: #000; }
+  .menu-event__item ul {
+    float: right;
+    margin: 0 1.5rem 0; }
+    .menu-event__item ul li {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-image: url("../images/reseaux.svg");
+      -webkit-background-size: cover;
+      background-size: cover; }
+      .menu-event__item ul li a {
+        height: 100%;
+        width: 100%;
+        display: block;
+        text-indent: -5000px; }
 
 .event-desc__inner {
   margin: 8rem 0 4.5rem; }
@@ -2515,13 +2530,22 @@ RESPONSIVE
     right: 0;
     cursor: pointer; }
 
+.event-desc__instru {
+  line-height: 1.2rem;
+  margin-top: 0.8rem;
+  width: 83%; }
+  .event-desc__instru__inst, .event-desc__instru__name {
+    font-size: 1.1rem;
+    color: #999999; }
+
 .event-desc__content__title {
   font-size: 3.1rem;
   line-height: 3.2rem;
   margin-top: 0;
   font-family: "Montserrat";
   font-weight: 300;
-  margin-left: 31px; }
+  margin-left: 31px;
+  display: inline-block; }
   .event-desc__content__title:before {
     display: block;
     content: '+';
@@ -2531,9 +2555,27 @@ RESPONSIVE
     left: 10px; }
 
 .event-desc__content__text {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 300;
   color: #000;
   text-align: justify; }
+
+/******************************
+MEDIA QUERIES
+******************************/
+@media screen and (max-width: 1100px) {
+  .event-desc__image {
+    margin: 0 auto; }
+  .event-desc__content {
+    margin-top: 2rem; }
+    .event-desc__content__title {
+      text-align: center; }
+  .event-desc__instru {
+    width: 300px;
+    margin: 0.8rem auto; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */ }
 
 .section-event-partners {
   background-color: #C8AB58; }
@@ -2561,6 +2603,20 @@ RESPONSIVE
       font-size: 4.6rem;
       line-height: 4.7rem;
       font-weight: 300; }
+
+/******************************
+MEDIA QUERIES
+******************************/
+@media screen and (max-width: 1100px) {
+  .event-partners__item {
+    text-align: center; }
+  .event-partners__inner .col-sm-5.vcenter {
+    display: block; }
+    .event-partners__inner .col-sm-5.vcenter:first-child {
+      margin-bottom: 3rem; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */ }
 
 .section-event-focus {
   padding: 2.8rem 0 8.3rem; }
@@ -2592,7 +2648,8 @@ RESPONSIVE
   margin-top: 0;
   font-family: "Montserrat";
   font-weight: 300;
-  margin-left: 31px; }
+  margin-left: 31px;
+  display: inline-block; }
   .event-focus__content__name:before {
     display: block;
     content: '+';
@@ -2610,9 +2667,10 @@ RESPONSIVE
   margin-left: 3px; }
 
 .event-focus__content__desc {
-  font-size: 1.3rem;
-  line-height: 1.4rem;
+  font-size: 1.4rem;
+  font-weight: 300;
   color: #000;
+  text-align: justify;
   clear: both;
   margin: 2rem 0 1rem; }
 
@@ -2621,6 +2679,18 @@ RESPONSIVE
   font-style: italic;
   font-size: 1.3rem;
   line-height: 1.4rem; }
+
+/******************************
+MEDIA QUERIES
+******************************/
+@media screen and (max-width: 1100px) {
+  .section-event-focus {
+    padding: 2.5rem 0 3.3rem; }
+  .event-focus__image {
+    margin: 0 auto 2rem; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */ }
 
 .section-event-program {
   background-color: #F3F1F1;
@@ -2662,6 +2732,20 @@ RESPONSIVE
 .event-program__grid--3 {
   width: 24%;
   display: inline-block; }
+
+/******************************
+MEDIA QUERIES
+******************************/
+@media screen and (max-width: 1100px) {
+  .event-program__grid--4 {
+    width: 35%; } }
+
+@media screen and (max-width: 420px) {
+  .event-program__grid--4 {
+    width: 51%; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */ }
 
 .section-event-date {
   padding: 2.9rem 0 3rem;
@@ -2728,6 +2812,20 @@ RESPONSIVE
   display: inline-block;
   margin-bottom: 25px; }
 
+/******************************
+MEDIA QUERIES
+******************************/
+@media screen and (max-width: 1100px) {
+  .event-date__grid--3 {
+    width: 35%; } }
+
+@media screen and (max-width: 420px) {
+  .event-date__grid--3 {
+    width: 51%; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */ }
+
 .section-event-joinus {
   background-color: #C8AB58;
   padding: 4.5rem 0 4rem;
@@ -2745,6 +2843,19 @@ RESPONSIVE
 .event-joinus__btn--third {
   background-color: #000;
   color: #fff; }
+
+/******************************
+MEDIA QUERIES
+******************************/
+@media screen and (max-width: 1100px) {
+  .event-joinus__btn {
+    margin-bottom: 1rem; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */ }
+
+.section-event-media {
+  padding: 2rem 0; }
 
 .event-media__item p {
   width: 380px; }
@@ -2776,6 +2887,16 @@ RESPONSIVE
   padding: 0 !important;
   position: static !important;
   background-color: #fff !important; }
+
+/******************************
+MEDIA QUERIES
+******************************/
+@media screen and (max-width: 1100px) {
+  .event-media__item p {
+    margin: 0 auto 2rem; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */ }
 
 /****Style Datepicker****/
 #plugin_calendar {

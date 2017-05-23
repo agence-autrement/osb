@@ -161,7 +161,7 @@ jQuery(document).ready(function($) {
 	});
 
 	/* Event menu Scroll to fixed */
-	$('.section-menu-event').scrollToFixed();
+	//$('.section-menu-event').scrollToFixed();
 
 	/* Hover photo_descrition event */
 
