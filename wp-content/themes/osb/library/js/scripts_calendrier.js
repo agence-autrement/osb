@@ -1,9 +1,26 @@
-/**********AJAX**********/
 jQuery(document).ready(function($) {
+
+    //Datepicker//
+
+    $('.btn_gauche').on('click', function(){
+        value = '.'+$(this).val();
+        $('.droite div').css('display', 'none');
+        $(value).css('display','inline');
+        $(value).addClass('active');
+    });
+
+    $('#close').on('click', function(){
+        $('.datepicker').removeClass('active');
+        $(this).css('display','inline');
+    });
+
+    /**********AJAX**********/
 
     var ville;
     var theme;
     var type;
+    var filter;
+    var values;
 
 
     $( function() {
@@ -95,16 +112,23 @@ jQuery(document).ready(function($) {
     });
 
 
-    $('.btn_gauche').on('click', function(){
-        value = '.'+$(this).val();
-        $('.droite div').css('display', 'none');
-        $(value).css('display','inline');
-        $(value).addClass('active');
+    /***MULTIFILTRE AJAX***/
+
+    $('.filtreSelector ul li button').on('click', function(){
+
+        $(this).toggleClass('active');
+        values = $(this).val();
+        jQuery.ajax({
+            type:"POST",
+            url: ajaxtest,
+            dataType: 'html',
+            data: {
+                action: "multiFilter",
+                values: values,
+            },
+            success:function(response){
+                $('.resultat').html(response);
+            },
+        });
     });
-
-    $('#close').on('click', function(){
-        $('.datepicker').removeClass('active');
-        $(this).css('display','inline');
-    })
-
 }); /* end of as page load scripts */

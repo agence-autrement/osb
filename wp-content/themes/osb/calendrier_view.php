@@ -13,7 +13,7 @@
                 </div>
                 <div class="submit_theme" style="display: none;">
                     <button class="btn_droite theme" value="les_essentiels">Les Essentiels</button>
-                    <button class="btn_droite theme" value="nouveaux_horizonx">Nouveaux Horizons</button>
+                    <button class="btn_droite theme" value="nouveaux_horizons">Nouveaux Horizons</button>
                     <button class="btn_droite theme" value="taliesin">Taliesin</button>
                 </div>
                 <div class="submit_type" style="display: none;">

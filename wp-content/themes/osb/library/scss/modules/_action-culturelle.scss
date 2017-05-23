@@ -1,0 +1,397 @@
+.page-template-page-action_culturelle{
+
+  //'Slider' haut de page
+  .top_page_action{
+    padding: 35px;
+    height: 710px;
+    width: 100%;
+    background-color: darkslategrey;
+    .contenu_grid{
+      .index{
+        margin-bottom: 25px;
+        ul{
+          li{
+            font-size: 12px;
+            color: #ED1E24;
+          }
+        }
+      }
+      .title{
+        font-size: 60px;
+        margin-bottom: 15px;
+        color: white;
+        span{
+          color: #ED1E24;
+        }
+      }
+      .tag{
+        font-size: 12px;
+        text-transform: uppercase;
+        overflow: hidden;
+        div{
+          display: inline-block;
+          float: left;
+        }
+        .btn_red{
+          cursor: pointer;
+          padding: 5px 10px;
+          background-color: #ED1E24;
+          color: white;
+        }
+        .btn_savoir_plus{
+          display: block;
+          position: relative;
+          padding:5px 10px;
+          cursor: pointer;
+          color: white;
+          &:after{
+            content: '';
+            position: absolute;
+            background-color: white;
+            bottom: 0;
+            left: 10px;
+            width: 0;
+            height: 1px;
+            @include transition(0.6s);
+          }
+          &:hover{
+            font-weight: inherit;
+            &:after{
+              width: 70px;
+            }
+          }
+        }      }
+      .intro_text{
+        font-size: 12px;
+        max-width: 320px;
+        margin-top: 15px;
+        color: white;
+      }
+    }
+  }
+  //Sous-menu
+  .sub_menu{
+    padding: 20px 35px 0 35px;
+    background-color: #F5F3F3;
+    ul{
+      li{
+        display: inline-block;
+        float: left;
+        font-size: 15px;
+        margin-right: 50px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        position: relative;
+        padding-bottom: 5px;
+        &:after{
+          content: '';
+          position: absolute;
+          background-color: black;
+          bottom: 0;
+          left: 0px;
+          width: 0;
+          height: 1px;
+          @include transition(0.6s);
+        }
+        &:hover{
+          &:after{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  /*LES CLASSES*/
+
+  .titre_content{
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: #ED1E24;
+    text-align: right;
+    position: relative;
+    .croix_rouge{
+      background-image: url('../images/croix_rouge.svg');
+      height: 40px;
+      width: 40px;
+      display: block;
+      position: absolute;
+      right: -32px;
+    }
+  }
+  .visuel_content{
+    img{
+      width: 100%;
+    }
+  }
+  .txt_right_content{
+    padding-left: 25px;
+    font-size: 12px;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  .croix_noir{
+    background-image: url('../images/croix_noir.svg');
+    height: 15px;
+    width: 15px;
+    display: block;
+    position: absolute;
+    top: -12px;
+    left: 8px;
+  }
+  .qui{
+    padding-left: 25px;
+    font-size:10px;
+    color: #828080;
+    margin-bottom: 35px;
+  }
+  .inscrire{
+    border: 1px solid #D9D2C4;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    span{
+      color: #D9D2C4;
+    }
+    .ligne_un{
+      font-size: 21px;
+      div{
+        display: inline;
+      }
+    }
+    .ligne_deux{
+      font-size: 15px;
+      div{
+        display: inline;
+        &.ville{
+          color: #ED1E24;
+        }
+      }
+    }
+    .btn_inscription{
+      font-size: 12px;
+      border: 1px solid #D9D2C4;
+      margin: 0 auto;
+      margin-top: 10px;
+      width: 150px;
+      padding: 5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  //Contenu à droite
+  .content_right{
+    padding: 35px;
+    overflow: hidden;
+    width: 100%;
+    .left_content{
+      padding-right: 30px;
+      width: 50%;
+      float: left;
+    }
+    .right_content {
+      width: 50%;
+      float: right;
+      padding-left: 30px;
+      padding-top: 15px;
+    }
+  }
+  //Contenu à gauche
+  .content_left{
+    background-color: #D9D2C4;
+    padding: 35px;
+    overflow: hidden;
+    width: 100%;
+    .left_content{
+      padding-left: 30px;
+      width: 50%;
+      float: right;
+      .titre_content{
+        text-align: left;
+        .croix_rouge{
+          left: -32px;
+          top: inherit;
+        }
+      }
+    }
+    .right_content{
+      width: 50%;
+      float: left;
+      padding-right: 30px;
+      padding-top: 15px;
+      position: relative;
+      .inscrire{
+        border-color: white;
+        span{
+          color: white;
+        }
+        .btn_inscription{
+          border-color: white;
+        }
+      }
+    }
+  }
+  .suggestion{
+    padding: 35px;
+    background-color: #F5F3F3;
+    .titre_sugg{
+      text-align: center;
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-bottom: 35px;
+    }
+    .left_event{
+      width: 75%;
+      float: left;
+      color: white;
+      padding-left: 12px;
+      padding-top: 25px;
+    }
+
+    .right_event{
+      width: 25%;
+      float: left;
+      color: white;
+      text-align: center;
+      position: relative;
+      padding-top: 25px;
+      &:before{
+        content: '';
+        position: absolute;
+        top: 30px;
+        left: 0;
+        height: 50px;
+        width: 1px;
+        background-color: white;
+        -webkit-transform: rotate(30deg);
+        -moz-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+        -o-transform: rotate(30deg);
+        transform: rotate(30deg);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711)";
+        filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711);
+      }
+    }
+    ul {
+      overflow: hidden;
+      width: 100%;
+    }
+
+    li{
+      width: 31.3%;
+      min-height: 175px;
+      color: white;
+      background-color: darkslategrey;
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 3%;
+      float: left;
+      &:last-of-type{
+        margin-right: 0;
+      }
+    }
+
+    p{
+      margin-bottom: 0;
+      &.cat_calendrier{
+        color: #FDE608;
+        font-size: 12px;
+      }
+      &.titre_calendrier{
+        max-width: 250px;
+        font-size: 18px;
+      }
+      &.day_calendrier{
+        font-size: 25px;
+        font-weight: 500;
+      }
+      &.month_calendrier, &.lieu_calendrier{
+        font-size: 12px;
+      }
+      &:nth-of-type(3){
+        margin-bottom: 50px;
+      }
+    }
+    .link_calendrier{
+      display: block;
+      margin-bottom: 25px;
+      position: relative;
+      &:after{
+        content: '';
+        position: absolute;
+        background-color: white;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        @include transition(0.6s);
+      }
+      &:hover{
+        font-weight: inherit;
+        &:after{
+          width: 100px;
+        }
+      }
+    }
+
+  }
+
+
+
+
+
+  /******RESPONSIVE*****/
+
+
+  @media screen and (max-width: 767px) {
+    .sub_menu{
+      li{
+        display: block;
+        width: 100%;
+        text-align: center;
+        &:after{
+          display: none;
+        }
+      }
+    }
+    .content_right{
+       .left_content{
+         float: none;
+         width: 100%;
+         padding: 0;
+         margin-bottom: 25px;
+       }
+       .right_content{
+         float: none;
+         width: 100%;
+         padding: 0;
+       }
+     }
+    .content_left{
+      .left_content{
+        float: none;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 25px;
+      }
+      .right_content{
+        float: none;
+        width: 100%;
+        padding: 0;
+      }
+    }
+    .suggestion{
+      li{
+        width: 100%;
+        margin-bottom: 35px;
+      }
+    }
+  }
+}

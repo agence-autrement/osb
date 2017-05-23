@@ -26,6 +26,7 @@ function array_filter_by_value($my_array, $index, $value)
 };
 
 
+
 ///////////////////////////////// Remove Value from Array
 
 function removeElementWithValue($array, $key, $value)
@@ -117,11 +118,9 @@ function getInputByLieu()
     };
 };
 
+///////////////////////////////// WP_QUERY -> Saison complète
 
-
-///////////////////////////////// WP_QUERY -> Spectacle
-
-function queryPosts()
+function querySaison()
 {
     $args       = array('post_type' => 'spectacles');
     $the_query  = new WP_Query( $args );
@@ -134,13 +133,16 @@ function queryPosts()
             $titre          = get_the_title($post_id);
             $link           = get_the_permalink($post_id);
             $thumbnail      = get_the_post_thumbnail_url($post_id, 'full');
-            $artiste        = get_field('artiste');
             $type           = get_field('type');
             $thematiques    = get_field('thematiques');
+            $festivals      = get_field('festivals');
+            $tete_daffiche  = get_field('tete_daffiche');
+            $compositeur    = get_field('compositeur');
 
             if( have_rows('artistes') ){
                 while ( have_rows('artistes') ) : the_row();
                     $artiste        = get_sub_field('artiste');
+                    $instrument     = get_sub_field('instrument');
                 endwhile;
             };
 
@@ -164,11 +166,25 @@ function queryPosts()
                     'artiste_calendrier'    => $artiste,
                     'thematiques'           => $thematiques,
                     'type'                  => $type,
+                    'festivals'             => $festivals,
+                    'tete_daffiche'         => $tete_daffiche,
+                    'compositeur'           => $compositeur,
+                    'instrument'            => $instrument,
+
                 )
             );
         };
     };
     usort($table, "sortByDate");
+    return $table;
+};
+
+
+///////////////////////////////// WP_QUERY -> Spectacle
+
+function queryPosts()
+{
+    $table          = querySaison();
     $delete_if_less = date("Ymd");
     $table          = removeElementWithInferiorValue($table,'date_calendrier',$delete_if_less);
     return $table;
@@ -256,6 +272,12 @@ add_action( 'wp_ajax_nopriv_mon_action_theme', 'mon_action_theme' );
 //Type
 add_action( 'wp_ajax_mon_action_type', 'mon_action_type' );
 add_action( 'wp_ajax_nopriv_mon_action_type', 'mon_action_type' );
+//multiFilter
+add_action( 'wp_ajax_multiFilter', 'multiFilter' );
+add_action( 'wp_ajax_nopriv_multiFilter', 'multiFilter' );
+//clear_filter
+add_action( 'wp_ajax_clear_filter', 'clear_filter' );
+add_action( 'wp_ajax_nopriv_clear_filter', 'clear_filter' );
 
 
 ///////////////////////////////// Affichage des postes filtré par département
@@ -454,7 +476,7 @@ function mon_action_theme()
 function mon_action_type()
 {
     global $_POST;
-    $type_event    = $_POST['type'];
+    $type_event     = $_POST['type'];
     $table          = queryPosts();
     $clear_table    = array_filter_by_value($table,'type', $type_event );
     $count          = count($clear_table);
@@ -511,4 +533,20 @@ function mon_action_type()
     echo '</ul>';
     wp_reset_postdata();
 };
+
+
+//Multifilter func
+
+function multiFilter()
+{
+    global $_POST;
+    $values         = $_POST['values'];
+    $table          = querySaison();
+
+    echo $values;
+
+    //var_dump($test);
+
+};
+
 ?>

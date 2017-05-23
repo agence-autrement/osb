@@ -152,6 +152,11 @@ jQuery(document).ready(function($) {
 	});
 
 
+	/*plus de tag*/
+	$('#plus_de_tag').on('click', function(){
+		$('.filtreSelector').toggleClass('active');
+	});
+
 	/*SIDEBAR ESPACE PERSO*/
 	$("#espace").on("click", function(){
 		$('.sidebar_mon_espace').toggleClass('active');

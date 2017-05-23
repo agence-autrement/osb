@@ -318,6 +318,12 @@ ARTICLES
   height: 50%;
   padding:15px;
   font-size: 12px;
+  .extrait_2{
+    display: none;
+  }
+  .tarif{
+    display: none;
+  }
 }
 
 
@@ -408,6 +414,12 @@ RESPONSIVE
     width: 50%;
     height: 100%;
     float: right;
+    .extrait_2{
+      display: block;
+    }
+    .tarif{
+      display: block;
+    }
   }
 }
 

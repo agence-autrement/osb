@@ -332,7 +332,7 @@ Event template
                         </div>
                     </div>
                 </section>
-
+                <? resultSugg() ?>
                 <section class="section-event-media">
                     <div class="container">
                         <div class="row">

@@ -32,6 +32,7 @@
     .droite{
       float: right;
       width: 50%;
+      text-align: right;
     }
 
     button{
@@ -57,7 +58,8 @@
     overflow: hidden;
     top: 0;
     left: 0;
-    @include transition(0.2s);
+    background-color: rgba(255,255,255,0.8);
+    @include transition(0.3s);
     &.active{
       height: 100%;
       width: 100%;
@@ -67,7 +69,7 @@
       width: 30px;
       //background-color: black;
       position: absolute;
-      right: 10px;
+      left: 216px;
       cursor: pointer;
       background-image: url('../images/close.svg');
     }

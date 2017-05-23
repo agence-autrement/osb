@@ -17,7 +17,9 @@ $allowed_actions = array(
     'mon_action_date',
     'mon_action_theme',
     'mon_action_type',
-    'mon_action'
+    'mon_action',
+    'multiFilter',
+    'clear_filter'
 );
 
 if(in_array($action, $allowed_actions)) {

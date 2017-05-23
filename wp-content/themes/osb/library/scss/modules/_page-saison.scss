@@ -1,0 +1,66 @@
+.page-template-page-saison{
+  .main_saison{
+    margin-left: 130px;
+    padding: 35px;
+  }
+  .filtreSelector{
+    overflow: hidden;
+    height: 220px;
+    margin-bottom: 35px;
+    @include transition(0.6s);
+    ul{
+      display: inline-block;
+      float: left;
+      margin-right: 35px;
+      li{
+        margin-bottom: 1px;
+        button{
+          padding: 5px;
+          border: none;
+          margin: 0 auto;
+          margin-bottom: 10px;
+          text-align: center;
+          width: 100%;
+          background-color: #EDEDED;
+          @include transition(0.3s);
+          &:hover{
+            background-color: black;
+            color: white;
+          }
+          &.first_btn{
+            background-color: black;
+            color: white;
+          }
+          &.active{
+            background-color: black;
+            color: white;
+          }
+        }
+      }
+    }
+    &.active{
+      height: 400px;
+    }
+  }
+  #plus_de_tag{
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 35px;
+    border: 1px solid darkslategrey;
+    cursor: pointer;
+    @include transition(0.3s);
+    &:hover{
+      background-color: black;
+      color: white;
+    }
+  }
+  #clear_filters{
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 35px;
+    border: 1px solid darkslategrey;
+    cursor: pointer;
+  }
+}

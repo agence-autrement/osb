@@ -105,6 +105,12 @@
                     <div class="extrait_1">
                         En se réveillant un matin après des rêves agités, Gregor Samsa se retrouva, dans son lit, [...]
                     </div>
+                    <div class="extrait_2">
+                        Ce n’était pas un rêve. Sa chambre, une vraie chambre humaine, juste un peu trop petite, était là tranquille entre les quatre murs qu’il connaissait bien.
+                    </div>
+                    <div class="tarif">
+                        Tarif unique : 5 euros
+                    </div>
                     <a class="btn" href="###">En savoir +</a>
                 </div>
             </div>

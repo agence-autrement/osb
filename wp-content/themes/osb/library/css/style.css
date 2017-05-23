@@ -1447,43 +1447,52 @@ MEDIA QUERIES
   .footer:after {
     clear: both; }
   .footer .grid_footer {
+    padding: 35px;
     overflow: hidden;
     text-align: center;
     color: white;
-    margin-bottom: 30px;
-    position: relative;
-    padding-top: 35px; }
+    position: relative; }
     .footer .grid_footer .footer_content {
+      width: 33%;
+      overflow: hidden;
       text-transform: uppercase;
-      font-size: 14px; }
-      .footer .grid_footer .footer_content:nth-of-type(1):after, .footer .grid_footer .footer_content:nth-of-type(6):after {
-        content: '';
-        background-color: white;
-        position: absolute;
-        top: -10px;
-        right: 0;
-        height: 95%;
-        width: 1px; }
-      .footer .grid_footer .footer_content li {
-        margin-bottom: 25px; }
+      float: left; }
+      .footer .grid_footer .footer_content ul {
+        width: 50%;
+        float: left;
+        position: relative; }
+        .footer .grid_footer .footer_content ul:nth-of-type(1):after, .footer .grid_footer .footer_content ul:nth-of-type(3):after {
+          content: '';
+          background-color: white;
+          position: absolute;
+          right: 0;
+          top: 0;
+          height: 90%;
+          width: 1px; }
+        .footer .grid_footer .footer_content ul li {
+          margin-bottom: 15px; }
       .footer .grid_footer .footer_content img {
         max-width: 125px; }
-    .footer .grid_footer:after {
-      content: '';
-      background-color: white;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 1px;
-      width: 100%; }
+    .footer .grid_footer .contenu_grid:nth-of-type(1) {
+      position: relative;
+      margin-bottom: 35px;
+      padding-bottom: 35px; }
+      .footer .grid_footer .contenu_grid:nth-of-type(1):after {
+        content: '';
+        height: 1px;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        bottom: 0;
+        left: 0; }
   .footer .contact {
     height: 150px;
-    width: 150px;
+    width: 50%;
     float: left;
     text-align: left; }
   .footer .billet {
     height: 150px;
-    width: 150px;
+    width: 50%;
     float: right;
     text-align: right; }
   .footer.active {
@@ -1492,10 +1501,26 @@ MEDIA QUERIES
 /**********************
 Media Queries
 **********************/
-@media screen and (max-width: 990px) and (min-width: 768px) {
-  .footer_content {
-    width: 50%;
-    float: left; } }
+@media screen and (max-width: 767px) {
+  .grid_footer .contenu_grid .footer_content ul {
+    width: 100%; }
+    .grid_footer .contenu_grid .footer_content ul:after {
+      display: none; }
+  .grid_footer .contenu_grid .contact {
+    width: 100%;
+    float: none;
+    text-align: center; }
+  .grid_footer .contenu_grid .billet {
+    width: 100%;
+    float: none;
+    text-align: center; } }
+
+@media screen and (max-width: 1024px) {
+  .grid_footer .contenu_grid .footer_content {
+    width: 100%;
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 35px; } }
 
 @media screen and (max-width: 1100px) {
   .footer {
@@ -2387,6 +2412,10 @@ ARTICLES
   height: 50%;
   padding: 15px;
   font-size: 12px; }
+  .second_article_content .extrait_2 {
+    display: none; }
+  .second_article_content .tarif {
+    display: none; }
 
 /***********************
 RESPONSIVE
@@ -2445,7 +2474,11 @@ RESPONSIVE
   .second_article_content {
     width: 50%;
     height: 100%;
-    float: right; } }
+    float: right; }
+    .second_article_content .extrait_2 {
+      display: block; }
+    .second_article_content .tarif {
+      display: block; } }
 
 /*480px*/
 @media screen and (max-width: 480px) {
@@ -2476,6 +2509,77 @@ RESPONSIVE
   display: inline-block;
   margin: 0.4rem 4rem 0.4rem 0;
   color: #000; }
+
+.page-template-page-saison .main_saison {
+  margin-left: 130px;
+  padding: 35px; }
+
+.page-template-page-saison .filtreSelector {
+  overflow: hidden;
+  height: 220px;
+  margin-bottom: 35px;
+  -webkit-transition: 0.6s;
+  -khtml-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s; }
+  .page-template-page-saison .filtreSelector ul {
+    display: inline-block;
+    float: left;
+    margin-right: 35px; }
+    .page-template-page-saison .filtreSelector ul li {
+      margin-bottom: 1px; }
+      .page-template-page-saison .filtreSelector ul li button {
+        padding: 5px;
+        border: none;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 100%;
+        background-color: #EDEDED;
+        -webkit-transition: 0.3s;
+        -khtml-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s; }
+        .page-template-page-saison .filtreSelector ul li button:hover {
+          background-color: black;
+          color: white; }
+        .page-template-page-saison .filtreSelector ul li button.first_btn {
+          background-color: black;
+          color: white; }
+        .page-template-page-saison .filtreSelector ul li button.active {
+          background-color: black;
+          color: white; }
+  .page-template-page-saison .filtreSelector.active {
+    height: 400px; }
+
+.page-template-page-saison #plus_de_tag {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 35px;
+  border: 1px solid darkslategrey;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -khtml-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  .page-template-page-saison #plus_de_tag:hover {
+    background-color: black;
+    color: white; }
+
+.page-template-page-saison #clear_filters {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 35px;
+  border: 1px solid darkslategrey;
+  cursor: pointer; }
 
 .event-desc__inner {
   margin: 8rem 0 4.5rem; }
@@ -2811,7 +2915,8 @@ RESPONSIVE
         text-transform: uppercase; }
     .contenu_grid #selector .droite {
       float: right;
-      width: 50%; }
+      width: 50%;
+      text-align: right; }
     .contenu_grid #selector button {
       padding: 5px;
       border: none;
@@ -2836,12 +2941,13 @@ RESPONSIVE
     overflow: hidden;
     top: 0;
     left: 0;
-    -webkit-transition: 0.2s;
-    -khtml-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -ms-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s; }
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-transition: 0.3s;
+    -khtml-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
     .contenu_grid .datepicker.active {
       height: 100%;
       width: 100%; }
@@ -2849,7 +2955,7 @@ RESPONSIVE
       height: 30px;
       width: 30px;
       position: absolute;
-      right: 10px;
+      left: 216px;
       cursor: pointer;
       background-image: url("../images/close.svg"); }
   .contenu_grid #date_value {
@@ -3011,5 +3117,313 @@ RESPONSIVE
         float: none;
         overflow: hidden;
         margin-bottom: 35px; } }
+
+.page-template-page-action_culturelle {
+  /*LES CLASSES*/
+  /******RESPONSIVE*****/ }
+  .page-template-page-action_culturelle .top_page_action {
+    padding: 35px;
+    height: 710px;
+    width: 100%;
+    background-color: darkslategrey; }
+    .page-template-page-action_culturelle .top_page_action .contenu_grid .index {
+      margin-bottom: 25px; }
+      .page-template-page-action_culturelle .top_page_action .contenu_grid .index ul li {
+        font-size: 12px;
+        color: #ED1E24; }
+    .page-template-page-action_culturelle .top_page_action .contenu_grid .title {
+      font-size: 60px;
+      margin-bottom: 15px;
+      color: white; }
+      .page-template-page-action_culturelle .top_page_action .contenu_grid .title span {
+        color: #ED1E24; }
+    .page-template-page-action_culturelle .top_page_action .contenu_grid .tag {
+      font-size: 12px;
+      text-transform: uppercase;
+      overflow: hidden; }
+      .page-template-page-action_culturelle .top_page_action .contenu_grid .tag div {
+        display: inline-block;
+        float: left; }
+      .page-template-page-action_culturelle .top_page_action .contenu_grid .tag .btn_red {
+        cursor: pointer;
+        padding: 5px 10px;
+        background-color: #ED1E24;
+        color: white; }
+      .page-template-page-action_culturelle .top_page_action .contenu_grid .tag .btn_savoir_plus {
+        display: block;
+        position: relative;
+        padding: 5px 10px;
+        cursor: pointer;
+        color: white; }
+        .page-template-page-action_culturelle .top_page_action .contenu_grid .tag .btn_savoir_plus:after {
+          content: '';
+          position: absolute;
+          background-color: white;
+          bottom: 0;
+          left: 10px;
+          width: 0;
+          height: 1px;
+          -webkit-transition: 0.6s;
+          -khtml-transition: 0.6s;
+          -moz-transition: 0.6s;
+          -ms-transition: 0.6s;
+          -o-transition: 0.6s;
+          transition: 0.6s; }
+        .page-template-page-action_culturelle .top_page_action .contenu_grid .tag .btn_savoir_plus:hover {
+          font-weight: inherit; }
+          .page-template-page-action_culturelle .top_page_action .contenu_grid .tag .btn_savoir_plus:hover:after {
+            width: 70px; }
+    .page-template-page-action_culturelle .top_page_action .contenu_grid .intro_text {
+      font-size: 12px;
+      max-width: 320px;
+      margin-top: 15px;
+      color: white; }
+  .page-template-page-action_culturelle .sub_menu {
+    padding: 20px 35px 0 35px;
+    background-color: #F5F3F3; }
+    .page-template-page-action_culturelle .sub_menu ul li {
+      display: inline-block;
+      float: left;
+      font-size: 15px;
+      margin-right: 50px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      position: relative;
+      padding-bottom: 5px; }
+      .page-template-page-action_culturelle .sub_menu ul li:after {
+        content: '';
+        position: absolute;
+        background-color: black;
+        bottom: 0;
+        left: 0px;
+        width: 0;
+        height: 1px;
+        -webkit-transition: 0.6s;
+        -khtml-transition: 0.6s;
+        -moz-transition: 0.6s;
+        -ms-transition: 0.6s;
+        -o-transition: 0.6s;
+        transition: 0.6s; }
+      .page-template-page-action_culturelle .sub_menu ul li:hover:after {
+        width: 100%; }
+  .page-template-page-action_culturelle .titre_content {
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: #ED1E24;
+    text-align: right;
+    position: relative; }
+    .page-template-page-action_culturelle .titre_content .croix_rouge {
+      background-image: url("../images/croix_rouge.svg");
+      height: 40px;
+      width: 40px;
+      display: block;
+      position: absolute;
+      right: -32px; }
+  .page-template-page-action_culturelle .visuel_content img {
+    width: 100%; }
+  .page-template-page-action_culturelle .txt_right_content {
+    padding-left: 25px;
+    font-size: 12px;
+    margin-bottom: 30px;
+    position: relative; }
+  .page-template-page-action_culturelle .croix_noir {
+    background-image: url("../images/croix_noir.svg");
+    height: 15px;
+    width: 15px;
+    display: block;
+    position: absolute;
+    top: -12px;
+    left: 8px; }
+  .page-template-page-action_culturelle .qui {
+    padding-left: 25px;
+    font-size: 10px;
+    color: #828080;
+    margin-bottom: 35px; }
+  .page-template-page-action_culturelle .inscrire {
+    border: 1px solid #D9D2C4;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px; }
+    .page-template-page-action_culturelle .inscrire span {
+      color: #D9D2C4; }
+    .page-template-page-action_culturelle .inscrire .ligne_un {
+      font-size: 21px; }
+      .page-template-page-action_culturelle .inscrire .ligne_un div {
+        display: inline; }
+    .page-template-page-action_culturelle .inscrire .ligne_deux {
+      font-size: 15px; }
+      .page-template-page-action_culturelle .inscrire .ligne_deux div {
+        display: inline; }
+        .page-template-page-action_culturelle .inscrire .ligne_deux div.ville {
+          color: #ED1E24; }
+    .page-template-page-action_culturelle .inscrire .btn_inscription {
+      font-size: 12px;
+      border: 1px solid #D9D2C4;
+      margin: 0 auto;
+      margin-top: 10px;
+      width: 150px;
+      padding: 5px;
+      text-transform: uppercase;
+      cursor: pointer; }
+      .page-template-page-action_culturelle .inscrire .btn_inscription a {
+        display: block;
+        width: 100%;
+        height: 100%; }
+  .page-template-page-action_culturelle .content_right {
+    padding: 35px;
+    overflow: hidden;
+    width: 100%; }
+    .page-template-page-action_culturelle .content_right .left_content {
+      padding-right: 30px;
+      width: 50%;
+      float: left; }
+    .page-template-page-action_culturelle .content_right .right_content {
+      width: 50%;
+      float: right;
+      padding-left: 30px;
+      padding-top: 15px; }
+  .page-template-page-action_culturelle .content_left {
+    background-color: #D9D2C4;
+    padding: 35px;
+    overflow: hidden;
+    width: 100%; }
+    .page-template-page-action_culturelle .content_left .left_content {
+      padding-left: 30px;
+      width: 50%;
+      float: right; }
+      .page-template-page-action_culturelle .content_left .left_content .titre_content {
+        text-align: left; }
+        .page-template-page-action_culturelle .content_left .left_content .titre_content .croix_rouge {
+          left: -32px;
+          top: inherit; }
+    .page-template-page-action_culturelle .content_left .right_content {
+      width: 50%;
+      float: left;
+      padding-right: 30px;
+      padding-top: 15px;
+      position: relative; }
+      .page-template-page-action_culturelle .content_left .right_content .inscrire {
+        border-color: white; }
+        .page-template-page-action_culturelle .content_left .right_content .inscrire span {
+          color: white; }
+        .page-template-page-action_culturelle .content_left .right_content .inscrire .btn_inscription {
+          border-color: white; }
+  .page-template-page-action_culturelle .suggestion {
+    padding: 35px;
+    background-color: #F5F3F3; }
+    .page-template-page-action_culturelle .suggestion .titre_sugg {
+      text-align: center;
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-bottom: 35px; }
+    .page-template-page-action_culturelle .suggestion .left_event {
+      width: 75%;
+      float: left;
+      color: white;
+      padding-left: 12px;
+      padding-top: 25px; }
+    .page-template-page-action_culturelle .suggestion .right_event {
+      width: 25%;
+      float: left;
+      color: white;
+      text-align: center;
+      position: relative;
+      padding-top: 25px; }
+      .page-template-page-action_culturelle .suggestion .right_event:before {
+        content: '';
+        position: absolute;
+        top: 30px;
+        left: 0;
+        height: 50px;
+        width: 1px;
+        background-color: white;
+        -webkit-transform: rotate(30deg);
+        -moz-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+        -o-transform: rotate(30deg);
+        transform: rotate(30deg);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711)";
+        filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711); }
+    .page-template-page-action_culturelle .suggestion ul {
+      overflow: hidden;
+      width: 100%; }
+    .page-template-page-action_culturelle .suggestion li {
+      width: 31.3%;
+      min-height: 175px;
+      color: white;
+      background-color: darkslategrey;
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 3%;
+      float: left; }
+      .page-template-page-action_culturelle .suggestion li:last-of-type {
+        margin-right: 0; }
+    .page-template-page-action_culturelle .suggestion p {
+      margin-bottom: 0; }
+      .page-template-page-action_culturelle .suggestion p.cat_calendrier {
+        color: #FDE608;
+        font-size: 12px; }
+      .page-template-page-action_culturelle .suggestion p.titre_calendrier {
+        max-width: 250px;
+        font-size: 18px; }
+      .page-template-page-action_culturelle .suggestion p.day_calendrier {
+        font-size: 25px;
+        font-weight: 500; }
+      .page-template-page-action_culturelle .suggestion p.month_calendrier, .page-template-page-action_culturelle .suggestion p.lieu_calendrier {
+        font-size: 12px; }
+      .page-template-page-action_culturelle .suggestion p:nth-of-type(3) {
+        margin-bottom: 50px; }
+    .page-template-page-action_culturelle .suggestion .link_calendrier {
+      display: block;
+      margin-bottom: 25px;
+      position: relative; }
+      .page-template-page-action_culturelle .suggestion .link_calendrier:after {
+        content: '';
+        position: absolute;
+        background-color: white;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        -webkit-transition: 0.6s;
+        -khtml-transition: 0.6s;
+        -moz-transition: 0.6s;
+        -ms-transition: 0.6s;
+        -o-transition: 0.6s;
+        transition: 0.6s; }
+      .page-template-page-action_culturelle .suggestion .link_calendrier:hover {
+        font-weight: inherit; }
+        .page-template-page-action_culturelle .suggestion .link_calendrier:hover:after {
+          width: 100px; }
+  @media screen and (max-width: 767px) {
+    .page-template-page-action_culturelle .sub_menu li {
+      display: block;
+      width: 100%;
+      text-align: center; }
+      .page-template-page-action_culturelle .sub_menu li:after {
+        display: none; }
+    .page-template-page-action_culturelle .content_right .left_content {
+      float: none;
+      width: 100%;
+      padding: 0;
+      margin-bottom: 25px; }
+    .page-template-page-action_culturelle .content_right .right_content {
+      float: none;
+      width: 100%;
+      padding: 0; }
+    .page-template-page-action_culturelle .content_left .left_content {
+      float: none;
+      width: 100%;
+      padding: 0;
+      margin-bottom: 25px; }
+    .page-template-page-action_culturelle .content_left .right_content {
+      float: none;
+      width: 100%;
+      padding: 0; }
+    .page-template-page-action_culturelle .suggestion li {
+      width: 100%;
+      margin-bottom: 35px; } }
 
 /*# sourceMappingURL=maps/style.css.map */
