@@ -6,6 +6,9 @@
     height: 710px;
     width: 100%;
     background-color: darkslategrey;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
     .contenu_grid{
       .index{
         margin-bottom: 25px;

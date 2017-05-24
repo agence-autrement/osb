@@ -3246,7 +3246,10 @@ MEDIA QUERIES
     padding: 35px;
     height: 710px;
     width: 100%;
-    background-color: darkslategrey; }
+    background-color: darkslategrey;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat; }
     .page-template-page-action_culturelle .top_page_action .contenu_grid .index {
       margin-bottom: 25px; }
       .page-template-page-action_culturelle .top_page_action .contenu_grid .index ul li {

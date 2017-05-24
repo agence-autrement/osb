@@ -8,7 +8,7 @@ Template Name: Page Action Culturelle
 <?php get_sidebar(); ?>
 
 <div id="content">
-    <section class="top_page_action">
+    <section class="top_page_action" style="background-image: url(<? the_field('visuel_de_la_page'); ?>);">
         <div class="contenu_grid">
             <div class="index">
                 <ul>
@@ -21,14 +21,18 @@ Template Name: Page Action Culturelle
                 </ul>
             </div>
             <div class="title">
-                Concerts <span>scolaires</span>
+                <? the_field('titre_1'); ?><span> <? the_field('titre_2'); ?></span>
             </div>
             <div class="tag">
-                <div class="btn_red">aAmener la musique à tous</div>
-                <div class="btn_savoir_plus"><a href="###">En savoir +</a></div>
+                <? if( have_rows('boutons_rouges') ){ ?>
+                    <? while ( have_rows('boutons_rouges') ) : the_row(); ?>
+                        <div class="btn_red"><a href="<? the_sub_field('lien_du_bouton'); ?>"><? the_sub_field('texte_bouton'); ?></a></div>
+                    <? endwhile; ?>
+                    <? }; ?>
+                <div class="btn_savoir_plus"><a href="<? the_field('lien_en_savoir'); ?>">En savoir +</a></div>
             </div>
             <div class="intro_text">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+                <? the_field('texte_sous_le_titre'); ?>
             </div>
         </div>
     </section>
@@ -46,224 +50,59 @@ Template Name: Page Action Culturelle
             </ul>
         </div>
     </section>
-    <section class="content_right">
-        <div class="contenu_grid">
-            <div class="left_content">
-                <div class="titre_content">
-                    City Sky
-                    <span class="croix_rouge"></span>
-                </div>
-                <div class="visuel_content">
-                    <img src="<? bloginfo('template_url') ?>/library/images/citysky.jpg" alt="">
+    <? if ( have_rows('actions') ){ ?>
+        <? while ( have_rows('actions') ) : the_row(); ?>
+            <section class="<? the_sub_field('affichage'); ?>">
+                <div class="contenu_grid">
+                    <div class="left_content">
+                        <div class="titre_content">
+                            <? the_sub_field('titre'); ?>
+                            <span class="croix_rouge"></span>
+                        </div>
+                        <div class="visuel_content">
+                            <img src="<? the_sub_field('visuel'); ?>" alt="">
+                        </div>
+                    </div>
+                    <div class="right_content">
+                        <div class="txt_right_content">
+                            <? the_sub_field('texte'); ?>
+                            <span class="croix_noir"></span>
+                        </div>
 
-                </div>
-            </div>
-            <div class="right_content">
-                <div class="txt_right_content">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-                    <span class="croix_noir"></span>
-                </div>
+                        <div class="qui">
+                            <div class="titre_qui">
+                                <? the_sub_field('nom_de_lorchestre'); ?>
+                            </div>
+                            <? if ( have_rows('membres') ) { ?>
+                            <div class="qui_qui">
+                                <ul>
+                                    <? while ( have_rows('membres') ) : the_row(); ?>
+                                    <li>// <? the_sub_field('role') ?> : <? the_sub_field('nom') ?></li>
+                                    <? endwhile; ?>
+                                </ul>
+                            </div>
+                            <? } ?>
+                        </div>
+                        <? if ( have_rows('bouton_dinscription') ) { ?>
+                            <div class="inscrire">
+                                <? while ( have_rows('bouton_dinscription') ) : the_row(); ?>
+                                    <div class="ligne_un">
+                                        <div class="date"><? the_sub_field('date') ?></div><span> // </span><div class="heure"><? the_sub_field('heure') ?></div>
+                                    </div>
+                                    <div class="ligne_deux">
+                                        <div class="ville"><? the_sub_field('ville') ?></div><span> // </span><div class="salle"><? the_sub_field('lieu') ?></div>
+                                    </div>
+                                    <div class="btn_inscription"><a href="<? the_sub_field('lien_bouton_inscription') ?>">Inscrire sa classe</a></div>
+                                <? endwhile; ?>
+                            </div>
+                        <? } ?>
 
-                <div class="qui">
-                    <div class="titre_qui">
-                        Orchestre symphonique de Bretagne
-                    </div>
-                    <div class="qui_qui">
-                        <ul>
-                            <li>// Direction : Grant Llewellyn</li>
-                            <li>// Clavecin : Diego Ares</li>
-                        </ul>
                     </div>
                 </div>
-                <div class="inscrire">
-                    <div class="ligne_un">
-                        <div class="date">Mercredi 12 Décembre</div><span> // </span><div class="heure">20h30</div>
-                    </div>
-                    <div class="ligne_deux">
-                        <div class="ville">Martigné-Ferchaud</div><span> // </span><div class="salle">Salle Sévigné</div>
-                    </div>
-                    <div class="btn_inscription"><a href="###">Inscrire sa classe</a></div>
-                </div>
-                <div class="inscrire">
-                    <div class="ligne_un">
-                        <div class="date">Mercredi 12 Décembre</div><span> // </span><div class="heure">20h30</div>
-                    </div>
-                    <div class="ligne_deux">
-                        <div class="ville">Martigné-Ferchaud</div><span> // </span><div class="salle">Salle Sévigné</div>
-                    </div>
-                    <div class="btn_inscription"><a href="###">Inscrire sa classe</a></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="content_left">
-        <div class="contenu_grid">
-            <div class="left_content">
-                <div class="titre_content">
-                    Le Léopard et le Chasseur
-                    <span class="croix_rouge"></span>
-                </div>
-                <div class="visuel_content">
-                    <img src="<? bloginfo('template_url') ?>/library/images/leopard.jpg" alt="">
-                </div>
-            </div>
-            <div class="right_content">
-                <div class="txt_right_content">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-                    <span class="croix_noir"></span>
-                </div>
-                <div class="qui">
-                    <div class="titre_qui">
-                        Orchestre symphonique de Bretagne
-                    </div>
-                    <div class="qui_qui">
-                        <ul>
-                            <li>// Direction : Grant Llewellyn</li>
-                            <li>// Clavecin : Diego Ares</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="inscrire">
-                    <div class="ligne_un">
-                        <div class="date">Mercredi 12 Décembre</div><span> // </span><div class="heure">20h30</div>
-                    </div>
-                    <div class="ligne_deux">
-                        <div class="ville">Martigné-Ferchaud</div><span> // </span><div class="salle">Salle Sévigné</div>
-                    </div>
-                    <div class="btn_inscription"><a href="###">Inscrire sa classe</a></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section-event-joinus">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <p class="event-joinus__title">
-                        Rejoignez-nous !
-                    </p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-offset-3 col-sm-2">
-                    <a class="event-joinus__btn btn" href="#">
-                        Particulier
-                    </a>
-                </div>
-                <div class="col-sm-2">
-                    <a class="event-joinus__btn btn" href="#">
-                        Professionnel
-                    </a>
-                </div>
-                <div class="col-sm-2">
-                    <a class="event-joinus__btn event-joinus__btn--third btn" href="#">
-                        Don en ligne
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="content_right">
-        <div class="contenu_grid">
-            <div class="left_content">
-                <div class="titre_content">
-                    Qu'est-ce que la musique ?
-                    <span class="croix_rouge"></span>
-                </div>
-                <div class="visuel_content">
-                    <img src="<? bloginfo('template_url') ?>/library/images/citysky.jpg" alt="">
-
-                </div>
-            </div>
-            <div class="right_content">
-                <div class="txt_right_content">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-                    <span class="croix_noir"></span>
-                </div>
-
-                <div class="qui">
-                    <div class="titre_qui">
-                        Orchestre symphonique de Bretagne
-                    </div>
-                    <div class="qui_qui">
-                        <ul>
-                            <li>// Direction : Grant Llewellyn</li>
-                            <li>// Clavecin : Diego Ares</li>
-                            <li>// Comedien : Quelqu'un</li>
-                            <li>// Clarinette : Quelqu'un d'autre</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="inscrire">
-                    <div class="ligne_un">
-                        <div class="date">Mercredi 12 Décembre</div><span> // </span><div class="heure">20h30</div>
-                    </div>
-                    <div class="ligne_deux">
-                        <div class="ville">Martigné-Ferchaud</div><span> // </span><div class="salle">Salle Sévigné</div>
-                    </div>
-                    <div class="btn_inscription"><a href="###">Inscrire sa classe</a></div>
-                </div>
-                <div class="inscrire">
-                    <div class="ligne_un">
-                        <div class="date">Mercredi 12 Décembre</div><span> // </span><div class="heure">20h30</div>
-                    </div>
-                    <div class="ligne_deux">
-                        <div class="ville">Martigné-Ferchaud</div><span> // </span><div class="salle">Salle Sévigné</div>
-                    </div>
-                    <div class="btn_inscription"><a href="###">Inscrire sa classe</a></div>
-                </div>
-                <div class="inscrire">
-                    <div class="ligne_un">
-                        <div class="date">Mercredi 12 Décembre</div><span> // </span><div class="heure">20h30</div>
-                    </div>
-                    <div class="ligne_deux">
-                        <div class="ville">Martigné-Ferchaud</div><span> // </span><div class="salle">Salle Sévigné</div>
-                    </div>
-                    <div class="btn_inscription"><a href="###">Inscrire sa classe</a></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="content_left">
-        <div class="contenu_grid">
-            <div class="left_content">
-                <div class="titre_content">
-                    Révolution Beethoven
-                    <span class="croix_rouge"></span>
-                </div>
-                <div class="visuel_content">
-                    <!-- <img src="<? bloginfo('template_url') ?>/library/images/leopard.jpg" alt=""> -->
-                </div>
-            </div>
-            <div class="right_content">
-                <div class="txt_right_content">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-                    <span class="croix_noir"></span>
-                </div>
-                <div class="qui">
-                    <div class="titre_qui">
-                        Orchestre symphonique de Bretagne
-                    </div>
-                    <div class="qui_qui">
-                        <ul>
-                            <li>// Direction : Grant Llewellyn</li>
-                            <li>// Clavecin : Diego Ares</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="inscrire">
-                    <div class="ligne_un">
-                        <div class="date">Mercredi 12 Décembre</div><span> // </span><div class="heure">20h30</div>
-                    </div>
-                    <div class="ligne_deux">
-                        <div class="ville">Martigné-Ferchaud</div><span> // </span><div class="salle">Salle Sévigné</div>
-                    </div>
-                    <div class="btn_inscription">Inscrire sa classe</div>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
+        <? endwhile; ?>
+    <? }; ?>
+    <? get_template_part('joinus'); ?>
     <section class="suggestion">
         <div class="contenu_grid">
             <div class="titre_sugg">// Vous aimerez peut-être //</div>
@@ -317,5 +156,4 @@ Template Name: Page Action Culturelle
         </div>
     </section>
 </div>
-
 <?php get_footer(); ?>
