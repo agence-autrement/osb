@@ -1530,6 +1530,26 @@ Media Queries
   /* Retina-specific stuff here */ }
 
 /*****************************
+SIDEBAR MON ACTION CULTURELLE
+*****************************/
+.sidebar_actions_culturelles {
+  background-color: white;
+  color: black;
+  width: 400px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -400px;
+  -webkit-transition: 0.6s;
+  -khtml-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s; }
+  .sidebar_actions_culturelles.active {
+    left: 0; }
+
+/*****************************
 SIDEBAR MON ESPACE
 *****************************/
 .sidebar_mon_espace {
@@ -1687,6 +1707,10 @@ SIDEBAR MENU
   background-image: url("../images/osb_logo.svg");
   -webkit-background-size: cover;
   background-size: cover; }
+  #logo_sidebar a {
+    display: block;
+    width: 100%;
+    height: 100%; }
 
 #reseaux_sociaux {
   text-align: center;
@@ -3549,5 +3573,36 @@ MEDIA QUERIES
     .page-template-page-action_culturelle .suggestion li {
       width: 100%;
       margin-bottom: 35px; } }
+
+.page-template-page-historique .date_finale {
+  padding: 35px;
+  height: 710px;
+  width: 100%;
+  background-color: darkslategrey;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.page-template-page-historique .date_right {
+  padding: 35px;
+  width: 100%;
+  overflow: hidden; }
+  .page-template-page-historique .date_right .visuel_date {
+    width: 50%;
+    float: left; }
+  .page-template-page-historique .date_right .content_date {
+    width: 50%;
+    float: right; }
+
+.page-template-page-historique .date_left {
+  padding: 35px;
+  width: 100%;
+  overflow: hidden; }
+  .page-template-page-historique .date_left .visuel_date {
+    width: 50%;
+    float: right; }
+  .page-template-page-historique .date_left .content_date {
+    width: 50%;
+    float: left; }
 
 /*# sourceMappingURL=maps/style.css.map */

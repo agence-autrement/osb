@@ -1,0 +1,37 @@
+.page-template-page-historique{
+  .date_finale {
+    padding: 35px;
+    height: 710px;
+    width: 100%;
+    background-color: darkslategrey;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .date_right{
+    padding: 35px;
+    width: 100%;
+    overflow: hidden;
+    .visuel_date{
+      width: 50%;
+      float: left;
+    }
+    .content_date{
+      width: 50%;
+      float: right;
+    }
+  }
+  .date_left{
+    padding: 35px;
+    width: 100%;
+    overflow: hidden;
+    .visuel_date{
+      width: 50%;
+      float: right;
+    }
+    .content_date{
+      width: 50%;
+      float: left;
+    }
+  }
+}

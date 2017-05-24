@@ -333,7 +333,7 @@ Event template
                             </p>
                         </div>
 
-sm                      <div class="col-sm-offset-3 col-sm-2">
+                        <div class="col-sm-offset-3 col-sm-2">
                             <a class="event-joinus__btn btn" href="#">
                                 Particulier
                             </a>

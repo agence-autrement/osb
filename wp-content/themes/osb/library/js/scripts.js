@@ -165,6 +165,13 @@ jQuery(document).ready(function($) {
 		$('.footer').toggleClass('active');
 	});
 
+	$("#actions_culturelles").on("click", function(){
+		$('.sidebar_actions_culturelles').toggleClass('active');
+		$('.sidebar_1').toggleClass('active');
+		$('#content').toggleClass('active');
+		$('.footer').toggleClass('active');
+	});
+
 	/* Event menu Scroll to fixed */
 	//$('.section-menu-event').scrollToFixed();
 
