@@ -55,3 +55,65 @@
 
 }
 
+
+/******************************
+MEDIA QUERIES
+******************************/
+
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+
+@media screen and (max-width: 990px) {
+
+}
+
+@media screen and (min-width: 990px) {
+}
+
+@media screen and (max-width: 990px) and (min-width: 768px) {
+
+}
+
+@media screen and (max-width: 1100px) {
+
+  .event-program {
+    &__grid {
+      &--4 {
+        width: 35%;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 420px) {
+
+  .event-program {
+    &__grid {
+      &--4 {
+        width: 51%;
+      }
+    }
+  }
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */
+}
+
+@media print and (min-width: 5in) {
+}
+
+

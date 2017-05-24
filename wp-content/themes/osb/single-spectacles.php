@@ -55,43 +55,75 @@ Event template
 
                 <section class="section-event-desc">
                     <div class="container">
-                        <div class="row">
 
-                            <div class="event-desc__inner">
-                                <div class="col-sm-offset-1 col-sm-4">
-
-
-                                    <?php
-                                    $imgDesc = get_field('photo_description');
-                                    ?>
-
-                                    <div class="event-desc__image"
-                                         style="background-image: url('<?php echo $imgDesc['url']; ?>');">
-                                        <img class="event-desc__image__play"
-                                             src="<?php echo get_template_directory_uri(); ?>/library/images/spotify_play.png"
-                                             alt="spotify-play">
-                                    </div>
-
-                                    <div class="event-desc__spotify">
-                                        <?php the_field('spotify') ?>
-                                        <img class="event-desc__spotify__close"
-                                             src="<?php echo get_template_directory_uri(); ?>/library/images/spotify_close.png"
-                                             alt="spotify-stop">
+                        <div class="event-desc__inner">
+                            <div class="col-sm-offset-1 col-sm-4">
 
 
-                                    </div>
+                                <?php
+                                $imgDesc = get_field('photo_description');
+                                ?>
+
+                                <div class="event-desc__image"
+                                     style="background-image: url('<?php echo $imgDesc['url']; ?>');">
+                                    <img class="event-desc__image__play"
+                                         src="<?php echo get_template_directory_uri(); ?>/library/images/spotify_play.png"
+                                         alt="spotify-play">
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="event-desc__content">
-                                        <h1 class="event-desc__content__title"><?php echo get_the_title(); ?></h1>
-                                        <p class="event-desc__content__text"><?php echo get_the_content(); ?></p>
+
+                                <div class="event-desc__spotify">
+                                    <?php the_field('spotify') ?>
+                                    <img class="event-desc__spotify__close"
+                                         src="<?php echo get_template_directory_uri(); ?>/library/images/spotify_close.png"
+                                         alt="spotify-stop">
 
 
-                                    </div>
+                                </div>
+
+                                <div class="event-desc__instru">
+                                    <?php
+
+                                    // check if the repeater field has rows of data
+                                    if (have_rows('artistes')):
+
+                                        // loop through the rows of data
+                                        while (have_rows('artistes')) : the_row();
+
+                                            ?>
+
+                                            <span
+                                                class="event-desc__instru__inst"><?php echo get_sub_field('instrument'); ?>
+                                                :</span>
+                                            <span
+                                                class="event-desc__instru__name"> <?php echo get_sub_field('artiste'); ?>
+                                                //</span>
+
+
+                                            <?php
+
+
+                                        endwhile;
+
+                                    else :
+
+                                        // no rows found
+
+                                    endif;
+
+
+                                    ?>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="event-desc__content">
+                                    <h1 class="event-desc__content__title"><?php echo get_the_title(); ?></h1>
+                                    <p class="event-desc__content__text"><?php echo get_the_content(); ?></p>
+
 
                                 </div>
 
                             </div>
+
 
                         </div>
                     </div>
@@ -99,57 +131,55 @@ Event template
 
                 <section class="section-event-partners">
                     <div class="container">
-                        <div class="row">
-                            <div class="event-partners__inner">
-                                <div class="col-sm-offset-1 col-sm-5 vcenter">
+                        <div class="event-partners__inner">
+                            <div class="col-sm-offset-1 col-sm-5 vcenter">
 
 
-                                    <div class="event-partners__item">
+                                <div class="event-partners__item">
+                                    <?php
+                                    $imgPart = get_field('logo_partenaire');
+                                    ?>
+                                    <img class="event-partners__item__img vcenter"
+                                         src="<?php echo $imgPart['url']; ?>"
+                                         alt="">
+                                    <p class="event-partners__item__text vcenter">
+                                        En partenariat avec<br>
                                         <?php
-                                        $imgPart = get_field('logo_partenaire');
+
+                                        // check if the repeater field has rows of data
+                                        if (have_rows('partenaires')):
+
+                                            // loop through the rows of data
+                                            while (have_rows('partenaires')) : the_row();
+
+                                                // display a sub field value
+                                                echo get_sub_field('partenaire') . ", ";
+
+
+                                            endwhile;
+
+                                        else :
+
+                                            // no rows found
+
+                                        endif;
+
+
                                         ?>
-                                        <img class="event-partners__item__img vcenter"
-                                             src="<?php echo $imgPart['url']; ?>"
-                                             alt="">
-                                        <p class="event-partners__item__text vcenter">
-                                            En partenariat avec<br>
-                                            <?php
-
-                                            // check if the repeater field has rows of data
-                                            if (have_rows('partenaires')):
-
-                                                // loop through the rows of data
-                                                while (have_rows('partenaires')) : the_row();
-
-                                                    // display a sub field value
-                                                    echo get_sub_field('partenaire') . ", ";
+                                    </p>
 
 
-                                                endwhile;
-
-                                            else :
-
-                                                // no rows found
-
-                                            endif;
-
-
-                                            ?>
-                                        </p>
-
-
-                                    </div>
-                                </div><!--
+                                </div>
+                            </div><!--
                                         -->
-                                <div class="col-sm-5 vcenter">
-                                    <div class="event-partners__join">
-                                        <p class="event-partners__join__text">
-                                            Vous aussi, soutenez l'Orchestre<br>
-                                            <span>Rejoignez-nous !</span>
-                                        </p>
-                                        <button class="event-partners__join__btn btn">Devenez mécène</button>
+                            <div class="col-sm-5 vcenter">
+                                <div class="event-partners__join">
+                                    <p class="event-partners__join__text">
+                                        Vous aussi, soutenez l'Orchestre<br>
+                                        <span>Rejoignez-nous !</span>
+                                    </p>
+                                    <button class="event-partners__join__btn btn">Devenez mécène</button>
 
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -158,38 +188,34 @@ Event template
 
                 <section class="section-event-focus">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <p class="event-focus__title section-event-title">// Focus sur //
-                                </p>
+                        <div class="col-sm-12">
+                            <p class="event-focus__title section-event-title">// Focus sur //
+                            </p>
+
+                        </div>
+                        <div class="event-focus__inner">
+                            <div class="col-sm-offset-1 col-sm-4">
+                                <?php
+                                $imgFocus = get_field('photo_focus');
+                                ?>
+
+                                <div class="event-focus__image"
+                                     style="background-image: url('<?php echo $imgFocus['url']; ?>');">
+                                </div>
 
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="event-focus__inner">
-                                <div class="col-sm-offset-1 col-sm-4">
-                                    <?php
-                                    $imgFocus = get_field('photo_focus');
-                                    ?>
+                            <div class="col-sm-6">
+                                <div class="event-focus__content">
+                                    <h2 class="event-focus__content__name"><?php echo get_field('titre_focus'); ?>
+                                        // <span
+                                            class="event-focus__content__instru"> <?php echo get_field('instrument'); ?></span></h2>
 
-                                    <div class="event-focus__image"
-                                         style="background-image: url('<?php echo $imgFocus['url']; ?>');">
-                                    </div>
-
+                                    <p class="event-focus__content__desc"><?php echo get_field('description_focus'); ?></p>
+                                    <a href="<?php echo get_field('en_savoir_plus'); ?>"
+                                       class="event-focus__content__more">En savoir plus à propos
+                                        de <?php echo get_field('titre_focus'); ?></a>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="event-focus__content">
-                                        <h2 class="event-focus__content__name"><?php echo get_field('titre_focus'); ?>
-                                            //</h2>
-                                        <span
-                                            class="event-focus__content__instru"> <?php echo get_field('instrument'); ?></span>
-                                        <p class="event-focus__content__desc"><?php echo get_field('description_focus'); ?></p>
-                                        <a href="<?php echo get_field('en_savoir_plus'); ?>"
-                                           class="event-focus__content__more">En savoir plus à propos
-                                            de <?php echo get_field('titre_focus'); ?></a>
-                                    </div>
 
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -197,12 +223,10 @@ Event template
 
                 <section class="section-event-program">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <p class="event-program__title section-event-title">
-                                    // Programme //
-                                </p>
-                            </div>
+                        <div class="col-sm-12">
+                            <p class="event-program__title section-event-title">
+                                // Programme //
+                            </p>
                         </div>
 
                         <?php
@@ -256,13 +280,11 @@ Event template
                          style="background-image: url('<?php echo $imgFondDate['url']; ?>');">
 
                     <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12">
+                        <div class="col-sm-12">
 
-                                <p class="event-date__title section-event-title">
-                                    // Dates / Billeterie //
-                                </p>
-                            </div>
+                            <p class="event-date__title section-event-title">
+                                // Dates / Billeterie //
+                            </p>
                         </div>
 
                         <?php
@@ -305,84 +327,84 @@ Event template
 
                 <section class="section-event-joinus">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <p class="event-joinus__title">
-                                    Rejoignez-nous !
-                                </p>
-                            </div>
+                        <div class="col-sm-12">
+                            <p class="event-joinus__title">
+                                Rejoignez-nous !
+                            </p>
                         </div>
 
-                        <div class="row">
-                            <div class="col-sm-offset-3 col-sm-2">
-                                <a class="event-joinus__btn btn" href="#">
-                                    Particulier
-                                </a>
-                            </div>
-                            <div class="col-sm-2">
-                                <a class="event-joinus__btn btn" href="#">
-                                    Professionnel
-                                </a>
-                            </div>
-                            <div class="col-sm-2">
-                                <a class="event-joinus__btn event-joinus__btn--third btn" href="#">
-                                    Don en ligne
-                                </a>
-                            </div>
+sm                      <div class="col-sm-offset-3 col-sm-2">
+                            <a class="event-joinus__btn btn" href="#">
+                                Particulier
+                            </a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="event-joinus__btn btn" href="#">
+                                Professionnel
+                            </a>
+                        </div>
+                        <div class="col-sm-2">
+                            <a class="event-joinus__btn event-joinus__btn--third btn" href="#">
+                                Don en ligne
+                            </a>
                         </div>
                     </div>
                 </section>
-                <? resultSugg() ?>
+
+                <section id="plugin_calendar">
+                    <div class="contenu_grid calendar">
+
+                        <div id="resultAjax">
+                            <? resultDateDefault(); ?>
+                        </div>
+                    </div>
+                </section>
+
+
                 <section class="section-event-media">
                     <div class="container">
-                        <div class="row">
-                            <div class="col-sm-12">
+                        <div class="col-sm-12">
 
-                                <p class="event-media__title section-event-title">
-                                    // Bonus //
-                                </p>
-                            </div>
+                            <p class="event-media__title section-event-title">
+                                // Bonus //
+                            </p>
                         </div>
 
-                        <div class="row">
-
-                            <div class="col-sm-offset-1 col-sm-5">
-                                <div class="event-media__item">
-                                    <?php echo get_field('video_bonus') ?>
-                                </div>
+                        <div class="col-sm-offset-1 col-sm-5">
+                            <div class="event-media__item">
+                                <?php echo get_field('video_bonus') ?>
                             </div>
-                            <div class="col-sm-5">
-                                <span class="previous_btn previous_btn--bonus">left</span>
-                                <span class="next_btn next_btn--bonus">right</span>
-                                <div class="slideshow slideshow--bonus">
-                                    <ul class="slider slider--bonus">
+                        </div>
+                        <div class="col-sm-5">
+                            <span class="previous_btn previous_btn--bonus">left</span>
+                            <span class="next_btn next_btn--bonus">right</span>
+                            <div class="slideshow slideshow--bonus">
+                                <ul class="slider slider--bonus">
 
-                                        <?php
+                                    <?php
 
-                                        // check if the repeater field has rows of data
-                                        if (have_rows('gallerie_bonus')):
+                                    // check if the repeater field has rows of data
+                                    if (have_rows('gallerie_bonus')):
 
-                                            // loop through the rows of data
-                                            while (have_rows('gallerie_bonus')) : the_row();
+                                        // loop through the rows of data
+                                        while (have_rows('gallerie_bonus')) : the_row();
 
-                                                $imgBonus = get_sub_field('image_bonus');
+                                            $imgBonus = get_sub_field('image_bonus');
 
 
-                                                ?>
+                                            ?>
 
-                                                <li><img src="<?php echo $imgBonus['sizes']['thumb-395'] ?>" alt="">
-                                                </li><?php
+                                            <li><img src="<?php echo $imgBonus['sizes']['thumb-395'] ?>" alt="">
+                                            </li><?php
 
-                                            endwhile;
+                                        endwhile;
 
-                                        else :
+                                    else :
 
-                                        endif;
+                                    endif;
 
-                                        ?>
-
-                                    </ul>
-                                </div>
+                                    ?>
+                                </ul>
                             </div>
 
 
