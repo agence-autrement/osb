@@ -3575,27 +3575,45 @@ MEDIA QUERIES
       margin-bottom: 35px; } }
 
 .page-template-page-historique .date_finale {
-  padding: 35px;
-  height: 710px;
+  height: 420px;
   width: 100%;
-  background-color: darkslategrey;
+  text-align: center;
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat; }
+  .page-template-page-historique .date_finale .date_center_rouge {
+    color: #ED1E24;
+    font-size: 60px; }
+  .page-template-page-historique .date_finale .red_cross {
+    height: 40px;
+    width: 40px;
+    background-image: url("../images/croix_rouge.svg");
+    position: relative;
+    display: block;
+    margin: 0 auto; }
+
+.page-template-page-historique .titre_date {
+  font-size: 60px;
+  color: #ED1E24; }
 
 .page-template-page-historique .date_right {
-  padding: 35px;
+  min-height: 315px;
   width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  background-image: url("../images/testbg.jpg");
+  -webkit-background-size: cover;
+  background-size: cover; }
   .page-template-page-historique .date_right .visuel_date {
     width: 50%;
     float: left; }
   .page-template-page-historique .date_right .content_date {
     width: 50%;
-    float: right; }
+    float: right;
+    padding: 35px 35px 35px 90px; }
 
 .page-template-page-historique .date_left {
   padding: 35px;
+  height: 315px;
   width: 100%;
   overflow: hidden; }
   .page-template-page-historique .date_left .visuel_date {
@@ -3603,6 +3621,8 @@ MEDIA QUERIES
     float: right; }
   .page-template-page-historique .date_left .content_date {
     width: 50%;
-    float: left; }
+    float: left;
+    text-align: right;
+    padding: 35px 90px 35px 35px; }
 
 /*# sourceMappingURL=maps/style.css.map */

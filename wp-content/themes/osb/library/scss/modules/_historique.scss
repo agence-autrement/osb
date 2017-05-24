@@ -1,17 +1,37 @@
 .page-template-page-historique{
   .date_finale {
-    padding: 35px;
-    height: 710px;
+   // padding: 35px;
+    height: 420px;
     width: 100%;
-    background-color: darkslategrey;
+    text-align: center;
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
+    .date_center_rouge{
+      color: #ED1E24;
+      font-size: 60px;
+    }
+    .red_cross{
+      height: 40px;
+      width: 40px;
+      background-image: url('../images/croix_rouge.svg');
+      position: relative;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .titre_date{
+    font-size: 60px;
+    color: #ED1E24;
   }
   .date_right{
-    padding: 35px;
+    //padding: 35px;
+    min-height: 315px;
     width: 100%;
     overflow: hidden;
+    background-image: url('../images/testbg.jpg');
+    -webkit-background-size: cover;
+    background-size: cover;
     .visuel_date{
       width: 50%;
       float: left;
@@ -19,19 +39,24 @@
     .content_date{
       width: 50%;
       float: right;
+      padding: 35px 35px 35px 90px;
     }
   }
   .date_left{
     padding: 35px;
+    height: 315px;
     width: 100%;
     overflow: hidden;
     .visuel_date{
       width: 50%;
       float: right;
+
     }
     .content_date{
       width: 50%;
       float: left;
+      text-align: right;
+      padding: 35px 90px 35px 35px;
     }
   }
 }

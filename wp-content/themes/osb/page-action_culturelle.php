@@ -37,13 +37,16 @@ Template Name: Page Action Culturelle
 
 
 
+
+
+
     <section class="sub_menu">
         <div class="contenu_grid">
             <ul>
                 <li><a href="###">City sky</a></li>
                 <li><a href="###">Le léopard et le chasseur</a></li>
                 <li><a href="###">De Venise à Buenos Aires</a></li>
-                <li><a href="###">Partager sur logologologologo</a></li>
+                <li><a href="###">Partagez sur logologologologo</a></li>
                 <li><a href="###">Qu'est-ce que la musique</a></li>
                 <li><a href="###">La Harpe de Taliesin</a></li>
                 <li><a href="###">Révolution Beethoven</a></li>
@@ -51,6 +54,11 @@ Template Name: Page Action Culturelle
             </ul>
         </div>
     </section>
+
+
+
+
+
 
 
 
@@ -106,7 +114,17 @@ Template Name: Page Action Culturelle
         <? endwhile; ?>
     <? }; ?>
 
+
+
+
     <? get_template_part('joinus'); ?>
+
+
+
+
+
+
+
 
     <section class="suggestion">
         <div class="contenu_grid">
