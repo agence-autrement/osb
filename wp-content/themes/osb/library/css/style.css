@@ -3574,6 +3574,9 @@ MEDIA QUERIES
       width: 100%;
       margin-bottom: 35px; } }
 
+.page-template-page-historique .contenu_grid {
+  overflow: inherit; }
+
 .page-template-page-historique .date_finale {
   height: 420px;
   width: 100%;
@@ -3597,12 +3600,9 @@ MEDIA QUERIES
   color: #ED1E24; }
 
 .page-template-page-historique .date_right {
+  background-color: darkslategrey;
   min-height: 315px;
-  width: 100%;
-  overflow: hidden;
-  background-image: url("../images/testbg.jpg");
-  -webkit-background-size: cover;
-  background-size: cover; }
+  width: 100%; }
   .page-template-page-historique .date_right .visuel_date {
     width: 50%;
     float: left; }
@@ -3614,11 +3614,19 @@ MEDIA QUERIES
 .page-template-page-historique .date_left {
   padding: 35px;
   height: 315px;
-  width: 100%;
-  overflow: hidden; }
+  width: 100%; }
   .page-template-page-historique .date_left .visuel_date {
     width: 50%;
-    float: right; }
+    height: 100%;
+    float: right;
+    position: relative; }
+    .page-template-page-historique .date_left .visuel_date .image_test {
+      position: absolute;
+      height: 280px;
+      width: 315px;
+      margin-top: 50px;
+      background-color: red;
+      left: calc( 50% - 157.5px); }
   .page-template-page-historique .date_left .content_date {
     width: 50%;
     float: left;

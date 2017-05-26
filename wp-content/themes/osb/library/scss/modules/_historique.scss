@@ -1,4 +1,7 @@
 .page-template-page-historique{
+  .contenu_grid{
+    overflow: inherit;
+  }
   .date_finale {
    // padding: 35px;
     height: 420px;
@@ -25,13 +28,9 @@
     color: #ED1E24;
   }
   .date_right{
-    //padding: 35px;
+    background-color: darkslategrey;
     min-height: 315px;
     width: 100%;
-    overflow: hidden;
-    background-image: url('../images/testbg.jpg');
-    -webkit-background-size: cover;
-    background-size: cover;
     .visuel_date{
       width: 50%;
       float: left;
@@ -46,11 +45,19 @@
     padding: 35px;
     height: 315px;
     width: 100%;
-    overflow: hidden;
     .visuel_date{
       width: 50%;
+      height: 100%;
       float: right;
-
+      position: relative;
+      .image_test{
+        position: absolute;
+        height: 280px;
+        width: 315px;
+        margin-top: 50px;
+        background-color: red;
+        left: calc( 50% - 157.5px);
+      }
     }
     .content_date{
       width: 50%;

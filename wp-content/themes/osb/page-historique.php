@@ -7,6 +7,7 @@ Template Name: Page Historique
 <?php get_sidebar(); ?>
 
 <div id="content">
+
     <section class="date_finale" style="background-image: url('<? bloginfo('template_url') ?>/library/images/histo_2015.jpg');">
         <div class="contenu_grid">
             <div class="date_center_rouge">2015</div>
@@ -38,7 +39,9 @@ Template Name: Page Historique
     <section class="date_left">
         <div class="contenu_grid">
             <div class="visuel_date">
-
+                <div class="image_test">
+                    frezfgergerg
+                </div>
             </div>
             <div class="content_date">
                 <div class="titre_date">
@@ -68,7 +71,9 @@ Template Name: Page Historique
     <section class="date_left">
         <div class="contenu_grid">
             <div class="visuel_date">
-
+                <div class="image_test">
+                    frezfgergerg
+                </div>
             </div>
             <div class="content_date">
                 <div class="titre_date">
@@ -98,7 +103,9 @@ Template Name: Page Historique
     <section class="date_left">
         <div class="contenu_grid">
             <div class="visuel_date">
-
+                <div class="image_test">
+                    frezfgergerg
+                </div>
             </div>
             <div class="content_date">
                 <div class="titre_date">
@@ -128,7 +135,9 @@ Template Name: Page Historique
     <section class="date_left">
         <div class="contenu_grid">
             <div class="visuel_date">
-
+                <div class="image_test">
+                    frezfgergerg
+                </div>
             </div>
             <div class="content_date">
                 <div class="titre_date">
