@@ -3595,8 +3595,7 @@ MEDIA QUERIES
   text-align: center;
   -webkit-background-size: cover;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-color: lightskyblue; }
+  background-repeat: no-repeat; }
   .page-template-page-historique .date_finale .contenu_grid {
     position: absolute;
     bottom: 50px;
@@ -3620,7 +3619,6 @@ MEDIA QUERIES
 .page-template-page-historique .date_right {
   -webkit-background-size: 100%;
   background-size: 100%;
-  background-color: darkslategrey;
   height: 315px;
   width: 100%;
   overflow: hidden; }
@@ -3676,8 +3674,7 @@ MEDIA QUERIES
   text-align: center;
   -webkit-background-size: cover;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-color: lightskyblue; }
+  background-repeat: no-repeat; }
   .page-template-page-historique .date_debut .contenu_grid .date_center_rouge {
     color: #ED1E24;
     font-size: 60px; }
