@@ -3577,39 +3577,65 @@ MEDIA QUERIES
 .page-template-page-historique .contenu_grid {
   overflow: inherit; }
 
+.page-template-page-historique .timeline {
+  position: relative; }
+  .page-template-page-historique .timeline:before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    bottom: -15px;
+    width: 1px;
+    background-color: #ED1E24; }
+
 .page-template-page-historique .date_finale {
+  position: relative;
   height: 420px;
   width: 100%;
   text-align: center;
   -webkit-background-size: cover;
   background-size: cover;
-  background-repeat: no-repeat; }
-  .page-template-page-historique .date_finale .date_center_rouge {
-    color: #ED1E24;
-    font-size: 60px; }
-  .page-template-page-historique .date_finale .red_cross {
-    height: 40px;
-    width: 40px;
-    background-image: url("../images/croix_rouge.svg");
-    position: relative;
-    display: block;
-    margin: 0 auto; }
+  background-repeat: no-repeat;
+  background-color: lightskyblue; }
+  .page-template-page-historique .date_finale .contenu_grid {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%); }
+    .page-template-page-historique .date_finale .contenu_grid .date_center_rouge {
+      color: #ED1E24;
+      font-size: 60px; }
+    .page-template-page-historique .date_finale .contenu_grid .red_cross {
+      height: 41px;
+      width: 41px;
+      background-image: url("../images/croix_rouge.svg");
+      position: relative;
+      display: block;
+      margin: 0 auto; }
 
 .page-template-page-historique .titre_date {
   font-size: 60px;
   color: #ED1E24; }
 
 .page-template-page-historique .date_right {
+  -webkit-background-size: 100%;
+  background-size: 100%;
   background-color: darkslategrey;
-  min-height: 315px;
-  width: 100%; }
+  height: 315px;
+  width: 100%;
+  overflow: hidden; }
   .page-template-page-historique .date_right .visuel_date {
     width: 50%;
-    float: left; }
+    float: left;
+    position: relative;
+    text-align: center; }
+    .page-template-page-historique .date_right .visuel_date img {
+      height: 320px;
+      width: auto; }
   .page-template-page-historique .date_right .content_date {
     width: 50%;
     float: right;
-    padding: 35px 35px 35px 90px; }
+    padding: 80px 35px 35px 90px; }
 
 .page-template-page-historique .date_left {
   padding: 35px;
@@ -3623,14 +3649,46 @@ MEDIA QUERIES
     .page-template-page-historique .date_left .visuel_date .image_test {
       position: absolute;
       height: 280px;
-      width: 315px;
+      width: 320px;
       margin-top: 50px;
-      background-color: red;
+      -webkit-background-size: cover;
+      background-size: cover;
       left: calc( 50% - 157.5px); }
+    .page-template-page-historique .date_left .visuel_date .red_cross {
+      height: 41px;
+      width: 41px;
+      background-image: url("../images/croix_rouge.svg");
+      position: absolute;
+      display: block;
+      margin: 0 auto;
+      left: 25%;
+      top: 40px; }
   .page-template-page-historique .date_left .content_date {
     width: 50%;
     float: left;
     text-align: right;
     padding: 35px 90px 35px 35px; }
+
+.page-template-page-historique .date_debut {
+  padding-top: 25px;
+  height: 420px;
+  width: 100%;
+  text-align: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: lightskyblue; }
+  .page-template-page-historique .date_debut .contenu_grid .date_center_rouge {
+    color: #ED1E24;
+    font-size: 60px; }
+  .page-template-page-historique .date_debut .contenu_grid img {
+    width: 200px; }
+  .page-template-page-historique .date_debut .contenu_grid .red_cross {
+    height: 41px;
+    width: 41px;
+    background-image: url("../images/croix_rouge.svg");
+    position: relative;
+    display: block;
+    margin: 0 auto; }
 
 /*# sourceMappingURL=maps/style.css.map */
