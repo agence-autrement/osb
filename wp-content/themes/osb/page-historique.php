@@ -31,7 +31,7 @@ Template Name: Page Historique
                                 <div class="titre_date">
                                    <? the_sub_field('date'); ?>
                                 </div>
-                                <div class="txt_date">
+                                <div class="txt_date" style="color: <? the_sub_field('couleur_du_texte') ?>;">
                                     <? the_sub_field('descriptif_date'); ?>
                                 </div>
                             </div>
@@ -50,7 +50,7 @@ Template Name: Page Historique
                                 <div class="titre_date">
                                     <? the_sub_field('date'); ?>
                                 </div>
-                                <div class="txt_date">
+                                <div class="txt_date" style="color: <? the_sub_field('couleur_du_texte') ?>;">
                                     <? the_sub_field('descriptif_date'); ?>
                                 </div>
                             </div>
