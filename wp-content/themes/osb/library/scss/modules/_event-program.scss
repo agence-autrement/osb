@@ -45,6 +45,7 @@
     &--4 {
       width: 32%;
       display: inline-block;
+      margin-bottom: 3rem;
     }
 
     &--3 {
@@ -61,6 +62,14 @@ MEDIA QUERIES
 ******************************/
 
 @media screen and (max-width: 767px) {
+
+  .event-program {
+    &__grid {
+      &--4 {
+        width: 49%;
+      }
+    }
+  }
 
 }
 
@@ -82,13 +91,7 @@ MEDIA QUERIES
 
 @media screen and (max-width: 1100px) {
 
-  .event-program {
-    &__grid {
-      &--4 {
-        width: 35%;
-      }
-    }
-  }
+
 }
 
 
@@ -97,7 +100,7 @@ MEDIA QUERIES
   .event-program {
     &__grid {
       &--4 {
-        width: 51%;
+        width: 80%;
       }
     }
   }

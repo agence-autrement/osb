@@ -1,11 +1,14 @@
 .section-menu-event {
   background-color: $grey;
+  padding:0 1.5rem;
 
 }
 
 .menu-event {
   &__inner {
     padding: 1.5rem 0;
+    width: 90%;
+    margin: 0 auto;
 
   }
 
@@ -35,4 +38,81 @@
     }
 
   }
+}
+
+.header {
+  &__logo {
+    position: absolute;
+    bottom:-20px;
+    right:15px;
+    &__img {
+
+    }
+  }
+}
+
+/******************************
+MEDIA QUERIES
+******************************/
+
+@media screen and (max-width: 767px) {
+
+  .menu-event {
+    &__inner {
+      padding: 1.5rem 0;
+
+    }
+
+    &__item {
+      display: block;
+      text-align: center;
+      margin: 0;
+      color: #000;
+
+      ul {
+        display: none;
+      }
+
+    }
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+
+@media screen and (max-width: 990px) {
+
+}
+
+@media screen and (min-width: 990px) {
+}
+
+@media screen and (max-width: 990px) and (min-width: 768px) {
+
+}
+
+@media screen and (max-width: 1100px) {
+
+
+}
+
+
+@media screen and (max-width: 420px) {
+
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */
+}
+
+@media print and (min-width: 5in) {
 }

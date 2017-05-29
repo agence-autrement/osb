@@ -1,6 +1,6 @@
 .section-event-joinus {
   background-color: $color-2;
-  padding:4.5rem 0 4rem;
+  padding:4.5rem 1.5rem 4rem;
   overflow: hidden;
   text-align: center;
 
@@ -17,8 +17,23 @@
     margin-bottom: 3rem;
   }
 
+  &__content {
+    width:70%;
+    margin: 0 auto;
+  }
+
+
+
   &__btn {
+
+
+    &__inner {
+      padding:0 4rem;
+      display: inline-block;
+
+    }
     &--third {
+
       background-color: #000;
       color: #fff;
     }
@@ -38,6 +53,12 @@ MEDIA QUERIES
 ******************************/
 
 @media screen and (max-width: 767px) {
+
+  .event-joinus {
+    &__content {
+      width:100%;
+    }
+  }
 
 }
 

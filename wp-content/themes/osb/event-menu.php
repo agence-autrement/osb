@@ -1,28 +1,28 @@
 <section class="section-menu-event">
-    <div class="container">
-        <div class="col-sm-offset-1 col-sm-10">
+    <div class="contenu_grid">
+
 
             <div class="menu-event__inner">
 
                 <ul>
 
                     <li class="menu-event__item">
-                        <a href="#">Résumé</a>
+                        <a href="#resume">Résumé</a>
                     </li>
 
 
                     <li class="menu-event__item">
-                        <a href="#">Focus sur</a>
+                        <a href="#focus">Focus sur</a>
                     </li>
 
 
                     <li class="menu-event__item">
-                        <a href="#">programme</a>
+                        <a href="#programme">programme</a>
                     </li>
 
 
                     <li class="menu-event__item">
-                        <a href="#">Dates / billeterie</a>
+                        <a href="#date">Dates / billeterie</a>
                     </li>
 
 
@@ -40,6 +40,6 @@
 
 
             </div>
-        </div>
+
     </div>
 </section>
