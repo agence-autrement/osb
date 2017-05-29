@@ -4,8 +4,7 @@
     padding: 35px;
     height: 710px;
     width: 100%;
-    background-color: darkslategrey;
-    //background-image: url('../images/bg_mecenat.jpg');
+    background-image: url('http://lorempixel.com/1600/700/abstract/4');
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
@@ -108,6 +107,8 @@
   }
 
   .don{
+    margin-bottom: 65px;
+
     .formule{
       width: 33.333%;
       text-align: center;
@@ -215,19 +216,30 @@
   .participez_creation{
     padding: 35px;
     width: 100%;
+    margin-bottom: 50px;
   }
 
   .content_titre{
     width: 50%;
     float: left;
     text-align: right;
-    padding: 0 65px;
+    padding-right: 65px;
   }
   
   .titre_crea{
-    font-size: 50px;
+    font-size: 65px;
     color: #EBD519;
     margin-bottom: 25px;
+    position: relative;
+  }
+  
+  .yellow_cross{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: -40px;
+    bottom: -30px;
+    background-image: url('../images/croix_jaune.svg');
   }
 
   .sous_titre_crea{
@@ -239,6 +251,76 @@
     float: left;
     font-size: 14px;
     padding-top: 25px;
+    position: relative;
+    .black_cross{
+      position: absolute;
+      left: -15px;
+      top: 10px;
+      height: 15px;
+      width: 15px;
+      background-image: url('../images/croix_noir.svg');
+    }
+  }
+
+  .soutenir{
+    padding:35px;
+    background-color: #EBD519;
+    position: relative;
+    height: 435px;
+    .contenu_grid{
+      overflow: inherit;
+      .content_text{
+        float: right;
+      }
+    }
+  }
+
+  .btn_soutient{
+    border: 1px solid #FFFFFF;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 65px auto 0;
+    max-width: 375px;
+    a{
+      display: block;
+      height: 100%;
+      width: 100%;
+      padding: 15px 15px;
+    }
+  }
+
+  .gallerie{
+    width: 50%;
+    float: left;
+    padding-right: 65px;
+  }
+
+  .thumb{
+    position: absolute;
+    top: -65px;
+    max-width: 435px;
+
+    img{
+      width: 100%;
+    }
+  }
+
+  .miniatures{
+    position: absolute;
+    bottom: 35px;
+    margin-top: 15px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 435px;
+    img{
+      display: inline-block;
+      float: right;
+      width: 130px;
+      margin-left: 22px;
+      &:last-of-type{
+        margin-left: 0px;
+      }
+    }
   }
 
   .contact{
@@ -276,9 +358,7 @@ RESPONSIVE
 
   }
 
-
   /*****1024px*****/
-
 
   @media screen and (max-width: 1024px) {
     .don{
@@ -297,10 +377,65 @@ RESPONSIVE
         border-bottom : 2px solid #FFFFFF;
       }
     }
+    
+    .participez_creation{
+      .content_titre{
+        width: 100%;
+        float: none;
+        text-align: left;
+      }
+      .content_text{
+        width: 100%;
+        float: none;
+      }
+    }
+
+    .soutenir{
+      overflow: hidden;
+      height: auto;
+
+      .content_text{
+        width: 100%;
+        float: none;
+        display: block;
+      }
+    }
+
+    .gallerie{
+      width: 100%;
+      float: none;
+      display: block;
+      position: inherit;
+      text-align: center;
+      padding-right: 0;
+      img{
+        margin: 0 auto;
+        position: inherit;
+      }
+    }
+
+    .thumb{
+      position: inherit;
+      margin: 0 auto;
+      img{
+        width: 100%;
+        max-width: 435px;
+      }
+    }
+
+    .miniatures{
+      position: inherit;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 35px;
+      img{
+        float: none;
+        width: 100%;
+      }
+    }
   }
 
   /*****900px*****/
-
 
   @media screen and (max-width: 900px) {
     .pourquoi_rejoindre{

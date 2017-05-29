@@ -76,10 +76,11 @@ Template Name: Page Action Culturelle
                         </div>
                     </div>
                     <div class="right_content">
-                        <div class="txt_right_content">
-                            <? the_sub_field('texte'); ?>
+                        <div class="titre_right_text">
+                            <? the_sub_field('compositeur')  ?>
                             <span class="croix_noir"></span>
                         </div>
+                        <div class="txt_right_content"><? the_sub_field('texte'); ?></div>
 
                         <div class="qui">
                             <div class="titre_qui">
