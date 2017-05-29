@@ -3274,54 +3274,54 @@ MEDIA QUERIES
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat; }
-    .page-template-page-action_culturelle .top_page_action .contenu_grid .index {
+    .page-template-page-action_culturelle .top_page_action .index {
       margin-bottom: 25px; }
-      .page-template-page-action_culturelle .top_page_action .contenu_grid .index ul li {
-        font-size: 12px;
-        color: #ED1E24; }
-    .page-template-page-action_culturelle .top_page_action .contenu_grid .title {
+    .page-template-page-action_culturelle .top_page_action li {
+      font-size: 12px;
+      color: #ED1E24; }
+    .page-template-page-action_culturelle .top_page_action .title {
       font-size: 60px;
       margin-bottom: 15px;
       color: white; }
-      .page-template-page-action_culturelle .top_page_action .contenu_grid .title span {
+      .page-template-page-action_culturelle .top_page_action .title span {
         color: #ED1E24; }
-    .page-template-page-action_culturelle .top_page_action .contenu_grid .tag {
+    .page-template-page-action_culturelle .top_page_action .tag {
       font-size: 12px;
       text-transform: uppercase;
       overflow: hidden; }
-      .page-template-page-action_culturelle .top_page_action .contenu_grid .tag div {
+      .page-template-page-action_culturelle .top_page_action .tag div {
         display: inline-block;
         float: left; }
-      .page-template-page-action_culturelle .top_page_action .contenu_grid .tag .btn_red {
-        cursor: pointer;
-        padding: 5px 10px;
-        background-color: #ED1E24;
-        color: white; }
-      .page-template-page-action_culturelle .top_page_action .contenu_grid .tag .btn_savoir_plus {
-        display: block;
-        position: relative;
-        padding: 5px 10px;
-        cursor: pointer;
-        color: white; }
-        .page-template-page-action_culturelle .top_page_action .contenu_grid .tag .btn_savoir_plus:after {
-          content: '';
-          position: absolute;
-          background-color: white;
-          bottom: 0;
-          left: 10px;
-          width: 0;
-          height: 1px;
-          -webkit-transition: 0.6s;
-          -khtml-transition: 0.6s;
-          -moz-transition: 0.6s;
-          -ms-transition: 0.6s;
-          -o-transition: 0.6s;
-          transition: 0.6s; }
-        .page-template-page-action_culturelle .top_page_action .contenu_grid .tag .btn_savoir_plus:hover {
-          font-weight: inherit; }
-          .page-template-page-action_culturelle .top_page_action .contenu_grid .tag .btn_savoir_plus:hover:after {
-            width: 70px; }
-    .page-template-page-action_culturelle .top_page_action .contenu_grid .intro_text {
+    .page-template-page-action_culturelle .top_page_action .btn_red {
+      cursor: pointer;
+      padding: 5px 10px;
+      background-color: #ED1E24;
+      color: white; }
+    .page-template-page-action_culturelle .top_page_action .btn_savoir_plus {
+      display: block;
+      position: relative;
+      padding: 5px 10px;
+      cursor: pointer;
+      color: white; }
+      .page-template-page-action_culturelle .top_page_action .btn_savoir_plus:after {
+        content: '';
+        position: absolute;
+        background-color: white;
+        bottom: 0;
+        left: 10px;
+        width: 0;
+        height: 1px;
+        -webkit-transition: 0.6s;
+        -khtml-transition: 0.6s;
+        -moz-transition: 0.6s;
+        -ms-transition: 0.6s;
+        -o-transition: 0.6s;
+        transition: 0.6s; }
+      .page-template-page-action_culturelle .top_page_action .btn_savoir_plus:hover {
+        font-weight: inherit; }
+        .page-template-page-action_culturelle .top_page_action .btn_savoir_plus:hover:after {
+          width: 70px; }
+    .page-template-page-action_culturelle .top_page_action .intro_text {
       font-size: 12px;
       max-width: 320px;
       margin-top: 15px;
@@ -3360,14 +3360,14 @@ MEDIA QUERIES
     color: #ED1E24;
     text-align: right;
     position: relative; }
-    .page-template-page-action_culturelle .titre_content .croix_rouge {
-      background-image: url("../images/croix_rouge.svg");
-      height: 40px;
-      width: 40px;
-      display: block;
-      position: absolute;
-      right: -32px; }
-  .page-template-page-action_culturelle .visuel_content img {
+  .page-template-page-action_culturelle .croix_rouge {
+    background-image: url("../images/croix_rouge.svg");
+    height: 40px;
+    width: 40px;
+    display: block;
+    position: absolute;
+    right: -32px; }
+  .page-template-page-action_culturelle img {
     width: 100%; }
   .page-template-page-action_culturelle .txt_right_content {
     padding-left: 25px;
@@ -3394,29 +3394,29 @@ MEDIA QUERIES
     margin-bottom: 10px; }
     .page-template-page-action_culturelle .inscrire span {
       color: #D9D2C4; }
-    .page-template-page-action_culturelle .inscrire .ligne_un {
-      font-size: 21px; }
-      .page-template-page-action_culturelle .inscrire .ligne_un div {
-        display: inline; }
-    .page-template-page-action_culturelle .inscrire .ligne_deux {
-      font-size: 15px; }
-      .page-template-page-action_culturelle .inscrire .ligne_deux div {
-        display: inline; }
-        .page-template-page-action_culturelle .inscrire .ligne_deux div.ville {
-          color: #ED1E24; }
-    .page-template-page-action_culturelle .inscrire .btn_inscription {
-      font-size: 12px;
-      border: 1px solid #D9D2C4;
-      margin: 0 auto;
-      margin-top: 10px;
-      width: 150px;
-      padding: 5px;
-      text-transform: uppercase;
-      cursor: pointer; }
-      .page-template-page-action_culturelle .inscrire .btn_inscription a {
-        display: block;
-        width: 100%;
-        height: 100%; }
+  .page-template-page-action_culturelle .ligne_un {
+    font-size: 21px; }
+    .page-template-page-action_culturelle .ligne_un div {
+      display: inline; }
+  .page-template-page-action_culturelle .ligne_deux {
+    font-size: 15px; }
+    .page-template-page-action_culturelle .ligne_deux div {
+      display: inline; }
+  .page-template-page-action_culturelle .ville {
+    color: #ED1E24; }
+  .page-template-page-action_culturelle .btn_inscription {
+    font-size: 12px;
+    border: 1px solid #D9D2C4;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 150px;
+    padding: 5px;
+    text-transform: uppercase;
+    cursor: pointer; }
+    .page-template-page-action_culturelle .btn_inscription a {
+      display: block;
+      width: 100%;
+      height: 100%; }
   .page-template-page-action_culturelle .content_right {
     padding: 35px;
     overflow: hidden;
@@ -3439,23 +3439,23 @@ MEDIA QUERIES
       padding-left: 30px;
       width: 50%;
       float: right; }
-      .page-template-page-action_culturelle .content_left .left_content .titre_content {
-        text-align: left; }
-        .page-template-page-action_culturelle .content_left .left_content .titre_content .croix_rouge {
-          left: -32px;
-          top: inherit; }
+    .page-template-page-action_culturelle .content_left .titre_content {
+      text-align: left; }
+    .page-template-page-action_culturelle .content_left .croix_rouge {
+      left: -32px;
+      top: inherit; }
     .page-template-page-action_culturelle .content_left .right_content {
       width: 50%;
       float: left;
       padding-right: 30px;
       padding-top: 15px;
       position: relative; }
-      .page-template-page-action_culturelle .content_left .right_content .inscrire {
-        border-color: white; }
-        .page-template-page-action_culturelle .content_left .right_content .inscrire span {
-          color: white; }
-        .page-template-page-action_culturelle .content_left .right_content .inscrire .btn_inscription {
-          border-color: white; }
+    .page-template-page-action_culturelle .content_left .inscrire {
+      border-color: white; }
+      .page-template-page-action_culturelle .content_left .inscrire span {
+        color: white; }
+    .page-template-page-action_culturelle .content_left .btn_inscription {
+      border-color: white; }
   .page-template-page-action_culturelle .suggestion {
     padding: 35px;
     background-color: #F5F3F3; }
@@ -3583,6 +3583,9 @@ RESPONSIVE
   /*****1024px*****/ }
   .page-template-page-historique .contenu_grid {
     overflow: inherit; }
+  .page-template-page-historique .titre_date {
+    font-size: 60px;
+    color: #ED1E24; }
   .page-template-page-historique .timeline {
     position: relative; }
     .page-template-page-historique .timeline:before {
@@ -3606,19 +3609,16 @@ RESPONSIVE
       bottom: 50px;
       left: 50%;
       transform: translateX(-50%); }
-      .page-template-page-historique .date_finale .contenu_grid .date_center_rouge {
-        color: #ED1E24;
-        font-size: 60px; }
-      .page-template-page-historique .date_finale .contenu_grid .red_cross {
-        height: 41px;
-        width: 41px;
-        background-image: url("../images/croix_rouge.svg");
-        position: relative;
-        display: block;
-        margin: 0 auto; }
-  .page-template-page-historique .titre_date {
-    font-size: 60px;
-    color: #ED1E24; }
+    .page-template-page-historique .date_finale .red_cross {
+      height: 41px;
+      width: 41px;
+      background-image: url("../images/croix_rouge.svg");
+      position: relative;
+      display: block;
+      margin: 0 auto; }
+    .page-template-page-historique .date_finale .date_center_rouge {
+      color: #ED1E24;
+      font-size: 60px; }
   .page-template-page-historique .date_right {
     -webkit-background-size: cover;
     background-size: cover;
@@ -3630,9 +3630,9 @@ RESPONSIVE
       float: left;
       position: relative;
       text-align: center; }
-      .page-template-page-historique .date_right .visuel_date img {
-        height: 320px;
-        width: auto; }
+    .page-template-page-historique .date_right img {
+      height: 320px;
+      width: auto; }
     .page-template-page-historique .date_right .content_date {
       width: 50%;
       float: right;
@@ -3646,23 +3646,23 @@ RESPONSIVE
       height: 100%;
       float: right;
       position: relative; }
-      .page-template-page-historique .date_left .visuel_date .image_test {
-        position: absolute;
-        height: 280px;
-        width: 320px;
-        margin-top: 50px;
-        -webkit-background-size: cover;
-        background-size: cover;
-        left: calc( 50% - 157.5px); }
-      .page-template-page-historique .date_left .visuel_date .red_cross {
-        height: 41px;
-        width: 41px;
-        background-image: url("../images/croix_rouge.svg");
-        position: absolute;
-        display: block;
-        margin: 0 auto;
-        left: 10%;
-        top: 10px; }
+    .page-template-page-historique .date_left .image_test {
+      position: absolute;
+      height: 280px;
+      width: 320px;
+      margin-top: 50px;
+      -webkit-background-size: cover;
+      background-size: cover;
+      left: calc( 50% - 157.5px); }
+    .page-template-page-historique .date_left .red_cross {
+      height: 41px;
+      width: 41px;
+      background-image: url("../images/croix_rouge.svg");
+      position: absolute;
+      display: block;
+      margin: 0 auto;
+      left: 10%;
+      top: 10px; }
     .page-template-page-historique .date_left .content_date {
       width: 50%;
       float: left;
@@ -3676,12 +3676,12 @@ RESPONSIVE
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat; }
-    .page-template-page-historique .date_debut .contenu_grid .date_center_rouge {
+    .page-template-page-historique .date_debut .date_center_rouge {
       color: #ED1E24;
       font-size: 60px; }
-    .page-template-page-historique .date_debut .contenu_grid img {
+    .page-template-page-historique .date_debut img {
       width: 200px; }
-    .page-template-page-historique .date_debut .contenu_grid .red_cross {
+    .page-template-page-historique .date_debut .red_cross {
       height: 41px;
       width: 41px;
       background-image: url("../images/croix_rouge.svg");
@@ -3693,7 +3693,7 @@ RESPONSIVE
       padding: 0 35px; }
     .page-template-page-historique .timeline:before {
       left: 30px; }
-    .page-template-page-historique .date_finale .contenu_grid .red_cross {
+    .page-template-page-historique .date_finale .red_cross {
       margin: 0 0 0 10px; }
     .page-template-page-historique .date_right {
       height: auto; }
@@ -3703,8 +3703,8 @@ RESPONSIVE
         text-align: inherit;
         width: 100%;
         float: none; }
-        .page-template-page-historique .date_right .visuel_date img {
-          height: inherit; }
+      .page-template-page-historique .date_right img {
+        height: inherit; }
       .page-template-page-historique .date_right .content_date {
         padding: 0;
         width: 100%;
@@ -3717,15 +3717,15 @@ RESPONSIVE
         float: none;
         position: relative;
         display: block; }
-        .page-template-page-historique .date_left .visuel_date .image_test {
-          position: inherit;
-          margin-top: 0px;
-          -webkit-background-size: cover;
-          background-size: cover;
-          left: 0;
-          width: 100%; }
-        .page-template-page-historique .date_left .visuel_date .red_cross {
-          display: none; }
+      .page-template-page-historique .date_left .image_test {
+        position: inherit;
+        margin-top: 0px;
+        -webkit-background-size: cover;
+        background-size: cover;
+        left: 0;
+        width: 100%; }
+      .page-template-page-historique .date_left .red_cross {
+        display: none; }
       .page-template-page-historique .date_left .content_date {
         width: 100%;
         float: none;
@@ -3734,7 +3734,7 @@ RESPONSIVE
     .page-template-page-historique .date_debut {
       height: auto;
       padding-bottom: 35px; }
-      .page-template-page-historique .date_debut .contenu_grid .red_cross {
+      .page-template-page-historique .date_debut .red_cross {
         margin: 0 0 0 10px; } }
 
 /*# sourceMappingURL=maps/style.css.map */

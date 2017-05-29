@@ -1,6 +1,12 @@
 .page-template-page-historique{
+
   .contenu_grid{
     overflow: inherit;
+  }
+
+  .titre_date{
+    font-size: 60px;
+    color: #ED1E24;
   }
 
   .timeline{
@@ -29,24 +35,21 @@
       bottom: 50px;
       left: 50%;
       transform: translateX(-50%);
-      .date_center_rouge{
-        color: #ED1E24;
-        font-size: 60px;
-      }
-      .red_cross{
-        height: 41px;
-        width: 41px;
-        background-image: url('../images/croix_rouge.svg');
-        position: relative;
-        display: block;
-        margin: 0 auto;
-      }
+    }
+    .red_cross{
+      height: 41px;
+      width: 41px;
+      background-image: url('../images/croix_rouge.svg');
+      position: relative;
+      display: block;
+      margin: 0 auto;
+    }
+    .date_center_rouge{
+      color: #ED1E24;
+      font-size: 60px;
     }
   }
-  .titre_date{
-    font-size: 60px;
-    color: #ED1E24;
-  }
+
   .date_right{
     -webkit-background-size:cover;
     background-size:cover;
@@ -58,10 +61,10 @@
       float: left;
       position: relative;
       text-align: center;
-      img{
-        height: 320px;
-        width: auto;
-      }
+    }
+    img{
+      height: 320px;
+      width: auto;
     }
     .content_date{
       width: 50%;
@@ -69,6 +72,7 @@
       padding: 80px 35px 35px 90px;
     }
   }
+
   .date_left{
     padding: 35px;
     height: 315px;
@@ -78,25 +82,25 @@
       height: 100%;
       float: right;
       position: relative;
-      .image_test{
-        position: absolute;
-        height: 280px;
-        width: 320px;
-        margin-top: 50px;
-        -webkit-background-size: cover;
-        background-size: cover;
-        left: calc( 50% - 157.5px);
-      }
-      .red_cross{
-        height: 41px;
-        width: 41px;
-        background-image: url('../images/croix_rouge.svg');
-        position: absolute;
-        display: block;
-        margin: 0 auto;
-        left: 10%;
-        top: 10px;
-      }
+    }
+    .image_test{
+      position: absolute;
+      height: 280px;
+      width: 320px;
+      margin-top: 50px;
+      -webkit-background-size: cover;
+      background-size: cover;
+      left: calc( 50% - 157.5px);
+    }
+    .red_cross{
+      height: 41px;
+      width: 41px;
+      background-image: url('../images/croix_rouge.svg');
+      position: absolute;
+      display: block;
+      margin: 0 auto;
+      left: 10%;
+      top: 10px;
     }
     .content_date{
       width: 50%;
@@ -113,25 +117,24 @@
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
-    .contenu_grid{
-      .date_center_rouge{
-        color: #ED1E24;
-        font-size: 60px;
-      }
-      img{
-        width: 200px;
-      }
-      .red_cross{
-        height: 41px;
-        width: 41px;
-        background-image: url('../images/croix_rouge.svg');
-        position: relative;
-        display: block;
-        margin: 0 auto;
-      }
+    .date_center_rouge{
+      color: #ED1E24;
+      font-size: 60px;
+    }
+    img{
+      width: 200px;
+    }
+    .red_cross{
+      height: 41px;
+      width: 41px;
+      background-image: url('../images/croix_rouge.svg');
+      position: relative;
+      display: block;
+      margin: 0 auto;
     }
   }
-  /***********************
+
+/***********************
 RESPONSIVE
 ***********************/
 
@@ -161,14 +164,14 @@ RESPONSIVE
       }
     }
     .date_finale{
-      .contenu_grid{
-        .red_cross{
-          margin: 0 0 0 10px;
-        }
+      .red_cross{
+        margin: 0 0 0 10px;
       }
     }
+
     .date_right{
       height: auto;
+
       .contenu_grid{
         padding: 35px;
       }
@@ -176,9 +179,9 @@ RESPONSIVE
         text-align: inherit;
         width: 100%;
         float: none;
-        img{
-          height: inherit;
-        }
+      }
+      img{
+        height: inherit;
       }
       .content_date{
         padding: 0;
@@ -186,25 +189,27 @@ RESPONSIVE
         float: none;
       }
     }
+
     .date_left{
       height: auto;
+
       .visuel_date{
         width: 100%;
         height: 100%;
         float: none;
         position: relative;
         display: block;
-        .image_test{
-          position: inherit;
-          margin-top: 0px;
-          -webkit-background-size: cover;
-          background-size: cover;
-          left: 0;
-          width: 100%;
-        }
-        .red_cross{
-          display: none;
-        }
+      }
+      .image_test{
+        position: inherit;
+        margin-top: 0px;
+        -webkit-background-size: cover;
+        background-size: cover;
+        left: 0;
+        width: 100%;
+      }
+      .red_cross{
+        display: none;
       }
       .content_date{
         width: 100%;
@@ -216,10 +221,8 @@ RESPONSIVE
     .date_debut{
       height:auto;
       padding-bottom: 35px;
-      .contenu_grid{
-        .red_cross{
-          margin: 0 0 0 10px;
-        }
+      .red_cross{
+        margin: 0 0 0 10px;
       }
     }
   }

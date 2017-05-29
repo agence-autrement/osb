@@ -33,7 +33,7 @@ Template Name: Page Mécénat
                     À quoi sert votre adhésion ?
                 </div>
                 <div class="txt_pourquoi">
-                    L’OSB a besoin de vous pour soutenir deux projets phares de la saison 2017-2018 : + les activités de la Fabrik, le service dédié à l’éducation artistique et culturelle ; + la résidence artistique d’Anne Gastinel. Vous serez informé(e) par nos équipes de l’utilisation des fonds. Par exemple, 500€ récoltés = 1 intervention musicale par 5 musiciens dans une école, un hôpital ou un centre pénitentiaire.
+                    L’OSB a besoin e vous pour soutenir deux projets phares de la saison 2017-2018 : + les activités de la Fabrik, le service dédié à l’éducation artistique et culturelle ; + la résidence artistique d’Anne Gastinel. Vous serez informé(e) par nos équipes de l’utilisation des fonds. Par exemple, 500€ récoltés = 1 intervention musicale par 5 musiciens dans une école, un hôpital ou un centre pénitentiaire.
                 </div>
             </div>
         </div>
