@@ -1,62 +1,254 @@
 .page-template-page-historique{
+
+  .contenu_grid{
+    overflow: inherit;
+  }
+
+  .titre_date{
+    font-size: 60px;
+    color: #ED1E24;
+  }
+
+  .timeline{
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      top:-40px;
+      left: 50% ;
+      bottom:-15px;
+      width:1px;
+      background-color:#ED1E24;
+    }
+  }
+
   .date_finale {
-   // padding: 35px;
+    position: relative;
     height: 420px;
     width: 100%;
     text-align: center;
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
+
+    .contenu_grid{
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .red_cross{
+      height: 41px;
+      width: 41px;
+      background-image: url('../images/croix_rouge.svg');
+      position: relative;
+      display: block;
+      margin: 0 auto;
+    }
+
     .date_center_rouge{
       color: #ED1E24;
       font-size: 60px;
     }
+  }
+
+  .date_right{
+    -webkit-background-size:cover;
+    background-size:cover;
+    height: 315px;
+    width: 100%;
+    overflow: hidden;
+
+    .visuel_date{
+      width: 50%;
+      float: left;
+      position: relative;
+      text-align: center;
+    }
+
+    img{
+      height: 320px;
+      width: auto;
+    }
+
+    .content_date{
+      width: 50%;
+      float: right;
+      padding: 80px 35px 35px 90px;
+    }
+  }
+
+  .date_left{
+    padding: 35px;
+    height: 315px;
+    width: 100%;
+
+    .visuel_date{
+      width: 50%;
+      height: 100%;
+      float: right;
+      position: relative;
+    }
+
+    .image_test{
+      position: absolute;
+      height: 280px;
+      width: 320px;
+      margin-top: 50px;
+      -webkit-background-size: cover;
+      background-size: cover;
+      left: calc( 50% - 157.5px);
+    }
+
     .red_cross{
-      height: 40px;
-      width: 40px;
+      height: 41px;
+      width: 41px;
+      background-image: url('../images/croix_rouge.svg');
+      position: absolute;
+      display: block;
+      margin: 0 auto;
+      left: 10%;
+      top: 10px;
+    }
+
+    .content_date{
+      width: 50%;
+      float: left;
+      text-align: right;
+      padding: 35px 90px 35px 35px;
+    }
+  }
+
+  .date_debut{
+    padding-top: 25px;
+    height: 420px;
+    width: 100%;
+    text-align: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .date_center_rouge{
+      color: #ED1E24;
+      font-size: 60px;
+    }
+
+    img{
+      width: 200px;
+    }
+
+    .red_cross{
+      height: 41px;
+      width: 41px;
       background-image: url('../images/croix_rouge.svg');
       position: relative;
       display: block;
       margin: 0 auto;
     }
   }
-  .titre_date{
-    font-size: 60px;
-    color: #ED1E24;
-  }
-  .date_right{
-    //padding: 35px;
-    min-height: 315px;
-    width: 100%;
-    overflow: hidden;
-    background-image: url('../images/testbg.jpg');
-    -webkit-background-size: cover;
-    background-size: cover;
-    .visuel_date{
-      width: 50%;
-      float: left;
-    }
-    .content_date{
-      width: 50%;
-      float: right;
-      padding: 35px 35px 35px 90px;
-    }
-  }
-  .date_left{
-    padding: 35px;
-    height: 315px;
-    width: 100%;
-    overflow: hidden;
-    .visuel_date{
-      width: 50%;
-      float: right;
 
+/***********************
+RESPONSIVE
+***********************/
+
+  /*****1600px*****/
+
+  @media screen and (max-width: 1600px) {
+
+  }
+
+  /*****1200px*****/
+
+  @media screen and (max-width: 1200px) {
+
+  }
+
+
+  /*****1024px*****/
+
+
+  @media screen and (max-width: 1024px) {
+
+    .intro_histo{
+      padding: 0 35px;
     }
-    .content_date{
-      width: 50%;
-      float: left;
-      text-align: right;
-      padding: 35px 90px 35px 35px;
+
+    .timeline{
+      &:before{
+        left: 30px;
+      }
+    }
+
+    .date_finale{
+      .red_cross{
+        margin: 0 0 0 10px;
+      }
+    }
+
+    .date_right{
+      height: auto;
+
+      .contenu_grid{
+        padding: 35px;
+      }
+
+      .visuel_date{
+        text-align: inherit;
+        width: 100%;
+        float: none;
+      }
+
+      img{
+        height: inherit;
+      }
+
+      .content_date{
+        padding: 0;
+        width: 100%;
+        float: none;
+      }
+    }
+
+    .date_left{
+      height: auto;
+
+      .visuel_date{
+        width: 100%;
+        height: 100%;
+        float: none;
+        position: relative;
+        display: block;
+      }
+
+      .image_test{
+        position: inherit;
+        margin-top: 0px;
+        -webkit-background-size: cover;
+        background-size: cover;
+        left: 0;
+        width: 100%;
+      }
+
+      .red_cross{
+        display: none;
+      }
+
+      .content_date{
+        width: 100%;
+        float: none;
+        text-align: left;
+        padding: 0;
+      }
+    }
+
+    .date_debut{
+      height:auto;
+      padding-bottom: 35px;
+
+      .red_cross{
+        margin: 0 0 0 10px;
+      }
     }
   }
 }

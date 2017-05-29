@@ -1470,7 +1470,8 @@ MEDIA QUERIES
           height: 90%;
           width: 1px; }
         .footer .grid_footer .footer_content ul li {
-          margin-bottom: 15px; }
+          margin-bottom: 15px;
+          padding: 5px; }
       .footer .grid_footer .footer_content img {
         max-width: 125px; }
     .footer .grid_footer .contenu_grid:nth-of-type(1) {
@@ -1485,7 +1486,7 @@ MEDIA QUERIES
         position: absolute;
         bottom: 0;
         left: 0; }
-  .footer .contact {
+  .footer .contact_footer {
     height: 150px;
     width: 50%;
     float: left;
@@ -1506,7 +1507,7 @@ Media Queries
     width: 100%; }
     .grid_footer .contenu_grid .footer_content ul:after {
       display: none; }
-  .grid_footer .contenu_grid .contact {
+  .grid_footer .contenu_grid .contact_footer {
     width: 100%;
     float: none;
     text-align: center; }
@@ -3376,54 +3377,54 @@ MEDIA QUERIES
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat; }
-    .page-template-page-action_culturelle .top_page_action .contenu_grid .index {
+    .page-template-page-action_culturelle .top_page_action .index {
       margin-bottom: 25px; }
-      .page-template-page-action_culturelle .top_page_action .contenu_grid .index ul li {
-        font-size: 12px;
-        color: #ED1E24; }
-    .page-template-page-action_culturelle .top_page_action .contenu_grid .title {
+    .page-template-page-action_culturelle .top_page_action li {
+      font-size: 12px;
+      color: #ED1E24; }
+    .page-template-page-action_culturelle .top_page_action .title {
       font-size: 60px;
       margin-bottom: 15px;
       color: white; }
-      .page-template-page-action_culturelle .top_page_action .contenu_grid .title span {
+      .page-template-page-action_culturelle .top_page_action .title span {
         color: #ED1E24; }
-    .page-template-page-action_culturelle .top_page_action .contenu_grid .tag {
+    .page-template-page-action_culturelle .top_page_action .tag {
       font-size: 12px;
       text-transform: uppercase;
       overflow: hidden; }
-      .page-template-page-action_culturelle .top_page_action .contenu_grid .tag div {
+      .page-template-page-action_culturelle .top_page_action .tag div {
         display: inline-block;
         float: left; }
-      .page-template-page-action_culturelle .top_page_action .contenu_grid .tag .btn_red {
-        cursor: pointer;
-        padding: 5px 10px;
-        background-color: #ED1E24;
-        color: white; }
-      .page-template-page-action_culturelle .top_page_action .contenu_grid .tag .btn_savoir_plus {
-        display: block;
-        position: relative;
-        padding: 5px 10px;
-        cursor: pointer;
-        color: white; }
-        .page-template-page-action_culturelle .top_page_action .contenu_grid .tag .btn_savoir_plus:after {
-          content: '';
-          position: absolute;
-          background-color: white;
-          bottom: 0;
-          left: 10px;
-          width: 0;
-          height: 1px;
-          -webkit-transition: 0.6s;
-          -khtml-transition: 0.6s;
-          -moz-transition: 0.6s;
-          -ms-transition: 0.6s;
-          -o-transition: 0.6s;
-          transition: 0.6s; }
-        .page-template-page-action_culturelle .top_page_action .contenu_grid .tag .btn_savoir_plus:hover {
-          font-weight: inherit; }
-          .page-template-page-action_culturelle .top_page_action .contenu_grid .tag .btn_savoir_plus:hover:after {
-            width: 70px; }
-    .page-template-page-action_culturelle .top_page_action .contenu_grid .intro_text {
+    .page-template-page-action_culturelle .top_page_action .btn_red {
+      cursor: pointer;
+      padding: 5px 10px;
+      background-color: #ED1E24;
+      color: white; }
+    .page-template-page-action_culturelle .top_page_action .btn_savoir_plus {
+      display: block;
+      position: relative;
+      padding: 5px 10px;
+      cursor: pointer;
+      color: white; }
+      .page-template-page-action_culturelle .top_page_action .btn_savoir_plus:after {
+        content: '';
+        position: absolute;
+        background-color: white;
+        bottom: 0;
+        left: 10px;
+        width: 0;
+        height: 1px;
+        -webkit-transition: 0.6s;
+        -khtml-transition: 0.6s;
+        -moz-transition: 0.6s;
+        -ms-transition: 0.6s;
+        -o-transition: 0.6s;
+        transition: 0.6s; }
+      .page-template-page-action_culturelle .top_page_action .btn_savoir_plus:hover {
+        font-weight: inherit; }
+        .page-template-page-action_culturelle .top_page_action .btn_savoir_plus:hover:after {
+          width: 70px; }
+    .page-template-page-action_culturelle .top_page_action .intro_text {
       font-size: 12px;
       max-width: 320px;
       margin-top: 15px;
@@ -3462,14 +3463,14 @@ MEDIA QUERIES
     color: #ED1E24;
     text-align: right;
     position: relative; }
-    .page-template-page-action_culturelle .titre_content .croix_rouge {
-      background-image: url("../images/croix_rouge.svg");
-      height: 40px;
-      width: 40px;
-      display: block;
-      position: absolute;
-      right: -32px; }
-  .page-template-page-action_culturelle .visuel_content img {
+  .page-template-page-action_culturelle .croix_rouge {
+    background-image: url("../images/croix_rouge.svg");
+    height: 40px;
+    width: 40px;
+    display: block;
+    position: absolute;
+    right: -32px; }
+  .page-template-page-action_culturelle img {
     width: 100%; }
   .page-template-page-action_culturelle .txt_right_content {
     padding-left: 25px;
@@ -3496,29 +3497,29 @@ MEDIA QUERIES
     margin-bottom: 10px; }
     .page-template-page-action_culturelle .inscrire span {
       color: #D9D2C4; }
-    .page-template-page-action_culturelle .inscrire .ligne_un {
-      font-size: 21px; }
-      .page-template-page-action_culturelle .inscrire .ligne_un div {
-        display: inline; }
-    .page-template-page-action_culturelle .inscrire .ligne_deux {
-      font-size: 15px; }
-      .page-template-page-action_culturelle .inscrire .ligne_deux div {
-        display: inline; }
-        .page-template-page-action_culturelle .inscrire .ligne_deux div.ville {
-          color: #ED1E24; }
-    .page-template-page-action_culturelle .inscrire .btn_inscription {
-      font-size: 12px;
-      border: 1px solid #D9D2C4;
-      margin: 0 auto;
-      margin-top: 10px;
-      width: 150px;
-      padding: 5px;
-      text-transform: uppercase;
-      cursor: pointer; }
-      .page-template-page-action_culturelle .inscrire .btn_inscription a {
-        display: block;
-        width: 100%;
-        height: 100%; }
+  .page-template-page-action_culturelle .ligne_un {
+    font-size: 21px; }
+    .page-template-page-action_culturelle .ligne_un div {
+      display: inline; }
+  .page-template-page-action_culturelle .ligne_deux {
+    font-size: 15px; }
+    .page-template-page-action_culturelle .ligne_deux div {
+      display: inline; }
+  .page-template-page-action_culturelle .ville {
+    color: #ED1E24; }
+  .page-template-page-action_culturelle .btn_inscription {
+    font-size: 12px;
+    border: 1px solid #D9D2C4;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 150px;
+    padding: 5px;
+    text-transform: uppercase;
+    cursor: pointer; }
+    .page-template-page-action_culturelle .btn_inscription a {
+      display: block;
+      width: 100%;
+      height: 100%; }
   .page-template-page-action_culturelle .content_right {
     padding: 35px;
     overflow: hidden;
@@ -3541,23 +3542,23 @@ MEDIA QUERIES
       padding-left: 30px;
       width: 50%;
       float: right; }
-      .page-template-page-action_culturelle .content_left .left_content .titre_content {
-        text-align: left; }
-        .page-template-page-action_culturelle .content_left .left_content .titre_content .croix_rouge {
-          left: -32px;
-          top: inherit; }
+    .page-template-page-action_culturelle .content_left .titre_content {
+      text-align: left; }
+    .page-template-page-action_culturelle .content_left .croix_rouge {
+      left: -32px;
+      top: inherit; }
     .page-template-page-action_culturelle .content_left .right_content {
       width: 50%;
       float: left;
       padding-right: 30px;
       padding-top: 15px;
       position: relative; }
-      .page-template-page-action_culturelle .content_left .right_content .inscrire {
-        border-color: white; }
-        .page-template-page-action_culturelle .content_left .right_content .inscrire span {
-          color: white; }
-        .page-template-page-action_culturelle .content_left .right_content .inscrire .btn_inscription {
-          border-color: white; }
+    .page-template-page-action_culturelle .content_left .inscrire {
+      border-color: white; }
+      .page-template-page-action_culturelle .content_left .inscrire span {
+        color: white; }
+    .page-template-page-action_culturelle .content_left .btn_inscription {
+      border-color: white; }
   .page-template-page-action_culturelle .suggestion {
     padding: 35px;
     background-color: #F5F3F3; }
@@ -3676,55 +3677,379 @@ MEDIA QUERIES
       width: 100%;
       margin-bottom: 35px; } }
 
-.page-template-page-historique .date_finale {
-  height: 420px;
-  width: 100%;
-  text-align: center;
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat; }
-  .page-template-page-historique .date_finale .date_center_rouge {
-    color: #ED1E24;
-    font-size: 60px; }
-  .page-template-page-historique .date_finale .red_cross {
-    height: 40px;
-    width: 40px;
-    background-image: url("../images/croix_rouge.svg");
+.page-template-page-historique {
+  /***********************
+RESPONSIVE
+***********************/
+  /*****1600px*****/
+  /*****1200px*****/
+  /*****1024px*****/ }
+  .page-template-page-historique .contenu_grid {
+    overflow: inherit; }
+  .page-template-page-historique .titre_date {
+    font-size: 60px;
+    color: #ED1E24; }
+  .page-template-page-historique .timeline {
+    position: relative; }
+    .page-template-page-historique .timeline:before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      bottom: -15px;
+      width: 1px;
+      background-color: #ED1E24; }
+  .page-template-page-historique .date_finale {
     position: relative;
-    display: block;
-    margin: 0 auto; }
+    height: 420px;
+    width: 100%;
+    text-align: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    .page-template-page-historique .date_finale .contenu_grid {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%); }
+    .page-template-page-historique .date_finale .red_cross {
+      height: 41px;
+      width: 41px;
+      background-image: url("../images/croix_rouge.svg");
+      position: relative;
+      display: block;
+      margin: 0 auto; }
+    .page-template-page-historique .date_finale .date_center_rouge {
+      color: #ED1E24;
+      font-size: 60px; }
+  .page-template-page-historique .date_right {
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 315px;
+    width: 100%;
+    overflow: hidden; }
+    .page-template-page-historique .date_right .visuel_date {
+      width: 50%;
+      float: left;
+      position: relative;
+      text-align: center; }
+    .page-template-page-historique .date_right img {
+      height: 320px;
+      width: auto; }
+    .page-template-page-historique .date_right .content_date {
+      width: 50%;
+      float: right;
+      padding: 80px 35px 35px 90px; }
+  .page-template-page-historique .date_left {
+    padding: 35px;
+    height: 315px;
+    width: 100%; }
+    .page-template-page-historique .date_left .visuel_date {
+      width: 50%;
+      height: 100%;
+      float: right;
+      position: relative; }
+    .page-template-page-historique .date_left .image_test {
+      position: absolute;
+      height: 280px;
+      width: 320px;
+      margin-top: 50px;
+      -webkit-background-size: cover;
+      background-size: cover;
+      left: calc( 50% - 157.5px); }
+    .page-template-page-historique .date_left .red_cross {
+      height: 41px;
+      width: 41px;
+      background-image: url("../images/croix_rouge.svg");
+      position: absolute;
+      display: block;
+      margin: 0 auto;
+      left: 10%;
+      top: 10px; }
+    .page-template-page-historique .date_left .content_date {
+      width: 50%;
+      float: left;
+      text-align: right;
+      padding: 35px 90px 35px 35px; }
+  .page-template-page-historique .date_debut {
+    padding-top: 25px;
+    height: 420px;
+    width: 100%;
+    text-align: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    .page-template-page-historique .date_debut .date_center_rouge {
+      color: #ED1E24;
+      font-size: 60px; }
+    .page-template-page-historique .date_debut img {
+      width: 200px; }
+    .page-template-page-historique .date_debut .red_cross {
+      height: 41px;
+      width: 41px;
+      background-image: url("../images/croix_rouge.svg");
+      position: relative;
+      display: block;
+      margin: 0 auto; }
+  @media screen and (max-width: 1024px) {
+    .page-template-page-historique .intro_histo {
+      padding: 0 35px; }
+    .page-template-page-historique .timeline:before {
+      left: 30px; }
+    .page-template-page-historique .date_finale .red_cross {
+      margin: 0 0 0 10px; }
+    .page-template-page-historique .date_right {
+      height: auto; }
+      .page-template-page-historique .date_right .contenu_grid {
+        padding: 35px; }
+      .page-template-page-historique .date_right .visuel_date {
+        text-align: inherit;
+        width: 100%;
+        float: none; }
+      .page-template-page-historique .date_right img {
+        height: inherit; }
+      .page-template-page-historique .date_right .content_date {
+        padding: 0;
+        width: 100%;
+        float: none; }
+    .page-template-page-historique .date_left {
+      height: auto; }
+      .page-template-page-historique .date_left .visuel_date {
+        width: 100%;
+        height: 100%;
+        float: none;
+        position: relative;
+        display: block; }
+      .page-template-page-historique .date_left .image_test {
+        position: inherit;
+        margin-top: 0px;
+        -webkit-background-size: cover;
+        background-size: cover;
+        left: 0;
+        width: 100%; }
+      .page-template-page-historique .date_left .red_cross {
+        display: none; }
+      .page-template-page-historique .date_left .content_date {
+        width: 100%;
+        float: none;
+        text-align: left;
+        padding: 0; }
+    .page-template-page-historique .date_debut {
+      height: auto;
+      padding-bottom: 35px; }
+      .page-template-page-historique .date_debut .red_cross {
+        margin: 0 0 0 10px; } }
 
-.page-template-page-historique .titre_date {
-  font-size: 60px;
-  color: #ED1E24; }
-
-.page-template-page-historique .date_right {
-  min-height: 315px;
-  width: 100%;
-  overflow: hidden;
-  background-image: url("../images/testbg.jpg");
-  -webkit-background-size: cover;
-  background-size: cover; }
-  .page-template-page-historique .date_right .visuel_date {
-    width: 50%;
-    float: left; }
-  .page-template-page-historique .date_right .content_date {
-    width: 50%;
-    float: right;
-    padding: 35px 35px 35px 90px; }
-
-.page-template-page-historique .date_left {
-  padding: 35px;
-  height: 315px;
-  width: 100%;
-  overflow: hidden; }
-  .page-template-page-historique .date_left .visuel_date {
-    width: 50%;
-    float: right; }
-  .page-template-page-historique .date_left .content_date {
+.page-template-page-mecenat {
+  /***********************
+RESPONSIVE
+***********************/
+  /*****1600px*****/
+  /*****1200px*****/
+  /*****1024px*****/
+  /*****900px*****/ }
+  .page-template-page-mecenat .top_page_mecenat {
+    padding: 35px;
+    height: 710px;
+    width: 100%;
+    background-color: darkslategrey;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    .page-template-page-mecenat .top_page_mecenat .contenu_grid {
+      overflow: inherit; }
+    .page-template-page-mecenat .top_page_mecenat .title {
+      font-size: 60px;
+      margin-bottom: 15px;
+      color: black; }
+      .page-template-page-mecenat .top_page_mecenat .title span {
+        color: white; }
+    .page-template-page-mecenat .top_page_mecenat .btn_savoir_plus {
+      display: block;
+      position: relative;
+      padding: 5px 0;
+      cursor: pointer;
+      color: black; }
+      .page-template-page-mecenat .top_page_mecenat .btn_savoir_plus:after {
+        content: '';
+        position: absolute;
+        background-color: black;
+        bottom: 0;
+        left: 0px;
+        width: 0;
+        height: 1px;
+        -webkit-transition: 0.6s;
+        -khtml-transition: 0.6s;
+        -moz-transition: 0.6s;
+        -ms-transition: 0.6s;
+        -o-transition: 0.6s;
+        transition: 0.6s; }
+      .page-template-page-mecenat .top_page_mecenat .btn_savoir_plus:hover {
+        font-weight: inherit; }
+        .page-template-page-mecenat .top_page_mecenat .btn_savoir_plus:hover:after {
+          width: 70px; }
+    .page-template-page-mecenat .top_page_mecenat .intro_text {
+      font-size: 12px;
+      max-width: 320px;
+      margin-top: 15px;
+      color: black;
+      position: relative; }
+    .page-template-page-mecenat .top_page_mecenat .black_cross {
+      position: absolute;
+      right: -20px;
+      bottom: -20px;
+      height: 30px;
+      width: 30px;
+      background-image: url("../images/croix_noir.svg"); }
+  .page-template-page-mecenat .pourquoi_rejoindre {
+    padding: 35px;
+    width: 100%; }
+    .page-template-page-mecenat .pourquoi_rejoindre .rejoindre {
+      height: 370px;
+      width: 46%;
+      margin: 1%;
+      float: left;
+      border: 1px solid #F5F3F3;
+      text-align: center;
+      padding: 0px 50px; }
+    .page-template-page-mecenat .pourquoi_rejoindre .align {
+      display: table-cell;
+      vertical-align: middle;
+      height: 370px; }
+    .page-template-page-mecenat .pourquoi_rejoindre .titre_pourquoi {
+      font-size: 34px;
+      position: relative;
+      padding-bottom: 10px;
+      margin-bottom: 25px; }
+      .page-template-page-mecenat .pourquoi_rejoindre .titre_pourquoi:after {
+        content: '';
+        position: absolute;
+        width: 65px;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #EBD519; }
+    .page-template-page-mecenat .pourquoi_rejoindre .txt_pourquoi {
+      font-size: 14px; }
+  .page-template-page-mecenat .don .formule {
+    width: 33.333%;
+    text-align: center;
+    padding: 0px 50px;
+    height: 435px;
+    display: table-cell;
+    vertical-align: middle; }
+  .page-template-page-mecenat .don .encadre {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 5px;
+    text-transform: uppercase; }
+  .page-template-page-mecenat .don .titre {
+    font-size: 34px;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 25px; }
+    .page-template-page-mecenat .don .titre:after {
+      content: '';
+      position: absolute;
+      width: 65px;
+      height: 2px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%); }
+  .page-template-page-mecenat .don .plus {
+    font-size: 25px; }
+  .page-template-page-mecenat .don .btn_don {
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 70px;
+    padding: 5px;
+    text-transform: uppercase; }
+    .page-template-page-mecenat .don .btn_don a {
+      display: block;
+      height: 100%;
+      width: 100%; }
+  .page-template-page-mecenat .don .ami {
+    background-color: #F5F3F3; }
+    .page-template-page-mecenat .don .ami .titre:after {
+      background-color: #EBD519; }
+    .page-template-page-mecenat .don .ami .encadre {
+      background-color: #EBD519;
+      width: 50px; }
+    .page-template-page-mecenat .don .ami .btn_don {
+      color: #FFF;
+      background-color: #000; }
+  .page-template-page-mecenat .don .adhesion {
+    background-color: #EBD519;
+    border-right: 2px solid #FFFFFF;
+    border-left: 2px solid #FFFFFF; }
+    .page-template-page-mecenat .don .adhesion .encadre {
+      background-color: #000000;
+      color: #EBD519;
+      width: 225px; }
+    .page-template-page-mecenat .don .adhesion .btn_don {
+      color: #000000;
+      background-color: #ffffff; }
+  .page-template-page-mecenat .don .en_ligne {
+    background-color: #EBD519; }
+    .page-template-page-mecenat .don .en_ligne .titre:after {
+      background-color: #ffffff; }
+    .page-template-page-mecenat .don .en_ligne .encadre {
+      color: #FFF;
+      background-color: #000;
+      width: 250px; }
+    .page-template-page-mecenat .don .en_ligne .btn_don {
+      color: #FFF;
+      background-color: #000; }
+  .page-template-page-mecenat .participez_creation {
+    padding: 35px;
+    width: 100%; }
+  .page-template-page-mecenat .content_titre {
     width: 50%;
     float: left;
     text-align: right;
-    padding: 35px 90px 35px 35px; }
+    padding: 0 65px; }
+  .page-template-page-mecenat .titre_crea {
+    font-size: 50px;
+    color: #EBD519;
+    margin-bottom: 25px; }
+  .page-template-page-mecenat .sous_titre_crea {
+    font-size: 24px; }
+  .page-template-page-mecenat .content_text {
+    width: 50%;
+    float: left;
+    font-size: 14px;
+    padding-top: 25px; }
+  .page-template-page-mecenat .contact {
+    padding: 65px; }
+  .page-template-page-mecenat .btn_contact {
+    width: 150px;
+    margin: 0 auto;
+    border: 1px solid #F5F5F3;
+    padding: 5px;
+    text-transform: uppercase;
+    text-align: center; }
+    .page-template-page-mecenat .btn_contact a {
+      display: block;
+      height: 100%;
+      width: 100%; }
+  @media screen and (max-width: 1024px) {
+    .page-template-page-mecenat .don .formule {
+      width: 100%;
+      height: auto;
+      display: block;
+      padding: 40px 50px; }
+    .page-template-page-mecenat .don .adhesion {
+      border-right: none;
+      border-left: none;
+      border-top: 2px solid #FFFFFF;
+      border-bottom: 2px solid #FFFFFF; } }
+  @media screen and (max-width: 900px) {
+    .page-template-page-mecenat .pourquoi_rejoindre .rejoindre {
+      width: 100%;
+      float: none;
+      display: block;
+      min-height: inherit;
+      margin: 35px 0px; } }
 
 /*# sourceMappingURL=maps/style.css.map */

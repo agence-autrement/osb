@@ -39,7 +39,7 @@
 						</div>
 					</div>
 					<div class="contenu_grid">
-						<div class="contact">
+						<div class="contact_footer">
 							ADMINISTRATION
 							<ul>
 								<li>42a, rue Saint Melaine</li>

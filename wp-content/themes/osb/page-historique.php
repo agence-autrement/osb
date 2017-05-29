@@ -7,138 +7,72 @@ Template Name: Page Historique
 <?php get_sidebar(); ?>
 
 <div id="content">
-    <section class="date_finale" style="background-image: url('<? bloginfo('template_url') ?>/library/images/histo_2015.jpg');">
+    <section class="date_finale" style="background-image: url('<? the_field('image_de_la_date_finale'); ?>')">
         <div class="contenu_grid">
-            <div class="date_center_rouge">2015</div>
+            <div class="date_center_rouge"><? the_field('date_finale'); ?></div>
             <div class="intro_histo">
-                Nomination de Grant Llewellyn au poste de Directeur musical. Le chef d’orchestre gallois réitère la volonté de l’OSB d’aller partout en région, des plus grandes villes aux communes rurales.
+                <? the_field('texte_finale'); ?>
             </div>
             <span class="red_cross"></span>
         </div>
     </section>
 
 
+    <? if ( have_rows('date_marquante') ) { ?>
+        <section class="timeline">
+            <? while ( have_rows('date_marquante') ) : the_row(); ?>
+                <? if(get_sub_field('affichage_date') == 'date_right') { ?>
+                    <section class="date_right" style="background-image: url('<? the_sub_field('fond') ?>') ">
+                        <div class="contenu_grid">
+                            <div class="visuel_date timeline-content js--fadeInLeft">
+                                <img src="<? the_sub_field('image_date'); ?>" alt="">
+                            </div>
+                            <div class="content_date timeline-content js--fadeInRight">
+                                <div class="titre_date">
+                                   <? the_sub_field('date'); ?>
+                                </div>
+                                <div class="txt_date" style="color: <? the_sub_field('couleur_du_texte') ?>;">
+                                    <? the_sub_field('descriptif_date'); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                <? }else{ ?>
+                    <section class="date_left">
+                        <div class="contenu_grid">
+                            <div class="visuel_date">
+                                <span class="red_cross"></span>
+                                <div class="image_test timeline-content js--fadeInRight" style="background-image: url('<? the_sub_field('image_date') ?>')">
 
+                                </div>
+                            </div>
+                            <div class="content_date timeline-content js--fadeInLeft">
+                                <div class="titre_date">
+                                    <? the_sub_field('date'); ?>
+                                </div>
+                                <div class="txt_date" style="color: <? the_sub_field('couleur_du_texte') ?>;">
+                                    <? the_sub_field('descriptif_date'); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                <? } ?>
+            <? endwhile; ?>
+        </section>
+    <? } ?>
 
-    <section class="date_right">
+    <section class="date_debut" style="background-image: url(<? the_field('image_debut') ?>)">
         <div class="contenu_grid">
-            <div class="visuel_date">
-                <img src="<? bloginfo('template_url') ?>/library/images/image_770.jpg" alt="">
+            <span class="red_cross"></span>
+            <div class="date_center_rouge"><? the_field('date_debut') ?></div>
+            <div class="intro_histo">
+                <? the_field('texte_date_debut') ?>
             </div>
-            <div class="content_date">
-                <div class="titre_date">
-                    2014
-                </div>
-                <div class="txt_date">
-                    L’Orchestre Symphonique de Bretagne crée son propre label, OSB Productions, et publie sous son propre nom un disque dédié aux concerti pour piano n°9 et 21 de Mozart, avec François Dumont. C’est la première étape d’un projet qui consiste à enregistrer l’intégralité des concerti pour piano de Mozart.
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="date_left">
-        <div class="contenu_grid">
-            <div class="visuel_date">
-
-            </div>
-            <div class="content_date">
-                <div class="titre_date">
-                    2012
-                </div>
-                <div class="txt_date">
-                    L’Orchestre Symphonique de Bretagne crée son propre label, OSB Productions, et publie sous son propre nom un disque dédié aux concerti pour piano n°9 et 21 de Mozart, avec François Dumont. C’est la première étape d’un projet qui consiste à enregistrer l’intégralité des concerti pour piano de Mozart.
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="date_right">
-        <div class="contenu_grid">
-            <div class="visuel_date">
-
-            </div>
-            <div class="content_date">
-                <div class="titre_date">
-                    2010
-                </div>
-                <div class="txt_date">
-                    L’Orchestre Symphonique de Bretagne crée son propre label, OSB Productions, et publie sous son propre nom un disque dédié aux concerti pour piano n°9 et 21 de Mozart, avec François Dumont. C’est la première étape d’un projet qui consiste à enregistrer l’intégralité des concerti pour piano de Mozart.
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="date_left">
-        <div class="contenu_grid">
-            <div class="visuel_date">
-
-            </div>
-            <div class="content_date">
-                <div class="titre_date">
-                    2006
-                </div>
-                <div class="txt_date">
-                    L’Orchestre Symphonique de Bretagne crée son propre label, OSB Productions, et publie sous son propre nom un disque dédié aux concerti pour piano n°9 et 21 de Mozart, avec François Dumont. C’est la première étape d’un projet qui consiste à enregistrer l’intégralité des concerti pour piano de Mozart.
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="date_right">
-        <div class="contenu_grid">
-            <div class="visuel_date">
-
-            </div>
-            <div class="content_date">
-                <div class="titre_date">
-                    2003
-                </div>
-                <div class="txt_date">
-                    L’Orchestre Symphonique de Bretagne crée son propre label, OSB Productions, et publie sous son propre nom un disque dédié aux concerti pour piano n°9 et 21 de Mozart, avec François Dumont. C’est la première étape d’un projet qui consiste à enregistrer l’intégralité des concerti pour piano de Mozart.
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="date_left">
-        <div class="contenu_grid">
-            <div class="visuel_date">
-
-            </div>
-            <div class="content_date">
-                <div class="titre_date">
-                    2001
-                </div>
-                <div class="txt_date">
-                    L’Orchestre Symphonique de Bretagne crée son propre label, OSB Productions, et publie sous son propre nom un disque dédié aux concerti pour piano n°9 et 21 de Mozart, avec François Dumont. C’est la première étape d’un projet qui consiste à enregistrer l’intégralité des concerti pour piano de Mozart.
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="date_right">
-        <div class="contenu_grid">
-            <div class="visuel_date">
-
-            </div>
-            <div class="content_date">
-                <div class="titre_date">
-                    1996
-                </div>
-                <div class="txt_date">
-                    L’Orchestre Symphonique de Bretagne crée son propre label, OSB Productions, et publie sous son propre nom un disque dédié aux concerti pour piano n°9 et 21 de Mozart, avec François Dumont. C’est la première étape d’un projet qui consiste à enregistrer l’intégralité des concerti pour piano de Mozart.
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="date_left">
-        <div class="contenu_grid">
-            <div class="visuel_date">
-
-            </div>
-            <div class="content_date">
-                <div class="titre_date">
-                    1992
-                </div>
-                <div class="txt_date">
-                    L’Orchestre Symphonique de Bretagne crée son propre label, OSB Productions, et publie sous son propre nom un disque dédié aux concerti pour piano n°9 et 21 de Mozart, avec François Dumont. C’est la première étape d’un projet qui consiste à enregistrer l’intégralité des concerti pour piano de Mozart.
-                </div>
+            <div>
+                <img src="<? the_field('image_sous') ?>" alt="">
             </div>
         </div>
     </section>
 </div>
+
 <?php get_footer(); ?>
