@@ -48,8 +48,8 @@
     color: #ED1E24;
   }
   .date_right{
-    -webkit-background-size:100%;
-    background-size:100%;
+    -webkit-background-size:cover;
+    background-size:cover;
     height: 315px;
     width: 100%;
     overflow: hidden;
@@ -94,8 +94,8 @@
         position: absolute;
         display: block;
         margin: 0 auto;
-        left: 25%;
-        top: 40px;
+        left: 10%;
+        top: 10px;
       }
     }
     .content_date{
@@ -128,6 +128,98 @@
         position: relative;
         display: block;
         margin: 0 auto;
+      }
+    }
+  }
+  /***********************
+RESPONSIVE
+***********************/
+
+  /*****1600px*****/
+
+  @media screen and (max-width: 1600px) {
+
+  }
+
+  /*****1200px*****/
+
+  @media screen and (max-width: 1200px) {
+
+  }
+
+
+  /*****1024px*****/
+
+
+  @media screen and (max-width: 1024px) {
+    .intro_histo{
+      padding: 0 35px;
+    }
+    .timeline{
+      &:before{
+        left: 30px;
+      }
+    }
+    .date_finale{
+      .contenu_grid{
+        .red_cross{
+          margin: 0 0 0 10px;
+        }
+      }
+    }
+    .date_right{
+      height: auto;
+      .contenu_grid{
+        padding: 35px;
+      }
+      .visuel_date{
+        text-align: inherit;
+        width: 100%;
+        float: none;
+        img{
+          height: inherit;
+        }
+      }
+      .content_date{
+        padding: 0;
+        width: 100%;
+        float: none;
+      }
+    }
+    .date_left{
+      height: auto;
+      .visuel_date{
+        width: 100%;
+        height: 100%;
+        float: none;
+        position: relative;
+        display: block;
+        .image_test{
+          position: inherit;
+          margin-top: 0px;
+          -webkit-background-size: cover;
+          background-size: cover;
+          left: 0;
+          width: 100%;
+        }
+        .red_cross{
+          display: none;
+        }
+      }
+      .content_date{
+        width: 100%;
+        float: none;
+        text-align: left;
+        padding: 0;
+      }
+    }
+    .date_debut{
+      height:auto;
+      padding-bottom: 35px;
+      .contenu_grid{
+        .red_cross{
+          margin: 0 0 0 10px;
+        }
       }
     }
   }

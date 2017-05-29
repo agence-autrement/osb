@@ -19,7 +19,7 @@ Template Name: Page Historique
 
 
     <? if ( have_rows('date_marquante') ) { ?>
-        <div class="timeline">
+        <section class="timeline">
             <? while ( have_rows('date_marquante') ) : the_row(); ?>
                 <? if(get_sub_field('affichage_date') == 'date_right') { ?>
                     <section class="date_right" style="background-image: url('<? the_sub_field('fond') ?>') ">
@@ -58,7 +58,7 @@ Template Name: Page Historique
                     </section>
                 <? } ?>
             <? endwhile; ?>
-        </div>
+        </section>
     <? } ?>
 
     <section class="date_debut" style="background-image: url(<? the_field('image_debut') ?>)">
