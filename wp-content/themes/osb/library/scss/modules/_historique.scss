@@ -30,12 +30,14 @@
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
+
     .contenu_grid{
       position: absolute;
       bottom: 50px;
       left: 50%;
       transform: translateX(-50%);
     }
+
     .red_cross{
       height: 41px;
       width: 41px;
@@ -44,6 +46,7 @@
       display: block;
       margin: 0 auto;
     }
+
     .date_center_rouge{
       color: #ED1E24;
       font-size: 60px;
@@ -56,16 +59,19 @@
     height: 315px;
     width: 100%;
     overflow: hidden;
+
     .visuel_date{
       width: 50%;
       float: left;
       position: relative;
       text-align: center;
     }
+
     img{
       height: 320px;
       width: auto;
     }
+
     .content_date{
       width: 50%;
       float: right;
@@ -77,12 +83,14 @@
     padding: 35px;
     height: 315px;
     width: 100%;
+
     .visuel_date{
       width: 50%;
       height: 100%;
       float: right;
       position: relative;
     }
+
     .image_test{
       position: absolute;
       height: 280px;
@@ -92,6 +100,7 @@
       background-size: cover;
       left: calc( 50% - 157.5px);
     }
+
     .red_cross{
       height: 41px;
       width: 41px;
@@ -102,6 +111,7 @@
       left: 10%;
       top: 10px;
     }
+
     .content_date{
       width: 50%;
       float: left;
@@ -109,6 +119,7 @@
       padding: 35px 90px 35px 35px;
     }
   }
+
   .date_debut{
     padding-top: 25px;
     height: 420px;
@@ -117,13 +128,16 @@
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
+
     .date_center_rouge{
       color: #ED1E24;
       font-size: 60px;
     }
+
     img{
       width: 200px;
     }
+
     .red_cross{
       height: 41px;
       width: 41px;
@@ -155,14 +169,17 @@ RESPONSIVE
 
 
   @media screen and (max-width: 1024px) {
+
     .intro_histo{
       padding: 0 35px;
     }
+
     .timeline{
       &:before{
         left: 30px;
       }
     }
+
     .date_finale{
       .red_cross{
         margin: 0 0 0 10px;
@@ -175,14 +192,17 @@ RESPONSIVE
       .contenu_grid{
         padding: 35px;
       }
+
       .visuel_date{
         text-align: inherit;
         width: 100%;
         float: none;
       }
+
       img{
         height: inherit;
       }
+
       .content_date{
         padding: 0;
         width: 100%;
@@ -200,6 +220,7 @@ RESPONSIVE
         position: relative;
         display: block;
       }
+
       .image_test{
         position: inherit;
         margin-top: 0px;
@@ -208,9 +229,11 @@ RESPONSIVE
         left: 0;
         width: 100%;
       }
+
       .red_cross{
         display: none;
       }
+
       .content_date{
         width: 100%;
         float: none;
@@ -218,9 +241,11 @@ RESPONSIVE
         padding: 0;
       }
     }
+
     .date_debut{
       height:auto;
       padding-bottom: 35px;
+
       .red_cross{
         margin: 0 0 0 10px;
       }

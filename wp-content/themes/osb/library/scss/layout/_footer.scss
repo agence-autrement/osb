@@ -31,6 +31,7 @@
         }
         li{
           margin-bottom: 15px;
+          padding: 5px;
         }
       }
       img{
@@ -54,7 +55,7 @@
       }
     }
   }
-  .contact{
+  .contact_footer{
     height: 150px;
     width: 50%;
     float: left;
@@ -86,7 +87,7 @@ Media Queries
           }
         }
       }
-      .contact{
+      .contact_footer{
         width: 100%;
         float: none;
         text-align: center;
