@@ -1,0 +1,261 @@
+.section-adress-rennes {
+  height: 574px;
+  padding: 7rem 0;
+}
+
+.adress-rennes {
+
+  &__inner {
+    width: 90%;
+    margin: 0 auto;
+  }
+  &--left, &--right {
+    width: 47%;
+    display: inline-block;
+    text-align: center;
+    height: 435px;
+    margin: 0 1.1rem;
+    position: relative;
+    border: 2px solid #F5F3F3;
+
+    &__inner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 70%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    background-color: $color-1;
+    text-transform: uppercase;
+    padding: .8rem;
+    font-size: 1.5rem;
+    margin-bottom: 2.3rem;
+    display: inline-block;
+    margin-top: 0;
+  }
+
+  &__name {
+    font-family: $font2;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 5.5rem;
+    font-size: 3.5rem;
+    margin-top: 0;
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 6.5rem;
+      height: .2rem;
+      background-color: $color-1;
+      bottom: -10px;
+      transform: translateX(-50%);
+      left: 50%;
+    }
+  }
+
+  &__adress {
+    font-weight: 300;
+    margin-bottom: 2.2rem;
+
+  }
+
+  &__tel {
+    text-transform: uppercase;
+    font-family: $font2;
+    display: block;
+
+  }
+
+  &__open {
+    margin-top: 2.2rem;
+  }
+}
+
+.section-places {
+
+}
+
+.places {
+  &__inner {
+    padding: 0 15px;
+  }
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 2.1rem;
+    margin-bottom: 3.5rem;
+  }
+
+  &__dep {
+    overflow: hidden;
+    &__title {
+      color: $color-3;
+      font-family: $font2;
+      font-weight: 200;
+      font-size: 2.5rem;
+      margin-bottom: 2.5rem;
+      text-transform: uppercase;
+      margin-left: 3rem;
+      position: relative;
+
+      &:before {
+        content: '+';
+        display: block;
+        color: $color-3;
+        font-size: 4.5rem;
+        position: absolute;
+        top: 0;
+        left: -2.8rem;
+
+      }
+    }
+    
+    &__city {
+      float: left;
+      width:25%;
+      padding:0 1rem;
+      margin-bottom: 2rem;
+
+
+
+
+      li {
+        font-size:1.5rem;
+        text-transform: uppercase;
+        font-family:$font2;
+        border: 2px solid #F5F3F3;
+        text-align: center;
+        padding:.8rem;
+        height:5rem;
+
+        &:hover {
+          background-color: $color-2;
+          @include transition();
+
+        }
+
+
+
+
+
+        span {
+          font-weight:200;
+          font-size:1.4rem;
+        }
+      }
+
+      &--line {
+        li {
+          padding:1.5rem 0;
+        }
+      }
+    }
+  }
+
+}
+
+
+/******************************
+MEDIA QUERIES
+******************************/
+
+@media screen and (max-width: 767px) {
+
+  .places {
+    &__dep {
+      &__city {
+        width:50%;
+      }
+    }
+  }
+
+  .section-adress-rennes {
+    height: auto;
+  }
+
+  .adress-rennes {
+    &--left, &--right {
+      margin:0;
+      width:100%;
+    }
+  }
+
+
+
+
+}
+
+@media screen and (min-width: 768px) {
+
+
+}
+
+
+@media screen and (max-width: 990px) {
+
+
+
+}
+
+@media screen and (min-width: 990px) {
+}
+
+@media screen and (max-width: 990px) and (min-width: 768px) {
+
+  .places {
+    &__dep {
+      &__city {
+        width:33%;
+      }
+    }
+  }
+
+  .adress-rennes {
+    &--left, &--right {
+      margin:0;
+      width:49%;
+    }
+  }
+
+}
+
+@media screen and (max-width: 1100px) {
+
+
+}
+
+
+@media screen and (max-width: 460px) {
+  .places {
+    &__dep {
+      &__city {
+        width:100%;
+      }
+    }
+  }
+
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */
+}
+
+@media print and (min-width: 5in) {
+}
+
+
+

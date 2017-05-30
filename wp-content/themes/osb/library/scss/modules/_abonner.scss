@@ -1,0 +1,93 @@
+.section-joinorbook {
+  padding:7rem 0;
+  background-color: #D9D2C4;
+}
+
+.joinorbook {
+  &__inner {
+    width:90%;
+    margin: 0 auto;
+  }
+
+  &__links {
+    text-align: center;
+  }
+
+  &__btn {
+    width:28%;
+    margin:0 6.5rem;
+    display: inline-block;
+    padding:2rem 0;
+    font-size:1.8rem;
+    text-transform: uppercase;
+    border:2px solid #000;
+  }
+}
+
+/******************************
+MEDIA QUERIES
+******************************/
+
+@media screen and (max-width: 767px) {
+
+  .section-joinorbook {
+    padding:4rem 0;
+  }
+
+  .joinorbook {
+    &__btn {
+      width:80%;
+      margin:0 auto 1rem;
+      display: block;
+    }
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+
+@media screen and (max-width: 990px) {
+
+}
+
+@media screen and (min-width: 990px) {
+}
+
+@media screen and (max-width: 990px) and (min-width: 768px) {
+
+  .joinorbook {
+    &__btn {
+      width:35%;
+      margin:0 3.5rem;
+    }
+  }
+
+}
+
+@media screen and (max-width: 1100px) {
+
+
+}
+
+
+@media screen and (max-width: 420px) {
+
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */
+}
+
+@media print and (min-width: 5in) {
+}
+
+

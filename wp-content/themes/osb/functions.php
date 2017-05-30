@@ -319,6 +319,18 @@ function wpc_mime_types($mimes) {
 add_filter('upload_mimes', 'wpc_mime_types');
 
 
+/************* Register google map api key ********************/
+
+
+
+function my_acf_init() {
+
+  acf_update_setting('google_api_key', 'AIzaSyAbXdpoJe_PCezBG5s3MhylH55PKghQfj8');
+}
+
+add_action('acf/init', 'my_acf_init');
+
+
 /************* Choose your own exerpt limit ********************/
 
 function excerpt($limit) {

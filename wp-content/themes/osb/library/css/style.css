@@ -4278,4 +4278,292 @@ RESPONSIVE
       min-height: inherit;
       margin: 35px 0px; } }
 
+.section-adress-rennes {
+  height: 574px;
+  padding: 7rem 0; }
+
+.adress-rennes__inner {
+  width: 90%;
+  margin: 0 auto; }
+
+.adress-rennes--left, .adress-rennes--right {
+  width: 47%;
+  display: inline-block;
+  text-align: center;
+  height: 435px;
+  margin: 0 1.1rem;
+  position: relative;
+  border: 2px solid #F5F3F3; }
+  .adress-rennes--left__inner, .adress-rennes--right__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    transform: translate(-50%, -50%); }
+
+.adress-rennes__title {
+  font-weight: 700;
+  background-color: #F0D305;
+  text-transform: uppercase;
+  padding: .8rem;
+  font-size: 1.5rem;
+  margin-bottom: 2.3rem;
+  display: inline-block;
+  margin-top: 0; }
+
+.adress-rennes__name {
+  font-family: "Montserrat";
+  font-weight: 600;
+  position: relative;
+  margin-bottom: 5.5rem;
+  font-size: 3.5rem;
+  margin-top: 0; }
+  .adress-rennes__name:after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 6.5rem;
+    height: .2rem;
+    background-color: #F0D305;
+    bottom: -10px;
+    transform: translateX(-50%);
+    left: 50%; }
+
+.adress-rennes__adress {
+  font-weight: 300;
+  margin-bottom: 2.2rem; }
+
+.adress-rennes__tel {
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  display: block; }
+
+.adress-rennes__open {
+  margin-top: 2.2rem; }
+
+.places__inner {
+  padding: 0 15px; }
+
+.places__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  line-height: 2.1rem;
+  margin-bottom: 3.5rem; }
+
+.places__dep {
+  overflow: hidden; }
+  .places__dep__title {
+    color: #E31F27;
+    font-family: "Montserrat";
+    font-weight: 200;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    margin-left: 3rem;
+    position: relative; }
+    .places__dep__title:before {
+      content: '+';
+      display: block;
+      color: #E31F27;
+      font-size: 4.5rem;
+      position: absolute;
+      top: 0;
+      left: -2.8rem; }
+  .places__dep__city {
+    float: left;
+    width: 25%;
+    padding: 0 1rem;
+    margin-bottom: 2rem; }
+    .places__dep__city li {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      font-family: "Montserrat";
+      border: 2px solid #F5F3F3;
+      text-align: center;
+      padding: .8rem;
+      height: 5rem; }
+      .places__dep__city li:hover {
+        background-color: #C8AB58;
+        -webkit-transition: all 0.2s ease-in-out 0s;
+        -khtml-transition: all 0.2s ease-in-out 0s;
+        -moz-transition: all 0.2s ease-in-out 0s;
+        -ms-transition: all 0.2s ease-in-out 0s;
+        -o-transition: all 0.2s ease-in-out 0s;
+        transition: all 0.2s ease-in-out 0s; }
+      .places__dep__city li span {
+        font-weight: 200;
+        font-size: 1.4rem; }
+    .places__dep__city--line li {
+      padding: 1.5rem 0; }
+
+/******************************
+MEDIA QUERIES
+******************************/
+@media screen and (max-width: 767px) {
+  .places__dep__city {
+    width: 50%; }
+  .section-adress-rennes {
+    height: auto; }
+  .adress-rennes--left, .adress-rennes--right {
+    margin: 0;
+    width: 100%; } }
+
+@media screen and (max-width: 990px) and (min-width: 768px) {
+  .places__dep__city {
+    width: 33%; }
+  .adress-rennes--left, .adress-rennes--right {
+    margin: 0;
+    width: 49%; } }
+
+@media screen and (max-width: 460px) {
+  .places__dep__city {
+    width: 100%; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */ }
+
+.section-joinorbook {
+  padding: 7rem 0;
+  background-color: #D9D2C4; }
+
+.joinorbook__inner {
+  width: 90%;
+  margin: 0 auto; }
+
+.joinorbook__links {
+  text-align: center; }
+
+.joinorbook__btn {
+  width: 28%;
+  margin: 0 6.5rem;
+  display: inline-block;
+  padding: 2rem 0;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  border: 2px solid #000; }
+
+/******************************
+MEDIA QUERIES
+******************************/
+@media screen and (max-width: 767px) {
+  .section-joinorbook {
+    padding: 4rem 0; }
+  .joinorbook__btn {
+    width: 80%;
+    margin: 0 auto 1rem;
+    display: block; } }
+
+@media screen and (max-width: 990px) and (min-width: 768px) {
+  .joinorbook__btn {
+    width: 35%;
+    margin: 0 3.5rem; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */ }
+
+#map_container {
+  position: relative; }
+
+#map {
+  height: 585px;
+  overflow: hidden;
+  padding-bottom: 22.25%;
+  padding-top: 30px;
+  position: relative; }
+
+.map {
+  height: 580px;
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  width: 100%;
+  z-index: 9;
+  top: 0; }
+
+.adress {
+  z-index: 10;
+  padding: 6rem 0 5rem;
+  position: relative; }
+  .adress__inner {
+    width: 90%;
+    margin: 0 auto; }
+  .adress--left, .adress--right {
+    display: inline-block;
+    text-align: center;
+    height: 435px;
+    padding: 0 20rem;
+    margin: 0 1.1rem;
+    background-color: #fff;
+    position: relative;
+    border: 2px solid #F5F3F3; }
+    .adress--left__inner, .adress--right__inner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 70%;
+      transform: translate(-50%, -50%); }
+  .adress__title {
+    font-weight: 700;
+    background-color: #F0D305;
+    text-transform: uppercase;
+    padding: .8rem;
+    font-size: 1.5rem;
+    margin-bottom: 2.3rem;
+    display: inline-block;
+    margin-top: 0; }
+  .adress__name {
+    font-family: "Montserrat";
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 5.5rem;
+    font-size: 3.5rem;
+    margin-top: 0; }
+    .adress__name:after {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 6.5rem;
+      height: .2rem;
+      background-color: #F0D305;
+      bottom: -10px;
+      transform: translateX(-50%);
+      left: 50%; }
+  .adress__adress {
+    font-weight: 300;
+    margin-bottom: 2.2rem; }
+  .adress__tel {
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    display: block; }
+  .adress__links {
+    margin-top: 6.5rem; }
+  .adress__btn {
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: .4rem .5rem;
+    width: 45%; }
+
+/******************************
+MEDIA QUERIES
+******************************/
+@media screen and (max-width: 767px) {
+  .map {
+    position: relative; }
+  .adress {
+    padding: 2rem 0;
+    position: relative; }
+    .adress--left {
+      height: 325px;
+      padding: 0;
+      display: block;
+      margin: 0 auto; }
+    .adress__name {
+      margin-bottom: 2.5rem; } }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */ }
+
 /*# sourceMappingURL=maps/style.css.map */

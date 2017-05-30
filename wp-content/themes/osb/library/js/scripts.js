@@ -241,4 +241,13 @@ jQuery(document).ready(function($) {
 
 
 
+	//Google Maps JS - Page Salle
+
+	google.maps.event.trigger(map, 'resize');
+
+
+
+
+
+
 }); /* end of as page load scripts */

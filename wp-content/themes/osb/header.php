@@ -27,10 +27,16 @@
 		<?php // typo  ?>
 		<link href="https://fonts.googleapis.com/css?family=Kanit:400,500,700" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
+
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 		<?php // wordpress head functions ?>
+
 		<?php wp_head(); ?>
 		<?php // end of wordpress head ?>
+
+
+
+
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
 	</head>

@@ -1,0 +1,181 @@
+
+#map_container{
+  position: relative;
+}
+#map{
+  height: 585px;
+  overflow: hidden;
+  padding-bottom: 22.25%;
+  padding-top: 30px;
+  position: relative;
+}
+
+.map {
+  height: 580px;
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  width: 100%;
+  z-index: 9;
+  top: 0;
+}
+
+.adress {
+
+  z-index: 10;
+  padding: 6rem 0 5rem;
+  position: relative;
+  &__inner {
+    width: 90%;
+    margin: 0 auto;
+  }
+  &--left, &--right {
+
+    display: inline-block;
+    text-align: center;
+    height: 435px;
+    padding:0 20rem;
+    margin: 0 1.1rem;
+    background-color: #fff;
+    position: relative;
+    border: 2px solid #F5F3F3;
+
+    &__inner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 70%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    background-color: $color-1;
+    text-transform: uppercase;
+    padding: .8rem;
+    font-size: 1.5rem;
+    margin-bottom: 2.3rem;
+    display: inline-block;
+    margin-top: 0;
+  }
+
+  &__name {
+    font-family: $font2;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 5.5rem;
+    font-size: 3.5rem;
+    margin-top: 0;
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 6.5rem;
+      height: .2rem;
+      background-color: $color-1;
+      bottom: -10px;
+      transform: translateX(-50%);
+      left: 50%;
+    }
+  }
+
+  &__adress {
+    font-weight: 300;
+    margin-bottom: 2.2rem;
+
+  }
+
+  &__tel {
+    text-transform: uppercase;
+    font-family: $font2;
+    display: block;
+
+  }
+
+ &__links {
+   margin-top: 6.5rem;
+ }
+
+  &__btn {
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: .4rem .5rem;
+    width: 45%;
+  }
+}
+
+
+/******************************
+MEDIA QUERIES
+******************************/
+
+@media screen and (max-width: 767px) {
+
+  .map {
+    position: relative;
+  }
+
+  .adress {
+    padding:2rem 0;
+    position: relative;
+
+    &--left {
+      height:325px;
+      padding:0;
+      display: block;
+      margin: 0 auto;
+    }
+
+    &__name {
+      margin-bottom:2.5rem;
+    }
+  }
+
+
+
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+
+@media screen and (max-width: 990px) {
+
+}
+
+@media screen and (min-width: 990px) {
+}
+
+@media screen and (max-width: 990px) and (min-width: 768px) {
+
+}
+
+@media screen and (max-width: 1100px) {
+
+
+}
+
+
+@media screen and (max-width: 420px) {
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */
+}
+
+@media print and (min-width: 5in) {
+}
+
+

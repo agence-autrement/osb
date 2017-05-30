@@ -14,8 +14,54 @@ Event template
     <?php if (have_posts()) : while (have_posts()) :
         the_post(); ?>
 
-        <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">6
+        <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
 
+
+
+            <div class="adress">
+
+                <div class="adress__inner">
+                    <div class="adress--left">
+
+                        <div class="adress--left__inner">
+                            <h2 class="adress__title"><?php echo get_field('ville_salle')?></h2>
+                            <h3 class="adress__name"><?php echo get_field('nom_salle')?></h3>
+                            <p class="adress__adress">
+                                <?php echo get_field('adresse_salle')?><br>
+
+                                <?php echo get_field('code_postale_salle')?> <?php echo get_field('ville_salle')?>
+                            </p>
+                            <a class="adress__tel" href="tel:0299275285">TEL : <?php echo get_field('tel_salle')?></a>
+                            <a class="adress__tel" href="tel:0299275285">FAX : 33 (0)2 99 27 52 76</a>
+
+                            <?php if (get_field('lien_billeterie_salle')) :?>
+                            <div class="adress__links">
+                                <a target="_blank" href="<?php echo get_field('lien_site_internet_salle')?>" class="adress__btn btn">Site Internet</a>
+                                <a target="_blank" href="<?php echo get_field('lien_billeterie_salle')?>" class="adress__btn btn">Billeterie</a>
+                            </div>
+
+                                <?php else :?>
+
+
+
+                            <?php endif; ?>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <?php
+            $bgAdress = get_field('fond_map_salle');
+            ?>
+
+            <div class="map" style="background-image: url('<?php echo $bgAdress['url']; ?>');">
+
+            </div>
 
 
         </article>
@@ -39,6 +85,8 @@ Event template
     <?php endif; ?>
 
 </div>
+
+
 
 
 <?php get_footer(); ?>
