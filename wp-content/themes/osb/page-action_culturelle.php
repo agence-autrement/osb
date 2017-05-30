@@ -34,24 +34,131 @@ Template Name: Page Action Culturelle
             </div>
         </div>
     </section>
+    <? if( have_rows('actions') ){ ?>
+        <section class="sub_menu">
+            <div class="contenu_grid">
+                <ul>
+                    <? while ( have_rows('actions') ) : the_row(); ?>
+                        <li><a href="###"><? the_sub_field('titre'); ?></a></li>
+                    <? endwhile; ?>
+                        <li><a href="###">Partagez sur logologologologo</a></li>
+                </ul>
+            </div>
+        </section>
+    <? }; ?>
+    <? if ( have_rows('actions') ){ ?>
+        <? while ( have_rows('actions') ) : the_row(); ?>
+            <? if ( get_sub_field('affichage') == 'special_content' ){ ?>
+                <section class="<? the_sub_field('affichage'); ?>" style="background-image: url('<? the_sub_field('visuel'); ?>')">
+                    <div class="contenu_grid">
+                        <div class="left_content">
+                            <div class="titre_content">
+                                <? the_sub_field('titre'); ?>
+                                <span class="croix_rouge"></span>
+                            </div>
+                        </div>
+                        <div class="right_content">
+                            <div class="titre_right_text">
+                                <? the_sub_field('compositeur')  ?>
+                                <span class="croix_noir"></span>
+                            </div>
+                            <div class="txt_right_content"><? the_sub_field('texte'); ?></div>
+
+                            <div class="qui">
+                                <div class="titre_qui">
+                                    <? the_sub_field('nom_de_lorchestre'); ?>
+                                </div>
+                                <? if ( have_rows('membres') ) { ?>
+                                    <div class="qui_qui">
+                                        <ul>
+                                            <? while ( have_rows('membres') ) : the_row(); ?>
+                                                <li>// <? the_sub_field('role') ?> : <? the_sub_field('nom') ?></li>
+                                            <? endwhile; ?>
+                                        </ul>
+                                    </div>
+                                <? } ?>
+                            </div>
+                            <? if ( have_rows('bouton_dinscription') ) { ?>
+                                <? while ( have_rows('bouton_dinscription') ) : the_row(); ?>
+                                    <div class="inscrire">
+                                        <div class="ligne_un">
+                                            <div class="date"><? the_sub_field('date') ?></div><span> // </span><div class="heure"><? the_sub_field('heure') ?></div>
+                                        </div>
+                                        <div class="ligne_deux">
+                                            <div class="ville"><? the_sub_field('ville') ?></div><span> // </span><div class="salle"><? the_sub_field('lieu') ?></div>
+                                        </div>
+                                        <div class="btn_inscription"><a href="<? the_sub_field('lien_bouton_inscription') ?>">Inscrire sa classe</a></div>
+                                    </div>
+                                <? endwhile; ?>
+                            <? } ?>
+                        </div>
+                    </div>
+                </section>
+            <? }else{ ?>
+                <section class="<? the_sub_field('affichage'); ?>">
+                    <div class="contenu_grid">
+                        <div class="left_content">
+                            <div class="titre_content">
+                                <? the_sub_field('titre'); ?>
+                                <span class="croix_rouge"></span>
+                            </div>
+                            <div class="visuel_content">
+                                <img src="<? the_sub_field('visuel'); ?>" alt="">
+                            </div>
+                        </div>
+                        <div class="right_content">
+                            <div class="titre_right_text">
+                                <? the_sub_field('compositeur')  ?>
+                                <span class="croix_noir"></span>
+                            </div>
+                            <div class="txt_right_content"><? the_sub_field('texte'); ?></div>
+
+                            <div class="qui">
+                                <div class="titre_qui">
+                                    <? the_sub_field('nom_de_lorchestre'); ?>
+                                </div>
+                                <? if ( have_rows('membres') ) { ?>
+                                    <div class="qui_qui">
+                                        <ul>
+                                            <? while ( have_rows('membres') ) : the_row(); ?>
+                                                <li>// <? the_sub_field('role') ?> : <? the_sub_field('nom') ?></li>
+                                            <? endwhile; ?>
+                                        </ul>
+                                    </div>
+                                <? } ?>
+                            </div>
+                            <? if ( have_rows('bouton_dinscription') ) { ?>
+                                <? while ( have_rows('bouton_dinscription') ) : the_row(); ?>
+                                    <div class="inscrire">
+                                        <div class="ligne_un">
+                                            <div class="date"><? the_sub_field('date') ?></div><span> // </span><div class="heure"><? the_sub_field('heure') ?></div>
+                                        </div>
+                                        <div class="ligne_deux">
+                                            <div class="ville"><? the_sub_field('ville') ?></div><span> // </span><div class="salle"><? the_sub_field('lieu') ?></div>
+                                        </div>
+                                        <div class="btn_inscription"><a href="<? the_sub_field('lien_bouton_inscription') ?>">Inscrire sa classe</a></div>
+                                    </div>
+                                <? endwhile; ?>
+                            <? } ?>
+                        </div>
+                    </div>
+                </section>
+            <? } ?>
+        <? endwhile; ?>
+    <? }; ?>
+
+
+
+    <? get_template_part('joinus'); ?>
 
 
 
 
 
-
-    <section class="sub_menu">
+    <section class="formulaire">
         <div class="contenu_grid">
-            <ul>
-                <li><a href="###">City sky</a></li>
-                <li><a href="###">Le léopard et le chasseur</a></li>
-                <li><a href="###">De Venise à Buenos Aires</a></li>
-                <li><a href="###">Partagez sur logologologologo</a></li>
-                <li><a href="###">Qu'est-ce que la musique</a></li>
-                <li><a href="###">La Harpe de Taliesin</a></li>
-                <li><a href="###">Révolution Beethoven</a></li>
-                <li><a href="###">Inscription</a></li>
-            </ul>
+            <div class="titre_formulaire">// Inscription //</div>
+            <? echo do_shortcode('[contact-form-7 id="250" title="Contact Form Concerts Scolaires"]'); ?>
         </div>
     </section>
 
@@ -62,64 +169,14 @@ Template Name: Page Action Culturelle
 
 
 
-    <? if ( have_rows('actions') ){ ?>
-        <? while ( have_rows('actions') ) : the_row(); ?>
-            <section class="<? the_sub_field('affichage'); ?>">
-                <div class="contenu_grid">
-                    <div class="left_content">
-                        <div class="titre_content">
-                            <? the_sub_field('titre'); ?>
-                            <span class="croix_rouge"></span>
-                        </div>
-                        <div class="visuel_content">
-                            <img src="<? the_sub_field('visuel'); ?>" alt="">
-                        </div>
-                    </div>
-                    <div class="right_content">
-                        <div class="txt_right_content">
-                            <? the_sub_field('texte'); ?>
-                            <span class="croix_noir"></span>
-                        </div>
-
-                        <div class="qui">
-                            <div class="titre_qui">
-                                <? the_sub_field('nom_de_lorchestre'); ?>
-                            </div>
-                            <? if ( have_rows('membres') ) { ?>
-                            <div class="qui_qui">
-                                <ul>
-                                    <? while ( have_rows('membres') ) : the_row(); ?>
-                                    <li>// <? the_sub_field('role') ?> : <? the_sub_field('nom') ?></li>
-                                    <? endwhile; ?>
-                                </ul>
-                            </div>
-                            <? } ?>
-                        </div>
-                        <? if ( have_rows('bouton_dinscription') ) { ?>
-                            <? while ( have_rows('bouton_dinscription') ) : the_row(); ?>
-                                <div class="inscrire">
-                                    <div class="ligne_un">
-                                        <div class="date"><? the_sub_field('date') ?></div><span> // </span><div class="heure"><? the_sub_field('heure') ?></div>
-                                    </div>
-                                    <div class="ligne_deux">
-                                        <div class="ville"><? the_sub_field('ville') ?></div><span> // </span><div class="salle"><? the_sub_field('lieu') ?></div>
-                                    </div>
-                                    <div class="btn_inscription"><a href="<? the_sub_field('lien_bouton_inscription') ?>">Inscrire sa classe</a></div>
-                                </div>
-                            <? endwhile; ?>
-                        <? } ?>
-                    </div>
-                </div>
-            </section>
-        <? endwhile; ?>
-    <? }; ?>
-
-
-
-
-    <? get_template_part('joinus'); ?>
-
-
+    <? if ( get_field('titre_parcours') ){ ?>
+        <section class="parcours">
+            <div class="contenu_grid">
+                <div class="titre_parcours"><? the_field('titre_parcours') ?></div>
+                <div class="content_parcours"><? the_field('parcours_content') ?></div>
+            </div>
+        </section>
+    <? } ?>
 
 
 

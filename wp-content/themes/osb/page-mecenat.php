@@ -76,11 +76,31 @@ Template Name: Page Mécénat
     <section class="participez_creation">
         <div class="contenu_grid">
             <div class="content_titre">
-                <div class="titre_crea">Participez à la création d'une oeuvre</div>
+                <div class="titre_crea">Participez à la création d'une oeuvre <span class="yellow_cross"></span></div>
                 <div class="sous_titre_crea">aux côté de l'OSB</div>
             </div>
             <div class="content_text">
+                <span class="black_cross"></span>
                 A l’occasion du festival Beethoven proposé de janvier à L’Orchestre Symphonique de Bretagne participe tous les ans à l’enrichissement du répertoire symphonique, par une politique de commandes de nouvelles oeuvres à de jeunes compositeurs. Au cours de la saison musicale 2017-2018, l’OSB a notamment le plaisir de travailler avec deux compositeurs en résidence, Benoît Menut et Julien Gauthier. Leurs oeuvres Anita et Symphonie Australe seront créées par l’Orchestre en avril 2018 dans le cadre du concert « Les 40èmes Rugissants », dédié à la mer et à l’océanographe Anita Conti. Associez-vous à cette création et devenez mécène de deux nouvelles oeuvres, dont les premières notes seront entendues en exclusivité à Rennes ! Votre soutien permet de faire vivre la création artistique et d’enrichir le répertoire musical.
+            </div>
+        </div>
+    </section>
+    <section class="soutenir">
+        <div class="contenu_grid">
+            <div class="gallerie">
+                <div class="thumb">
+                    <img src="http://lorempixel.com/500/380/nature" alt="">
+                </div>
+                <div class="miniatures">
+                    <img src="http://lorempixel.com/500/380/nature" alt="">
+                </div>
+            </div>
+            <div class="content_text">
+                <div>
+                    Nous avons besoin de 5 000€ pour soutenir le financement de la commande de ces deux nouvelles oeuvres (composition, création publique, actions de médiation).
+                    En remerciement, vous recevrez des contreparties exclusives !
+                </div>
+                <div class="btn_soutient"><a href="###">Nous soutenir</a></div>
             </div>
         </div>
     </section>

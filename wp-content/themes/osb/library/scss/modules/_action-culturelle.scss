@@ -134,11 +134,18 @@
     width: 100%;
   }
 
+  .titre_right_text{
+    padding-left: 25px;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    position: relative;
+  }
+
   .txt_right_content{
     padding-left: 25px;
     font-size: 12px;
     margin-bottom: 30px;
-    position: relative;
   }
 
   .croix_noir{
@@ -220,6 +227,7 @@
       padding-top: 15px;
     }
   }
+
   //Contenu à gauche
   .content_left{
     background-color: #D9D2C4;
@@ -261,6 +269,131 @@
       border-color: white;
     }
   }
+
+  //Contenu "spécial"
+  .special_content{
+    padding: 35px;
+    overflow: hidden;
+    width: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+    .left_content{
+      padding-right: 30px;
+      width: 50%;
+      float: left;
+    }
+
+    .right_content {
+      width: 50%;
+      float: right;
+      padding-left: 30px;
+      padding-top: 15px;
+    }
+    
+    .titre_right_text{
+      color: #FFFFFF;  
+    }
+    
+    .txt_right_content{
+      color: #FFFFFF;
+    }
+
+    .croix_noir{
+      background-image: url('../images/croix_blanche.svg');
+    }
+    
+    .inscrire{
+      color: #FFFFFF;
+      background-color: #000000;
+    }
+    
+    .btn_inscription{
+      color: #ED1E24;
+    }
+  }
+
+  ///////////////////////// FORMULAIRE
+
+  .formulaire{
+    padding: 35px;
+  }
+
+  .titre_formulaire{
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .wpcf7-form{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 60px;
+    input{
+      background-color: #F5F5F3;
+      padding: 5px;
+      font-size: 12px;
+      border: none;
+      margin-bottom: 15px;
+    }
+    select{
+      border: none;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      font-size: 12px;
+      padding: 9px;
+    }
+  }
+
+  .inner_form_title{
+    margin-bottom: 24px;
+    font-size: 16px;
+  }
+
+  .formulaire_left, .formulaire_right{
+    width: 50%;
+    float: left;
+  }
+
+  .formulaire_right{
+    input{
+      width: 100%;
+    }
+  }
+
+  #choix_un, #choix_deux{
+    width: 70%;
+  }
+
+  #date_choix_un, #date_choix_deux{
+    width: 25%;
+    padding: 4px;
+  }
+
+  #ecole, #adresse, #classe, #nombre_participant{
+    width: 49%;
+    float: left;
+  }
+
+  #ecole, #classe{
+   margin-right: 2%;
+  }
+
+  .formulaire_submit{
+    width: 100%;
+    text-align: center;
+  }
+
+  #inscrire{
+    background-color: #ffffff;
+    border: 1px solid #F5F5F3;
+    width: 100px;
+    padding: 5px 20px;
+    margin-top: 30px;
+  }
+
+  ///////////////////////// VOUS AIMEREZ PEUT-ÊTRE
 
   .suggestion{
     padding: 35px;
@@ -372,9 +505,39 @@
     }
   }
 
+  ///////////////////////// ENCADRÉ "PARCOURS"
+
+  .parcours{
+    padding: 35px;
+    text-align: center;
+
+    .contenu_grid{
+      border: 1px solid #F3F3F3;
+      padding: 35px;
+    }
+
+    .titre_parcours{
+      font-size: 34px;
+      position: relative;
+      padding-bottom: 10px;
+      margin-bottom: 25px;
+      &:after{
+        content: '';
+        position: absolute;
+        background-color: #ED1E24;
+        width: 65px;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
   /******RESPONSIVE*****/
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
+
     .sub_menu{
       li{
         display: block;
@@ -385,6 +548,7 @@
         }
       }
     }
+
     .content_right{
        .left_content{
          float: none;
@@ -398,6 +562,7 @@
          padding: 0;
        }
      }
+
     .content_left{
       .left_content{
         float: none;
@@ -411,11 +576,51 @@
         padding: 0;
       }
     }
+
+    .special_content{
+      .left_content{
+        float: none;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 25px;
+      }
+      .right_content{
+        float: none;
+        width: 100%;
+        padding: 0;
+      }
+    }
+
     .suggestion{
       li{
         width: 100%;
         margin-bottom: 35px;
       }
+    }
+
+    .inner_form_title{
+      margin-bottom: 24px;
+      font-size: 16px;
+    }
+
+    .formulaire_left, .formulaire_right{
+      width: 80%;
+      float: none;
+      margin: 0 auto;
+    }
+
+    #choix_un, #choix_deux{
+      width: 70%;
+    }
+
+    #date_choix_un, #date_choix_deux{
+      width: 25%;
+      padding: 4px;
+    }
+
+    #ecole, #adresse, #classe, #nombre_participant{
+      width: 100%;
+      float: none;
     }
   }
 }
