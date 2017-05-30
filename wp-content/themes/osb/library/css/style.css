@@ -3590,6 +3590,56 @@ MEDIA QUERIES
       background-color: #000000; }
     .page-template-page-action_culturelle .special_content .btn_inscription {
       color: #ED1E24; }
+  .page-template-page-action_culturelle .formulaire {
+    padding: 35px; }
+  .page-template-page-action_culturelle .titre_formulaire {
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase; }
+  .page-template-page-action_culturelle .wpcf7-form {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 60px; }
+    .page-template-page-action_culturelle .wpcf7-form input {
+      background-color: #F5F5F3;
+      padding: 5px;
+      font-size: 12px;
+      border: none;
+      margin-bottom: 15px; }
+    .page-template-page-action_culturelle .wpcf7-form select {
+      border: none;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      font-size: 12px;
+      padding: 9px; }
+  .page-template-page-action_culturelle .inner_form_title {
+    margin-bottom: 24px;
+    font-size: 16px; }
+  .page-template-page-action_culturelle .formulaire_left, .page-template-page-action_culturelle .formulaire_right {
+    width: 50%;
+    float: left; }
+  .page-template-page-action_culturelle .formulaire_right input {
+    width: 100%; }
+  .page-template-page-action_culturelle #choix_un, .page-template-page-action_culturelle #choix_deux {
+    width: 70%; }
+  .page-template-page-action_culturelle #date_choix_un, .page-template-page-action_culturelle #date_choix_deux {
+    width: 25%;
+    padding: 4px; }
+  .page-template-page-action_culturelle #ecole, .page-template-page-action_culturelle #adresse, .page-template-page-action_culturelle #classe, .page-template-page-action_culturelle #nombre_participant {
+    width: 49%;
+    float: left; }
+  .page-template-page-action_culturelle #ecole, .page-template-page-action_culturelle #classe {
+    margin-right: 2%; }
+  .page-template-page-action_culturelle .formulaire_submit {
+    width: 100%;
+    text-align: center; }
+  .page-template-page-action_culturelle #inscrire {
+    background-color: #ffffff;
+    border: 1px solid #F5F5F3;
+    width: 100px;
+    padding: 5px 20px;
+    margin-top: 30px; }
   .page-template-page-action_culturelle .suggestion {
     padding: 35px;
     background-color: #F5F3F3; }
@@ -3679,12 +3729,6 @@ MEDIA QUERIES
         font-weight: inherit; }
         .page-template-page-action_culturelle .suggestion .link_calendrier:hover:after {
           width: 100px; }
-  .page-template-page-action_culturelle .formulaire {
-    padding: 35px; }
-    .page-template-page-action_culturelle .formulaire .titre_formulaire {
-      font-size: 18px;
-      text-align: center;
-      text-transform: uppercase; }
   .page-template-page-action_culturelle .parcours {
     padding: 35px;
     text-align: center; }
@@ -3705,7 +3749,7 @@ MEDIA QUERIES
         bottom: 0;
         left: 50%;
         transform: translateX(-50%); }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     .page-template-page-action_culturelle .sub_menu li {
       display: block;
       width: 100%;
@@ -3741,7 +3785,22 @@ MEDIA QUERIES
       padding: 0; }
     .page-template-page-action_culturelle .suggestion li {
       width: 100%;
-      margin-bottom: 35px; } }
+      margin-bottom: 35px; }
+    .page-template-page-action_culturelle .inner_form_title {
+      margin-bottom: 24px;
+      font-size: 16px; }
+    .page-template-page-action_culturelle .formulaire_left, .page-template-page-action_culturelle .formulaire_right {
+      width: 80%;
+      float: none;
+      margin: 0 auto; }
+    .page-template-page-action_culturelle #choix_un, .page-template-page-action_culturelle #choix_deux {
+      width: 70%; }
+    .page-template-page-action_culturelle #date_choix_un, .page-template-page-action_culturelle #date_choix_deux {
+      width: 25%;
+      padding: 4px; }
+    .page-template-page-action_culturelle #ecole, .page-template-page-action_culturelle #adresse, .page-template-page-action_culturelle #classe, .page-template-page-action_culturelle #nombre_participant {
+      width: 100%;
+      float: none; } }
 
 .page-template-page-historique {
   /***********************

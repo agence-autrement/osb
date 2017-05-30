@@ -313,6 +313,88 @@
     }
   }
 
+  ///////////////////////// FORMULAIRE
+
+  .formulaire{
+    padding: 35px;
+  }
+
+  .titre_formulaire{
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .wpcf7-form{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 60px;
+    input{
+      background-color: #F5F5F3;
+      padding: 5px;
+      font-size: 12px;
+      border: none;
+      margin-bottom: 15px;
+    }
+    select{
+      border: none;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      font-size: 12px;
+      padding: 9px;
+    }
+  }
+
+  .inner_form_title{
+    margin-bottom: 24px;
+    font-size: 16px;
+  }
+
+  .formulaire_left, .formulaire_right{
+    width: 50%;
+    float: left;
+  }
+
+  .formulaire_right{
+    input{
+      width: 100%;
+    }
+  }
+
+  #choix_un, #choix_deux{
+    width: 70%;
+  }
+
+  #date_choix_un, #date_choix_deux{
+    width: 25%;
+    padding: 4px;
+  }
+
+  #ecole, #adresse, #classe, #nombre_participant{
+    width: 49%;
+    float: left;
+  }
+
+  #ecole, #classe{
+   margin-right: 2%;
+  }
+
+  .formulaire_submit{
+    width: 100%;
+    text-align: center;
+  }
+
+  #inscrire{
+    background-color: #ffffff;
+    border: 1px solid #F5F5F3;
+    width: 100px;
+    padding: 5px 20px;
+    margin-top: 30px;
+  }
+
+  ///////////////////////// VOUS AIMEREZ PEUT-ÊTRE
+
   .suggestion{
     padding: 35px;
     background-color: #F5F3F3;
@@ -423,15 +505,7 @@
     }
   }
 
-  .formulaire{
-    padding: 35px;
-
-    .titre_formulaire{
-      font-size: 18px;
-      text-align: center;
-      text-transform: uppercase;
-    }
-  }
+  ///////////////////////// ENCADRÉ "PARCOURS"
 
   .parcours{
     padding: 35px;
@@ -462,7 +536,8 @@
 
   /******RESPONSIVE*****/
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
+
     .sub_menu{
       li{
         display: block;
@@ -521,6 +596,31 @@
         width: 100%;
         margin-bottom: 35px;
       }
+    }
+
+    .inner_form_title{
+      margin-bottom: 24px;
+      font-size: 16px;
+    }
+
+    .formulaire_left, .formulaire_right{
+      width: 80%;
+      float: none;
+      margin: 0 auto;
+    }
+
+    #choix_un, #choix_deux{
+      width: 70%;
+    }
+
+    #date_choix_un, #date_choix_deux{
+      width: 25%;
+      padding: 4px;
+    }
+
+    #ecole, #adresse, #classe, #nombre_participant{
+      width: 100%;
+      float: none;
     }
   }
 }
