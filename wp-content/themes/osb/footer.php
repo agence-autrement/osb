@@ -4,18 +4,20 @@
 						<div class="footer_content">
 							<ul>
 								<li>La saison</li>
-								<li>Découvrir</li>
-								<li>Action culturelle</li>
-								<li>Mon espace</li>
-								<li>Boutique</li>
-								<li>Espace musicien</li>
+								<li>Symphonique</li>
+								<li>Jeune Public</li>
+								<li>Musique de chambre</li>
+								<li>Artiste Invité</li>
+								<li>OSB invité</li>
 							</ul>
 							<ul>
-								<li>Ecouter & voir</li>
-								<li>Discographie</li>
-								<li>Lire et écouter</li>
-								<li>Vidéos</li>
-								<li>Galerie photo</li>
+								<li>Action Culturelle</li>
+								<li>Scolaires</li>
+								<li>Venir en groupe</li>
+								<li>Les pôles</li>
+								<li>Conférences / Concerts</li>
+								<li>Master Classes</li>
+								<li>Accessibilité</li>
 							</ul>
 						</div>
 						<div class="footer_content">
@@ -24,17 +26,17 @@
 						<div class="footer_content">
 							<ul>
 								<li>Nous soutenir</li>
-								<li>Symphonia</li>
 								<li>Concerto</li>
-								<li>Nos partenaires</li>
-								<li>Création d'oeuvre</li>
-								<li>Vente aux enchères</li>
+								<li>Symphonia</li>
+								<li>Don en ligne</li>
 							</ul>
 							<ul>
-								<li>Mentions légales</li>
-								<li>Crédits</li>
-								<li>Conditions de vente</li>
-								<li>Recrutement</li>
+								<li>Découvrir</li>
+								<li>Côté Orchestre</li>
+								<li>Côté pratique</li>
+								<li>Côté Organisation</li>
+								<li>Historique</li>
+								<li>Discographie</li>
 							</ul>
 						</div>
 					</div>
@@ -56,6 +58,19 @@
 								<li>35000 Rennes</li>
 								<li>ouvert du mardi au samedi, de 13h à 18h</li>
 								<li>tél : 02 99 275 275</li>
+							</ul>
+						</div>
+					</div>
+					<div class="contenu_grid">
+						<div class="mentions">
+							<ul>
+								<li>Mention légales</li>
+								<li>|</li>
+								<li>Crédits</li>
+								<li>|</li>
+								<li>Conditions de vente</li>
+								<li>|</li>
+								<li>Recrutement</li>
 							</ul>
 						</div>
 					</div>

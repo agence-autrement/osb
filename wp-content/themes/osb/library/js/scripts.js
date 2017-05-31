@@ -243,7 +243,7 @@ jQuery(document).ready(function($) {
 
 	//Google Maps JS - Page Salle
 
-	google.maps.event.trigger(map, 'resize');
+	//google.maps.event.trigger(map, 'resize');
 
 
 

@@ -12,7 +12,7 @@ GLOBAL
 }
 
 .contenu_grid{
-  max-width: 1600px;
+  max-width: 1100px;
   width: 100%;
   overflow: hidden;
   margin: 0 auto;
@@ -38,6 +38,7 @@ LANDING
   height: 146px;
   background-color: rgba(0,0,0,0.5);
   padding: 35px;
+  font-family: $font2;
 }
 
 #calendrier_top{
@@ -69,6 +70,7 @@ LANDING
   color: white;
   text-align: center;
   position: relative;
+  font-family: $font;
   &:before{
     content: '';
     position: absolute;
@@ -254,6 +256,7 @@ ARTICLES
   font-size: 26px;
   font-weight: 300;
   margin-bottom: 10px;
+  font-family: $font2;
 }
 
 .extrait_1{
@@ -330,13 +333,6 @@ ARTICLES
 /***********************
 RESPONSIVE
 ***********************/
-
-.contenu_grid{
-  max-width: 1600px;
-  width: 100%;
-  overflow: hidden;
-  margin: 0 auto;
-}
 
 /*1200px*/
 

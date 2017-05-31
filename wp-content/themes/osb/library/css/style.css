@@ -54,6 +54,7 @@ html {
 body {
   font-family: "Kanit";
   color: #000;
+  font-weight: 300;
   font-size: 1.5rem;
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
@@ -1452,52 +1453,84 @@ MEDIA QUERIES
     text-align: center;
     color: white;
     position: relative; }
-    .footer .grid_footer .footer_content {
-      width: 33%;
-      overflow: hidden;
-      text-transform: uppercase;
-      float: left; }
-      .footer .grid_footer .footer_content ul {
-        width: 50%;
-        float: left;
-        position: relative; }
-        .footer .grid_footer .footer_content ul:nth-of-type(1):after, .footer .grid_footer .footer_content ul:nth-of-type(3):after {
-          content: '';
-          background-color: white;
-          position: absolute;
-          right: 0;
-          top: 0;
-          height: 90%;
-          width: 1px; }
-        .footer .grid_footer .footer_content ul li {
-          margin-bottom: 15px;
-          padding: 5px; }
-      .footer .grid_footer .footer_content img {
-        max-width: 125px; }
-    .footer .grid_footer .contenu_grid:nth-of-type(1) {
-      position: relative;
-      margin-bottom: 35px;
-      padding-bottom: 35px; }
-      .footer .grid_footer .contenu_grid:nth-of-type(1):after {
+  .footer .footer_content {
+    height: 270px;
+    width: 33%;
+    overflow: hidden;
+    text-transform: uppercase;
+    float: left; }
+    .footer .footer_content ul {
+      width: 50%;
+      height: 100%;
+      float: left;
+      position: relative; }
+      .footer .footer_content ul:nth-of-type(1):after, .footer .footer_content ul:nth-of-type(3):after {
         content: '';
-        height: 1px;
-        width: 100%;
         background-color: white;
         position: absolute;
-        bottom: 0;
-        left: 0; }
+        right: 0;
+        top: 0;
+        height: 90%;
+        width: 1px; }
+      .footer .footer_content ul li {
+        font-size: 10px;
+        margin-bottom: 15px;
+        padding: 5px; }
+        .footer .footer_content ul li:first-of-type {
+          font-weight: 600; }
+    .footer .footer_content img {
+      max-width: 125px; }
+  .footer .contenu_grid:nth-of-type(1) {
+    position: relative;
+    margin-bottom: 35px; }
+    .footer .contenu_grid:nth-of-type(1):after {
+      content: '';
+      height: 1px;
+      width: 100%;
+      background-color: white;
+      position: absolute;
+      bottom: 0;
+      left: 0; }
   .footer .contact_footer {
     height: 150px;
     width: 50%;
     float: left;
-    text-align: left; }
+    text-align: left;
+    font-size: 14px; }
   .footer .billet {
+    font-size: 14px;
     height: 150px;
     width: 50%;
     float: right;
     text-align: right; }
   .footer.active {
     margin-left: 330px; }
+  .footer .mentions ul {
+    width: 33.3333333333333%;
+    margin: 0 auto;
+    position: relative; }
+    .footer .mentions ul li {
+      display: inline;
+      width: 10%;
+      font-size: 10px;
+      text-transform: uppercase;
+      color: #999999; }
+    .footer .mentions ul:before {
+      content: '';
+      position: absolute;
+      left: -101%;
+      top: 50%;
+      width: 100%;
+      height: 1px;
+      background-color: #999999; }
+    .footer .mentions ul:after {
+      content: '';
+      position: absolute;
+      left: 101%;
+      top: 50%;
+      width: 100%;
+      height: 1px;
+      background-color: #999999; }
 
 /**********************
 Media Queries
@@ -2180,7 +2213,7 @@ GLOBAL
     margin-left: 400px; }
 
 .contenu_grid {
-  max-width: 1600px;
+  max-width: 1100px;
   width: 100%;
   overflow: hidden;
   margin: 0 auto; }
@@ -2201,7 +2234,8 @@ LANDING
   width: 100%;
   height: 146px;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 35px; }
+  padding: 35px;
+  font-family: "Montserrat"; }
 
 #calendrier_top {
   margin: 0; }
@@ -2226,7 +2260,8 @@ LANDING
   float: left;
   color: white;
   text-align: center;
-  position: relative; }
+  position: relative;
+  font-family: "Kanit"; }
   .right_date:before {
     content: '';
     position: absolute;
@@ -2383,7 +2418,8 @@ ARTICLES
 .titre_article {
   font-size: 26px;
   font-weight: 300;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  font-family: "Montserrat"; }
 
 .extrait_1 {
   margin-bottom: 15px; }
@@ -2445,12 +2481,6 @@ ARTICLES
 /***********************
 RESPONSIVE
 ***********************/
-.contenu_grid {
-  max-width: 1600px;
-  width: 100%;
-  overflow: hidden;
-  margin: 0 auto; }
-
 /*1200px*/
 @media screen and (max-width: 1200px) {
   #left_callto div:nth-of-type(1) {
@@ -2574,77 +2604,6 @@ MEDIA QUERIES
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   /* Retina-specific stuff here */ }
-
-.page-template-page-saison .main_saison {
-  margin-left: 130px;
-  padding: 35px; }
-
-.page-template-page-saison .filtreSelector {
-  overflow: hidden;
-  height: 220px;
-  margin-bottom: 35px;
-  -webkit-transition: 0.6s;
-  -khtml-transition: 0.6s;
-  -moz-transition: 0.6s;
-  -ms-transition: 0.6s;
-  -o-transition: 0.6s;
-  transition: 0.6s; }
-  .page-template-page-saison .filtreSelector ul {
-    display: inline-block;
-    float: left;
-    margin-right: 35px; }
-    .page-template-page-saison .filtreSelector ul li {
-      margin-bottom: 1px; }
-      .page-template-page-saison .filtreSelector ul li button {
-        padding: 5px;
-        border: none;
-        margin: 0 auto;
-        margin-bottom: 10px;
-        text-align: center;
-        width: 100%;
-        background-color: #EDEDED;
-        -webkit-transition: 0.3s;
-        -khtml-transition: 0.3s;
-        -moz-transition: 0.3s;
-        -ms-transition: 0.3s;
-        -o-transition: 0.3s;
-        transition: 0.3s; }
-        .page-template-page-saison .filtreSelector ul li button:hover {
-          background-color: black;
-          color: white; }
-        .page-template-page-saison .filtreSelector ul li button.first_btn {
-          background-color: black;
-          color: white; }
-        .page-template-page-saison .filtreSelector ul li button.active {
-          background-color: black;
-          color: white; }
-  .page-template-page-saison .filtreSelector.active {
-    height: 400px; }
-
-.page-template-page-saison #plus_de_tag {
-  display: block;
-  text-align: center;
-  width: 100%;
-  margin-bottom: 35px;
-  border: 1px solid darkslategrey;
-  cursor: pointer;
-  -webkit-transition: 0.3s;
-  -khtml-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s; }
-  .page-template-page-saison #plus_de_tag:hover {
-    background-color: black;
-    color: white; }
-
-.page-template-page-saison #clear_filters {
-  display: block;
-  text-align: center;
-  width: 100%;
-  margin-bottom: 35px;
-  border: 1px solid darkslategrey;
-  cursor: pointer; }
 
 .section-event-desc {
   padding: 0 1.5rem; }
@@ -3276,7 +3235,8 @@ MEDIA QUERIES
       float: left;
       color: white;
       padding-left: 12px;
-      padding-top: 25px; }
+      padding-top: 25px;
+      font-family: "Montserrat"; }
     .contenu_grid #resultAjax .right_event {
       width: 25%;
       float: left;
@@ -3365,918 +3325,6 @@ MEDIA QUERIES
         float: none;
         overflow: hidden;
         margin-bottom: 35px; } }
-
-.page-template-page-action_culturelle {
-  /*LES CLASSES*/
-  /******RESPONSIVE*****/ }
-  .page-template-page-action_culturelle .top_page_action {
-    padding: 35px;
-    height: 710px;
-    width: 100%;
-    background-color: darkslategrey;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat; }
-    .page-template-page-action_culturelle .top_page_action .index {
-      margin-bottom: 25px; }
-    .page-template-page-action_culturelle .top_page_action li {
-      font-size: 12px;
-      color: #ED1E24; }
-    .page-template-page-action_culturelle .top_page_action .title {
-      font-size: 60px;
-      margin-bottom: 15px;
-      color: white; }
-      .page-template-page-action_culturelle .top_page_action .title span {
-        color: #ED1E24; }
-    .page-template-page-action_culturelle .top_page_action .tag {
-      font-size: 12px;
-      text-transform: uppercase;
-      overflow: hidden; }
-      .page-template-page-action_culturelle .top_page_action .tag div {
-        display: inline-block;
-        float: left; }
-    .page-template-page-action_culturelle .top_page_action .btn_red {
-      cursor: pointer;
-      padding: 5px 10px;
-      background-color: #ED1E24;
-      color: white; }
-    .page-template-page-action_culturelle .top_page_action .btn_savoir_plus {
-      display: block;
-      position: relative;
-      padding: 5px 10px;
-      cursor: pointer;
-      color: white; }
-      .page-template-page-action_culturelle .top_page_action .btn_savoir_plus:after {
-        content: '';
-        position: absolute;
-        background-color: white;
-        bottom: 0;
-        left: 10px;
-        width: 0;
-        height: 1px;
-        -webkit-transition: 0.6s;
-        -khtml-transition: 0.6s;
-        -moz-transition: 0.6s;
-        -ms-transition: 0.6s;
-        -o-transition: 0.6s;
-        transition: 0.6s; }
-      .page-template-page-action_culturelle .top_page_action .btn_savoir_plus:hover {
-        font-weight: inherit; }
-        .page-template-page-action_culturelle .top_page_action .btn_savoir_plus:hover:after {
-          width: 70px; }
-    .page-template-page-action_culturelle .top_page_action .intro_text {
-      font-size: 12px;
-      max-width: 320px;
-      margin-top: 15px;
-      color: white; }
-  .page-template-page-action_culturelle .sub_menu {
-    padding: 20px 35px 0 35px;
-    background-color: #F5F3F3; }
-    .page-template-page-action_culturelle .sub_menu ul li {
-      display: inline-block;
-      float: left;
-      font-size: 15px;
-      margin-right: 50px;
-      margin-bottom: 20px;
-      cursor: pointer;
-      position: relative;
-      padding-bottom: 5px; }
-      .page-template-page-action_culturelle .sub_menu ul li:after {
-        content: '';
-        position: absolute;
-        background-color: black;
-        bottom: 0;
-        left: 0px;
-        width: 0;
-        height: 1px;
-        -webkit-transition: 0.6s;
-        -khtml-transition: 0.6s;
-        -moz-transition: 0.6s;
-        -ms-transition: 0.6s;
-        -o-transition: 0.6s;
-        transition: 0.6s; }
-      .page-template-page-action_culturelle .sub_menu ul li:hover:after {
-        width: 100%; }
-  .page-template-page-action_culturelle .titre_content {
-    font-size: 50px;
-    margin-bottom: 30px;
-    color: #ED1E24;
-    text-align: right;
-    position: relative; }
-  .page-template-page-action_culturelle .croix_rouge {
-    background-image: url("../images/croix_rouge.svg");
-    height: 40px;
-    width: 40px;
-    display: block;
-    position: absolute;
-    right: -32px; }
-  .page-template-page-action_culturelle img {
-    width: 100%; }
-  .page-template-page-action_culturelle .titre_right_text {
-    padding-left: 25px;
-    font-size: 12px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    position: relative; }
-  .page-template-page-action_culturelle .txt_right_content {
-    padding-left: 25px;
-    font-size: 12px;
-    margin-bottom: 30px; }
-  .page-template-page-action_culturelle .croix_noir {
-    background-image: url("../images/croix_noir.svg");
-    height: 15px;
-    width: 15px;
-    display: block;
-    position: absolute;
-    top: -12px;
-    left: 8px; }
-  .page-template-page-action_culturelle .qui {
-    padding-left: 25px;
-    font-size: 10px;
-    color: #828080;
-    margin-bottom: 35px; }
-  .page-template-page-action_culturelle .inscrire {
-    border: 1px solid #D9D2C4;
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 10px; }
-    .page-template-page-action_culturelle .inscrire span {
-      color: #D9D2C4; }
-  .page-template-page-action_culturelle .ligne_un {
-    font-size: 21px; }
-    .page-template-page-action_culturelle .ligne_un div {
-      display: inline; }
-  .page-template-page-action_culturelle .ligne_deux {
-    font-size: 15px; }
-    .page-template-page-action_culturelle .ligne_deux div {
-      display: inline; }
-  .page-template-page-action_culturelle .ville {
-    color: #ED1E24; }
-  .page-template-page-action_culturelle .btn_inscription {
-    font-size: 12px;
-    border: 1px solid #D9D2C4;
-    margin: 0 auto;
-    margin-top: 10px;
-    width: 150px;
-    padding: 5px;
-    text-transform: uppercase;
-    cursor: pointer; }
-    .page-template-page-action_culturelle .btn_inscription a {
-      display: block;
-      width: 100%;
-      height: 100%; }
-  .page-template-page-action_culturelle .content_right {
-    padding: 35px;
-    overflow: hidden;
-    width: 100%; }
-    .page-template-page-action_culturelle .content_right .left_content {
-      padding-right: 30px;
-      width: 50%;
-      float: left; }
-    .page-template-page-action_culturelle .content_right .right_content {
-      width: 50%;
-      float: right;
-      padding-left: 30px;
-      padding-top: 15px; }
-  .page-template-page-action_culturelle .content_left {
-    background-color: #D9D2C4;
-    padding: 35px;
-    overflow: hidden;
-    width: 100%; }
-    .page-template-page-action_culturelle .content_left .left_content {
-      padding-left: 30px;
-      width: 50%;
-      float: right; }
-    .page-template-page-action_culturelle .content_left .titre_content {
-      text-align: left; }
-    .page-template-page-action_culturelle .content_left .croix_rouge {
-      left: -32px;
-      top: inherit; }
-    .page-template-page-action_culturelle .content_left .right_content {
-      width: 50%;
-      float: left;
-      padding-right: 30px;
-      padding-top: 15px;
-      position: relative; }
-    .page-template-page-action_culturelle .content_left .inscrire {
-      border-color: white; }
-      .page-template-page-action_culturelle .content_left .inscrire span {
-        color: white; }
-    .page-template-page-action_culturelle .content_left .btn_inscription {
-      border-color: white; }
-  .page-template-page-action_culturelle .special_content {
-    padding: 35px;
-    overflow: hidden;
-    width: 100%;
-    -webkit-background-size: cover;
-    background-size: cover; }
-    .page-template-page-action_culturelle .special_content .left_content {
-      padding-right: 30px;
-      width: 50%;
-      float: left; }
-    .page-template-page-action_culturelle .special_content .right_content {
-      width: 50%;
-      float: right;
-      padding-left: 30px;
-      padding-top: 15px; }
-    .page-template-page-action_culturelle .special_content .titre_right_text {
-      color: #FFFFFF; }
-    .page-template-page-action_culturelle .special_content .txt_right_content {
-      color: #FFFFFF; }
-    .page-template-page-action_culturelle .special_content .croix_noir {
-      background-image: url("../images/croix_blanche.svg"); }
-    .page-template-page-action_culturelle .special_content .inscrire {
-      color: #FFFFFF;
-      background-color: #000000; }
-    .page-template-page-action_culturelle .special_content .btn_inscription {
-      color: #ED1E24; }
-  .page-template-page-action_culturelle .formulaire {
-    padding: 35px; }
-  .page-template-page-action_culturelle .titre_formulaire {
-    font-size: 18px;
-    text-align: center;
-    text-transform: uppercase; }
-  .page-template-page-action_culturelle .wpcf7-form {
-    width: 100%;
-    overflow: hidden;
-    margin-top: 60px; }
-    .page-template-page-action_culturelle .wpcf7-form input {
-      background-color: #F5F5F3;
-      padding: 5px;
-      font-size: 12px;
-      border: none;
-      margin-bottom: 15px; }
-    .page-template-page-action_culturelle .wpcf7-form select {
-      border: none;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      border-radius: 0;
-      font-size: 12px;
-      padding: 9px; }
-  .page-template-page-action_culturelle .inner_form_title {
-    margin-bottom: 24px;
-    font-size: 16px; }
-  .page-template-page-action_culturelle .formulaire_left, .page-template-page-action_culturelle .formulaire_right {
-    width: 50%;
-    float: left; }
-  .page-template-page-action_culturelle .formulaire_right input {
-    width: 100%; }
-  .page-template-page-action_culturelle #choix_un, .page-template-page-action_culturelle #choix_deux {
-    width: 70%; }
-  .page-template-page-action_culturelle #date_choix_un, .page-template-page-action_culturelle #date_choix_deux {
-    width: 25%;
-    padding: 4px; }
-  .page-template-page-action_culturelle #ecole, .page-template-page-action_culturelle #adresse, .page-template-page-action_culturelle #classe, .page-template-page-action_culturelle #nombre_participant {
-    width: 49%;
-    float: left; }
-  .page-template-page-action_culturelle #ecole, .page-template-page-action_culturelle #classe {
-    margin-right: 2%; }
-  .page-template-page-action_culturelle .formulaire_submit {
-    width: 100%;
-    text-align: center; }
-  .page-template-page-action_culturelle #inscrire {
-    background-color: #ffffff;
-    border: 1px solid #F5F5F3;
-    width: 100px;
-    padding: 5px 20px;
-    margin-top: 30px; }
-  .page-template-page-action_culturelle .suggestion {
-    padding: 35px;
-    background-color: #F5F3F3; }
-    .page-template-page-action_culturelle .suggestion .titre_sugg {
-      text-align: center;
-      font-size: 18px;
-      text-transform: uppercase;
-      margin-bottom: 35px; }
-    .page-template-page-action_culturelle .suggestion .left_event {
-      width: 75%;
-      float: left;
-      color: white;
-      padding-left: 12px;
-      padding-top: 25px; }
-    .page-template-page-action_culturelle .suggestion .right_event {
-      width: 25%;
-      float: left;
-      color: white;
-      text-align: center;
-      position: relative;
-      padding-top: 25px; }
-      .page-template-page-action_culturelle .suggestion .right_event:before {
-        content: '';
-        position: absolute;
-        top: 30px;
-        left: 0;
-        height: 50px;
-        width: 1px;
-        background-color: white;
-        -webkit-transform: rotate(30deg);
-        -moz-transform: rotate(30deg);
-        -ms-transform: rotate(30deg);
-        -o-transform: rotate(30deg);
-        transform: rotate(30deg);
-        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711)";
-        filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711); }
-    .page-template-page-action_culturelle .suggestion ul {
-      overflow: hidden;
-      width: 100%; }
-    .page-template-page-action_culturelle .suggestion li {
-      width: 31.3%;
-      min-height: 175px;
-      color: white;
-      background-color: darkslategrey;
-      -webkit-background-size: cover;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      margin-right: 3%;
-      float: left; }
-      .page-template-page-action_culturelle .suggestion li:last-of-type {
-        margin-right: 0; }
-    .page-template-page-action_culturelle .suggestion p {
-      margin-bottom: 0; }
-      .page-template-page-action_culturelle .suggestion p.cat_calendrier {
-        color: #FDE608;
-        font-size: 12px; }
-      .page-template-page-action_culturelle .suggestion p.titre_calendrier {
-        max-width: 250px;
-        font-size: 18px; }
-      .page-template-page-action_culturelle .suggestion p.day_calendrier {
-        font-size: 25px;
-        font-weight: 500; }
-      .page-template-page-action_culturelle .suggestion p.month_calendrier, .page-template-page-action_culturelle .suggestion p.lieu_calendrier {
-        font-size: 12px; }
-      .page-template-page-action_culturelle .suggestion p:nth-of-type(3) {
-        margin-bottom: 50px; }
-    .page-template-page-action_culturelle .suggestion .link_calendrier {
-      display: block;
-      margin-bottom: 25px;
-      position: relative; }
-      .page-template-page-action_culturelle .suggestion .link_calendrier:after {
-        content: '';
-        position: absolute;
-        background-color: white;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 1px;
-        -webkit-transition: 0.6s;
-        -khtml-transition: 0.6s;
-        -moz-transition: 0.6s;
-        -ms-transition: 0.6s;
-        -o-transition: 0.6s;
-        transition: 0.6s; }
-      .page-template-page-action_culturelle .suggestion .link_calendrier:hover {
-        font-weight: inherit; }
-        .page-template-page-action_culturelle .suggestion .link_calendrier:hover:after {
-          width: 100px; }
-  .page-template-page-action_culturelle .parcours {
-    padding: 35px;
-    text-align: center; }
-    .page-template-page-action_culturelle .parcours .contenu_grid {
-      border: 1px solid #F3F3F3;
-      padding: 35px; }
-    .page-template-page-action_culturelle .parcours .titre_parcours {
-      font-size: 34px;
-      position: relative;
-      padding-bottom: 10px;
-      margin-bottom: 25px; }
-      .page-template-page-action_culturelle .parcours .titre_parcours:after {
-        content: '';
-        position: absolute;
-        background-color: #ED1E24;
-        width: 65px;
-        height: 2px;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%); }
-  @media screen and (max-width: 768px) {
-    .page-template-page-action_culturelle .sub_menu li {
-      display: block;
-      width: 100%;
-      text-align: center; }
-      .page-template-page-action_culturelle .sub_menu li:after {
-        display: none; }
-    .page-template-page-action_culturelle .content_right .left_content {
-      float: none;
-      width: 100%;
-      padding: 0;
-      margin-bottom: 25px; }
-    .page-template-page-action_culturelle .content_right .right_content {
-      float: none;
-      width: 100%;
-      padding: 0; }
-    .page-template-page-action_culturelle .content_left .left_content {
-      float: none;
-      width: 100%;
-      padding: 0;
-      margin-bottom: 25px; }
-    .page-template-page-action_culturelle .content_left .right_content {
-      float: none;
-      width: 100%;
-      padding: 0; }
-    .page-template-page-action_culturelle .special_content .left_content {
-      float: none;
-      width: 100%;
-      padding: 0;
-      margin-bottom: 25px; }
-    .page-template-page-action_culturelle .special_content .right_content {
-      float: none;
-      width: 100%;
-      padding: 0; }
-    .page-template-page-action_culturelle .suggestion li {
-      width: 100%;
-      margin-bottom: 35px; }
-    .page-template-page-action_culturelle .inner_form_title {
-      margin-bottom: 24px;
-      font-size: 16px; }
-    .page-template-page-action_culturelle .formulaire_left, .page-template-page-action_culturelle .formulaire_right {
-      width: 80%;
-      float: none;
-      margin: 0 auto; }
-    .page-template-page-action_culturelle #choix_un, .page-template-page-action_culturelle #choix_deux {
-      width: 70%; }
-    .page-template-page-action_culturelle #date_choix_un, .page-template-page-action_culturelle #date_choix_deux {
-      width: 25%;
-      padding: 4px; }
-    .page-template-page-action_culturelle #ecole, .page-template-page-action_culturelle #adresse, .page-template-page-action_culturelle #classe, .page-template-page-action_culturelle #nombre_participant {
-      width: 100%;
-      float: none; } }
-
-.page-template-page-historique {
-  /***********************
-RESPONSIVE
-***********************/
-  /*****1600px*****/
-  /*****1200px*****/
-  /*****1024px*****/ }
-  .page-template-page-historique .contenu_grid {
-    overflow: inherit; }
-  .page-template-page-historique .titre_date {
-    font-size: 60px;
-    color: #ED1E24; }
-  .page-template-page-historique .timeline {
-    position: relative; }
-    .page-template-page-historique .timeline:before {
-      content: '';
-      position: absolute;
-      top: -40px;
-      left: 50%;
-      bottom: -15px;
-      width: 1px;
-      background-color: #ED1E24; }
-  .page-template-page-historique .date_finale {
-    position: relative;
-    height: 420px;
-    width: 100%;
-    text-align: center;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat; }
-    .page-template-page-historique .date_finale .contenu_grid {
-      position: absolute;
-      bottom: 50px;
-      left: 50%;
-      transform: translateX(-50%); }
-    .page-template-page-historique .date_finale .red_cross {
-      height: 41px;
-      width: 41px;
-      background-image: url("../images/croix_rouge.svg");
-      position: relative;
-      display: block;
-      margin: 0 auto; }
-    .page-template-page-historique .date_finale .date_center_rouge {
-      color: #ED1E24;
-      font-size: 60px; }
-  .page-template-page-historique .date_right {
-    -webkit-background-size: cover;
-    background-size: cover;
-    height: 315px;
-    width: 100%;
-    overflow: hidden; }
-    .page-template-page-historique .date_right .visuel_date {
-      width: 50%;
-      float: left;
-      position: relative;
-      text-align: center; }
-    .page-template-page-historique .date_right img {
-      height: 320px;
-      width: auto; }
-    .page-template-page-historique .date_right .content_date {
-      width: 50%;
-      float: right;
-      padding: 80px 35px 35px 90px; }
-  .page-template-page-historique .date_left {
-    padding: 35px;
-    height: 315px;
-    width: 100%; }
-    .page-template-page-historique .date_left .visuel_date {
-      width: 50%;
-      height: 100%;
-      float: right;
-      position: relative; }
-    .page-template-page-historique .date_left .image_test {
-      position: absolute;
-      height: 280px;
-      width: 320px;
-      margin-top: 50px;
-      -webkit-background-size: cover;
-      background-size: cover;
-      left: calc( 50% - 157.5px); }
-    .page-template-page-historique .date_left .red_cross {
-      height: 41px;
-      width: 41px;
-      background-image: url("../images/croix_rouge.svg");
-      position: absolute;
-      display: block;
-      margin: 0 auto;
-      left: 10%;
-      top: 10px; }
-    .page-template-page-historique .date_left .content_date {
-      width: 50%;
-      float: left;
-      text-align: right;
-      padding: 35px 90px 35px 35px; }
-  .page-template-page-historique .date_debut {
-    padding-top: 25px;
-    height: 420px;
-    width: 100%;
-    text-align: center;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat; }
-    .page-template-page-historique .date_debut .date_center_rouge {
-      color: #ED1E24;
-      font-size: 60px; }
-    .page-template-page-historique .date_debut img {
-      width: 200px; }
-    .page-template-page-historique .date_debut .red_cross {
-      height: 41px;
-      width: 41px;
-      background-image: url("../images/croix_rouge.svg");
-      position: relative;
-      display: block;
-      margin: 0 auto; }
-  @media screen and (max-width: 1024px) {
-    .page-template-page-historique .intro_histo {
-      padding: 0 35px; }
-    .page-template-page-historique .timeline:before {
-      left: 30px; }
-    .page-template-page-historique .date_finale .red_cross {
-      margin: 0 0 0 10px; }
-    .page-template-page-historique .date_right {
-      height: auto; }
-      .page-template-page-historique .date_right .contenu_grid {
-        padding: 35px; }
-      .page-template-page-historique .date_right .visuel_date {
-        text-align: inherit;
-        width: 100%;
-        float: none; }
-      .page-template-page-historique .date_right img {
-        height: inherit; }
-      .page-template-page-historique .date_right .content_date {
-        padding: 0;
-        width: 100%;
-        float: none; }
-    .page-template-page-historique .date_left {
-      height: auto; }
-      .page-template-page-historique .date_left .visuel_date {
-        width: 100%;
-        height: 100%;
-        float: none;
-        position: relative;
-        display: block; }
-      .page-template-page-historique .date_left .image_test {
-        position: inherit;
-        margin-top: 0px;
-        -webkit-background-size: cover;
-        background-size: cover;
-        left: 0;
-        width: 100%; }
-      .page-template-page-historique .date_left .red_cross {
-        display: none; }
-      .page-template-page-historique .date_left .content_date {
-        width: 100%;
-        float: none;
-        text-align: left;
-        padding: 0; }
-    .page-template-page-historique .date_debut {
-      height: auto;
-      padding-bottom: 35px; }
-      .page-template-page-historique .date_debut .red_cross {
-        margin: 0 0 0 10px; } }
-
-.page-template-page-mecenat {
-  /***********************
-RESPONSIVE
-***********************/
-  /*****1600px*****/
-  /*****1200px*****/
-  /*****1024px*****/
-  /*****900px*****/ }
-  .page-template-page-mecenat .top_page_mecenat {
-    padding: 35px;
-    height: 710px;
-    width: 100%;
-    background-image: url("http://lorempixel.com/1600/700/abstract/4");
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat; }
-    .page-template-page-mecenat .top_page_mecenat .contenu_grid {
-      overflow: inherit; }
-    .page-template-page-mecenat .top_page_mecenat .title {
-      font-size: 60px;
-      margin-bottom: 15px;
-      color: black; }
-      .page-template-page-mecenat .top_page_mecenat .title span {
-        color: white; }
-    .page-template-page-mecenat .top_page_mecenat .btn_savoir_plus {
-      display: block;
-      position: relative;
-      padding: 5px 0;
-      cursor: pointer;
-      color: black; }
-      .page-template-page-mecenat .top_page_mecenat .btn_savoir_plus:after {
-        content: '';
-        position: absolute;
-        background-color: black;
-        bottom: 0;
-        left: 0px;
-        width: 0;
-        height: 1px;
-        -webkit-transition: 0.6s;
-        -khtml-transition: 0.6s;
-        -moz-transition: 0.6s;
-        -ms-transition: 0.6s;
-        -o-transition: 0.6s;
-        transition: 0.6s; }
-      .page-template-page-mecenat .top_page_mecenat .btn_savoir_plus:hover {
-        font-weight: inherit; }
-        .page-template-page-mecenat .top_page_mecenat .btn_savoir_plus:hover:after {
-          width: 70px; }
-    .page-template-page-mecenat .top_page_mecenat .intro_text {
-      font-size: 12px;
-      max-width: 320px;
-      margin-top: 15px;
-      color: black;
-      position: relative; }
-    .page-template-page-mecenat .top_page_mecenat .black_cross {
-      position: absolute;
-      right: -20px;
-      bottom: -20px;
-      height: 30px;
-      width: 30px;
-      background-image: url("../images/croix_noir.svg"); }
-  .page-template-page-mecenat .pourquoi_rejoindre {
-    padding: 35px;
-    width: 100%; }
-    .page-template-page-mecenat .pourquoi_rejoindre .rejoindre {
-      height: 370px;
-      width: 46%;
-      margin: 1%;
-      float: left;
-      border: 1px solid #F5F3F3;
-      text-align: center;
-      padding: 0px 50px; }
-    .page-template-page-mecenat .pourquoi_rejoindre .align {
-      display: table-cell;
-      vertical-align: middle;
-      height: 370px; }
-    .page-template-page-mecenat .pourquoi_rejoindre .titre_pourquoi {
-      font-size: 34px;
-      position: relative;
-      padding-bottom: 10px;
-      margin-bottom: 25px; }
-      .page-template-page-mecenat .pourquoi_rejoindre .titre_pourquoi:after {
-        content: '';
-        position: absolute;
-        width: 65px;
-        height: 2px;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #EBD519; }
-    .page-template-page-mecenat .pourquoi_rejoindre .txt_pourquoi {
-      font-size: 14px; }
-  .page-template-page-mecenat .don {
-    margin-bottom: 65px; }
-    .page-template-page-mecenat .don .formule {
-      width: 33.333%;
-      text-align: center;
-      padding: 0px 50px;
-      height: 435px;
-      display: table-cell;
-      vertical-align: middle; }
-    .page-template-page-mecenat .don .encadre {
-      margin: 0 auto;
-      margin-bottom: 20px;
-      padding: 5px;
-      text-transform: uppercase; }
-    .page-template-page-mecenat .don .titre {
-      font-size: 34px;
-      position: relative;
-      padding-bottom: 10px;
-      margin-bottom: 25px; }
-      .page-template-page-mecenat .don .titre:after {
-        content: '';
-        position: absolute;
-        width: 65px;
-        height: 2px;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%); }
-    .page-template-page-mecenat .don .plus {
-      font-size: 25px; }
-    .page-template-page-mecenat .don .btn_don {
-      width: 200px;
-      margin: 0 auto;
-      margin-top: 70px;
-      padding: 5px;
-      text-transform: uppercase; }
-      .page-template-page-mecenat .don .btn_don a {
-        display: block;
-        height: 100%;
-        width: 100%; }
-    .page-template-page-mecenat .don .ami {
-      background-color: #F5F3F3; }
-      .page-template-page-mecenat .don .ami .titre:after {
-        background-color: #EBD519; }
-      .page-template-page-mecenat .don .ami .encadre {
-        background-color: #EBD519;
-        width: 50px; }
-      .page-template-page-mecenat .don .ami .btn_don {
-        color: #FFF;
-        background-color: #000; }
-    .page-template-page-mecenat .don .adhesion {
-      background-color: #EBD519;
-      border-right: 2px solid #FFFFFF;
-      border-left: 2px solid #FFFFFF; }
-      .page-template-page-mecenat .don .adhesion .encadre {
-        background-color: #000000;
-        color: #EBD519;
-        width: 225px; }
-      .page-template-page-mecenat .don .adhesion .btn_don {
-        color: #000000;
-        background-color: #ffffff; }
-    .page-template-page-mecenat .don .en_ligne {
-      background-color: #EBD519; }
-      .page-template-page-mecenat .don .en_ligne .titre:after {
-        background-color: #ffffff; }
-      .page-template-page-mecenat .don .en_ligne .encadre {
-        color: #FFF;
-        background-color: #000;
-        width: 250px; }
-      .page-template-page-mecenat .don .en_ligne .btn_don {
-        color: #FFF;
-        background-color: #000; }
-  .page-template-page-mecenat .participez_creation {
-    padding: 35px;
-    width: 100%;
-    margin-bottom: 50px; }
-  .page-template-page-mecenat .content_titre {
-    width: 50%;
-    float: left;
-    text-align: right;
-    padding-right: 65px; }
-  .page-template-page-mecenat .titre_crea {
-    font-size: 65px;
-    color: #EBD519;
-    margin-bottom: 25px;
-    position: relative; }
-  .page-template-page-mecenat .yellow_cross {
-    height: 40px;
-    width: 40px;
-    position: absolute;
-    right: -40px;
-    bottom: -30px;
-    background-image: url("../images/croix_jaune.svg"); }
-  .page-template-page-mecenat .sous_titre_crea {
-    font-size: 24px; }
-  .page-template-page-mecenat .content_text {
-    width: 50%;
-    float: left;
-    font-size: 14px;
-    padding-top: 25px;
-    position: relative; }
-    .page-template-page-mecenat .content_text .black_cross {
-      position: absolute;
-      left: -15px;
-      top: 10px;
-      height: 15px;
-      width: 15px;
-      background-image: url("../images/croix_noir.svg"); }
-  .page-template-page-mecenat .soutenir {
-    padding: 35px;
-    background-color: #EBD519;
-    position: relative;
-    height: 435px; }
-    .page-template-page-mecenat .soutenir .contenu_grid {
-      overflow: inherit; }
-      .page-template-page-mecenat .soutenir .contenu_grid .content_text {
-        float: right; }
-  .page-template-page-mecenat .btn_soutient {
-    border: 1px solid #FFFFFF;
-    text-transform: uppercase;
-    text-align: center;
-    margin: 65px auto 0;
-    max-width: 375px; }
-    .page-template-page-mecenat .btn_soutient a {
-      display: block;
-      height: 100%;
-      width: 100%;
-      padding: 15px 15px; }
-  .page-template-page-mecenat .gallerie {
-    width: 50%;
-    float: left;
-    padding-right: 65px; }
-  .page-template-page-mecenat .thumb {
-    position: absolute;
-    top: -65px;
-    max-width: 435px; }
-    .page-template-page-mecenat .thumb img {
-      width: 100%; }
-  .page-template-page-mecenat .miniatures {
-    position: absolute;
-    bottom: 35px;
-    margin-top: 15px;
-    overflow: hidden;
-    width: 100%;
-    max-width: 435px; }
-    .page-template-page-mecenat .miniatures img {
-      display: inline-block;
-      float: right;
-      width: 130px;
-      margin-left: 22px; }
-      .page-template-page-mecenat .miniatures img:last-of-type {
-        margin-left: 0px; }
-  .page-template-page-mecenat .contact {
-    padding: 65px; }
-  .page-template-page-mecenat .btn_contact {
-    width: 150px;
-    margin: 0 auto;
-    border: 1px solid #F5F5F3;
-    padding: 5px;
-    text-transform: uppercase;
-    text-align: center; }
-    .page-template-page-mecenat .btn_contact a {
-      display: block;
-      height: 100%;
-      width: 100%; }
-  @media screen and (max-width: 1024px) {
-    .page-template-page-mecenat .don .formule {
-      width: 100%;
-      height: auto;
-      display: block;
-      padding: 40px 50px; }
-    .page-template-page-mecenat .don .adhesion {
-      border-right: none;
-      border-left: none;
-      border-top: 2px solid #FFFFFF;
-      border-bottom: 2px solid #FFFFFF; }
-    .page-template-page-mecenat .participez_creation .content_titre {
-      width: 100%;
-      float: none;
-      text-align: left; }
-    .page-template-page-mecenat .participez_creation .content_text {
-      width: 100%;
-      float: none; }
-    .page-template-page-mecenat .soutenir {
-      overflow: hidden;
-      height: auto; }
-      .page-template-page-mecenat .soutenir .content_text {
-        width: 100%;
-        float: none;
-        display: block; }
-    .page-template-page-mecenat .gallerie {
-      width: 100%;
-      float: none;
-      display: block;
-      position: inherit;
-      text-align: center;
-      padding-right: 0; }
-      .page-template-page-mecenat .gallerie img {
-        margin: 0 auto;
-        position: inherit; }
-    .page-template-page-mecenat .thumb {
-      position: inherit;
-      margin: 0 auto; }
-      .page-template-page-mecenat .thumb img {
-        width: 100%;
-        max-width: 435px; }
-    .page-template-page-mecenat .miniatures {
-      position: inherit;
-      width: 100%;
-      margin: 0 auto;
-      margin-top: 35px; }
-      .page-template-page-mecenat .miniatures img {
-        float: none;
-        width: 100%; } }
-  @media screen and (max-width: 900px) {
-    .page-template-page-mecenat .pourquoi_rejoindre .rejoindre {
-      width: 100%;
-      float: none;
-      display: block;
-      min-height: inherit;
-      margin: 35px 0px; } }
 
 .section-adress-rennes {
   height: 574px;
@@ -4565,5 +3613,1343 @@ MEDIA QUERIES
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   /* Retina-specific stuff here */ }
+
+.page-template-page-abonnement {
+  /***********************
+RESPONSIVE
+***********************/
+  /*****1600px*****/
+  /*****1200px*****/
+  /*****1024px*****/
+  /*****900px*****/
+  /*****768px*****/ }
+  .page-template-page-abonnement .top_page_abo {
+    padding: 130px 35px 35px;
+    text-align: center; }
+    .page-template-page-abonnement .top_page_abo .abonne_plus_book {
+      font-size: 60px;
+      display: inline-block; }
+    .page-template-page-abonnement .top_page_abo .separator {
+      background-image: url("../images/croix_bleu.svg");
+      height: 35px;
+      width: 35px;
+      display: inline-block;
+      margin-left: 25px;
+      margin-right: 25px; }
+    .page-template-page-abonnement .top_page_abo .booked_date {
+      font-size: 38px;
+      color: #26A8E0;
+      margin-bottom: 35px; }
+    .page-template-page-abonnement .top_page_abo .btn_new {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      padding: 5px;
+      background-color: #26A8E0;
+      max-width: 100px;
+      margin: 0 auto 35px; }
+    .page-template-page-abonnement .top_page_abo .limite {
+      font-weight: 100; }
+  .page-template-page-abonnement .don .formule {
+    width: 33.333%;
+    text-align: center;
+    padding: 35px;
+    display: table-cell;
+    vertical-align: middle; }
+    .page-template-page-abonnement .don .formule ul {
+      width: 50%;
+      margin: 0 auto; }
+  .page-template-page-abonnement .don .encadre {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 5px;
+    text-transform: uppercase;
+    font-weight: 700; }
+  .page-template-page-abonnement .don .titre {
+    font-size: 34px;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-family: "Montserrat"; }
+    .page-template-page-abonnement .don .titre:after {
+      content: '';
+      position: absolute;
+      width: 65px;
+      height: 2px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%); }
+    .page-template-page-abonnement .don .titre .sous_titre_cadre {
+      font-size: 16px;
+      font-style: italic;
+      color: #26A8E0;
+      margin-top: 10px; }
+  .page-template-page-abonnement .don .plus {
+    font-size: 25px;
+    font-family: "Montserrat"; }
+  .page-template-page-abonnement .don .btn_don {
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 70px;
+    padding: 5px;
+    text-transform: uppercase; }
+    .page-template-page-abonnement .don .btn_don a {
+      display: block;
+      height: 100%;
+      width: 100%; }
+  .page-template-page-abonnement .don .ami {
+    background-color: #F5F3F3;
+    overflow: hidden;
+    position: relative; }
+    .page-template-page-abonnement .don .ami:hover .hover_don {
+      opacity: 1; }
+    .page-template-page-abonnement .don .ami .titre:after {
+      background-color: #26A8E0; }
+    .page-template-page-abonnement .don .ami .encadre {
+      background-color: #26A8E0;
+      color: #FFFFFF;
+      max-width: 130px; }
+    .page-template-page-abonnement .don .ami .btn_don {
+      color: #FFF;
+      background-color: #000; }
+  .page-template-page-abonnement .don .center {
+    border-right: 2px solid #FFFFFF;
+    border-left: 2px solid #FFFFFF; }
+  .page-template-page-abonnement .don .en_ligne {
+    background-color: #26A8E0; }
+    .page-template-page-abonnement .don .en_ligne .titre:after {
+      background-color: #ffffff; }
+    .page-template-page-abonnement .don .en_ligne .encadre {
+      color: #FFF;
+      background-color: #000;
+      width: 250px; }
+    .page-template-page-abonnement .don .en_ligne .btn_don {
+      color: #FFF;
+      background-color: #000;
+      font-weight: 400; }
+  .page-template-page-abonnement .don .hover_don {
+    background-color: #26A8E0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: 0.3s;
+    -khtml-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    .page-template-page-abonnement .don .hover_don .encadre {
+      background-color: #FFFFFF;
+      color: #26A8E0;
+      width: 225px;
+      margin-bottom: 50px; }
+    .page-template-page-abonnement .don .hover_don .btn_don {
+      color: #000000;
+      background-color: #ffffff;
+      margin-top: 35px; }
+  .page-template-page-abonnement .pourquoi_rejoindre {
+    padding: 35px;
+    width: 100%; }
+    .page-template-page-abonnement .pourquoi_rejoindre .rejoindre {
+      display: table;
+      height: 370px;
+      width: 46%;
+      margin: 1%;
+      float: left;
+      border: 1px solid #F5F3F3;
+      padding: 0px 50px; }
+    .page-template-page-abonnement .pourquoi_rejoindre .align_join {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      height: 370px; }
+    .page-template-page-abonnement .pourquoi_rejoindre .titre_pourquoi {
+      font-size: 34px;
+      position: relative;
+      padding-bottom: 10px;
+      margin-bottom: 25px;
+      font-family: "Montserrat";
+      width: 100%;
+      display: block;
+      text-align: center; }
+      .page-template-page-abonnement .pourquoi_rejoindre .titre_pourquoi:after {
+        content: '';
+        position: absolute;
+        width: 65px;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #26A8E0; }
+      .page-template-page-abonnement .pourquoi_rejoindre .titre_pourquoi .sous_titre_pourquoi {
+        font-size: 16px;
+        font-style: italic;
+        color: #26A8E0; }
+    .page-template-page-abonnement .pourquoi_rejoindre .txt_pourquoi {
+      font-size: 14px; }
+      .page-template-page-abonnement .pourquoi_rejoindre .txt_pourquoi .norm {
+        font-weight: 400; }
+  .page-template-page-abonnement .tarifs_reduits {
+    padding: 90px 35px;
+    text-align: center;
+    background-color: #F5F3F3; }
+    .page-template-page-abonnement .tarifs_reduits .plus {
+      margin-bottom: 15px; }
+      .page-template-page-abonnement .tarifs_reduits .plus img {
+        width: 17px; }
+    .page-template-page-abonnement .tarifs_reduits .accroche {
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-bottom: 15px; }
+    .page-template-page-abonnement .tarifs_reduits .texte {
+      font-weight: 300; }
+  .page-template-page-abonnement .bulletin_dl {
+    padding: 90px 35px;
+    background-color: #EBD519; }
+    .page-template-page-abonnement .bulletin_dl .btn_bulletin {
+      border: 1px solid black;
+      text-align: center;
+      text-transform: uppercase;
+      width: 415px;
+      margin: 0 auto;
+      font-weight: 400; }
+      .page-template-page-abonnement .bulletin_dl .btn_bulletin a {
+        display: block;
+        padding: 10px;
+        width: 100%;
+        height: 100%; }
+  .page-template-page-abonnement .tarifs {
+    padding: 35px; }
+    .page-template-page-abonnement .tarifs .title_tarif {
+      font-size: 18px;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 20px; }
+    .page-template-page-abonnement .tarifs .sous_titre_tarifs {
+      font-family: "Montserrat";
+      font-size: 16px;
+      font-style: italic;
+      color: #26A8E0;
+      text-align: center;
+      margin-bottom: 35px; }
+  .page-template-page-abonnement .tableau_tarifs {
+    width: 100%;
+    margin-bottom: 35px; }
+    .page-template-page-abonnement .tableau_tarifs .first_row {
+      background-color: #26A8E0;
+      color: #FFFFFF; }
+      .page-template-page-abonnement .tableau_tarifs .first_row .title_cell {
+        text-transform: uppercase; }
+    .page-template-page-abonnement .tableau_tarifs .row_tarif {
+      width: 100%;
+      overflow: hidden;
+      border-bottom: 2px solid #F5F5F5; }
+      .page-template-page-abonnement .tableau_tarifs .row_tarif .cell_tarif {
+        width: 25%;
+        float: left;
+        font-weight: 500;
+        text-align: center;
+        padding: 5px; }
+      .page-template-page-abonnement .tableau_tarifs .row_tarif .title_cell {
+        width: 50%;
+        font-weight: 300;
+        text-align: left;
+        padding-left: 10px; }
+        .page-template-page-abonnement .tableau_tarifs .row_tarif .title_cell:last-of-type {
+          text-align: center;
+          font-weight: 500; }
+      .page-template-page-abonnement .tableau_tarifs .row_tarif .cell_pdf {
+        width: 100%;
+        font-weight: 300;
+        font-size: 11px;
+        background-color: #F5F3F3;
+        color: #808080; }
+  .page-template-page-abonnement .carte_sortir {
+    text-align: center;
+    margin-bottom: 65px; }
+    .page-template-page-abonnement .carte_sortir .plus {
+      margin-bottom: 20px; }
+      .page-template-page-abonnement .carte_sortir .plus img {
+        width: 20px; }
+    .page-template-page-abonnement .carte_sortir .carte {
+      color: #26A8E0;
+      margin-bottom: 5px; }
+      .page-template-page-abonnement .carte_sortir .carte span {
+        font-weight: 400; }
+    .page-template-page-abonnement .carte_sortir .condition {
+      font-weight: 100; }
+  .page-template-page-abonnement .condition_details {
+    font-size: 11px;
+    color: #808080; }
+    .page-template-page-abonnement .condition_details .petit_deux {
+      margin-bottom: 15px; }
+  @media screen and (max-width: 1024px) {
+    .page-template-page-abonnement .don .formule {
+      width: 100%;
+      height: auto;
+      display: block;
+      padding: 40px 50px; }
+    .page-template-page-abonnement .don .center {
+      border-right: none;
+      border-left: none;
+      border-top: 2px solid #FFFFFF;
+      border-bottom: 2px solid #FFFFFF; }
+    .page-template-page-abonnement .don .ami:hover .hover_don {
+      opacity: 0; } }
+  @media screen and (max-width: 900px) {
+    .page-template-page-abonnement .pourquoi_rejoindre .rejoindre {
+      width: 100%;
+      float: none;
+      display: table;
+      min-height: inherit;
+      margin: 35px 0px; } }
+  @media screen and (max-width: 768px) {
+    .page-template-page-abonnement .top_page_abo {
+      padding-top: 35px; }
+      .page-template-page-abonnement .top_page_abo .abonne_plus_book {
+        display: block; } }
+
+.page-template-page-action_culturelle {
+  /*LES CLASSES*/
+  /******RESPONSIVE*****/ }
+  .page-template-page-action_culturelle .top_page_action {
+    padding: 35px;
+    padding-top: 180px;
+    height: 710px;
+    width: 100%;
+    background-color: darkslategrey;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    .page-template-page-action_culturelle .top_page_action .index {
+      margin-bottom: 25px; }
+    .page-template-page-action_culturelle .top_page_action li {
+      font-size: 12px;
+      color: #ED1E24; }
+    .page-template-page-action_culturelle .top_page_action .title {
+      font-size: 60px;
+      margin-bottom: 15px;
+      color: white;
+      font-family: "Montserrat"; }
+      .page-template-page-action_culturelle .top_page_action .title span {
+        color: #ED1E24; }
+    .page-template-page-action_culturelle .top_page_action .tag {
+      font-size: 12px;
+      text-transform: uppercase;
+      overflow: hidden; }
+      .page-template-page-action_culturelle .top_page_action .tag div {
+        display: inline-block;
+        float: left; }
+    .page-template-page-action_culturelle .top_page_action .btn_red {
+      cursor: pointer;
+      padding: 5px 10px;
+      background-color: #ED1E24;
+      color: white;
+      font-weight: 700; }
+    .page-template-page-action_culturelle .top_page_action .btn_savoir_plus {
+      display: block;
+      position: relative;
+      padding: 5px 10px;
+      cursor: pointer;
+      color: white; }
+      .page-template-page-action_culturelle .top_page_action .btn_savoir_plus:after {
+        content: '';
+        position: absolute;
+        background-color: white;
+        bottom: 0;
+        left: 10px;
+        width: 0;
+        height: 1px;
+        -webkit-transition: 0.6s;
+        -khtml-transition: 0.6s;
+        -moz-transition: 0.6s;
+        -ms-transition: 0.6s;
+        -o-transition: 0.6s;
+        transition: 0.6s; }
+      .page-template-page-action_culturelle .top_page_action .btn_savoir_plus:hover {
+        font-weight: inherit; }
+        .page-template-page-action_culturelle .top_page_action .btn_savoir_plus:hover:after {
+          width: 70px; }
+    .page-template-page-action_culturelle .top_page_action .intro_text {
+      font-size: 12px;
+      max-width: 320px;
+      margin-top: 15px;
+      color: white; }
+  .page-template-page-action_culturelle .sub_menu {
+    padding: 20px 35px 0 35px;
+    background-color: #F5F3F3; }
+    .page-template-page-action_culturelle .sub_menu ul li {
+      display: inline-block;
+      float: left;
+      font-size: 15px;
+      margin-right: 50px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      position: relative;
+      padding-bottom: 5px; }
+      .page-template-page-action_culturelle .sub_menu ul li:after {
+        content: '';
+        position: absolute;
+        background-color: black;
+        bottom: 0;
+        left: 0px;
+        width: 0;
+        height: 1px;
+        -webkit-transition: 0.6s;
+        -khtml-transition: 0.6s;
+        -moz-transition: 0.6s;
+        -ms-transition: 0.6s;
+        -o-transition: 0.6s;
+        transition: 0.6s; }
+      .page-template-page-action_culturelle .sub_menu ul li:hover:after {
+        width: 100%; }
+  .page-template-page-action_culturelle .titre_content {
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: #ED1E24;
+    text-align: right;
+    position: relative;
+    font-family: "Montserrat"; }
+  .page-template-page-action_culturelle .croix_rouge {
+    background-image: url("../images/croix_rouge.svg");
+    height: 40px;
+    width: 40px;
+    display: block;
+    position: absolute;
+    right: -32px; }
+  .page-template-page-action_culturelle img {
+    width: 100%; }
+  .page-template-page-action_culturelle .titre_right_text {
+    padding-left: 25px;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    position: relative; }
+  .page-template-page-action_culturelle .txt_right_content {
+    padding-left: 25px;
+    font-size: 12px;
+    margin-bottom: 30px; }
+  .page-template-page-action_culturelle .croix_noir {
+    background-image: url("../images/croix_noir.svg");
+    height: 15px;
+    width: 15px;
+    display: block;
+    position: absolute;
+    top: -12px;
+    left: 8px; }
+  .page-template-page-action_culturelle .qui {
+    padding-left: 25px;
+    font-size: 10px;
+    color: #828080;
+    margin-bottom: 35px; }
+  .page-template-page-action_culturelle .inscrire {
+    border: 1px solid #D9D2C4;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: "Montserrat"; }
+    .page-template-page-action_culturelle .inscrire span {
+      color: #D9D2C4; }
+  .page-template-page-action_culturelle .ligne_un {
+    font-size: 21px; }
+    .page-template-page-action_culturelle .ligne_un div {
+      display: inline; }
+  .page-template-page-action_culturelle .ligne_deux {
+    font-size: 15px; }
+    .page-template-page-action_culturelle .ligne_deux div {
+      display: inline; }
+  .page-template-page-action_culturelle .ville {
+    color: #ED1E24; }
+  .page-template-page-action_culturelle .salle {
+    font-style: italic; }
+  .page-template-page-action_culturelle .btn_inscription {
+    font-size: 12px;
+    border: 1px solid #D9D2C4;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 150px;
+    padding: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: "Kanit"; }
+    .page-template-page-action_culturelle .btn_inscription a {
+      display: block;
+      width: 100%;
+      height: 100%; }
+  .page-template-page-action_culturelle .content_right {
+    padding: 35px;
+    overflow: hidden;
+    width: 100%; }
+    .page-template-page-action_culturelle .content_right .left_content {
+      padding-right: 30px;
+      width: 50%;
+      float: left; }
+    .page-template-page-action_culturelle .content_right .right_content {
+      width: 50%;
+      float: right;
+      padding-left: 30px;
+      padding-top: 15px; }
+  .page-template-page-action_culturelle .content_left {
+    background-color: #D9D2C4;
+    padding: 35px;
+    overflow: hidden;
+    width: 100%; }
+    .page-template-page-action_culturelle .content_left .left_content {
+      padding-left: 30px;
+      width: 50%;
+      float: right; }
+    .page-template-page-action_culturelle .content_left .titre_content {
+      text-align: left; }
+    .page-template-page-action_culturelle .content_left .croix_rouge {
+      left: -32px;
+      top: inherit; }
+    .page-template-page-action_culturelle .content_left .right_content {
+      width: 50%;
+      float: left;
+      padding-right: 30px;
+      padding-top: 15px;
+      position: relative; }
+    .page-template-page-action_culturelle .content_left .inscrire {
+      border-color: white; }
+      .page-template-page-action_culturelle .content_left .inscrire span {
+        color: white; }
+    .page-template-page-action_culturelle .content_left .btn_inscription {
+      border-color: white; }
+  .page-template-page-action_culturelle .special_content {
+    padding: 35px;
+    overflow: hidden;
+    width: 100%;
+    -webkit-background-size: cover;
+    background-size: cover; }
+    .page-template-page-action_culturelle .special_content .left_content {
+      padding-right: 30px;
+      width: 50%;
+      float: left; }
+    .page-template-page-action_culturelle .special_content .right_content {
+      width: 50%;
+      float: right;
+      padding-left: 30px;
+      padding-top: 15px; }
+    .page-template-page-action_culturelle .special_content .titre_right_text {
+      color: #FFFFFF; }
+    .page-template-page-action_culturelle .special_content .txt_right_content {
+      color: #FFFFFF; }
+    .page-template-page-action_culturelle .special_content .croix_noir {
+      background-image: url("../images/croix_blanche.svg"); }
+    .page-template-page-action_culturelle .special_content .inscrire {
+      color: #FFFFFF;
+      background-color: #000000; }
+    .page-template-page-action_culturelle .special_content .btn_inscription {
+      color: #ED1E24; }
+  .page-template-page-action_culturelle .formulaire {
+    padding: 35px; }
+  .page-template-page-action_culturelle .titre_formulaire {
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase; }
+  .page-template-page-action_culturelle .wpcf7-form {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 60px; }
+    .page-template-page-action_culturelle .wpcf7-form input {
+      background-color: #F5F5F3;
+      padding: 5px;
+      font-size: 12px;
+      border: none;
+      margin-bottom: 15px; }
+    .page-template-page-action_culturelle .wpcf7-form select {
+      border: none;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      font-size: 12px;
+      padding: 9px; }
+  .page-template-page-action_culturelle .inner_form_title {
+    margin-bottom: 24px;
+    font-size: 16px; }
+  .page-template-page-action_culturelle .formulaire_left, .page-template-page-action_culturelle .formulaire_right {
+    width: 50%;
+    float: left; }
+  .page-template-page-action_culturelle .formulaire_right input {
+    width: 100%; }
+  .page-template-page-action_culturelle #choix_un, .page-template-page-action_culturelle #choix_deux {
+    width: 70%; }
+  .page-template-page-action_culturelle #date_choix_un, .page-template-page-action_culturelle #date_choix_deux {
+    width: 25%;
+    padding: 4px; }
+  .page-template-page-action_culturelle #ecole, .page-template-page-action_culturelle #adresse, .page-template-page-action_culturelle #classe, .page-template-page-action_culturelle #nombre_participant {
+    width: 49%;
+    float: left; }
+  .page-template-page-action_culturelle #ecole, .page-template-page-action_culturelle #classe {
+    margin-right: 2%; }
+  .page-template-page-action_culturelle .formulaire_submit {
+    width: 100%;
+    text-align: center; }
+  .page-template-page-action_culturelle #inscrire {
+    background-color: #ffffff;
+    border: 1px solid #F5F5F3;
+    width: 100px;
+    padding: 5px 20px;
+    margin-top: 30px; }
+  .page-template-page-action_culturelle .suggestion {
+    padding: 35px;
+    background-color: #F5F3F3; }
+    .page-template-page-action_culturelle .suggestion .titre_sugg {
+      text-align: center;
+      font-size: 18px;
+      text-transform: uppercase;
+      margin-bottom: 35px; }
+    .page-template-page-action_culturelle .suggestion .left_event {
+      width: 75%;
+      float: left;
+      color: white;
+      padding-left: 12px;
+      padding-top: 25px;
+      font-family: "Montserrat"; }
+    .page-template-page-action_culturelle .suggestion .right_event {
+      width: 25%;
+      float: left;
+      color: white;
+      text-align: center;
+      position: relative;
+      padding-top: 25px; }
+      .page-template-page-action_culturelle .suggestion .right_event:before {
+        content: '';
+        position: absolute;
+        top: 30px;
+        left: 0;
+        height: 50px;
+        width: 1px;
+        background-color: white;
+        -webkit-transform: rotate(30deg);
+        -moz-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+        -o-transform: rotate(30deg);
+        transform: rotate(30deg);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711)";
+        filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711); }
+    .page-template-page-action_culturelle .suggestion ul {
+      overflow: hidden;
+      width: 100%; }
+    .page-template-page-action_culturelle .suggestion li {
+      width: 31.3%;
+      min-height: 175px;
+      color: white;
+      background-color: darkslategrey;
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-right: 3%;
+      float: left; }
+      .page-template-page-action_culturelle .suggestion li:last-of-type {
+        margin-right: 0; }
+    .page-template-page-action_culturelle .suggestion p {
+      margin-bottom: 0; }
+      .page-template-page-action_culturelle .suggestion p.cat_calendrier {
+        color: #FDE608;
+        font-size: 12px; }
+      .page-template-page-action_culturelle .suggestion p.titre_calendrier {
+        max-width: 250px;
+        font-size: 18px; }
+      .page-template-page-action_culturelle .suggestion p.day_calendrier {
+        font-size: 25px;
+        font-weight: 500; }
+      .page-template-page-action_culturelle .suggestion p.month_calendrier, .page-template-page-action_culturelle .suggestion p.lieu_calendrier {
+        font-size: 12px; }
+      .page-template-page-action_culturelle .suggestion p:nth-of-type(3) {
+        margin-bottom: 50px; }
+    .page-template-page-action_culturelle .suggestion .link_calendrier {
+      display: block;
+      margin-bottom: 25px;
+      position: relative;
+      font-family: "Kanit"; }
+      .page-template-page-action_culturelle .suggestion .link_calendrier:after {
+        content: '';
+        position: absolute;
+        background-color: white;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        -webkit-transition: 0.6s;
+        -khtml-transition: 0.6s;
+        -moz-transition: 0.6s;
+        -ms-transition: 0.6s;
+        -o-transition: 0.6s;
+        transition: 0.6s; }
+      .page-template-page-action_culturelle .suggestion .link_calendrier:hover {
+        font-weight: inherit; }
+        .page-template-page-action_culturelle .suggestion .link_calendrier:hover:after {
+          width: 100px; }
+  .page-template-page-action_culturelle .parcours {
+    padding: 35px;
+    text-align: center; }
+    .page-template-page-action_culturelle .parcours .contenu_grid {
+      border: 1px solid #F3F3F3;
+      padding: 35px; }
+    .page-template-page-action_culturelle .parcours .titre_parcours {
+      font-size: 34px;
+      position: relative;
+      padding-bottom: 10px;
+      margin-bottom: 25px;
+      font-family: "Montserrat"; }
+      .page-template-page-action_culturelle .parcours .titre_parcours:after {
+        content: '';
+        position: absolute;
+        background-color: #ED1E24;
+        width: 65px;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%); }
+  @media screen and (max-width: 768px) {
+    .page-template-page-action_culturelle .top_page_action {
+      padding-top: 35px; }
+    .page-template-page-action_culturelle .sub_menu li {
+      display: block;
+      width: 100%;
+      text-align: center; }
+      .page-template-page-action_culturelle .sub_menu li:after {
+        display: none; }
+    .page-template-page-action_culturelle .content_right .left_content {
+      float: none;
+      width: 100%;
+      padding: 0;
+      margin-bottom: 25px; }
+    .page-template-page-action_culturelle .content_right .right_content {
+      float: none;
+      width: 100%;
+      padding: 0; }
+    .page-template-page-action_culturelle .content_left .left_content {
+      float: none;
+      width: 100%;
+      padding: 0;
+      margin-bottom: 25px; }
+    .page-template-page-action_culturelle .content_left .right_content {
+      float: none;
+      width: 100%;
+      padding: 0; }
+    .page-template-page-action_culturelle .special_content .left_content {
+      float: none;
+      width: 100%;
+      padding: 0;
+      margin-bottom: 25px; }
+    .page-template-page-action_culturelle .special_content .right_content {
+      float: none;
+      width: 100%;
+      padding: 0; }
+    .page-template-page-action_culturelle .suggestion li {
+      width: 100%;
+      margin-bottom: 35px; }
+    .page-template-page-action_culturelle .inner_form_title {
+      margin-bottom: 24px;
+      font-size: 16px; }
+    .page-template-page-action_culturelle .formulaire_left, .page-template-page-action_culturelle .formulaire_right {
+      width: 80%;
+      float: none;
+      margin: 0 auto; }
+    .page-template-page-action_culturelle #choix_un, .page-template-page-action_culturelle #choix_deux {
+      width: 70%; }
+    .page-template-page-action_culturelle #date_choix_un, .page-template-page-action_culturelle #date_choix_deux {
+      width: 25%;
+      padding: 4px; }
+    .page-template-page-action_culturelle #ecole, .page-template-page-action_culturelle #adresse, .page-template-page-action_culturelle #classe, .page-template-page-action_culturelle #nombre_participant {
+      width: 100%;
+      float: none; } }
+
+.page-template-page-historique {
+  /***********************
+RESPONSIVE
+***********************/
+  /*****1600px*****/
+  /*****1200px*****/
+  /*****1024px*****/ }
+  .page-template-page-historique .contenu_grid {
+    overflow: inherit; }
+  .page-template-page-historique .titre_date {
+    font-size: 60px;
+    color: #ED1E24;
+    font-family: "Montserrat"; }
+  .page-template-page-historique .timeline {
+    position: relative; }
+    .page-template-page-historique .timeline:before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      bottom: -15px;
+      width: 1px;
+      background-color: #ED1E24; }
+  .page-template-page-historique .date_finale {
+    position: relative;
+    height: 420px;
+    width: 100%;
+    text-align: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    .page-template-page-historique .date_finale .contenu_grid {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%); }
+    .page-template-page-historique .date_finale .red_cross {
+      height: 41px;
+      width: 41px;
+      background-image: url("../images/croix_rouge.svg");
+      position: relative;
+      display: block;
+      margin: 0 auto; }
+    .page-template-page-historique .date_finale .date_center_rouge {
+      color: #ED1E24;
+      font-size: 60px;
+      font-family: "Montserrat"; }
+  .page-template-page-historique .date_right {
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 315px;
+    width: 100%;
+    overflow: hidden; }
+    .page-template-page-historique .date_right .visuel_date {
+      width: 50%;
+      float: left;
+      position: relative;
+      text-align: center; }
+    .page-template-page-historique .date_right img {
+      height: 320px;
+      width: auto; }
+    .page-template-page-historique .date_right .content_date {
+      width: 50%;
+      float: right;
+      padding: 80px 35px 35px 90px; }
+  .page-template-page-historique .date_left {
+    padding: 35px;
+    height: 315px;
+    width: 100%; }
+    .page-template-page-historique .date_left .visuel_date {
+      width: 50%;
+      height: 100%;
+      float: right;
+      position: relative; }
+    .page-template-page-historique .date_left .image_test {
+      position: absolute;
+      height: 280px;
+      width: 320px;
+      margin-top: 50px;
+      -webkit-background-size: cover;
+      background-size: cover;
+      left: calc( 50% - 157.5px); }
+    .page-template-page-historique .date_left .red_cross {
+      height: 41px;
+      width: 41px;
+      background-image: url("../images/croix_rouge.svg");
+      position: absolute;
+      display: block;
+      margin: 0 auto;
+      left: 10%;
+      top: 10px; }
+    .page-template-page-historique .date_left .content_date {
+      width: 50%;
+      float: left;
+      text-align: right;
+      padding: 35px 90px 35px 35px; }
+  .page-template-page-historique .date_debut {
+    padding-top: 25px;
+    height: 420px;
+    width: 100%;
+    text-align: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    .page-template-page-historique .date_debut .date_center_rouge {
+      color: #ED1E24;
+      font-size: 60px;
+      font-family: "Montserrat"; }
+    .page-template-page-historique .date_debut img {
+      width: 200px; }
+    .page-template-page-historique .date_debut .red_cross {
+      height: 41px;
+      width: 41px;
+      background-image: url("../images/croix_rouge.svg");
+      position: relative;
+      display: block;
+      margin: 0 auto; }
+  @media screen and (max-width: 1024px) {
+    .page-template-page-historique .intro_histo {
+      padding: 0 35px; }
+    .page-template-page-historique .timeline:before {
+      left: 30px; }
+    .page-template-page-historique .date_finale .red_cross {
+      margin: 0 0 0 10px; }
+    .page-template-page-historique .date_right {
+      height: auto; }
+      .page-template-page-historique .date_right .contenu_grid {
+        padding: 35px; }
+      .page-template-page-historique .date_right .visuel_date {
+        text-align: inherit;
+        width: 100%;
+        float: none; }
+      .page-template-page-historique .date_right img {
+        height: inherit; }
+      .page-template-page-historique .date_right .content_date {
+        padding: 0;
+        width: 100%;
+        float: none; }
+    .page-template-page-historique .date_left {
+      height: auto; }
+      .page-template-page-historique .date_left .visuel_date {
+        width: 100%;
+        height: 100%;
+        float: none;
+        position: relative;
+        display: block; }
+      .page-template-page-historique .date_left .image_test {
+        position: inherit;
+        margin-top: 0px;
+        -webkit-background-size: cover;
+        background-size: cover;
+        left: 0;
+        width: 100%; }
+      .page-template-page-historique .date_left .red_cross {
+        display: none; }
+      .page-template-page-historique .date_left .content_date {
+        width: 100%;
+        float: none;
+        text-align: left;
+        padding: 0; }
+    .page-template-page-historique .date_debut {
+      height: auto;
+      padding-bottom: 35px; }
+      .page-template-page-historique .date_debut .red_cross {
+        margin: 0 0 0 10px; } }
+
+.page-template-page-mecenat {
+  /***********************
+RESPONSIVE
+***********************/
+  /*****1600px*****/
+  /*****1200px*****/
+  /*****1024px*****/
+  /*****900px*****/ }
+  .page-template-page-mecenat .top_page_mecenat {
+    padding: 35px;
+    padding-top: 180px;
+    height: 710px;
+    width: 100%;
+    background-image: url("http://lorempixel.com/1600/700/abstract/4");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    .page-template-page-mecenat .top_page_mecenat .contenu_grid {
+      overflow: inherit; }
+    .page-template-page-mecenat .top_page_mecenat .title {
+      font-size: 60px;
+      margin-bottom: 15px;
+      color: black;
+      font-family: "Montserrat"; }
+      .page-template-page-mecenat .top_page_mecenat .title span {
+        color: white; }
+    .page-template-page-mecenat .top_page_mecenat .btn_savoir_plus {
+      display: block;
+      position: relative;
+      padding: 5px 0;
+      cursor: pointer;
+      color: black; }
+      .page-template-page-mecenat .top_page_mecenat .btn_savoir_plus:after {
+        content: '';
+        position: absolute;
+        background-color: black;
+        bottom: 0;
+        left: 0px;
+        width: 0;
+        height: 1px;
+        -webkit-transition: 0.6s;
+        -khtml-transition: 0.6s;
+        -moz-transition: 0.6s;
+        -ms-transition: 0.6s;
+        -o-transition: 0.6s;
+        transition: 0.6s; }
+      .page-template-page-mecenat .top_page_mecenat .btn_savoir_plus:hover {
+        font-weight: inherit; }
+        .page-template-page-mecenat .top_page_mecenat .btn_savoir_plus:hover:after {
+          width: 70px; }
+    .page-template-page-mecenat .top_page_mecenat .intro_text {
+      font-size: 12px;
+      max-width: 320px;
+      margin-top: 15px;
+      color: black;
+      position: relative; }
+    .page-template-page-mecenat .top_page_mecenat .black_cross {
+      position: absolute;
+      right: -20px;
+      bottom: -20px;
+      height: 30px;
+      width: 30px;
+      background-image: url("../images/croix_noir.svg"); }
+  .page-template-page-mecenat .pourquoi_rejoindre {
+    padding: 35px;
+    width: 100%; }
+    .page-template-page-mecenat .pourquoi_rejoindre .rejoindre {
+      height: 370px;
+      width: 46%;
+      margin: 1%;
+      float: left;
+      border: 1px solid #F5F3F3;
+      text-align: center;
+      padding: 0px 50px; }
+    .page-template-page-mecenat .pourquoi_rejoindre .align {
+      display: table-cell;
+      vertical-align: middle;
+      height: 370px; }
+    .page-template-page-mecenat .pourquoi_rejoindre .titre_pourquoi {
+      font-size: 34px;
+      position: relative;
+      padding-bottom: 10px;
+      margin-bottom: 25px;
+      font-family: "Montserrat"; }
+      .page-template-page-mecenat .pourquoi_rejoindre .titre_pourquoi:after {
+        content: '';
+        position: absolute;
+        width: 65px;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #EBD519; }
+    .page-template-page-mecenat .pourquoi_rejoindre .txt_pourquoi {
+      font-size: 14px; }
+      .page-template-page-mecenat .pourquoi_rejoindre .txt_pourquoi .norm {
+        font-weight: 400; }
+  .page-template-page-mecenat .don {
+    margin-bottom: 65px; }
+    .page-template-page-mecenat .don .formule {
+      width: 33.333%;
+      text-align: center;
+      padding: 35px;
+      display: table-cell;
+      vertical-align: middle; }
+      .page-template-page-mecenat .don .formule ul {
+        width: 50%;
+        margin: 0 auto; }
+    .page-template-page-mecenat .don .encadre {
+      margin: 0 auto;
+      margin-bottom: 20px;
+      padding: 5px;
+      text-transform: uppercase;
+      font-weight: 700; }
+    .page-template-page-mecenat .don .titre {
+      font-size: 34px;
+      position: relative;
+      padding-bottom: 10px;
+      margin-bottom: 25px;
+      font-family: "Montserrat"; }
+      .page-template-page-mecenat .don .titre:after {
+        content: '';
+        position: absolute;
+        width: 65px;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%); }
+      .page-template-page-mecenat .don .titre .sous_titre_cadre {
+        font-size: 16px;
+        font-style: italic;
+        color: #999999; }
+    .page-template-page-mecenat .don .plus {
+      font-size: 25px;
+      font-family: "Montserrat"; }
+    .page-template-page-mecenat .don .btn_don {
+      width: 200px;
+      margin: 0 auto;
+      margin-top: 70px;
+      padding: 5px;
+      text-transform: uppercase; }
+      .page-template-page-mecenat .don .btn_don a {
+        display: block;
+        height: 100%;
+        width: 100%; }
+    .page-template-page-mecenat .don .ami {
+      background-color: #F5F3F3;
+      overflow: hidden;
+      position: relative; }
+      .page-template-page-mecenat .don .ami:hover .hover_don {
+        opacity: 1; }
+      .page-template-page-mecenat .don .ami .titre:after {
+        background-color: #EBD519; }
+      .page-template-page-mecenat .don .ami .encadre {
+        background-color: #EBD519;
+        max-width: 130px; }
+      .page-template-page-mecenat .don .ami .btn_don {
+        color: #FFF;
+        background-color: #000; }
+    .page-template-page-mecenat .don .center {
+      border-right: 2px solid #FFFFFF;
+      border-left: 2px solid #FFFFFF; }
+    .page-template-page-mecenat .don .en_ligne {
+      background-color: #EBD519; }
+      .page-template-page-mecenat .don .en_ligne .titre:after {
+        background-color: #ffffff; }
+      .page-template-page-mecenat .don .en_ligne .encadre {
+        color: #FFF;
+        background-color: #000;
+        width: 250px; }
+      .page-template-page-mecenat .don .en_ligne .btn_don {
+        color: #FFF;
+        background-color: #000;
+        font-weight: 400; }
+    .page-template-page-mecenat .don .hover_don {
+      background-color: #EBD519;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: 0.3s;
+      -khtml-transition: 0.3s;
+      -moz-transition: 0.3s;
+      -ms-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
+      .page-template-page-mecenat .don .hover_don .encadre {
+        background-color: #000000;
+        color: #EBD519;
+        width: 225px;
+        margin-bottom: 50px; }
+      .page-template-page-mecenat .don .hover_don .btn_don {
+        color: #000000;
+        background-color: #ffffff; }
+  .page-template-page-mecenat .participez_creation {
+    padding: 35px;
+    width: 100%;
+    margin-bottom: 50px; }
+  .page-template-page-mecenat .content_titre {
+    width: 50%;
+    float: left;
+    text-align: right;
+    padding-right: 65px; }
+  .page-template-page-mecenat .titre_crea {
+    font-size: 65px;
+    color: #EBD519;
+    margin-bottom: 25px;
+    position: relative;
+    font-family: "Montserrat"; }
+  .page-template-page-mecenat .yellow_cross {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: -40px;
+    bottom: -30px;
+    background-image: url("../images/croix_jaune.svg"); }
+  .page-template-page-mecenat .sous_titre_crea {
+    font-size: 24px; }
+  .page-template-page-mecenat .content_text {
+    width: 50%;
+    float: left;
+    font-size: 14px;
+    padding-top: 25px;
+    position: relative; }
+    .page-template-page-mecenat .content_text .black_cross {
+      position: absolute;
+      left: -15px;
+      top: 10px;
+      height: 15px;
+      width: 15px;
+      background-image: url("../images/croix_noir.svg"); }
+  .page-template-page-mecenat .soutenir {
+    padding: 35px;
+    background-color: #EBD519;
+    position: relative;
+    height: 435px; }
+    .page-template-page-mecenat .soutenir .contenu_grid {
+      overflow: inherit; }
+      .page-template-page-mecenat .soutenir .contenu_grid .content_text {
+        float: right; }
+  .page-template-page-mecenat .btn_soutient {
+    border: 1px solid #FFFFFF;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 65px auto 0;
+    max-width: 375px;
+    font-weight: 700; }
+    .page-template-page-mecenat .btn_soutient a {
+      display: block;
+      height: 100%;
+      width: 100%;
+      padding: 15px 15px; }
+  .page-template-page-mecenat .gallerie {
+    width: 50%;
+    float: left;
+    padding-right: 65px; }
+  .page-template-page-mecenat .thumb {
+    position: absolute;
+    top: -65px;
+    max-width: 435px; }
+    .page-template-page-mecenat .thumb img {
+      width: 100%; }
+  .page-template-page-mecenat .miniatures {
+    position: absolute;
+    bottom: 35px;
+    margin-top: 15px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 435px; }
+    .page-template-page-mecenat .miniatures img {
+      display: inline-block;
+      float: right;
+      width: 130px;
+      margin-left: 22px; }
+      .page-template-page-mecenat .miniatures img:last-of-type {
+        margin-left: 0px; }
+  .page-template-page-mecenat .contact {
+    padding: 65px; }
+  .page-template-page-mecenat .btn_contact {
+    width: 200px;
+    margin: 0 auto;
+    border: 1px solid #D9D2C4;
+    padding: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px; }
+    .page-template-page-mecenat .btn_contact a {
+      display: block;
+      height: 100%;
+      width: 100%; }
+  @media screen and (max-width: 1024px) {
+    .page-template-page-mecenat .don .formule {
+      width: 100%;
+      height: auto;
+      display: block;
+      padding: 40px 50px; }
+    .page-template-page-mecenat .don .center {
+      border-right: none;
+      border-left: none;
+      border-top: 2px solid #FFFFFF;
+      border-bottom: 2px solid #FFFFFF; }
+    .page-template-page-mecenat .don .ami:hover .hover_don {
+      opacity: 0; }
+    .page-template-page-mecenat .participez_creation .content_titre {
+      width: 100%;
+      float: none;
+      text-align: left; }
+    .page-template-page-mecenat .participez_creation .content_text {
+      width: 100%;
+      float: none; }
+    .page-template-page-mecenat .soutenir {
+      overflow: hidden;
+      height: auto; }
+      .page-template-page-mecenat .soutenir .content_text {
+        width: 100%;
+        float: none;
+        display: block; }
+    .page-template-page-mecenat .gallerie {
+      width: 100%;
+      float: none;
+      display: block;
+      position: inherit;
+      text-align: center;
+      padding-right: 0; }
+      .page-template-page-mecenat .gallerie img {
+        margin: 0 auto;
+        position: inherit; }
+    .page-template-page-mecenat .thumb {
+      position: inherit;
+      margin: 0 auto; }
+      .page-template-page-mecenat .thumb img {
+        width: 100%;
+        max-width: 435px; }
+    .page-template-page-mecenat .miniatures {
+      position: inherit;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 35px; }
+      .page-template-page-mecenat .miniatures img {
+        float: none;
+        width: 100%; } }
+  @media screen and (max-width: 900px) {
+    .page-template-page-mecenat .pourquoi_rejoindre .rejoindre {
+      width: 100%;
+      float: none;
+      display: block;
+      min-height: inherit;
+      margin: 35px 0px; } }
+
+.page-template-page-saison .main_saison {
+  margin-left: 130px;
+  padding: 35px; }
+
+.page-template-page-saison .filtreSelector {
+  overflow: hidden;
+  height: 220px;
+  margin-bottom: 35px;
+  -webkit-transition: 0.6s;
+  -khtml-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s; }
+  .page-template-page-saison .filtreSelector ul {
+    display: inline-block;
+    float: left;
+    margin-right: 35px; }
+    .page-template-page-saison .filtreSelector ul li {
+      margin-bottom: 1px; }
+      .page-template-page-saison .filtreSelector ul li button {
+        padding: 5px;
+        border: none;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 100%;
+        background-color: #EDEDED;
+        -webkit-transition: 0.3s;
+        -khtml-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s; }
+        .page-template-page-saison .filtreSelector ul li button:hover {
+          background-color: black;
+          color: white; }
+        .page-template-page-saison .filtreSelector ul li button.first_btn {
+          background-color: black;
+          color: white; }
+        .page-template-page-saison .filtreSelector ul li button.active {
+          background-color: black;
+          color: white; }
+  .page-template-page-saison .filtreSelector.active {
+    height: 400px; }
+
+.page-template-page-saison #plus_de_tag {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 35px;
+  border: 1px solid darkslategrey;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -khtml-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  .page-template-page-saison #plus_de_tag:hover {
+    background-color: black;
+    color: white; }
+
+.page-template-page-saison #clear_filters {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 35px;
+  border: 1px solid darkslategrey;
+  cursor: pointer; }
 
 /*# sourceMappingURL=maps/style.css.map */

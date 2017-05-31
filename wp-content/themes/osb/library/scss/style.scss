@@ -80,8 +80,6 @@ $disabled-gray:     #cfcfcf;
 @import "modules/home";
 @import "modules/event";
 @import "modules/event-menu";
-@import "modules/page-saison";
-
 @import "modules/event-desc";
 @import "modules/event-partners";
 @import "modules/event-focus";
@@ -90,9 +88,12 @@ $disabled-gray:     #cfcfcf;
 @import "modules/event-joinus";
 @import "modules/event-media";
 @import "modules/datepicker";
-@import "modules/action-culturelle";
-@import "modules/historique";
-@import "modules/mecenat";
 @import "modules/cote-pratique";
 @import "modules/abonner";
 @import "modules/salle";
+
+@import "modules/page-abonnement";
+@import "modules/page-action-culturelle";
+@import "modules/page-historique";
+@import "modules/page-mecenat";
+@import "modules/page-saison";

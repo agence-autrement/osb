@@ -19,7 +19,6 @@ Template Name: Page Mécénat
             </div>
         </div>
     </section>
-
     <section class="pourquoi_rejoindre">
         <div class="contenu_grid">
             <div class="rejoindre">
@@ -38,13 +37,18 @@ Template Name: Page Mécénat
                         À quoi sert votre adhésion ?
                     </div>
                     <div class="txt_pourquoi">
-                        L’OSB a besoin e vous pour soutenir deux projets phares de la saison 2017-2018 : + les activités de la Fabrik, le service dédié à l’éducation artistique et culturelle ; + la résidence artistique d’Anne Gastinel. Vous serez informé(e) par nos équipes de l’utilisation des fonds. Par exemple, 500€ récoltés = 1 intervention musicale par 5 musiciens dans une école, un hôpital ou un centre pénitentiaire.
+                        L’OSB a besoin e vous pour soutenir deux projets phares de la saison 2017-2018 :<br>
+                        <span class="norm">
+                            + les activités de la Fabrik, le service dédié à l’éducation artistique et culturelle ;<br>
+                            + la résidence artistique d’Anne Gastinel.<br><br>
+                        </span>
+                        Vous serez informé(e) par nos équipes de l’utilisation des fonds. <br>
+                        Par exemple, 500€ récoltés = 1 intervention musicale par 5 musiciens dans une école, un hôpital ou un centre pénitentiaire.
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <section class="don">
         <div class="ami formule">
             <div class="encadre">30€</div>
@@ -57,15 +61,39 @@ Template Name: Page Mécénat
                 <li>Mention de votre nom dans les remerciements publiés sur notre site web</li>
             </ul>
             <div class="btn_don"><a href="###">Adhérer</a></div>
+            <div class="hover_don formule">
+                <div class="encadre">Votre Adhésion comprend</div>
+                <ul>
+                    <li>Une cotisation de 30€ à concerto</li>
+                    <li class="plus">+</li>
+                    <li>Un don qui bénéficie de la déductibilité fiscale à hauteur de 66%, selon l'article 200 du code général des Impôts. La réduction fiscale s'élève à 75% si vous êtes imposable à l'impôt de solidarité sur la fortune dans la limite de 50 000€</li>
+                </ul>
+                <div class="btn_don"><a href="###">Adhérer</a></div>
+            </div>
         </div>
-        <div class="adhesion formule">
-            <div class="encadre">Votre Adhésion comprend</div>
+        <div class="ami formule center">
+            <div class="encadre">60€ et plus</div>
+            <div class="titre">
+                <div>Mécène</div>
+                <div class="sous_titre_cadre">(100€ et plus en duo)</div>
+            </div>
             <ul>
-                <li>Une cotisation de 30€ à concerto</li>
+                <li>Les contreparties « Ami », plus : Présentation de saison en avant-première par l’administrateur général</li>
                 <li class="plus">+</li>
-                <li>Un don qui bénéficie de la déductibilité fiscale à hauteur de 66%, selon l'article 200 du code général des Impôts. La réduction fiscale s'élève à 75% si vous êtes imposable à l'impôt de solidarité sur la fortune dans la limite de 50 000€</li>
+                <li>Accès gratuit aux concerts commentés une fois par an</li>
+                <li class="plus">+</li>
+                <li>… d’autres surprises tout au long de l’année…</li>
             </ul>
             <div class="btn_don"><a href="###">Adhérer</a></div>
+            <div class="hover_don formule">
+                <div class="encadre">Votre Adhésion comprend</div>
+                <ul>
+                    <li>Une cotisation de 30€ à concerto</li>
+                    <li class="plus">+</li>
+                    <li>Un don qui bénéficie de la déductibilité fiscale à hauteur de 66%, selon l'article 200 du code général des Impôts. La réduction fiscale s'élève à 75% si vous êtes imposable à l'impôt de solidarité sur la fortune dans la limite de 50 000€</li>
+                </ul>
+                <div class="btn_don"><a href="###">Adhérer</a></div>
+            </div>
         </div>
         <div class="en_ligne formule">
             <div class="encadre">Donner ce que vous voulez quand vous voulez</div>
@@ -100,7 +128,7 @@ Template Name: Page Mécénat
                     Nous avons besoin de 5 000€ pour soutenir le financement de la commande de ces deux nouvelles oeuvres (composition, création publique, actions de médiation).
                     En remerciement, vous recevrez des contreparties exclusives !
                 </div>
-                <div class="btn_soutient"><a href="###">Nous soutenir</a></div>
+                <div class="btn_soutient"><a href="###">Recevoir des informations par mail</a></div>
             </div>
         </div>
     </section>
