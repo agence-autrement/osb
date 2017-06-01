@@ -22,6 +22,7 @@
     width: 256px;
     float: left;
     position: relative;
+    font-size: 12px;
     .gauche{
       float: left;
       width: 50%;
@@ -39,8 +40,7 @@
       padding: 5px;
       border: none;
       width: 90%;
-      margin: 0 auto;
-      margin-bottom: 10px;
+      margin: 0 auto 10px;
       text-align: center;
       background-color: #EDEDED;
       @include transition(0.3s);
@@ -182,7 +182,7 @@
       &:before{
         content: '';
         position: absolute;
-        top: 30px;
+        top: 20px;
         left: 0;
         height: 50px;
         width: 1px;
@@ -203,7 +203,7 @@
 
     li{
       width: 31.3%;
-      min-height: 175px;
+      min-height: 130px;
       color: white;
       background-color: darkslategrey;
       -webkit-background-size: cover;
@@ -221,18 +221,21 @@
       margin-bottom: 0;
       &.cat_calendrier{
         color: #FDE608;
-        font-size: 12px;
+        font-size: 10px;
       }
       &.titre_calendrier{
         max-width: 250px;
-        font-size: 18px;
+        font-size: 13px;
+      }
+      &.artiste_calendrier{
+        font-size: 11px;
       }
       &.day_calendrier{
-        font-size: 25px;
+        font-size: 21px;
         font-weight: 500;
       }
       &.month_calendrier, &.lieu_calendrier{
-        font-size: 12px;
+        font-size: 9px;
       }
       &:nth-of-type(3){
         margin-bottom: 50px;
@@ -242,6 +245,7 @@
       display: block;
       margin-bottom: 25px;
       position: relative;
+      font-size: 10px;
       &:after{
         content: '';
         position: absolute;
@@ -255,7 +259,7 @@
       &:hover{
         font-weight: inherit;
         &:after{
-          width: 100px;
+          width: 55px;
         }
       }
     }

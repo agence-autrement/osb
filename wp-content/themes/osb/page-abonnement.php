@@ -28,11 +28,17 @@ Template Name: Page Abonnement
             </ul>
             <div class="btn_don"><a href="###">S'abonner en ligne</a></div>
             <div class="hover_don formule">
-                <div class="encadre">Votre Adhésion comprend</div>
+                <div class="encadre">Vos Avantages</div>
                 <ul>
-                    <li>Une cotisation de 30€ à concerto</li>
+                    <li>Priorité d’achat de vos places dès le 20 juin</li>
                     <li class="plus">+</li>
-                    <li>Un don qui bénéficie de la déductibilité fiscale à hauteur de 66%, selon l'article 200 du code général des Impôts. La réduction fiscale s'élève à 75% si vous êtes imposable à l'impôt de solidarité sur la fortune dans la limite de 50 000€</li>
+                    <li>Privilège de placement</li>
+                    <li class="plus">+</li>
+                    <li>2 places offertes par saison2 pour la personne de votre choix</li>
+                    <li class="plus">+</li>
+                    <li>1 disque offert dans la discographie de l’OSB</li>
+                    <li class="plus">+</li>
+                    <li>Des réductions et offres spéciales chez nos partenaires3</li>
                 </ul>
                 <div class="btn_don"><a href="###">Adhérer</a></div>
             </div>
@@ -44,15 +50,21 @@ Template Name: Page Abonnement
                 <div class="sous_titre_cadre">L'OSB à moitié prix, sur tous les concerts, toute la saison !</div>
             </div>
             <ul>
-                <li>POUR 35€, bénéﬁciez de 50% de réduction sur l’ensemble des concerts de la saison. La réduction est valable dès le premier concert réservé, dès le mois de juin 2017 !</li>
+                <li><b>POUR 35€</b>, bénéﬁciez de 50% de réduction sur l’ensemble des concerts de la saison. La réduction est valable dès le premier concert réservé, dès le mois de juin 2017 !</li>
             </ul>
             <div class="btn_don"><a href="###">S'abonner en ligne</a></div>
             <div class="hover_don formule">
-                <div class="encadre">Votre Adhésion comprend</div>
+                <div class="encadre">Vos Avantages</div>
                 <ul>
-                    <li>Une cotisation de 30€ à concerto</li>
+                    <li>Priorité d’achat de vos places dès le 20 juin</li>
                     <li class="plus">+</li>
-                    <li>Un don qui bénéficie de la déductibilité fiscale à hauteur de 66%, selon l'article 200 du code général des Impôts. La réduction fiscale s'élève à 75% si vous êtes imposable à l'impôt de solidarité sur la fortune dans la limite de 50 000€</li>
+                    <li>Privilège de placement</li>
+                    <li class="plus">+</li>
+                    <li>2 places offertes par saison2 pour la personne de votre choix</li>
+                    <li class="plus">+</li>
+                    <li>1 disque offert dans la discographie de l’OSB</li>
+                    <li class="plus">+</li>
+                    <li>Des réductions et offres spéciales chez nos partenaires3</li>
                 </ul>
                 <div class="btn_don"><a href="###">S'abonner en ligne</a></div>
             </div>
@@ -64,15 +76,21 @@ Template Name: Page Abonnement
                 <div class="sous_titre_cadre">Bénéficiez d'une réduction de 35%, sur tous les concerts, toute la saison !</div>
             </div>
             <ul>
-                <li>À SEULEMENT 15€, bénéﬁciez de 35% de réduction, sur l’ensemble des concerts de la saison. La réduction est valable dès le premier concert réservé, dès le mois de juin 2017 !</li>
+                <li><b>À SEULEMENT 15€</b>, bénéﬁciez de 35% de réduction, sur l’ensemble des concerts de la saison. La réduction est valable dès le premier concert réservé, dès le mois de juin 2017 !</li>
             </ul>
             <div class="btn_don"><a href="###">s'abonner</a></div>
             <div class="hover_don formule">
-                <div class="encadre">Votre Adhésion comprend</div>
+                <div class="encadre">Vos Avantages</div>
                 <ul>
-                    <li>Une cotisation de 30€ à concerto</li>
+                    <li>Priorité d’achat de vos places dès le 20 juin</li>
                     <li class="plus">+</li>
-                    <li>Un don qui bénéficie de la déductibilité fiscale à hauteur de 66%, selon l'article 200 du code général des Impôts. La réduction fiscale s'élève à 75% si vous êtes imposable à l'impôt de solidarité sur la fortune dans la limite de 50 000€</li>
+                    <li>Privilège de placement</li>
+                    <li class="plus">+</li>
+                    <li>2 places offertes par saison2 pour la personne de votre choix</li>
+                    <li class="plus">+</li>
+                    <li>1 disque offert dans la discographie de l’OSB</li>
+                    <li class="plus">+</li>
+                    <li>Des réductions et offres spéciales chez nos partenaires3</li>
                 </ul>
                 <div class="btn_don"><a href="###">Adhérer</a></div>
             </div>
@@ -97,7 +115,8 @@ Template Name: Page Abonnement
                         <div class="sous_titre_pourquoi">Jusqu'à 28 ans</div>
                     </div>
                     <div class="txt_pourquoi">
-                       4 concerts pour 20€ ! Disponnible sur l'ensemble des concerts, hors Piccolo
+                       <b>4 concerts pour 20€ !</b> <br>
+                        Disponnible sur l'ensemble des concerts, hors Piccolo
                    </div>
                 </div>
             </div>

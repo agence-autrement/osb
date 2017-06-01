@@ -49,6 +49,7 @@
 
     .formule{
       width: 33.333%;
+      height: 435px;
       text-align: center;
       padding: 35px;
       display: table-cell;
@@ -56,6 +57,7 @@
       ul{
         width: 50%;
         margin: 0 auto;
+        min-height: 170px;
       }
     }
 
@@ -164,6 +166,7 @@
 
     .hover_don{
       background-color: #26A8E0;
+      color: #FFFFFF;
       position: absolute;
       top: 0;
       left: 0;
@@ -176,7 +179,11 @@
         background-color: #FFFFFF;
         color: #26A8E0;
         width: 225px;
-        margin-bottom: 50px;
+        margin-bottom: 15px;
+      }
+      
+      .plus{
+        color: #000000;
       }
 
       .btn_don{
