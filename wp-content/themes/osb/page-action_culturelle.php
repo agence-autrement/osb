@@ -5,7 +5,6 @@ Template Name: Page Action Culturelle
 ?>
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
-
 <div id="content">
     <section class="top_page_action" style="background-image: url(<? the_field('visuel_de_la_page'); ?>);">
         <div class="contenu_grid">
