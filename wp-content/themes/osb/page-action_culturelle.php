@@ -146,29 +146,13 @@ Template Name: Page Action Culturelle
             <? } ?>
         <? endwhile; ?>
     <? }; ?>
-
-
-
     <? get_template_part('joinus'); ?>
-
-
-
-
-
     <section class="formulaire">
         <div class="contenu_grid">
             <div class="titre_formulaire">// Inscription //</div>
-            <? echo do_shortcode('[contact-form-7 id="250" title="Contact Form Concerts Scolaires"]'); ?>
+            <? echo do_shortcode('[contact-form-7 id="240" title="Contact Form Concerts Scolaires"]'); ?>
         </div>
     </section>
-
-
-
-
-
-
-
-
     <? if ( get_field('titre_parcours') ){ ?>
         <section class="parcours">
             <div class="contenu_grid">
@@ -177,12 +161,6 @@ Template Name: Page Action Culturelle
             </div>
         </section>
     <? } ?>
-
-
-
-
-
-
     <section class="suggestion">
         <div class="contenu_grid">
             <div class="titre_sugg">// Vous aimerez peut-être //</div>

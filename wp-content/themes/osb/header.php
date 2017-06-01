@@ -25,7 +25,7 @@
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
 		<meta name="theme-color" content="#121212">
 		<?php // typo  ?>
-		<link href="https://fonts.googleapis.com/css?family=Kanit:400,500,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Kanit:100,300,400,500,700" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
