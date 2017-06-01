@@ -17,17 +17,25 @@ Ressource Publique
         <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
 
 
-            <div class="rp">
+            <section class="rp">
 
                 <div class="rp__inner">
 
+                <div class="rp__top">
+                    <div class="rp__top__back">
+                          <a class="rp__back" href="#"><img
+                                                    src="http://www.icon2s.com/img256/256x256-thin-back-previous35.png" alt=""></a><span>Retour fiche spectacle</span>
+                    </div>
 
-                    <a class="adress__back" href="#"><img
-                            src="http://www.icon2s.com/img256/256x256-thin-back-previous35.png" alt=""></a>
+                    <a href="" class="rp__top__ress__btn btn">Toutes les ressources</a>
+                </div>
 
 
 
-                    <?php if (get_field('categorie_rp') == 'Discographie') : ?>
+
+
+
+                    <?php if (get_field('categorie_rp') == 'Biographie') : ?>
                         <button class="rp__cat"><?php echo get_field('categorie_rp') ?></button>
                         <h1 class="rp__title"><?php echo get_the_title() ?></h1>
                         <h2 class="rp__fct"><?php echo get_field('fonction_rp') ?></h2>

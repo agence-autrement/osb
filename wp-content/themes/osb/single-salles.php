@@ -1,6 +1,6 @@
 <?php
 /*
-Event template
+Salle
 
 */
 ?>
@@ -24,15 +24,15 @@ Event template
                     <div class="adress--left">
 
                         <div class="adress--left__inner">
+                            <a class="adress__back" href="#"><img src="http://www.icon2s.com/img256/256x256-thin-back-previous35.png" alt=""></a>
                             <h2 class="adress__title"><?php echo get_field('ville_salle')?></h2>
                             <h3 class="adress__name"><?php echo get_field('nom_salle')?></h3>
                             <p class="adress__adress">
                                 <?php echo get_field('adresse_salle')?><br>
 
-                                <?php echo get_field('code_postale_salle')?> <?php echo get_field('ville_salle')?>
+                                <?php echo get_field('code_postale_salle')?> <span><?php echo get_field('ville_salle')?></span>
                             </p>
-                            <a class="adress__tel" href="tel:0299275285">TEL : <?php echo get_field('tel_salle')?></a>
-                            <a class="adress__tel" href="tel:0299275285">FAX : 33 (0)2 99 27 52 76</a>
+                            <a class="adress__tel" href="tel:0299275285">TEL : <?php echo get_field('telephone_salle')?></a>
 
                             <?php if (get_field('lien_billeterie_salle')) :?>
                             <div class="adress__links">
@@ -41,6 +41,11 @@ Event template
                             </div>
 
                                 <?php else :?>
+
+                                <div class="adress__links">
+                                    <a target="_blank" href="<?php echo get_field('lien_site_internet_salle')?>" class="adress__btn adress__btn--only btn">Site Internet</a>
+                                </div>
+
 
 
 

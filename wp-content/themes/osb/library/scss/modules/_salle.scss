@@ -48,7 +48,11 @@
       transform: translate(-50%, -50%);
     }
   }
-
+&__back {
+  img {width: 49px;
+    display: block;
+    margin: 0 auto 2rem;}
+}
   &__title {
     font-weight: 700;
     background-color: $color-1;
@@ -84,6 +88,10 @@
   &__adress {
     font-weight: 300;
     margin-bottom: 2.2rem;
+
+    span {
+      text-transform: uppercase;
+    }
 
   }
 

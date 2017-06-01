@@ -1,0 +1,421 @@
+
+.section-header-rp {
+  .header-ressources {
+    &__inner {
+
+    }
+
+    &__title {
+      font-family: $font2;
+      font-weight: 300;
+      font-size: 6rem;
+      line-height: 6.1rem;
+      text-align: center;
+      fw
+      span {
+        color: $color-3;
+      }
+      margin: 0 0 3rem;
+    }
+
+    &__content {
+
+    }
+
+    &__btn {
+      background-color: $color-3;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 0 1rem;
+      border: none;
+      font-weight: 600;
+      padding: 0.3rem 1.7rem;
+      font-size: 1.3rem;
+
+    }
+  }
+}
+
+.artistes {
+  &__inner {
+    padding: 0 15px;
+  }
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 2.1rem;
+    margin-bottom: 3.5rem;
+    font-weight: 300;
+  }
+
+  &__dep {
+    overflow: hidden;
+    &__title {
+      color: $color-3;
+      font-family: $font2;
+      font-weight: 200;
+      font-size: 2.5rem;
+      margin-bottom: 2.5rem;
+      text-transform: uppercase;
+      margin-left: 3rem;
+      position: relative;
+
+      span {
+        font-size: 1.5rem;
+        color: #000;
+        text-transform: none;
+      }
+
+      &:before {
+        content: '+';
+        display: block;
+        color: $color-3;
+        font-size: 4.5rem;
+        position: absolute;
+        top: 0;
+        left: -2.8rem;
+
+      }
+    }
+
+    &__city {
+      float: left;
+      width: 25%;
+      padding: 0 1rem;
+      margin-bottom: 2rem;
+
+      &__inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+      }
+
+      li {
+        font-size: 1.5rem;
+        position: relative;
+        text-transform: uppercase;
+        font-family: $font2;
+        border: 2px solid #F5F3F3;
+        text-align: center;
+        padding: .8rem;
+        height: 5rem;
+
+        &:hover {
+          background-color: $color-2;
+          @include transition();
+
+        }
+
+        span {
+          font-weight: 200;
+          font-size: 1.4rem;
+        }
+      }
+
+      &--line {
+        li {
+          padding: 1.5rem 0;
+        }
+      }
+    }
+  }
+
+}
+
+.oeuvres {
+  &__inner {
+    padding: 0 15px;
+  }
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 2.1rem;
+    margin-bottom: 3.5rem;
+    margin-top: 7rem;
+    font-weight: 300;
+  }
+
+  &__dep {
+    overflow: hidden;
+    &__title {
+      color: $color-3;
+      font-family: $font2;
+      font-weight: 200;
+      font-size: 2.5rem;
+      margin-bottom: 2.5rem;
+      text-transform: uppercase;
+      margin-left: 3rem;
+      position: relative;
+
+      &:before {
+        content: '+';
+        display: block;
+        color: $color-3;
+        font-size: 4.5rem;
+        position: absolute;
+        top: 0;
+        left: -2.8rem;
+
+      }
+    }
+
+    &__city {
+      float: left;
+      width: 25%;
+      padding: 0 1rem;
+      margin-bottom: 2rem;
+
+      &__inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+      }
+
+      li {
+        font-size: 1.5rem;
+        position: relative;
+        text-transform: uppercase;
+        font-family: $font2;
+        border: 2px solid #F5F3F3;
+        text-align: center;
+        padding: .8rem;
+        height: 8.2rem;
+
+        &:hover {
+          background-color: $color-2;
+          @include transition();
+
+        }
+
+        span {
+          font-weight: 200;
+          font-size: 1.4rem;
+        }
+      }
+
+      &--line {
+        li {
+          padding: 1.5rem 0;
+        }
+      }
+    }
+  }
+
+}
+
+.rp {
+  padding: 8rem 0 5rem;
+
+  &__inner {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 4rem 6rem;
+    border:2px solid #F5F3F3;
+
+  }
+
+  &__back {
+    display: inline-block;
+    vertical-align: middle;
+
+    img {
+      width:5rem;
+      margin:0 1rem;
+    }
+  }
+
+  &__top {
+    overflow: hidden;
+    margin-bottom:3rem;
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      font-style: italic;
+      font-weight: 200;
+      font-family:$font2;
+      color: $color-3;
+    }
+
+    &__back {
+      float: left;
+    }
+
+    &__ress {
+      &__btn {
+        float: right;
+        border: 1px solid $color-3;
+        color: $color-3;
+        font-weight: 200;
+
+        text-transform: none;
+        font-size: 1.5rem;
+        padding: 0.5rem 0.7rem;
+      }
+    }
+  }
+
+  &__cat {
+    background-color: #E31F27;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0 1rem;
+    border: none;
+    display: inline-block;
+    padding: 0.3rem 1.7rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+
+  }
+
+  &__title {
+    font-family: $font2;
+    margin: 3rem 0 0;
+    font-weight: 200;
+    font-size: 3.5rem;
+    line-height: 3.6rem;
+
+  }
+
+  &__fct {
+    color: $color-3;
+    font-family: $font2;
+    font-style: italic;
+    font-weight: 200;
+    margin: 0.7rem 0 6rem;
+    font-size: 1.8rem;
+    position: relative;
+    line-height: 1.9rem;
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 6.5rem;
+      height: .2rem;
+      background-color: $color-3;
+      bottom: -2.3rem;
+      transform: translateX(-50%);
+      left: 50%;
+    }
+  }
+
+  &__content {
+
+    font-weight: 300;
+    text-align: justify;
+
+    &__intro {
+      font-weight: 500;
+      font-size: 1.7rem;
+      text-align: center;
+      font-style: italic;
+    }
+
+  }
+}
+
+/******************************
+MEDIA QUERIES
+******************************/
+
+@media screen and (max-width: 767px) {
+
+  .artistes, .oeuvres {
+    &__dep {
+      &__city {
+        width: 50%;
+      }
+    }
+  }
+
+  .rp {
+
+    padding: 4rem 0 2rem;
+    &__inner {
+      width: 90%;
+      padding:2rem;
+    }
+
+    &__title {
+      margin: 1rem 0 0;
+    }
+
+
+    &__fct {
+      margin: 0.7rem 0 4rem;
+    }
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (max-width: 990px) {
+
+}
+
+@media screen and (min-width: 990px) {
+}
+
+@media screen and (max-width: 990px) and (min-width: 768px) {
+
+  .artistes, .oeuvres {
+    &__dep {
+      &__city {
+        width: 33%;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 1100px) {
+
+}
+
+@media screen and (max-width: 460px) {
+
+  .artistes, .oeuvres {
+    &__dep {
+      &__city {
+        width: 100%;
+      }
+    }
+  }
+
+  .section-header-rp {
+    .header-ressources {
+      &__title {
+        font-size: 5rem;
+        line-height: 5.1rem;
+      }
+    }
+  }
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */
+}
+
+@media print and (min-width: 5in) {
+}
+
+
+

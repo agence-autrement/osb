@@ -69,12 +69,14 @@ Template Name: Page Cote Pratique
                 </h2>
 
                 <ul class="places__dep__cities">
-                    <a class="places__dep__city" href="#"><li>Rennes <br><span>Couvent des Jacobins</span></li></a>
-                    <a class="places__dep__city" href="#"><li>Rennes <br><span>Couvent des Jacobins</span></li></a>
-                    <a class="places__dep__city places__dep__city--line" href="#"><li>Rennes</li></a>
-                    <a class="places__dep__city" href="#"><li>Rennes <br><span>Couvent des Jacobins</span></li></a>
-                    <a class="places__dep__city" href="#"><li>Rennes <br><span>Couvent des Jacobins</span></li></a>
-                    <a class="places__dep__city" href="#"><li>Rennes <br><span>Couvent des Jacobins</span></li></a>
+                    <a class="places__dep__city" href="#"><li> <div class="places__dep__city__inner">Rennes <br><span>Couvent des Jacobins</span></div></li></a>
+                    <a class="places__dep__city" href="#"><li> <div class="places__dep__city__inner">Rennes <br><span>Couvent des Jacobins</span></div></li></a>
+                    <a class="places__dep__city" href="#"><li> <div class="places__dep__city__inner">Rennes <br><span>Couvent des Jacobins</span></div></li></a>
+                    <a class="places__dep__city" href="#"><li> <div class="places__dep__city__inner">Rennes</div></li></a>
+                    <a class="places__dep__city" href="#"><li> <div class="places__dep__city__inner">Rennes <br><span>Couvent des Jacobins</span></div></li></a>
+                    <a class="places__dep__city" href="#"><li> <div class="places__dep__city__inner">Rennes <br><span>Couvent des Jacobins</span></div></li></a>
+
+
 
 
                 </ul>
