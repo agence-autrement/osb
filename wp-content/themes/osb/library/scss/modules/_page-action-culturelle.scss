@@ -1,85 +1,85 @@
 .page-template-page-action_culturelle{
 
-  // Slider haut de page
+  /////////////////////////  SLIDER HAUT DE PAGE
+
   .top_page_action{
-    padding: 35px;
-    padding-top: 180px;
+    padding: 180px 35px 35px;
     height: 710px;
     width: 100%;
-    background-color: darkslategrey;
     -webkit-background-size: cover;
     background-size: cover;
-    background-repeat: no-repeat;
+    background: darkslategrey no-repeat;
+  }
 
-    .index{
-      margin-bottom: 25px;
-    }
+  .index{
+    margin-bottom: 25px;
+  }
 
-    li{
-      font-size: 12px;
+  li{
+    font-size: 12px;
+    color: #ED1E24;
+  }
+
+  .title{
+    font-size: 60px;
+    margin-bottom: 15px;
+    color: white;
+    font-family: $font2;
+    span{
       color: #ED1E24;
     }
+  }
 
-    .title{
-      font-size: 60px;
-      margin-bottom: 15px;
-      color: white;
-      font-family: $font2;
-      span{
-        color: #ED1E24;
-      }
-    }
-
-    .tag{
-      font-size: 12px;
-      text-transform: uppercase;
-      overflow: hidden;
-      div{
-        display: inline-block;
-        float: left;
-      }
-    }
-
-    .btn_red{
-      cursor: pointer;
-      padding: 5px 10px;
-      background-color: #ED1E24;
-      color: white;
-      font-weight: 700;
-    }
-
-    .btn_savoir_plus{
-      display: block;
-      position: relative;
-      padding:5px 10px;
-      cursor: pointer;
-      color: white;
-      &:after{
-        content: '';
-        position: absolute;
-        background-color: white;
-        bottom: 0;
-        left: 10px;
-        width: 0;
-        height: 1px;
-        @include transition(0.6s);
-      }
-      &:hover{
-        font-weight: inherit;
-        &:after{
-          width: 70px;
-        }
-      }
-    }
-
-    .intro_text{
-      font-size: 12px;
-      max-width: 320px;
-      margin-top: 15px;
-      color: white;
+  .tag{
+    font-size: 12px;
+    text-transform: uppercase;
+    overflow: hidden;
+    div{
+      display: inline-block;
+      float: left;
     }
   }
-  //Sous-menu
+
+  .btn_red{
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #ED1E24;
+    color: white;
+    font-weight: 700;
+  }
+
+  .btn_savoir_plus{
+    display: block;
+    position: relative;
+    padding:5px 10px;
+    cursor: pointer;
+    color: white;
+    &:after{
+      content: '';
+      position: absolute;
+      background-color: white;
+      bottom: 0;
+      left: 10px;
+      width: 0;
+      height: 1px;
+      @include transition(0.6s);
+    }
+    &:hover{
+      font-weight: inherit;
+      &:after{
+        width: 70px;
+      }
+    }
+  }
+
+  .intro_text{
+    font-size: 12px;
+    max-width: 320px;
+    margin-top: 15px;
+    color: white;
+  }
+
+  /////////////////////////  SOUS-MENU
 
   .sub_menu{
     padding: 20px 35px 0 35px;
@@ -114,7 +114,7 @@
     }
   }
 
-  /*LES CLASSES*/
+  ///////////////////////// CONTENU
 
   .titre_content{
     font-size: 50px;
@@ -219,8 +219,8 @@
     }
   }
 
-
   //Contenu à droite
+
   .content_right{
     padding: 35px;
     overflow: hidden;
@@ -239,6 +239,7 @@
   }
 
   //Contenu à gauche
+
   .content_left{
     background-color: #D9D2C4;
     padding: 35px;
@@ -281,6 +282,7 @@
   }
 
   //Contenu "spécial"
+
   .special_content{
     padding: 35px;
     overflow: hidden;
@@ -403,120 +405,6 @@
     margin-top: 30px;
   }
 
-  ///////////////////////// VOUS AIMEREZ PEUT-ÊTRE
-
-  .suggestion{
-    padding: 35px;
-    background-color: #F5F3F3;
-
-    .titre_sugg{
-      text-align: center;
-      font-size: 18px;
-      text-transform: uppercase;
-      margin-bottom: 35px;
-    }
-
-    .left_event{
-      width: 75%;
-      float: left;
-      color: white;
-      padding-left: 12px;
-      padding-top: 25px;
-      font-family: $font2;
-    }
-
-    .right_event{
-      width: 25%;
-      float: left;
-      color: white;
-      text-align: center;
-      position: relative;
-      padding-top: 25px;
-      &:before{
-        content: '';
-        position: absolute;
-        top: 30px;
-        left: 0;
-        height: 50px;
-        width: 1px;
-        background-color: white;
-        -webkit-transform: rotate(30deg);
-        -moz-transform: rotate(30deg);
-        -ms-transform: rotate(30deg);
-        -o-transform: rotate(30deg);
-        transform: rotate(30deg);
-        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711)";
-        filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711);
-      }
-    }
-
-    ul {
-      overflow: hidden;
-      width: 100%;
-    }
-
-    li{
-      width: 31.3%;
-      min-height: 175px;
-      color: white;
-      background-color: darkslategrey;
-      -webkit-background-size: cover;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      margin-right: 3%;
-      float: left;
-      &:last-of-type{
-        margin-right: 0;
-      }
-    }
-
-    p{
-      margin-bottom: 0;
-      &.cat_calendrier{
-        color: #FDE608;
-        font-size: 12px;
-      }
-      &.titre_calendrier{
-        max-width: 250px;
-        font-size: 18px;
-      }
-      &.day_calendrier{
-        font-size: 25px;
-        font-weight: 500;
-      }
-      &.month_calendrier, &.lieu_calendrier{
-        font-size: 12px;
-      }
-      &:nth-of-type(3){
-        margin-bottom: 50px;
-      }
-    }
-
-    .link_calendrier{
-      display: block;
-      margin-bottom: 25px;
-      position: relative;
-      font-family: $font;
-      &:after{
-        content: '';
-        position: absolute;
-        background-color: white;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 1px;
-        @include transition(0.6s);
-      }
-      &:hover{
-        font-weight: inherit;
-        &:after{
-          width: 100px;
-        }
-      }
-    }
-  }
-
   ///////////////////////// ENCADRÉ "PARCOURS"
 
   .parcours{
@@ -527,23 +415,23 @@
       border: 1px solid #F3F3F3;
       padding: 35px;
     }
+  }
 
-    .titre_parcours{
-      font-size: 34px;
-      position: relative;
-      padding-bottom: 10px;
-      margin-bottom: 25px;
-      font-family: $font2;
-      &:after{
-        content: '';
-        position: absolute;
-        background-color: #ED1E24;
-        width: 65px;
-        height: 2px;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-      }
+  .titre_parcours{
+    font-size: 34px;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-family: $font2;
+    &:after{
+      content: '';
+      position: absolute;
+      background-color: #ED1E24;
+      width: 65px;
+      height: 2px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 
@@ -605,13 +493,6 @@
         float: none;
         width: 100%;
         padding: 0;
-      }
-    }
-
-    .suggestion{
-      li{
-        width: 100%;
-        margin-bottom: 35px;
       }
     }
 

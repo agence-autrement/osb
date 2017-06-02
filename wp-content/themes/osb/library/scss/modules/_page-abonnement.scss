@@ -1,49 +1,49 @@
 .page-template-page-abonnement{
 
-  ////////// TOP PAGE ABONNEMENT
+  ///////////////////////// TOP PAGE ABONNEMENT
 
   .top_page_abo{
     padding: 130px 35px 35px;
     text-align: center;
+  }
 
-    .abonne_plus_book{
-      font-size: 60px;
-      display: inline-block;
-    }
+  .abonne_plus_book{
+    font-size: 60px;
+    display: inline-block;
+  }
 
-    .separator{
-      background-image: url('../images/croix_bleu.svg');
-      height: 35px;
-      width: 35px;
-      display: inline-block;
-      margin-left: 25px;
-      margin-right: 25px;
-    }
+  .separator{
+    background-image: url('../images/croix_bleu.svg');
+    height: 35px;
+    width: 35px;
+    display: inline-block;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
 
-    .booked_date{
-      font-size: 38px;
-      color: #26A8E0;
-      margin-bottom: 35px;
-    }
+  .booked_date{
+    font-size: 38px;
+    color: #26A8E0;
+    margin-bottom: 35px;
+  }
 
-    .btn_new{
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: #FFFFFF;
-      padding: 5px;
-      background-color: #26A8E0;
-      max-width: 100px;
-      margin: 0 auto 35px;
-    }
+  .btn_new{
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 5px;
+    background-color: #26A8E0;
+    max-width: 100px;
+    margin: 0 auto 35px;
+  }
 
-    .limite{
-      font-weight: 100;
-    }
+  .limite{
+    font-weight: 100;
   }
 
 
-  ////////// S'ABONNER
+  ///////////////////////// S'ABONNER
 
   .don{
 
@@ -84,12 +84,13 @@
         left: 50%;
         transform: translateX(-50%);
       }
-      .sous_titre_cadre{
-        font-size: 16px;
-        font-style: italic;
-        color: #26A8E0;
-        margin-top: 10px;
-      }
+    }
+
+    .sous_titre_cadre{
+      font-size: 16px;
+      font-style: italic;
+      color: #26A8E0;
+      margin-top: 10px;
     }
 
     .plus{
@@ -194,135 +195,137 @@
     }
   }
 
-  ////////// ENACDRÉ "AVENTURIER & JEUNES"
+  ///////////////////////// ENACDRÉ "AVENTURIER & JEUNES"
 
   .pourquoi_rejoindre{
     padding: 35px;
     width: 100%;
+  }
 
-    .rejoindre{
-      display: table;
-      height: 370px;
-      width: 46%;
-      margin: 1%;
-      float: left;
-      border: 1px solid #F5F3F3;
-      padding: 0px 50px;
-    }
+  .rejoindre{
+    display: table;
+    height: 370px;
+    width: 46%;
+    margin: 1%;
+    float: left;
+    border: 1px solid #F5F3F3;
+    padding: 0px 50px;
+  }
 
-    .align_join{
-      display: table-cell;
-      vertical-align: middle;
-      text-align: center;
-      height: 370px;
-    }
+  .align_join{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: 370px;
+  }
 
-    .titre_pourquoi{
-      font-size: 34px;
-      position: relative;
-      padding-bottom: 10px;
-      margin-bottom: 25px;
-      font-family: $font2;
-      width: 100%;
-      display: block;
-      text-align: center;
-      &:after{
-        content: '';
-        position: absolute;
-        width: 65px;
-        height: 2px;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #26A8E0;
-      }
-
-      .sous_titre_pourquoi{
-        font-size: 16px;
-        font-style: italic;
-        color: #26A8E0;
-      }
-    }
-
-    .txt_pourquoi{
-      font-size: 14px;
-
-      .norm{
-        font-weight: 400;
-      }
+  .titre_pourquoi{
+    font-size: 34px;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    font-family: $font2;
+    width: 100%;
+    display: block;
+    text-align: center;
+    &:after{
+      content: '';
+      position: absolute;
+      width: 65px;
+      height: 2px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #26A8E0;
     }
   }
 
-  ////////// TARIFS RÉDUITS
+  .sous_titre_pourquoi{
+    font-size: 16px;
+    font-style: italic;
+    color: #26A8E0;
+  }
+
+  .txt_pourquoi{
+    font-size: 14px;
+  }
+
+
+  .norm{
+    font-weight: 400;
+  }
+
+  ///////////////////////// TARIFS RÉDUITS
 
   .tarifs_reduits{
     padding: 90px 35px;
     text-align: center;
     background-color: #F5F3F3;
+  }
 
-    .plus{
-      margin-bottom: 15px;
-      img{
-        width: 17px;
-      }
-    }
-
-    .accroche{
-      font-weight: 400;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-    }
-
-    .texte{
-      font-weight: 300;
+  .plus{
+    margin-bottom: 15px;
+    img{
+      width: 17px;
     }
   }
 
-  ////////// BULLETIN TÉLÉCHARGEABLE
+  .accroche{
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  .texte{
+    font-weight: 300;
+  }
+
+  ///////////////////////// BULLETIN TÉLÉCHARGEABLE
 
   .bulletin_dl{
     padding: 90px 35px;
     background-color: #EBD519;
-    .btn_bulletin{
-      border: 1px solid black;
-      text-align: center;
-      text-transform: uppercase;
-      width: 415px;
-      margin: 0 auto;
-      font-weight: 400;
-      a{
-        display: block;
-        padding: 10px;
-        width: 100%;
-        height: 100%;
-      }
+  }
+
+  .btn_bulletin{
+    border: 1px solid black;
+    text-align: center;
+    text-transform: uppercase;
+    width: 415px;
+    margin: 0 auto;
+    font-weight: 400;
+    a{
+      display: block;
+      padding: 10px;
+      width: 100%;
+      height: 100%;
     }
   }
 
-  ////////// LES TARIFS
+  ///////////////////////// LES TARIFS
 
   .tarifs{
     padding: 35px;
-
-    .title_tarif{
-      font-size: 18px;
-      font-weight: 400;
-      text-transform: uppercase;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .sous_titre_tarifs{
-      font-family: $font2;
-      font-size: 16px;
-      font-style: italic;
-      color: #26A8E0;
-      text-align: center;
-      margin-bottom: 35px;
-    }
   }
 
-  // TABLEAU TARIFS
+  .title_tarif{
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .sous_titre_tarifs{
+    font-family: $font2;
+    font-size: 16px;
+    font-style: italic;
+    color: #26A8E0;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  ///////////////////////// TABLEAU TARIFS
 
   .tableau_tarifs{
     width: 100%;
@@ -340,7 +343,6 @@
     .row_tarif{
       width: 100%;
       overflow: hidden;
-      //padding: 5px;
       border-bottom: 2px solid #F5F5F5;
 
       .cell_tarif{
@@ -377,33 +379,34 @@
   .carte_sortir{
     text-align: center;
     margin-bottom: 65px;
+  }
 
-    .plus{
-      margin-bottom: 20px;
-      img{
-        width: 20px;
-      }
+  .plus{
+    margin-bottom: 20px;
+    img{
+      width: 20px;
     }
+  }
 
-    .carte{
-      color: #26A8E0;
-      margin-bottom: 5px;
-      span{
-        font-weight: 400;
-      }
+  .carte{
+    color: #26A8E0;
+    margin-bottom: 5px;
+    span{
+      font-weight: 400;
     }
-    .condition{
-      font-weight:100;
-    }
+  }
+
+  .condition{
+    font-weight:100;
   }
 
   .condition_details{
     font-size: 11px;
     color: #808080;
+  }
 
-    .petit_deux{
-      margin-bottom: 15px;
-    }
+  .petit_deux{
+    margin-bottom: 15px;
   }
 
 
