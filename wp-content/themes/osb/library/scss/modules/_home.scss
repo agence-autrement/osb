@@ -3,15 +3,15 @@ GLOBAL
 ***********************/
 
 #content {
-  margin-left:130px;
+  margin-left: 130px;
   overflow: hidden;
   @include transition(0.6s);
-  &.active{
-    margin-left: 400px;
+  &.active {
+    transform: translateX(265px);
   }
 }
 
-.contenu_grid{
+.contenu_grid {
   max-width: 1100px;
   width: 100%;
   overflow: hidden;
@@ -21,7 +21,6 @@ GLOBAL
 /***********************
 LANDING
 ***********************/
-
 
 #landing {
   height: 90vh;
@@ -33,45 +32,45 @@ LANDING
   background-repeat: no-repeat;
 }
 
-.top_landing{
+.top_landing {
   width: 100%;
   height: 146px;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 35px;
   font-family: $font2;
 }
 
-#calendrier_top{
+#calendrier_top {
   margin: 0;
-  li{
+  li {
     float: left;
     margin-right: 45px;
     width: 231px;
     position: relative;
     min-height: 90px;
-    &:hover{
+    &:hover {
       cursor: pointer;
-      .img_hover{
+      .img_hover {
         height: 200px;
       }
     }
   }
 }
 
-.left_date{
+.left_date {
   width: 75%;
   float: left;
   color: white;
 }
 
-.right_date{
+.right_date {
   width: 25%;
   float: left;
   color: white;
   text-align: center;
   position: relative;
   font-family: $font;
-  &:before{
+  &:before {
     content: '';
     position: absolute;
     left: -15px;
@@ -88,29 +87,29 @@ LANDING
   }
 }
 
-.type{
+.type {
   font-size: 10px;
   color: #FFE500;
 }
 
-.titre{
+.titre {
   font-size: 15px;
 }
 
-.artiste{
+.artiste {
   font-size: 12px;
   font-style: italic;
 }
 
-.date_jours{
+.date_jours {
   font-size: 22px;
 }
 
-.date_mois{
+.date_mois {
   font-size: 10px;
 }
 
-.lieu{
+.lieu {
   font-size: 10px;
   color: #FFE500;
   font-style: italic;
@@ -125,7 +124,7 @@ LANDING
 
 }
 
-.savoir_plus_calendrier{
+.savoir_plus_calendrier {
   padding-top: 126px;
 }
 
@@ -140,14 +139,14 @@ CALL TO ACTION
   position: relative;
 }
 
-#left_callto{
+#left_callto {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   width: 100%;
   position: relative;
   padding-top: 50px;
   height: 180px;
-  div:nth-of-type(1){
+  div:nth-of-type(1) {
     font-size: 18px;
     color: black;
     font-weight: 400;
@@ -158,8 +157,7 @@ CALL TO ACTION
     font-weight: 300;
   }
 
-
-  .btn_savoir{
+  .btn_savoir {
     border: thin black solid;
     padding: 2px 10px;
     width: 100px;
@@ -184,7 +182,7 @@ CALL TO ACTION
   float: right;
 }
 
-.previous_btn{
+.previous_btn {
   position: absolute;
   height: 33px;
   width: 10px;
@@ -195,12 +193,12 @@ CALL TO ACTION
   top: 50%;
   transform: translateY(-50%);
   text-indent: -5000px;
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
 }
 
-.next_btn{
+.next_btn {
   position: absolute;
   height: 33px;
   width: 10px;
@@ -211,7 +209,7 @@ CALL TO ACTION
   top: 50%;
   transform: translateY(-50%);
   text-indent: -5000px;
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
 }
@@ -225,14 +223,14 @@ CALL TO ACTION
   overflow: hidden;
   ul {
     height: 186px;
-    padding:0;
+    padding: 0;
     margin: 0;
     li {
       float: left;
       list-style-type: none;
       text-align: center;
       height: 100%;
-      img{
+      img {
         height: 100%;
         width: auto;
       }
@@ -240,36 +238,34 @@ CALL TO ACTION
   }
 }
 
-
 /***********************
 ARTICLES
 ***********************/
 
-#articles{
+#articles {
   //height: 370px;
   width: 100%;
   padding: 35px;
   overflow: hidden;
 }
 
-.titre_article{
+.titre_article {
   font-size: 26px;
   font-weight: 300;
   margin-bottom: 10px;
   font-family: $font2;
 }
 
-.extrait_1{
+.extrait_1 {
   margin-bottom: 15px;
 }
 
-.extrait_2{
+.extrait_2 {
   color: #818080;
   margin-bottom: 15px;
 }
 
-
-#first_article{
+#first_article {
   height: 290px;
   width: calc(100% - 310px);
   margin-right: 20px;
@@ -278,7 +274,7 @@ ARTICLES
   overflow: hidden;
 }
 
-.first_article_thumbnail{
+.first_article_thumbnail {
   float: left;
   background-image: url('../images/loutre.jpg');
   -webkit-background-size: cover;
@@ -287,28 +283,27 @@ ARTICLES
   height: 100%;
 }
 
-.first_article_content{
+.first_article_content {
   width: 50%;
   height: 100%;
   float: left;
-  padding:15px;
+  padding: 15px;
   font-size: 12px;
 }
 
-
-.tarif{
+.tarif {
   color: #818080;
   margin-bottom: 15px;
 }
 
-#second_article{
+#second_article {
   height: 290px;
   width: 290px;
   border: 1px solid lightgrey;
   float: left;
 }
 
-.second_article_thumbnail{
+.second_article_thumbnail {
   background-image: url('../images/loutre.jpg');
   -webkit-background-size: cover;
   background-size: cover;
@@ -316,19 +311,18 @@ ARTICLES
   height: 50%;
 }
 
-.second_article_content{
+.second_article_content {
   width: 100%;
   height: 50%;
-  padding:15px;
+  padding: 15px;
   font-size: 12px;
-  .extrait_2{
+  .extrait_2 {
     display: none;
   }
-  .tarif{
+  .tarif {
     display: none;
   }
 }
-
 
 /***********************
 RESPONSIVE
@@ -351,23 +345,27 @@ RESPONSIVE
 
 @media screen and (max-width: 1100px) {
 
-  #content{
+  #content {
     margin-left: 0;
+
+    &.active {
+      transform:none;
+    }
   }
- 
+
   /*landing top*/
-  .top_landing{
-    height:auto;
+  .top_landing {
+    height: auto;
     padding-bottom: 35px;
   }
 
-  #calendrier_top{
-    li{
+  #calendrier_top {
+    li {
       width: 90%;
       margin: 0 auto;
       position: relative;
-      &:hover{
-        .img_hover{
+      &:hover {
+        .img_hover {
           display: none;
         }
       }
@@ -375,9 +373,9 @@ RESPONSIVE
   }
 
   /*Slider*/
-  #left_callto{
-    height:auto;
-    #slider_callto{
+  #left_callto {
+    height: auto;
+    #slider_callto {
       float: none;
       position: inherit;
       margin: 0 auto;
@@ -385,19 +383,19 @@ RESPONSIVE
   }
 
   /*Article*/
-  #first_article{
+  #first_article {
     float: none;
     width: 90%;
     margin: 0 auto;
     margin-bottom: 35px;
   }
 
-  #second_article{
+  #second_article {
     float: none;
     width: 90%;
     margin: 0 auto;
   }
-  .second_article_thumbnail{
+  .second_article_thumbnail {
     float: right;
     background-image: url('../images/loutre.jpg');
     -webkit-background-size: cover;
@@ -406,14 +404,14 @@ RESPONSIVE
     height: 100%;
   }
 
-  .second_article_content{
+  .second_article_content {
     width: 50%;
     height: 100%;
     float: right;
-    .extrait_2{
+    .extrait_2 {
       display: block;
     }
-    .tarif{
+    .tarif {
       display: block;
     }
   }
@@ -422,17 +420,17 @@ RESPONSIVE
 /*480px*/
 
 @media screen and (max-width: 480px) {
-  .footer_content{
+  .footer_content {
     margin-top: 25px;
     margin-bottom: 25px;
-    &:after{
+    &:after {
       display: none;
     }
   }
-  .first_article_thumbnail, .second_article_thumbnail{
+  .first_article_thumbnail, .second_article_thumbnail {
     display: none;
   }
-  .first_article_content, .second_article_content{
+  .first_article_content, .second_article_content {
     width: 100%;
   }
 }

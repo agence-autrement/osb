@@ -27,6 +27,17 @@
     }
 
   }
+
+  &__hamb {
+    position: absolute;
+    top:50px;
+  }
+}
+
+
+a.header__hamb {
+  position: absolute;
+  top:50px;
 }
 
 /*********************
@@ -35,7 +46,8 @@ Hamberger
 
 .hamburger-icon {
   position: absolute;
-  top: 0;
+  top: 40px;
+  z-index:1000;
   right: 0;
   width: 54px;
   height: 54px;

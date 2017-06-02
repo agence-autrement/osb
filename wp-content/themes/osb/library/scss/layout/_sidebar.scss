@@ -1,18 +1,162 @@
 /*****************************
-SIDEBAR MON ACTION CULTURELLE
+SIDEBAR MON ACTION CULTURELLE + La SAISON
 *****************************/
 
-.sidebar_actions_culturelles{
+.sidebar_actions_culturelles, .sidebar_saison{
   background-color: white;
   color: black;
-  width: 400px;
-  height: 100%;
+  width: 265px;
+  height: 100vh;
   position: fixed;
   top: 0;
-  left: -400px;
+  left: -265px;
   @include transition(0.6s);
   &.active{
     left: 0;
+  }
+
+  &__img {
+    margin-left: -110px;
+  }
+
+  &__title {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+
+  }
+
+  &__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 210px;
+
+
+
+
+    ul {
+      padding: 3rem 1rem 2rem;
+      background-color: #ECE8E7;
+      border-radius: 50%;
+      text-align: center;
+      li {
+        padding:.7rem 0;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+      }
+    }
+
+  }
+}
+
+
+
+
+/*****************************
+SIDEBAR Decouvrir
+*****************************/
+
+.sidebar_decouvrir{
+  background-color: white;
+  color: black;
+  width: 265px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -265px;
+  @include transition(0.6s);
+  &.active{
+    left: 0;
+  }
+
+  &__title {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+
+  }
+
+  &__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 210px;
+
+
+
+
+    ul {
+      padding: 5rem 1rem 4rem;
+      background-color: #ECE8E7;
+      border-radius: 50%;
+      text-align: center;
+      li {
+        padding:.7rem 0;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+      }
+    }
+
+  }
+}
+
+
+
+/*****************************
+SIDEBAR RESSOURCES
+*****************************/
+
+.sidebar_ressources{
+  background-color: white;
+  color: black;
+  width: 265px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -265px;
+  @include transition(0.6s);
+  &.active{
+    left: 0;
+  }
+
+  &__title {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+
+  }
+
+  &__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 210px;
+
+
+
+
+    ul {
+      padding: 5rem 1rem 4rem;
+      background-color: #ECE8E7;
+      border-radius: 50%;
+      text-align: center;
+      li {
+        padding:.7rem 0;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+      }
+    }
+
   }
 }
 
@@ -20,11 +164,11 @@ SIDEBAR MON ACTION CULTURELLE
 SIDEBAR MON ESPACE
 *****************************/
 
-.sidebar_mon_espace{
+.sidebar_soutenir{
   background-color: white;
   color: black;
-  width: 400px;
-  height: 100%;
+  width: 265px;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: -400px;
@@ -45,18 +189,58 @@ SIDEBAR MON ESPACE
 
 .section_espaceosb{
   text-align: center;
+  position: relative;
   padding-top: 25px;
   padding-bottom: 25px;
+  height:33%;
   p{
-    margin: 0;
-    text-transform: uppercase;
-    font-weight: 500;
-    line-height: 20px;
-    &:nth-of-type(2){
-      font-size: 25px;
-      text-transform: inherit;
-    }
+
+
+
   }
+}
+
+.espaceosb {
+
+
+
+  &__inner {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:90%;
+  }
+
+  &__title {
+    font-size:1.3rem;
+    font-weight: 400;
+    margin:0;
+    text-transform: uppercase;
+
+  }
+
+  &__subtitle {
+    font-family: $font2;
+    font-size:2.2rem;
+    margin: 0;
+    font-weight: 400;
+  }
+
+  &__content {
+    font-size: 1.15rem;
+    font-weight: 400;
+    text-align: center;
+    margin:1.5rem 0;
+  }
+}
+
+
+
+.sidebar__all {
+
+    left: -265px;
+
 }
 
 #particulier{
@@ -69,26 +253,28 @@ SIDEBAR MON ESPACE
 
 .btn_savoir{
   border: thin black solid;
-  padding: 2px 10px;
+  padding: 4px 10px;
   width: 120px;
+  font-size:1.2rem;
   text-decoration: none;
   color: black;
-  display: block;
-  margin: 25px auto;
-  margin-bottom: 0;
+  display: inline-block;
+  margin: 0px auto;
+
   text-transform: uppercase;
+
+  &:hover {
+
+
+    color: white;
+@include transition();
+
+    background-color: black;
+
+  }
 }
 #btn_don{
-  border: thin black solid;
-  padding: 2px 10px;
-  width: 135px;
-  text-decoration: none;
-  color: white;
-  display: block;
-  margin: 25px auto;
-  margin-bottom: 0;
-  background-color: black;
-  text-transform: uppercase;
+
 }
 
 
@@ -111,7 +297,7 @@ SIDEBAR MENU
   z-index: 1000;
   @include transition(0.6s);
   &.active{
-    left: 400px;
+    left: 265px;
   }
 }
 
@@ -229,7 +415,7 @@ SIDEBAR MENU
   ul{
     li{
       margin-bottom: 12px;
-      line-height: 20px;
+      line-height: 16px;
       position: relative;
       a{
         text-decoration: none;
@@ -263,12 +449,13 @@ SIDEBAR MENU
 
 #bouton_sidebar{
   border: thin white solid;
-  font-size: calc(10px + 0.2vw);
+  font-size: calc(8px + 0.2vw);
   padding: 5px;
   color: white;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 600;
   display: block;
+
   width: 80%;
   margin: 30px auto;
   @include transition(0.6s);
@@ -287,8 +474,40 @@ RESPONSIVE
 
 @media screen and (max-width: 1100px) {
 
-  .sidebar_mon_espace, .sidebar_1{
-    display: none;
+  .sidebar__all{
+    left:-265px;
+  }
+
+  .sidebar_1 {
+    left:-130px;
+  }
+
+  .sidebar_1 {
+
+
+    &.active {
+      display: block;
+      left:0;
+    }
+
+    z-index:9;
+  }
+
+  .sidebar__all {
+    z-index:10;
+  }
+
+
+
+}
+@media screen and (max-width: 768px) {
+
+
+  .sidebar_1 {
+
+    width: 50%;
+    left: -50%;
+
   }
 
 }

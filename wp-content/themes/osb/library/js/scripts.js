@@ -10,17 +10,17 @@
  * There are a lot of example functions and tools in here. If you don't
  * need any of it, just remove it. They are meant to be helpers and are
  * not required. It's your world baby, you can do whatever you want.
-*/
+ */
 
 
 /*
  * Get Viewport Dimensions
  * returns object with viewport dimensions to match css in width and height properties
  * ( source: http://andylangton.co.uk/blog/development/get-viewport-size-width-and-height-javascript )
-*/
+ */
 function updateViewportDimensions() {
-	var w=window,d=document,e=d.documentElement,g=d.getElementsByTagName('body')[0],x=w.innerWidth||e.clientWidth||g.clientWidth,y=w.innerHeight||e.clientHeight||g.clientHeight;
-	return { width:x,height:y };
+    var w = window, d = document, e = d.documentElement, g = d.getElementsByTagName('body')[0], x = w.innerWidth || e.clientWidth || g.clientWidth, y = w.innerHeight || e.clientHeight || g.clientHeight;
+    return {width: x, height: y};
 }
 // setting the viewport width
 var viewport = updateViewportDimensions();
@@ -30,14 +30,18 @@ var viewport = updateViewportDimensions();
  * Throttle Resize-triggered Events
  * Wrap your actions in this function to throttle the frequency of firing them off, for better performance, esp. on mobile.
  * ( source: http://stackoverflow.com/questions/2854407/javascript-jquery-window-resize-how-to-fire-after-the-resize-is-completed )
-*/
+ */
 var waitForFinalEvent = (function () {
-	var timers = {};
-	return function (callback, ms, uniqueId) {
-		if (!uniqueId) { uniqueId = "Don't call this twice without a uniqueId"; }
-		if (timers[uniqueId]) { clearTimeout (timers[uniqueId]); }
-		timers[uniqueId] = setTimeout(callback, ms);
-	};
+    var timers = {};
+    return function (callback, ms, uniqueId) {
+        if (!uniqueId) {
+            uniqueId = "Don't call this twice without a uniqueId";
+        }
+        if (timers[uniqueId]) {
+            clearTimeout(timers[uniqueId]);
+        }
+        timers[uniqueId] = setTimeout(callback, ms);
+    };
 })();
 
 // how long to wait before deciding the resize has stopped, in ms. Around 50-100 should work ok.
@@ -85,169 +89,331 @@ var timeToWaitForLast = 100;
  * Remember that mobile devices and javascript aren't the best of friends.
  * Keep it light and always make sure the larger viewports are doing the heavy lifting.
  *
-*/
+ */
 
 /*
  * We're going to swap out the gravatars.
  * In the functions.php file, you can see we're not loading the gravatar
  * images on mobile to save bandwidth. Once we hit an acceptable viewport
  * then we can swap out those images since they are located in a data attribute.
-*/
+ */
 function loadGravatars() {
-  // set the viewport using the function above
-  viewport = updateViewportDimensions();
-  // if the viewport is tablet or larger, we load in the gravatars
-  if (viewport.width >= 768) {
-  jQuery('.comment img[data-gravatar]').each(function(){
-    jQuery(this).attr('src',jQuery(this).attr('data-gravatar'));
-  });
-	}
+    // set the viewport using the function above
+    viewport = updateViewportDimensions();
+    // if the viewport is tablet or larger, we load in the gravatars
+    if (viewport.width >= 768) {
+        jQuery('.comment img[data-gravatar]').each(function () {
+            jQuery(this).attr('src', jQuery(this).attr('data-gravatar'));
+        });
+    }
 } // end function
 
 
 /*
  * Put all your regular jQuery in here.
-*/
-jQuery(document).ready(function($) {
+ */
+jQuery(document).ready(function ($) {
 
-	/* SLIDER HOMEPAGE */
-	var visuelActif,
-		nbVisuels,
-		firstSlide,
-		firstCommand,
-		lastSlide,
-		lastCommand,
-		gotoslide;
-	visuelActif 	= 2;
-	nbVisuels 		= $('.slideshow .slider li').length;
-	firstSlide 		= $('.slideshow .slider li:first-child').html();
-	lastSlide 		= $('.slideshow .slider li:last-child').html();
-	largeurslider 	= $('.slideshow').width();
-	$('.slideshow .slider').append('<li>'+firstSlide+'</li>');
-	$('.slideshow .slider').prepend('<li>'+lastSlide+'</li>');
-	$('.slideshow li').css('width', largeurslider+'px');
-	$('.slideshow .slider').css('width', (largeurslider*(nbVisuels+2))+'px');
-	$('.slideshow .slider').css('margin-left','-'+(largeurslider)+'px');
-	$('.next_btn').bind('click', function(){
-		if(visuelActif <= nbVisuels){
-			$('.slideshow .slider').animate({'margin-left':'-'+((visuelActif)*largeurslider)+'px'}, 500, function(){
-				visuelActif++;
-			});
-		}else{
-			$('.slideshow .slider').animate({'margin-left':'-'+((visuelActif)*largeurslider)+'px'}, 500, function(){
-				visuelActif = 2;
-				$('.slideshow .slider').css('margin-left','-'+(largeurslider)+'px');
-			});
-		}
-	})
-	$('.previous_btn').bind('click', function(){
-		if(visuelActif > 1){
-			visuelActif--;
-			$('.slideshow .slider').animate({'margin-left':'-'+((visuelActif-1)*largeurslider)+'px'}, 500);
-		}else{
-			$('.slideshow .slider').css('margin-left', '-'+((nbVisuels)*largeurslider)+'px');
-			visuelActif = nbVisuels;
-			$('.slideshow .slider').animate({'margin-left':'-'+((visuelActif-1)*largeurslider)+'px'}, 500);
-		}
-	});
-
-
-	/*plus de tag*/
-	$('#plus_de_tag').on('click', function(){
-		$('.filtreSelector').toggleClass('active');
-	});
-
-	/*SIDEBAR ESPACE PERSO*/
-	$("#espace").on("click", function(){
-		$('.sidebar_mon_espace').toggleClass('active');
-		$('.sidebar_1').toggleClass('active');
-		$('#content').toggleClass('active');
-		$('.footer').toggleClass('active');
-	});
-
-	$("#actions_culturelles").on("click", function(){
-		$('.sidebar_actions_culturelles').toggleClass('active');
-		$('.sidebar_1').toggleClass('active');
-		$('#content').toggleClass('active');
-		$('.footer').toggleClass('active');
-	});
-
-	/* Event menu Scroll to fixed */
-	//$('.section-menu-event').scrollToFixed();
-
-	/* Hover photo_descrition event */
-
-	$('.event-desc__image__play').on('click', function() {
-		$('.event-desc__spotify').show('fast');
-	})
-
-	$('.event-desc__spotify__close').on('click', function() {
-		$('.event-desc__spotify').hide('fast');
-	})
+    /* SLIDER HOMEPAGE */
+    var visuelActif,
+        nbVisuels,
+        firstSlide,
+        firstCommand,
+        lastSlide,
+        lastCommand,
+        gotoslide;
+    visuelActif = 2;
+    nbVisuels = $('.slideshow .slider li').length;
+    firstSlide = $('.slideshow .slider li:first-child').html();
+    lastSlide = $('.slideshow .slider li:last-child').html();
+    largeurslider = $('.slideshow').width();
+    $('.slideshow .slider').append('<li>' + firstSlide + '</li>');
+    $('.slideshow .slider').prepend('<li>' + lastSlide + '</li>');
+    $('.slideshow li').css('width', largeurslider + 'px');
+    $('.slideshow .slider').css('width', (largeurslider * (nbVisuels + 2)) + 'px');
+    $('.slideshow .slider').css('margin-left', '-' + (largeurslider) + 'px');
+    $('.next_btn').bind('click', function () {
+        if (visuelActif <= nbVisuels) {
+            $('.slideshow .slider').animate({'margin-left': '-' + ((visuelActif) * largeurslider) + 'px'}, 500, function () {
+                visuelActif++;
+            });
+        } else {
+            $('.slideshow .slider').animate({'margin-left': '-' + ((visuelActif) * largeurslider) + 'px'}, 500, function () {
+                visuelActif = 2;
+                $('.slideshow .slider').css('margin-left', '-' + (largeurslider) + 'px');
+            });
+        }
+    })
+    $('.previous_btn').bind('click', function () {
+        if (visuelActif > 1) {
+            visuelActif--;
+            $('.slideshow .slider').animate({'margin-left': '-' + ((visuelActif - 1) * largeurslider) + 'px'}, 500);
+        } else {
+            $('.slideshow .slider').css('margin-left', '-' + ((nbVisuels) * largeurslider) + 'px');
+            visuelActif = nbVisuels;
+            $('.slideshow .slider').animate({'margin-left': '-' + ((visuelActif - 1) * largeurslider) + 'px'}, 500);
+        }
+    });
 
 
-	//Script Scroll page Historique
-	$(function () {
+    /*plus de tag*/
+    $('#plus_de_tag').on('click', function () {
+        $('.filtreSelector').toggleClass('active');
+    });
 
-		window.sr = ScrollReveal();
+    /*SIDEBAR ESPACE PERSO*/
+    $("#bouton_sidebar").on("click", function () {
 
-		if ($(window).width() < 768) {
+        if ($(window).width() < 768) {
 
-			if ($('.timeline-content').hasClass('js--fadeInLeft')) {
-				$('.timeline-content').removeClass('js--fadeInLeft').addClass('js--fadeInRight');
-			}
+            if ($('.sidebar__all').hasClass('active')) {
+                $('.sidebar__all').removeClass('active');
+            }
 
-			sr.reveal('.js--fadeInRight', {
-				origin: 'right',
-				distance: '300px',
-				easing: 'ease-in-out',
-				duration: 800,
-			});
+            else {
 
-		} else {
-
-			sr.reveal('.js--fadeInLeft', {
-				origin: 'left',
-				distance: '300px',
-				easing: 'ease-in-out',
-				duration: 800,
-			});
-
-			sr.reveal('.js--fadeInRight', {
-				origin: 'right',
-				distance: '300px',
-				easing: 'ease-in-out',
-				duration: 800,
-			});
-
-		}
-
-		sr.reveal('.js--fadeInLeft', {
-			origin: 'left',
-			distance: '300px',
-			easing: 'ease-in-out',
-			duration: 800,
-		});
-
-		sr.reveal('.js--fadeInRight', {
-			origin: 'right',
-			distance: '300px',
-			easing: 'ease-in-out',
-			duration: 800,
-		});
+                $('#content').toggleClass('active');
+                $('.footer').toggleClass('active');
+            }
+        } else {
 
 
-	});
+            if ($('.sidebar__all').hasClass('active')) {
+                $('.sidebar__all').removeClass('active');
+            }
+
+            else {
+
+                $('.sidebar_1').toggleClass('active');
+                $('#content').toggleClass('active');
+                $('.footer').toggleClass('active');
+            }
+        }
+
+        $('.sidebar_soutenir').toggleClass('active');
+
+    });
+
+    $("#actions_culturelles").on("click", function () {
 
 
+        if ($(window).width() < 768) {
+            if ($('.sidebar__all').hasClass('active')) {
 
-	//Google Maps JS - Page Salle
+                $('.sidebar__all').removeClass('active');
 
-	//google.maps.event.trigger(map, 'resize');
+            }
+
+            else {
+                $('#content').toggleClass('active');
+                $('.footer').toggleClass('active');
+            }
+        }
+        else {
+            if ($('.sidebar__all').hasClass('active')) {
+
+                $('.sidebar__all').removeClass('active');
+
+            }
+
+            else {
+                $('.sidebar_1').toggleClass('active');
+                $('#content').toggleClass('active');
+                $('.footer').toggleClass('active');
+            }
+        }
+
+        $('.sidebar_actions_culturelles').toggleClass('active');
+
+    });
+
+    $("#saison").on("click", function () {
+
+        if ($(window).width() < 768) {
+            if ($('.sidebar__all').hasClass('active')) {
+                $('.sidebar__all').removeClass('active');
+
+            }
 
 
+            else {
+                $('#content').toggleClass('active');
+                $('.footer').toggleClass('active');
+            }
+        } else {
 
 
+            if ($('.sidebar__all').hasClass('active')) {
+                $('.sidebar__all').removeClass('active');
+
+            }
 
 
-}); /* end of as page load scripts */
+            else {
+                $('.sidebar_1').toggleClass('active');
+                $('#content').toggleClass('active');
+                $('.footer').toggleClass('active');
+            }
+        }
+
+        $('.sidebar_saison').toggleClass('active');
+
+
+    });
+
+    $("#decouvrir").on("click", function () {
+        if ($(window).width() < 768) {
+            if ($('.sidebar__all').hasClass('active')) {
+                $('.sidebar__all').removeClass('active');
+
+            }
+
+            else {
+                $('#content').toggleClass('active');
+                $('.footer').toggleClass('active');
+            }
+        }
+
+        else {
+            if ($('.sidebar__all').hasClass('active')) {
+                $('.sidebar__all').removeClass('active');
+
+            }
+
+            else {
+                $('.sidebar_1').toggleClass('active');
+                $('#content').toggleClass('active');
+                $('.footer').toggleClass('active');
+            }
+        }
+
+        $('.sidebar_decouvrir').toggleClass('active');
+
+    });
+
+    $("#ressource").on("click", function () {
+
+        if ($(window).width() < 768) {
+            if ($('.sidebar__all').hasClass('active')) {
+                $('.sidebar__all').removeClass('active');
+
+            }
+
+            else {
+                $('#content').toggleClass('active');
+                $('.footer').toggleClass('active');
+            }
+        } else {
+            if ($('.sidebar__all').hasClass('active')) {
+                $('.sidebar__all').removeClass('active');
+
+            }
+
+            else {
+                $('.sidebar_1').toggleClass('active');
+                $('#content').toggleClass('active');
+                $('.footer').toggleClass('active');
+            }
+        }
+
+        $('.sidebar_ressources').toggleClass('active');
+
+    });
+
+    /* Event menu Scroll to fixed */
+    //$('.section-menu-event').scrollToFixed();
+
+    /* Hover photo_descrition event */
+
+    $('.event-desc__image__play').on('click', function () {
+        $('.event-desc__spotify').show('fast');
+    })
+
+    $('.event-desc__spotify__close').on('click', function () {
+        $('.event-desc__spotify').hide('fast');
+    })
+
+
+    //Script Scroll page Historique
+    $(function () {
+
+        window.sr = ScrollReveal();
+
+        if ($(window).width() < 768) {
+
+            if ($('.timeline-content').hasClass('js--fadeInLeft')) {
+                $('.timeline-content').removeClass('js--fadeInLeft').addClass('js--fadeInRight');
+            }
+
+            sr.reveal('.js--fadeInRight', {
+                origin: 'right',
+                distance: '300px',
+                easing: 'ease-in-out',
+                duration: 800,
+            });
+
+        } else {
+
+            sr.reveal('.js--fadeInLeft', {
+                origin: 'left',
+                distance: '300px',
+                easing: 'ease-in-out',
+                duration: 800,
+            });
+
+            sr.reveal('.js--fadeInRight', {
+                origin: 'right',
+                distance: '300px',
+                easing: 'ease-in-out',
+                duration: 800,
+            });
+
+        }
+
+        sr.reveal('.js--fadeInLeft', {
+            origin: 'left',
+            distance: '300px',
+            easing: 'ease-in-out',
+            duration: 800,
+        });
+
+        sr.reveal('.js--fadeInRight', {
+            origin: 'right',
+            distance: '300px',
+            easing: 'ease-in-out',
+            duration: 800,
+        });
+
+
+    });
+
+
+    /*
+     *  Mobile Menu
+     */
+
+    $('.hamburger-icon').click(function (e) {
+
+        e.preventDefault();
+        $('.sidebar_1').toggleClass('active');
+
+        $this = $(this);
+        if ($this.hasClass('is-opened')) {
+            $this.addClass('is-closed').removeClass('is-opened');
+        } else {
+            $this.removeClass('is-closed').addClass('is-opened');
+        }
+
+        if ($('.sidebar__all').hasClass('active')) {
+            $('.sidebar__all').removeClass('active')
+        }
+    });
+
+
+    //Google Maps JS - Page Salle
+
+    //google.maps.event.trigger(map, 'resize');
+
+
+});
+/* end of as page load scripts */

@@ -41,7 +41,7 @@
 		<?php // end analytics ?>
 	</head>
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
-		<div id="container">
+	<div class="hamburger-icon"><span></span></div>		<div id="container">
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 				<div id="inner-header" class="wrap cf">
 					<?php // to use a image just replac the bloginfo('name') with your img src and remove the surrounding <p> ?>
