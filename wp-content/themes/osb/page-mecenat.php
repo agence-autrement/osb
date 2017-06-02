@@ -117,15 +117,15 @@ Template Name: Page Mécénat
         <div class="contenu_grid">
             <div class="gallerie">
                 <div class="thumb">
-                    <img src="http://lorempixel.com/500/380/nature" alt="">
+                    <img src="<? bloginfo('template_url') ?>/library/images/participer.jpg" alt="">
                 </div>
                 <div class="miniatures">
-                    <img src="http://lorempixel.com/500/380/nature" alt="">
+                    <img src="<? bloginfo('template_url') ?>/library/images/miniature.jpg" alt="">
                 </div>
             </div>
             <div class="content_text">
                 <div>
-                    Nous avons besoin de 5 000€ pour soutenir le financement de la commande de ces deux nouvelles oeuvres (composition, création publique, actions de médiation).
+                    Nous avons besoin de <b>5 000€</b> pour soutenir le financement de la commande de ces deux nouvelles oeuvres (composition, création publique, actions de médiation).
                     En remerciement, vous recevrez des contreparties exclusives !
                 </div>
                 <div class="btn_soutient"><a href="###">Recevoir des informations par mail</a></div>

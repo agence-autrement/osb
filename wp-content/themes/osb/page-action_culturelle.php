@@ -5,7 +5,6 @@ Template Name: Page Action Culturelle
 ?>
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
-
 <div id="content">
     <section class="top_page_action" style="background-image: url(<? the_field('visuel_de_la_page'); ?>);">
         <div class="contenu_grid">
@@ -13,7 +12,7 @@ Template Name: Page Action Culturelle
             <div class="index">
                 <ul>
                     <? while ( have_rows('actions') ) : the_row(); ?>
-                        <li><? the_sub_field('titre'); ?></li>
+                        <li class="li_index"><? the_sub_field('titre'); ?></li>
                     <? endwhile; ?>
                 </ul>
             </div>
@@ -161,57 +160,6 @@ Template Name: Page Action Culturelle
             </div>
         </section>
     <? } ?>
-    <section class="suggestion">
-        <div class="contenu_grid">
-            <div class="titre_sugg">// Vous aimerez peut-être //</div>
-            <ul>
-                <li>
-                    <div class="left_event">
-                        <p class="cat_calendrier">Les essentiels</p>
-                        <p class="titre_calendrier">Titre Event</p>
-                        <p class="artiste_calendrier">Nom de l'artiste</p>
-                        <a href="###" class="link_calendrier">EN SAVOIR +</a>
-                    </div>
-                    <div class="right_event">
-                        <p class="day_calendrier">
-                            29
-                        </p>
-                        <p class="month_calendrier">Juin</p>
-                        <p class="lieu_calendrier">Rennes</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="left_event">
-                        <p class="cat_calendrier">Les essentiels</p>
-                        <p class="titre_calendrier">Titre Event</p>
-                        <p class="artiste_calendrier">Nom de l'artiste</p>
-                        <a href="###" class="link_calendrier">EN SAVOIR +</a>
-                    </div>
-                    <div class="right_event">
-                        <p class="day_calendrier">
-                            29
-                        </p>
-                        <p class="month_calendrier">Juin</p>
-                        <p class="lieu_calendrier">Rennes</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="left_event">
-                        <p class="cat_calendrier">Les essentiels</p>
-                        <p class="titre_calendrier">Titre Event</p>
-                        <p class="artiste_calendrier">Nom de l'artiste</p>
-                        <a href="###" class="link_calendrier">EN SAVOIR +</a>
-                    </div>
-                    <div class="right_event">
-                        <p class="day_calendrier">
-                            29
-                        </p>
-                        <p class="month_calendrier">Juin</p>
-                        <p class="lieu_calendrier">Rennes</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
+    <? get_template_part('vous-aimerez') ?>
 </div>
 <?php get_footer(); ?>

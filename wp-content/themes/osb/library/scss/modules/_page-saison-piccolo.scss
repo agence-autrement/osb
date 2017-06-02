@@ -1,4 +1,4 @@
-.page-template-page-action_culturelle{
+.page-template-page-saison-piccolo{
 
   /////////////////////////  SLIDER HAUT DE PAGE
 
@@ -6,77 +6,77 @@
     padding: 180px 35px 35px;
     height: 710px;
     width: 100%;
+    background: darkslategrey no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
-    background: darkslategrey no-repeat;
-  }
 
-  .index{
-    margin-bottom: 25px;
-  }
+    .index{
+      margin-bottom: 25px;
+    }
 
-  .li_index{
-    font-size: 12px;
-    color: #ED1E24;
-  }
-
-  .title{
-    font-size: 60px;
-    margin-bottom: 15px;
-    color: white;
-    font-family: $font2;
-    span{
+    li{
+      font-size: 12px;
       color: #ED1E24;
     }
-  }
 
-  .tag{
-    font-size: 12px;
-    text-transform: uppercase;
-    overflow: hidden;
-    div{
-      display: inline-block;
-      float: left;
-    }
-  }
-
-  .btn_red{
-    cursor: pointer;
-    padding: 5px 10px;
-    background-color: #ED1E24;
-    color: white;
-    font-weight: 700;
-  }
-
-  .btn_savoir_plus{
-    display: block;
-    position: relative;
-    padding:5px 10px;
-    cursor: pointer;
-    color: white;
-    &:after{
-      content: '';
-      position: absolute;
-      background-color: white;
-      bottom: 0;
-      left: 10px;
-      width: 0;
-      height: 1px;
-      @include transition(0.6s);
-    }
-    &:hover{
-      font-weight: inherit;
-      &:after{
-        width: 70px;
+    .title{
+      font-size: 60px;
+      margin-bottom: 15px;
+      color: white;
+      font-family: $font2;
+      span{
+        color: #ED1E24;
       }
     }
-  }
 
-  .intro_text{
-    font-size: 12px;
-    max-width: 320px;
-    margin-top: 15px;
-    color: white;
+    .tag{
+      font-size: 12px;
+      text-transform: uppercase;
+      overflow: hidden;
+      div{
+        display: inline-block;
+        float: left;
+      }
+    }
+
+    .btn_red{
+      cursor: pointer;
+      padding: 5px 10px;
+      background-color: #ED1E24;
+      color: white;
+      font-weight: 700;
+    }
+
+    .btn_savoir_plus{
+      display: block;
+      position: relative;
+      padding:5px 10px;
+      cursor: pointer;
+      color: white;
+      &:after{
+        content: '';
+        position: absolute;
+        background-color: white;
+        bottom: 0;
+        left: 10px;
+        width: 0;
+        height: 1px;
+        @include transition(0.6s);
+      }
+      &:hover{
+        font-weight: inherit;
+        &:after{
+          width: 70px;
+        }
+      }
+    }
+
+    .intro_text{
+      font-size: 12px;
+      max-width: 320px;
+      margin-top: 15px;
+      color: white;
+    }
   }
 
   /////////////////////////  SOUS-MENU
@@ -134,6 +134,16 @@
     right: -32px;
   }
 
+  .croix_noir{
+    background-image: url('../images/croix_noir.svg');
+    height: 15px;
+    width: 15px;
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 30px;
+  }
+
   img{
     width: 100%;
   }
@@ -150,16 +160,6 @@
     padding-left: 25px;
     font-size: 12px;
     margin-bottom: 30px;
-  }
-
-  .croix_noir{
-    background-image: url('../images/croix_noir.svg');
-    height: 15px;
-    width: 15px;
-    display: block;
-    position: absolute;
-    top: -12px;
-    left: 8px;
   }
 
   .qui{
@@ -219,12 +219,37 @@
     }
   }
 
+  .image_position{
+    position: absolute;
+    display: block;
+    max-width: 1100px;
+    margin: 0 auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 15;
+    .img_content{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      img{
+        position: absolute;
+        width: 350px;
+        height: auto;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+
   //Contenu à droite
 
   .content_right{
     padding: 35px;
-    overflow: hidden;
     width: 100%;
+    position: relative;
+    min-height: 430px;
     .left_content{
       padding-right: 30px;
       width: 50%;
@@ -235,15 +260,24 @@
       float: right;
       padding-left: 30px;
       padding-top: 15px;
+      position: relative;
+    }
+    .image_position{
+      .img_content{
+        img{
+          left: 150px;
+          bottom: -50px;
+        }
+      }
     }
   }
 
   //Contenu à gauche
 
   .content_left{
-    background-color: #D9D2C4;
+    position: relative;
+    background-color: #FFFFFF;
     padding: 35px;
-    overflow: hidden;
     width: 100%;
 
     .left_content{
@@ -267,28 +301,50 @@
       padding-right: 30px;
       padding-top: 15px;
       position: relative;
-    }
 
-    .inscrire{
-      border-color: white;
-      span{
-        color: white;
+      .croix_noir{
+        left: 0;
       }
     }
 
-    .btn_inscription{
-      border-color: white;
+    .image_position{
+      .img_content{
+        img{
+          left: 35px;
+          bottom: -115px;
+        }
+      }
+    }
+    &.katia{
+      padding-top: 90px;
+      background-color: #D9D2C4;
+
+      .inscrire{
+        border-color: #FFFFFF;
+
+        span{
+          color: #ffffff;
+        }
+
+        .btn_inscription{
+          border-color: #ffffff;
+        }
+      }
     }
   }
 
   //Contenu "spécial"
 
   .special_content{
-    padding: 35px;
-    overflow: hidden;
+    padding: 75px 35px 35px;
     width: 100%;
     -webkit-background-size: cover;
     background-size: cover;
+    height: 400px;
+
+    .contenu_grid{
+      height: 100%;
+    }
 
     .left_content{
       padding-right: 30px;
@@ -301,137 +357,21 @@
       float: right;
       padding-left: 30px;
       padding-top: 15px;
-    }
-    
-    .titre_right_text{
-      color: #FFFFFF;  
-    }
-    
-    .txt_right_content{
-      color: #FFFFFF;
+      position: relative;
     }
 
-    .croix_noir{
-      background-image: url('../images/croix_blanche.svg');
-    }
-    
     .inscrire{
-      color: #FFFFFF;
-      background-color: #000000;
+      background-color: transparent;
+      color: #000;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 12px;
+      padding: 40px 35px;
+      border-color: #fff;
     }
-    
+
     .btn_inscription{
       color: #ED1E24;
-    }
-  }
-
-  ///////////////////////// FORMULAIRE
-
-  .formulaire{
-    padding: 35px;
-  }
-
-  .titre_formulaire{
-    font-size: 18px;
-    text-align: center;
-    text-transform: uppercase;
-  }
-
-  .wpcf7-form{
-    width: 100%;
-    overflow: hidden;
-    margin-top: 60px;
-    input{
-      background-color: #F5F5F3;
-      padding: 5px;
-      font-size: 12px;
-      border: none;
-      margin-bottom: 15px;
-    }
-    select{
-      border: none;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      border-radius: 0;
-      font-size: 12px;
-      padding: 9px;
-    }
-  }
-
-  .inner_form_title{
-    margin-bottom: 24px;
-    font-size: 16px;
-  }
-
-  .formulaire_left, .formulaire_right{
-    width: 50%;
-    float: left;
-  }
-
-  .formulaire_right{
-    input{
-      width: 100%;
-    }
-  }
-
-  #choix_un, #choix_deux{
-    width: 70%;
-  }
-
-  #date_choix_un, #date_choix_deux{
-    width: 25%;
-    padding: 4px;
-  }
-
-  #ecole, #adresse, #classe, #nombre_participant{
-    width: 49%;
-    float: left;
-  }
-
-  #ecole, #classe{
-   margin-right: 2%;
-  }
-
-  .formulaire_submit{
-    width: 100%;
-    text-align: center;
-  }
-
-  #inscrire{
-    background-color: #ffffff;
-    border: 1px solid #F5F5F3;
-    width: 100px;
-    padding: 5px 20px;
-    margin-top: 30px;
-  }
-
-  ///////////////////////// ENCADRÉ "PARCOURS"
-
-  .parcours{
-    padding: 35px;
-    text-align: center;
-
-    .contenu_grid{
-      border: 1px solid #F3F3F3;
-      padding: 35px;
-    }
-  }
-
-  .titre_parcours{
-    font-size: 34px;
-    position: relative;
-    padding-bottom: 10px;
-    margin-bottom: 25px;
-    font-family: $font2;
-    &:after{
-      content: '';
-      position: absolute;
-      background-color: #ED1E24;
-      width: 65px;
-      height: 2px;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
     }
   }
 
@@ -455,18 +395,18 @@
     }
 
     .content_right{
-       .left_content{
-         float: none;
-         width: 100%;
-         padding: 0;
-         margin-bottom: 25px;
-       }
-       .right_content{
-         float: none;
-         width: 100%;
-         padding: 0;
-       }
-     }
+      .left_content{
+        float: none;
+        width: 100%;
+        padding: 0;
+        margin-bottom: 25px;
+      }
+      .right_content{
+        float: none;
+        width: 100%;
+        padding: 0;
+      }
+    }
 
     .content_left{
       .left_content{
@@ -494,31 +434,6 @@
         width: 100%;
         padding: 0;
       }
-    }
-
-    .inner_form_title{
-      margin-bottom: 24px;
-      font-size: 16px;
-    }
-
-    .formulaire_left, .formulaire_right{
-      width: 80%;
-      float: none;
-      margin: 0 auto;
-    }
-
-    #choix_un, #choix_deux{
-      width: 70%;
-    }
-
-    #date_choix_un, #date_choix_deux{
-      width: 25%;
-      padding: 4px;
-    }
-
-    #ecole, #adresse, #classe, #nombre_participant{
-      width: 100%;
-      float: none;
     }
   }
 }

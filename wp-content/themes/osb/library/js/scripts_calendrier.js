@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
 
     $('.btn_gauche').on('click', function(){
         value = '.'+$(this).val();
-        $('.droite div').css('display', 'none');
+        $('.droite_select div').css('display', 'none');
         $(value).css('display','inline');
         $(value).addClass('active');
     });

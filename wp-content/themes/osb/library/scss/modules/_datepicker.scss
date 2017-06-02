@@ -1,20 +1,21 @@
-/****Style Datepicker****/
+
+///////////////////////// STYLE CALENDRIER
+
 #plugin_calendar{
   overflow: hidden;
   width: 100%;
   padding: 35px;
 }
 
-.contenu_grid{
-  &.calendar {
-    overflow: inherit;
-    &:after{
-      content: '';
-      display: block;
-      clear: both;
-  }
+.calendar {
+  overflow: inherit;
+  &:after{
+    content: '';
+    display: block;
+    clear: both;
 }
 
+///////////////////////// FILTER SELECTOR
 
   #selector{
     margin-right: 35px;
@@ -22,32 +23,36 @@
     width: 256px;
     float: left;
     position: relative;
-    .gauche{
-      float: left;
-      width: 50%;
-      button{
-        text-transform: uppercase;
-      }
-    }
-    .droite{
-      float: right;
-      width: 50%;
-      text-align: right;
-    }
+    font-size: 12px;
+  }
 
-    button{
-      padding: 5px;
-      border: none;
-      width: 90%;
-      margin: 0 auto;
-      margin-bottom: 10px;
-      text-align: center;
-      background-color: #EDEDED;
-      @include transition(0.3s);
-      &:hover{
-        background-color: black;
-        color: white;
-      }
+  .gauche_select{
+    float: left;
+    width: 50%;
+    text-transform: uppercase;
+  }
+
+  .btn_gauche{
+    text-transform: uppercase;
+  }
+
+  .droite_select{
+    float: right;
+    width: 50%;
+    text-align: right;
+  }
+
+  .btn_select{
+    padding: 5px;
+    border: none;
+    width: 90%;
+    margin: 0 auto 10px;
+    text-align: center;
+    background-color: #EDEDED;
+    @include transition(0.3s);
+    &:hover{
+      background-color: black;
+      color: white;
     }
   }
 
@@ -64,15 +69,15 @@
       height: 100%;
       width: 100%;
     }
-    #close{
-      height: 30px;
-      width: 30px;
-      //background-color: black;
-      position: absolute;
-      left: 216px;
-      cursor: pointer;
-      background-image: url('../images/close.svg');
-    }
+  }
+
+  #close{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    left: 216px;
+    cursor: pointer;
+    background-image: url('../images/close.svg');
   }
 
   #date_value{
@@ -90,9 +95,10 @@
     height: 25px;
     color: black;
     padding-top: 5px;
-    .ui-datepicker-title{
-      text-align: center;
-    }
+  }
+
+  .ui-datepicker-title{
+    text-align: center;
   }
 
   .ui-datepicker-next{
@@ -157,106 +163,112 @@
   }
 
 
-  /****Style réponse Ajax****/
+///////////////////////// FILTER SELECTOR
 
   #resultAjax{
     width: calc(100% - 291px);
     float: left;
+  }
 
-    .left_event{
-      width: 75%;
-      float: left;
-      color: white;
-      padding-left: 12px;
-      padding-top: 25px;
-      font-family: $font2;
-    }
+  .left_event{
+    width: 75%;
+    float: left;
+    color: white;
+    padding-left: 12px;
+    padding-top: 25px;
+    font-family: $font2;
+  }
 
-    .right_event{
-      width: 25%;
-      float: left;
-      color: white;
-      text-align: center;
-      position: relative;
-      padding-top: 25px;
-      &:before{
-        content: '';
-        position: absolute;
-        top: 30px;
-        left: 0;
-        height: 50px;
-        width: 1px;
-        background-color: white;
-        -webkit-transform: rotate(30deg);
-        -moz-transform: rotate(30deg);
-        -ms-transform: rotate(30deg);
-        -o-transform: rotate(30deg);
-        transform: rotate(30deg);
-        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711)";
-        filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711);
-      }
+  .right_event{
+    width: 25%;
+    float: left;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding-top: 25px;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 0;
+      height: 50px;
+      width: 1px;
+      background-color: white;
+      -webkit-transform: rotate(30deg);
+      -moz-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
+      -o-transform: rotate(30deg);
+      transform: rotate(30deg);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711)";
+      filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711);
     }
-    ul {
-      overflow: hidden;
-      width: 100%;
-    }
+  }
 
-    li{
-      width: 31.3%;
-      min-height: 175px;
-      color: white;
-      background-color: darkslategrey;
-      -webkit-background-size: cover;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      margin-right: 3%;
-      float: left;
-      &:last-of-type{
-        margin-right: 0;
-      }
-    }
+  ul {
+    overflow: hidden;
+    width: 100%;
+  }
 
-    p{
-      margin-bottom: 0;
-      &.cat_calendrier{
-        color: #FDE608;
-        font-size: 12px;
-      }
-      &.titre_calendrier{
-        max-width: 250px;
-        font-size: 18px;
-      }
-      &.day_calendrier{
-        font-size: 25px;
-        font-weight: 500;
-      }
-      &.month_calendrier, &.lieu_calendrier{
-        font-size: 12px;
-      }
-      &:nth-of-type(3){
-        margin-bottom: 50px;
-      }
+  li{
+    width: 31.3%;
+    min-height: 130px;
+    color: white;
+    background-color: darkslategrey;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 3%;
+    float: left;
+    &:last-of-type{
+      margin-right: 0;
     }
-    .link_calendrier{
-      display: block;
-      margin-bottom: 25px;
-      position: relative;
+  }
+
+  p{
+    margin-bottom: 0;
+    &.cat_calendrier{
+      color: #FDE608;
+      font-size: 10px;
+    }
+    &.titre_calendrier{
+      max-width: 250px;
+      font-size: 13px;
+    }
+    &.artiste_calendrier{
+      font-size: 11px;
+    }
+    &.day_calendrier{
+      font-size: 21px;
+      font-weight: 500;
+    }
+    &.month_calendrier, &.lieu_calendrier{
+      font-size: 9px;
+    }
+    &:nth-of-type(3){
+      margin-bottom: 50px;
+    }
+  }
+
+  .link_calendrier{
+    display: block;
+    margin-bottom: 25px;
+    position: relative;
+    font-size: 10px;
+    &:after{
+      content: '';
+      position: absolute;
+      background-color: white;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      @include transition(0.6s);
+    }
+    &:hover{
+      font-weight: inherit;
       &:after{
-        content: '';
-        position: absolute;
-        background-color: white;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 1px;
-        @include transition(0.6s);
-      }
-      &:hover{
-        font-weight: inherit;
-        &:after{
-          width: 100px;
-        }
+        width: 55px;
       }
     }
   }
@@ -309,6 +321,3 @@
 
   }
 }
-
-
-
