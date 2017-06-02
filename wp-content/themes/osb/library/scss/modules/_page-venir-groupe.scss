@@ -1,0 +1,89 @@
+.page-template-page-venir-groupe{
+
+  /////////////////////////  SLIDER HAUT DE PAGE
+
+  .top_page_action{
+    padding: 35px;
+    padding-top: 180px;
+    height: 710px;
+    width: 100%;
+    background-color: darkslategrey;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .title{
+      font-size: 60px;
+      margin-bottom: 15px;
+      color: white;
+      font-family: $font2;
+      span{
+        color: #ED1E24;
+      }
+    }
+
+    .tag{
+      font-size: 12px;
+      text-transform: uppercase;
+      overflow: hidden;
+      div{
+        display: inline-block;
+        float: left;
+      }
+    }
+
+    .btn_red{
+      cursor: pointer;
+      padding: 5px 10px;
+      background-color: #ED1E24;
+      color: white;
+      font-weight: 700;
+    }
+
+    .btn_savoir_plus{
+      display: block;
+      position: relative;
+      padding:5px 10px;
+      cursor: pointer;
+      color: white;
+      &:after{
+        content: '';
+        position: absolute;
+        background-color: white;
+        bottom: 0;
+        left: 10px;
+        width: 0;
+        height: 1px;
+        @include transition(0.6s);
+      }
+      &:hover{
+        font-weight: inherit;
+        &:after{
+          width: 70px;
+        }
+      }
+    }
+
+    .intro_text{
+      font-size: 12px;
+      max-width: 320px;
+      margin-top: 15px;
+      color: white;
+    }
+  }
+
+  /////////////////////////  FORMULAIRE
+
+  .formulaire_groupe{
+    padding: 35px;
+  }
+
+  .titre_form_groupe{
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+}
