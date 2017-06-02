@@ -12,7 +12,7 @@ Template Name: Page Action Culturelle
             <div class="index">
                 <ul>
                     <? while ( have_rows('actions') ) : the_row(); ?>
-                        <li><? the_sub_field('titre'); ?></li>
+                        <li class="li_index"><? the_sub_field('titre'); ?></li>
                     <? endwhile; ?>
                 </ul>
             </div>
