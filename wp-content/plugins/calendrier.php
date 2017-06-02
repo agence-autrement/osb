@@ -27,6 +27,7 @@ function array_filter_by_value($my_array, $index, $value)
 
 
 
+
 ///////////////////////////////// Remove Value from Array
 
 function removeElementWithValue($array, $key, $value)
@@ -38,6 +39,8 @@ function removeElementWithValue($array, $key, $value)
     }
     return $array;
 };
+
+
 
 
 ///////////////////////////////// Remove Value inferieur
@@ -53,12 +56,16 @@ function removeElementWithInferiorValue($array, $key, $value)
 };
 
 
+
+
 ///////////////////////////////// Tri par date
 
 function sortByDate($a,$b)
 {
     return ($a['date_calendrier'] <= $b['date_calendrier']) ? -1 : 1;
 };
+
+
 
 
 ///////////////////////////////// Array sans doublon
@@ -68,6 +75,7 @@ function unique_multidim_array($array, $key)
     $temp_array = array();
     $i          = 0;
     $key_array  = array();
+
     foreach($array as $val) {
         if (!in_array($val[$key], $key_array)) {
             $key_array[$i]  = $val[$key];
@@ -79,38 +87,39 @@ function unique_multidim_array($array, $key)
 };
 
 
+
+
 ///////////////////////////////// Généré Input en remontant le CF lieu
 
 function getInputByLieu()
 {
     $args       = array('post_type' => 'spectacles');
     $the_query  = new WP_Query($args);
+
     if ( $the_query->have_posts() ) {
         $table  = array();
         while ($the_query->have_posts()) {
             $the_query->the_post();
-
             if( have_rows('representations') ):
                 while ( have_rows('representations') ) : the_row();
                    $departement = get_sub_field('departement');
+                   array_push($table, array($departement));
                 endwhile;
             else :
                 // no rows found
             endif;
-            array_push($table, array($departement));
         };
-
         $table = unique_multidim_array($table,'0');
         foreach($table as $table_un => $values){
             foreach($values as $value){
                 if($value == 22){
-                    echo "<button type='submit' name='ville' value='".$value."'>Côte d'Armor</button>";
+                    echo "<button type='submit' class='btn_select btn_droite dpt' name='ville' value='".$value."'>Côte d'Armor</button>";
                 }elseif($value == 29){
-                    echo "<button type='submit' name='ville' value='".$value."'>Finistère</button>";
+                    echo "<button type='submit' class='btn_select btn_droite dpt' name='ville' value='".$value."'>Finistère</button>";
                 }elseif($value == 35){
-                    echo "<button type='submit' name='ville' value='".$value."'>Ille-et-Vilaine</button>";
+                    echo "<button type='submit' class='btn_select btn_droite dpt' name='ville' value='".$value."'>Ille-et-Vilaine</button>";
                 }elseif($value == 56){
-                    echo "<button type='submit' name='ville' value='".$value."'>Morbihan</button>";
+                    echo "<button type='submit' class='btn_select btn_droite dpt' name='ville' value='".$value."'>Morbihan</button>";
                 }
             };
         };
@@ -118,9 +127,12 @@ function getInputByLieu()
     };
 };
 
-///////////////////////////////// WP_QUERY -> Saison complète
 
-function querySaison()
+
+
+///////////////////////////////// WP_QUERY -> Query ALL DATE
+
+function queryAllDate()
 {
     $args       = array('post_type' => 'spectacles');
     $the_query  = new WP_Query( $args );
@@ -152,90 +164,124 @@ function querySaison()
                     $date               = get_sub_field('date');
                     $lieu               = get_sub_field('lieu');
                     $ville_calendrier   = get_sub_field('ville');
+
+                    $test = array(
+                        'id_calendrier'         => $post_id,
+                        'date_calendrier'       => $date,
+                        'titre_calendrier'      => $titre,
+                        'ville_calendrier'      => $ville_calendrier,
+                        'lieu_calendrier'       => $lieu,
+                        'thumbnail_calendrier'  => $thumbnail,
+                        'link'                  => $link,
+                        'departement'           => $departement,
+                        'artiste_calendrier'    => $artiste,
+                        'thematiques'           => $thematiques,
+                        'type'                  => $type,
+                        'festivals'             => $festivals,
+                        'tete_daffiche'         => $tete_daffiche,
+                        'compositeur'           => $compositeur,
+                        'instrument'            => $instrument,
+                    );
+
+                    array_push($table, $test);
+
                 endwhile;
             };
-            array_push($table, array(
-                    'id_calendrier'         => $post_id,
-                    'titre_calendrier'      => $titre,
-                    'date_calendrier'       => $date,
-                    'ville_calendrier'      => $ville_calendrier,
-                    'lieu_calendrier'       => $lieu,
-                    'thumbnail_calendrier'  => $thumbnail,
-                    'link'                  => $link,
-                    'departement'           => $departement,
-                    'artiste_calendrier'    => $artiste,
-                    'thematiques'           => $thematiques,
-                    'type'                  => $type,
-                    'festivals'             => $festivals,
-                    'tete_daffiche'         => $tete_daffiche,
-                    'compositeur'           => $compositeur,
-                    'instrument'            => $instrument,
 
-                )
-            );
         };
+        usort($table, "sortByDate");
+        return $table;
     };
-    usort($table, "sortByDate");
-    return $table;
 };
+
+
+
+
+///////////////////////////////// Affichage AJAX
+
+function displayAjax( $array )
+{
+    echo '<ul>';
+
+    foreach($array as $table_un => $values){
+        setlocale(LC_ALL, "fr_FR");
+        $timestamp          = $values['date_calendrier'];
+        $translate_Day      = strftime ( '%e' , strtotime($timestamp));
+        $translate_Month    = strftime ( '%B' , strtotime($timestamp));
+        if($values['thumbnail_calendrier'] == false){
+            echo '<li>';
+        }else{
+            $bgImage = $values['thumbnail_calendrier'];
+            echo '<li style="background-image:url('.$bgImage.'); ">';
+        }
+        ?>
+
+        <div class="left_event">
+            <p class="cat_calendrier"><? echo $values['thematiques']; ?></p>
+            <p class="titre_calendrier"><? echo $values['titre_calendrier']; ?></p>
+            <p class="artiste_calendrier"><? echo $values['artiste_calendrier']; ?></p>
+            <a href="<? echo $values['link']; ?>" class="link_calendrier">EN SAVOIR +</a>
+        </div>
+        <div class="right_event">
+            <p class="day_calendrier"><?
+                if($translate_Day == '1'){
+                    echo $translate_Day;
+                    echo "<sup>er</sup>";
+                }else{
+                    echo $translate_Day;
+                } ?>
+            </p>
+            <p class="month_calendrier"><? echo $translate_Month; ?></p>
+            <p class="lieu_calendrier"><? echo $values['ville_calendrier'];?></p>
+        </div>
+        <?
+        echo '</li>';
+    };
+    echo '</ul>';
+}
+
+
+
+
+///////////////////////////////// display all date
+
+function displayAllDate()
+{
+    $table = queryAllDate();
+    displayAjax($table);
+    wp_reset_postdata();
+}
+
+
 
 
 ///////////////////////////////// WP_QUERY -> Spectacle
 
 function queryPosts()
 {
-    $table          = querySaison();
+
+    $table          = queryAllDate();
     $delete_if_less = date("Ymd");
     $table          = removeElementWithInferiorValue($table,'date_calendrier',$delete_if_less);
     return $table;
+
 };
+
+
 
 
 ///////////////////////////////// Affichage des événements par défault
 
 function resultDateDefault()
 {
-    $table          = queryPosts();
+    $table          = queryAllDate();
     $sliced         = array_slice($table, 0, 3);
-    echo '<ul>';
-        foreach($sliced as $table_un => $values){
-            setlocale(LC_ALL, "fr_FR");
-            $timestamp          = $values['date_calendrier'];
-            $translate_Day      = strftime ( '%e' , strtotime($timestamp));
-            $translate_Month    = strftime ( '%B' , strtotime($timestamp));
-            if($values['thumbnail_calendrier'] == false){
-                echo '<li>';
-            }else{
-                $bgImage = $values['thumbnail_calendrier'];
-                echo '<li style="background-image:url('.$bgImage.'); ">';
-            }
-                ?>
-                <div class="left_event">
-                    <p class="cat_calendrier">
-                        <? echo $values['thematiques']; ?>
-                    </p>
-                    <p class="titre_calendrier"><? echo $values['titre_calendrier']; ?></p>
-                    <p class="artiste_calendrier"><? echo $values['artiste_calendrier']; ?></p>
-                    <a href="<? echo $values['link']; ?>" class="link_calendrier">EN SAVOIR +</a>
-                </div>
-                <div class="right_event">
-                    <p class="day_calendrier"><?
-                        if($translate_Day == '1'){
-                            echo $translate_Day;
-                            echo "<sup>er</sup>";
-                        }else{
-                            echo $translate_Day;
-                        } ?>
-                    </p>
-                    <p class="month_calendrier"><? echo $translate_Month; ?></p>
-                    <p class="lieu_calendrier"><? echo $values['ville_calendrier'];?></p>
-                </div>
-                <?
-            echo '</li>';
-        };
-    echo '</ul>';
+    displayAjax($sliced);
     wp_reset_postdata();
 };
+
+
+
 
 /************************
  * AJAX *
@@ -250,6 +296,8 @@ function add_js_scripts()
     $dir = plugin_dir_url( __FILE__ )."calendrier/ajax-custom.php";
     wp_localize_script('script', 'ajaxtest', $dir ); //
 }
+
+
 
 
 ///////////////////////////////// ADD ACTIONS WP
@@ -280,13 +328,15 @@ add_action( 'wp_ajax_clear_filter', 'clear_filter' );
 add_action( 'wp_ajax_nopriv_clear_filter', 'clear_filter' );
 
 
+
+
 ///////////////////////////////// Affichage des postes filtré par département
 
 function mon_action()
 {
     global $_POST;
     $ville          = $_POST['ville'];
-    $table          = queryPosts();
+    $table          = queryAllDate();
     $clear_table    = array_filter_by_value($table,'departement', $ville );
     $count          = count($clear_table);
 
@@ -304,44 +354,12 @@ function mon_action()
         $sliced = $clear_table;
     };
 
-    echo '<ul>';
-        foreach($sliced as $table_un => $values){
-            setlocale(LC_ALL, "fr_FR");
-            $timestamp          = $values['date_calendrier'];
-            $translate_Day      = strftime ( '%e' , strtotime($timestamp));
-            $translate_Month    = strftime ( '%B' , strtotime($timestamp));
+    displayAjax($sliced);
 
-            if($values['thumbnail_calendrier'] == false){
-                echo '<li>';
-            }else{
-                $bgImage = $values['thumbnail_calendrier'];
-                echo '<li style="background-image:url('.$bgImage.'); ">';
-            }
-                ?>
-                <div class="left_event">
-                    <p class="cat_calendrier"><? echo $values['thematiques']; ?></p>
-                    <p class="titre_calendrier"><? echo $values['titre_calendrier']; ?></p>
-                    <p class="artiste_calendrier"><? echo $values['artiste_calendrier']; ?></p>
-                    <a href="<? echo $values['link']; ?>" class="link_calendrier">EN SAVOIR +</a>
-                </div>
-                <div class="right_event">
-                    <p class="day_calendrier"><?
-                        if($translate_Day == '1'){
-                            echo $translate_Day;
-                            echo "<sup>er</sup>";
-                        }else{
-                            echo $translate_Day;
-                        } ?>
-                    </p>
-                    <p class="month_calendrier"><? echo $translate_Month; ?></p>
-                    <p class="lieu_calendrier"><? echo $values['ville_calendrier'];?></p>
-                </div>
-                <?
-            echo '</li>';
-        };
-    echo '</ul>';
     wp_reset_postdata();
 };
+
+
 
 
 ///////////////////////////////// Affichage des postes filtré par date
@@ -350,7 +368,7 @@ function mon_action_date()
 {
     global $_POST;
     $date_event     = $_POST['date'];
-    $table          = queryPosts();
+    $table          = queryAllDate();
     $clear_table    = array_filter_by_value($table,'date_calendrier', $date_event );
     $count          = count($clear_table);
 
@@ -368,44 +386,12 @@ function mon_action_date()
         $sliced = $clear_table;
     };
 
-    echo '<ul>';
-        foreach($sliced as $table_un => $values){
-            setlocale(LC_ALL, "fr_FR");
-            $timestamp          = $values['date_calendrier'];
-            $translate_Day      = strftime ( '%e' , strtotime($timestamp));
-            $translate_Month    = strftime ( '%B' , strtotime($timestamp));
-            if($values['thumbnail_calendrier'] == false){
-                echo '<li>';
-            }else{
-                $bgImage = $values['thumbnail_calendrier'];
-                echo '<li style="background-image:url('.$bgImage.'); ">';
-            }
-                ?>
+    displayAjax($sliced);
 
-                <div class="left_event">
-                    <p class="cat_calendrier"><? echo $values['thematiques']; ?></p>
-                    <p class="titre_calendrier"><? echo $values['titre_calendrier']; ?></p>
-                    <p class="artiste_calendrier"><? echo $values['artiste_calendrier']; ?></p>
-                    <a href="<? echo $values['link']; ?>" class="link_calendrier">EN SAVOIR +</a>
-                </div>
-                <div class="right_event">
-                    <p class="day_calendrier"><?
-                        if($translate_Day == '1'){
-                            echo $translate_Day;
-                            echo "<sup>er</sup>";
-                        }else{
-                            echo $translate_Day;
-                        } ?>
-                    </p>
-                    <p class="month_calendrier"><? echo $translate_Month; ?></p>
-                    <p class="lieu_calendrier"><? echo $values['ville_calendrier'];?></p>
-                </div>
-                <?
-            echo '</li>';
-        };
-    echo '</ul>';
     wp_reset_postdata();
 };
+
+
 
 
 ///////////////////////////////// Affichage des postes filtré par Thématiques
@@ -432,42 +418,8 @@ function mon_action_theme()
         $sliced = $clear_table;
     };
 
-    echo '<ul>';
-    foreach($sliced as $table_un => $values){
-        setlocale(LC_ALL, "fr_FR");
-        $timestamp          = $values['date_calendrier'];
-        $translate_Day      = strftime ( '%e' , strtotime($timestamp));
-        $translate_Month    = strftime ( '%B' , strtotime($timestamp));
-        if($values['thumbnail_calendrier'] == false){
-            echo '<li>';
-        }else{
-            $bgImage = $values['thumbnail_calendrier'];
-            echo '<li style="background-image:url('.$bgImage.'); ">';
-        }
-        ?>
+    displayAjax($sliced);
 
-        <div class="left_event">
-            <p class="cat_calendrier"><? echo $values['thematiques']; ?></p>
-            <p class="titre_calendrier"><? echo $values['titre_calendrier']; ?></p>
-            <p class="artiste_calendrier"><? echo $values['artiste_calendrier']; ?></p>
-            <a href="<? echo $values['link']; ?>" class="link_calendrier">EN SAVOIR +</a>
-        </div>
-        <div class="right_event">
-            <p class="day_calendrier"><?
-                if($translate_Day == '1'){
-                    echo $translate_Day;
-                    echo "<sup>er</sup>";
-                }else{
-                    echo $translate_Day;
-                } ?>
-            </p>
-            <p class="month_calendrier"><? echo $translate_Month; ?></p>
-            <p class="lieu_calendrier"><? echo $values['ville_calendrier'];?></p>
-        </div>
-        <?
-        echo '</li>';
-    };
-    echo '</ul>';
     wp_reset_postdata();
 };
 
@@ -495,58 +447,10 @@ function mon_action_type()
         $sliced = $clear_table;
     };
 
-    echo '<ul>';
-    foreach($sliced as $table_un => $values){
-        setlocale(LC_ALL, "fr_FR");
-        $timestamp          = $values['date_calendrier'];
-        $translate_Day      = strftime ( '%e' , strtotime($timestamp));
-        $translate_Month    = strftime ( '%B' , strtotime($timestamp));
-        if($values['thumbnail_calendrier'] == false){
-            echo '<li>';
-        }else{
-            $bgImage = $values['thumbnail_calendrier'];
-            echo '<li style="background-image:url('.$bgImage.'); ">';
-        }
-        ?>
+    displayAjax($sliced);
 
-        <div class="left_event">
-            <p class="cat_calendrier"><? echo $values['thematiques']; ?></p>
-            <p class="titre_calendrier"><? echo $values['titre_calendrier']; ?></p>
-            <p class="artiste_calendrier"><? echo $values['artiste_calendrier']; ?></p>
-            <a href="<? echo $values['link']; ?>" class="link_calendrier">EN SAVOIR +</a>
-        </div>
-        <div class="right_event">
-            <p class="day_calendrier"><?
-                if($translate_Day == '1'){
-                    echo $translate_Day;
-                    echo "<sup>er</sup>";
-                }else{
-                    echo $translate_Day;
-                } ?>
-            </p>
-            <p class="month_calendrier"><? echo $translate_Month; ?></p>
-            <p class="lieu_calendrier"><? echo $values['ville_calendrier'];?></p>
-        </div>
-        <?
-        echo '</li>';
-    };
-    echo '</ul>';
     wp_reset_postdata();
 };
 
-
-//Multifilter func
-
-function multiFilter()
-{
-    global $_POST;
-    $values         = $_POST['values'];
-    $table          = querySaison();
-
-    echo $values;
-
-    //var_dump($test);
-
-};
 
 ?>
