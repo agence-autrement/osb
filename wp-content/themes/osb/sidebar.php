@@ -7,7 +7,7 @@
             <p class="espaceosb__subtitle">Soutenez l'orchestre</p>
             <p class="espaceosb__content">Amateurs de musique classique et mélomanes, vous pouvez soutenir l'Orchestre
                 de Paris en devenant membre du Cercle, ou à travers un legs ou une donation.</p>
-            <a class="btn_savoir" href="###">En savoir +</a>
+            <a class="btn_savoir" href="<?php echo site_url('mecenat-particulier') ?>">En savoir +</a>
         </div>
     </div>
     <div class="section_espaceosb" id="don">
@@ -42,11 +42,11 @@
         <div class="sidebar_actions_culturelles__title">Actions Culturelles</div>
         <div>
             <ul>
-                <li><a href="###">Concerts Scolaires</a></li>
+                <li><a href="<?php echo site_url('concerts-scolaires') ?>">Concerts Scolaires</a></li>
                 <li><a href="###">Venir en Groupe</a></li>
                 <li><a href="###">Les pôles</a></li>
                 <li><a href="###">Conférences / Concerts</a></li>
-                <li><a href="###">Masterclasses</a></li>
+                <li><a href="<?php echo site_url('master-classes') ?>">Masterclasses</a></li>
                 <li><a href="###">Accessibilité</a></li>
             </ul>
         </div>
@@ -64,12 +64,12 @@
         <div class="sidebar_saison__title">La saison</div>
         <div>
             <ul>
-                <li><a href="###">Toute la saison</a></li>
+                <li><a href="<?php echo site_url('saison') ?>">Toute la saison</a></li>
                 <li><a href="###">Symphonique</a></li>
                 <li><a href="###">Jeune Public</a></li>
                 <li><a href="###">Musique de Chambre</a></li>
                 <li><a href="###">Artiste Invité</a></li>
-                <li><a href="###">OSB Invité</a></li>
+                <li><a href="<?php echo site_url('orchestre-invite') ?>">OSB Invité</a></li>
             </ul>
         </div>
     </div>
@@ -84,9 +84,9 @@
         <div>
             <ul>
                 <li><a href="###">Côté Orchestre</a></li>
-                <li><a href="###">Côté Pratique</a></li>
+                <li><a href="<?php echo site_url('cote-pratique') ?>">Côté Pratique</a></li>
                 <li><a href="###">Côté Organisation</a></li>
-                <li><a href="###">Historique</a></li>
+                <li><a href="<?php echo site_url('historique') ?>">Historique</a></li>
             </ul>
         </div>
     </div>
@@ -101,7 +101,7 @@
         <div class="sidebar_ressources__title">Ressources</div>
         <div>
             <ul>
-                <li><a href="###">Publiques</a></li>
+                <li><a href="<?php echo site_url('ressources-publiques') ?>">Publiques</a></li>
             </ul>
         </div>
     </div>
@@ -112,7 +112,7 @@
 <div class="sidebar_1">
     <div class="content_side">
         <div class="top">
-            <a id="abonnement">s'abonner</a>
+            <a href="<?php echo site_url('abonnement') ?>" id="abonnement">s'abonner</a>
         </div>
         <div class="middle">
             <div id="logo_sidebar"><a href="<? echo get_home_url(); ?>">OSB</a></div>
