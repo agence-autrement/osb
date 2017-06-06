@@ -9,10 +9,7 @@
             </div>
             <div class="droite_select">
                 <div class="submits_lieu" style="display: none;">
-                    <button class="btn_select btn_droite dpt" value="22">Côte d'Armor</button>
-                    <button class="btn_select btn_droite dpt" value="29">Finistère</button>
-                    <button class="btn_select btn_droite dpt" value="35">Ille-et-Vilaine</button>
-                    <button class="btn_select btn_droite dpt" value="56">Morbihan</button>
+                    <? getInputByLieu(); ?>
                 </div>
                 <div class="submit_theme" style="display: none;">
                     <button class="btn_select btn_droite theme" value="les_essentiels">Les Essentiels</button>

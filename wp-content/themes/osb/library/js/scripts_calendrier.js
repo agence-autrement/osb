@@ -19,7 +19,7 @@ jQuery(document).ready(function($) {
     var ville;
     var theme;
     var type;
-    var filter;
+    // var filter;
     var values;
 
 
@@ -62,7 +62,7 @@ jQuery(document).ready(function($) {
         });
     });
 
-    $('button[type="submit"]').on('click', function(){
+    $('button.btn_droite.dpt').on('click', function(){
         ville = $(this).val();
         jQuery.ajax({
             type:"POST",

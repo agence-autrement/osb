@@ -5,7 +5,6 @@ Template Name: Page Historique
 ?>
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
-
 <div id="content">
     <section class="date_finale" style="background-image: url('<? the_field('image_de_la_date_finale'); ?>')">
         <div class="contenu_grid">
@@ -16,8 +15,6 @@ Template Name: Page Historique
             <span class="red_cross"></span>
         </div>
     </section>
-
-
     <? if ( have_rows('date_marquante') ) { ?>
         <section class="timeline">
             <? while ( have_rows('date_marquante') ) : the_row(); ?>
@@ -60,7 +57,6 @@ Template Name: Page Historique
             <? endwhile; ?>
         </section>
     <? } ?>
-
     <section class="date_debut" style="background-image: url(<? the_field('image_debut') ?>)">
         <div class="contenu_grid">
             <span class="red_cross"></span>
@@ -68,11 +64,7 @@ Template Name: Page Historique
             <div class="intro_histo">
                 <? the_field('texte_date_debut') ?>
             </div>
-            <div>
-                <img src="<? the_field('image_sous') ?>" alt="">
-            </div>
         </div>
     </section>
 </div>
-
 <?php get_footer(); ?>

@@ -73,10 +73,12 @@ Template Name: Page Saison
 
 
     <div class="resultat">
-        <?
-            $table = querySaison();
-            var_dump($table);
-        ?>
+        <div class="contenu_grid">
+            <?
+                displayAllDate();
+            ?>
+
+        </div>
     </div>
 </div>
 

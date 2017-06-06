@@ -1,0 +1,181 @@
+.page-template-page-venir-groupe{
+
+  /////////////////////////  SLIDER HAUT DE PAGE
+
+  .top_page_action{
+    padding: 35px;
+    padding-top: 180px;
+    height: 710px;
+    width: 100%;
+    background-color: darkslategrey;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .title{
+      font-size: 60px;
+      margin-bottom: 15px;
+      color: white;
+      font-family: $font2;
+      span{
+        color: #ED1E24;
+      }
+    }
+
+    .tag{
+      font-size: 12px;
+      text-transform: uppercase;
+      overflow: hidden;
+      div{
+        display: inline-block;
+        float: left;
+      }
+    }
+
+    .btn_red{
+      cursor: pointer;
+      padding: 5px 10px;
+      background-color: #ED1E24;
+      color: white;
+      font-weight: 700;
+    }
+
+    .btn_savoir_plus{
+      display: block;
+      position: relative;
+      padding:5px 10px;
+      cursor: pointer;
+      color: white;
+      &:after{
+        content: '';
+        position: absolute;
+        background-color: white;
+        bottom: 0;
+        left: 10px;
+        width: 0;
+        height: 1px;
+        @include transition(0.6s);
+      }
+      &:hover{
+        font-weight: inherit;
+        &:after{
+          width: 70px;
+        }
+      }
+    }
+
+    .intro_text{
+      font-size: 12px;
+      max-width: 320px;
+      margin-top: 15px;
+      color: white;
+    }
+  }
+
+  ///////////////////////// FORMULAIRE
+
+  .formulaire_groupe{
+    padding: 35px;
+  }
+
+  .titre_form_groupe{
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .wpcf7-form{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 60px;
+    input{
+      background-color: #F5F5F3;
+      padding: 5px 5px 5px 15px;
+      font-size: 12px;
+      border: none;
+      margin-bottom: 15px;
+    }
+    select{
+      border: none;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      font-size: 12px;
+      padding: 9px;
+    }
+    p{
+      margin-bottom: 0;
+    }
+  }
+
+  .inner_form_title{
+    font-size: 16px;
+  }
+
+  .formulaire_left, .formulaire_right{
+    width: 50%;
+    float: left;
+  }
+
+  .formulaire_right{
+    padding-top: 22px;
+    input{
+      width: 100%;
+    }
+  }
+
+  .preciser{
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+
+  #choix_un, #choix_deux{
+    width: 90%;
+  }
+
+  #nombre_accompagnateur, #nombre_participant{
+    width: 90%;
+  }
+
+  #code_postal, #ville{
+    width: 49%;
+    float: left;
+  }
+
+  #code_postal{
+    margin-right: 2%;
+  }
+
+  .formulaire_submit{
+    width: 100%;
+    text-align: center;
+  }
+
+  #inscrire{
+    background-color: #ffffff;
+    border: 1px solid #F5F5F3;
+    width: 100px;
+    padding: 5px 20px;
+    margin-top: 30px;
+  }
+  @media screen and (max-width: 768px) {
+
+    .top_page_action{
+      padding-top: 35px;
+    }
+
+    .inner_form_title{
+      font-size: 16px;
+    }
+
+    .formulaire_left, .formulaire_right{
+      width: 80%;
+      float: none;
+      margin: 0 auto;
+    }
+
+    #choix_un, #nombre_accompagnateur, #adresse, #nombre_participant, #code_postal, #ville {
+      width: 100%;
+    }
+  }
+}
