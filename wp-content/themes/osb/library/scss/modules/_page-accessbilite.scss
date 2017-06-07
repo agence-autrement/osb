@@ -1,0 +1,333 @@
+.section-header-access {
+  h1 {
+
+
+    span {
+      color: $color-6;
+
+    }
+  }
+
+  .header-ressources {
+    &__btn {
+      background-color: $color-6;
+
+    }
+  }
+}
+
+
+.section-access {
+  background-color: #F5F3F3;
+  padding:4rem 0;
+}
+
+.access {
+
+  z-index: 10;
+  padding: 6rem 0 5rem;
+  position: relative;
+  &__inner {
+    width: 90%;
+    margin: 0 auto;
+  }
+  &--left, &--right {
+    width: 47%;
+    display: inline-block;
+    text-align: center;
+    height: 285px;
+    margin: 0 1.1rem;
+    position: relative;
+    border: 2px solid #fff;
+
+    &__inner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 75%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__back {
+    img {width: 49px;
+      display: block;
+      margin: 0 auto 2rem;}
+  }
+  &__title {
+    font-weight: 700;
+    background-color: $color-1;
+    text-transform: uppercase;
+    padding: .8rem;
+    font-size: 1.5rem;
+    margin-bottom: 2.3rem;
+    display: inline-block;
+    margin-top: 0;
+  }
+
+  &__name {
+    font-family: $font2;
+    font-weight: 300;
+    position: relative;
+    margin-bottom: 5.5rem;
+    font-size: 3.5rem;
+    line-height:3.6rem;
+    margin-top: 0;
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 6.5rem;
+      height: .2rem;
+      background-color: $color-6;
+      bottom: -18px;
+      transform: translateX(-50%);
+      left: 50%;
+    }
+  }
+
+  &__text {
+    font-size:1.4rem;
+    margin-bottom:0.7rem;
+    
+    &--blue {
+      color: $color-6;
+      font-style: italic;
+
+      &--right {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &__adress {
+    font-weight: 300;
+    margin-bottom: 2.2rem;
+
+    span {
+      text-transform: uppercase;
+    }
+
+  }
+
+  &__tel {
+    text-transform: uppercase;
+    font-family: $font2;
+    display: block;
+
+  }
+
+  &__links {
+    margin-top: 6.5rem;
+  }
+
+  &__btn {
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: .4rem .5rem;
+    width: 45%;
+  }
+}
+
+
+.section-access-bg {
+  background-image: url(../images/image_violoncelle.jpg);
+  background-size:cover;
+  background-position: center center;
+  height:250px;
+}
+
+.section-culture{
+  background-image: url(../images/fond_map_bleu.jpg);
+  padding: 4rem 0;
+  background-size:cover;
+  background-position: center center;
+}
+
+.culture {
+
+  z-index: 10;
+  padding: 6rem 0 5rem;
+  position: relative;
+  &__inner {
+    width: 90%;
+    margin: 0 auto;
+  }
+  &--left, &--right {
+    width: 47%;
+    display: inline-block;
+    text-align: center;
+    height: 350px;
+    margin: 0 1.1rem;
+    position: relative;
+    border: 2px solid #fff;
+
+    &__inner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 75%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__back {
+    img {width: 49px;
+      display: block;
+      margin: 0 auto 2rem;}
+  }
+  &__title {
+    font-weight: 700;
+    background-color: $color-1;
+    text-transform: uppercase;
+    padding: .8rem;
+    font-size: 1.5rem;
+    margin-bottom: 2.3rem;
+    display: inline-block;
+    margin-top: 0;
+  }
+
+  &__name {
+    font-family: $font2;
+    font-weight: 300;
+    position: relative;
+    margin-bottom: 5.5rem;
+    font-size: 3.5rem;
+    line-height:3.6rem;
+    margin-top: 0;
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 6.5rem;
+      height: .2rem;
+      background-color: #fff;
+      bottom: -18px;
+      transform: translateX(-50%);
+      left: 50%;
+    }
+  }
+
+  &__text {
+    font-size:1.4rem;
+    margin-bottom:0.7rem;
+    color: #231F20;
+
+    &--blue {
+      color: $color-6;
+      font-style: italic;
+
+      &--right {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &__adress {
+    font-weight: 300;
+    margin-bottom: 2.2rem;
+
+    span {
+      text-transform: uppercase;
+    }
+
+  }
+
+  &__tel {
+    text-transform: uppercase;
+    font-family: $font2;
+    display: block;
+
+  }
+
+  &__links {
+    margin-top: 6.5rem;
+  }
+
+  &__btn {
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: .4rem .5rem;
+    width: 45%;
+  }
+}
+
+
+/******************************
+MEDIA QUERIES
+******************************/
+
+@media screen and (max-width: 767px) {
+
+  .section-access, .section-culture {
+    height: auto;
+  }
+
+  .access, .culture {
+    &--left, &--right {
+      margin:0;
+      width:100%;
+    }
+  }
+
+
+
+
+}
+
+@media screen and (min-width: 768px) {
+
+
+}
+
+
+@media screen and (max-width: 990px) {
+
+
+
+}
+
+@media screen and (min-width: 990px) {
+}
+
+@media screen and (max-width: 990px) and (min-width: 768px) {
+
+
+  .access, .culture {
+    &--left, &--right {
+      margin:0;
+      width:49%;
+    }
+  }
+
+}
+
+@media screen and (max-width: 1100px) {
+
+
+}
+
+
+@media screen and (max-width: 460px) {
+
+
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */
+}
+
+@media print and (min-width: 5in) {
+}
+
+
