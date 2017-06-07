@@ -29,7 +29,7 @@ Event template
 
                     <header class="article__header">
                         <div class="header__bg"
-                             style="height:100vh; background-image: url('<?php echo $imgID['url']; ?>'); background-position: center center">
+                             style="height:90vh; background-image: url('<?php echo $imgID['url']; ?>'); background-position: center center; background-size: cover;">
                             <div class="header__logo">
                                 <?php
                                 $imgPart = get_field('logo_partenaire');
@@ -314,7 +314,7 @@ Event template
 
 
                 <section class="section-event-date" id="date"
-                         style="background-image: url('<?php echo $imgFondDate['url']; ?>');">
+                         style="background-image: url('<?php echo $imgFondDate['url']; ?>'); background-position: center center; background-size: cover;">
 
                     <div class="contenu_grid">
 

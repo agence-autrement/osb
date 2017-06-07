@@ -19,6 +19,8 @@
     height:280px;
     width: 300px;
     margin: 0 auto;
+    background-position: center center;
+    background-size:cover;
 
 
 
@@ -114,6 +116,7 @@ MEDIA QUERIES
     &__content {
       &__title {
         margin-left: 0;
+        margin-top: 15px;
       }
     }
 

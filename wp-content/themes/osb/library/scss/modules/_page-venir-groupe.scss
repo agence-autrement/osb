@@ -93,6 +93,7 @@
       padding: 5px 5px 5px 15px;
       font-size: 12px;
       border: none;
+      width:90%;
       margin-bottom: 15px;
     }
     select{
@@ -110,6 +111,7 @@
 
   .inner_form_title{
     font-size: 16px;
+    line-height: 29px;
   }
 
   .formulaire_left, .formulaire_right{
@@ -127,6 +129,11 @@
   .preciser{
     margin-bottom: 15px;
     font-size: 14px;
+    line-height: 8px;
+
+    &--obli {
+      margin-top: 30px;
+    }
   }
 
   #choix_un, #choix_deux{
@@ -149,6 +156,7 @@
   .formulaire_submit{
     width: 100%;
     text-align: center;
+    overflow: hidden;
   }
 
   #inscrire{

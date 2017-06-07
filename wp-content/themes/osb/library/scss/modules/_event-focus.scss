@@ -1,6 +1,6 @@
 .section-event-focus {
   @include clearfix();
-  padding: 2.8rem 1.5rem 3.3rem 1.5rem;
+  padding: 2.8rem 1.5rem 6rem 1.5rem;
 }
 
 .event-focus {
@@ -15,19 +15,21 @@
   &__image {
     position: relative;
     height: 210px;
-    width: 300px;
+    width: 100%;
     margin: 0 auto;
+    background-position: center center;
+    background-size:cover;
 
 
     &:after {
       display: block;
       content: '';
-      height: 75px;
+      height: 40px;
       width: 28px;
       background-color: #fff;
       position: absolute;
       bottom: 0;
-      right: -23px;
+      right: -16px;
       transform: skew(-30deg);
 
     }
@@ -109,12 +111,13 @@ MEDIA QUERIES
       width: 90%;
     }
     &--right {
-      width:55%;
+      width:50%;
       float: left;
     }
 
     &--left {
-      width:45%;
+      width:50%;
+      padding:0 15px;
       float: left;
     }
   }
