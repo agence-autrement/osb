@@ -1597,244 +1597,333 @@ function multiFilter()
     }
 
 
+    /********************************
+    CINQ CONDITIONS DE FILTRE
+    ********************************/
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //type + instrument + lieu + thematiques + compositeur ====> CINQ CHOIX
+    //type + lieu + instrument + thematiques + compositeur
     elseif($type_filtre != '' && $lieu_filtre != '' && $instrument_filtre != '' && $thematiques_filtre != '' && $compositeur_filtre != '' && $artiste_filtre == '' && $date_filtre == ''){
 
-        $clear_table_compositeur= multi_array_filter_by_value($table, 'compositeur', $compositeur_filtre);
+        $clear_table_type           = array_filter_by_value($table,'type', $type_filtre );
 
-        $clear_table_thematiques = array_filter_by_value($clear_table_compositeur, 'thematiques', $thematiques_filtre);
+        $clear_table_lieu           = array_filter_by_value($clear_table_type, 'departement', $lieu_filtre);
 
-        $clear_table_lieu       = array_filter_by_value($clear_table_thematiques, 'departement', $lieu_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
 
-        $clear_table_type       = array_filter_by_value($clear_table_lieu,'type', $type_filtre );
+        $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
 
-        $clear_table_final      = multi_array_filter_by_value($clear_table_type, 'instrument', $instrument_filtre);
+        $clear_table_final          = multi_array_filter_by_value($clear_table_thematiques, 'compositeur', $compositeur_filtre);
 
     }
 
-
-    //type + instrument + lieu + thematiques + artiste
+    //type + lieu + instrument + thematiques + artiste
     elseif($type_filtre != '' && $lieu_filtre != '' && $instrument_filtre != '' && $thematiques_filtre != '' && $compositeur_filtre == '' && $artiste_filtre != '' && $date_filtre == ''){
 
-        $clear_table_artiste    = multi_array_filter_by_value($table, 'artiste_calendrier', $artiste_filtre);
+        $clear_table_type           = array_filter_by_value($table,'type', $type_filtre );
 
-        $clear_table_thematiques = array_filter_by_value($clear_table_artiste, 'thematiques', $thematiques_filtre);
+        $clear_table_lieu           = array_filter_by_value($clear_table_type, 'departement', $lieu_filtre);
 
-        $clear_table_lieu       = array_filter_by_value($clear_table_thematiques, 'departement', $lieu_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
 
-        $clear_table_type       = array_filter_by_value($clear_table_lieu,'type', $type_filtre );
+        $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
 
-        $clear_table_final      = multi_array_filter_by_value($clear_table_type, 'instrument', $instrument_filtre);
+        $clear_table_final          = multi_array_filter_by_value($clear_table_thematiques, 'artiste_calendrier', $artiste_filtre);
 
     }
 
-    //type + instrument + lieu + thematiques + date
+    //type + lieu + instrument + thematiques + date
     elseif($type_filtre != '' && $lieu_filtre != '' && $instrument_filtre != '' && $thematiques_filtre != '' && $compositeur_filtre == '' && $artiste_filtre == '' && $date_filtre != ''){
 
-        $clear_table_date    = array_filter_by_value($table, 'date_calendrier', $date_filtre);
+        $clear_table_type           = array_filter_by_value($table,'type', $type_filtre );
 
-        $clear_table_thematiques = array_filter_by_value($clear_table_date, 'thematiques', $thematiques_filtre);
+        $clear_table_lieu           = array_filter_by_value($clear_table_type, 'departement', $lieu_filtre);
 
-        $clear_table_lieu       = array_filter_by_value($clear_table_thematiques, 'departement', $lieu_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
 
-        $clear_table_type       = array_filter_by_value($clear_table_lieu,'type', $type_filtre );
+        $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
 
-        $clear_table_final      = multi_array_filter_by_value($clear_table_type, 'instrument', $instrument_filtre);
+        $clear_table_final          = array_filter_by_value($clear_table_thematiques, 'date_calendrier', $date_filtre);
 
     }
 
-    //type + instrument + lieu + thematiques + compositeur + artiste =====> SIX CHOIX
+    //type + lieu + instrument + comp + artiste
+    elseif($type_filtre != '' && $lieu_filtre != '' && $instrument_filtre != '' && $thematiques_filtre == '' && $compositeur_filtre != '' && $artiste_filtre != '' && $date_filtre == ''){
+
+        $clear_table_type           = array_filter_by_value($table,'type', $type_filtre );
+
+        $clear_table_lieu           = array_filter_by_value($clear_table_type, 'departement', $lieu_filtre);
+
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+
+        $clear_table_compositeur    = multi_array_filter_by_value($clear_table_instrument, 'compositeur', $compositeur_filtre);
+
+        $clear_table_final          = multi_array_filter_by_value($clear_table_compositeur, 'artiste_calendrier', $artiste_filtre);
+
+    }
+
+    //type + lieu + instrument + comp + date
+    elseif($type_filtre != '' && $lieu_filtre != '' && $instrument_filtre != '' && $thematiques_filtre == '' && $compositeur_filtre != '' && $artiste_filtre == '' && $date_filtre != ''){
+
+        $clear_table_type           = array_filter_by_value($table,'type', $type_filtre );
+
+        $clear_table_lieu           = array_filter_by_value($clear_table_type, 'departement', $lieu_filtre);
+
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+
+        $clear_table_compositeur    = multi_array_filter_by_value($clear_table_instrument, 'compositeur', $compositeur_filtre);
+
+        $clear_table_final          = array_filter_by_value($clear_table_compositeur, 'date_calendrier', $date_filtre);
+
+    }
+
+    //type + lieu + theme + comp + artiste
+    elseif($type_filtre != '' && $lieu_filtre != '' && $instrument_filtre == '' && $thematiques_filtre != '' && $compositeur_filtre != '' && $artiste_filtre != '' && $date_filtre == ''){
+
+        $clear_table_type           = array_filter_by_value($table,'type', $type_filtre );
+
+        $clear_table_lieu           = array_filter_by_value($clear_table_type, 'departement', $lieu_filtre);
+
+        $clear_table_thematiques    = array_filter_by_value($clear_table_lieu, 'thematiques', $thematiques_filtre);
+
+        $clear_table_compositeur    = multi_array_filter_by_value($clear_table_thematiques, 'compositeur', $compositeur_filtre);
+
+        $clear_table_final          = multi_array_filter_by_value($clear_table_compositeur, 'artiste_calendrier', $artiste_filtre);
+
+    }
+
+    //type + lieu + theme + comp + date
+    elseif($type_filtre != '' && $lieu_filtre != '' && $instrument_filtre == '' && $thematiques_filtre != '' && $compositeur_filtre != '' && $artiste_filtre == '' && $date_filtre != ''){
+
+        $clear_table_type           = array_filter_by_value($table,'type', $type_filtre );
+
+        $clear_table_lieu           = array_filter_by_value($clear_table_type, 'departement', $lieu_filtre);
+
+        $clear_table_thematiques    = array_filter_by_value($clear_table_lieu, 'thematiques', $thematiques_filtre);
+
+        $clear_table_compositeur    = multi_array_filter_by_value($clear_table_thematiques, 'compositeur', $compositeur_filtre);
+
+        $clear_table_final          = array_filter_by_value($clear_table_compositeur, 'date_calendrier', $date_filtre);
+
+    }
+
+    //type + instrument + theme + comp + artiste
+    elseif($type_filtre != '' && $lieu_filtre == '' && $instrument_filtre != '' && $thematiques_filtre != '' && $compositeur_filtre != '' && $artiste_filtre == '' && $date_filtre != ''){
+
+        $clear_table_type           = array_filter_by_value($table,'type', $type_filtre );
+
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+
+        $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
+
+        $clear_table_compositeur    = multi_array_filter_by_value($clear_table_thematiques, 'compositeur', $compositeur_filtre);
+
+        $clear_table_final          = multi_array_filter_by_value($clear_table_compositeur, 'artiste_calendrier', $artiste_filtre);
+
+    }
+
+    //type + instrument + theme + comp + date
+    elseif($type_filtre != '' && $lieu_filtre == '' && $instrument_filtre != '' && $thematiques_filtre != '' && $compositeur_filtre != '' && $artiste_filtre == '' && $date_filtre != ''){
+
+        $clear_table_type           = array_filter_by_value($table,'type', $type_filtre );
+
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+
+        $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
+
+        $clear_table_compositeur    = multi_array_filter_by_value($clear_table_thematiques, 'compositeur', $compositeur_filtre);
+
+        $clear_table_final          = array_filter_by_value($clear_table_compositeur, 'date_calendrier', $date_filtre);
+
+    }
+
+    //type + instrument + comp + artiste + date
+    elseif($type_filtre != '' && $lieu_filtre == '' && $instrument_filtre != '' && $thematiques_filtre == '' && $compositeur_filtre != '' && $artiste_filtre != '' && $date_filtre != ''){
+
+        $clear_table_type           = array_filter_by_value($table,'type', $type_filtre );
+
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+
+        $clear_table_compositeur    = multi_array_filter_by_value($clear_table_instrument, 'compositeur', $compositeur_filtre);
+
+        $clear_table_artiste        = multi_array_filter_by_value($clear_table_compositeur, 'artiste_calendrier', $artiste_filtre);
+
+        $clear_table_final          = array_filter_by_value($clear_table_artiste, 'date_calendrier', $date_filtre);
+
+    }
+
+    //type + theme + comp + artiste + date
+    elseif($type_filtre != '' && $lieu_filtre == '' && $instrument_filtre == '' && $thematiques_filtre != '' && $compositeur_filtre != '' && $artiste_filtre != '' && $date_filtre != ''){
+
+        $clear_table_type           = array_filter_by_value($table,'type', $type_filtre );
+
+        $clear_table_thematiques    = array_filter_by_value($clear_table_type, 'thematiques', $thematiques_filtre);
+
+        $clear_table_compositeur    = multi_array_filter_by_value($clear_table_thematiques, 'compositeur', $compositeur_filtre);
+
+        $clear_table_artiste        = multi_array_filter_by_value($clear_table_compositeur, 'artiste_calendrier', $artiste_filtre);
+
+        $clear_table_final          = array_filter_by_value($clear_table_artiste, 'date_calendrier', $date_filtre);
+
+    }
+
+    //lieu + instru + theme + comp + artiste
+    elseif($type_filtre == '' && $lieu_filtre != '' && $instrument_filtre != '' && $thematiques_filtre != '' && $compositeur_filtre != '' && $artiste_filtre != '' && $date_filtre == ''){
+
+        $clear_table_lieu           = array_filter_by_value($table,'departement', $lieu_filtre );
+
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+
+        $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
+
+        $clear_table_compositeur    = multi_array_filter_by_value($clear_table_thematiques, 'compositeur', $compositeur_filtre);
+
+        $clear_table_final          = multi_array_filter_by_value($clear_table_compositeur, 'artiste_calendrier', $artiste_filtre);
+
+    }
+
+    //lieu + instru + theme + comp + date
+    elseif($type_filtre == '' && $lieu_filtre != '' && $instrument_filtre != '' && $thematiques_filtre != '' && $compositeur_filtre != '' && $artiste_filtre == '' && $date_filtre != ''){
+
+        $clear_table_lieu           = array_filter_by_value($table,'departement', $lieu_filtre );
+
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+
+        $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
+
+        $clear_table_compositeur    = multi_array_filter_by_value($clear_table_thematiques, 'compositeur', $compositeur_filtre);
+
+        $clear_table_final          = array_filter_by_value($clear_table_compositeur, 'date_calendrier', $date_filtre);
+
+    }
+
+    //lieu + instru + theme + artiste + date
+    elseif($type_filtre == '' && $lieu_filtre != '' && $instrument_filtre != '' && $thematiques_filtre != '' && $compositeur_filtre == '' && $artiste_filtre != '' && $date_filtre != ''){
+
+        $clear_table_lieu           = array_filter_by_value($table,'departement', $lieu_filtre );
+
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+
+        $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
+
+        $clear_table_artiste        = multi_array_filter_by_value($clear_table_thematiques, 'artiste_calendrier', $artiste_filtre);
+
+        $clear_table_final          = array_filter_by_value($clear_table_artiste, 'date_calendrier', $date_filtre);
+
+    }
+
+    //lieu + instru + comp + artiste + date
+    elseif($type_filtre == '' && $lieu_filtre != '' && $instrument_filtre != '' && $thematiques_filtre == '' && $compositeur_filtre != '' && $artiste_filtre != '' && $date_filtre != ''){
+
+        $clear_table_lieu           = array_filter_by_value($table,'departement', $lieu_filtre );
+
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+
+        $clear_table_compositeur    = multi_array_filter_by_value($clear_table_instrument, 'compositeur', $compositeur_filtre);
+
+        $clear_table_artiste        = multi_array_filter_by_value($clear_table_compositeur, 'artiste_calendrier', $artiste_filtre);
+
+        $clear_table_final          = array_filter_by_value($clear_table_artiste, 'date_calendrier', $date_filtre);
+
+    }
+
+    //lieu + theme + comp + artiste + date
+    elseif($type_filtre == '' && $lieu_filtre != '' && $instrument_filtre == '' && $thematiques_filtre != '' && $compositeur_filtre != '' && $artiste_filtre != '' && $date_filtre != ''){
+
+        $clear_table_lieu           = array_filter_by_value($table,'departement', $lieu_filtre );
+
+        $clear_table_thematiques    = multi_array_filter_by_value($clear_table_lieu, 'thematiques', $thematiques_filtre);
+
+        $clear_table_compositeur    = multi_array_filter_by_value($clear_table_thematiques, 'compositeur', $compositeur_filtre);
+
+        $clear_table_artiste        = multi_array_filter_by_value($clear_table_compositeur, 'artiste_calendrier', $artiste_filtre);
+
+        $clear_table_final          = array_filter_by_value($clear_table_artiste, 'date_calendrier', $date_filtre);
+
+    }
+
+    //instrument + theme + comp + artiste + date
+    elseif($type_filtre == '' && $lieu_filtre == '' && $instrument_filtre != '' && $thematiques_filtre != '' && $compositeur_filtre != '' && $artiste_filtre != '' && $date_filtre != ''){
+
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+
+        $clear_table_thematiques    = multi_array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
+
+        $clear_table_compositeur    = multi_array_filter_by_value($clear_table_thematiques, 'compositeur', $compositeur_filtre);
+
+        $clear_table_artiste        = multi_array_filter_by_value($clear_table_compositeur, 'artiste_calendrier', $artiste_filtre);
+
+        $clear_table_final          = array_filter_by_value($clear_table_artiste, 'date_calendrier', $date_filtre);
+
+    }
+
+
+    /********************************
+    SIX CONDITIONS DE FILTRE
+    ********************************/
+
+    //type + lieu + instrument + thematiques + compositeur + artiste
     elseif($type_filtre != '' && $lieu_filtre != '' && $instrument_filtre != '' && $thematiques_filtre != '' && $compositeur_filtre != '' && $artiste_filtre != '' && $date_filtre == ''){
 
-        $clear_table_artiste    = multi_array_filter_by_value($table, 'artiste_calendrier', $artiste_filtre);
+        $clear_table_type           = array_filter_by_value($table,'type', $type_filtre );
 
-        $clear_table_compositeur= multi_array_filter_by_value($clear_table_artiste, 'compositeur', $compositeur_filtre);
+        $clear_table_lieu           = array_filter_by_value($clear_table_type, 'departement', $lieu_filtre);
 
-        $clear_table_thematiques = array_filter_by_value($clear_table_compositeur, 'thematiques', $thematiques_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
 
-        $clear_table_lieu       = array_filter_by_value($clear_table_thematiques, 'departement', $lieu_filtre);
+        $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
 
-        $clear_table_type       = array_filter_by_value($clear_table_lieu,'type', $type_filtre );
+        $clear_table_compositeur    = multi_array_filter_by_value($clear_table_thematiques, 'compositeur', $compositeur_filtre);
 
-        $clear_table_final      = multi_array_filter_by_value($clear_table_type, 'instrument', $instrument_filtre);
+        $clear_table_final          = multi_array_filter_by_value($clear_table_compositeur, 'artiste_calendrier', $artiste_filtre);
 
     }
 
-    //type + instrument + lieu + thematiques + compositeur + date
+    //type + lieu + instrument + thematiques + compositeur + date
     elseif($type_filtre != '' && $lieu_filtre != '' && $instrument_filtre != '' && $thematiques_filtre != '' && $compositeur_filtre != '' && $artiste_filtre == '' && $date_filtre != ''){
 
-        $clear_table_date       = array_filter_by_value($table, 'date_calendrier', $date_filtre);
+        $clear_table_type           = array_filter_by_value($table,'type', $type_filtre );
 
-        $clear_table_compositeur= multi_array_filter_by_value($clear_table_date, 'compositeur', $compositeur_filtre);
+        $clear_table_lieu           = array_filter_by_value($clear_table_type, 'departement', $lieu_filtre);
 
-        $clear_table_thematiques = array_filter_by_value($clear_table_compositeur, 'thematiques', $thematiques_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
 
-        $clear_table_lieu       = array_filter_by_value($clear_table_thematiques, 'departement', $lieu_filtre);
+        $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
 
-        $clear_table_type       = array_filter_by_value($clear_table_lieu,'type', $type_filtre );
+        $clear_table_compositeur    = multi_array_filter_by_value($clear_table_thematiques, 'compositeur', $compositeur_filtre);
 
-        $clear_table_final      = multi_array_filter_by_value($clear_table_type, 'instrument', $instrument_filtre);
-
-    }
-
-    //type + instrument + lieu + thematiques + compositeur + artiste + date  =====> SEPT CHOIX
-    elseif($type_filtre != '' && $lieu_filtre != '' && $instrument_filtre != '' && $thematiques_filtre != '' && $compositeur_filtre != '' && $artiste_filtre != '' && $date_filtre != ''){
-
-        $clear_table_date       = array_filter_by_value($table, 'date_calendrier', $date_filtre);
-
-        $clear_table_artiste    = multi_array_filter_by_value($clear_table_date, 'artiste_calendrier', $artiste_filtre);
-
-        $clear_table_compositeur= multi_array_filter_by_value($clear_table_artiste, 'compositeur', $compositeur_filtre);
-
-        $clear_table_thematiques = array_filter_by_value($clear_table_compositeur, 'thematiques', $thematiques_filtre);
-
-        $clear_table_lieu       = array_filter_by_value($clear_table_thematiques, 'departement', $lieu_filtre);
-
-        $clear_table_type       = array_filter_by_value($clear_table_lieu,'type', $type_filtre );
-
-        $clear_table_final      = multi_array_filter_by_value($clear_table_type, 'instrument', $instrument_filtre);
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    ////////// instrument /////////////
-    elseif($instrument_filtre != '' && $type_filtre == '' && $lieu_filtre == ''){
-
-        $clear_table_final      = multi_array_filter_by_value($table, 'instrument', $instrument_filtre);
-
-    }
-
-    //instrument + type
-    elseif($instrument_filtre != '' && $type_filtre != '' && $lieu_filtre == ''){
-
-        $clear_table_instrument = multi_array_filter_by_value($table,'instrument', $instrument_filtre );
-
-        $clear_table_final      = array_filter_by_value($clear_table_instrument, 'type', $type_filtre);
-
-    }
-
-    //instrument + lieu
-    elseif($instrument_filtre != '' && $lieu_filtre != '' && $type_filtre == ''){
-
-        $clear_table_instrument = multi_array_filter_by_value($table,'instrument', $instrument_filtre );
-
-        $clear_table_final      = array_filter_by_value($clear_table_instrument, 'departement', $lieu_filtre);
-
-    }
-
-    //lieu
-    elseif($lieu_filtre != '' && $instrument_filtre == '' && $type_filtre == ''){
-
-        $clear_table_final      = array_filter_by_value($table, 'departement', $lieu_filtre);
-
-    }
-
-    //lieu + type
-    elseif($lieu_filtre != '' && $type_filtre != '' && $instrument_filtre == ''){
-
-        $clear_table_lieu       = array_filter_by_value($table, 'departement', $lieu_filtre);
-
-        $clear_table_final      = array_filter_by_value($clear_table_lieu, 'departement', $lieu_filtre);
-
-    }
-
-    //lieu + instrument
-    elseif($lieu_filtre != '' && $instrument_filtre != '' && $type_filtre == ''){
-
-        $clear_table_lieu       = array_filter_by_value($table, 'departement', $lieu_filtre);
-
-        $clear_table_final      = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+        $clear_table_final          = multi_array_filter_by_value($clear_table_compositeur, 'date_calendrier', $date_filtre);
 
     }
 
     ///// ALL
-    elseif($type_filtre != '' && $lieu_filtre != '' && $instrument_filtre != ''){
+    elseif($type_filtre != '' && $lieu_filtre != '' && $instrument_filtre != '' && $thematiques_filtre != '' && $compositeur_filtre != '' && $artiste_filtre != '' && $date_filtre != ''){
 
-        $clear_table_type       = array_filter_by_value($table,'type', $type_filtre );
+        $clear_table_type           = array_filter_by_value($table,'type', $type_filtre );
 
-        $clear_table_instru     = multi_array_filter_by_value($clear_table_type, 'instrument', $instrument_filtre);
+        $clear_table_lieu           = array_filter_by_value($clear_table_type, 'departement', $lieu_filtre);
 
-        $clear_table_final      = array_filter_by_value($clear_table_instru,'departement', $lieu_filtre );
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+
+        $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
+
+        $clear_table_compositeur    = multi_array_filter_by_value($clear_table_thematiques, 'compositeur', $compositeur_filtre);
+
+        $clear_table_artiste        = multi_array_filter_by_value($clear_table_compositeur, 'artiste_calendrier', $artiste_filtre);
+
+        $clear_table_final          = multi_array_filter_by_value($clear_table_artiste, 'date_calendrier', $date_filtre);
     }
 
+
     ///// NONE
-    elseif($type_filtre == '' && $lieu_filtre == '' && $instrument_filtre == ''){
+    elseif($type_filtre == '' && $lieu_filtre == '' && $instrument_filtre == '' && $thematiques_filtre == '' && $compositeur_filtre == '' && $artiste_filtre == '' && $date_filtre == ''){
 
         $clear_table_final      = $table;
     }
 
 
     $count = count($clear_table_final);
+
 
     if($count == 0){
 
@@ -1847,9 +1936,11 @@ function multiFilter()
         $sliced     = $clear_table_final;
     };
 
+
     var_dump($sliced);
 
     //displayAjax($sliced);
+    
 
 };
 

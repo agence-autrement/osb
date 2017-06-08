@@ -39,14 +39,14 @@ Template Name: Page Saison
 
                 <select name="compositeur" id="compositeur" class="select_filter" size="9">
                     <option value="">Compositeur</option>
-                    <option value="Mozart">Mozart</option>
-                    <option value="Haydn">Haydn</option>
-                    <option value="Dvorak">Dvorak</option>
-                    <option value="Britten">Britten</option>
-                    <option value="Vivaldi">Vivaldi</option>
-                    <option value="Glass">Glass</option>
-                    <option value="Mendelssohn">Mendelssohn</option>
-                    <option value="Bach">Bach"</option>
+                    <option value="mozart">Mozart</option>
+                    <option value="haydn">Haydn</option>
+                    <option value="dvorak">Dvorak</option>
+                    <option value="britten">Britten</option>
+                    <option value="vivaldi">Vivaldi</option>
+                    <option value="glass">Glass</option>
+                    <option value="mendelssohn">Mendelssohn</option>
+                    <option value="bach">Bach"</option>
                 </select>
 
                 <select name="instrument" id="instrument" class="select_filter" size="9">
