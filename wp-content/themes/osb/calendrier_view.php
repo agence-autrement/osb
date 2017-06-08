@@ -18,7 +18,7 @@
                 </div>
                 <div class="submit_type" style="display: none;">
                     <button class="btn_select btn_droite type_calendar" value="symphonique">Symphonique</button>
-                    <button class="btn_select btn_droite type_calendar" value="musiq_de_chambre">MusiQ de chambre</button>
+                    <button class="btn_select btn_droite type_calendar" value="musiq_de_chambre">Musique de chambre</button>
                     <button class="btn_select btn_droite type_calendar" value="artiste_invite">Artiste invité</button>
                     <button class="btn_select btn_droite type_calendar" value="jeune_public">Jeune public</button>
                 </div>

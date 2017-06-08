@@ -19,7 +19,7 @@ jQuery(document).ready(function($) {
     var ville;
     var theme;
     var type;
-    // var filter;
+    var filter;
     var values;
 
 
@@ -111,20 +111,26 @@ jQuery(document).ready(function($) {
         });
     });
 
-
     /***MULTIFILTRE AJAX***/
 
-    $('.filtreSelector ul li button').on('click', function(){
+    $('.select_filter').on('change', function(e){
 
-        $(this).toggleClass('active');
-        values = $(this).val();
+        //values = $(this).val();
+
+        e.preventDefault();
+
+        filter = $('#search_test').serialize();
+
+        console.log(filter);
+
         jQuery.ajax({
             type:"POST",
             url: ajaxtest,
-            dataType: 'html',
-            data: {
-                action: "multiFilter",
-                values: values,
+            data:{
+
+              action: "multiFilter",
+              filter : filter,
+
             },
             success:function(response){
                 $('.resultat').html(response);
