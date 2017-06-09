@@ -238,6 +238,7 @@ function queryAllDate()
 
 function displayAjax( $array )
 {
+    echo '<div class="contenu_grid">';
     echo '<ul>';
 
     foreach($array as $table_un => $values){
@@ -275,6 +276,7 @@ function displayAjax( $array )
         echo '</li>';
     };
     echo '</ul>';
+    echo '</div>';
 }
 
 
@@ -517,7 +519,7 @@ function multiFilter()
     $date_filtre            = $result_table['date_calendrier'];
 
     /////////// Type
-    if($type_filtre != '' && $lieu_filtre == '' && $instrument_filtre != '' && $thematiques_filtre == '' && $compositeur_filtre == '' && $artiste_filtre == '' && $date_filtre == '') {
+    if($type_filtre != '' && $lieu_filtre == '' && $instrument_filtre == '' && $thematiques_filtre == '' && $compositeur_filtre == '' && $artiste_filtre == '' && $date_filtre == '') {
 
         $clear_table_final      = array_filter_by_value($table, 'type', $type_filtre);
 
@@ -605,7 +607,7 @@ function multiFilter()
 
         $clear_table_type       = array_filter_by_value($table,'type', $type_filtre );
 
-        $clear_table_final      = array_filter_by_value($clear_table_type, 'compositeur', $compositeur_filtre);
+        $clear_table_final      = multi_array_filter_by_value($clear_table_type, 'compositeur', $compositeur_filtre);
 
     }
 
@@ -614,7 +616,7 @@ function multiFilter()
 
         $clear_table_type       = array_filter_by_value($table,'type', $type_filtre );
 
-        $clear_table_final      = multi_array_filter_by_value($clear_table_type, 'artistes_calendrier', $artiste_filtre);
+        $clear_table_final      = multi_array_filter_by_value($clear_table_type, 'artistes_tag', $artiste_filtre);
 
     }
 
@@ -650,7 +652,7 @@ function multiFilter()
 
         $clear_table_lieu       = array_filter_by_value($table,'departement', $lieu_filtre );
 
-        $clear_table_final      = array_filter_by_value($clear_table_lieu, 'compositeur', $compositeur_filtre);
+        $clear_table_final      = multi_array_filter_by_value($clear_table_lieu, 'compositeur', $compositeur_filtre);
 
     }
 
@@ -686,16 +688,16 @@ function multiFilter()
 
         $clear_table_instrument     = multi_array_filter_by_value($table, 'instruments_tag', $instrument_filtre);
 
-        $clear_table_final          = array_filter_by_value($clear_table_instrument, 'compositeur', $compositeur_filtre);
+        $clear_table_final          = multi_array_filter_by_value($clear_table_instrument, 'compositeur', $compositeur_filtre);
 
     }
 
     //instrument + artiste
-    elseif($type_filtre == '' && $lieu_filtre == '' && $instrument_filtre == '' && $thematiques_filtre == '' && $compositeur_filtre == '' && $artiste_filtre != '' && $date_filtre == ''){
+    elseif($type_filtre == '' && $lieu_filtre == '' && $instrument_filtre != '' && $thematiques_filtre == '' && $compositeur_filtre == '' && $artiste_filtre != '' && $date_filtre == ''){
 
         $clear_table_instrument     = multi_array_filter_by_value($table, 'instruments_tag', $instrument_filtre);
 
-        $clear_table_final          = multi_array_filter_by_value($clear_table_instrument, 'artistes_calendrier', $artiste_filtre);
+        $clear_table_final          = multi_array_filter_by_value($clear_table_instrument, 'artistes_tag', $artiste_filtre);
 
     }
 
@@ -713,7 +715,7 @@ function multiFilter()
 
         $clear_table_thematiques      = array_filter_by_value($table, 'thematiques', $thematiques_filtre);
 
-        $clear_table_final           = multi_array_filter_by_value($clear_table_thematiques, 'compositeur', $compositeur_filtre);
+        $clear_table_final            = multi_array_filter_by_value($clear_table_thematiques, 'compositeur', $compositeur_filtre);
 
     }
 
@@ -722,7 +724,7 @@ function multiFilter()
 
         $clear_table_thematiques      = array_filter_by_value($table, 'thematiques', $thematiques_filtre);
 
-        $clear_table_final           = multi_array_filter_by_value($clear_table_thematiques, 'artistes_tag', $artiste_filtre);
+        $clear_table_final            = multi_array_filter_by_value($clear_table_thematiques, 'artistes_tag', $artiste_filtre);
 
     }
 
@@ -731,7 +733,7 @@ function multiFilter()
 
         $clear_table_thematiques      = array_filter_by_value($table, 'thematiques', $thematiques_filtre);
 
-        $clear_table_final           = array_filter_by_value($clear_table_thematiques, 'date_calendrier', $date_filtre);
+        $clear_table_final            = array_filter_by_value($clear_table_thematiques, 'date_calendrier', $date_filtre);
 
     }
 
@@ -1345,7 +1347,7 @@ function multiFilter()
 
         $clear_table_type           = array_filter_by_value($table,'type', $type_filtre );
 
-        $clear_table_instrument     = multi_array_filter_by_value($clear_table_type, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_type, 'instruments_tag', $instrument_filtre);
 
         $clear_table_compositeur    = multi_array_filter_by_value($clear_table_instrument, 'compositeur', $compositeur_filtre);
 
@@ -1410,7 +1412,7 @@ function multiFilter()
 
         $clear_table_lieu           = array_filter_by_value($table,'departement', $lieu_filtre );
 
-        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instruments_tag', $instrument_filtre);
 
         $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
 
@@ -1423,7 +1425,7 @@ function multiFilter()
 
         $clear_table_lieu           = array_filter_by_value($table,'departement', $lieu_filtre );
 
-        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instruments_tag', $instrument_filtre);
 
         $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
 
@@ -1436,7 +1438,7 @@ function multiFilter()
 
         $clear_table_lieu           = array_filter_by_value($table,'departement', $lieu_filtre );
 
-        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instruments_tag', $instrument_filtre);
 
         $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
 
@@ -1449,7 +1451,7 @@ function multiFilter()
 
         $clear_table_lieu           = array_filter_by_value($table,'departement', $lieu_filtre );
 
-        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instruments_tag', $instrument_filtre);
 
         $clear_table_compositeur    = multi_array_filter_by_value($clear_table_instrument, 'compositeur', $compositeur_filtre);
 
@@ -1462,7 +1464,7 @@ function multiFilter()
 
         $clear_table_lieu           = array_filter_by_value($table,'departement', $lieu_filtre );
 
-        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instruments_tag', $instrument_filtre);
 
         $clear_table_compositeur    = multi_array_filter_by_value($clear_table_instrument, 'compositeur', $compositeur_filtre);
 
@@ -1475,7 +1477,7 @@ function multiFilter()
 
         $clear_table_lieu           = array_filter_by_value($table,'departement', $lieu_filtre );
 
-        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instruments_tag', $instrument_filtre);
 
         $clear_table_artiste        = multi_array_filter_by_value($clear_table_instrument, 'artistes_tag', $artiste_filtre);
 
@@ -1538,7 +1540,7 @@ function multiFilter()
     //instrument + theme + comp + artiste
     elseif($type_filtre == '' && $lieu_filtre == '' && $instrument_filtre != '' && $thematiques_filtre != '' && $compositeur_filtre != '' && $artiste_filtre != '' && $date_filtre == ''){
 
-        $clear_table_instrument     = multi_array_filter_by_value($table, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($table, 'instruments_tag', $instrument_filtre);
 
         $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
 
@@ -1551,7 +1553,7 @@ function multiFilter()
     //instrument + theme + comp + date
     elseif($type_filtre == '' && $lieu_filtre == '' && $instrument_filtre != '' && $thematiques_filtre != '' && $compositeur_filtre != '' && $artiste_filtre == '' && $date_filtre != ''){
 
-        $clear_table_instrument     = multi_array_filter_by_value($table, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($table, 'instruments_tag', $instrument_filtre);
 
         $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
 
@@ -1564,7 +1566,7 @@ function multiFilter()
     //instrument + theme + artiste + date
     elseif($type_filtre == '' && $lieu_filtre == '' && $instrument_filtre != '' && $thematiques_filtre != '' && $compositeur_filtre == '' && $artiste_filtre != '' && $date_filtre != ''){
 
-        $clear_table_instrument     = multi_array_filter_by_value($table, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($table, 'instruments_tag', $instrument_filtre);
 
         $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
 
@@ -1577,7 +1579,7 @@ function multiFilter()
     //instrument + comp + artiste + date
     elseif($type_filtre == '' && $lieu_filtre == '' && $instrument_filtre != '' && $thematiques_filtre == '' && $compositeur_filtre != '' && $artiste_filtre != '' && $date_filtre != ''){
 
-        $clear_table_instrument     = multi_array_filter_by_value($table, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($table, 'instruments_tag', $instrument_filtre);
 
         $clear_table_compositeur    = multi_array_filter_by_value($clear_table_instrument, 'compositeur', $compositeur_filtre);
 
@@ -1613,7 +1615,7 @@ function multiFilter()
 
         $clear_table_lieu           = array_filter_by_value($clear_table_type, 'departement', $lieu_filtre);
 
-        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instruments_tag', $instrument_filtre);
 
         $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
 
@@ -1628,7 +1630,7 @@ function multiFilter()
 
         $clear_table_lieu           = array_filter_by_value($clear_table_type, 'departement', $lieu_filtre);
 
-        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instruments_tag', $instrument_filtre);
 
         $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
 
@@ -1643,7 +1645,7 @@ function multiFilter()
 
         $clear_table_lieu           = array_filter_by_value($clear_table_type, 'departement', $lieu_filtre);
 
-        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instruments_tag', $instrument_filtre);
 
         $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
 
@@ -1651,14 +1653,15 @@ function multiFilter()
 
     }
 
-    //type + lieu + instrument + comp + artiste
+
+    //type + lieu + instrument + compositeur + artiste
     elseif($type_filtre != '' && $lieu_filtre != '' && $instrument_filtre != '' && $thematiques_filtre == '' && $compositeur_filtre != '' && $artiste_filtre != '' && $date_filtre == ''){
 
         $clear_table_type           = array_filter_by_value($table,'type', $type_filtre );
 
         $clear_table_lieu           = array_filter_by_value($clear_table_type, 'departement', $lieu_filtre);
 
-        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instruments_tag', $instrument_filtre);
 
         $clear_table_compositeur    = multi_array_filter_by_value($clear_table_instrument, 'compositeur', $compositeur_filtre);
 
@@ -1673,7 +1676,7 @@ function multiFilter()
 
         $clear_table_lieu           = array_filter_by_value($clear_table_type, 'departement', $lieu_filtre);
 
-        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instruments_tag', $instrument_filtre);
 
         $clear_table_compositeur    = multi_array_filter_by_value($clear_table_instrument, 'compositeur', $compositeur_filtre);
 
@@ -1712,11 +1715,11 @@ function multiFilter()
     }
 
     //type + instrument + theme + comp + artiste
-    elseif($type_filtre != '' && $lieu_filtre == '' && $instrument_filtre != '' && $thematiques_filtre != '' && $compositeur_filtre != '' && $artiste_filtre == '' && $date_filtre != ''){
+    elseif($type_filtre != '' && $lieu_filtre == '' && $instrument_filtre != '' && $thematiques_filtre != '' && $compositeur_filtre != '' && $artiste_filtre != '' && $date_filtre == ''){
 
         $clear_table_type           = array_filter_by_value($table,'type', $type_filtre );
 
-        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_type, 'instruments_tag', $instrument_filtre);
 
         $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
 
@@ -1731,7 +1734,7 @@ function multiFilter()
 
         $clear_table_type           = array_filter_by_value($table,'type', $type_filtre );
 
-        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_type, 'instruments_tag', $instrument_filtre);
 
         $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
 
@@ -1746,7 +1749,7 @@ function multiFilter()
 
         $clear_table_type           = array_filter_by_value($table,'type', $type_filtre );
 
-        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_type, 'instruments_tag', $instrument_filtre);
 
         $clear_table_compositeur    = multi_array_filter_by_value($clear_table_instrument, 'compositeur', $compositeur_filtre);
 
@@ -1776,7 +1779,7 @@ function multiFilter()
 
         $clear_table_lieu           = array_filter_by_value($table,'departement', $lieu_filtre );
 
-        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instruments_tag', $instrument_filtre);
 
         $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
 
@@ -1791,7 +1794,7 @@ function multiFilter()
 
         $clear_table_lieu           = array_filter_by_value($table,'departement', $lieu_filtre );
 
-        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instruments_tag', $instrument_filtre);
 
         $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
 
@@ -1806,7 +1809,7 @@ function multiFilter()
 
         $clear_table_lieu           = array_filter_by_value($table,'departement', $lieu_filtre );
 
-        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instruments_tag', $instrument_filtre);
 
         $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
 
@@ -1821,7 +1824,7 @@ function multiFilter()
 
         $clear_table_lieu           = array_filter_by_value($table,'departement', $lieu_filtre );
 
-        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instruments_tag', $instrument_filtre);
 
         $clear_table_compositeur    = multi_array_filter_by_value($clear_table_instrument, 'compositeur', $compositeur_filtre);
 
@@ -1849,7 +1852,7 @@ function multiFilter()
     //instrument + theme + comp + artiste + date
     elseif($type_filtre == '' && $lieu_filtre == '' && $instrument_filtre != '' && $thematiques_filtre != '' && $compositeur_filtre != '' && $artiste_filtre != '' && $date_filtre != ''){
 
-        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($table, 'instruments_tag', $instrument_filtre);
 
         $clear_table_thematiques    = multi_array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
 
@@ -1873,7 +1876,7 @@ function multiFilter()
 
         $clear_table_lieu           = array_filter_by_value($clear_table_type, 'departement', $lieu_filtre);
 
-        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instruments_tag', $instrument_filtre);
 
         $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
 
@@ -1890,7 +1893,7 @@ function multiFilter()
 
         $clear_table_lieu           = array_filter_by_value($clear_table_type, 'departement', $lieu_filtre);
 
-        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instruments_tag', $instrument_filtre);
 
         $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
 
@@ -1907,7 +1910,7 @@ function multiFilter()
 
         $clear_table_lieu           = array_filter_by_value($clear_table_type, 'departement', $lieu_filtre);
 
-        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instrument', $instrument_filtre);
+        $clear_table_instrument     = multi_array_filter_by_value($clear_table_lieu, 'instruments_tag', $instrument_filtre);
 
         $clear_table_thematiques    = array_filter_by_value($clear_table_instrument, 'thematiques', $thematiques_filtre);
 
@@ -1929,18 +1932,26 @@ function multiFilter()
     $count = count($clear_table_final);
 
 
+
     if($count == 0){
 
         $table_zero = removeElementWithInferiorValue($table,'date_calendrier',$delete_if_less);
         $sliced     = array_slice($table_zero, 0, 3);
 
+        echo '<div class="contenu_grid">';
         echo 'Aucun spectacle ne correspond à vos critères de recherche.';
+        echo '</div>';
 
     }else{
         $sliced     = $clear_table_final;
     };
 
-    displayAjax($sliced);
+    var_dump($clear_table_final);
+    echo $count;
+
+    //displayAjax($sliced);
+
+    //var_dump($sliced);
 
 };
 

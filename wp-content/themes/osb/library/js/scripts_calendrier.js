@@ -14,14 +14,17 @@ jQuery(document).ready(function($) {
         $(this).css('display','inline');
     });
 
+    $('.show_filters').on('click', function(){
+       $(this).toggleClass('active_filtre');
+       $('#search_test').toggleClass('active');
+    });
+
     /**********AJAX**********/
 
     var ville;
     var theme;
     var type;
     var filter;
-    var values;
-
 
     $( function() {
         $( "#datepicker" ).datepicker({
