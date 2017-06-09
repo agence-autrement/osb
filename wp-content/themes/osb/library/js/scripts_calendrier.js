@@ -114,27 +114,35 @@ jQuery(document).ready(function($) {
     /***MULTIFILTRE AJAX***/
 
     $('.select_filter').on('change', function(e){
-
-        //values = $(this).val();
-
         e.preventDefault();
-
         filter = $('#search_test').serialize();
-
-        console.log(filter);
-
         jQuery.ajax({
             type:"POST",
             url: ajaxtest,
             data:{
-
               action: "multiFilter",
               filter : filter,
-
             },
             success:function(response){
                 $('.resultat').html(response);
             },
         });
     });
+
+    $('#clear_filters').on('click', function(){
+        $('select').find('option').prop("selected", false);
+        filter = $('#search_test').serialize();
+        jQuery.ajax({
+            type:"POST",
+            url: ajaxtest,
+            data:{
+                action: "multiFilter",
+                filter : filter,
+            },
+            success:function(response){
+                $('.resultat').html(response);
+            },
+        });
+    });
+
 }); /* end of as page load scripts */

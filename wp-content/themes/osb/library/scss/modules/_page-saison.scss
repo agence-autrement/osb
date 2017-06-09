@@ -17,6 +17,17 @@
     border: none;
   }
 
+  #clear_filters{
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px 15px;
+    border: 1px solid white;
+  }
+
 .resultat{
 
   .left_event{
