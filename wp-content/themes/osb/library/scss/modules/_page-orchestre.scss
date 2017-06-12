@@ -1,0 +1,451 @@
+.section-orch {
+
+  padding: 11rem 0 8rem;
+}
+
+.orch {
+
+  &__inner {
+    width: 90%;
+    margin: 0 auto;
+  }
+  &--left, &--right {
+    width: 47%;
+    text-align: center;
+    height: 390px;
+    margin: 0 1.1rem;
+    position: relative;
+    border: 2px solid #F5F3F3;
+    float: left;
+    text-align: center;
+
+    &__inner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 70%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    background-color: $color-1;
+    text-transform: uppercase;
+    padding: .8rem;
+    font-size: 1.5rem;
+    margin-bottom: 2.3rem;
+    display: inline-block;
+    margin-top: 0;
+  }
+
+  &__name {
+    font-family: $font2;
+    font-weight: 300;
+    position: relative;
+    margin-bottom: 5.5rem;
+    font-size: 3.5rem;
+    line-height: 3.6rem;
+    margin-top: 0;
+
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 6.5rem;
+      height: .2rem;
+      background-color: $color-1;
+      bottom: -10px;
+      transform: translateX(-50%);
+      left: 50%;
+    }
+  }
+
+  &__adress {
+    font-weight: 300;
+    margin-bottom: 2.2rem;
+
+  }
+
+  &__tel {
+    text-transform: uppercase;
+    font-family: $font2;
+    display: block;
+
+  }
+
+  &__open {
+    margin-top: 2.2rem;
+  }
+}
+
+.section-orch-bg {
+  padding: 12rem 0;
+  background-color: blue;
+
+}
+
+.orch-bg {
+
+  &__left, &__right {
+    width: 50%;
+    float: left;
+    position: relative;
+  }
+
+  &__inner {
+    margin: 0 auto;
+    width: 90%;
+
+  }
+
+  &__left {
+    padding-right: 6.5rem;
+  }
+
+  &__right {
+    padding: 0 5.5rem;
+    text-align: justify;
+  }
+  &__title {
+    font-size: 5rem;
+    font-weight: 300;
+    margin: 0;
+    text-align: right;
+    line-height: 5.1rem;
+    color: $color-2;
+    position: relative;
+    font-family: $font2;
+  }
+
+  &__text {
+    color: #fff;
+    margin-top: 3rem;
+
+    .black_cross {
+      left: 28px;
+      top: 20px;
+      height: 15px;
+      width: 15px;
+      position: absolute;
+
+      background-image: url(../images/croix_noir.svg);
+
+    }
+
+  }
+}
+
+.section-musiciens {
+  margin-bottom: 6rem;
+
+}
+
+.musiciens {
+  &__inner {
+    padding: 0 15px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 2.1rem;
+    margin-bottom: 3.5rem;
+  }
+
+  &__dep {
+    overflow: hidden;
+    margin-top: 2rem;
+
+    &__title {
+      color: $color-3;
+      font-family: $font2;
+      font-weight: 200;
+      font-size: 2.5rem;
+      line-height: 2.6rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      margin-left: 3rem;
+      position: relative;
+
+      &__cross {
+        display: block;
+        color: $color-3;
+        font-size: 4.5rem;
+        position: absolute;
+        top: -2px;
+        left: -2.8rem;
+      }
+
+      &__arrow {
+        color: $color-3;
+        font-size: 4.5rem;
+        position: absolute;
+        top: -2px;
+        left: -2.8rem;
+        display: none;
+      }
+
+    }
+
+    &__separator {
+      width: 100%;
+      display: block;
+      height: 1px;
+      background-color: #DAD7CB;
+    }
+
+    &__items {
+      display: none;
+      text-align: center;
+
+    }
+
+    &__item {
+      display: inline-block;
+      width: 225px;
+      margin: 0 1.5rem 2rem;
+      border: 1px solid #DAD7CB;
+
+      &__img {
+        height: 225px;
+
+        background-size: cover;
+        background-position: center center;
+      }
+
+      &__title {
+        text-transform: uppercase;
+        margin: 1rem 0;
+        font-size: 1.5rem;
+        line-height: 1.6rem;
+        text-align: center;
+        font-family: $font2;
+        font-weight: 400;
+        &--orga {
+          margin:1rem 0 0;
+        }
+
+      }
+
+      &__fct {
+        margin: 0rem 0 1rem;
+        font-weight: 200;
+        padding:0 0.3rem;
+        font-size: 1.4rem;
+        font-family: $font2;
+      }
+
+      &__inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+      }
+
+      li {
+        font-size: 1.5rem;
+        position: relative;
+        text-transform: uppercase;
+        font-family: $font2;
+        border: 2px solid #F5F3F3;
+        text-align: center;
+        padding: .8rem;
+        height: 5rem;
+
+        &:hover {
+          background-color: $color-2;
+          @include transition();
+
+        }
+
+      }
+
+    }
+
+    &--first {
+      &__items {
+        display: block;
+      }
+
+      &__separator {
+        display: none;
+      }
+
+      &__title {
+        &__cross {
+          display: none;
+        }
+
+        &__arrow {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__contact {
+    width: 230px;
+    background-color: #DAD7CB;
+    margin: 4rem auto 2rem;
+    padding: 1.5rem 1rem 1.5rem 2rem;
+
+    &__title {
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      margin: 0;
+      font-weight: 400;
+
+    }
+
+    &__text {
+      font-size: 1.2rem;
+      margin: 0;
+      font-weight: 400;
+
+    }
+
+  }
+
+}
+
+.section-orch-sep {
+  padding: 6rem 0 22rem;
+  background-color: blue;
+}
+
+.orch-sep {
+
+  &__inner {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__left, &__right {
+    width: 50%;
+    float: left;
+    position: relative;
+  }
+
+  &__left {
+    padding-right: 6.5rem;
+  }
+
+  &__right {
+    padding: 0 5.5rem;
+    text-align: justify;
+  }
+  &__title {
+    font-size: 5rem;
+    font-weight: 300;
+    margin: 0;
+    text-align: right;
+    line-height: 5.1rem;
+    color: $color-1;
+    position: relative;
+    font-family: $font2;
+  }
+
+  &__text {
+    color: #fff;
+    margin-top: 3rem;
+
+    .black_cross {
+      left: 28px;
+      top: 20px;
+      height: 15px;
+      width: 15px;
+      position: absolute;
+
+      background-image: url(../images/croix_noir.svg);
+
+    }
+
+  }
+}
+
+/******************************
+MEDIA QUERIES
+******************************/
+
+@media screen and (max-width: 767px) {
+
+  .section-orch {
+    padding: 6rem 0 4rem;
+  }
+
+  .orch {
+    &--left, &--right {
+      margin: 0 0 1rem;
+      width: 100%;
+      height: 220px;
+    }
+  }
+
+  .section-orch-bg, .section-orch-sep {
+    padding: 3rem 0;
+  }
+
+  .orch-bg, .orch-sep {
+    &__left, &__right {
+      margin: 0 0 1rem;
+      width: 100%;
+      padding: 0;
+
+    }
+
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (max-width: 990px) {
+
+}
+
+@media screen and (min-width: 990px) {
+}
+
+@media screen and (max-width: 990px) and (min-width: 768px) {
+
+}
+
+@media screen and (max-width: 1100px) {
+
+}
+
+@media screen and (max-width: 460px) {
+
+  .musiciens {
+    &__dep {
+      &__item {
+
+        margin: 0 0 1rem;
+
+      }
+    }
+  }
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */
+}
+
+@media print and (min-width: 5in) {
+}
+
+
+

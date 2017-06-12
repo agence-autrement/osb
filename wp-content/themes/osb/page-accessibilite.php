@@ -103,7 +103,6 @@ Template Name: Page Accessibilite
                             l’accueil de jour Kerelys, le Pôle Saint-Hélier participent régulièrement aux actions
                             proposées par l’orchestre.</p>
 
-
                     </div>
                 </div>
             </div>

@@ -409,6 +409,22 @@ jQuery(document).ready(function ($) {
         }
     });
 
+    /*
+     *  Toogle Orchestre
+     */
+
+   $('.musiciens__dep').on('click', function() {
+
+       $('.musiciens__dep__items', this).toggle('fast');
+       $('.musiciens__dep__title__cross', this).toggle();
+       $('.musiciens__dep__title__arrow', this).toggle();
+       $('.musiciens__dep__separator', this).toggle();
+
+
+
+    })
+
+
 
     //Google Maps JS - Page Salle
 

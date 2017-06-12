@@ -1,0 +1,236 @@
+.section-orga-sep {
+  padding:6rem 0;
+  background-color: yellow;
+}
+
+.orga-sep {
+  &__inner {
+    width: 55%;
+    margin: 0 auto;
+    text-align: center;
+
+  }
+
+
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 1.9rem;
+    line-height: 2rem;
+    margin:0 0 2rem;
+    font-weight: 600;
+
+
+  }
+
+  &__text {
+    font-size: 1.4rem;
+  }
+}
+
+.section-orga-jac {
+  padding:3rem 0;
+}
+
+.orga-jac {
+  &__inner {
+    width: 80%;
+    margin: 0 auto;
+
+  }
+
+  &__left, &__right {
+    width: 50%;
+    float: left;
+    position: relative;
+  }
+  &__left{
+    padding-right: 3.5rem;
+  }
+
+  &__right{
+    padding-left: 3.5rem;
+  }
+
+  &__title {
+    font-size: 5rem;
+    font-weight: 300;
+    margin: 0;
+    line-height: 5.1rem;
+    color: $color-2;
+    position: relative;
+    font-family: "Montserrat";
+
+
+    &--right {
+      text-align: left;
+    }
+
+
+  }
+
+  &__text {
+    text-align: justify;
+    margin-top:2rem;
+    padding: 0 1.5rem;
+  }
+
+
+  &__img {
+    margin-top: 4rem;
+  }
+
+  &__cross {
+    position: absolute;
+    left: -52px;
+    bottom: -40px;
+
+    img {
+      width: 40px;;
+    }
+  }
+
+  &__l1{
+    margin-bottom: 3rem;
+    overflow: hidden;
+  }
+
+  &__l2 {
+    overflow: hidden;
+    .orga-jac {
+      &__left{
+        text-align: right;
+
+      }
+
+      &__title {
+      }
+
+      &__text {
+
+        &--intro {
+          margin-top: 12rem;
+          font-weight: 400;
+          font-style: italic;
+
+        }
+      }
+
+      &__cross {
+        right: 296px;
+        bottom: -1px;
+      }
+    }
+  }
+
+
+}
+
+
+
+/******************************
+MEDIA QUERIES
+******************************/
+
+@media screen and (max-width: 767px) {
+
+  .section-orch {
+    padding:6rem 0 4rem;
+  }
+
+  .orch {
+    &--left, &--right {
+      margin: 0 0 1rem;
+      width: 100%;
+      height: 220px;
+    }
+  }
+
+  .section-orch-bg, .section-orch-sep {
+    padding: 3rem 0;
+  }
+
+   .orga-sep, .orga-jac {
+
+     &__inner {
+       width: 90%;
+     }
+    &__left, &__right {
+      margin: 0 0 1rem;
+      width: 100%;
+      padding: 0;
+
+    }
+
+  }
+
+  .section-orga-jac {
+
+  }
+
+  .orga-jac {
+
+    &__l2 {
+      .orga-jac {
+        &__text {
+          &--intro {
+            margin-top: 2rem;
+          }
+        }
+      }
+    }
+
+  }
+
+
+
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (max-width: 990px) {
+
+}
+
+@media screen and (min-width: 990px) {
+}
+
+@media screen and (max-width: 990px) and (min-width: 768px) {
+
+}
+
+@media screen and (max-width: 1100px) {
+
+}
+
+@media screen and (max-width: 460px) {
+
+  .musiciens {
+    &__dep {
+      &__item {
+
+        margin:0 0 1rem;
+
+      }
+    }
+  }
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */
+}
+
+@media print and (min-width: 5in) {
+}
+
+
+
