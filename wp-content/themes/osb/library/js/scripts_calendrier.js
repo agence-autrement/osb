@@ -14,14 +14,17 @@ jQuery(document).ready(function($) {
         $(this).css('display','inline');
     });
 
+    $('.show_filters').on('click', function(){
+       $(this).toggleClass('active_filtre');
+       $('#search_test').toggleClass('active');
+    });
+
     /**********AJAX**********/
 
     var ville;
     var theme;
     var type;
-    // var filter;
-    var values;
-
+    var filter;
 
     $( function() {
         $( "#datepicker" ).datepicker({
@@ -111,24 +114,38 @@ jQuery(document).ready(function($) {
         });
     });
 
-
     /***MULTIFILTRE AJAX***/
 
-    $('.filtreSelector ul li button').on('click', function(){
-
-        $(this).toggleClass('active');
-        values = $(this).val();
+    $('.select_filter').on('change', function(e){
+        e.preventDefault();
+        filter = $('#search_test').serialize();
         jQuery.ajax({
             type:"POST",
             url: ajaxtest,
-            dataType: 'html',
-            data: {
-                action: "multiFilter",
-                values: values,
+            data:{
+              action: "multiFilter",
+              filter : filter,
             },
             success:function(response){
                 $('.resultat').html(response);
             },
         });
     });
+
+    $('#clear_filters').on('click', function(){
+        $('select').find('option').prop("selected", false);
+        filter = $('#search_test').serialize();
+        jQuery.ajax({
+            type:"POST",
+            url: ajaxtest,
+            data:{
+                action: "multiFilter",
+                filter : filter,
+            },
+            success:function(response){
+                $('.resultat').html(response);
+            },
+        });
+    });
+
 }); /* end of as page load scripts */

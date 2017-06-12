@@ -25,7 +25,11 @@ Template Name: Page Venir en Groupe
     <section class="formulaire_groupe">
         <div class="contenu_grid">
             <div class="titre_form_groupe">// Inscription groupes //</div>
+<<<<<<< Updated upstream
             <? echo do_shortcode('[contact-form-7 id="274" title="Contact Form Venir Groupe"]'); ?>
+=======
+            <? echo do_shortcode('[contact-form-7 id="274" title="Contact Form Venir en groupe"]'); ?>
+>>>>>>> Stashed changes
         </div>
     </section>
 </div>
