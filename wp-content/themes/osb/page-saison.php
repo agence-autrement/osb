@@ -45,7 +45,7 @@ Template Name: Page Saison
                     <option value="nouveaux_horizons">Nouveaux Horizons</option>
                     <option value="taliesin">Taliesin</option>
                 </select>
-                <select name="compositeur" id="compositeur" class="select_filter" size="15">
+                <select name="compositeur" id="compositeur" class="select_filter" size="75">
                     <option value="" class="first_opt">Compositeur</option>
                     <option value="mozart">Mozart</option>
                     <option value="haydn">Haydn</option>
