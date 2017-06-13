@@ -8,6 +8,14 @@ Plugin Name: Calendrier
  * Fonctions Globales *
  ************************/
 
+
+
+
+/////DEBUG
+ini_set('xdebug.var_display_max_depth', 5);
+ini_set('xdebug.var_display_max_children', 256);
+ini_set('xdebug.var_display_max_data', 1024);
+
 /////////////////////////////////Fonction de filtre
 
 function array_filter_by_value($my_array, $index, $value)
@@ -173,6 +181,7 @@ function queryAllDate()
             $compositeur        = get_field('compositeur');
             $instruments_tag    = get_field('instruments_tag');
             $artistes_tag       = get_field('artistes_tag');
+            $image_vignette     = get_field('image_vignette');
 
 
 
@@ -198,6 +207,7 @@ function queryAllDate()
                     $date               = get_sub_field('date');
                     $lieu               = get_sub_field('lieu');
                     $ville_calendrier   = get_sub_field('ville');
+                    $lien_billeterie    = get_sub_field('lien_billeterie');
 
                     $test = array(
                         'id_calendrier'         => $post_id,
@@ -217,6 +227,8 @@ function queryAllDate()
                         'instrument'            => $instruments,
                         'instruments_tag'       => $instruments_tag,
                         'artistes_tag'          => $artistes_tag,
+                        'image_vignette'        => $image_vignette['url'],
+                        'lien_billeterie'       => $lien_billeterie,
                     );
 
                     array_push($table, $test);
@@ -231,53 +243,62 @@ function queryAllDate()
     };
 };
 
-
-
-
 ///////////////////////////////// Affichage AJAX
 
 function displayAjax( $array )
 {
     echo '<div class="contenu_grid">';
-    echo '<ul>';
-
-    foreach($array as $table_un => $values){
+    foreach ($array as $table_un => $values) {
         setlocale(LC_ALL, "fr_FR");
-        $timestamp          = $values['date_calendrier'];
-        $translate_Day      = strftime ( '%e' , strtotime($timestamp));
-        $translate_Month    = strftime ( '%B' , strtotime($timestamp));
-        if($values['thumbnail_calendrier'] == false){
-            echo '<li>';
-        }else{
-            $bgImage = $values['thumbnail_calendrier'];
-            echo '<li style="background-image:url('.$bgImage.'); ">';
-        }
-        ?>
+        $timestamp = $values['date_calendrier'];
+        $translate_Day = strftime('%e', strtotime($timestamp));
+        $translate_Month = strftime('%B', strtotime($timestamp));
 
-        <div class="left_event">
-            <p class="cat_calendrier"><? echo $values['thematiques']; ?></p>
-            <p class="titre_calendrier"><? echo $values['titre_calendrier']; ?></p>
-            <p class="artiste_calendrier"><? echo $values['artiste_calendrier']; ?></p>
-            <a href="<? echo $values['link']; ?>" class="link_calendrier">EN SAVOIR +</a>
+        if($values['thematiques'] == 'les_essentiels'){
+            $btn_color = "bot_date--yellow";
+        }elseif($values['thematiques'] == 'nouveaux_horizons'){
+            $btn_color = "bot_date--green";
+        }else{
+            $btn_color = "bot_date--blue";
+        }; ?>
+
+        <div class="fiche__item" style="
+            background-image: url('<?php echo $values['image_vignette'] ?>');
+            background-color: black;
+            ">
+            <div class="left_date">
+                <div class="type type--yellow">
+                    <?
+                    if($values['thematiques'] == 'les_essentiels'){
+                        echo 'Les Essentiels';
+                    }elseif($values['thematiques'] == 'nouveaux_horizons'){
+                        echo 'Nouveaux Horizons';
+                    }elseif($values['thematiques'] == 'taliesin'){
+                        echo 'Taliesin';
+                    };
+                    ?>
+                </div>
+                <div class="titre"><? echo $values['titre_calendrier']; ?></div>
+                <a href="<? echo $values['link']; ?>" class="link_calendrier">EN SAVOIR +</a>
+            </div>
+            <div class="right_date">
+                <div class="date_jours">
+                    <? if ($translate_Day == '1') {
+                        echo $translate_Day;
+                        echo "<sup>er</sup>";
+                    } else {
+                        echo $translate_Day;
+                    } ?>
+                </div>
+                <div class="date_mois"><? echo $translate_Month; ?></div>
+                <div class="lieu"><? echo $values['ville_calendrier']; ?></div>
+            </div>
+            <a class="bot_date <? echo $btn_color; ?>" href="<? echo $values['lien_billeterie'] ?>" target="_blank">Réserver</a>
         </div>
-        <div class="right_event">
-            <p class="day_calendrier"><?
-                if($translate_Day == '1'){
-                    echo $translate_Day;
-                    echo "<sup>er</sup>";
-                }else{
-                    echo $translate_Day;
-                } ?>
-            </p>
-            <p class="month_calendrier"><? echo $translate_Month; ?></p>
-            <p class="lieu_calendrier"><? echo $values['ville_calendrier'];?></p>
-        </div>
-        <?
-        echo '</li>';
-    };
-    echo '</ul>';
+      <?  }
     echo '</div>';
 }
+
 
 
 
@@ -308,6 +329,168 @@ function queryPosts()
 
 
 
+
+///////////////////////////////// Affichage Les Essentiels
+
+function queryEssentiels()
+{
+    $args       = array('post_type' => 'spectacles',
+        'posts_per_page' => '-1'
+    );
+    $the_query  = new WP_Query( $args );
+
+    if( $the_query  ->  have_posts() ){
+
+        $table = array();
+
+        while ( $the_query  ->have_posts() ) {
+
+            $the_query      ->the_post();
+
+            $post_id            = get_the_ID();
+            $titre              = get_the_title($post_id);
+            $link               = get_the_permalink($post_id);
+            $thumbnail          = get_the_post_thumbnail_url($post_id, 'full');
+            $type               = get_field('type');
+            $thematiques        = get_field('thematiques');
+            $festivals          = get_field('festivals');
+            $tete_daffiche      = get_field('tete_daffiche');
+            $compositeur        = get_field('compositeur');
+            $instruments_tag    = get_field('instruments_tag');
+            $artistes_tag       = get_field('artistes_tag');
+
+            if( have_rows('artistes') ){
+                $artistes = array();
+                $instruments = array();
+                while ( have_rows('artistes') ) : the_row();
+                    $artiste        = get_sub_field('artiste');
+                    $instrument     = get_sub_field('instrument');
+                    array_push($artistes, $artiste);
+                    array_push($instruments, $instrument);
+                endwhile;
+            };
+
+            if( have_rows('representations') ){
+
+                $representation = array();
+
+                while ( have_rows('representations') ) : the_row();
+                    $departement        = get_sub_field('departement');
+                    $date               = get_sub_field('date');
+                    $lieu               = get_sub_field('lieu');
+                    $ville_calendrier   = get_sub_field('ville');
+                    $lien_billeterie    = get_sub_field('lien_billeterie');
+
+                    array_push($representation, array($departement, $date, $lieu, $ville_calendrier));
+
+                endwhile;
+            };
+
+
+            if( have_rows('slides') ){
+
+                while ( have_rows('slides') ) : the_row();
+                    $slide        = get_sub_field('image');
+
+                endwhile;
+            };
+
+            $test = array(
+                'id_calendrier'         => $post_id,
+                'date_calendrier'       => $date,
+                'titre_calendrier'      => $titre,
+                'thumbnail_calendrier'  => $thumbnail,
+                'link'                  => $link,
+                'artiste_calendrier'    => $artistes,
+                'thematiques'           => $thematiques,
+                'type'                  => $type,
+                'festivals'             => $festivals,
+                'tete_daffiche'         => $tete_daffiche,
+                'compositeur'           => $compositeur,
+                'instrument'            => $instruments,
+                'instruments_tag'       => $instruments_tag,
+                'artistes_tag'          => $artistes_tag,
+                'image_vignette'        => $image_vignette['url'],
+                'representation'        => $representation,
+                'lien_billeterie'       => $lien_billeterie,
+                'image'                 => $slide
+            );
+
+            array_push($table, $test);
+            usort($table, "sortByDate");
+        };
+        return $table;
+    };
+};
+
+
+
+
+
+function displayEssentiels()
+{
+
+    $table                  = queryEssentiels();
+    $table                  = removeElementWithInferiorValue($table,'date_calendrier',$date_event);
+    $clear_table_essentiels = array_filter_by_value($table, 'thematiques', 'les_essentiels');
+    $sliced                 = array_slice($clear_table_essentiels, 0, 1);
+    ?>
+
+    <div class="slideshow2">
+        <ul class="slider">
+            <? foreach($sliced as $representation => $une_rep){ ?>
+            <li class="slides">
+                <div class="date_slider" style="background-image: url('<? echo $une_rep['image']['url'] ?>');">
+                    <ul>
+                        <? foreach($une_rep['representation'] as $la_date){
+                            setlocale(LC_ALL, "fr_FR");
+                            $timestamp = $la_date[1];
+                            $translate_Day = strftime('%e', strtotime($timestamp));
+                            $translate_Month = strftime('%B', strtotime($timestamp)); ?>
+                            <li class="date_tr">
+                                <div class="jour">
+                                    <? if ($translate_Day == '1') {
+                                        echo $translate_Day;
+                                        echo "<sup>er</sup>";
+                                    } else {
+                                        echo $translate_Day;
+                                    } ?>
+                                </div>
+                                <div class="mois"><? echo $translate_Month ?></div>
+                                <div class="lieu"><? echo $la_date[3] ?></div>
+                            </li>
+                        <? } ?>
+                    </ul>
+                    <div class="thematique">
+                        <?
+                        if($une_rep['thematiques'] == 'les_essentiels'){
+                            echo 'Les Essentiels';
+                        }elseif($une_rep['thematiques'] == 'nouveaux_horizons'){
+                            echo 'Nouveaux Horizons';
+                        }elseif($une_rep['thematiques'] == 'taliesin'){
+                            echo 'Taliesin';
+                        };
+                        ?>
+                    </div>
+                    <div class="titre">
+                        <? echo $une_rep['titre_calendrier']; ?>
+                    </div>
+                    <div class="artiste">
+                        <? echo $une_rep['artiste_calendrier'][0]; ?>
+                    </div>
+                    <a class="bot_date <? echo $btn_color; ?>" href="<? echo $values['lien_billeterie'] ?>" target="_blank">Réserver</a>
+                    <a class="savoir_plus" href="###">En savoir +</a>
+                    <a href="###" class="toute_rep">Toutes les représentations</a>
+
+                </div>
+            </li>
+            <? } ?>
+        </ul>
+    </div>
+    <?
+    //var_dump($sliced);
+    wp_reset_postdata();
+};
 
 ///////////////////////////////// Affichage des événements par défault
 
@@ -499,11 +682,8 @@ function mon_action_type()
 
 ///////////////////////////////// MULTIFILTRE
 
-
-
 function multiFilter()
 {
-
     global $_POST;
     $key_to_filter          = $_POST['filter'];
     $table                  = queryAllDate();
@@ -1946,12 +2126,7 @@ function multiFilter()
         $sliced     = $clear_table_final;
     };
 
-    var_dump($clear_table_final);
-    echo $count;
-
-    //displayAjax($sliced);
-
-    //var_dump($sliced);
+    displayAjax($sliced);
 
 };
 

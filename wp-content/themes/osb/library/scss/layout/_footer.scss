@@ -63,6 +63,34 @@
     }
   }
 
+  #reseaux_sociaux{
+    text-align: center;
+    overflow: hidden;
+    margin: 15px auto 0;
+    div{
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      -webkit-background-size: cover;
+      background-size: cover;
+      a{
+        height: 100%;
+        width: 100%;
+        display: block;
+        text-indent: -5000px;
+      }
+      &:nth-of-type(1){
+        background-image: url('../images/fb.svg');
+      }
+      &:nth-of-type(2){
+        background-image: url('../images/tw.svg');
+      }
+      &:nth-of-type(3){
+        background-image: url('../images/instagram.svg');
+      }
+    }
+  }
+
   .contact_footer{
     height: 150px;
     width: 50%;

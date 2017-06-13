@@ -11,25 +11,40 @@ Template Name: Page d'Accueil
         <div class="top_landing">
             <div class="contenu_grid">
                 <?
-                $table = queryPosts();
+                $table          = queryAllDate();
                 usort($table, "sortByDate");
                 $delete_if_less = date("Y-m-d");
-                $clear_date = removeElementWithInferiorValue($table, 'date_calendrier', $delete_if_less);
-                $sliced = array_slice($clear_date, 0, 3);
+                $clear_date     = removeElementWithInferiorValue($table,'date_calendrier',$delete_if_less);
+                $sliced         = array_slice($clear_date, 0, 3);
 
                 echo '<ul id="calendrier_top">';
 
-                foreach ($sliced as $table_un => $values) {
+                foreach($sliced as $table_un => $values){
                     setlocale(LC_ALL, "fr_FR");
-                    $timestamp = $values['date_calendrier'];
-                    $translate_Day = strftime('%e', strtotime($timestamp));
-                    $translate_Month = strftime('%B', strtotime($timestamp));
-
-                    echo '<li>'; ?>
+                    $timestamp          = $values['date_calendrier'];
+                    $translate_Day      = strftime ( '%e' , strtotime($timestamp));
+                    $translate_Month    = strftime ( '%B' , strtotime($timestamp));
+                    if($values['thematiques'] == 'les_essentiels'){
+                        $btn_color = "bot_date--yellow";
+                    }elseif($values['thematiques'] == 'nouveaux_horizons'){
+                        $btn_color = "bot_date--green";
+                    }else{
+                        $btn_color = "bot_date--blue";
+                    };
+                    echo '<li class="fiche__item">'; ?>
                     <div class="left_date">
-                        <div class="type"><? echo $values['cat_calendrier']; ?></div>
+                        <div class="type type--yellow">
+                            <?
+                                if($values['thematiques'] == 'les_essentiels'){
+                                    echo 'Les Essentiels';
+                                }elseif($values['thematiques'] == 'nouveaux_horizons'){
+                                    echo 'Nouveaux Horizons';
+                                }elseif($values['thematiques'] == 'taliesin'){
+                                    echo 'Taliesin';
+                                };
+                            ?>
+                        </div>
                         <div class="titre"><? echo $values['titre_calendrier']; ?></div>
-                        <div class="artiste"><? echo $values['artiste_calendrier']; ?></div>
                     </div>
                     <div class="right_date">
                         <div class="date_jours">
@@ -43,8 +58,10 @@ Template Name: Page d'Accueil
                         <div class="date_mois"><? echo $translate_Month; ?></div>
                         <div class="lieu"><? echo $values['ville_calendrier']; ?></div>
                     </div>
-                    <div class="img_hover"
-                         style="background-image: url('<? echo $values['thumbnail_calendrier'] ?>')"></div>
+                    <div class="img_hover" style="background-image: url('<? echo $values['image_vignette'] ?>')">
+                        <a href="<? echo $values['link']; ?>" class="link_calendrier">EN SAVOIR +</a>
+                        <a class="bot_date <? echo $btn_color; ?>" href="<? echo $values['lien_billeterie'] ?>" target="_blank">Réserver</a>
+                    </div>
                     <?
                     echo '</li>';
                 };
@@ -54,7 +71,6 @@ Template Name: Page d'Accueil
             </div>
         </div>
     </section>
-
 
     <? get_template_part('calendrier_view'); ?>
 
@@ -79,7 +95,6 @@ Template Name: Page d'Accueil
             </div>
         </div>
     </section>
-
 
     <section id="articles">
         <div class="contenu_grid">
@@ -123,6 +138,7 @@ Template Name: Page d'Accueil
             </div>
         </div>
     </section>
+
 
 
 </div>

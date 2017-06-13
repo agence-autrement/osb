@@ -297,7 +297,7 @@ SIDEBAR MENU
   left:0;
   text-align: center;
   background-color: black;
-  font-size: calc(10px + 0.3vw);
+  font-size: calc(10px + 0.16vw);
   text-transform: uppercase;
   color: #FFF;
   z-index: 1000;
@@ -402,6 +402,15 @@ SIDEBAR MENU
       width: 100%;
       display: block;
 
+    }
+    &:nth-of-type(1){
+      background-image: url('../images/fb.svg');
+    }
+    &:nth-of-type(2){
+      background-image: url('../images/tw.svg');
+    }
+    &:nth-of-type(3){
+      background-image: url('../images/instagram.svg');
     }
   }
 }

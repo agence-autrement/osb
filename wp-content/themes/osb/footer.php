@@ -23,6 +23,11 @@
 						</div>
 						<div class="footer_content">
 							<img src="<?php bloginfo('template_url') ?>/library/images/osb_logo.svg" alt="logo">
+							<div id="reseaux_sociaux">
+								<div><a href="###">Facebook</a></div>
+								<div><a href="###">Twitter</a></div>
+								<div><a href="###">Instagram</a></div>
+							</div>
 						</div>
 						<div class="footer_content">
 							<ul>
