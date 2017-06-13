@@ -26,7 +26,7 @@ LANDING
 #landing {
   height: 90vh;
   overflow: hidden;
-  background-image: url('../images/slider-saison.jpg');
+  background-image: url('../images/slider-saison2.jpg');
   -webkit-background-size: cover;
   background-size: cover;
   background-position: top;
@@ -566,5 +566,11 @@ RESPONSIVE
   #first_article {
     height: auto;
 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .top_landing {
+    display: none;
   }
 }
