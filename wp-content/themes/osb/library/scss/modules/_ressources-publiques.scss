@@ -213,6 +213,9 @@
 
 .rp {
   padding: 8rem 0 5rem;
+  background-image: url(../images/fond_fiche_bio.jpg);
+  background-size:cover;
+  background-position: center center;
 
   &__inner {
     text-align: center;
@@ -220,6 +223,8 @@
     margin: 0 auto;
     padding: 4rem 6rem;
     border:2px solid #F5F3F3;
+    background-color: #fff;
+
 
   }
 

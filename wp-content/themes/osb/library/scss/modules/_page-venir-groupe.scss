@@ -7,9 +7,10 @@
     padding-top: 180px;
     height: 710px;
     width: 100%;
-    background-color: darkslategrey;
+    background-image: url(../images/slide-venir.jpg);
     -webkit-background-size: cover;
     background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
 
     .title{
@@ -180,6 +181,10 @@
       width: 80%;
       float: none;
       margin: 0 auto;
+    }
+
+    .preciser {
+      line-height: 14px;
     }
 
     #choix_un, #nombre_accompagnateur, #adresse, #nombre_participant, #code_postal, #ville {

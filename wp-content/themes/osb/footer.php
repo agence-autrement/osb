@@ -3,21 +3,22 @@
 					<div class="contenu_grid">
 						<div class="footer_content">
 							<ul>
-								<li>La saison</li>
-								<li>Symphonique</li>
-								<li>Jeune Public</li>
-								<li>Musique de chambre</li>
-								<li>Artiste Invité</li>
-								<li>OSB invité</li>
+								<li><a href="<?php echo site_url('saison') ?>">La saison</a></li>
+								<li><a href="<?php echo site_url('symphonique') ?>">Symphonique</a></li>
+								<li><a href="<?php echo site_url('jeune-public') ?>">Jeune Public</a></li>
+								<li><a href="<?php echo site_url('') ?>">Musique de chambre</a></li>
+								<li><a href="<?php echo site_url('') ?>">Artiste Invité</a></li>
+								<li><a href="<?php echo site_url('orchestre-invite') ?>">OSB invité</a></li>
 							</ul>
 							<ul>
 								<li>Action Culturelle</li>
-								<li>Scolaires</li>
-								<li>Venir en groupe</li>
-								<li>Les pôles</li>
-								<li>Conférences / Concerts</li>
-								<li>Master Classes</li>
-								<li>Accessibilité</li>
+								<li><a href="<?php echo site_url('concerts-scolaires') ?>">Scolaire</a></li>
+								<li><a href="<?php echo site_url('venir-en-groupe') ?>">Venir en groupe</a></li>
+								<li><a href="<?php echo site_url('les-poles') ?>">Les pôles</a></li>
+								<li><a href="<?php echo site_url('saison') ?>">Conférences / Concerts</a></li>
+								<li><a href="<?php echo site_url('master-classes') ?>">Master Classes</a></li>
+								<li><a href="<?php echo site_url('accessibilite') ?>">Accessibilité</a></li>
+
 							</ul>
 						</div>
 						<div class="footer_content">
@@ -26,17 +27,21 @@
 						<div class="footer_content">
 							<ul>
 								<li>Nous soutenir</li>
-								<li>Concerto</li>
-								<li>Symphonia</li>
-								<li>Don en ligne</li>
+								<li><a href="<?php echo site_url('mecenat-particulier') ?>">Concerto</a></li>
+
+								<li><a href="<?php echo site_url('') ?>">Symphonia</a></li>
+								<li><a href="<?php echo site_url('') ?>">Don en ligne</a></li>
+
 							</ul>
 							<ul>
 								<li>Découvrir</li>
-								<li>Côté Orchestre</li>
-								<li>Côté pratique</li>
-								<li>Côté Organisation</li>
-								<li>Historique</li>
-								<li>Discographie</li>
+								<li><a href="<?php echo site_url('cote-orchestre') ?>">Côté Orchestre</a></li>
+								<li><a href="<?php echo site_url('cote-pratique') ?>">Côté pratique</a></li>
+								<li><a href="<?php echo site_url('cote-orga') ?>">Côté Organisation</a></li>
+								<li><a href="<?php echo site_url('historique') ?>">Historique</a></li>
+								<li><a href="<?php echo site_url('') ?>">Discographie</a></li>
+
+
 							</ul>
 						</div>
 					</div>
@@ -46,9 +51,9 @@
 							<ul>
 								<li>42a, rue Saint Melaine</li>
 								<li>BP 30823 // 35108 Rennes Cedex 3</li>
-								<li>tél : 33 (0) 2 99 27 52 85</li>
+								<li><a href="tel:0299275285">tél : 33 (0) 2 99 27 52 85</a></li>
 								<li>fax : 33 (0) 2 99 27 52 76</li>
-								<li>email : contact@o-s-b.fr</li>
+								<li><a href="mailto:contact@o-s-b.fr">email : contact@o-s-b.fr</a></li>
 							</ul>
 						</div>
 						<div class="billet">
@@ -57,7 +62,7 @@
 								<li>Place de la Mairie</li>
 								<li>35000 Rennes</li>
 								<li>ouvert du mardi au samedi, de 13h à 18h</li>
-								<li>tél : 02 99 275 275</li>
+								<li><a href="tel:0299275275">tél : 02 99 275 275</a></li>
 							</ul>
 						</div>
 					</div>

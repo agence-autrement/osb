@@ -23,7 +23,7 @@ Template Name: Page Saison Piccolo
             </div>
             <div class="tag">
                 <div class="btn_red"><a href="###">Tarif unique à 5€</a></div>
-                <div class="btn_savoir_plus"><a href="###">En savoir +</a></div>
+                <div class="btn_savoir_plus"><a href="#more">En savoir +</a></div>
             </div>
             <div class="intro_text">
                 Piccolo, ce sont des concerts conçus pour toute la famille, adultes comme enfants à partir de 7 ans. Commenté par un musicien ou un comédien, qui donne des clés d’écoute de la musique, le concert se veut un temps de découverte de la musique, d’échange et de convivialité. Une heure avant le concert, participez à un atelier de pratique instrumentale, pour mettre les sens en éveil et préparer à l’écoute du concert (Réservation auprès de la billetterie, 02 99 275 275)
@@ -42,7 +42,7 @@ Template Name: Page Saison Piccolo
             </ul>
         </div>
     </section>
-    <section class="content_right">
+    <section class="content_right" id="more">
         <div class="image_position">
             <div class="img_content">
                 <img src="<? bloginfo('template_url') ?>/library/images/nouveaumonde.jpg" alt="">
@@ -94,7 +94,7 @@ Template Name: Page Saison Piccolo
                     le Chasseur
                     <span class="croix_rouge"></span>
                 </div>
-                <img src="<? bloginfo('template_url') ?>/library/images/leo.jpg" alt="">
+                <img src="<? bloginfo('template_url') ?>/library/images/le-leopard-et-le-chasseur.jpg" alt="">
             </div>
             <div class="right_content">
                 <span class="croix_noir"></span>
@@ -134,7 +134,7 @@ Template Name: Page Saison Piccolo
                     San Francisco
                     <span class="croix_rouge"></span>
                 </div>
-                <img src="<? bloginfo('template_url') ?>/library/images/salzburg.jpg" alt="">
+                <img src="<? bloginfo('template_url') ?>/library/images/gsj_salzburg.jpg" alt="">
             </div>
             <div class="right_content">
                 <span class="croix_noir"></span>
@@ -176,7 +176,7 @@ Template Name: Page Saison Piccolo
                     Son cinéma
                     <span class="croix_rouge"></span>
                 </div>
-                <img src="<? bloginfo('template_url') ?>/library/images/cinema.jpg" alt="">
+                <img src="<? bloginfo('template_url') ?>/library/images/musique_fait_son_cinema_korcia.jpg" alt="">
             </div>
             <div class="right_content">
                 <span class="croix_noir"></span>
@@ -207,7 +207,7 @@ Template Name: Page Saison Piccolo
             </div>
         </div>
     </section>
-    <section class="special_content" style="background-image: url('<? bloginfo('template_url') ?>/library/images/piccolino.jpg')">
+    <section class="special_content" style="background-image: url('<? bloginfo('template_url') ?>/library/images/bg-piccolino.jpg')">
         <div class="contenu_grid">
             <div class="left_content">
                 <div class="titre_content">

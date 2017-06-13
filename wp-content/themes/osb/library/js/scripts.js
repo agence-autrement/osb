@@ -388,6 +388,32 @@ jQuery(document).ready(function ($) {
     });
 
 
+
+
+    /*
+     *  Desktop Menu
+     */
+
+    $('.hamburger-icon-desk').click(function (e) {
+
+        e.preventDefault();
+        $('.sidebar_1').toggleClass('active');
+        $('.footer').toggleClass('active');
+        $('#content').toggleClass('active');
+
+        $this = $(this);
+        if ($this.hasClass('is-opened')) {
+            $this.addClass('is-closed').removeClass('is-opened');
+        } else {
+            $this.removeClass('is-closed').addClass('is-opened');
+        }
+
+        if ($('.sidebar__all').hasClass('active')) {
+            $('.sidebar__all').removeClass('active')
+        }
+    });
+
+
     /*
      *  Mobile Menu
      */

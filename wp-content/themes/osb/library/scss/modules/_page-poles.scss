@@ -205,6 +205,8 @@
   }
 }
 
+// Vignettes
+
 .poles-fiche {
 
   background-color: #F5F3F3;
@@ -379,6 +381,9 @@
 
 .poles-more {
   padding: 12rem 0;
+  background-image: url(../images/fd_map_gris.jpg);
+  background-size:cover;
+  background-position: center center;
   &__text {
     color: #86D9D8;
     position: relative;
@@ -388,9 +393,9 @@
     margin: 0 auto;
 
     &:before {
-      background-image: url(../images/croix_bleu.svg);
-      height: 40px;
-      width: 40px;
+      background-image: url(../images/croix_bleu_clair.svg);
+      height: 18px;
+      width: 18px;
       content: '';
 
       display: block;

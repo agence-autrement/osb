@@ -5,10 +5,10 @@
   .top_page_action{
     padding: 180px 35px 35px;
     height: 710px;
-    width: 100%;
-    background: darkslategrey no-repeat;
+    background-image: url(../images/slide-jp.jpg);
     -webkit-background-size: cover;
     background-size: cover;
+    background-position: center center;
 
     .index{
       margin-bottom: 25px;
@@ -145,7 +145,7 @@
   }
 
   img{
-    width: 100%;
+
   }
 
   .titre_right_text{
@@ -254,6 +254,7 @@
       padding-right: 30px;
       width: 50%;
       float: left;
+      text-align: right;
     }
     .right_content {
       width: 50%;

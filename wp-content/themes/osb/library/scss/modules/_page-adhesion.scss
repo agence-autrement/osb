@@ -61,6 +61,76 @@
 
 }
 
+
+.page-template-page-adhesions-en-ligne-ami {
+  .top_page_mecenat{
+    padding: 150px 35px 35px;
+    height: 590px;
+    width: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(../images/slide-mecenat.jpg);
+  }
+
+  .title{
+    font-size: 60px;
+    margin-bottom: 15px;
+    color: black;
+    font-family: $font2;
+    span{
+      color: white;
+    }
+  }
+
+  .btn_savoir_plus{
+    display: block;
+    position: relative;
+    padding:5px 0;
+    cursor: pointer;
+    color: black;
+    &:after{
+      content: '';
+      position: absolute;
+      background-color: black;
+      bottom: 0;
+      left: 0px;
+      width: 0;
+      height: 1px;
+      @include transition(0.6s);
+    }
+    &:hover{
+      font-weight: inherit;
+      &:after{
+        width: 70px;
+      }
+    }
+  }
+
+  .intro_text{
+    font-size: 12px;
+    max-width: 320px;
+    margin-top: 15px;
+    color: black;
+    position: relative;
+  }
+
+  .black_cross{
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    height: 30px;
+    width: 30px;
+    background-image: url('../images/croix_noir.svg');
+  }
+
+}
+
+
+
+
+
+
 .form {
   margin-bottom: 3rem;
   &__inner {
@@ -75,6 +145,7 @@
     font-size: 2rem;
     line-height: 2.1rem;
     margin-bottom: 3.5rem;
+    margin-top: 3rem;
   }
 
   
@@ -86,6 +157,25 @@
     background-size:cover;
     float: left;
     width:62%;
+
+    &--text {
+      text-align: center;
+      width:45%;
+      float: left;
+      border: 2px solid #F3F1F1;
+      padding: 35px 55px;
+      min-height:385px;
+
+      ul {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 1.4rem;
+        li {
+
+        }
+      }
+
+    }
   }
   .formule{
     width: 33.333%;
@@ -97,6 +187,13 @@
       width: 80%;
       margin: 0 auto;
       font-size: 1.4rem;
+    }
+
+    &--text {
+      width: 45%;
+      text-align: center;
+      padding: 35px 85px;
+      margin: 0 30px;
     }
   }
 
@@ -116,6 +213,7 @@
     font-family: $font2;
     &:after{
       content: '';
+      background-color: #EBD519;
       position: absolute;
       width: 65px;
       height: 2px;
@@ -157,6 +255,7 @@
     overflow: hidden;
     float: left;
     position: relative;
+    min-height:385px;
     &:hover{
       .hover_don{
         opacity: 1;
@@ -206,7 +305,7 @@ MEDIA QUERIES
 
 @media screen and (max-width: 767px) {
 
-  .page-template-form-adhesion .top_page_mecenat {
+  .page-template-form-adhesion .top_page_mecenat, .page-template-page-adhesions-en-ligne-ami .top_page_mecenat {
     padding: 22px 35px 35px;
     height: auto;
   }
@@ -220,6 +319,10 @@ MEDIA QUERIES
     &__right {
       width: 100%;
       margin: 1rem 0;
+      &--text {
+        width: 100%;
+        margin: 1rem 0;
+      }
     }
   }
 

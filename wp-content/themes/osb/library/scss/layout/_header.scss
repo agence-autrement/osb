@@ -111,6 +111,85 @@ Hamberger
   transform: rotate(180deg);
 }
 
+
+.hamburger-icon-desk {
+  position: absolute;
+  top: 40px;
+  z-index:1000;
+  left: 0;
+  width: 54px;
+  height: 54px;
+  margin: 0 auto;
+  -webkit-transition: -webkit-transform .5s;
+  transition: transform .5s;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.hamburger-icon-desk span {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 22px;
+  height: 2px;
+  color: #000;
+  background: transparent;
+  -webkit-transition: -webkit-background .5s;
+  transition: background .5s;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+
+  &:before, &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 22px;
+    height: 2px;
+    color: #000;
+    content: '';
+    background-color: #000;
+    -webkit-transition: -webkit-transform .5s;
+    transition: transform .5s;
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+
+  &:before {
+    -webkit-transform: translateY(0) rotate(45deg);
+    transform: translateY(0) rotate(45deg);
+  }
+
+  &:after {
+
+    -webkit-transform: translateY(0) rotate(-45deg);
+    transform: translateY(0) rotate(-45deg);
+  }
+}
+
+.hamburger-icon-desk.is-opened span {
+  background: transparent;
+}
+
+.hamburger-icon-desk.is-opened span::before {
+  -webkit-transform: translateY(0) rotate(45deg);
+  transform: translateY(0) rotate(45deg);
+}
+
+.hamburger-icon-desk.is-opened span::after {
+  -webkit-transform: translateY(0) rotate(-45deg);
+  transform: translateY(0) rotate(-45deg);
+}
+
+.hamburger-icon-desk.is-opened {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+
+
+
 /******************************
 MEDIA QUERIES
 ******************************/
@@ -120,6 +199,23 @@ MEDIA QUERIES
 }
 
 @media screen and (min-width: 768px) {
+
+  /*********************
+Hamberger
+*********************/
+
+  .hamburger-icon {
+    position: absolute;
+    top: 40px;
+    z-index:1000;
+    right: 0;
+    width: 54px;
+    height: 54px;
+    margin: 0 auto;
+    -webkit-transition: -webkit-transform .5s;
+    transition: transform .5s;
+  }
+
 
 }
 
@@ -139,6 +235,9 @@ MEDIA QUERIES
 }
 
 @media screen and (max-width: 1100px) {
+  .hamburger-icon-desk {
+    display: none;
+  }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),

@@ -16,7 +16,7 @@ Template Name: Page Cote orga
                     <div class="orch--left__inner">
                         <h2 class="orch__name">L'équipe<br> de l'OSB</h2>
 
-                        <a href="#" class="orch__title">en savoir +</a>
+                        <a href="#equipe" class="orch__title">en savoir +</a>
 
                     </div>
                 </div>
@@ -26,7 +26,7 @@ Template Name: Page Cote orga
                     <div class="orch--right__inner">
                         <h2 class="orch__name">l'OSB au<br>Couvent<br>des Jacobins</h2>
 
-                        <a href="#" class="orch__title">en savoir +</a>
+                        <a href="#jacobin" class="orch__title">en savoir +</a>
 
                     </div>
                 </div>
@@ -35,7 +35,7 @@ Template Name: Page Cote orga
     </section>
 
 
-    <section class="section-musiciens">
+    <section class="section-musiciens" id="equipe">
 
         <div class="contenu__grid">
             <div class="musiciens__inner">
@@ -45,7 +45,9 @@ Template Name: Page Cote orga
                         Direction
 
                         <span class="musiciens__dep__title__cross musiciens__dep--first__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow musiciens__dep--first__title__arrow"><</span>
+                        <span class="musiciens__dep__title__arrow musiciens__dep--first__title__arrow"><img
+                                src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
+                                alt=""></span>
                     </h2>
                     <span class="musiciens__dep__separator musiciens__dep--first__separator"></span>
 
@@ -98,7 +100,9 @@ Template Name: Page Cote orga
                     <h2 class="musiciens__dep__title">
                         Administration et finances
                         <span class="musiciens__dep__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow"><</span>
+              <span class="musiciens__dep__title__arrow"><img
+                      src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
+                      alt=""></span>
                     </h2>
                     <span class="musiciens__dep__separator"></span>
                     <ul class="musiciens__dep__items">
@@ -139,7 +143,9 @@ Template Name: Page Cote orga
                     <h2 class="musiciens__dep__title">
                         Mécenat
                         <span class="musiciens__dep__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow"><</span>
+                            <span class="musiciens__dep__title__arrow"><img
+                                    src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
+                                    alt=""></span>
                     </h2>
                     <span class="musiciens__dep__separator"></span>
                     <ul class="musiciens__dep__items">
@@ -167,7 +173,9 @@ Template Name: Page Cote orga
                     <h2 class="musiciens__dep__title">
                         Administration artistique et technique
                         <span class="musiciens__dep__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow"><</span>
+                     <span class="musiciens__dep__title__arrow"><img
+                             src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
+                             alt=""></span>
                     </h2>
                     <span class="musiciens__dep__separator"></span>
                     <ul class="musiciens__dep__items">
@@ -220,7 +228,9 @@ Template Name: Page Cote orga
                     <h2 class="musiciens__dep__title">
                         Action culturelle
                         <span class="musiciens__dep__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow"><</span>
+                           <span class="musiciens__dep__title__arrow"><img
+                                   src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
+                                   alt=""></span>
                     </h2>
                     <span class="musiciens__dep__separator"></span>
                     <ul class="musiciens__dep__items">
@@ -247,7 +257,9 @@ Template Name: Page Cote orga
                     <h2 class="musiciens__dep__title">
                         Communication
                         <span class="musiciens__dep__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow"><</span>
+                       <span class="musiciens__dep__title__arrow"><img
+                               src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
+                               alt=""></span>
                     </h2>
                     <span class="musiciens__dep__separator"></span>
                     <ul class="musiciens__dep__items">
@@ -298,7 +310,9 @@ Template Name: Page Cote orga
                     <h2 class="musiciens__dep__title">
                         Entretien
                         <span class="musiciens__dep__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow"><</span>
+                          <span class="musiciens__dep__title__arrow"><img
+                                  src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
+                                  alt=""></span>
                     </h2>
                     <span class="musiciens__dep__separator"></span>
                     <ul class="musiciens__dep__items">
@@ -348,7 +362,7 @@ Template Name: Page Cote orga
         </div>
     </section>
 
-    <section class="section-orga-jac">
+    <section class="section-orga-jac" id="jacobin">
         <div class="contenu__grid">
             <div class="orga-jac__inner">
 
@@ -390,7 +404,7 @@ Template Name: Page Cote orga
                                     alt=""></span>
                         </p>
 
-                        <img src="<?php echo get_template_directory_uri(); ?>/library/images/bg-jac.png"
+                        <img src="<?php echo get_template_directory_uri(); ?>/library/images/jac-cote-orga.jpg"
                              alt="" class="orga-jac__img">
 
                     </div>
@@ -408,7 +422,7 @@ Template Name: Page Cote orga
                                     alt=""></span>
                         </p>
 
-                        <img src="<?php echo get_template_directory_uri(); ?>/library/images/bg-jac.png"
+                        <img src="<?php echo get_template_directory_uri(); ?>/library/images/instr-cote-orga.jpg"
                              alt="" class="orga-jac__img">
 
 

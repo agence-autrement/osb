@@ -21,7 +21,7 @@ Template Name: Page poles
         <div class="tag">
             <div class="btn_red"><a href="<? the_sub_field('lien_du_bouton'); ?>">Trasnmettre son savoir-faire</a></div>
 
-            <div class="btn_savoir_plus"><a href="<? the_field('lien_en_savoir'); ?>">En savoir +</a></div>
+            <div class="btn_savoir_plus"><a href="#poles">En savoir +</a></div>
         </div>
         <div class="intro_text">
             <p>Pour faire évoluer son projet et répondre au mieux aux attentes des publics aux quatre coins de la
@@ -35,11 +35,11 @@ Template Name: Page poles
     </div>
     </section>
 
-    <section class="poles poles--first">
+    <section class="poles poles--first" id="poles">
         <div class="contenu_grid">
             <div class="poles--first__left">
                 <img class="poles--first__img"
-                     src="<?php echo get_template_directory_uri(); ?>/library/images/poles_1.png" alt="">
+                     src="<?php echo get_template_directory_uri(); ?>/library/images/le-leopard-et-le-chasseur.jpg" alt="">
 
 
             </div>
@@ -92,7 +92,7 @@ Template Name: Page poles
                 </div>
 
                 <a class="bot_date bot_date--blue"
-                   href="https://indiv.themisweb.fr/0504/fListeManifs.aspx?idstructure=0504" target="_blank">
+                   href="<?php echo site_url('le-leopard-et-le-chasseur') ?>" target="_blank">
                     Réserver
                 </a>
 
@@ -128,7 +128,7 @@ Template Name: Page poles
 
             <div class="poles--second__left">
                 <img class="poles--second__img"
-                     src="<?php echo get_template_directory_uri(); ?>/library/images/poles_1.png" alt="">
+                     src="<?php echo get_template_directory_uri(); ?>/library/images/menut.jpg" alt="">
 
 
             </div>
@@ -162,7 +162,7 @@ Template Name: Page poles
                 </div>
 
                 <a class="bot_date bot_date--blue"
-                   href="https://indiv.themisweb.fr/0504/fListeManifs.aspx?idstructure=0504" target="_blank">
+                   href="<?php echo site_url('carte-blanche-anne-gastinel') ?>" target="_blank">
                     Réserver
                 </a>
 

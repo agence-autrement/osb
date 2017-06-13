@@ -7,7 +7,8 @@
     padding-top: 180px;
     height: 710px;
     width: 100%;
-    background-color: darkslategrey;
+    background-image: url(../images/slide-cote-orch.jpg);
+    background-position: center center;
     -webkit-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
@@ -152,6 +153,7 @@
     padding-left: 25px;
     font-size: 14px;
     margin-bottom: 30px;
+    text-align: justify;
   }
 
   .croix_noir{
@@ -222,7 +224,7 @@
   }
 
   .last_opera{
-    background-image: url('../images/bgnorma.jpg');
+    background-image: url('../images/bg-cote-orch.jpg');
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -256,6 +258,14 @@
   }
 
   //Contenu à droite
+
+  .content_right--medecin {
+
+    .image_position .img_content img {
+      left:inherit;
+    }
+
+  }
 
   .content_right{
     padding: 35px;

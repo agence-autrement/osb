@@ -38,7 +38,7 @@ Template Name: Page Orchestre Invité
             </ul>
         </div>
     </section>
-    <section class="content_right">
+    <section class="content_right content_right--medecin">
         <div class="image_position">
             <div class="img_content">
                 <img src="<? bloginfo('template_url') ?>/library/images/medecin.jpg" alt="">

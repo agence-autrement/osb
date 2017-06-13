@@ -26,7 +26,7 @@ LANDING
 #landing {
   height: 90vh;
   overflow: hidden;
-  background-image: url('../images/front.jpg');
+  background-image: url('../images/slider-saison.jpg');
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
@@ -239,6 +239,27 @@ CALL TO ACTION
   }
 }
 
+.slideshow--home {
+
+  ul {
+    li {
+      img {
+        height:initial;
+        margin-top: 50px;
+      }
+    }
+  }
+
+}
+
+.next_btn--home {
+  right: 48px;
+}
+
+.previous_btn--home {
+  left: 44px;
+}
+
 /***********************
 ARTICLES
 ***********************/
@@ -277,7 +298,7 @@ ARTICLES
 
 .first_article_thumbnail {
   float: left;
-  background-image: url('../images/loutre.jpg');
+  background-image: url('../images/piccolo.jpg');
   -webkit-background-size: cover;
   background-size: cover;
   width: 50%;
@@ -305,7 +326,7 @@ ARTICLES
 }
 
 .second_article_thumbnail {
-  background-image: url('../images/loutre.jpg');
+  background-image: url('../images/jacobins.jpg');
   -webkit-background-size: cover;
   background-size: cover;
   width: 100%;
@@ -398,7 +419,7 @@ RESPONSIVE
   }
   .second_article_thumbnail {
     float: right;
-    background-image: url('../images/loutre.jpg');
+    background-image: url('../images/jacobins.jpg');
     -webkit-background-size: cover;
     background-size: cover;
     width: 50%;

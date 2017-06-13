@@ -105,6 +105,12 @@ SIDEBAR Decouvrir
     }
 
   }
+
+
+}
+
+div#ressource {
+  font-size: 1.3rem;
 }
 
 
@@ -389,14 +395,13 @@ SIDEBAR MENU
     display: inline-block;
     width: 15px;
     height: 15px;
-    background-image: url('../images/reseaux.svg');
     -webkit-background-size: cover;
     background-size: cover;
     a{
       height: 100%;
       width: 100%;
       display: block;
-      text-indent: -5000px;
+
     }
   }
 }

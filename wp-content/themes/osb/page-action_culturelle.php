@@ -40,7 +40,7 @@ Template Name: Page Action Culturelle
                     <? while ( have_rows('actions') ) : the_row(); ?>
                         <li><a href="###"><? the_sub_field('titre'); ?></a></li>
                     <? endwhile; ?>
-                        <li><a href="###">Partagez sur logologologologo</a></li>
+                        <li><a href="###">Partagez sur </a></li>
                 </ul>
             </div>
         </section>

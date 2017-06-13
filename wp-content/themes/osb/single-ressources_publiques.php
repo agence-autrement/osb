@@ -24,10 +24,10 @@ Ressource Publique
                 <div class="rp__top">
                     <div class="rp__top__back">
                           <a class="rp__back" href="#"><img
-                                                    src="http://www.icon2s.com/img256/256x256-thin-back-previous35.png" alt=""></a><span>Retour fiche spectacle</span>
+                                                    src="<?php bloginfo("template_url") ?>/library/images/fleche_rouge.svg" alt=""></a><span>Retour fiche spectacle</span>
                     </div>
 
-                    <a href="" class="rp__top__ress__btn btn">Toutes les ressources</a>
+                    <a href="<?php echo site_url('ressources-publiques') ?>" class="rp__top__ress__btn btn">Toutes les ressources</a>
                 </div>
 
 

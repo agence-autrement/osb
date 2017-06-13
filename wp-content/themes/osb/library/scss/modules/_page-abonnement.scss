@@ -5,6 +5,9 @@
   .top_page_abo{
     padding: 130px 35px 35px;
     text-align: center;
+    background-image: url(../images/slide-abo.jpg);
+    background-size:cover;
+    background-position: center center;
   }
 
   .abonne_plus_book{
@@ -284,7 +287,10 @@
 
   .bulletin_dl{
     padding: 90px 35px;
-    background-color: #EBD519;
+    background-image: url(../images/bg-abo.jpg);
+    background-size:cover;
+    background-position: center center;
+
   }
 
   .btn_bulletin{
@@ -382,7 +388,7 @@
   }
 
   .plus{
-    margin-bottom: 20px;
+    margin-bottom: 2px;
     img{
       width: 20px;
     }

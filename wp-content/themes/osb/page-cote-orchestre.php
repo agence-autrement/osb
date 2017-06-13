@@ -16,7 +16,7 @@ Template Name: Page Cote Orchestre
                     <div class="orch--left__inner">
                         <h2 class="orch__name">Les musiciens<br> de l'OSB</h2>
 
-                        <a href="#" class="orch__title">en savoir +</a>
+                        <a href="#musiciens" class="orch__title">en savoir +</a>
 
                     </div>
                 </div>
@@ -26,7 +26,7 @@ Template Name: Page Cote Orchestre
                     <div class="orch--right__inner">
                         <h2 class="orch__name">Recrutement</h2>
 
-                        <a href="#" class="orch__title">en savoir +</a>
+                        <a href="#recrutement" class="orch__title">en savoir +</a>
 
                     </div>
                 </div>
@@ -56,7 +56,7 @@ Template Name: Page Cote Orchestre
         </div>
     </section>
 
-    <section class="section-musiciens">
+    <section class="section-musiciens" id="musiciens">
 
         <div class="contenu__grid">
             <div class="musiciens__inner">
@@ -66,7 +66,9 @@ Template Name: Page Cote Orchestre
                         Directeur musical
 
                         <span class="musiciens__dep__title__cross musiciens__dep--first__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow musiciens__dep--first__title__arrow"><</span>
+                        <span class="musiciens__dep__title__arrow musiciens__dep--first__title__arrow"> <img
+                                                                                                             src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
+                                                                                                             alt=""></span>
                     </h2>
                     <span class="musiciens__dep__separator musiciens__dep--first__separator"></span>
 
@@ -90,14 +92,16 @@ Template Name: Page Cote Orchestre
                     <h2 class="musiciens__dep__title">
                         Violons
                         <span class="musiciens__dep__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow"><</span>
+                        <span class="musiciens__dep__title__arrow"><img
+                                src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
+                                alt=""></span>
                     </h2>
                     <span class="musiciens__dep__separator"></span>
                     <ul class="musiciens__dep__items">
                         <li class="musiciens__dep__item">
 
                             <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/anatoli_karaev.png"
+                                 src="<?php echo get_template_directory_uri(); ?>/library/images/anatole_karaev.png"
                                  alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Anatoli Karaev
@@ -206,7 +210,7 @@ Template Name: Page Cote Orchestre
                         <li class="musiciens__dep__item">
 
                             <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/aline_padiou.png"
+                                 src="<?php echo get_template_directory_uri(); ?>/library/images/aline-padiou.png"
                                  alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Aline Padiou
@@ -228,7 +232,7 @@ Template Name: Page Cote Orchestre
                         <li class="musiciens__dep__item">
 
                             <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/esin-nazan_tekinson.png"
+                                 src="<?php echo get_template_directory_uri(); ?>/library/images/nazan_tekinson.png"
                                  alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Esin-Nazan Tekinson
@@ -280,7 +284,9 @@ Template Name: Page Cote Orchestre
                     <h2 class="musiciens__dep__title">
                         Altos
                         <span class="musiciens__dep__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow"><</span>
+                   <span class="musiciens__dep__title__arrow"><img
+                           src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
+                           alt=""></span>
                     </h2>
                     <span class="musiciens__dep__separator"></span>
                     <ul class="musiciens__dep__items">
@@ -334,7 +340,9 @@ Template Name: Page Cote Orchestre
                     <h2 class="musiciens__dep__title">
                         Violoncelles
                         <span class="musiciens__dep__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow"><</span>
+                   <span class="musiciens__dep__title__arrow"><img
+                           src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
+                           alt=""></span>
                     </h2>
                     <span class="musiciens__dep__separator"></span>
                     <ul class="musiciens__dep__items">
@@ -388,7 +396,9 @@ Template Name: Page Cote Orchestre
                     <h2 class="musiciens__dep__title">
                         Contrebasse
                         <span class="musiciens__dep__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow"><</span>
+                <span class="musiciens__dep__title__arrow"><img
+                        src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
+                        alt=""></span>
                     </h2>
                     <span class="musiciens__dep__separator"></span>
                     <ul class="musiciens__dep__items">
@@ -432,7 +442,9 @@ Template Name: Page Cote Orchestre
                     <h2 class="musiciens__dep__title">
                         Flûtes
                         <span class="musiciens__dep__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow"><</span>
+                      <span class="musiciens__dep__title__arrow"><img
+                              src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
+                              alt=""></span>
                     </h2>
                     <span class="musiciens__dep__separator"></span>
                     <ul class="musiciens__dep__items">
@@ -466,7 +478,9 @@ Template Name: Page Cote Orchestre
                     <h2 class="musiciens__dep__title">
                         Hautbois
                         <span class="musiciens__dep__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow"><</span>
+                        <span class="musiciens__dep__title__arrow"><img
+                                src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
+                                alt=""></span>
                     </h2>
                     <span class="musiciens__dep__separator"></span>
                     <ul class="musiciens__dep__items">
@@ -500,7 +514,9 @@ Template Name: Page Cote Orchestre
                     <h2 class="musiciens__dep__title">
                         Clarinettes
                         <span class="musiciens__dep__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow"><</span>
+                       <span class="musiciens__dep__title__arrow"><img
+                               src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
+                               alt=""></span>
                     </h2>
                     <span class="musiciens__dep__separator"></span>
                     <ul class="musiciens__dep__items">
@@ -534,7 +550,9 @@ Template Name: Page Cote Orchestre
                     <h2 class="musiciens__dep__title">
                         Bassons
                         <span class="musiciens__dep__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow"><</span>
+                      <span class="musiciens__dep__title__arrow"><img
+                              src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
+                              alt=""></span>
                     </h2>
                     <span class="musiciens__dep__separator"></span>
                     <ul class="musiciens__dep__items">
@@ -568,7 +586,9 @@ Template Name: Page Cote Orchestre
                     <h2 class="musiciens__dep__title">
                         Cors
                         <span class="musiciens__dep__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow"><</span>
+             <span class="musiciens__dep__title__arrow"><img
+                     src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
+                     alt=""></span>
                     </h2>
                     <span class="musiciens__dep__separator"></span>
                     <ul class="musiciens__dep__items">
@@ -602,7 +622,9 @@ Template Name: Page Cote Orchestre
                     <h2 class="musiciens__dep__title">
                         Trompettes
                         <span class="musiciens__dep__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow"><</span>
+                    <span class="musiciens__dep__title__arrow"><img
+                            src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
+                            alt=""></span>
                     </h2>
                     <span class="musiciens__dep__separator"></span>
                     <ul class="musiciens__dep__items">
@@ -636,14 +658,16 @@ Template Name: Page Cote Orchestre
                     <h2 class="musiciens__dep__title">
                         Timbales
                         <span class="musiciens__dep__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow"><</span>
+                       <span class="musiciens__dep__title__arrow"><img
+                               src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
+                               alt=""></span>
                     </h2>
                     <span class="musiciens__dep__separator"></span>
                     <ul class="musiciens__dep__items">
                         <li class="musiciens__dep__item">
 
                             <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/jean-pierre_peterman.png"
+                                 src="<?php echo get_template_directory_uri(); ?>/library/images/jean-pierre_petermann.png"
                                  alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Jean-Pierre Peterman
@@ -660,7 +684,7 @@ Template Name: Page Cote Orchestre
         </div>
     </section>
 
-    <section class="section-orch-sep">
+    <section class="section-orch-sep" id="recrutement">
         <div class="contenu_grid">
             <div class="orch-sep__inner">
                 <div class="orch-sep__left">

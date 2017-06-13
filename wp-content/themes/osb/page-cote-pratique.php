@@ -52,7 +52,7 @@ Template Name: Page Cote Pratique
     <section class="section-joinorbook">
         <div class="joinorbook__inner">
             <div class="joinorbook__links">
-                <a href="#" class="joinorbook__btn btn">S'abonner à l'osb</a>
+                <a href="<?php echo site_url('abonnement') ?>" class="joinorbook__btn btn">S'abonner à l'osb</a>
                 <a href="#" class="joinorbook__btn btn">Reserver un spectacle</a>
             </div>
 
