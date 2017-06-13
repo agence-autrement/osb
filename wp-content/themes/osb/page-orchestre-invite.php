@@ -58,7 +58,7 @@ Template Name: Page Orchestre Invité
                     <div class="ligne_deux">
                         <div class="ville">Rennes</div><span> // </span><div class="salle">Opéra</div>
                     </div>
-                    <div class="btn_inscription"><a href="###">Réserver</a></div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('abonnement') ?>">Réserver</a></div>
                 </div>
                 <div class="inscrire">
                     <div class="ligne_un">
@@ -67,7 +67,7 @@ Template Name: Page Orchestre Invité
                     <div class="ligne_deux">
                         <div class="ville">Rennes</div><span> // </span><div class="salle">Opéra</div>
                     </div>
-                    <div class="btn_inscription"><a href="###">Réserver</a></div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('abonnement') ?>">Réserver</a></div>
                 </div>
                 <div class="inscrire">
                     <div class="ligne_un">
@@ -76,7 +76,7 @@ Template Name: Page Orchestre Invité
                     <div class="ligne_deux">
                         <div class="ville">Rennes</div><span> // </span><div class="salle">Opéra</div>
                     </div>
-                    <div class="btn_inscription"><a href="###">Réserver</a></div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('abonnement') ?>">Réserver</a></div>
                 </div>
                 <div class="inscrire">
                     <div class="ligne_un">
@@ -85,7 +85,7 @@ Template Name: Page Orchestre Invité
                     <div class="ligne_deux">
                         <div class="ville">Rennes</div><span> // </span><div class="salle">Opéra</div>
                     </div>
-                    <div class="btn_inscription"><a href="###">Réserver</a></div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('abonnement') ?>">Réserver</a></div>
                 </div>
                 <div class="inscrire">
                     <div class="ligne_un">
@@ -94,7 +94,7 @@ Template Name: Page Orchestre Invité
                     <div class="ligne_deux">
                         <div class="ville">Rennes</div><span> // </span><div class="salle">Opéra</div>
                     </div>
-                    <div class="btn_inscription"><a href="###">Réserver</a></div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('abonnement') ?>">Réserver</a></div>
                 </div>
             </div>
             <div class="right_content">
@@ -143,7 +143,7 @@ Template Name: Page Orchestre Invité
                     <div class="ligne_deux">
                         <div class="ville">Rennes</div><span> // </span><div class="salle">Opéra</div>
                     </div>
-                    <div class="btn_inscription"><a href="###">Réserver</a></div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('abonnement') ?>>Réserver</a></div>
                 </div>
                 <div class="inscrire">
                     <div class="ligne_un">
@@ -152,7 +152,7 @@ Template Name: Page Orchestre Invité
                     <div class="ligne_deux">
                         <div class="ville">Rennes</div><span> // </span><div class="salle">Opéra</div>
                     </div>
-                    <div class="btn_inscription"><a href="###">Réserver</a></div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('abonnement') ?>">Réserver</a></div>
                 </div>
                 <div class="inscrire">
                     <div class="ligne_un">
@@ -161,7 +161,7 @@ Template Name: Page Orchestre Invité
                     <div class="ligne_deux">
                         <div class="ville">Rennes</div><span> // </span><div class="salle">Opéra</div>
                     </div>
-                    <div class="btn_inscription"><a href="###">Réserver</a></div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('abonnement') ?>>Réserver</a></div>
                 </div>
                 <div class="inscrire">
                     <div class="ligne_un">
@@ -170,7 +170,7 @@ Template Name: Page Orchestre Invité
                     <div class="ligne_deux">
                         <div class="ville">Rennes</div><span> // </span><div class="salle">Opéra</div>
                     </div>
-                    <div class="btn_inscription"><a href="###">Réserver</a></div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('abonnement') ?>">Réserver</a></div>
                 </div>
             </div>
             <div class="right_content">
@@ -215,7 +215,7 @@ Template Name: Page Orchestre Invité
                     <div class="ligne_deux">
                         <div class="ville">Rennes</div><span> // </span><div class="salle">Opéra</div>
                     </div>
-                    <div class="btn_inscription"><a href="###">Réserver</a></div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('abonnement') ?>">Réserver</a></div>
                 </div>
                 <div class="inscrire">
                     <div class="ligne_un">
@@ -224,7 +224,7 @@ Template Name: Page Orchestre Invité
                     <div class="ligne_deux">
                         <div class="ville">Rennes</div><span> // </span><div class="salle">Opéra</div>
                     </div>
-                    <div class="btn_inscription"><a href="###">Réserver</a></div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('abonnement') ?>">Réserver</a></div>
                 </div>
                 <div class="inscrire">
                     <div class="ligne_un">
@@ -233,7 +233,7 @@ Template Name: Page Orchestre Invité
                     <div class="ligne_deux">
                         <div class="ville">Rennes</div><span> // </span><div class="salle">Opéra</div>
                     </div>
-                    <div class="btn_inscription"><a href="###">Réserver</a></div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('abonnement') ?>>Réserver</a></div>
                 </div>
             </div>
             <div class="right_content">
@@ -275,7 +275,7 @@ Template Name: Page Orchestre Invité
                     <div class="ligne_deux">
                         <div class="ville">Rennes</div><span> // </span><div class="salle">Opéra</div>
                     </div>
-                    <div class="btn_inscription"><a href="###">Réserver</a></div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('abonnement') ?>">Réserver</a></div>
                 </div>
                 <div class="inscrire">
                     <div class="ligne_un">
@@ -284,7 +284,7 @@ Template Name: Page Orchestre Invité
                     <div class="ligne_deux">
                         <div class="ville">Rennes</div><span> // </span><div class="salle">Opéra</div>
                     </div>
-                    <div class="btn_inscription"><a href="###">Réserver</a></div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('abonnement') ?>">Réserver</a></div>
                 </div>
                 <div class="inscrire">
                     <div class="ligne_un">
@@ -293,7 +293,7 @@ Template Name: Page Orchestre Invité
                     <div class="ligne_deux">
                         <div class="ville">Rennes</div><span> // </span><div class="salle">Opéra</div>
                     </div>
-                    <div class="btn_inscription"><a href="###">Réserver</a></div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('abonnement') ?>">Réserver</a></div>
                 </div>
                 <div class="inscrire">
                     <div class="ligne_un">
@@ -302,7 +302,7 @@ Template Name: Page Orchestre Invité
                     <div class="ligne_deux">
                         <div class="ville">Rennes</div><span> // </span><div class="salle">Opéra</div>
                     </div>
-                    <div class="btn_inscription"><a href="###">Réserver</a></div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('abonnement') ?>">Réserver</a></div>
                 </div>
                 <div class="inscrire">
                     <div class="ligne_un">
@@ -311,7 +311,7 @@ Template Name: Page Orchestre Invité
                     <div class="ligne_deux">
                         <div class="ville">Rennes</div><span> // </span><div class="salle">Opéra</div>
                     </div>
-                    <div class="btn_inscription"><a href="###">Réserver</a></div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('abonnement') ?>">Réserver</a></div>
                 </div>
             </div>
             <div class="right_content">

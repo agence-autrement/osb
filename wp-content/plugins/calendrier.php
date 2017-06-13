@@ -301,6 +301,15 @@ function displayAjax( $array )
 }
 
 
+function displayPreFiltre()
+{
+    $table      = queryAllDate();
+    $the_value  = $_GET['type'];
+    array_filter_by_value($table, 'type', $the_value);
+    displayAjax($table);
+}
+
+
 
 
 

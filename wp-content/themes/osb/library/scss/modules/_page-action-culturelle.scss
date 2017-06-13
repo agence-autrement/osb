@@ -134,8 +134,12 @@
     right: -32px;
   }
 
+  .visuel_content{
+    position: relative;
+  }
+
   img{
-    width: 100%;
+    position: absolute;
   }
 
   .titre_right_text{
@@ -235,6 +239,9 @@
       float: right;
       padding-left: 30px;
       padding-top: 15px;
+    }
+    img{
+      right: 0;
     }
   }
 
