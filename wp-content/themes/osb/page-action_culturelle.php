@@ -5,6 +5,7 @@ Template Name: Page Action Culturelle
 ?>
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
+
 <div id="content">
     <section class="top_page_action" style="background-image: url(<? the_field('visuel_de_la_page'); ?>);">
         <div class="contenu_grid">
@@ -38,7 +39,13 @@ Template Name: Page Action Culturelle
             <div class="contenu_grid">
                 <ul>
                     <? while ( have_rows('actions') ) : the_row(); ?>
-                        <li><a href="###"><? the_sub_field('titre'); ?></a></li>
+                        <?
+                        $subject = get_sub_field('titre');
+                        $search = " ";
+                        $replace = '_';
+                        $str = str_replace ($search , $replace ,$subject );
+                        ?>
+                        <li><a href="#<? echo $str; ?>"><? the_sub_field('titre'); ?></a></li>
                     <? endwhile; ?>
                         <li><a href="###">Partagez sur </a></li>
                 </ul>
@@ -47,8 +54,14 @@ Template Name: Page Action Culturelle
     <? }; ?>
     <? if ( have_rows('actions') ){ ?>
         <? while ( have_rows('actions') ) : the_row(); ?>
+            <?
+            $subject = get_sub_field('titre');
+            $search = " ";
+            $replace = '_';
+            $str = str_replace ($search , $replace ,$subject );
+            ?>
             <? if ( get_sub_field('affichage') == 'special_content' ){ ?>
-                <section class="<? the_sub_field('affichage'); ?>" style="background-image: url('<? the_sub_field('visuel'); ?>')">
+                <section class="<? the_sub_field('affichage'); ?>" style="background-image: url('<? the_sub_field('visuel'); ?>')" id="<? echo $str; ?>">
                     <div class="contenu_grid">
                         <div class="left_content">
                             <div class="titre_content">
@@ -86,7 +99,7 @@ Template Name: Page Action Culturelle
                                         <div class="ligne_deux">
                                             <div class="ville"><? the_sub_field('ville') ?></div><span> // </span><div class="salle"><? the_sub_field('lieu') ?></div>
                                         </div>
-                                        <div class="btn_inscription"><a href="<? the_sub_field('lien_bouton_inscription') ?>">Inscrire sa classe</a></div>
+                                        <div class="btn_inscription"><a href="#formulaire">Inscrire sa classe</a></div>
                                     </div>
                                 <? endwhile; ?>
                             <? } ?>
@@ -94,7 +107,7 @@ Template Name: Page Action Culturelle
                     </div>
                 </section>
             <? }else{ ?>
-                <section class="<? the_sub_field('affichage'); ?>">
+                <section class="<? the_sub_field('affichage'); ?>" id="<? echo $str; ?>">
                     <div class="contenu_grid">
                         <div class="left_content">
                             <div class="titre_content">
@@ -135,7 +148,7 @@ Template Name: Page Action Culturelle
                                         <div class="ligne_deux">
                                             <div class="ville"><? the_sub_field('ville') ?></div><span> // </span><div class="salle"><? the_sub_field('lieu') ?></div>
                                         </div>
-                                        <div class="btn_inscription"><a href="<? the_sub_field('lien_bouton_inscription') ?>">Inscrire sa classe</a></div>
+                                        <div class="btn_inscription"><a href="#formulaire">Inscrire sa classe</a></div>
                                     </div>
                                 <? endwhile; ?>
                             <? } ?>
@@ -146,7 +159,7 @@ Template Name: Page Action Culturelle
         <? endwhile; ?>
     <? }; ?>
     <? get_template_part('joinus'); ?>
-    <section class="formulaire">
+    <section class="formulaire" id="formulaire">
         <div class="contenu_grid">
             <div class="titre_formulaire">// Inscription //</div>
             <? echo do_shortcode('[contact-form-7 id="240" title="Contact Form Concerts Scolaires"]'); ?>

@@ -238,6 +238,7 @@ function queryAllDate()
 
         };
 
+
         usort($table, "sortByDate");
         return $table;
     };
@@ -279,7 +280,7 @@ function displayAjax( $array )
                     ?>
                 </div>
                 <div class="titre"><? echo $values['titre_calendrier']; ?></div>
-                <a href="<? echo $values['link']; ?>" class="link_calendrier">EN SAVOIR +</a>
+                <a href="<? echo $values['lien_billeterie'] ?>" class="link_calendrier">EN SAVOIR +</a>
             </div>
             <div class="right_date">
                 <div class="date_jours">
@@ -479,7 +480,7 @@ function displayEssentiels()
                         <? echo $une_rep['artiste_calendrier'][0]; ?>
                     </div>
                     <a class="bot_date <? echo $btn_color; ?>" href="<? echo $values['lien_billeterie'] ?>" target="_blank">Réserver</a>
-                    <a class="savoir_plus" href="###">En savoir +</a>
+                    <a class="savoir_plus" href="<? echo $values['lien_billeterie'] ?>">En savoir +</a>
                     <a href="###" class="toute_rep">Toutes les représentations</a>
 
                 </div>
@@ -2118,7 +2119,7 @@ function multiFilter()
         $table_zero = removeElementWithInferiorValue($table,'date_calendrier',$delete_if_less);
         $sliced     = array_slice($table_zero, 0, 3);
 
-        echo '<div class="contenu_grid">';
+        echo '<div class="contenu_grid no_result">';
         echo 'Aucun spectacle ne correspond à vos critères de recherche.';
         echo '</div>';
 

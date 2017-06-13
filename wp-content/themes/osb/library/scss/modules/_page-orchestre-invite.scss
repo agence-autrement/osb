@@ -235,14 +235,10 @@
   .image_position{
     position: absolute;
     display: block;
-    max-width: 1100px;
-    margin: 0 auto;
+    width: 50%;
     top: 0;
     bottom: 0;
-    left: 0;
-    right: 0;
     z-index: 15;
-    //background-color: black;
     .img_content{
       position: relative;
       width: 100%;
@@ -252,7 +248,6 @@
         width: 470px;
         height: auto;
         bottom: 0;
-        left: 0;
       }
     }
   }
@@ -283,9 +278,10 @@
       padding-top: 15px;
     }
     .image_position{
+      right: 0;
       .img_content{
         img{
-          right: 35px;
+          left: 0;
           bottom: -80px;
         }
       }
@@ -298,7 +294,6 @@
   .content_left{
     background-color: #D9D2C4;
     padding: 35px;
-    //overflow: hidden;
     position: relative;
     width: 100%;
 
@@ -336,9 +331,10 @@
       border-color: white;
     }
     .image_position{
+      left: 0;
       .img_content{
         img{
-          left: 35px;
+          right: 0;
           bottom: -115px;
         }
       }

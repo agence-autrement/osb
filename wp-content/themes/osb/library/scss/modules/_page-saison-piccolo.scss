@@ -222,12 +222,10 @@
   .image_position{
     position: absolute;
     display: block;
-    max-width: 1100px;
+    width: 50%;
     margin: 0 auto;
     top: 0;
     bottom: 0;
-    left: 0;
-    right: 0;
     z-index: 15;
     .img_content{
       position: relative;
@@ -238,7 +236,6 @@
         width: 350px;
         height: auto;
         bottom: 0;
-        left: 0;
       }
     }
   }
@@ -264,9 +261,10 @@
       position: relative;
     }
     .image_position{
+      left: 0;
       .img_content{
         img{
-          left: 150px;
+          right: 50px;
           bottom: -50px;
         }
       }
@@ -309,6 +307,7 @@
     }
 
     .image_position{
+      right: 0;
       .img_content{
         img{
           left: 35px;

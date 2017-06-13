@@ -11,11 +11,11 @@ Template Name: Page Saison Piccolo
         <div class="contenu_grid">
                 <div class="index">
                     <ul>
-                        <li>Tout un nouveau Monde</li>
-                        <li>Le Léopard et le Chasseur</li>
-                        <li>De Salzburg à San Francisco</li>
-                        <li>La musique fait son cinéma</li>
-                        <li>Piccolino</li>
+                        <li><a href="#nouveau_monde">Tout un nouveau monde</a></li>
+                        <li><a href="#leopard">Le léopard et le chasseur</a></li>
+                        <li><a href="#salzburg">De Salzburg à San Francisco</a></li>
+                        <li><a href="#cinema">La musique fait son cinema</a></li>
+                        <li><a href="#piccolino">Piccolino</a></li>
                     </ul>
                 </div>
             <div class="title">
@@ -33,16 +33,16 @@ Template Name: Page Saison Piccolo
     <section class="sub_menu">
         <div class="contenu_grid">
             <ul>
-                <li><a href="###">Tout un nouveau monde</a></li>
-                <li><a href="###">Le léopard et le chasseur</a></li>
-                <li><a href="###">De Salzburg à San Francisco</a></li>
-                <li><a href="###">La musique fait son cinema</a></li>
-                <li><a href="###">Piccolino</a></li>
-                <li><a href="###">Partagez sur logologologologo</a></li>
+                <li><a href="#nouveau_monde">Tout un nouveau monde</a></li>
+                <li><a href="#leopard">Le léopard et le chasseur</a></li>
+                <li><a href="#salzburg">De Salzburg à San Francisco</a></li>
+                <li><a href="#cinema">La musique fait son cinema</a></li>
+                <li><a href="#piccolino">Piccolino</a></li>
+                <li><a href="###">Partagez sur</a></li>
             </ul>
         </div>
     </section>
-    <section class="content_right" id="more">
+    <section class="content_right"  id="nouveau_monde">
         <div class="image_position">
             <div class="img_content">
                 <img src="<? bloginfo('template_url') ?>/library/images/nouveaumonde.jpg" alt="">
@@ -86,7 +86,7 @@ Template Name: Page Saison Piccolo
             </div>
         </div>
     </section>
-    <section class="content_left katia">
+    <section class="content_left katia" id="leopard">
         <div class="contenu_grid">
             <div class="left_content">
                 <div class="titre_content">
@@ -126,7 +126,7 @@ Template Name: Page Saison Piccolo
             </div>
         </div>
     </section>
-    <section class="content_right">
+    <section class="content_right" id="salzburg">
         <div class="contenu_grid">
             <div class="left_content">
                 <div class="titre_content">
@@ -168,7 +168,7 @@ Template Name: Page Saison Piccolo
         </div>
     </section>
     <? get_template_part('joinUs'); ?>
-    <section class="content_left">
+    <section class="content_left" id="cinema">
         <div class="contenu_grid">
             <div class="left_content">
                 <div class="titre_content">
@@ -207,7 +207,7 @@ Template Name: Page Saison Piccolo
             </div>
         </div>
     </section>
-    <section class="special_content" style="background-image: url('<? bloginfo('template_url') ?>/library/images/bg-piccolino.jpg')">
+    <section class="special_content" style="background-image: url('<? bloginfo('template_url') ?>/library/images/bg-piccolino.jpg')" id="piccolino">
         <div class="contenu_grid">
             <div class="left_content">
                 <div class="titre_content">

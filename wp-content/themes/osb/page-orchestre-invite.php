@@ -10,10 +10,10 @@ Template Name: Page Orchestre Invité
         <div class="contenu_grid">
             <div class="index">
                 <ul>
-                    <li>Le médecin malgré lui</li>
-                    <li>Katia Kabanova</li>
-                    <li>Le Nain</li>
-                    <li>Norma</li>
+                    <li><a href="#medecin">Le médecin malgré lui</a></li>
+                    <li><a href="#katia">Katia Kabanova</a></li>
+                    <li><a href="#nain">Le Nain</a></li>
+                    <li><a href="#norma">Norma</a></li>
                 </ul>
             </div>
 
@@ -30,11 +30,11 @@ Template Name: Page Orchestre Invité
     <section class="sub_menu">
         <div class="contenu_grid">
             <ul>
-                <li><a href="###">Le médecin malgré lui</a></li>
-                <li><a href="###">Katia Kabanova</a></li>
-                <li><a href="###">Le Nain</a></li>
-                <li><a href="###">Norma</a></li>
-                <li><a href="###">Partagez sur logologologologo</a></li>
+                <li><a href="#medecin">Le médecin malgré lui</a></li>
+                <li><a href="#katia">Katia Kabanova</a></li>
+                <li><a href="#nain">Le Nain</a></li>
+                <li><a href="#norma">Norma</a></li>
+                <li><a href="#partager">Partagez sur</a></li>
             </ul>
         </div>
     </section>
@@ -45,7 +45,7 @@ Template Name: Page Orchestre Invité
             </div>
         </div>
         <div class="contenu_grid">
-            <div class="left_content">
+            <div class="left_content" id="medecin">
                 <div class="titre_content">
                     Le médecin<br>
                     malgré lui
@@ -123,7 +123,7 @@ Template Name: Page Orchestre Invité
             </div>
         </div>
     </section>
-    <section class="content_left katia">
+    <section class="content_left katia" id="katia">
         <div class="image_position">
             <div class="img_content">
                 <img src="<? bloginfo('template_url') ?>/library/images/kabanova.jpg" alt="">
@@ -201,7 +201,7 @@ Template Name: Page Orchestre Invité
             </div>
         </div>
     </section>
-    <section class="content_right nain">
+    <section class="content_right nain" id="nain">
         <div class="contenu_grid">
             <div class="left_content">
                 <div class="titre_content">
@@ -261,7 +261,7 @@ Template Name: Page Orchestre Invité
             </div>
         </div>
     </section>
-    <section class="content_left last_opera">
+    <section class="content_left last_opera" id="norma">
         <div class="contenu_grid">
             <div class="left_content">
                 <div class="titre_content">
