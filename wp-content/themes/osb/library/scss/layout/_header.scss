@@ -63,6 +63,7 @@ Hamberger
   display: block;
   width: 22px;
   height: 2px;
+  display: none;
   color: #000;
   background-color: #000;
   -webkit-transition: -webkit-background .5s;
@@ -237,6 +238,10 @@ Hamberger
 @media screen and (max-width: 1100px) {
   .hamburger-icon-desk {
     display: none;
+  }
+
+  .hamburger-icon, .hamburger-icon span   {
+    display: block;
   }
 }
 

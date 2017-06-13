@@ -115,9 +115,9 @@
         <div class="middle">
             <div id="logo_sidebar"><a href="<? echo get_home_url(); ?>">OSB</a></div>
             <ul id="reseaux_sociaux">
-                <li><a target="_blank" href="https://www.facebook.com/orchestresymphoniquebretagne/"><img src="<? bloginfo('template_url') ?>/library/images/fb.svg" alt=""></a></li>
-                <li><a target="_blank" href="https://www.instagram.com/orchestresymphoniquedebretagne/"><img src="<? bloginfo('template_url') ?>/library/images/instagram.svg" alt=""></a></li>
-                <li><a target="_blank" href="https://twitter.com/l_osb"><img src="<? bloginfo('template_url') ?>/library/images/tw.svg" alt=""></a></li>
+                <li><a target="_blank" href="https://www.facebook.com/orchestresymphoniquebretagne/"><img src="<? bloginfo('template_url') ?>/library/images/fb_h.svg" alt=""></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/orchestresymphoniquedebretagne/"><img src="<? bloginfo('template_url') ?>/library/images/instagram_h.svg" alt=""></a></li>
+                <li><a target="_blank" href="https://twitter.com/l_osb"><img src="<? bloginfo('template_url') ?>/library/images/tw_h.svg" alt=""></a></li>
             </ul>
         </div>
         <div class="bot">

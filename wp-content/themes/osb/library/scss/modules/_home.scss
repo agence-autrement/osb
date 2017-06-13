@@ -29,13 +29,13 @@ LANDING
   background-image: url('../images/slider-saison.jpg');
   -webkit-background-size: cover;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
 }
 
 .top_landing {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+
   padding: 35px;
   font-family: $font2;
 }
@@ -561,5 +561,10 @@ RESPONSIVE
   }
   .first_article_content, .second_article_content {
     width: 100%;
+  }
+
+  #first_article {
+    height: auto;
+
   }
 }
