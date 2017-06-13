@@ -340,7 +340,7 @@ Event template
                         <?php
                         if (have_rows('representations')):
 
-                            setlocale(LC_ALL, 'fr_FR');
+                            setlocale(LC_ALL, 'fr_FR.utf8');
 
                             $day = "%A";
                             $dayNumber = "%d";

@@ -170,11 +170,12 @@ LANDING
       }
 
       .img_hover {
-        -webkit-background-size: auto 200px;
-        background-size: auto 200px;
+
         width: 100%;
         height: 0;
         z-index: 5;
+        background-position: center center;
+        background-size: cover;
         background-color: black;
         display: block;
         position: relative;
@@ -226,6 +227,7 @@ LANDING
       &:hover{
         .img_hover{
           height: 100%;
+
         }
       }
     }

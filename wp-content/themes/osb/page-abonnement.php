@@ -40,7 +40,7 @@ Template Name: Page Abonnement
                     <li class="plus">+</li>
                     <li>Des réductions et offres spéciales chez nos partenaires3</li>
                 </ul>
-                <div class="btn_don"><a href="###">Adhérer</a></div>
+                <div class="btn_don"><a target="_blank" href="https://abo.themisweb.fr/0504/fUserLogin.aspx?idstructure=0504">S'abonner en ligne</a></div>
             </div>
         </div>
         <div class="ami formule center">
@@ -66,7 +66,7 @@ Template Name: Page Abonnement
                     <li class="plus">+</li>
                     <li>Des réductions et offres spéciales chez nos partenaires3</li>
                 </ul>
-                <div class="btn_don"><a href="###">S'abonner en ligne</a></div>
+                <div class="btn_don"><a target="_blank" href="https://abo.themisweb.fr/0504/fUserLogin.aspx?idstructure=0504">S'abonner en ligne</a></div>
             </div>
         </div>
         <div class="ami formule">
@@ -78,7 +78,7 @@ Template Name: Page Abonnement
             <ul>
                 <li><b>À SEULEMENT 15€</b>, bénéﬁciez de 35% de réduction, sur l’ensemble des concerts de la saison. La réduction est valable dès le premier concert réservé, dès le mois de juin 2017 !</li>
             </ul>
-            <div class="btn_don"><a href="###">s'abonner</a></div>
+            <div class="btn_don"><a href="###">S'abonner en ligne</a></div>
             <div class="hover_don formule">
                 <div class="encadre">Vos Avantages</div>
                 <ul>
@@ -92,7 +92,7 @@ Template Name: Page Abonnement
                     <li class="plus">+</li>
                     <li>Des réductions et offres spéciales chez nos partenaires3</li>
                 </ul>
-                <div class="btn_don"><a href="###">Adhérer</a></div>
+                <div class="btn_don"><a target="_blank" href="https://abo.themisweb.fr/0504/fUserLogin.aspx?idstructure=0504">S'abonner en ligne</a></div>
             </div>
         </div>
     </section>
@@ -132,7 +132,7 @@ Template Name: Page Abonnement
     <section class="bulletin_dl">
         <div class="contenu_grid">
             <div class="btn_bulletin">
-                <a href="###">Télécharger le bulletin d'abonnement</a>
+                <a target="_blank" href="<? bloginfo('template_url') ?>/library/images/OSB_BULLETIN_ABONNEMENTS.pdf">Télécharger le bulletin d'abonnement</a>
             </div>
         </div>
     </section>

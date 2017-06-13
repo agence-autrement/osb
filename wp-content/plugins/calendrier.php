@@ -249,7 +249,7 @@ function displayAjax( $array )
 {
     echo '<div class="contenu_grid">';
     foreach ($array as $table_un => $values) {
-        setlocale(LC_ALL, "fr_FR");
+        setlocale(LC_ALL, "fr_FR.utf8");
         $timestamp = $values['date_calendrier'];
         $translate_Day = strftime('%e', strtotime($timestamp));
         $translate_Month = strftime('%B', strtotime($timestamp));
@@ -443,7 +443,7 @@ function displayEssentiels()
                 <div class="date_slider" style="background-image: url('<? echo $une_rep['image']['url'] ?>');">
                     <ul>
                         <? foreach($une_rep['representation'] as $la_date){
-                            setlocale(LC_ALL, "fr_FR");
+                            setlocale(LC_ALL, "fr_FR.utf8");
                             $timestamp = $la_date[1];
                             $translate_Day = strftime('%e', strtotime($timestamp));
                             $translate_Month = strftime('%B', strtotime($timestamp)); ?>
