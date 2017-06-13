@@ -37,7 +37,6 @@
 
 <div class="sidebar_actions_culturelles sidebar__all">
     <div class="sidebar_actions_culturelles__inner">
-        <div class="sidebar_actions_culturelles__title">Actions Culturelles</div>
         <div>
             <ul>
                 <li><a href="<?php echo site_url('concerts-scolaires') ?>">Concerts Scolaires</a></li>
@@ -55,11 +54,10 @@
 <!-- SOUS-MENU "LA SAISON" -->
 
 <div class="sidebar_saison sidebar__all">
-    <a href=""><img class="sidebar_saison__img"
+    <a target="_blank" href="<? bloginfo('template_url') ?>/library/images/OSB_Brochure1718_BD_96.pdf"><img class="sidebar_saison__img"
                     src="<?php echo get_template_directory_uri(); ?>/library/images/mockup-brochure.png"
                     alt="mockup-brochure"></a>
     <div class="sidebar_saison__inner">
-        <div class="sidebar_saison__title">La saison</div>
         <div>
             <ul>
                 <li><a href="<?php echo site_url('saison') ?>">Toute la saison</a></li>
@@ -78,7 +76,6 @@
 
 <div class="sidebar_decouvrir sidebar__all">
     <div class="sidebar_decouvrir__inner">
-        <div class="sidebar_decouvrir__title">Découvrir</div>
         <div>
             <ul>
                 <li><a href="<?php echo site_url('cote-orchestre') ?>">Côté Orchestre</a></li>
@@ -96,7 +93,6 @@
 
 <div class="sidebar_ressources sidebar__all">
     <div class="sidebar_ressources__inner">
-        <div class="sidebar_ressources__title">Ressources</div>
         <div>
             <ul>
                 <li><a href="<?php echo site_url('ressources-publiques') ?>">Publiques</a></li>
@@ -126,11 +122,11 @@
                     <li id="saison"><a href="###">La saison</a></li>
                     <li id="decouvrir"><a href="###">Découvrir</a></li>
                     <li id="actions_culturelles"><a href="###">Action culturelle</a></li>
-                    <li><a href="###">Boutique</a></li>
+                    <li><a target="_blank" href="https://indiv.themisweb.fr/0504/fProduitAutonome.aspx?idstructure=0504 ">Boutique</a></li>
                 </ul>
             </nav>
             <a id="bouton_sidebar" href="###">Nous soutenir</a>
-            <div id="ressource"><a href="###">/// ressources ///</a></div>
+            <div class="ressource"><a href="<?php echo site_url('ressources-publiques') ?>">/// ressources ///</a></div>
         </div>
     </div>
 </div>

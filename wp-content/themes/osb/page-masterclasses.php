@@ -16,9 +16,9 @@ Template Name: Page Master Classes
             <div class="title">Masterclasses
             </div>
             <div class="tag">
-                        <div class="btn_red"><a href="<? the_sub_field('lien_du_bouton'); ?>">Trasnmettre son savoir-faire</a></div>
+                        <div class="btn_red"><a href="<? the_sub_field('lien_du_bouton'); ?>">Transmettre son savoir-faire</a></div>
 
-                <div class="btn_savoir_plus"><a href="<? the_field('lien_en_savoir'); ?>">En savoir +</a></div>
+                <div class="btn_savoir_plus"></div>
             </div>
             <div class="intro_text">
                 <p>Les « masterclasses » permettent à de jeunes musiciens issus des conservatoires et des écoles de musique de la région de rencontrer des solistes et des chefs d’orchestre invités.</p>

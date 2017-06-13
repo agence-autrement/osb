@@ -122,7 +122,7 @@ Template Name: Page d'Accueil
             <div id="second_article">
                 <div class="second_article_thumbnail"></div>
                 <div class="second_article_content">
-                    <div class="titre_article">+ Le Jacobins</div>
+                    <div class="titre_article">+ Les Jacobins</div>
                     <div class="extrait_1">
                         La première pierre du Couvent des Jacobins est posée en 1369, dans ce qui est alors le Faubourg Saint Malo, [...]
                     </div>

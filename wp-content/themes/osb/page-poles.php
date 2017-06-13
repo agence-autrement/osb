@@ -7,7 +7,7 @@ Template Name: Page poles
 <?php get_sidebar(); ?>
 <div id="content">
     <section class="top_page_action"
-             style="background-image: url('<?php echo get_template_directory_uri(); ?>/library/images/masterclasses_slide.jpg"
+             style="background-position :center center; background-size: cover; background-image:url('<?php echo get_template_directory_uri(); ?>/library/images/slide_poles.jpg"
     ');">
     <div class="contenu_grid">
         <? if (have_rows('actions')) { ?>
@@ -19,7 +19,7 @@ Template Name: Page poles
             <span>artistique</span> & <span>culturels</span>
         </div>
         <div class="tag">
-            <div class="btn_red"><a href="<? the_sub_field('lien_du_bouton'); ?>">Trasnmettre son savoir-faire</a></div>
+            <div class="btn_red"><a href="<? the_sub_field('lien_du_bouton'); ?>">Au plus près de vous</a></div>
 
             <div class="btn_savoir_plus"><a href="#poles">En savoir +</a></div>
         </div>
@@ -145,7 +145,7 @@ Template Name: Page poles
 
 
             <div class="poles-fiche__item"
-                 style="background-image: url('<?php echo get_template_directory_uri(); ?>/library/images/poles_1.png')">
+                 style="background-image: url('<?php echo get_template_directory_uri(); ?>/library/images/a.gastinel.jpg')">
                 <div class="left_date">
                     <div class="type type--blue">Musique de chambre</div>
                     <div class="titre">Carte blanche</div>

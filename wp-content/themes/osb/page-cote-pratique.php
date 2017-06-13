@@ -53,7 +53,7 @@ Template Name: Page Cote Pratique
         <div class="joinorbook__inner">
             <div class="joinorbook__links">
                 <a href="<?php echo site_url('abonnement') ?>" class="joinorbook__btn btn">S'abonner à l'osb</a>
-                <a href="#" class="joinorbook__btn btn">Reserver un spectacle</a>
+                <a href="<?php echo site_url('saison') ?>" class="joinorbook__btn btn">Reserver un spectacle</a>
             </div>
 
         </div>
@@ -61,7 +61,7 @@ Template Name: Page Cote Pratique
 
     <section class="section-places">
         <div class="places__inner">
-            <h1 class="places__title">// Les salles</h1>
+            <h1 class="places__title">// Les salles //</h1>
 
             <div class="places__dep">
                 <h2 class="places__dep__title">
@@ -93,7 +93,7 @@ Template Name: Page Cote Pratique
 
                 <ul class="places__dep__cities">
                     <a class="places__dep__city" href="http://agence-autrement.com/osb/salles/dinan/"><li> <div class="places__dep__city__inner">Dinan <br><span>Théâtre des Jacobins</span></div></li></a>
-                    <a class="places__dep__city" href="#http://agence-autrement.com/osb/salles/guingamp/"><li> <div class="places__dep__city__inner">Guingamp <br><span>Théâtre du Champ au Roy</span></div></li></a>
+                    <a class="places__dep__city" href="http://agence-autrement.com/osb/salles/guingamp/"><li> <div class="places__dep__city__inner">Guingamp <br><span>Théâtre du Champ au Roy</span></div></li></a>
                     <a class="places__dep__city" href="http://agence-autrement.com/osb/salles/saint-brieuc/"><li> <div class="places__dep__city__inner">Saint-Brieux <br><span>La Passerelle</span></div></li></a>
                     <a class="places__dep__city" href="http://agence-autrement.com/osb/salles/lehon/"><li> <div class="places__dep__city__inner">Léhon <br><span>Mairie</span></div></li></a>
                     <a class="places__dep__city" href="http://agence-autrement.com/osb/salles/langourla/"><li> <div class="places__dep__city__inner">Langourla <br><span>Mairie</span></div></li></a>

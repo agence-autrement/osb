@@ -1,6 +1,9 @@
 .section-adress-rennes {
   height: 574px;
   padding: 7rem 0;
+  background-image: url(../images/slide-cote-orga.jpg);
+  background-position: center center;
+  background-size:cover;
 }
 
 .adress-rennes {
@@ -14,6 +17,7 @@
     display: inline-block;
     text-align: center;
     height: 435px;
+    background-color: #fff;
     margin: 0 1.1rem;
     position: relative;
     border: 2px solid #F5F3F3;

@@ -7,9 +7,9 @@ Template Name: Page Saison
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
 <div id="content">
-    <section class="slider_saison">
-       <? displayEssentiels() ?>
-    </section>
+<!--    <section class="slider_saison">-->
+<!--       --><?// displayEssentiels() ?>
+<!--    </section>-->
     <section class="filtreSelector">
         <div class="contenu_grid">
             <div class="option_filtre">

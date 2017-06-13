@@ -23,8 +23,8 @@ Ressource Publique
 
                 <div class="rp__top">
                     <div class="rp__top__back">
-                          <a class="rp__back" href="#"><img
-                                                    src="<?php bloginfo("template_url") ?>/library/images/fleche_rouge.svg" alt=""></a><span>Retour fiche spectacle</span>
+                          <a class="rp__back" href="javascript:history.back()"><img
+                                                    src="<?php bloginfo("template_url") ?>/library/images/fleche_rouge.svg" alt=""><span>Retour fiche spectacle</span></a>
                     </div>
 
                     <a href="<?php echo site_url('ressources-publiques') ?>" class="rp__top__ress__btn btn">Toutes les ressources</a>

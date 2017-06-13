@@ -24,7 +24,7 @@ Salle
                     <div class="adress--left">
 
                         <div class="adress--left__inner">
-                            <a class="adress__back" href="#"><img src="http://www.icon2s.com/img256/256x256-thin-back-previous35.png" alt=""></a>
+                            <a class="adress__back" href="<?php echo site_url('cote-pratique') ?>"><img src="<?php echo get_template_directory_uri(); ?>/library/images/fleche_jaune.svg" alt=""></a>
                             <h2 class="adress__title"><?php echo get_field('ville_salle')?></h2>
                             <h3 class="adress__name"><?php echo get_field('nom_salle')?></h3>
                             <p class="adress__adress">

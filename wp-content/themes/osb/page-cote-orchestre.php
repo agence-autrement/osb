@@ -188,7 +188,7 @@ Template Name: Page Cote Orchestre
                         <li class="musiciens__dep__item">
 
                             <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/jocelyne_lemee.png"
+                                 src="<?php echo get_template_directory_uri(); ?>/library/images/en_attente_visuel.jpg"
                                  alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Jocelyne Lemée
@@ -199,7 +199,7 @@ Template Name: Page Cote Orchestre
                         <li class="musiciens__dep__item">
 
                             <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/jean-yves_merven.png"
+                                 src="<?php echo get_template_directory_uri(); ?>/library/images/en_attente_visuel.jpg"
                                  alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Jean-Yves Merven
@@ -359,7 +359,7 @@ Template Name: Page Cote Orchestre
                         <li class="musiciens__dep__item">
 
                             <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/irene_clement.png"
+                                 src="<?php echo get_template_directory_uri(); ?>/library/images/en_attente_visuel.jpg"
                                  alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Irène Clément
