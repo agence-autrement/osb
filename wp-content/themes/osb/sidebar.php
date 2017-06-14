@@ -125,7 +125,7 @@
                     <li><a target="_blank" href="https://indiv.themisweb.fr/0504/fProduitAutonome.aspx?idstructure=0504 ">Boutique</a></li>
                 </ul>
             </nav>
-            <a id="bouton_sidebar" href="###">Nous soutenir</a>
+            <a id="bouton_sidebar" href="#">Nous soutenir</a>
             <div class="ressource"><a href="<?php echo site_url('ressources-publiques') ?>">/// ressources ///</a></div>
         </div>
     </div>

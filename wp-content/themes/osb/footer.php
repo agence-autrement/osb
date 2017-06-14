@@ -44,9 +44,6 @@
 								<li><a href="<?php echo site_url('cote-pratique') ?>">Côté pratique</a></li>
 								<li><a href="<?php echo site_url('cote-orga') ?>">Côté Organisation</a></li>
 								<li><a href="<?php echo site_url('historique') ?>">Historique</a></li>
-								<li><a href="<?php echo site_url('') ?>">Discographie</a></li>
-
-
 							</ul>
 						</div>
 					</div>

@@ -16,7 +16,7 @@ Template Name: Page poles
             </div>
         <? }; ?>
         <div class="title">Les pôles<br>
-            <span>artistique</span> & <span>culturels</span>
+            <span>artistiques</span> & <span>culturels</span>
         </div>
         <div class="tag">
             <div class="btn_red"><a href="<? the_sub_field('lien_du_bouton'); ?>">Au plus près de vous</a></div>

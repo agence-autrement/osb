@@ -35,7 +35,7 @@ Template Name: Page Historique
                         </div>
                     </section>
                 <? }else{ ?>
-                    <section class="date_left">
+                    <section class="date_left" style="background-image: url('<? the_sub_field('fond') ?>') ">
                         <div class="contenu_grid">
                             <div class="visuel_date">
                                 <span class="red_cross"></span>
