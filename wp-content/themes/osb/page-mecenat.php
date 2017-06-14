@@ -95,11 +95,23 @@ Template Name: Page Mécénat
                 <div class="btn_don"><a href="###">Adhérer</a></div>
             </div>
         </div>
-        <div class="en_ligne formule">
-            <div class="encadre">Donner ce que vous voulez quand vous voulez</div>
+        <div class="ami formule bg_jaune">
             <div class="titre">Don en ligne</div>
-            <div class="btn_don"><a href="###">Don en ligne</a></div>
+            <ul>
+                <li>Fidèles spectateurs de l’Orchestre Symphonique de Bretagne, prenez part à la vie de l’orchestre en le soutenant.</li>
+
+                <li class="enterdon">Entrez le montant de votre don</li>
+                <input type="text" id="calcul">
+                <li id="span__calc">Calculer</li>
+
+                <li>Votre don apès défiscalisation ne vous coûtera que <b><span id="resCalc"></span>€</b></li>
+                <div class="btn_don"><a href="<?php echo site_url('don-en-ligne') ?>">Don en ligne</a></div>
+
+            </ul>
+
+
         </div>
+
     </section>
     <section class="participez_creation">
         <div class="contenu_grid">
@@ -140,7 +152,7 @@ Template Name: Page Mécénat
     </section>
     <section class="contact">
         <div class="contenu_grid">
-            <div class="btn_contact"><a href="###">Nous contacter</a></div>
+            <div class="btn_contact"><a href="mailto:Tith@o-s-b.fr">Nous contacter</a></div>
         </div>
     </section>
     <? get_template_part('joinUs'); ?>

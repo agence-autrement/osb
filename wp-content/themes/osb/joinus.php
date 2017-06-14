@@ -14,26 +14,21 @@
 
         <div class="event-joinus__content">
             <div class="event-joinus__btn__inner">
-                <a class="event-joinus__btn btn" href="#">
+                <a class="event-joinus__btn btn" href="<?php echo site_url('mecenat-particulier') ?>">
                     Particulier
                 </a>
             </div>
 
-
             <div class="event-joinus__btn__inner">
-                <a class="event-joinus__btn btn" href="#">
+                <a class="event-joinus__btn btn" href="<?php echo site_url('mecenat-pro') ?>">
                     Professionnel
                 </a>
             </div>
-
             <div class="event-joinus__btn__inner">
-                <a class="event-joinus__btn event-joinus__btn--third btn" href="#">
+                <a class="event-joinus__btn event-joinus__btn--third btn" href="<?php echo site_url('don-en-ligne') ?>">
                     Don en ligne
                 </a>
             </div>
-
-
         </div>
-
     </div>
 </section>

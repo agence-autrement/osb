@@ -1,6 +1,6 @@
 <?
 /*
-Template Name: Page Adhesion en ligne ami
+Template Name: Page Adhesion en ligne mecene
 */
 ?>
 
@@ -12,9 +12,7 @@ Template Name: Page Adhesion en ligne ami
     <section class="top_page_mecenat">
         <div class="contenu_grid">
             <div class="title">Concerto, <br> <span>le cercle des amis<br>de l'OSB</span></div>
-            <p>Le calendrier des activités sera disponible sur<br> notre site web à partir de septembre 2017.
 
-            <p>L’adhésion est valable de septembre 2017<br> à juin 2018.</p>
 
         </div>
     </section>
@@ -26,14 +24,15 @@ Template Name: Page Adhesion en ligne ami
                     // Adhésion en ligne //
                 </div>
                 <div class="ami formule--text formule">
-                    <div class="encadre">30€</div>
-                    <div class="titre">Ami</div>
+                    <div class="encadre">60€ et plus</div>
+                    <div class="titre">Mécène</div>
+                    <div class="sous_titre_cadre">(100€ et plus en duo)</div>
                     <ul>
-                        <li>Invitation aux soirées + (5 fois par an)</li>
+                        <li>Les contreparties « Ami », plus : Présentation de saison en avant-première par l’administrateur général</li>
                         <li class="plus">+</li>
-                        <li>Une affiche dédicacée par le directeur musical</li>
+                        <li>Accès gratuit aux concerts commentés une fois par an</li>
                         <li class="plus">+</li>
-                        <li>Mention de votre nom dans les remerciements publiés sur notre site web</li>
+                        <li>… d’autres surprises tout au long de l’année…</li>
                     </ul>
 
 

@@ -114,6 +114,10 @@ function loadGravatars() {
  */
 jQuery(document).ready(function ($) {
 
+
+
+
+
     /* SLIDER HOMEPAGE */
     var visuelActif,
         nbVisuels,
@@ -162,6 +166,13 @@ jQuery(document).ready(function ($) {
     });
 
     /*SIDEBAR ESPACE PERSO*/
+
+    $('.hamburger-icon-desk').on('click', function () {
+
+        $(this).hide();
+    })
+
+
     $("#bouton_sidebar").on("click", function () {
 
         if ($(window).width() < 768) {
@@ -177,6 +188,7 @@ jQuery(document).ready(function ($) {
             }
         } else {
 
+            $('.hamburger-icon-desk').toggle('slow');
 
             if ($('.sidebar__all').hasClass('active')) {
                 $('.sidebar__all').removeClass('active');
@@ -210,6 +222,8 @@ jQuery(document).ready(function ($) {
             }
         }
         else {
+
+            $('.hamburger-icon-desk').toggle('slow');
             if ($('.sidebar__all').hasClass('active')) {
 
                 $('.sidebar__all').removeClass('active');
@@ -242,6 +256,7 @@ jQuery(document).ready(function ($) {
             }
         } else {
 
+            $('.hamburger-icon-desk').toggle('slow');
 
             if ($('.sidebar__all').hasClass('active')) {
                 $('.sidebar__all').removeClass('active');
@@ -275,6 +290,8 @@ jQuery(document).ready(function ($) {
         }
 
         else {
+            $('.hamburger-icon-desk').toggle('slow');
+
             if ($('.sidebar__all').hasClass('active')) {
                 $('.sidebar__all').removeClass('active');
 
@@ -304,6 +321,8 @@ jQuery(document).ready(function ($) {
                 $('.footer').toggleClass('active');
             }
         } else {
+            $('.hamburger-icon-desk').toggle('slow');
+
             if ($('.sidebar__all').hasClass('active')) {
                 $('.sidebar__all').removeClass('active');
 
@@ -388,8 +407,6 @@ jQuery(document).ready(function ($) {
     });
 
 
-
-
     /*
      *  Desktop Menu
      */
@@ -439,17 +456,34 @@ jQuery(document).ready(function ($) {
      *  Toogle Orchestre
      */
 
-   $('.musiciens__dep').on('click', function() {
+    $('.musiciens__dep').on('click', function () {
 
-       $('.musiciens__dep__items', this).toggle('fast');
-       $('.musiciens__dep__title__cross', this).toggle();
-       $('.musiciens__dep__title__arrow', this).toggle();
-       $('.musiciens__dep__separator', this).toggle();
-
+        $('.musiciens__dep__items', this).toggle('fast');
+        $('.musiciens__dep__title__cross', this).toggle();
+        $('.musiciens__dep__title__arrow', this).toggle();
+        $('.musiciens__dep__separator', this).toggle();
 
 
     })
 
+
+
+    /*
+     * Calcul don
+     */
+
+
+    var inputTarg = document.getElementById("calcul")
+    var btncalc = document.getElementById("span__calc")
+    var resCalc = document.getElementById("resCalc")
+
+
+    btncalc.addEventListener('click', function () {
+        var inputCalc = document.getElementById("calcul").value
+        var egal = inputCalc * 0.44;
+        console.log(egal)
+        resCalc.innerHTML = egal;
+    })
 
 
     //Google Maps JS - Page Salle

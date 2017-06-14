@@ -17,7 +17,7 @@
 
 
                     <li class="menu-event__item">
-                        <a href="#programme">programme</a>
+                        <a href="#programme">Programme</a>
                     </li>
 
 
@@ -26,15 +26,15 @@
                     </li>
 
 
-                    <li class="menu-event__item">
-                        <span>Partagez ce spectacle</span>
-
-                        <ul>
-                            <li><a href="###">Facebook</a></li>
-                            <li><a href="###">Twitter</a></li>
-                            <li><a href="###">Instagram</a></li>
-                        </ul>
-                    </li>
+<!--                    <li class="menu-event__item">-->
+<!--                        <span>Partagez ce spectacle</span>-->
+<!---->
+<!--                        <ul>-->
+<!--                            <li><a href="###">Facebook</a></li>-->
+<!--                            <li><a href="###">Twitter</a></li>-->
+<!--                            <li><a href="###">Instagram</a></li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
 
                 </ul>
 

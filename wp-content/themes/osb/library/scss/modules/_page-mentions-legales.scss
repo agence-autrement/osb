@@ -1,0 +1,114 @@
+.ml {
+  padding: 8rem 0 5rem;
+  background-image: url(../images/fond_fiche_bio.jpg);
+  background-size: cover;
+  background-position: center center;
+
+  &__inner {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 4rem 3rem;
+    border: 2px solid #F5F3F3;
+    background-color: #fff;
+
+  }
+
+  &__left, &__right {
+    float: left;
+    width: 48%;
+    text-align: left;
+    padding: 0 15px;
+  }
+
+  &__title {
+    margin: 1rem 0 2rem;
+
+    font-family: $font2;
+
+    font-weight: 200;
+    font-size: 3.5rem;
+    line-height: 3.6rem;
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+    margin: 1rem 0 0;
+    line-height: 1.6rem;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-align: justify;
+  }
+
+}
+
+/******************************
+MEDIA QUERIES
+******************************/
+
+@media screen and (max-width: 767px) {
+
+
+
+  .ml {
+
+    padding: 4rem 0 2rem;
+    &__inner {
+      width: 90%;
+      padding:2rem;
+    }
+
+    &__left, &__right {
+      float: none;
+      width:100%;
+      padding:0;
+    }
+
+
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (max-width: 990px) {
+
+}
+
+@media screen and (min-width: 990px) {
+}
+
+@media screen and (max-width: 990px) and (min-width: 768px) {
+
+
+}
+
+@media screen and (max-width: 1100px) {
+
+}
+
+@media screen and (max-width: 460px) {
+
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */
+}
+
+@media print and (min-width: 5in) {
+}
+
+
+

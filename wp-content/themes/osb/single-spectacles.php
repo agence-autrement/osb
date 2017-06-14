@@ -29,7 +29,9 @@ Event template
 
                     <header class="article__header">
                         <div class="header__bg"
-                             style="height:90vh; background-image: url('<?php echo $imgID['url']; ?>'); background-position: center center; background-size: cover;">
+                             style="height:90vh; background-image: url('<?php echo $imgID['url']; ?>'); background-position: center center; background-size: cover;position:relative">
+
+                            <h1 class="header__title"><?php echo get_the_title(); ?></h1>
                             <div class="header__logo">
                                 <?php
                                 $imgPart = get_field('logo_partenaire');

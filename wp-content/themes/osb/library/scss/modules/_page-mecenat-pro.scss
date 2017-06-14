@@ -1,0 +1,434 @@
+.contenu_grid--o {
+  overflow: initial;
+}
+
+.page-template-mecenat-pro {
+
+  /////////////////////////  SLIDER HAUT DE PAGE
+
+  .top_page_action {
+    padding: 180px 35px 35px;
+    height: 710px;
+    width: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background: darkslategrey no-repeat;
+  }
+
+  .index {
+    margin-bottom: 25px;
+  }
+
+  .li_index {
+    font-size: 12px;
+    color: #ED1E24;
+  }
+
+  .title {
+    font-size: 60px;
+    margin-bottom: 15px;
+    color: white;
+    font-family: $font2;
+    span {
+      color: #EBD519;
+    }
+  }
+
+  .tag {
+    font-size: 12px;
+    text-transform: uppercase;
+    overflow: hidden;
+    div {
+      display: inline-block;
+      float: left;
+    }
+  }
+
+  .btn_red {
+    cursor: pointer;
+    padding: 5px 10px;
+    background-color: #EBD519;
+    color: white;
+    font-weight: 700;
+  }
+
+  .btn_savoir_plus {
+    display: block;
+    position: relative;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: white;
+    &:after {
+      content: '';
+      position: absolute;
+      background-color: white;
+      bottom: 0;
+      left: 10px;
+      width: 0;
+      height: 1px;
+      @include transition(0.6s);
+    }
+    &:hover {
+      font-weight: inherit;
+      &:after {
+        width: 70px;
+      }
+    }
+  }
+
+  .intro_text {
+    font-size: 12px;
+    max-width: 320px;
+    margin-top: 15px;
+    color: white;
+
+    p {
+      text-align: justify;
+    }
+  }
+}
+
+.section-mecenat-quote {
+  padding: 9rem 0;
+  background-image: url(../images/symphonia_bg.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.mecenat-quote {
+  &__inner {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+
+  }
+
+  &__text {
+    font-family: $font2;
+    font-size: 2rem;
+    margin: 0;
+
+    &--l2 {
+      font-family: $font;
+      font-size: 1.4rem;
+      margin: 0;
+    }
+  }
+}
+
+.section-mec-avan {
+
+}
+
+.mec-avan {
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 2.1rem;
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  &__inner {
+
+  }
+
+  &__item {
+    background-color: #F5F3F3;
+    overflow: hidden;
+    position: relative;
+    width: 32.333%;
+    text-align: center;
+    padding: 35px 35px 80px;
+    display: table-cell;
+    vertical-align: middle;
+
+    &__title {
+      font-size: 3rem;
+      line-height: 3.1rem;
+      margin: 1rem 0 4rem;
+      font-family: $font2;
+      font-weight: 300;
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 65px;
+        height: 2px;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #EBD519;
+      }
+
+    }
+
+    &__text {
+      font-size: 1.4rem;
+      width: 80%;
+      margin: 0 auto;
+      font-weight: 500;
+
+      &--light {
+        font-weight: 300;
+      }
+    }
+
+    &.center {
+      border-right: 2px solid #FFFFFF;
+      border-left: 2px solid #FFFFFF;
+    }
+  }
+}
+
+.section-mec-rec {
+  padding:5rem 0 0;
+  background-image: url(../images/dolce.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 549px;
+
+}
+
+.mec-rec {
+  &__inner {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__left, &__right {
+    float: left;
+    width: 48%;
+    margin: 0 auto;
+  }
+  &__right {
+    padding-left:3rem;
+  }
+
+  &__title {
+    font-family: $font2;
+    font-size: 5rem;
+    line-height: 5.1rem;
+    text-align: right;
+    padding-right: 5rem;
+    color: yellow;
+    position: relative;
+
+    span {
+      height: 40px;
+      width: 40px;
+      position: absolute;
+      right: 0px;
+      bottom: -30px;
+      background-image: url(../images/croix_jaune.svg);
+    }
+
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    position: relative;
+    margin-top: 4rem;
+
+    span {
+      position: absolute;
+
+      left: -15px;
+      top: -15px;
+      height: 15px;
+      width: 15px;
+      background-image: url(../images/croix_blanche.svg);
+    }
+
+  }
+
+  &__content {
+    background-color: #EBD519;
+    padding: 2rem 5rem;
+    text-align: center;
+
+    &__l1 {
+      font-weight: 600;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      margin:0;
+    }
+
+    &__l2 {
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      margin:0 0 2rem;
+    }
+
+    &__l3 {
+      font-weight: 300;
+      font-size: 1.4rem;
+      margin:3rem 0;
+    }
+    
+    &__btn {
+      background-color: #fff;
+      text-transform: uppercase;
+      border:none;
+      font-size: 1.7rem;
+      font-weight: 400;
+      padding:0.7rem 2.5rem;
+    }
+  }
+}
+
+.section-mec-logo {
+  margin:3rem 0;
+
+}
+
+.mec-logo {
+  &__inner {
+    width: 80%;
+    margin: 0 auto;
+
+    font-size: 1.4rem;
+    font-weight: 300;;
+
+  }
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 2.1rem;
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  &__items {
+    margin-top:1rem;
+  }
+
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0.6rem;
+  }
+}
+
+.section-mec-orga {
+  padding: 5rem 0;
+
+  .btn_contact {
+    width: 200px;
+    margin: 3rem auto 0;
+    border: 1px solid #D9D2C4;
+    padding: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+}
+
+.mec-orga {
+  &__inner {
+    width:80%;
+    margin: 0 auto;
+border:2px solid #F5F3F3;
+    text-align: center;
+    padding:3rem 5rem;
+
+  }
+
+
+  &__title {
+    font-family:$font2;
+    font-size: 3.4rem;
+    font-weight: 300;
+    margin:2rem 0;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin:2rem 0;
+  }
+
+  &__items {
+    color: #EAD518;
+    font-size: 1.6rem;
+    margin:1rem 0;
+
+  }
+}
+
+
+
+/******************************
+MEDIA QUERIES
+******************************/
+
+@media screen and (max-width: 767px) {
+
+
+  .mec-rec {
+    &__left, &__right {
+      float: none;
+      width: 100%;
+    }
+  }
+
+  .section-mec-rec {
+    height:auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (max-width: 990px) {
+
+  .mec-avan {
+    &__item {
+      display: block;
+      width: 100%;
+    }
+  }
+
+}
+
+@media screen and (min-width: 990px) {
+}
+
+@media screen and (max-width: 990px) and (min-width: 768px) {
+
+
+}
+
+@media screen and (max-width: 1100px) {
+
+}
+
+@media screen and (max-width: 460px) {
+
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+  /* Retina-specific stuff here */
+}
+
+@media print and (min-width: 5in) {
+}
+
+

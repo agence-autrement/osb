@@ -7,6 +7,11 @@ Template Name: Page Master Classes
 <?php get_sidebar(); ?>
 <div id="content">
     <section class="top_page_action" style="background-image: url('<?php echo get_template_directory_uri(); ?>/library/images/masterclasses_slide.jpg"');">
+
+    <div class="header__logo">
+        <img class="header__logo__img" src="http://agence-autrement.com/osb/wp-content/uploads/2017/06/Q_BP_LWG_FONE_10CM-01-e1496912604615.png" alt="">
+
+    </div>
         <div class="contenu_grid">
             <? if( have_rows('actions') ){ ?>
                 <div class="index">

@@ -15,7 +15,7 @@
             <p class="espaceosb__title">Don en ligne</p>
             <p class="espaceosb__subtitle">Soutenez un projet</p>
             <p class="espaceosb__content">Soutenez les projets de l’OSB, notamment l’éducation artistique et culturelle.</p>
-            <a class="btn_savoir" href="###">Faire un don</a>
+            <a class="btn_savoir" href="<?php echo site_url('don-en-ligne') ?>">Faire un don</a>
         </div>
 
     </div>
@@ -27,7 +27,7 @@
             <p class="espaceosb__content">Associez votre nom et votre image à l'Orchestre Symphonique de Bretagne en
                 devenant mécène. Vous pouvez également organiser des événements prestigieux dans nos
                 infrastructures..</p>
-            <a class="btn_savoir" href="###">En savoir +</a>
+            <a class="btn_savoir" href="<?php echo site_url('mecenat-pro') ?>">En savoir +</a>
         </div>
 
     </div>
@@ -125,7 +125,7 @@
                     <li><a target="_blank" href="https://indiv.themisweb.fr/0504/fProduitAutonome.aspx?idstructure=0504 ">Boutique</a></li>
                 </ul>
             </nav>
-            <a id="bouton_sidebar" href="###">Nous soutenir</a>
+            <a id="bouton_sidebar">Nous soutenir</a>
             <div class="ressource"><a href="<?php echo site_url('ressources-publiques') ?>">/// ressources ///</a></div>
         </div>
     </div>

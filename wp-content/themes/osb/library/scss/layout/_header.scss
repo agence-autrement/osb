@@ -114,10 +114,11 @@ Hamberger
 
 
 .hamburger-icon-desk {
-  position: absolute;
+  position: fixed;
   top: 40px;
+  display: none;
   z-index:1000;
-  left: 0;
+  left: 200px;
   width: 54px;
   height: 54px;
   margin: 0 auto;
