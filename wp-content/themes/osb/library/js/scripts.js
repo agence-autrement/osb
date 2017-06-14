@@ -116,9 +116,79 @@ jQuery(document).ready(function ($) {
 
 
 
+    /* SLIDER Partenaires */
+    var visuelActif_landing,
+        nbVisuels_landing,
+        firstSlide_landing,
+        firstCommand_landing,
+        lastSlide_landing,
+        lastCommand_landing,
+        gotoslide_landing,
+        class_slide;
+    visuelActif_landing = 2;
+    nbVisuels_landing = $('.slideshow_landing .slider_landing li').length;
+    firstSlide_landing = $('.slideshow_landing .slider_landing li:first-child').html();
+    lastSlide_landing = $('.slideshow_landing .slider_landing li:last-child').html();
+    class_slide = $('.slideshow_landing .slider_landing li:first-child').attr('class');
+    largeurslider_landing = $('.slideshow_landing').width();
+    $('.slideshow_landing .slider_landing').append('<li class="'+ class_slide +'">' + firstSlide_landing + '</li>');
+    $('.slideshow_landing .slider_landing').prepend('<li>' + lastSlide_landing + '</li>');
+    $('.slideshow_landing li').css('width', largeurslider_landing + 'px');
+    $('.slideshow_landing .slider_landing').css('width', (largeurslider_landing * (nbVisuels_landing + 2)) + 'px');
+    $('.slideshow_landing .slider_landing').css('margin-left', '-' + (largeurslider_landing) + 'px');
 
 
-    /* SLIDER HOMEPAGE */
+
+    $(function(){
+        setInterval(function(){
+            if (visuelActif_landing <= nbVisuels_landing) {
+                $('.slideshow_landing .slider_landing').animate({'margin-left': '-' + ((visuelActif_landing) * largeurslider_landing) + 'px'}, 800, function () {
+                    visuelActif_landing++;
+                });
+            } else {
+                $('.slideshow_landing .slider_landing').animate({'margin-left': '-' + ((visuelActif_landing) * largeurslider_landing) + 'px'}, 800, function () {
+                    visuelActif_landing = 2;
+                    $('.slideshow_landing .slider_landing').css('margin-left', '-' + (largeurslider_landing) + 'px');
+                });
+            }
+        }, 5000);
+    });
+
+
+    $('.next_btn_landing').bind('click', function () {
+        if (visuelActif_landing <= nbVisuels_landing) {
+            $('.slideshow_landing .slider_landing').animate({'margin-left': '-' + ((visuelActif_landing) * largeurslider_landing) + 'px'}, 500, function () {
+                visuelActif_landing++;
+            });
+        } else {
+            $('.slideshow_landing .slider_landing').animate({'margin-left': '-' + ((visuelActif_landing) * largeurslider_landing) + 'px'}, 500, function () {
+                visuelActif_landing = 2;
+                $('.slideshow_landing .slider_landing').css('margin-left', '-' + (largeurslider_landing) + 'px');
+            });
+        }
+    });
+
+    $('.previous_btn_landing').bind('click', function () {
+        if (visuelActif_landing > 1) {
+            visuelActif_landing--;
+            $('.slideshow_landing .slider_landing').animate({'margin-left': '-' + ((visuelActif_landing - 1) * largeurslider_landing) + 'px'}, 500);
+        } else {
+            $('.slideshow_landing .slider_landing').css('margin-left', '-' + ((nbVisuels_landing) * largeurslider_landing) + 'px');
+            visuelActif_landing = nbVisuels_landing;
+            $('.slideshow_landing .slider_landing').animate({'margin-left': '-' + ((visuelActif_landing - 1) * largeurslider_landing) + 'px'}, 500);
+        }
+    });
+
+
+
+
+
+
+
+
+
+
+    /* SLIDER Partenaires */
     var visuelActif,
         nbVisuels,
         firstSlide,
@@ -339,6 +409,7 @@ jQuery(document).ready(function ($) {
 
     });
 
+
     /* Event menu Scroll to fixed */
     //$('.section-menu-event').scrollToFixed();
 
@@ -407,6 +478,8 @@ jQuery(document).ready(function ($) {
     });
 
 
+
+
     /*
      *  Desktop Menu
      */
@@ -456,12 +529,13 @@ jQuery(document).ready(function ($) {
      *  Toogle Orchestre
      */
 
-    $('.musiciens__dep').on('click', function () {
+   $('.musiciens__dep').on('click', function() {
 
-        $('.musiciens__dep__items', this).toggle('fast');
-        $('.musiciens__dep__title__cross', this).toggle();
-        $('.musiciens__dep__title__arrow', this).toggle();
-        $('.musiciens__dep__separator', this).toggle();
+       $('.musiciens__dep__items', this).toggle('fast');
+       $('.musiciens__dep__title__cross', this).toggle();
+       $('.musiciens__dep__title__arrow', this).toggle();
+       $('.musiciens__dep__separator', this).toggle();
+
 
 
     })

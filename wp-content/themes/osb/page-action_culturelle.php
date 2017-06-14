@@ -47,7 +47,6 @@ Template Name: Page Action Culturelle
                         ?>
                         <li><a href="#<? echo $str; ?>"><? the_sub_field('titre'); ?></a></li>
                     <? endwhile; ?>
-                        <li><a href="###">Partagez sur </a></li>
                 </ul>
             </div>
         </section>

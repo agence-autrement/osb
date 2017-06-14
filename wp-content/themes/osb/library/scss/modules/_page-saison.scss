@@ -491,6 +491,13 @@
     }
   }
 
+  .no_result{
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 25px;
+    font-family: $font2;
+  }
+
   @media screen and (max-width: 1024px) {
 
     .resultat{

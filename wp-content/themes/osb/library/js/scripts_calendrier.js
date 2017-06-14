@@ -7,6 +7,15 @@ jQuery(document).ready(function($) {
         $('.droite_select div').css('display', 'none');
         $(value).css('display','inline');
         $(value).addClass('active');
+
+        $('#selector').addClass('full');
+        $('.gauche_select').addClass('full');
+        $('#resultAjax').addClass('full');
+
+
+
+
+
     });
 
     $('#close').on('click', function(){

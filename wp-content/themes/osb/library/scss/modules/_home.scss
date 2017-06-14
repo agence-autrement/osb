@@ -25,20 +25,166 @@ LANDING
 
 #landing {
   height: 90vh;
-  overflow: hidden;
-  background-image: url('../images/slider-saison2.jpg');
-  -webkit-background-size: cover;
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
+
+  .slideshow_landing {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+    overflow: hidden;
+    .slider_landing {
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      li {
+        float: left;
+        list-style-type: none;
+        height: 100%;
+        font-size: 35px;
+        -webkit-background-size:cover;
+        background-size: cover;
+        background-position: center top;
+        &.first{
+          background-image: url('../images/slider-saison2.jpg');
+        }
+      }
+    }
+  }
+  .previous_btn_landing {
+    position: absolute;
+    height: 33px;
+    width: 10px;
+    background-image: url("../images/left_slide.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    left: 180px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-indent: -5000px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .next_btn_landing {
+    position: absolute;
+    height: 33px;
+    width: 10px;
+    background-image: url("../images/right_slide.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    right: 64px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-indent: -5000px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
 }
 
-.top_landing {
-  width: 100%;
 
+.top_landing {
+  position: absolute;
+  top: 0;
+  width: 80%;
   padding: 35px;
   font-family: $font2;
 }
+
+.date_slider{
+  padding-left: 100px;
+  padding-top: 200px;
+  height: 100%;
+  color: #FFFFFF;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .ancienne_ul{
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 25px;
+    .date_tr{
+      float: left;
+      font-family: $font2;
+      text-align: center;
+      margin-right: 40px;
+      width: 40px;
+      position: relative;
+      .jour{
+        font-size: 22px;
+        font-weight: 100;
+      }
+      .mois{
+        font-size: 10px;
+      }
+      .lieu{
+        font-size: 10px;
+        color: #F0D504;
+        font-style: italic;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        left: -12px;
+        top: 0px;
+        height: 46px;
+        width: 1px;
+        background-color: #FFFFFF;
+        -webkit-transform: rotate(30deg);
+        -moz-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+        -o-transform: rotate(30deg);
+        transform: rotate(30deg);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711)";
+        filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711);
+      }
+    }
+  }
+  .thematique{
+    font-size: 10px;
+    font-weight: 400;
+    color: #F0D504;
+  }
+  .titre{
+    font-size: 19px;
+    font-weight: 400;
+  }
+  .artiste{
+    font-size: 76px;
+    font-weight: 100;
+  }
+  .bot_date {
+    bottom: 10px;
+    right: 12px;
+    color: #000;
+    text-transform: uppercase;
+    font-family: $font2;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 7px;
+    background-color: #F0D504;
+    margin-right: 20px;
+  }
+  .savoir_plus{
+    margin-right: 20px;
+    font-size: 10px;
+  }
+  .toute_rep{
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+}
+
+
+
+
+//////// Vignettes
 
 #calendrier_top {
   margin: 0;
@@ -488,6 +634,7 @@ RESPONSIVE
   .top_landing {
     height: auto;
     padding-bottom: 35px;
+    width: 100%;
   }
 
   #calendrier_top {

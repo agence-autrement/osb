@@ -61,9 +61,9 @@
         <div>
             <ul>
                 <li><a href="<?php echo site_url('saison') ?>">Toute la saison</a></li>
-                <li><a href="###">Symphonique</a></li>
+                <li><a href="<?php echo site_url('saison') ?>?type=symphonique">Symphonique</a></li>
                 <li><a href="<?php echo site_url('jeune-public') ?>">Jeune Public</a></li>
-                <li><a href="###">Musique de Chambre</a></li>
+                <li><a href="<?php echo site_url('saison') ?>?type=musiq_de_chambre">Musique de Chambre</a></li>
                 <li><a href="###">Artiste Invité</a></li>
                 <li><a href="<?php echo site_url('orchestre-invite') ?>">OSB Invité</a></li>
             </ul>

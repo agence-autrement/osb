@@ -140,7 +140,7 @@ function getInputByLieu()
         foreach($table as $table_un => $values){
             foreach($values as $value){
                 if($value == 22){
-                    echo "<button type='submit' class='btn_select btn_droite dpt' name='ville' value='".$value."'>Côte d'Armor</button>";
+                    echo "<button type='submit' class='btn_select btn_droite dpt' name='ville' value='".$value."'>Côtes d'Armor</button>";
                 }elseif($value == 29){
                     echo "<button type='submit' class='btn_select btn_droite dpt' name='ville' value='".$value."'>Finistère</button>";
                 }elseif($value == 35){
@@ -250,7 +250,7 @@ function displayAjax( $array )
 {
     echo '<div class="contenu_grid">';
     foreach ($array as $table_un => $values) {
-        setlocale(LC_ALL, "fr_FR.utf8");
+        setlocale(LC_ALL, "fr_FR.UTF-8");
         $timestamp = $values['date_calendrier'];
         $translate_Day = strftime('%e', strtotime($timestamp));
         $translate_Month = strftime('%B', strtotime($timestamp));
@@ -298,6 +298,15 @@ function displayAjax( $array )
         </div>
       <?  }
     echo '</div>';
+}
+
+
+function displayPreFiltre()
+{
+    $table      = queryAllDate();
+    $the_value  = $_GET['type'];
+    array_filter_by_value($table, 'type', $the_value);
+    displayAjax($table);
 }
 
 
@@ -359,6 +368,7 @@ function queryEssentiels()
             $compositeur        = get_field('compositeur');
             $instruments_tag    = get_field('instruments_tag');
             $artistes_tag       = get_field('artistes_tag');
+            $displayHome        = get_field('displayHome');
 
             if( have_rows('artistes') ){
                 $artistes = array();
@@ -414,7 +424,8 @@ function queryEssentiels()
                 'image_vignette'        => $image_vignette['url'],
                 'representation'        => $representation,
                 'lien_billeterie'       => $lien_billeterie,
-                'image'                 => $slide
+                'image'                 => $slide,
+                'displayHome'           => $displayHome,
             );
 
             array_push($table, $test);
@@ -428,27 +439,25 @@ function queryEssentiels()
 
 
 
-function displayEssentiels()
+function displayHomeEventSlide()
 {
 
     $table                  = queryEssentiels();
     $table                  = removeElementWithInferiorValue($table,'date_calendrier',$date_event);
-    $clear_table_essentiels = array_filter_by_value($table, 'thematiques', 'les_essentiels');
-    $sliced                 = array_slice($clear_table_essentiels, 0, 1);
+    $clear_table_essentiels = multi_array_filter_by_value($table, 'displayHome', 'affiche');
+    $sliced                 = array_slice($clear_table_essentiels, 0, 3);
     ?>
 
-    <div class="slideshow2">
-        <ul class="slider">
             <? foreach($sliced as $representation => $une_rep){ ?>
-            <li class="slides">
+            <li>
                 <div class="date_slider" style="background-image: url('<? echo $une_rep['image']['url'] ?>');">
-                    <ul>
+                    <div class="ancienne_ul">
                         <? foreach($une_rep['representation'] as $la_date){
-                            setlocale(LC_ALL, "fr_FR.utf8");
+                            setlocale(LC_ALL, "fr_FR.UTF-8");
                             $timestamp = $la_date[1];
                             $translate_Day = strftime('%e', strtotime($timestamp));
                             $translate_Month = strftime('%B', strtotime($timestamp)); ?>
-                            <li class="date_tr">
+                            <div class="date_tr">
                                 <div class="jour">
                                     <? if ($translate_Day == '1') {
                                         echo $translate_Day;
@@ -459,9 +468,9 @@ function displayEssentiels()
                                 </div>
                                 <div class="mois"><? echo $translate_Month ?></div>
                                 <div class="lieu"><? echo $la_date[3] ?></div>
-                            </li>
+                            </div>
                         <? } ?>
-                    </ul>
+                    </div>
                     <div class="thematique">
                         <?
                         if($une_rep['thematiques'] == 'les_essentiels'){
@@ -485,11 +494,8 @@ function displayEssentiels()
 
                 </div>
             </li>
-            <? } ?>
-        </ul>
-    </div>
+        <? } ?>
     <?
-    //var_dump($sliced);
     wp_reset_postdata();
 };
 
@@ -2117,17 +2123,19 @@ function multiFilter()
     if($count == 0){
 
         $table_zero = removeElementWithInferiorValue($table,'date_calendrier',$delete_if_less);
-        $sliced     = array_slice($table_zero, 0, 3);
+        //$sliced     = array_slice($table_zero, 0, 3);
 
         echo '<div class="contenu_grid no_result">';
         echo 'Aucun spectacle ne correspond à vos critères de recherche.';
         echo '</div>';
+        get_template_part('vous-aimerez');
 
     }else{
         $sliced     = $clear_table_final;
+        displayAjax($sliced);
     };
 
-    displayAjax($sliced);
+
 
 };
 
