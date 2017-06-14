@@ -372,14 +372,7 @@ Event template
                 </section>
 
 
-                <section id="plugin_calendar">
-                    <div class="contenu_grid calendar">
-
-                        <div id="resultAjax">
-                            <? resultDateDefault(); ?>
-                        </div>
-                    </div>
-                </section>
+                <? get_template_part('vous-aimerez') ?>
 
 
                 <?php if (get_field('video_bonus') && (have_rows('gallerie_bonus'))): ?>

@@ -34,11 +34,11 @@ Template Name: Page Abonnement
                     <li class="plus">+</li>
                     <li>Privilège de placement</li>
                     <li class="plus">+</li>
-                    <li>2 places offertes par saison2 pour la personne de votre choix</li>
+                    <li>2 places offertes par saison<sup>(2)</sup> pour la personne de votre choix</li>
                     <li class="plus">+</li>
                     <li>1 disque offert dans la discographie de l’OSB</li>
                     <li class="plus">+</li>
-                    <li>Des réductions et offres spéciales chez nos partenaires3</li>
+                    <li>Des réductions et offres spéciales chez nos partenaires<sup>(3)</sup></li>
                 </ul>
                 <div class="btn_don"><a target="_blank" href="https://abo.themisweb.fr/0504/fUserLogin.aspx?idstructure=0504">S'abonner en ligne</a></div>
             </div>
@@ -60,11 +60,11 @@ Template Name: Page Abonnement
                     <li class="plus">+</li>
                     <li>Privilège de placement</li>
                     <li class="plus">+</li>
-                    <li>2 places offertes par saison2 pour la personne de votre choix</li>
+                    <li>2 places offertes par saison<sup>(2)</sup> pour la personne de votre choix</li>
                     <li class="plus">+</li>
                     <li>1 disque offert dans la discographie de l’OSB</li>
                     <li class="plus">+</li>
-                    <li>Des réductions et offres spéciales chez nos partenaires3</li>
+                    <li>Des réductions et offres spéciales chez nos partenaires<sup>(3)</sup></li>
                 </ul>
                 <div class="btn_don"><a target="_blank" href="https://abo.themisweb.fr/0504/fUserLogin.aspx?idstructure=0504">S'abonner en ligne</a></div>
             </div>
@@ -104,7 +104,7 @@ Template Name: Page Abonnement
                         <div>Carte Aventurier</div>
                     </div>
                     <div class="txt_pourquoi">
-                        Une carte de ﬁdélité à 5€ qui vous garantit 10% sur l’ensemble des concerts, que vous veniez en solo ou en duo ! Disponible au guichet à partir du 1er septembre 2017.
+                        Une carte de ﬁdélité à 5€ qui vous garantit 10% de réduction sur l’ensemble des concerts, que vous veniez en solo ou en duo ! Disponible au guichet à partir du 1er septembre 2017.
                     </div>
                 </div>
             </div>
@@ -116,7 +116,7 @@ Template Name: Page Abonnement
                     </div>
                     <div class="txt_pourquoi">
                        <b>4 concerts pour 20€ !</b> <br>
-                        Disponnible sur l'ensemble des concerts, hors Piccolo
+                        Disponible sur l'ensemble des concerts, hors Piccolo
                    </div>
                 </div>
             </div>

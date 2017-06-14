@@ -37,7 +37,7 @@ Template Name: Page Mécénat
                         À quoi sert votre adhésion ?
                     </div>
                     <div class="txt_pourquoi">
-                        L’OSB a besoin e vous pour soutenir deux projets phares de la saison 2017-2018 :<br>
+                        L’OSB a besoin de vous pour soutenir deux projets phares de la saison 2017-2018 :<br>
                         <span class="norm">
                             + les activités de la Fabrik, le service dédié à l’éducation artistique et culturelle ;<br>
                             + la résidence artistique d’Anne Gastinel.<br><br>

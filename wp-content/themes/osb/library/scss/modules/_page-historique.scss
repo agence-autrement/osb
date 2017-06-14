@@ -83,7 +83,7 @@
   .image_test{
     position: absolute;
     height: 280px;
-    width: 320px;
+    width: 416px;
     margin-top: 50px;
     -webkit-background-size: cover;
     background-size: cover;
@@ -106,6 +106,9 @@
     .content_date{
       float: right;
     }
+    &:nth-of-type(1){
+      background-color: #E5DFD5;
+    }
   }
 
   /////////////////////////  AFFICHER LA DATE À GAUCHE
@@ -114,7 +117,9 @@
     padding: 35px;
     height: 315px;
     width: 100%;
-
+    &:nth-of-type(6){
+      background-color: #E5DFD5;
+    }
     .visuel_date{
       float: right;
     }
