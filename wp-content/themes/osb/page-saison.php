@@ -27,7 +27,7 @@ Template Name: Page Saison
                 </select>
                 <select name="departement" id="departement" class="select_filter" size="15">
                     <option value="" class="first_opt">lieu</option>
-                    <option value="22">Côte d'Armor</option>
+                    <option value="22">Côtes d'Armor</option>
                     <option value="29">Finistère</option>
                     <option value="35">Ille-et-Vilaine</option>
                     <option value="56">Morbihan</option>

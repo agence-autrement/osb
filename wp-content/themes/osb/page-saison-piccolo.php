@@ -38,7 +38,6 @@ Template Name: Page Saison Piccolo
                 <li><a href="#salzburg">De Salzburg à San Francisco</a></li>
                 <li><a href="#cinema">La musique fait son cinema</a></li>
                 <li><a href="#piccolino">Piccolino</a></li>
-                <li><a href="###">Partagez sur</a></li>
             </ul>
         </div>
     </section>

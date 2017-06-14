@@ -20,7 +20,7 @@ Template Name: Page d'Accueil
                 echo '<ul id="calendrier_top">';
 
                 foreach($sliced as $table_un => $values){
-                    setlocale(LC_ALL, "fr_FR.utf8");
+                    setlocale(LC_ALL, "fr_FR.UTF-8");
                     $timestamp          = $values['date_calendrier'];
                     $translate_Day      = strftime ( '%e' , strtotime($timestamp));
                     $translate_Month    = strftime ( '%B' , strtotime($timestamp));
@@ -70,6 +70,13 @@ Template Name: Page d'Accueil
                 ?>
             </div>
         </div>
+        <div class="slideshow_landing">
+            <ul class="slider_landing">
+                <li class="first"></li>
+                <? displayHomeEventSlide(); ?>
+            </ul>
+        </div>
+
     </section>
 
     <? get_template_part('calendrier_view'); ?>

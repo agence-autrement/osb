@@ -21,16 +21,21 @@
   #selector{
     margin-right: 20px;
     height: 200px;
-    width: 256px;
+    width: 128px;
     float: left;
     position: relative;
     font-size: 12px;
+    &.full{
+      width: 256px;
+    }
   }
 
   .gauche_select{
     float: left;
-    width: 50%;
     text-transform: uppercase;
+    &.full{
+      width: 50%;
+    }
   }
 
   .btn_gauche{
@@ -64,7 +69,6 @@
     overflow: hidden;
     top: 0;
     left: 0;
-    background-color: rgba(255,255,255,0.8);
     @include transition(0.3s);
     &.active{
       height: 100%;
@@ -168,7 +172,7 @@
 
   #resultAjax{
     float: left;
-    width: calc(100% - 291px;);
+    width: calc(100% - 148px;);
     .resultat{
       padding: 35px;
     }
@@ -346,7 +350,9 @@
       }
 
     }
-
+    &.full{
+      width: calc(100% - 276px);
+    }
   }
 
   /***********************

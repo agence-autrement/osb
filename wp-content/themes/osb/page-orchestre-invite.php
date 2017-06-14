@@ -34,7 +34,6 @@ Template Name: Page Orchestre Invité
                 <li><a href="#katia">Katia Kabanova</a></li>
                 <li><a href="#nain">Le Nain</a></li>
                 <li><a href="#norma">Norma</a></li>
-                <li><a href="#partager">Partagez sur</a></li>
             </ul>
         </div>
     </section>
