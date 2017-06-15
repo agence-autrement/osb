@@ -565,13 +565,15 @@ jQuery(document).ready(function ($) {
 
 
 
-    })
+    });
 
 
+    if ($(window).width() < 768) {
+        $('.select_filter').attr('size', '8');
+    }
 
 
-
-    //Google Maps JS - Page Salle
+        //Google Maps JS - Page Salle
 
     //google.maps.event.trigger(map, 'resize');
 

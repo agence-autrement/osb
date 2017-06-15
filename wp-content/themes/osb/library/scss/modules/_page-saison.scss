@@ -1,5 +1,10 @@
 .page-template-page-saison{
 
+  .fiche__item{
+    width: 23.5%;
+  }
+
+
 .slider_saison{
   height: 710px;
   padding: 35px;
@@ -105,9 +110,6 @@
     }
 
   }
-
-
-
 
   /* SELECT */
 
@@ -322,7 +324,6 @@
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
-        width: 23.5%;
         position: relative;
         min-height: 150px;
         cursor: auto !important;
@@ -521,8 +522,37 @@
         }
       }
     }
+    select{
+      width: 90%;
+      float: none;
+      margin: 0 auto 20px;
+    }
+    .option_filtre{
+      .titre_opt{
+        float: none;
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      .show_filters{
+        float: none;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 15px;
+        &:after{
+          right: inherit;
+          left: 134px;
+        }
+
+      }
+      #clear_filters{
+        float: none;
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
   }
 
   @media screen and (max-width: 420px) {
+
   }
 }

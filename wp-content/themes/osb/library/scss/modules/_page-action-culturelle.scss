@@ -136,11 +136,12 @@
 
   .visuel_content{
     position: relative;
+
+    img{
+      position: absolute;
+    }
   }
 
-  img{
-    position: absolute;
-  }
 
   .titre_right_text{
     padding-left: 25px;
@@ -526,6 +527,19 @@
     #ecole, #adresse, #classe, #nombre_participant{
       width: 100%;
       float: none;
+    }
+    .visuel_content{
+      position: relative;
+      text-align: center;
+      img{
+        position: inherit;
+      }
+    }
+    .croix_rouge{
+      display: none;
+    }
+    .titre_content{
+      font-size: 42px;
     }
   }
 }

@@ -2134,9 +2134,14 @@ function multiFilter()
         $sliced     = $clear_table_final;
         displayAjax($sliced);
     };
-
-
-
 };
+
+function preFilter()
+{
+    $type_get       = $_GET['type'];
+    $table          = queryAllDate();
+    $table          = array_filter_by_value($table,'type', $type_get);
+    displayAjax($table);
+}
 
 ?>

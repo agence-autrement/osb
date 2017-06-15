@@ -123,7 +123,14 @@ Template Name: Page Saison
     <section class="resultat">
         <div class="contenu_grid">
             <?
-                displayAllDate();
+
+                if($_GET == false){
+
+                    displayAllDate();
+
+                }else{
+                    preFilter();
+                }
             ?>
         </div>
     </section>

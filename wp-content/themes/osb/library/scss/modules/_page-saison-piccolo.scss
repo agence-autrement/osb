@@ -435,5 +435,37 @@
         padding: 0;
       }
     }
+    .visuel_content{
+      position: relative;
+      text-align: center;
+      img{
+        position: inherit;
+      }
+    }
+    .croix_rouge{
+      display: none;
+    }
+    .titre_content{
+      font-size: 42px;
+    }
+    .special_content{
+      height: inherit;
+    }
+    .content_right{
+      .image_position{
+        position: inherit;
+        .img_content{
+          position: inherit;
+          img{
+            position: inherit;
+            bottom: 0;
+            right: 0;
+          }
+        }
+      }
+    }
+    .croix_noir{
+      left: 0;
+    }
   }
 }
