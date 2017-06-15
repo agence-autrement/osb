@@ -294,7 +294,7 @@ function displayAjax( $array )
                 <div class="date_mois"><? echo $translate_Month; ?></div>
                 <div class="lieu"><? echo $values['ville_calendrier']; ?></div>
             </div>
-            <a class="bot_date <? echo $btn_color; ?>" href="<? the_permalink($values['id_calendrier']) ?>" target="_blank">Réserver</a>
+            <a class="bot_date <? echo $btn_color; ?>" href="<? the_permalink($values['id_calendrier']) ?>#date" target="_blank">Réserver</a>
         </div>
       <?  }
     echo '</div>';
@@ -490,7 +490,7 @@ function displayHomeEventSlide()
                     </div>
                     <a class="bot_date <? echo $btn_color; ?>" href="<? the_permalink($une_rep['id_calendrier']) ?>#date" target="_blank">Réserver</a>
                     <a class="savoir_plus" href="<? echo $une_rep['lien_billeterie'] ?>">En savoir +</a>
-                    <a href="<? the_permalink($une_rep['id_calendrier']) ?>" class="toute_rep">Toutes les représentations</a>
+                    <a href="<? the_permalink($une_rep['id_calendrier']) ?>#date" class="toute_rep">Toutes les représentations</a>
 
                 </div>
             </li>

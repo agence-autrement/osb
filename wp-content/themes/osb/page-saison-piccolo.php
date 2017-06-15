@@ -80,7 +80,7 @@ Template Name: Page Saison Piccolo
                     <div class="ligne_deux">
                         <div class="ville">Rennes</div><span> // </span><div class="salle">Opéra</div>
                     </div>
-                    <div class="btn_inscription"><a href="<?php echo site_url('spectacles') ?>/tout-un-nouveau-monde">Réserver</a></div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('spectacles') ?>/tout-un-nouveau-monde/#date">Réserver</a></div>
                 </div>
             </div>
         </div>
@@ -120,7 +120,7 @@ Template Name: Page Saison Piccolo
                     <div class="ligne_deux">
                         <div class="ville">Rennes</div><span> // </span><div class="salle">Le Tambour</div>
                     </div>
-                    <div class="btn_inscription"><a href="<?php echo site_url('spectacles') ?>/le-leopard-et-le-chasseur">Réserver</a></div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('spectacles') ?>/le-leopard-et-le-chasseur/#date">Réserver</a></div>
                 </div>
             </div>
         </div>
@@ -161,7 +161,7 @@ Template Name: Page Saison Piccolo
                     <div class="ligne_deux">
                         <div class="ville">Rennes</div><span> // </span><div class="salle">Le Diapason</div>
                     </div>
-                    <div class="btn_inscription"><a href="<?php echo site_url('spectacles') ?>/de-salzbourg-a-san-francisco">Réserver</a></div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('spectacles') ?>/de-salzbourg-a-san-francisco/#date">Réserver</a></div>
                 </div>
             </div>
         </div>
@@ -201,7 +201,7 @@ Template Name: Page Saison Piccolo
                     <div class="ligne_deux">
                         <div class="ville">Rennes</div><span> // </span><div class="salle">Couvent des Jacobins</div>
                     </div>
-                    <div class="btn_inscription"><a href="<?php echo site_url('spectacles') ?>/la-musique-fait-son-cinema">Réserver</a></div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('spectacles') ?>/la-musique-fait-son-cinema/#date">Réserver</a></div>
                 </div>
             </div>
         </div>
