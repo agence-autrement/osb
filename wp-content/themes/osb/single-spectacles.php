@@ -36,9 +36,9 @@ Event template
                                 <?php
                                 $imgPart = get_field('logo_partenaire');
                                 ?>
-                                <img class="header__logo__img"
+                                <a target="_blank" href="<?php echo get_field('liens_partenaire') ?>"><img class="header__logo__img"
                                      src="<?php echo $imgPart['url']; ?>"
-                                     alt="">
+                                     alt=""></a>
 
                             </div>
                         </div>
@@ -234,7 +234,6 @@ Event template
                         <div class="event-partners__inner">
 
                             <?php
-
                             // check if the repeater field has rows of data
                             if (!have_rows('partenaires')):?>
                                 <div class="event-partners--center">
@@ -256,9 +255,9 @@ Event template
                                         <?php
                                         $imgPart = get_field('logo_partenaire');
                                         ?>
-                                        <img class="event-partners__item__img vcenter"
+                                        <a target="_blank" href="<?php echo get_field('liens_partenaire') ?>"><img class="event-partners__item__img vcenter"
                                              src="<?php echo $imgPart['url']; ?>"
-                                             alt="">
+                                             alt=""></a>
                                         <p class="event-partners__item__text vcenter">
                                             En partenariat avec<br>
                                             <?php

@@ -17,7 +17,7 @@
 
 
                     <li class="menu-event__item">
-                        <a href="#programme">Progr</a>
+                        <a href="#programme">Programme</a>
                     </li>
 
 
