@@ -17,12 +17,12 @@
 
 
                     <li class="menu-event__item">
-                        <a href="#programme">Programme</a>
+                        <a href="#programme">Progr</a>
                     </li>
 
 
                     <li class="menu-event__item">
-                        <a href="#date">Dates / billeterie</a>
+                        <a href="#date">Dates / Billetterie</a>
                     </li>
 
 

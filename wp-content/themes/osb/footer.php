@@ -32,10 +32,10 @@
 						<div class="footer_content">
 							<ul>
 								<li>Nous soutenir</li>
-								<li><a href="<?php echo site_url('mecenat-particulier') ?>">Concerto</a></li>
+								<li><a href="<?php echo site_url('mecenat-particulier') ?>">Concerto > Particuliers</a></li>
 
-								<li><a href="<?php echo site_url('') ?>">Symphonia</a></li>
-								<li><a href="<?php echo site_url('') ?>">Don en ligne</a></li>
+								<li><a href="<?php echo site_url('mecenat-pro') ?>">Symphonia > Entreprises</a></li>
+								<li><a href="<?php echo site_url('don-en-ligne') ?>">Don en ligne</a></li>
 
 							</ul>
 							<ul>

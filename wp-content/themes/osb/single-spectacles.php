@@ -243,7 +243,7 @@ Event template
                                             Vous aussi, soutenez l'Orchestre<br>
                                             <span>Rejoignez-nous !</span>
                                         </p>
-                                        <button class="event-partners__join__btn btn">Devenez mécène</button>
+                                        <button class="event-partners__join__btn btn"><a href="<?php echo site_url('mecenat-particulier') ?>" target="_blank">Devenez mécène</a</button>
 
                                     </div>
                                 </div>
@@ -270,7 +270,7 @@ Event template
                                                 while (have_rows('partenaires')) : the_row();
 
                                                     // display a sub field value
-                                                    echo get_sub_field('partenaire') . ", ";
+                                                    echo get_sub_field('partenaire') . " ";
 
 
                                                 endwhile;
@@ -295,7 +295,7 @@ Event template
                                             Vous aussi, soutenez l'Orchestre<br>
                                             <span>Rejoignez-nous !</span>
                                         </p>
-                                        <button class="event-partners__join__btn btn">Devenez mécène</button>
+                                        <button class="event-partners__join__btn btn"><a href="<?php echo site_url('mecenat-particulier') ?>" target="_blank">Devenez mécène</a></button>
 
                                     </div>
                                 </div>
