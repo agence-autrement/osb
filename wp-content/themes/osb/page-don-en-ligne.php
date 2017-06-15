@@ -60,4 +60,23 @@ Template Name: Page Don en ligne
 
 </div>
 
+<script>
+    /*
+     * Calcul don
+     */
+
+
+    var inputTarg = document.getElementById("calcul")
+    var btncalc = document.getElementById("span__calc")
+    var resCalc = document.getElementById("resCalc")
+
+
+    btncalc.addEventListener('click', function () {
+        var inputCalc = document.getElementById("calcul").value
+        var egal = inputCalc * 0.44;
+        console.log(egal)
+        resCalc.innerHTML = egal;
+    })
+</script>
+
 <?php get_footer(); ?>

@@ -121,7 +121,7 @@ Template Name: Page Mécénat
             </div>
             <div class="content_text">
                 <span class="black_cross"></span>
-                A l’occasion du festival Beethoven proposé de janvier à L’Orchestre Symphonique de Bretagne participe tous les ans à l’enrichissement du répertoire symphonique, par une politique de commandes de nouvelles oeuvres à de jeunes compositeurs. Au cours de la saison musicale 2017-2018, l’OSB a notamment le plaisir de travailler avec deux compositeurs en résidence, Benoît Menut et Julien Gauthier. Leurs oeuvres Anita et Symphonie Australe seront créées par l’Orchestre en avril 2018 dans le cadre du concert « Les 40èmes Rugissants », dédié à la mer et à l’océanographe Anita Conti. Associez-vous à cette création et devenez mécène de deux nouvelles oeuvres, dont les premières notes seront entendues en exclusivité à Rennes ! Votre soutien permet de faire vivre la création artistique et d’enrichir le répertoire musical.
+            L’Orchestre Symphonique de Bretagne participe tous les ans à l’enrichissement du répertoire symphonique, par une politique de commandes de nouvelles oeuvres à de jeunes compositeurs. Au cours de la saison musicale 2017-2018, l’OSB a notamment le plaisir de travailler avec deux compositeurs en résidence, Benoît Menut et Julien Gauthier. Leurs oeuvres Anita et Symphonie Australe seront créées par l’Orchestre en avril 2018 dans le cadre du concert « Les 40èmes Rugissants », dédié à la mer et à l’océanographe Anita Conti. Associez-vous à cette création et devenez mécène de deux nouvelles oeuvres, dont les premières notes seront entendues en exclusivité à Rennes ! Votre soutien permet de faire vivre la création artistique et d’enrichir le répertoire musical.
             </div>
         </div>
     </section>
@@ -157,5 +157,24 @@ Template Name: Page Mécénat
     </section>
     <? get_template_part('joinUs'); ?>
 </div>
+
+<script>
+    /*
+     * Calcul don
+     */
+
+
+    var inputTarg = document.getElementById("calcul")
+    var btncalc = document.getElementById("span__calc")
+    var resCalc = document.getElementById("resCalc")
+
+
+    btncalc.addEventListener('click', function () {
+        var inputCalc = document.getElementById("calcul").value
+        var egal = inputCalc * 0.44;
+        console.log(egal)
+        resCalc.innerHTML = egal;
+    })
+</script>
 
 <?php get_footer(); ?>

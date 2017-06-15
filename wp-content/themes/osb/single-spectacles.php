@@ -322,7 +322,7 @@ Event template
 
 
                         <p class="event-date__title section-event-title">
-                            // Dates / Billeterie //
+                            // Dates / Billetterie //
                         </p>
 
                         <?php
@@ -355,11 +355,11 @@ Event template
                                 $unixtimestamp = strtotime(get_sub_field('date'));
 
                                 if (get_sub_field('lien_billeterie')):
-                                    echo "<div class=\"event-date__grid--3\"><div class=\"event-date__item\"><div class=\"event-date__item__inner\"><p class=\"event-date__date\" >" . strftime($day, $unixtimestamp) . "<br>" . strftime($dayNumber, $unixtimestamp) . " " . strftime($month, $unixtimestamp) . "<br><span>" . get_sub_field('heure') . "h</span></p><h3 class=\"event-date__city\" >" . get_sub_field('ville') . "</h3><h4 class=\"event-date__place\" >" . get_sub_field('lieu') . "</h4><a href=" . get_sub_field('lien_billeterie') . " class=\"event-date__btn btn\" >Réserver</a></div></div></div>";
+                                    echo "<div class=\"event-date__grid--3\"><div class=\"event-date__item\"><div class=\"event-date__item__inner\"><p class=\"event-date__date\" >" . strftime($day, $unixtimestamp) . "<br>" . strftime($dayNumber, $unixtimestamp) . " " . strftime($month, $unixtimestamp) . "<br><span>" . get_sub_field('heure') . "</span></p><h3 class=\"event-date__city\" >" . get_sub_field('ville') . "</h3><h4 class=\"event-date__place\" >" . get_sub_field('lieu') . "</h4><a href=" . get_sub_field('lien_billeterie') . " class=\"event-date__btn btn\" >Réserver</a></div></div></div>";
 
                                 else:
 
-                                    echo "<div class=\"event-date__grid--3\"><div class=\"event-date__item\"><div class=\"event-date__item__inner\"><p class=\"event-date__date\" >" . strftime($day, $unixtimestamp) . "<br>" . strftime($dayNumber, $unixtimestamp) . " " . strftime($month, $unixtimestamp) . "<br><span>" . get_sub_field('heure') . "h</span></p><h3 class=\"event-date__city\" >" . get_sub_field('ville') . "</h3><h4 class=\"event-date__place\" >" . get_sub_field('lieu') . "</h4><p class=\"event-date__other\">Réservation à partir du 1er septembre</p></div></div></div>";
+                                    echo "<div class=\"event-date__grid--3\"><div class=\"event-date__item\"><div class=\"event-date__item__inner\"><p class=\"event-date__date\" >" . strftime($day, $unixtimestamp) . "<br>" . strftime($dayNumber, $unixtimestamp) . " " . strftime($month, $unixtimestamp) . "<br><span>" . get_sub_field('heure') . "</span></p><h3 class=\"event-date__city\" >" . get_sub_field('ville') . "</h3><h4 class=\"event-date__place\" >" . get_sub_field('lieu') . "</h4><p class=\"event-date__other\">Réservation à partir du 1er septembre</p></div></div></div>";
 
                                 endif;
 

@@ -13,12 +13,15 @@ Template Name: Page Venir en Groupe
             </div>
             <div class="tag">
                 <div class="btn_red"><a href="###">Inscription</a></div>
-                <div class="btn_savoir_plus"><a href="###">En savoir +</a></div>
+
             </div>
             <div class="intro_text">
-                Vous êtes une maison de quartier, une école de musique, un hôpital de jour, un centre de loisirs, un centre social, une maison de retraite, une association à but socio-éducatif... et vous souhaitez assister à un concert de l’OSB ?
+                Vous êtes une maison de quartier, une école de musique, un hôpital de jour, un centre de loisirs, un
+                centre social, une maison de retraite, une association à but socio-éducatif... et vous souhaitez
+                assister à un concert de l’OSB ?
                 <br><br>
-                Pour vous inscrire, remplissez le formulaire ci-dessous et validez. Merci d’y noter vous souhaits, nous reviendrons vers vous pour conﬁrmer la réservation en fonction des places disponibles.
+                Pour vous inscrire, remplissez le formulaire ci-dessous et validez. Merci d’y noter vous souhaits, nous
+                reviendrons vers vous pour conﬁrmer la réservation en fonction des places disponibles.
             </div>
         </div>
     </section>

@@ -37,7 +37,7 @@ Salle
                             <?php if (get_field('lien_billeterie_salle')) :?>
                             <div class="adress__links">
                                 <a target="_blank" href="<?php echo get_field('lien_site_internet_salle')?>" class="adress__btn btn">Site Internet</a>
-                                <a target="_blank" href="<?php echo get_field('lien_billeterie_salle')?>" class="adress__btn btn">Billeterie</a>
+                                <a target="_blank" href="<?php echo get_field('lien_billeterie_salle')?>" class="adress__btn btn">Billetterie</a>
                             </div>
 
                                 <?php else :?>

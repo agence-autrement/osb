@@ -196,16 +196,7 @@ Template Name: Page Cote Orchestre
                             </h3>
                         </li>
 
-                        <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/en_attente_visuel.jpg"
-                                 alt="">
-                            <h3 class="musiciens__dep__item__title">
-                                Jean-Yves Merven
-
-                            </h3>
-                        </li>
 
                         <li class="musiciens__dep__item">
 
@@ -670,7 +661,7 @@ Template Name: Page Cote Orchestre
                                  src="<?php echo get_template_directory_uri(); ?>/library/images/jean-pierre_petermann.png"
                                  alt="">
                             <h3 class="musiciens__dep__item__title">
-                                Jean-Pierre Peterman
+                                Jean-Pierre Petermann
                             </h3>
                         </li>
 
