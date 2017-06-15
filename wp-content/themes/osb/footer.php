@@ -59,7 +59,7 @@
 							</ul>
 						</div>
 						<div class="billet">
-							BILLETERIE // Opéra de Rennes
+							BILLETTERIE // Opéra de Rennes
 							<ul>
 								<li>Place de la Mairie</li>
 								<li>35000 Rennes</li>
@@ -71,13 +71,10 @@
 					<div class="contenu_grid">
 						<div class="mentions">
 							<ul>
-								<li>Mention légales</li>
+								<li><a href="<?php echo site_url('mentions-legales') ?>">Mention légales</a></li>
 								<li>|</li>
-								<li>Crédits</li>
-								<li>|</li>
-								<li>Conditions de vente</li>
-								<li>|</li>
-								<li>Recrutement</li>
+								<li><a href="<?php echo site_url('mentions-legales') ?>">Crédits</a></li>
+
 							</ul>
 						</div>
 					</div>
