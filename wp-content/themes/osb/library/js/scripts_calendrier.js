@@ -11,11 +11,6 @@ jQuery(document).ready(function($) {
         $('#selector').addClass('full');
         $('.gauche_select').addClass('full');
         $('#resultAjax').addClass('full');
-
-
-
-
-
     });
 
     $('#close').on('click', function(){
