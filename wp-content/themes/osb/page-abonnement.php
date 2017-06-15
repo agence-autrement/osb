@@ -26,7 +26,7 @@ Template Name: Page Abonnement
             <ul>
                 <li><b>Pour 300€</b>, accédez à l'ensembledes 20 concerts de la saison</li>
             </ul>
-            <div class="btn_don"><a href="###">S'abonner en ligne</a></div>
+            <div class="btn_don"><a href="###">À réserver au guichet ou par courrier</a></div>
             <div class="hover_don formule">
                 <div class="encadre">Vos Avantages</div>
                 <ul>
@@ -40,7 +40,7 @@ Template Name: Page Abonnement
                     <li class="plus">+</li>
                     <li>Des réductions et offres spéciales chez nos partenaires<sup>(3)</sup></li>
                 </ul>
-                <div class="btn_don"><a target="_blank" href="https://abo.themisweb.fr/0504/fUserLogin.aspx?idstructure=0504">S'abonner en ligne</a></div>
+                <div class="btn_don"><a target="_blank" href="">À réserver au guichet ou par courrier</a></div>
             </div>
         </div>
         <div class="ami formule center">

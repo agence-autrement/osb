@@ -172,6 +172,22 @@ jQuery(document).ready(function ($) {
     $('.slideshow li').css('width', largeurslider + 'px');
     $('.slideshow .slider').css('width', (largeurslider * (nbVisuels + 2)) + 'px');
     $('.slideshow .slider').css('margin-left', '-' + (largeurslider) + 'px');
+
+    $(function(){
+        setInterval(function(){
+            if (visuelActif <= nbVisuels) {
+                $('.slideshow .slider').animate({'margin-left': '-' + ((visuelActif) * largeurslider) + 'px'}, 800, function () {
+                    visuelActif++;
+                });
+            } else {
+                $('.slideshow .slider').animate({'margin-left': '-' + ((visuelActif) * largeurslider) + 'px'}, 800, function () {
+                    visuelActif = 2;
+                    $('.slideshow .slider').css('margin-left', '-' + (largeurslider) + 'px');
+                });
+            }
+        }, 5000);
+    });
+
     $('.next_btn').bind('click', function () {
         if (visuelActif <= nbVisuels) {
             $('.slideshow .slider').animate({'margin-left': '-' + ((visuelActif) * largeurslider) + 'px'}, 500, function () {
