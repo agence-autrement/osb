@@ -489,8 +489,8 @@ function displayHomeEventSlide()
                         <? echo $une_rep['artiste_calendrier'][0]; ?>
                     </div>
                     <a class="bot_date <? echo $btn_color; ?>" href="<? the_permalink($une_rep['id_calendrier']) ?>#date" target="_blank">Réserver</a>
-                    <a class="savoir_plus" href="<? echo $une_rep['lien_billeterie'] ?>">En savoir +</a>
-                    <a href="<? the_permalink($une_rep['id_calendrier']) ?>#date" class="toute_rep">Toutes les représentations</a>
+                    <a class="savoir_plus" href="<? the_permalink($une_rep['id_calendrier']) ?>">En savoir +</a>
+                    <a href="<? site_url('saison')?>" class="toute_rep">Toutes les représentations</a>
 
                 </div>
             </li>
