@@ -87,7 +87,7 @@ Template Name: Page d'Accueil
             <div id="left_callto">
                 <div>Entreprises, soutenez l'Orchestre</div>
                 <div>Rejoignez-nous !</div>
-                <a class="btn_savoir" href="###">En savoir +</a>
+                <a class="btn_savoir" href="<?php echo site_url('mecenat-pro') ?>">En savoir +</a>
                 <div id="slider_callto">
                     <span class="previous_btn previous_btn--home">left</span>
                     <span class="next_btn next_btn--home">right</span>

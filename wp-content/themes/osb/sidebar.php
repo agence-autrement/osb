@@ -81,7 +81,7 @@
                 <li><a href="<?php echo site_url('cote-orchestre') ?>">Côté Orchestre</a></li>
                 <li><a href="<?php echo site_url('cote-pratique') ?>">Côté Pratique</a></li>
                 <li><a href="<?php echo site_url('cote-orga') ?>">Côté Organisation</a></li>
-                <li><a href="<?php echo site_url('historique') ?>">Historique</a></li>
+<!--                <li><a href="--><?php //echo site_url('historique') ?><!--">Historique</a></li>-->
             </ul>
         </div>
     </div>
