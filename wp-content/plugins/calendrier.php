@@ -2138,14 +2138,10 @@ function multiFilter()
 
 function preFilter()
 {
-
-    $type_get = $_GET['type'];
-
+    $type_get       = $_GET['type'];
     $table          = queryAllDate();
     $table          = array_filter_by_value($table,'type', $type_get);
-
     displayAjax($table);
-
 }
 
 ?>

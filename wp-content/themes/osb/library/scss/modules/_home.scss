@@ -716,10 +716,32 @@ RESPONSIVE
     height: auto;
 
   }
+  .calendar{
+    #selector{
+      display: none;
+    }
+  }
+  .call_to_action{
+    .contenu_grid{
+      #slider_callto{
+        width: inherit;
+        .slideshow{
+          width: inherit;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
   .top_landing {
     display: none;
+  }
+  .date_slider{
+    padding-top: 35px;
+    padding-left: 35px;
+    .artiste{
+      font-size: 50px;
+    }
   }
 }
