@@ -60,7 +60,7 @@ Template Name: Page d'Accueil
                     </div>
                     <div class="img_hover" style="background-image: url('<? echo $values['image_vignette'] ?>')">
                         <a href="<? echo $values['link']; ?>" class="link_calendrier">EN SAVOIR +</a>
-                        <a class="bot_date <? echo $btn_color; ?>" href="<? echo $values['lien_billeterie'] ?>" target="_blank">Réserver</a>
+                        <a class="bot_date <? echo $btn_color; ?>" href="<? the_permalink($values['id_calendrier']) ?>#date" target="_blank">Réserver</a>
                     </div>
                     <?
                     echo '</li>';
