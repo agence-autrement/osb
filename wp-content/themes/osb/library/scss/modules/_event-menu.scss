@@ -43,7 +43,7 @@
 .header {
   &__logo {
     position: absolute;
-    bottom:50px;
+    bottom:15px;
     right:15px;
     &__img {
 
@@ -54,6 +54,7 @@
     position: absolute;
     bottom: 9px;
     left: 38px;
+    color:#fff;
     font-size: 4rem;
     text-transform: uppercase;
     font-weight: 200;
