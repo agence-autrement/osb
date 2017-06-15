@@ -280,7 +280,7 @@ function displayAjax( $array )
                     ?>
                 </div>
                 <div class="titre"><? echo $values['titre_calendrier']; ?></div>
-                <a href="<? the_permalink($values['id_calendrier']) ?>>" class="link_calendrier">EN SAVOIR +</a>
+                <a href="<? the_permalink($values['id_calendrier']) ?>" class="link_calendrier">EN SAVOIR +</a>
             </div>
             <div class="right_date">
                 <div class="date_jours">
