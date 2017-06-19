@@ -3,408 +3,339 @@
   /////////////////////////  SLIDER HAUT DE PAGE
 
   .top_page_action {
-    padding: 180px 35px 35px;
-    height: 710px;
-    width: 100%;
-    -webkit-background-size: cover;
-    background-size: cover;
     background: darkslategrey no-repeat;
-  }
 
-  .index {
-    margin-bottom: 25px;
-  }
-
-  .li_index {
-    font-size: 12px;
-    color: #ED1E24;
-  }
-
-  .title {
-    font-size: 60px;
-    margin-bottom: 15px;
-    color: white;
-    font-family: $font2;
-    span {
-      color: #8BD2D2;
-    }
-  }
-
-  .tag {
-    font-size: 12px;
-    text-transform: uppercase;
-    overflow: hidden;
-    div {
-      display: inline-block;
-      float: left;
+    li {
+      color: #ED1E24;
     }
   }
 
   .btn_red {
-    cursor: pointer;
-    padding: 5px 10px;
     background-color: #8BD2D2;
-    color: white;
-    font-weight: 700;
   }
 
-  .btn_savoir_plus {
-    display: block;
-    position: relative;
-    padding: 5px 10px;
-    cursor: pointer;
-    color: white;
-    &:after {
-      content: '';
-      position: absolute;
-      background-color: white;
-      bottom: 0;
-      left: 10px;
-      width: 0;
-      height: 1px;
-      @include transition(0.6s);
-    }
-    &:hover {
-      font-weight: inherit;
+  .poles--first {
+    padding: 7rem 0;
+
+    &__left {
+      width: 50%;
+      float: left;
+      padding: 0 15px;
+      position: relative;
+      text-align: center;
       &:after {
-        width: 70px;
+        background-image: url(../images/croix_bleu.svg);
+        height: 40px;
+        width: 40px;
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -39px;
+        right: 38px;
       }
     }
-  }
 
-  .intro_text {
-    font-size: 12px;
-    max-width: 320px;
-    margin-top: 15px;
-    color: white;
-
-    p {
+    &__right {
+      float: right;
+      width: 50%;
+      padding: 0 40px;
       text-align: justify;
+
     }
-  }
-}
 
-.poles--first {
-  padding: 7rem 0;
+    &__img {
+      width: 350px;
 
-  &__left {
-    width: 50%;
-    float: left;
-    padding: 0 15px;
-    position: relative;
-    text-align: center;
-    &:after {
-      background-image: url(../images/croix_bleu.svg);
-      height: 40px;
-      width: 40px;
-      content: '';
-      display: block;
-      position: absolute;
-      bottom: -39px;
-      right: 38px;
     }
-  }
 
-  &__right {
-    float: right;
-    width: 50%;
-    padding: 0 40px;
-    text-align: justify;
-
-  }
-
-  &__img {
-    width: 350px;
-
-  }
-
-  &__title {
-    font-size: 1.4rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    position: relative;
-
-    span {
-      background-image: url(../images/croix_noir.svg);
-      height: 15px;
-      width: 15px;
-      display: block;
-      position: absolute;
-      top: -12px;
-      left: -18px;
-    }
-  }
-
-  &__text {
-    font-size: 1.4rem;
-    font-weight: 300;
-    margin-bottom: 30px;
-
-  }
-}
-
-.poles--second {
-  padding: 7rem 0;
-  background-color: #8BD2D2;
-
-  &__left {
-    width: 50%;
-    float: right;
-    padding: 0 15px;
-    position: relative;
-    text-align: center;
-    &:after {
-      background-image: url(../images/croix_blanche.svg);
-      height: 40px;
-      width: 40px;
-      content: '';
-      display: block;
-      position: absolute;
-      bottom: -39px;
-      left: 38px;
-    }
-  }
-
-  &__right {
-    float: left;
-    width: 50%;
-    padding: 0 40px;
-    text-align: justify;
-
-  }
-
-  &__img {
-    width: 350px;
-
-  }
-
-  &__title {
-    font-size: 1.4rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    position: relative;
-
-    span {
-      background-image: url(../images/croix_noir.svg);
-      height: 15px;
-      width: 15px;
-      display: block;
-      position: absolute;
-      top: -12px;
-      left: -18px;
-    }
-  }
-
-  &__text {
-    font-size: 1.4rem;
-    font-weight: 300;
-    margin-bottom: 30px;
-
-  }
-}
-
-// Vignettes
-
-.poles-fiche {
-
-  background-color: #F5F3F3;
-  padding: 3rem 0;
-  &__item {
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 275px;
-    position: relative;
-    min-height: 150px;
-    cursor: auto !important;
-    margin: 0 auto;
-    font-family: $font2;
-    font-weight: 400;
-
-    .link_calendrier {
-      position: absolute;
-      bottom: 10px;
-      font-size: 11px;
+    &__title {
+      font-size: 1.4rem;
       font-weight: 300;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      position: relative;
 
-      &:hover {
+      span {
+        background-image: url(../images/croix_noir.svg);
+        height: 15px;
+        width: 15px;
+        display: block;
+        position: absolute;
+        top: -12px;
+        left: -18px;
+      }
+    }
+
+    &__text {
+      font-size: 1.4rem;
+      font-weight: 300;
+      margin-bottom: 30px;
+
+    }
+  }
+
+  .poles--second {
+    padding: 7rem 0;
+    background-color: #8BD2D2;
+
+    &__left {
+      width: 50%;
+      float: right;
+      padding: 0 15px;
+      position: relative;
+      text-align: center;
+      &:after {
+        background-image: url(../images/croix_blanche.svg);
+        height: 40px;
+        width: 40px;
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -39px;
+        left: 38px;
+      }
+    }
+
+    &__right {
+      float: left;
+      width: 50%;
+      padding: 0 40px;
+      text-align: justify;
+
+    }
+
+    &__img {
+      width: 350px;
+
+    }
+
+    &__title {
+      font-size: 1.4rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      position: relative;
+
+      span {
+        background-image: url(../images/croix_noir.svg);
+        height: 15px;
+        width: 15px;
+        display: block;
+        position: absolute;
+        top: -12px;
+        left: -18px;
+      }
+    }
+
+    &__text {
+      font-size: 1.4rem;
+      font-weight: 300;
+      margin-bottom: 30px;
+
+    }
+  }
+
+  // Vignettes
+
+  .poles-fiche {
+
+    background-color: #F5F3F3;
+    padding: 3rem 0;
+    &__item {
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 275px;
+      position: relative;
+      min-height: 150px;
+      cursor: auto !important;
+      margin: 0 auto;
+      font-family: $font2;
+      font-weight: 400;
+
+      .link_calendrier {
+        position: absolute;
+        bottom: 10px;
+        font-size: 11px;
+        font-weight: 300;
+
+        &:hover {
+
+          &:after {
+            width: 55px;
+
+          }
+        }
 
         &:after {
-          width: 55px;
+          content: '';
+          position: absolute;
+          background-color: white;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 1px;
+          -webkit-transition: 0.6s;
+          -khtml-transition: 0.6s;
+          -moz-transition: 0.6s;
+          -ms-transition: 0.6s;
+          -o-transition: 0.6s;
+          transition: 0.6s;
 
         }
       }
 
-      &:after {
+      .left_date {
+        width: 70%;
+        float: left;
+        color: white;
+        padding: 10px 0 0 10px;
+      }
+
+      .right_date {
+        width: 25%;
+        float: left;
+        color: white;
+        text-align: center;
+        position: relative;
+      }
+
+      .right_date:before {
         content: '';
         position: absolute;
+        left: -4px;
+        top: 6px;
+        height: 46px;
+        width: 1px;
         background-color: white;
-        bottom: 0;
-        left: 0;
-        width: 0;
-        height: 1px;
-        -webkit-transition: 0.6s;
-        -khtml-transition: 0.6s;
-        -moz-transition: 0.6s;
-        -ms-transition: 0.6s;
-        -o-transition: 0.6s;
-        transition: 0.6s;
+        -webkit-transform: rotate(30deg);
+        -moz-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+        -o-transform: rotate(30deg);
+        transform: rotate(30deg);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711)";
+        filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711);
+      }
 
+      .bot_date {
+        position: absolute;
+        bottom: 10px;
+        right: 12px;
+        color: #000;
+        text-transform: uppercase;
+        font-family: Kanit;
+        font-size: 10px;
+        font-weight: 600;
+        padding: 4px 7px;
+
+      }
+
+      .bot_date--yellow {
+        background-color: #F0D504;
+      }
+
+      .bot_date--green {
+        background-color: #97B421;
+      }
+
+      .bot_date--blue {
+        background-color: #44B4BD;
+      }
+
+      .type {
+        font-weight: 200;
+        font-size: 10px;
+        color: #F0D504;
+      }
+
+      .type--green {
+        color: #97B421;
+      }
+
+      .type--blue {
+        color: #44B4BD;
+      }
+
+      .titre {
+        line-height: 13px;
+        font-size: 13px;
+        text-transform: uppercase;
+      }
+
+      .artiste {
+        font-size: 11px;
+        font-style: italic;
+        font-weight: 200;
+      }
+
+      .date_jours {
+        font-weight: 300;
+        font-size: 22px;
+        font-family: Kanit;
+        padding: 9px 0 0;
+        line-height: 20px;
+      }
+
+      .date_mois {
+        font-family: Kanit;
+        font-size: 10px;
+      }
+
+      .lieu {
+        line-height: 9px;
+        font-family: Kanit;
+        font-size: 10px;
+        font-weight: 200;
+        font-style: italic;
+      }
+
+      .img_hover {
+        -webkit-background-size: auto 200px;
+        background-size: auto 200px;
+        width: 100%;
+        height: 0;
+        -webkit-transition: 0.3s;
+        -khtml-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+      }
+
+      .savoir_plus_calendrier {
+        padding-top: 126px;
       }
     }
 
-    .left_date {
-      width: 70%;
-      float: left;
-      color: white;
-      padding: 10px 0 0 10px;
-    }
-
-    .right_date {
-      width: 25%;
-      float: left;
-      color: white;
-      text-align: center;
-      position: relative;
-    }
-
-    .right_date:before {
-      content: '';
-      position: absolute;
-      left: -4px;
-      top: 6px;
-      height: 46px;
-      width: 1px;
-      background-color: white;
-      -webkit-transform: rotate(30deg);
-      -moz-transform: rotate(30deg);
-      -ms-transform: rotate(30deg);
-      -o-transform: rotate(30deg);
-      transform: rotate(30deg);
-      -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711)";
-      filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711);
-    }
-
-    .bot_date {
-      position: absolute;
-      bottom: 10px;
-      right: 12px;
-      color: #000;
-      text-transform: uppercase;
-      font-family: Kanit;
-      font-size: 10px;
-      font-weight: 600;
-      padding: 4px 7px;
-
-    }
-
-    .bot_date--yellow {
-      background-color: #F0D504;
-    }
-
-    .bot_date--green {
-      background-color: #97B421;
-    }
-
-    .bot_date--blue {
-      background-color: #44B4BD;
-    }
-
-    .type {
-      font-weight: 200;
-      font-size: 10px;
-      color: #F0D504;
-    }
-
-    .type--green {
-      color: #97B421;
-    }
-
-    .type--blue {
-      color: #44B4BD;
-    }
-
-    .titre {
-      line-height: 13px;
-      font-size: 13px;
-      text-transform: uppercase;
-    }
-
-    .artiste {
-      font-size: 11px;
-      font-style: italic;
-      font-weight: 200;
-    }
-
-    .date_jours {
-      font-weight: 300;
-      font-size: 22px;
-      font-family: Kanit;
-      padding: 9px 0 0;
-      line-height: 20px;
-    }
-
-    .date_mois {
-      font-family: Kanit;
-      font-size: 10px;
-    }
-
-    .lieu {
-      line-height: 9px;
-      font-family: Kanit;
-      font-size: 10px;
-      font-weight: 200;
-      font-style: italic;
-    }
-
-    .img_hover {
-      -webkit-background-size: auto 200px;
-      background-size: auto 200px;
-      width: 100%;
-      height: 0;
-      -webkit-transition: 0.3s;
-      -khtml-transition: 0.3s;
-      -moz-transition: 0.3s;
-      -ms-transition: 0.3s;
-      -o-transition: 0.3s;
-      transition: 0.3s;
-    }
-
-    .savoir_plus_calendrier {
-      padding-top: 126px;
-    }
   }
 
-}
+  .poles-more {
+    padding: 12rem 0;
+    background-image: url(../images/fd_map_gris.jpg);
+    background-size:cover;
+    background-position: center center;
+    &__text {
+      color: #86D9D8;
+      position: relative;
+      font-weight: 400;
+      text-align: center;
+      width:70%;
+      margin: 0 auto;
 
-.poles-more {
-  padding: 12rem 0;
-  background-image: url(../images/fd_map_gris.jpg);
-  background-size:cover;
-  background-position: center center;
-  &__text {
-    color: #86D9D8;
-    position: relative;
-    font-weight: 400;
-    text-align: center;
-    width:70%;
-    margin: 0 auto;
+      &:before {
+        background-image: url(../images/croix_bleu_clair.svg);
+        height: 18px;
+        width: 18px;
+        content: '';
 
-    &:before {
-      background-image: url(../images/croix_bleu_clair.svg);
-      height: 18px;
-      width: 18px;
-      content: '';
+        display: block;
+        position: absolute;
+        top:-50px;
+        left:50%;
+        transform: translateY(-50%);
+      }
 
-      display: block;
-      position: absolute;
-      top:-50px;
-      left:50%;
-      transform: translateY(-50%);
     }
-
   }
 }
 

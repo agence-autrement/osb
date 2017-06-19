@@ -1,117 +1,6 @@
 .page-template-page-saison{
 
-  .fiche__item{
-    width: 23.5%;
-  }
-
-
-.slider_saison{
-  height: 710px;
-  padding: 35px;
-  width: 100%;
-  background-color: #FFFFFF;
-}
-
-.slideshow2{
-  width: 100%;
-  height: 100%;
-  .slider{
-    height: 100%;
-      .slides{
-      width: 100%;
-      height: 100%;
-      -webkit-background-size:cover;
-      background-size:cover;
-    }
-  }
-}
-  .date_slider{
-    padding-left: 100px;
-    padding-top: 200px;
-    height: 100%;
-    color: #FFFFFF;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
-    ul{
-      overflow: hidden;
-      width: 100%;
-      margin-bottom: 25px;
-      .date_tr{
-        float: left;
-        font-family: $font2;
-        text-align: center;
-        margin-right: 40px;
-        width: 40px;
-        position: relative;
-        .jour{
-          font-size: 22px;
-          font-weight: 100;
-        }
-        .mois{
-          font-size: 10px;
-        }
-        .lieu{
-          font-size: 10px;
-          color: #F0D504;
-          font-style: italic;
-        }
-        &:before {
-          content: '';
-          position: absolute;
-          left: -12px;
-          top: 0px;
-          height: 46px;
-          width: 1px;
-          background-color: #FFFFFF;
-          -webkit-transform: rotate(30deg);
-          -moz-transform: rotate(30deg);
-          -ms-transform: rotate(30deg);
-          -o-transform: rotate(30deg);
-          transform: rotate(30deg);
-          -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711)";
-          filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711);
-        }
-      }
-    }
-    .thematique{
-      font-size: 10px;
-      font-weight: 400;
-      color: #F0D504;
-    }
-    .titre{
-      font-size: 19px;
-      font-weight: 400;
-    }
-    .artiste{
-      font-size: 76px;
-      font-weight: 100;
-    }
-    .bot_date {
-      bottom: 10px;
-      right: 12px;
-      color: #000;
-      text-transform: uppercase;
-      font-family: $font2;
-      font-size: 10px;
-      font-weight: 600;
-      padding: 4px 7px;
-      background-color: #F0D504;
-      margin-right: 20px;
-    }
-    .savoir_plus{
-      margin-right: 20px;
-      font-size: 10px;
-    }
-    .toute_rep{
-      font-size: 10px;
-      text-transform: uppercase;
-      font-weight: 500;
-    }
-
-  }
-
-  /* SELECT */
+  /////////////////////////  FILTRE SELECTOR
 
   .filtreSelector{
     margin-bottom: 35px;
@@ -204,12 +93,15 @@
     float: right;
     width: 100%;
     @include transition(0.3s);
+
     &.active{
       height: 234px;
     }
+
     &.developped{
       height: 1690px;
     }
+
     select{
       float: left;
       margin-left: 10px;
@@ -315,179 +207,13 @@
     cursor: pointer;
   }
 
+  /////////////////////////  RESULTAT FILTRÉ
+
   .resultat{
     padding: 35px;
-    .fiche {
-      background-color: #F5F3F3;
-      padding: 3rem 0;
-      &__item {
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: relative;
-        min-height: 150px;
-        cursor: auto !important;
-        font-family: $font2;
-        font-weight: 400;
-        float: left;
-        margin-right: 2%;
-        margin-bottom: 20px;
-        &:nth-of-type(4n){
-          margin-right: 0;
-        }
-
-        .link_calendrier {
-          position: absolute;
-          bottom: 10px;
-          font-size: 11px;
-          font-weight: 300;
-
-          &:hover {
-
-            &:after {
-              width: 55px;
-
-            }
-          }
-
-          &:after {
-            content: '';
-            position: absolute;
-            background-color: white;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 1px;
-            -webkit-transition: 0.6s;
-            -khtml-transition: 0.6s;
-            -moz-transition: 0.6s;
-            -ms-transition: 0.6s;
-            -o-transition: 0.6s;
-            transition: 0.6s;
-
-          }
-        }
-
-        .left_date {
-          width: 70%;
-          float: left;
-          color: white;
-          padding: 10px 0 0 10px;
-        }
-
-        .right_date {
-          width: 25%;
-          float: left;
-          color: white;
-          text-align: center;
-          position: relative;
-        }
-
-        .right_date:before {
-          content: '';
-          position: absolute;
-          left: 4px;
-          top: 6px;
-          height: 46px;
-          width: 1px;
-          background-color: white;
-          -webkit-transform: rotate(30deg);
-          -moz-transform: rotate(30deg);
-          -ms-transform: rotate(30deg);
-          -o-transform: rotate(30deg);
-          transform: rotate(30deg);
-          -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711)";
-          filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.70711, M12=0.70711, M21=-0.70711, M22=0.70711);
-        }
-
-        .bot_date {
-          position: absolute;
-          bottom: 10px;
-          right: 12px;
-          color: #000;
-          text-transform: uppercase;
-          font-family: Kanit;
-          font-size: 10px;
-          font-weight: 600;
-          padding: 4px 7px;
-
-        }
-
-        .bot_date--yellow {
-          background-color: #F0D504;
-        }
-
-        .bot_date--green {
-          background-color: #97B421;
-        }
-
-        .bot_date--blue {
-          background-color: #44B4BD;
-        }
-
-        .type {
-          font-weight: 200;
-          font-size: 10px;
-          color: #F0D504;
-        }
-
-        .type--green {
-          color: #97B421;
-        }
-
-        .type--blue {
-          color: #44B4BD;
-        }
-
-        .titre {
-          line-height: 13px;
-          font-size: 13px;
-          text-transform: uppercase;
-        }
-
-        .artiste {
-          font-size: 11px;
-          font-style: italic;
-          font-weight: 200;
-        }
-
-        .date_jours {
-          font-weight: 300;
-          font-size: 22px;
-          font-family: Kanit;
-          padding: 9px 0 0;
-          line-height: 20px;
-        }
-
-        .date_mois {
-          font-family: Kanit;
-          font-size: 10px;
-        }
-
-        .lieu {
-          line-height: 9px;
-          font-family: Kanit;
-          font-size: 10px;
-          font-weight: 200;
-          font-style: italic;
-        }
-
-        .img_hover {
-          -webkit-background-size: auto 200px;
-          background-size: auto 200px;
-          width: 100%;
-          height: 0;
-          -webkit-transition: 0.3s;
-          -khtml-transition: 0.3s;
-          -moz-transition: 0.3s;
-          -ms-transition: 0.3s;
-          -o-transition: 0.3s;
-          transition: 0.3s;
-        }
-
-        .savoir_plus_calendrier {
-          padding-top: 126px;
-        }
+    .fiche{
+      &__item{
+        width: 23.5%;
       }
     }
   }
@@ -499,16 +225,7 @@
     font-family: $font2;
   }
 
-  @media screen and (max-width: 1024px) {
-
-    .resultat{
-      .fiche{
-        &__item{
-          width: 48%;
-        }
-      }
-    }
-  }
+  /////////////////////////  RESPONSIVE
 
   @media screen and (max-width: 768px) {
     .date_slider{
@@ -542,7 +259,6 @@
           right: inherit;
           left: 134px;
         }
-
       }
       #clear_filters{
         float: none;
@@ -550,9 +266,25 @@
         margin-bottom: 15px;
       }
     }
-  }
 
-  @media screen and (max-width: 420px) {
+    #search_test.developped{
+      height: 920px;
+    }
 
+    #datepicker_content{
+      float: none;
+      width: 216px;
+      margin: 0 auto 35px;
+    }
+    
+    #compositeur{
+      display: none;
+    }
+    #instruments_tag{
+      display: none;
+    }
+    #artistes_tag{
+      display: none;
+    }
   }
 }

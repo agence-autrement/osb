@@ -9,7 +9,7 @@ Template Name: Page Mécénat
 
 <div id="content">
 
-    <section class="top_page_mecenat">
+    <section class="top_page_action">
         <div class="contenu_grid">
             <div class="title">Concerto, <br> <span>le cercle des amis de l'OSB</span></div>
             <div class="btn_savoir_plus"><a href="#rejoindre">En savoir +</a></div>

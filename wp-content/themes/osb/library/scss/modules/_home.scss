@@ -52,6 +52,7 @@ LANDING
       }
     }
   }
+
   .previous_btn_landing {
     position: absolute;
     height: 33px;
@@ -83,9 +84,7 @@ LANDING
       cursor: pointer;
     }
   }
-
 }
-
 
 .top_landing {
   position: absolute;
@@ -103,10 +102,12 @@ LANDING
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
+
   .ancienne_ul{
     overflow: hidden;
     width: 100%;
     margin-bottom: 25px;
+
     .date_tr{
       float: left;
       font-family: $font2;
@@ -114,18 +115,22 @@ LANDING
       margin-right: 40px;
       width: 40px;
       position: relative;
+
       .jour{
         font-size: 22px;
         font-weight: 100;
       }
+
       .mois{
         font-size: 10px;
       }
+
       .lieu{
         font-size: 10px;
         color: #F0D504;
         font-style: italic;
       }
+
       &:before {
         content: '';
         position: absolute;
@@ -144,19 +149,23 @@ LANDING
       }
     }
   }
+
   .thematique{
     font-size: 10px;
     font-weight: 400;
     color: #F0D504;
   }
+
   .titre{
     font-size: 19px;
     font-weight: 400;
   }
+
   .artiste{
     font-size: 76px;
     font-weight: 100;
   }
+
   .bot_date {
     bottom: 10px;
     right: 12px;
@@ -169,20 +178,18 @@ LANDING
     background-color: #F0D504;
     margin-right: 20px;
   }
+
   .savoir_plus{
     margin-right: 20px;
     font-size: 10px;
   }
+
   .toute_rep{
     font-size: 10px;
     text-transform: uppercase;
     font-weight: 500;
   }
-
 }
-
-
-
 
 //////// Vignettes
 
@@ -190,9 +197,8 @@ LANDING
   margin: 0;
   .fiche {
     &__item {
-      background-position: center center;
       background-size: cover;
-      background-repeat: no-repeat;
+      background: no-repeat center center;
       width: 23.5%;
       position: relative;
       min-height: 150px;
@@ -297,26 +303,25 @@ LANDING
       .date_jours {
         font-weight: 300;
         font-size: 22px;
-        font-family: Kanit;
+        font-family: $font2;
         padding: 9px 0 0;
         line-height: 20px;
       }
 
       .date_mois {
-        font-family: Kanit;
+        font-family: $font2;
         font-size: 10px;
       }
 
       .lieu {
         line-height: 9px;
-        font-family: Kanit;
+        font-family: $font2;
         font-size: 10px;
         font-weight: 200;
         font-style: italic;
       }
 
       .img_hover {
-
         width: 100%;
         height: 0;
         z-index: 5;
@@ -326,11 +331,10 @@ LANDING
         display: block;
         position: relative;
         -webkit-transition: 0.3s;
-        -khtml-transition: 0.3s;
         -moz-transition: 0.3s;
-        -ms-transition: 0.3s;
         -o-transition: 0.3s;
         transition: 0.3s;
+
         .link_calendrier {
           position: absolute;
           bottom: 10px;
@@ -340,10 +344,8 @@ LANDING
           color: #FFFFFF;
 
           &:hover {
-
             &:after {
               width: 55px;
-
             }
           }
 
@@ -356,9 +358,7 @@ LANDING
             width: 0;
             height: 1px;
             -webkit-transition: 0.6s;
-            -khtml-transition: 0.6s;
             -moz-transition: 0.6s;
-            -ms-transition: 0.6s;
             -o-transition: 0.6s;
             transition: 0.6s;
 
@@ -373,7 +373,6 @@ LANDING
       &:hover{
         .img_hover{
           height: 100%;
-
         }
       }
     }
@@ -397,7 +396,7 @@ CALL TO ACTION
 
 #left_callto {
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: $font2;
   width: 100%;
   position: relative;
   padding-top: 50px;
@@ -477,15 +476,18 @@ CALL TO ACTION
   padding: 0;
   display: block;
   overflow: hidden;
+
   ul {
     height: 186px;
     padding: 0;
     margin: 0;
+
     li {
       float: left;
       list-style-type: none;
       text-align: center;
       height: 100%;
+
       img {
         height: 100%;
         width: auto;
@@ -504,7 +506,6 @@ CALL TO ACTION
       }
     }
   }
-
 }
 
 .next_btn--home {
@@ -520,7 +521,6 @@ ARTICLES
 ***********************/
 
 #articles {
-  //height: 370px;
   width: 100%;
   padding: 35px;
   overflow: hidden;
@@ -593,9 +593,11 @@ ARTICLES
   height: 50%;
   padding: 15px;
   font-size: 12px;
+
   .extrait_2 {
     display: none;
   }
+
   .tarif {
     display: none;
   }
@@ -653,6 +655,7 @@ RESPONSIVE
   /*Slider*/
   #left_callto {
     height: auto;
+
     #slider_callto {
       float: none;
       position: inherit;
@@ -686,11 +689,30 @@ RESPONSIVE
     width: 50%;
     height: 100%;
     float: right;
+
     .extrait_2 {
       display: block;
     }
+
     .tarif {
       display: block;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .top_landing {
+    display: none;
+  }
+
+  .date_slider{
+    padding-top: 35px;
+    padding-left: 35px;
+
+    .artiste{
+      font-size: 50px;
     }
   }
 }
@@ -698,6 +720,30 @@ RESPONSIVE
 /*480px*/
 
 @media screen and (max-width: 480px) {
+  #landing{
+    height: 75vh;
+  }
+
+  .date_slider{
+    .ancienne_ul{
+      display: none;
+    }
+
+    .artiste{
+      font-size: 30px;
+    }
+
+    a{
+      &.bot_date{
+        margin-top: 25px;
+      }
+      &.toute_rep{
+        display: block;
+        margin-top: 25px;
+      }
+    }
+  }
+
   .footer_content {
     margin-top: 25px;
     margin-bottom: 25px;
@@ -705,43 +751,36 @@ RESPONSIVE
       display: none;
     }
   }
+
   .first_article_thumbnail, .second_article_thumbnail {
     display: none;
   }
+
   .first_article_content, .second_article_content {
     width: 100%;
   }
 
   #first_article {
     height: auto;
+  }
 
-  }
-  .calendar{
-    #selector{
-      display: none;
-    }
-  }
   .call_to_action{
     .contenu_grid{
       #slider_callto{
         width: inherit;
         .slideshow{
-          width: inherit;
+          height: 150px;
+          width: auto;
         }
       }
     }
-  }
-}
 
-@media screen and (max-width: 768px) {
-  .top_landing {
-    display: none;
-  }
-  .date_slider{
-    padding-top: 35px;
-    padding-left: 35px;
-    .artiste{
-      font-size: 50px;
+    .next_btn{
+      display: none;
+    }
+
+    .previous_btn{
+      display: none;
     }
   }
 }

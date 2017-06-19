@@ -8,9 +8,16 @@ jQuery(document).ready(function($) {
         $(value).css('display','inline');
         $(value).addClass('active');
 
-        $('#selector').addClass('full');
-        $('.gauche_select').addClass('full');
-        $('#resultAjax').addClass('full');
+        if ($(window).width() > 1024) {
+
+
+
+            $('#selector').addClass('full');
+            $('.gauche_select').addClass('full');
+            $('#resultAjax').addClass('full');
+
+        }
+
     });
 
     $('#close').on('click', function(){
