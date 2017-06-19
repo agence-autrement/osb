@@ -100,6 +100,7 @@ LANDING
   padding-top: 200px;
   height: 100%;
   color: #FFFFFF;
+  background-position: center;
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
@@ -522,7 +523,7 @@ ARTICLES
 #articles {
   //height: 370px;
   width: 100%;
-  padding: 35px;
+  padding: 35px 0;
   overflow: hidden;
 }
 
@@ -618,9 +619,10 @@ RESPONSIVE
   }
 }
 
-/*1024px*/
+/*1100px*/
 
 @media screen and (max-width: 1100px) {
+
 
   #content {
     margin-left: 0;
@@ -634,10 +636,21 @@ RESPONSIVE
   .top_landing {
     height: auto;
     padding-bottom: 35px;
-    width: 100%;
+
+    left:50%;
+    transform: translateX(-50%);
+    z-index:99;
+    width: 75%;
+
+
   }
 
   #calendrier_top {
+
+
+    .fiche__item {
+      width:30%;
+    }
     li {
       width: 90%;
       margin: 0 auto;
@@ -648,6 +661,7 @@ RESPONSIVE
         }
       }
     }
+
   }
 
   /*Slider*/
@@ -695,8 +709,25 @@ RESPONSIVE
   }
 }
 
-/*480px*/
+/*990px*/
 
+@media screen and (max-width: 990px) {
+
+
+  #calendrier_top {
+
+
+    .fiche__item {
+
+      width:42%;
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+}
+/*480px*/
 @media screen and (max-width: 480px) {
   .footer_content {
     margin-top: 25px;
@@ -738,7 +769,7 @@ RESPONSIVE
     display: none;
   }
   .date_slider{
-    padding-top: 35px;
+    padding-top: 120px;
     padding-left: 35px;
     .artiste{
       font-size: 50px;

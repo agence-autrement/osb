@@ -175,7 +175,7 @@ Event template
 
 
                                 elseif ($tprogCount % 2 == 0):
-                                    echo "<div class=\"event-program__grid--4\"><div class=\"event-program__item\"><h3 class=\"event-program__name\" >" . get_sub_field('nom_artiste') . "</h3><h4 class=\"event-program__subname\" >" . get_sub_field('sous_titre_artiste') . "</h4><a href=" . get_sub_field('en_savoir_plus_artiste') . " class=\"event-program__more\" >en savoir +</a></div></div>";
+                                    echo "<div class=\"event-program__grid--4\"><h3 class=\"event-program__name\" >" . get_sub_field('nom_artiste') . "</h3><h4 class=\"event-program__subname\" >" . get_sub_field('sous_titre_artiste') . "</h4><a href=" . get_sub_field('en_savoir_plus_artiste') . " \"\" class=\"event-program__more\" >en savoir +</a></div>";
 
 
                                 elseif ($tprogCount & 1 && $tprogCount > 2):

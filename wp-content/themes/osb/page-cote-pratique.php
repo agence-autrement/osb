@@ -34,7 +34,7 @@ Template Name: Page Cote Pratique
                 <div class="adress-rennes--right">
 
                     <div class="adress-rennes--right__inner">
-                        <h2 class="adress-rennes__title">Administratif</h2>
+                        <h2 class="adress-rennes__title">Billetterie</h2>
                         <h3 class="adress-rennes__name">Opera <br>de Rennes</h3>
                         <p class="adress-rennes__adress">
                             Place de la Mairie<br>

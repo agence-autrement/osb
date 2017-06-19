@@ -116,7 +116,6 @@ jQuery(document).ready(function ($) {
 
 
 
-
     /*
      * Smooth scroll
      */
@@ -127,7 +126,7 @@ jQuery(document).ready(function ($) {
     // Remove links that don't actually link to anything
         .not('[href="#"]')
         .not('[href="#0"]')
-        .click(function(event) {
+        .click(function (event) {
             // On-page links
             if (
                 location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
@@ -143,7 +142,7 @@ jQuery(document).ready(function ($) {
                     event.preventDefault();
                     $('html, body').animate({
                         scrollTop: target.offset().top
-                    }, 1000, function() {
+                    }, 1000, function () {
                         // Callback after animation
                         // Must change focus!
                         var $target = $(target);
@@ -151,14 +150,14 @@ jQuery(document).ready(function ($) {
                         if ($target.is(":focus")) { // Checking if the target was focused
                             return false;
                         } else {
-                            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
                             $target.focus(); // Set focus again
-                        };
+                        }
+                        ;
                     });
                 }
             }
         });
-
 
 
     /* SLIDER Partenaires */
@@ -176,16 +175,15 @@ jQuery(document).ready(function ($) {
     lastSlide_landing = $('.slideshow_landing .slider_landing li:last-child').html();
     class_slide = $('.slideshow_landing .slider_landing li:first-child').attr('class');
     largeurslider_landing = $('.slideshow_landing').width();
-    $('.slideshow_landing .slider_landing').append('<li class="'+ class_slide +'">' + firstSlide_landing + '</li>');
+    $('.slideshow_landing .slider_landing').append('<li class="' + class_slide + '">' + firstSlide_landing + '</li>');
     $('.slideshow_landing .slider_landing').prepend('<li>' + lastSlide_landing + '</li>');
     $('.slideshow_landing li').css('width', largeurslider_landing + 'px');
     $('.slideshow_landing .slider_landing').css('width', (largeurslider_landing * (nbVisuels_landing + 2)) + 'px');
     $('.slideshow_landing .slider_landing').css('margin-left', '-' + (largeurslider_landing) + 'px');
 
 
-
-    $(function(){
-        setInterval(function(){
+    $(function () {
+        setInterval(function () {
             if (visuelActif_landing <= nbVisuels_landing) {
                 $('.slideshow_landing .slider_landing').animate({'margin-left': '-' + ((visuelActif_landing) * largeurslider_landing) + 'px'}, 800, function () {
                     visuelActif_landing++;
@@ -218,8 +216,8 @@ jQuery(document).ready(function ($) {
     $('.slideshow .slider').css('width', (largeurslider * (nbVisuels + 2)) + 'px');
     $('.slideshow .slider').css('margin-left', '-' + (largeurslider) + 'px');
 
-    $(function(){
-        setInterval(function(){
+    $(function () {
+        setInterval(function () {
             if (visuelActif <= nbVisuels) {
                 $('.slideshow .slider').animate({'margin-left': '-' + ((visuelActif) * largeurslider) + 'px'}, 800, function () {
                     visuelActif++;
@@ -505,8 +503,6 @@ jQuery(document).ready(function ($) {
     });
 
 
-
-
     /*
      *  Desktop Menu
      */
@@ -556,13 +552,12 @@ jQuery(document).ready(function ($) {
      *  Toogle Orchestre
      */
 
-   $('.musiciens__dep').on('click', function() {
+    $('.musiciens__dep').on('click', function () {
 
-       $('.musiciens__dep__items', this).toggle('fast');
-       $('.musiciens__dep__title__cross', this).toggle();
-       $('.musiciens__dep__title__arrow', this).toggle();
-       $('.musiciens__dep__separator', this).toggle();
-
+        $('.musiciens__dep__items', this).toggle('fast');
+        $('.musiciens__dep__title__cross', this).toggle();
+        $('.musiciens__dep__title__arrow', this).toggle();
+        $('.musiciens__dep__separator', this).toggle();
 
 
     });
@@ -573,7 +568,7 @@ jQuery(document).ready(function ($) {
     }
 
 
-        //Google Maps JS - Page Salle
+    //Google Maps JS - Page Salle
 
     //google.maps.event.trigger(map, 'resize');
 

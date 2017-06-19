@@ -67,8 +67,8 @@ Template Name: Page Cote Orchestre
 
                         <span class="musiciens__dep__title__cross musiciens__dep--first__title__cross">+</span>
                         <span class="musiciens__dep__title__arrow musiciens__dep--first__title__arrow"> <img
-                                                                                                             src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
-                                                                                                             alt=""></span>
+                                src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
+                                alt=""></span>
                     </h2>
                     <span class="musiciens__dep__separator musiciens__dep--first__separator"></span>
 
@@ -188,14 +188,13 @@ Template Name: Page Cote Orchestre
                         <li class="musiciens__dep__item">
 
                             <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/en_attente_visuel.jpg"
+                                 src="<?php echo get_template_directory_uri(); ?>/library/images/personne_floue.png"
                                  alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Jocelyne Lemée
 
                             </h3>
                         </li>
-
 
 
                         <li class="musiciens__dep__item">
@@ -350,7 +349,7 @@ Template Name: Page Cote Orchestre
                         <li class="musiciens__dep__item">
 
                             <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/en_attente_visuel.jpg"
+                                 src="<?php echo get_template_directory_uri(); ?>/library/images/personne_floue.png"
                                  alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Irène Clément
@@ -698,11 +697,96 @@ Template Name: Page Cote Orchestre
         <div class="contenu_grid">
             <div class="recru__inner">
 
+                <p class="recru__title">
+                    Violon supersoliste
+
+                </p>
+
+                <div class="recru__item">
+                    <p class="recru__item__title">
+                        Fiche individuelle d'inscription
+                    </p>
+
+                    <p class="recru__item__subtitle">
+                        A retourner au plus tard le vendredi 18 octobre 2017
+
+                    </p>
+
+                    <p class="recru__item__text">
+                        Violon super-soliste - Hors categorie - vendredi 27 et samedi 28 octobre 2017, 10h
+                    </p>
+
+                    <a id="postule-fr" class="btn recru__btn">Je postule</a>
+                </div>
+
+                <div class="recru__item">
+                    <p class="recru__item__title">
+                        Application form
+                    </p>
+
+                    <p class="recru__item__subtitle">
+                        Please return before Monday October 18th 2017
+
+                    </p>
+
+                    <p class="recru__item__text">
+                        Concertmaster - out of category - friday october 27th ans saturday october 28th.2017.10am
+                    </p>
+
+                    <a id="postule-uk" class="btn recru__btn">Apply</a>
+                </div>
+
+
+                <div class="recru__fr">
+                    <? echo do_shortcode('[contact-form-7 id="650" title="Contact form Recrutement"]
+'); ?>
+
+
+                    <div class="recru__docs">
+                        <a href="#" class="recru__doc">Fiche d'inscription violon supersoliste</a>
+                        <a href="#" class="recru__doc">Fiche d'inscription violon supersoliste</a>
+                        <a href="#" class="recru__doc">Fiche d'inscription violon supersoliste</a>
+                    </div>
+                </div>
+
+                <div class="recru__uk">
+                    <? echo do_shortcode('[contact-form-7 id="650" title="Contact form Recrutement"]
+'); ?>
+
+
+                    <div class="recru__docs">
+                        <a href="#" class="recru__doc">Fiche d'inscription violon supersoliste</a>
+                        <a href="#" class="recru__doc">Fiche d'inscription violon supersoliste</a>
+                        <a href="#" class="recru__doc">Fiche d'inscription violon supersoliste</a>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </section>
 
 
 </div>
+
+<script>
+    jQuery(document).ready(function ($) {
+
+        $('#postule-fr').on('click', function () {
+            $('.recru__uk').hide();
+            $('.recru__fr').show();
+
+        })
+
+        $('#postule-uk').on('click', function () {
+            $('.recru__fr').hide();
+            $('.recru__uk').show();
+
+        })
+    });
+
+
+
+</script>
 
 <?php get_footer(); ?>

@@ -141,36 +141,6 @@ Template Name: Page Cote orga
 
                 <div class="musiciens__dep">
                     <h2 class="musiciens__dep__title">
-                        Mécenat
-                        <span class="musiciens__dep__title__cross">+</span>
-                            <span class="musiciens__dep__title__arrow"><img
-                                    src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
-                                    alt=""></span>
-                    </h2>
-                    <span class="musiciens__dep__separator"></span>
-                    <ul class="musiciens__dep__items">
-                        <li class="musiciens__dep__item">
-
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/caroline_tith.png"
-                                 alt="">
-                            <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">
-                                Caroline Tith
-                            </h3>
-                            <h4 class="musiciens__dep__item__fct">
-                                Responsable du développement et des partenariats
-                            </h4>
-                        </li>
-
-
-                    </ul>
-
-
-                </div>
-
-
-                <div class="musiciens__dep">
-                    <h2 class="musiciens__dep__title">
                         Administration artistique et technique
                         <span class="musiciens__dep__title__cross">+</span>
                      <span class="musiciens__dep__title__arrow"><img
@@ -255,7 +225,7 @@ Template Name: Page Cote orga
 
                 <div class="musiciens__dep">
                     <h2 class="musiciens__dep__title">
-                        Communication
+                        Communication & Mécénat
                         <span class="musiciens__dep__title__cross">+</span>
                        <span class="musiciens__dep__title__arrow"><img
                                src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
@@ -263,16 +233,17 @@ Template Name: Page Cote orga
                     </h2>
                     <span class="musiciens__dep__separator"></span>
                     <ul class="musiciens__dep__items">
+
                         <li class="musiciens__dep__item">
 
                             <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/camille_ceysson.png"
+                                 src="<?php echo get_template_directory_uri(); ?>/library/images/caroline_tith.png"
                                  alt="">
                             <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">
-                                Camille Ceysson
+                                Caroline Tith
                             </h3>
                             <h4 class="musiciens__dep__item__fct">
-                                Chargée de la communication, relations publiques, partenaires et médias
+                                Responsable du développement et des partenariats
                             </h4>
                         </li>
 
@@ -288,11 +259,24 @@ Template Name: Page Cote orga
                                 Chargée de l’accueil-billetterie – développement des publics
                             </h4>
                         </li>
+                        <li class="musiciens__dep__item">
+
+                            <img class="musiciens__dep__item__img"
+                                 src="<?php echo get_template_directory_uri(); ?>/library/images/camille_ceysson.png"
+                                 alt="">
+                            <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">
+                                Camille Ceysson
+                            </h3>
+                            <h4 class="musiciens__dep__item__fct">
+                                Chargée de la communication, relations publiques, partenaires et médias
+                            </h4>
+                        </li>
+
 
                         <li class="musiciens__dep__item">
 
                             <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/julie_mercier.png"
+                                 src="<?php echo get_template_directory_uri(); ?>/library/images/personne_floue.png"
                                  alt="">
                             <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">
                                 Julie Mercier
@@ -301,6 +285,7 @@ Template Name: Page Cote orga
                                 Assistante action culturelle – communication
                             </h4>
                         </li>
+
                     </ul>
 
 
