@@ -266,4 +266,25 @@ RESPONSIVE
       }
     }
   }
+
+  /***** 480 *****/
+
+  @media screen and (max-width: 480px) {
+    .date_finale{
+      height: 380px;
+      .contenu_grid{
+        top: 100px;
+      }
+    }
+    .red_cross{
+      height: 25px;
+      width: 25px;
+    }
+    .timeline{
+      &:before{
+        left: 23px;
+      }
+    }
+  }
+
 }
