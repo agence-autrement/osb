@@ -67,8 +67,8 @@ Template Name: Page Cote Orchestre
 
                         <span class="musiciens__dep__title__cross musiciens__dep--first__title__cross">+</span>
                         <span class="musiciens__dep__title__arrow musiciens__dep--first__title__arrow"> <img
-                                                                                                             src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
-                                                                                                             alt=""></span>
+                                src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
+                                alt=""></span>
                     </h2>
                     <span class="musiciens__dep__separator musiciens__dep--first__separator"></span>
 
@@ -188,7 +188,7 @@ Template Name: Page Cote Orchestre
                         <li class="musiciens__dep__item">
 
                             <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/en_attente_visuel.jpg"
+                                 src="<?php echo get_template_directory_uri(); ?>/library/images/personne_floue.png"
                                  alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Jocelyne Lemée
@@ -350,7 +350,7 @@ Template Name: Page Cote Orchestre
                         <li class="musiciens__dep__item">
 
                             <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/en_attente_visuel.jpg"
+                                 src="<?php echo get_template_directory_uri(); ?>/library/images/personne_floue.png"
                                  alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Irène Clément
@@ -703,6 +703,123 @@ Template Name: Page Cote Orchestre
     </section>
 
 
+    <section class="section-recru">
+        <div class="contenu_grid">
+            <div class="recru__inner">
+
+                <p class="recru__title">
+                    Violon supersoliste / Konzertmeister
+
+                </p>
+
+                <div class="recru__item">
+                    <p class="recru__item__title">
+                        Fiche individuelle d'inscription
+                    </p>
+
+
+
+                    <p class="recru__item__subtitle">
+                        L’Orchestre Symphonique de Bretagne recrute sur concours un violon supersoliste.
+
+                    </p>
+
+                    <p class="recru__item__subtitle">
+                        Date des épreuves : 27 & 28 octobre 2017 à Rennes, date limite d’inscription : 17 octobre 2017
+
+                    </p>
+
+                    <p class="recru__item__text">
+                        Inscription en ligne ou par retour du formulaire papier à l’adresse suivante : Orchestre Symphonique de Bretagne<br>42A rue Saint Melaine
+                        35108 <br>Rennes Cedex
+                    </p>
+
+                    <p class="recru__item__text">
+                        Renseignements : <a href="mailto:raymond@o-s-b.fr">raymond@o-s-b.fr</a>
+                    </p>
+
+                    <a id="postule-fr" class="btn recru__btn">Je postule</a>
+                </div>
+
+                <div class="recru__item">
+                    <p class="recru__item__title">
+                        Application form
+                    </p>
+
+
+
+                    <p class="recru__item__subtitle">
+                        The Orchestre Symphonique de Bretagne recruits through audition process a konzertmeister.
+
+                    </p>
+
+                    <p class="recru__item__subtitle">
+                        Audition will be set on the 27th and 28th of october, 2017 in Rennes. Please return your application form before the 13th of October.
+
+                    </p>
+
+                    <p class="recru__item__text">
+                        Apply online or by returning the form downloadable to the following address : Orchestre Symphonique de Bretagne<br>42A rue Saint Melaine
+                        35108 <br>Rennes Cedex
+                    </p>
+
+                    <p class="recru__item__text">
+                        Informations : <a href="mailto:raymond@o-s-b.fr">raymond@o-s-b.fr</a>
+                    </p>
+
+                    <a id="postule-uk" class="btn recru__btn">Apply</a>
+                </div>
+
+
+                <div class="recru__fr">
+                    <? echo do_shortcode('[contact-form-7 id="671" title="Contact form Recrutement fr"]'); ?>
+
+
+                    <div class="recru__docs">
+                        <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/2017-fiche-inscription-violon-super-solo.pdf" class="recru__doc">Fiche d'inscription violon supersoliste</a>
+                        <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/2017-reglement-concours-violon-super-solo.pdf" class="recru__doc">Règlement concours violon supersoliste</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="recru__uk">
+                <? echo do_shortcode('[contact-form-7 id="672" title="Contact form recrutement uk"]'); ?>
+
+
+                <div class="recru__docs">
+                    <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/2017-application-form-konzertmeister.pdf" class="recru__doc">Application Form Konzertmeister</a>
+                    <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/2017_notice-of-audition-konzertmeister.pdf" class="recru__doc">Notice of Audition Konzertmeister</a>
+                </div>
+            </div>
+
+
+        </div>
 </div>
+</section>
+
+
+</div>
+
+<script>
+    jQuery(document).ready(function ($) {
+
+
+        $('#postule-fr').on('click', function () {
+            $('.recru__uk').hide();
+            $('.recru__fr').show();
+
+        })
+
+        $('#postule-uk').on('click', function () {
+            $('.recru__fr').hide();
+            $('.recru__uk').show();
+
+        })
+    });
+
+
+
+</script>
 
 <?php get_footer(); ?>

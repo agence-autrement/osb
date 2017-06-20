@@ -122,7 +122,7 @@
                     <li id="saison"><a href="###">La saison</a></li>
                     <li id="decouvrir"><a href="###">Découvrir</a></li>
                     <li id="actions_culturelles"><a href="###">Action culturelle</a></li>
-                    <li><a target="_blank" href="https://indiv.themisweb.fr/0504/fProduitAutonome.aspx?idstructure=0504 ">Boutique</a></li>
+                    <li><a target="_blank" href="https://indiv.themisweb.fr/0504/fListeManifs.aspx?idstructure=0504">Boutique</a></li>
                 </ul>
             </nav>
             <a id="bouton_sidebar">Nous soutenir</a>

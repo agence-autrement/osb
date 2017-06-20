@@ -96,7 +96,7 @@ Template Name: Page Mentions legales
 
                         <p class="ml__text">
                             Conception+Réalisation: Agence Autrement - <a target="_blank" href="http://autrement.bzh">autrement.bzh</a><br>
-                            Photos : Nicolas Joubard
+                            Photos : <a target="_blank" href="http://www.joubard.com/">Nicolas Joubard</a>
 
                         <h3 class="ml__subtitle">
                             PHOTOS
@@ -106,7 +106,7 @@ Template Name: Page Mentions legales
                             +LA SAISON<br>
                             Photos : Droits réservés<br>
                             +CÔTÉ ORCHESTRE / CÔTÉ ORGANISATION<br>
-                            Photos : Nicolas Joubard<br>
+                            Photos : <a target="_blank" href="http://gaelleevellinphotographe.tumblr.com/">Gaëlle Evellin</a><br>
                         </p>
 
                         <h3 class="ml__subtitle">

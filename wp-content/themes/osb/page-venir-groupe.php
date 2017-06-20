@@ -20,7 +20,7 @@ Template Name: Page Venir en Groupe
                 centre social, une maison de retraite, une association à but socio-éducatif... et vous souhaitez
                 assister à un concert de l’OSB ?
                 <br><br>
-                Pour vous inscrire, remplissez le formulaire ci-dessous et validez. Merci d’y noter vous souhaits, nous
+                Pour vous inscrire, remplissez le formulaire ci-dessous et validez. Merci d’y noter vos souhaits, nous
                 reviendrons vers vous pour conﬁrmer la réservation en fonction des places disponibles.
             </div>
         </div>

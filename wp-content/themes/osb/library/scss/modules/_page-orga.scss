@@ -137,21 +137,6 @@ MEDIA QUERIES
 
 @media screen and (max-width: 767px) {
 
-  .section-orch {
-    padding:6rem 0 4rem;
-  }
-
-  .orch {
-    &--left, &--right {
-      margin: 0 0 1rem;
-      width: 100%;
-      height: 220px;
-    }
-  }
-
-  .section-orch-bg, .section-orch-sep {
-    padding: 3rem 0;
-  }
 
    .orga-sep, .orga-jac {
 

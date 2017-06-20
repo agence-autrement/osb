@@ -1,43 +1,36 @@
+<?php
+/*
+Template Name: 404
+*/
+?>
+
 <?php get_header(); ?>
 
-			<div id="content">
+<?php get_sidebar(); ?>
 
-				<div id="inner-content" class="wrap cf">
 
-					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+<div id="content">
 
-						<article id="post-not-found" class="hentry cf">
 
-							<header class="article-header">
+    <section class="ml">
 
-								<h1><?php _e( 'Epic 404 - Article Not Found', 'bonestheme' ); ?></h1>
+        <div class="ml__inner">
 
-							</header>
 
-							<section class="entry-content">
+            <h2 class="ml__title">
+                Page introuvable
+            </h2>
 
-								<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'bonestheme' ); ?></p>
+            <a href="<?php echo site_url() ?>" class="btn">Retourner à l'accueil</a>
 
-							</section>
 
-							<section class="search">
+        </div>
 
-									<p><?php get_search_form(); ?></p>
 
-							</section>
+</div>
 
-							<footer class="article-footer">
 
-									<p><?php _e( 'This is the 404.php template.', 'bonestheme' ); ?></p>
+</div>
 
-							</footer>
-
-						</article>
-
-					</main>
-
-				</div>
-
-			</div>
 
 <?php get_footer(); ?>

@@ -3,7 +3,7 @@
   padding: 11rem 0 8rem;
   background-image: url(../images/slide-cote-orga.jpg);
   background-position: center center;
-  background-size:cover;
+  background-size: cover;
 }
 
 .orch {
@@ -87,7 +87,7 @@
 
   background-image: url(../images/osb_musiciens.jpg);
   background-position: center center;
-  background-size:cover;
+  background-size: cover;
 
 }
 
@@ -213,8 +213,9 @@
     &__item {
       display: inline-block;
       width: 225px;
-      margin: 0 1.5rem 2rem;
+      margin: 0 1.5rem 3rem;
       border: 1px solid #DAD7CB;
+      vertical-align: top;
 
       &__img {
         height: 225px;
@@ -232,7 +233,7 @@
         font-family: $font2;
         font-weight: 400;
         &--orga {
-          margin:1rem 0 0;
+          margin: 1rem 0 0;
         }
 
       }
@@ -240,7 +241,7 @@
       &__fct {
         margin: 0rem 0 1rem;
         font-weight: 200;
-        padding:0 0.3rem;
+        padding: 0 0.3rem;
         font-size: 1.4rem;
         font-family: $font2;
       }
@@ -323,7 +324,7 @@
   padding: 6rem 0 22rem;
   background-image: url(../images/fd_recrutement.jpg);
   background-position: center center;
-  background-size:cover;
+  background-size: cover;
 }
 
 .orch-sep {
@@ -376,6 +377,204 @@
   }
 }
 
+.section-recru {
+  margin-top: 3rem;
+
+  .form {
+    margin-top: 2rem;
+    text-align: center;
+  }
+}
+
+.recru {
+
+  &__inner {
+
+    width: 80%;
+    margin: 0 auto;
+
+  }
+
+
+  &__title {
+    color: #E31F27;
+    font-family: "Montserrat";
+    font-weight: 200;
+    font-size: 2.5rem;
+    line-height: 2.6rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    margin-left: 3rem;
+    position: relative;
+
+    &__cross {
+      display: block;
+      color: #E31F27;
+      font-size: 4.5rem;
+      position: absolute;
+      top: -2px;
+      left: -2.8rem;
+    }
+
+    &__arrow {
+      color: #E31F27;
+      font-size: 4.5rem;
+      position: absolute;
+      top: -10px;
+      left: -2.8rem;
+      display: none;
+    }
+  }
+
+  &__fr, &__uk {
+    display: none;
+  }
+
+  &__item {
+    text-align: center;
+    border: 2px solid #E5E3DA;
+    margin: 1rem 2rem 5rem;
+    padding: 1.5rem 1rem;
+    float: left;
+    min-height: 350px;
+    width: 45%;
+    &__title {
+      font-size: 3.4rem;
+      line-height: 3.5rem;
+      position: relative;
+      font-family: $font2;
+      &:after {
+        position: absolute;
+        width: 50px;
+        bottom: -7px;
+        background-color: #C42D35;
+        height: 2px;
+        content: '';
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+    }
+
+    &__subtitle {
+      font-size: 1.4rem;
+      margin: 0;
+    }
+
+    &__text {
+      font-size: 1.4rem;
+      margin: 0;
+    }
+
+  }
+
+  &__btn {
+    margin: 2rem 0 0;
+  }
+
+  &__docs {
+    text-align: center;
+    margin-bottom:2rem;
+  }
+
+  &__doc {
+    width: 21%;
+    display: inline-block;
+    border: 1px solid #E5E3DA;
+    padding: 0.7rem;
+    color: #6E6E6E;
+  }
+
+  &__declar {
+    font-size: 1.2rem;
+    margin: 0.5rem 0 1rem;
+    background-color: #eee;
+    padding: 2rem;
+    text-align: justify;
+
+
+  }
+
+
+
+  &__entrain {
+    font-size: 1.2rem;
+    margin: 0 0 3rem;
+  }
+
+
+  &__form {
+    &__title {
+      font-size: 1.7rem;
+    }
+  }
+
+
+
+}
+
+.page-template-page-cote-orchestre .formulaire_left, .page-template-page-cote-orchestre .formulaire_right {
+  float: left;
+  width: 50%;
+
+  input {
+    width: 90%;
+  }
+}
+
+.page-template-page-cote-orchestre .formulaire_large {
+
+  input {
+    width: 95%;
+  }
+}
+
+.page-template-page-cote-orchestre .formulaire_center {
+
+  span, input {
+    margin-right: 1rem;
+  }
+  font-size: 1.2rem;
+
+}
+
+.page-template-page-cote-orchestre input {
+  background-color: #F5F5F3;
+  padding: 5px;
+  font-size: 12px;
+  border: none;
+  margin-bottom: 15px;
+
+}
+
+.page-template-page-cote-orchestre {
+
+  #inscrire {
+    font-size:15px;
+    padding:7px 10px;
+  }
+
+  .connai {
+    margin: 0 0 0.7rem;
+  }
+
+  .declar {
+    margin: 0 0 0.5rem;
+  }
+
+  .repet {
+    margin: 0;
+  }
+
+
+  .wpcf7-response-output.wpcf7-mail-sent-ok, .screen-reader-response {
+    text-align: center;
+    font-size: 19px;
+    margin: 3rem 0;
+  }
+
+}
+
 /******************************
 MEDIA QUERIES
 ******************************/
@@ -390,7 +589,16 @@ MEDIA QUERIES
     &--left, &--right {
       margin: 0 0 1rem;
       width: 100%;
-      height: 220px;
+      height: auto;
+      padding: 2rem 0 1rem;
+
+      &__inner {
+        position: relative;
+        transform: none;
+        top: inherit;
+        width: 100%;
+        left: inherit;
+      }
     }
   }
 
@@ -422,6 +630,12 @@ MEDIA QUERIES
 }
 
 @media screen and (max-width: 990px) and (min-width: 768px) {
+
+  .orch {
+    &--left, &--right {
+      width: 46%;
+    }
+  }
 
 }
 
