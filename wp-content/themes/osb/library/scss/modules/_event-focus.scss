@@ -107,7 +107,8 @@ MEDIA QUERIES
   .event-focus {
 
     &__inner {
-      margin: 0 auto;
+      overflow: hidden;
+      margin: 0 auto 35px;
       width: 90%;
     }
     &--right {

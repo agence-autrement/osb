@@ -568,6 +568,18 @@ jQuery(document).ready(function ($) {
     }
 
 
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 710) {
+            $('.sub_menu').addClass('fixed');
+        } else {
+            $('.sub_menu').removeClass('fixed');
+        }
+    });
+
+    $('.btn_don').on('click', function(){
+        $(this).parent().addClass('full_h');
+    });
+
     //Google Maps JS - Page Salle
 
     //google.maps.event.trigger(map, 'resize');

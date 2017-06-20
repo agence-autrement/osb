@@ -7,6 +7,7 @@ Template Name: Page Cote Orchestre
 <?php get_sidebar(); ?>
 
 <div id="content">
+    <!--
     <section class="section-orch">
         <div class="contenu_grid">
 
@@ -674,6 +675,7 @@ Template Name: Page Cote Orchestre
 
         </div>
     </section>
+    -->
 
     <section class="section-orch-sep" id="recrutement">
         <div class="contenu_grid">

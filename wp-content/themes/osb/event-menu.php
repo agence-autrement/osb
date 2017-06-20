@@ -25,6 +25,15 @@
                         <a href="#date">Dates / Billetterie</a>
                     </li>
 
+                    <? if(get_field('lien_precommande')){ ?>
+
+                        <li class="menu-event__item">
+                            <a href="<? the_field('lien_precommande') ?>">Précommander le CD</a>
+                        </li>
+
+
+                    <? }; ?>
+
 
 <!--                    <li class="menu-event__item">-->
 <!--                        <span>Partagez ce spectacle</span>-->

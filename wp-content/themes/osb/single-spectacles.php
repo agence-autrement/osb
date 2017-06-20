@@ -90,6 +90,7 @@ Event template
 
 
                                 </div>
+                                <div class="legende_photo"><? the_field('legende_photo') ?></div>
 
 
                             </div>
@@ -199,7 +200,6 @@ Event template
                         <p class="event-focus__title section-event-title">// Focus sur //
                         </p>
 
-
                         <div class="event-focus__inner">
                             <div class="event-focus--left">
                                 <?php
@@ -222,6 +222,13 @@ Event template
                                     <a href="<?php echo get_field('en_savoir_plus'); ?>"
                                        class="event-focus__content__more">En savoir plus à propos
                                         de <?php echo get_field('titre_focus'); ?></a>
+
+                                    <? if(get_field('en_savoir_plus_bis')){ ?>
+                                        <a href="<?php echo get_field('en_savoir_plus_bis'); ?>"
+                                           class="event-focus__content__more">En savoir plus à propos
+                                            de <?php echo get_field('titre_focus'); ?>
+                                        </a>
+                                    <? } ?>
                                 </div>
 
                             </div>
@@ -259,7 +266,7 @@ Event template
                                              src="<?php echo $imgPart['url']; ?>"
                                              alt=""></a>
                                         <p class="event-partners__item__text vcenter">
-                                            En partenariat avec<br>
+                                            <? the_field('type_partenariat'); ?><br>
                                             <?php
 
                                             // check if the repeater field has rows of data

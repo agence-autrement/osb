@@ -60,7 +60,7 @@ Template Name: Page Mécénat
                 <li class="plus">+</li>
                 <li>Mention de votre nom dans les remerciements publiés sur notre site web</li>
             </ul>
-            <div class="btn_don"><a href="<?php echo site_url('adhesion-en-ligne-ami') ?>">Adhérer</a></div>
+            <div class="btn_don">En savoir +</div>
             <div class="hover_don formule">
                 <div class="encadre">Votre Adhésion comprend</div>
                 <ul>
@@ -84,7 +84,7 @@ Template Name: Page Mécénat
                 <li class="plus">+</li>
                 <li>… d’autres surprises tout au long de l’année…</li>
             </ul>
-            <div class="btn_don"><a href="###">Adhérer</a></div>
+            <div class="btn_don">En savoir +</div>
             <div class="hover_don formule">
                 <div class="encadre">Votre Adhésion comprend</div>
                 <ul>

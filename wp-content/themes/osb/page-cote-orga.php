@@ -262,6 +262,18 @@ Template Name: Page Cote orga
                         <li class="musiciens__dep__item">
 
                             <img class="musiciens__dep__item__img"
+                                 src="<?php echo get_template_directory_uri(); ?>/library/images/johan_dargel.png"
+                                 alt="">
+                            <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">
+                                Johan Dargel
+                            </h3>
+                            <h4 class="musiciens__dep__item__fct">
+                                Billetterie
+                            </h4>
+                        </li>
+                        <li class="musiciens__dep__item">
+
+                            <img class="musiciens__dep__item__img"
                                  src="<?php echo get_template_directory_uri(); ?>/library/images/camille_ceysson.png"
                                  alt="">
                             <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">

@@ -100,6 +100,12 @@
       width: 80%;
       margin: 0 auto;
     }
+    &.full_h{
+      .hover_don{
+        height: 100%;
+        top:0;
+      }
+    }
   }
 
   .encadre{
@@ -144,6 +150,7 @@
     margin-top: 70px;
     padding: 5px;
     text-transform: uppercase;
+    cursor: pointer;
     a{
       display: block;
       height: 100%;
@@ -157,11 +164,6 @@
     background-color: #F5F3F3;
     overflow: hidden;
     position: relative;
-    &:hover{
-      .hover_don{
-        opacity: 1;
-      }
-    }
 
     .titre:after{
       background-color: #EBD519;
@@ -212,11 +214,13 @@
   .hover_don{
     background-color: #EBD519;
     position: absolute;
-    top: 0;
+    top: -35px;
     left: 0;
-    opacity: 0;
     width: 100%;
-    height: 100%;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    padding-top: 35px;
     @include transition(0.3s);
 
     .encadre{
