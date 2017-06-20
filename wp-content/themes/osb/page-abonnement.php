@@ -24,9 +24,9 @@ Template Name: Page Abonnement
                 <div class="sous_titre_cadre">L'OSB en illimité</div>
             </div>
             <ul>
-                <li><b>Pour 300€</b>, accédez à l'ensemble des 20 concerts de la saison</li>
+                <li><b>Pour 300€</b>, accédez à l'ensembledes 20 concerts de la saison.</li>
             </ul>
-            <div class="btn_don"><a href="###">S'abonner en ligne à partir du 20 juin</a></div>
+            <div class="btn_don"><a href="###">À réserver au guichet ou par courrier</a></div>
             <div class="hover_don formule">
                 <div class="encadre">Vos Avantages</div>
                 <ul>
@@ -40,7 +40,7 @@ Template Name: Page Abonnement
                     <li class="plus">+</li>
                     <li>Des réductions et offres spéciales chez nos partenaires<sup>(3)</sup></li>
                 </ul>
-                <div class="btn_don"><a target="_blank" href="#">S'abonner en ligne à partir du 20 juin</a></div>
+                <div class="btn_don"><a target="_blank" href="">À réserver au guichet ou par courrier</a></div>
             </div>
         </div>
         <div class="ami formule center">
@@ -52,7 +52,7 @@ Template Name: Page Abonnement
             <ul>
                 <li><b>POUR 35€</b>, bénéﬁciez de 50% de réduction sur l’ensemble des concerts de la saison. La réduction est valable dès le premier concert réservé, dès le mois de juin 2017 !</li>
             </ul>
-            <div class="btn_don"><a href="###">S'abonner en ligne à partir du 20 juin</a></div>
+            <div class="btn_don"><a href="###">S'abonner en ligne</a></div>
             <div class="hover_don formule">
                 <div class="encadre">Vos Avantages</div>
                 <ul>
@@ -66,7 +66,7 @@ Template Name: Page Abonnement
                     <li class="plus">+</li>
                     <li>Des réductions et offres spéciales chez nos partenaires<sup>(3)</sup></li>
                 </ul>
-                <div class="btn_don"><a target="_blank" href="#">S'abonner en ligne à partir du 20 juin</a></div>
+                <div class="btn_don"><a target="_blank" href="https://abo.themisweb.fr/0504/fUserLogin.aspx?idstructure=0504">S'abonner en ligne</a></div>
             </div>
         </div>
         <div class="ami formule">
@@ -78,7 +78,7 @@ Template Name: Page Abonnement
             <ul>
                 <li><b>À SEULEMENT 15€</b>, bénéﬁciez de 35% de réduction, sur l’ensemble des concerts de la saison. La réduction est valable dès le premier concert réservé, dès le mois de juin 2017 !</li>
             </ul>
-            <div class="btn_don"><a href="###">S'abonner en ligne à partir du 20 juin</a></div>
+            <div class="btn_don"><a href="###">S'abonner en ligne</a></div>
             <div class="hover_don formule">
                 <div class="encadre">Vos Avantages</div>
                 <ul>
@@ -86,13 +86,13 @@ Template Name: Page Abonnement
                     <li class="plus">+</li>
                     <li>Privilège de placement</li>
                     <li class="plus">+</li>
-                    <li>1 places offerte par saison<sup>(2)</sup>  pour la personne de votre choix</li>
+                    <li>2 places offertes par saison2 pour la personne de votre choix</li>
                     <li class="plus">+</li>
                     <li>1 disque offert dans la discographie de l’OSB</li>
                     <li class="plus">+</li>
                     <li>Des réductions et offres spéciales chez nos partenaires3</li>
                 </ul>
-                <div class="btn_don"><a target="_blank" href="#">S'abonner en ligne à partir du 20 juin</a></div>
+                <div class="btn_don"><a target="_blank" href="https://abo.themisweb.fr/0504/fUserLogin.aspx?idstructure=0504">S'abonner en ligne</a></div>
             </div>
         </div>
     </section>

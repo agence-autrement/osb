@@ -197,6 +197,7 @@ Template Name: Page Cote Orchestre
                         </li>
 
 
+
                         <li class="musiciens__dep__item">
 
                             <img class="musiciens__dep__item__img"
@@ -697,8 +698,17 @@ Template Name: Page Cote Orchestre
         <div class="contenu_grid">
             <div class="recru__inner">
 
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-recru">
+        <div class="contenu_grid">
+            <div class="recru__inner">
+
                 <p class="recru__title">
-                    Violon supersoliste
+                    Violon supersoliste / Konzertmeister
 
                 </p>
 
@@ -707,13 +717,25 @@ Template Name: Page Cote Orchestre
                         Fiche individuelle d'inscription
                     </p>
 
+
+
                     <p class="recru__item__subtitle">
-                        A retourner au plus tard le vendredi 18 octobre 2017
+                        L’Orchestre Symphonique de Bretagne recrute sur concours un violon supersoliste.
+
+                    </p>
+
+                    <p class="recru__item__subtitle">
+                        Date des épreuves : 27 & 28 octobre 2017 à Rennes, date limite d’inscription : 17 octobre 2017
 
                     </p>
 
                     <p class="recru__item__text">
-                        Violon super-soliste - Hors categorie - vendredi 27 et samedi 28 octobre 2017, 10h
+                        Inscription en ligne ou par retour du formulaire papier à l’adresse suivante : Orchestre Symphonique de Bretagne<br>42A rue Saint Melaine
+                        35108 <br>Rennes Cedex
+                    </p>
+
+                    <p class="recru__item__text">
+                        Renseignements : <a href="mailto:raymond@o-s-b.fr">raymond@o-s-b.fr</a>
                     </p>
 
                     <a id="postule-fr" class="btn recru__btn">Je postule</a>
@@ -724,13 +746,25 @@ Template Name: Page Cote Orchestre
                         Application form
                     </p>
 
+
+
                     <p class="recru__item__subtitle">
-                        Please return before Monday October 18th 2017
+                        The Orchestre Symphonique de Bretagne recruits through audition process a konzertmeister.
+
+                    </p>
+
+                    <p class="recru__item__subtitle">
+                        Audition will be set on the 27th and 28th of october, 2017 in Rennes. Please return your application form before the 13th of October.
 
                     </p>
 
                     <p class="recru__item__text">
-                        Concertmaster - out of category - friday october 27th ans saturday october 28th.2017.10am
+                        Apply online or by returning the form downloadable to the following address : Orchestre Symphonique de Bretagne<br>42A rue Saint Melaine
+                        35108 <br>Rennes Cedex
+                    </p>
+
+                    <p class="recru__item__text">
+                        Informations : <a href="mailto:raymond@o-s-b.fr">raymond@o-s-b.fr</a>
                     </p>
 
                     <a id="postule-uk" class="btn recru__btn">Apply</a>
@@ -738,39 +772,38 @@ Template Name: Page Cote Orchestre
 
 
                 <div class="recru__fr">
-                    <? echo do_shortcode('[contact-form-7 id="650" title="Contact form Recrutement"]
-'); ?>
+                    <? echo do_shortcode('[contact-form-7 id="671" title="Contact form Recrutement fr"]'); ?>
 
 
                     <div class="recru__docs">
-                        <a href="#" class="recru__doc">Fiche d'inscription violon supersoliste</a>
-                        <a href="#" class="recru__doc">Fiche d'inscription violon supersoliste</a>
-                        <a href="#" class="recru__doc">Fiche d'inscription violon supersoliste</a>
+                        <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/2017-fiche-inscription-violon-super-solo.pdf" class="recru__doc">Fiche d'inscription violon supersoliste</a>
+                        <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/2017-reglement-concours-violon-super-solo.pdf" class="recru__doc">Règlement concours violon supersoliste</a>
+
                     </div>
                 </div>
-
-                <div class="recru__uk">
-                    <? echo do_shortcode('[contact-form-7 id="650" title="Contact form Recrutement"]
-'); ?>
-
-
-                    <div class="recru__docs">
-                        <a href="#" class="recru__doc">Fiche d'inscription violon supersoliste</a>
-                        <a href="#" class="recru__doc">Fiche d'inscription violon supersoliste</a>
-                        <a href="#" class="recru__doc">Fiche d'inscription violon supersoliste</a>
-                    </div>
-                </div>
-
-
             </div>
+
+            <div class="recru__uk">
+                <? echo do_shortcode('[contact-form-7 id="672" title="Contact form recrutement uk"]'); ?>
+
+
+                <div class="recru__docs">
+                    <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/2017-application-form-konzertmeister.pdf" class="recru__doc">Application Form Konzertmeister</a>
+                    <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/2017_notice-of-audition-konzertmeister.pdf" class="recru__doc">Notice of Audition Konzertmeister</a>
+                </div>
+            </div>
+
+
         </div>
-    </section>
+</div>
+</section>
 
 
 </div>
 
 <script>
     jQuery(document).ready(function ($) {
+
 
         $('#postule-fr').on('click', function () {
             $('.recru__uk').hide();

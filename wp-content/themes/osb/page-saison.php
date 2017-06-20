@@ -34,7 +34,7 @@ Template Name: Page Saison
                 </select>
                 <select name="type" id="type" class="select_filter" size="15">
                     <option value="" class="first_opt">Type de spectacle</option>
-                    <option value="symphonique">Symphonique</option>
+                    <option value="symphonique" <? if($_GET == 'symphonique'){ echo 'selected'; } ?>>Symphonique</option>
                     <option value="musiq_de_chambre">Musique de chambre</option>
                     <option value="chant">Chant</option>
                     <option value="festival">Festival</option>
