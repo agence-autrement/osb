@@ -48,6 +48,21 @@ LANDING
         background-position: center top;
         &.first{
           background-image: url('../images/slider-saison2.jpg');
+          position: relative;
+          .content_slide{
+            position: absolute;
+            bottom: 350px;
+            width: 100%;
+            text-align: center;
+            .download_home{
+              background-color: #F0D504;
+              color: black;
+              padding: 5px 10px;
+              font-size: 15px;
+              font-weight: 500;
+              text-transform: uppercase;
+            }
+          }
         }
       }
     }
@@ -713,6 +728,14 @@ RESPONSIVE
 
     .artiste{
       font-size: 50px;
+    }
+  }
+  .content_slide{
+    position: relative;
+    .download_home{
+      width: 90%;
+      margin: 0 auto 25px;
+      display: block;
     }
   }
 }

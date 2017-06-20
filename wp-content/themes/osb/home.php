@@ -72,7 +72,12 @@ Template Name: Page d'Accueil
         </div>
         <div class="slideshow_landing">
             <ul class="slider_landing">
-                <li class="first"></li>
+                <li class="first">
+                    <div class="content_slide">
+                        <a href="<? bloginfo('template_url') ?>/library/images/OSB_Brochure1718_BD_96.pdf"" class="download_home">Télécharger la brochure</a>
+                        <a href="<? bloginfo('template_url') ?>/library/images/OSB_BULLETIN_ABONNEMENTS.pdf" class="download_home">Télécharger le bulletin d'abonnement</a>
+                    </div>
+                </li>
                 <? displayHomeEventSlide(); ?>
             </ul>
         </div>

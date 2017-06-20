@@ -24,7 +24,7 @@ Template Name: Page Abonnement
                 <div class="sous_titre_cadre">L'OSB en illimité</div>
             </div>
             <ul>
-                <li><b>Pour 300€</b>, accédez à l'ensembledes 20 concerts de la saison</li>
+                <li><b>Pour 300€</b>, accédez à l'ensembledes 20 concerts de la saison.</li>
             </ul>
             <div class="btn_don"><a href="###">À réserver au guichet ou par courrier</a></div>
             <div class="hover_don formule">
