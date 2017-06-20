@@ -89,7 +89,7 @@ Template Name: Page Action Culturelle
                                     </div>
                                 <? } ?>
                             </div>
-                            <? if ( have_rows('bouton_dinscription') ) { ?>
+                            <?/* if ( have_rows('bouton_dinscription') ) { ?>
                                 <? while ( have_rows('bouton_dinscription') ) : the_row(); ?>
                                     <div class="inscrire">
                                         <div class="ligne_un">
@@ -101,7 +101,7 @@ Template Name: Page Action Culturelle
                                         <div class="btn_inscription"><a href="#formulaire">Inscrire sa classe</a></div>
                                     </div>
                                 <? endwhile; ?>
-                            <? } ?>
+                            <? }*/ ?>
                         </div>
                     </div>
                 </section>
@@ -138,7 +138,7 @@ Template Name: Page Action Culturelle
                                     </div>
                                 <? } ?>
                             </div>
-                            <? if ( have_rows('bouton_dinscription') ) { ?>
+                            <? /*if ( have_rows('bouton_dinscription') ) { ?>
                                 <? while ( have_rows('bouton_dinscription') ) : the_row(); ?>
                                     <div class="inscrire">
                                         <div class="ligne_un">
@@ -150,7 +150,7 @@ Template Name: Page Action Culturelle
                                         <div class="btn_inscription"><a href="#formulaire">Inscrire sa classe</a></div>
                                     </div>
                                 <? endwhile; ?>
-                            <? } ?>
+                            <? } */?>
                         </div>
                     </div>
                 </section>

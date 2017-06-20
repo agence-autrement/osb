@@ -17,7 +17,7 @@ Template Name: Page Accessibilite
 
                 <div class="header-ressources__content">
                     <a href="#" class="header-ressources__btn btn">Culture Justice</a><span>+</span>
-                    <a href="#" class="header-ressources__btn btn">Culture santé</a>
+                    <a href="#" class="header-ressources__btn btn">Culture Santé</a>
                 </div>
             </div>
         </div>

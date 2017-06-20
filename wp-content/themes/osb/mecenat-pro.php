@@ -48,7 +48,7 @@ Template Name: Mecenat pro
         <h2 class="mec-avan__title">// Vos avantages //</h2>
         <div class="mec-avan__inner">
             <div class="mec-avan__item">
-                <h3 class="mec-avan__item__title">Des opportunités de relations publiques prestigieuse</h3>
+                <h3 class="mec-avan__item__title">Des opportunités de relations publiques prestigieuses</h3>
                 <p class="mec-avan__item__text">
                     NOUS SOMMES À VOTRE ÉCOUTE POUR IMAGINER UN PARTENARIAT SUR-MESURE ET PARTAGER AVEC VOS CLIENTS ET
                     COLLABORATEURS, DES MOMENTS EXCEPTIONNELS EN MUSIQUE :
@@ -142,7 +142,7 @@ Template Name: Mecenat pro
             <p class="mec-logo__title">// Ils sont membres de symphonia //</p>
 
             <div class="mec-logo__inner">
-                Méçène fondateur
+                Mécène fondateur
                 <ul class="mec-logo__items">
 
 
@@ -238,7 +238,7 @@ Template Name: Mecenat pro
                     </li>
 
                     <li class="mec-orga__items">
-                        Tariﬁcation préférentielle pour les réservations de groupe et les enregistrem ents (CD, DVD)…
+                        Tariﬁcation préférentielle pour les réservations de groupe et les enregistrements (CD, DVD)…
 
                     </li>
 

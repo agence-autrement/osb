@@ -629,7 +629,7 @@ function mon_action_theme()
 {
     global $_POST;
     $theme_event    = $_POST['theme'];
-    $table          = queryPosts();
+    $table          = queryEssentiels();
     $clear_table    = array_filter_by_value($table,'thematiques', $theme_event );
     $count          = count($clear_table);
 
@@ -661,11 +661,12 @@ function mon_action_type()
 {
     global $_POST;
     $type_event     = $_POST['type'];
-    $table          = queryPosts();
+    $table          = queryEssentiels();
     $clear_table    = array_filter_by_value($table,'type', $type_event );
     $count          = count($clear_table);
 
     if($count == 0){
+        echo 'pas de résultat';
         $table_zero         = removeElementWithInferiorValue($table,'date_calendrier',$delete_if_less);
         $sliced             = array_slice($table_zero, 0, 3);
     }elseif($count > 3){

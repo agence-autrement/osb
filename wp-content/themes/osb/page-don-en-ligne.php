@@ -11,7 +11,7 @@ Template Name: Page Don en ligne
 
     <section class="top_page_mecenat">
         <div class="contenu_grid">
-            <div class="title">Don en ligne <br> <span>soutnez les projets <br>de l'OSB</span></div>
+            <div class="title">Don en ligne <br> <span>soutenez les projets <br>de l'OSB</span></div>
 
         </div>
     </section>
@@ -31,7 +31,7 @@ Template Name: Page Don en ligne
                         <input type="text" id="calcul">
                         <li id="span__calc">Calculer</li>
 
-                        <li>Votre don apès défiscalisation ne vous coûtera que <b><span id="resCalc"></span>€</b></li>
+                        <li>Votre don après défiscalisation ne vous coûtera que <b><span id="resCalc"></span>€</b></li>
                     </ul>
 
 
