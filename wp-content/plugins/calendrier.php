@@ -510,6 +510,17 @@ function resultDateDefault()
 };
 
 
+///////////////////////////////// Affichage des événements Gastinel
+
+function resultDateGastinel()
+{
+    $table          = queryEssentiels();
+    $gastinel       = multi_array_filter_by_value($table, 'artistes_tag', 'anne_gastinel');
+    $sliced         = array_slice($gastinel, 0, 3);
+    displayAjax($sliced);
+    wp_reset_postdata();
+};
+
 
 
 /************************

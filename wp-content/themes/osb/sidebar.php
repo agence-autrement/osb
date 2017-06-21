@@ -42,7 +42,7 @@
                 <li><a href="<?php echo site_url('concerts-scolaires') ?>">Concerts Scolaires</a></li>
                 <li><a href="<?php echo site_url('venir-en-groupe') ?>">Venir en Groupe</a></li>
                 <li><a href="<?php echo site_url('les-poles') ?>">Les pôles</a></li>
-<!--                <li><a href="###">Conférences / Concerts</a></li>-->
+                <li><a href="<?php echo site_url('conference-concert') ?>">Conférences / Concerts</a></li>
                 <li><a href="<?php echo site_url('master-classes') ?>">Masterclasses</a></li>
                 <li><a href="<?php echo site_url('accessibilite') ?>">Accessibilité</a></li>
             </ul>
@@ -64,7 +64,7 @@
                 <li><a href="<?php echo site_url('saison') ?>?type=symphonique">Symphonique</a></li>
                 <li><a href="<?php echo site_url('jeune-public') ?>">Jeune Public</a></li>
                 <li><a href="<?php echo site_url('saison') ?>?type=musiq_de_chambre">Musique de Chambre</a></li>
-<!--                <li><a href="###">Artiste Invité</a></li>-->
+                <li><a href="<?php echo site_url('artistes-associes') ?>">Artiste Invité</a></li>
                 <li><a href="<?php echo site_url('orchestre-invite') ?>">OSB Invité</a></li>
             </ul>
         </div>

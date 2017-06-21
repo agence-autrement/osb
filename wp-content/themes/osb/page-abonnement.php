@@ -26,7 +26,7 @@ Template Name: Page Abonnement
             <ul>
                 <li><b>Pour 300€</b>, accédez à l'ensembledes 20 concerts de la saison.</li>
             </ul>
-            <div class="btn_don"><a href="https://abo.themisweb.fr/0504/fUserLogin.aspx?idstructure=0504">À réserver au guichet ou par courrier</a></div>
+            <div class="btn_don">À réserver au guichet ou par courrier</div>
             <div class="hover_don formule">
                 <div class="encadre">Vos Avantages</div>
                 <ul>
@@ -52,7 +52,7 @@ Template Name: Page Abonnement
             <ul>
                 <li><b>POUR 35€</b>, bénéﬁciez de 50% de réduction sur l’ensemble des concerts de la saison. La réduction est valable dès le premier concert réservé, dès le mois de juin 2017 !</li>
             </ul>
-            <div class="btn_don"><a href="https://abo.themisweb.fr/0504/fUserLogin.aspx?idstructure=0504">S'abonner en ligne</a></div>
+            <div class="btn_don">S'abonner en ligne</div>
             <div class="hover_don formule">
                 <div class="encadre">Vos Avantages</div>
                 <ul>
@@ -78,7 +78,7 @@ Template Name: Page Abonnement
             <ul>
                 <li><b>À SEULEMENT 15€</b>, bénéﬁciez de 35% de réduction, sur l’ensemble des concerts de la saison. La réduction est valable dès le premier concert réservé, dès le mois de juin 2017 !</li>
             </ul>
-            <div class="btn_don"><a href="https://abo.themisweb.fr/0504/fUserLogin.aspx?idstructure=0504">S'abonner en ligne</a></div>
+            <div class="btn_don">S'abonner en ligne</div>
             <div class="hover_don formule">
                 <div class="encadre">Vos Avantages</div>
                 <ul>

@@ -1,0 +1,74 @@
+.page-template-page-conference {
+
+  ///////////////////////// TOP PAGE ARTISTES CONFERENCE
+
+  .top_page_action {
+    background-image: url('../images/champs-libres.jpg');
+
+    .title {
+      span {
+        color: #ED1E24;
+      }
+    }
+  }
+
+  .btn_red {
+    background-color: #ED1E24;
+  }
+
+  .intro_text {
+    color: white;
+  }
+  ///////////////////////// CONTENU
+  //Contenu à droite
+
+  .content_right{
+    padding: 35px;
+    width: 100%;
+    position: relative;
+
+    .left_content{
+      padding-right: 30px;
+      width: 50%;
+      float: left;
+      text-align: right;
+    }
+    .right_content {
+      width: 50%;
+      float: right;
+      padding-left: 30px;
+      padding-top: 15px;
+      position: relative;
+    }
+    .image_position{
+      left: 0;
+      .img_content{
+        img{
+          bottom: -155px !important;
+          right:40px;
+        }
+      }
+    }
+  }
+
+  .contact{
+    padding: 65px;
+    background-color: #D9D2C4;
+  }
+
+  .btn_contact{
+    width: 200px;
+    margin: 0 auto;
+    border: 1px solid #FFFFFF;
+    padding: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    a{
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

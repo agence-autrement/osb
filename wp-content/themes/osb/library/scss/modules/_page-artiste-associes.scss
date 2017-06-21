@@ -2,8 +2,14 @@
 
   ///////////////////////// TOP PAGE ARTISTES ASSOCIES
 
-  .top_page_artistes-associes{
-    background-image: url(../images/slide-mecenat.jpg);
+  .top_page_action{
+    background-image: url('../images/artiste-associe.jpg');
+    li{
+      color: #F68B23;
+    }
+    &#gastinel{
+      background-image: url('../images/gatinel.jpg');
+    }
   }
 
   .title{
@@ -12,7 +18,185 @@
     }
   }
 
+  .btn_red{
+    background-color: #F68B23;
+  }
+
   .intro_text{
     color: black;
   }
+
+  ///////////////////////// CONTENU
+
+  #menut{
+    .left_content{
+      padding-top: 0;
+    }
+  }
+
+
+  .titre_content{
+    color: #F68B23 !important;
+  }
+
+  .image_position{
+    .img_content{
+      img{
+        width: 350px;
+      }
+    }
+  }
+
+  //Contenu à droite
+
+  .content_right{
+    padding: 35px;
+    width: 100%;
+    position: relative;
+
+    .croix_rouge{
+      background-image: url('../images/orange_croix.svg');
+    }
+
+    .left_content{
+      padding-right: 30px;
+      width: 50%;
+      float: left;
+      text-align: right;
+    }
+    .right_content {
+      width: 50%;
+      float: right;
+      padding-left: 30px;
+      padding-top: 15px;
+      position: relative;
+
+      .croix_noir{
+        top: 0;
+        left: 30px;
+      }
+    }
+    .image_position{
+      left: 0;
+      .img_content{
+        img{
+          bottom: -155px !important;
+          right:40px;
+        }
+      }
+    }
+    &.interview{
+      padding-top: 90px;
+      background-color: #D9D2C4;
+
+      .inscrire{
+        border-color: #FFFFFF;
+
+        span{
+          color: #ffffff;
+        }
+
+        .btn_inscription{
+          border-color: #ffffff;
+        }
+      }
+      .left_content{
+        padding-top: 120px;
+      }
+    }
+  }
+
+  //Contenu à gauche
+
+  .content_left{
+    position: relative;
+    background-color: #FFFFFF;
+    padding: 35px;
+    width: 100%;
+
+    .left_content{
+      padding-left: 30px;
+      width: 50%;
+      float: right;
+    }
+
+    .titre_content{
+      text-align: left;
+    }
+
+    .croix_rouge{
+      left: -32px;
+      top: inherit;
+      background-image: url('../images/orange_croix.svg');
+    }
+
+    .right_content{
+      width: 50%;
+      float: left;
+      padding-right: 30px;
+      padding-top: 15px;
+      position: relative;
+
+      .croix_noir{
+        left: 0;
+      }
+    }
+
+    .image_position{
+      right: 0;
+      .img_content{
+        img{
+          left: 35px;
+          bottom: -115px;
+        }
+      }
+    }
+  }
+  
+  .quote{
+    font-size: 20px;
+    font-style: italic;
+    color: #F68B23;
+    text-align: left;
+    font-family: $font2;
+    padding: 80px 40px 80px 40px;
+    position: relative;
+    .croix_orange{
+      position: absolute;
+      top: 40px;
+      left: 0;
+      height: 40px;
+      width: 40px;
+      background-image: url('../images/orange_croix.svg');
+    }
+    .croix_noir_quote{
+      position: absolute;
+      height: 15px;
+      width: 15px;
+      bottom: 60px !important;
+      right: 60px !important;
+      background-image: url('../images/croix_noir.svg');
+    }
+  }
+  .question{
+    text-align: left;
+    font-size: 14px;
+    font-style: italic;
+    .la_question{
+      font-weight: 500;
+    }
+  }
+  .en_savoir{
+    text-align: left;
+    font-size: 12px;
+    color: #999999;
+    font-style: italic;
+    margin-top: 25px;
+  }
+  .interview{
+    .en_savoir{
+      color: #FFF;;
+    }
+  }
+
 }
