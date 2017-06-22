@@ -1,0 +1,203 @@
+.page-template-page-ressource-pedagogique {
+
+  ///////////////////////// TOP PAGE DISCO
+
+  .top_page_disco {
+    padding: 130px 35px 35px;
+    text-align: center;
+    background-image: url(../images/slide-abo.jpg);
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .abonne_plus_book{
+    font-size: 60px;
+    display: block;
+    margin-bottom: 25px;
+  }
+  .btn_new{
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 5px;
+    background-color: #E41E27;
+    max-width: 200px;
+    margin: 0 auto 35px;
+    display: inline-block;
+  }
+
+  .limite{
+    font-weight: 100;
+  }
+
+  .musiciens {
+    &__inner {
+      padding: 0 15px;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    &__title {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 2rem;
+      line-height: 2.1rem;
+      margin-bottom: 3.5rem;
+    }
+
+    &__dep {
+      overflow: hidden;
+      margin-top: 2rem;
+
+      &__title {
+        color: $color-3;
+        font-family: $font2;
+        font-weight: 200;
+        font-size: 2.5rem;
+        line-height: 2.6rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        margin-left: 3rem;
+        position: relative;
+
+        &__cross {
+          display: block;
+          color: $color-3;
+          font-size: 4.5rem;
+          position: absolute;
+          top: -2px;
+          left: -2.8rem;
+        }
+
+        &__arrow {
+          color: $color-3;
+          font-size: 4.5rem;
+          position: absolute;
+          top: -10px;
+          left: -2.8rem;
+          display: none;
+        }
+
+      }
+
+      &__separator {
+        width: 100%;
+        display: block;
+        height: 1px;
+        background-color: #DAD7CB;
+      }
+
+      &__items {
+        display: none;
+        text-align: center;
+
+      }
+
+      &__item {
+        display: inline-block;
+        width: 225px;
+        margin: 0 1.5rem 3rem;
+        border: 1px solid #DAD7CB;
+        vertical-align: top;
+
+        &__img {
+          height: 150px;
+          padding-top: 50px;
+          background-size: cover;
+          background-position: center center;
+        }
+
+        &__title {
+          text-transform: uppercase;
+          margin: 1rem 0;
+          font-size: 1.5rem;
+          line-height: 1.6rem;
+          text-align: center;
+          font-family: $font2;
+          font-weight: 400;
+          &--orga {
+            margin: 1rem 0 0;
+          }
+
+        }
+
+        &__fct {
+          margin: 0rem 0 1rem;
+          font-weight: 200;
+          padding: 0 0.3rem;
+          font-size: 1.4rem;
+          font-family: $font2;
+        }
+
+        &__inner {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 90%;
+        }
+
+        li {
+          font-size: 1.5rem;
+          position: relative;
+          text-transform: uppercase;
+          font-family: $font2;
+          border: 2px solid #F5F3F3;
+          text-align: center;
+          padding: .8rem;
+          height: 5rem;
+
+          &:hover {
+            background-color: $color-2;
+            @include transition();
+
+          }
+
+        }
+
+      }
+
+      &--first {
+        &__items {
+          display: block;
+        }
+
+        &__separator {
+          display: none;
+        }
+
+        &__title {
+          &__cross {
+            display: none;
+          }
+
+          &__arrow {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .contact{
+    padding: 65px;
+    background-color: #D9D2C4;
+  }
+
+  .btn_contact{
+    width: 200px;
+    margin: 0 auto;
+    border: 1px solid #000000;
+    padding: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    a{
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

@@ -92,7 +92,7 @@ Template Name: Page Mécénat
                     <li class="plus">+</li>
                     <li>Un don qui bénéficie de la déductibilité fiscale à hauteur de 66%, selon l'article 200 du code général des Impôts. La réduction fiscale s'élève à 75% si vous êtes imposable à l'impôt de solidarité sur la fortune dans la limite de 50 000€</li>
                 </ul>
-                <div class="btn_don"><a href="###">Adhérer</a></div>
+                <div class="btn_don"><a href="<?php echo site_url('adhesion-en-ligne-mecene') ?>">Adhérer</a></div>
             </div>
         </div>
         <div class="ami formule bg_jaune">

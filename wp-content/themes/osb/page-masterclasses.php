@@ -37,6 +37,7 @@ Template Name: Page Master Classes
                 de la région de rencontrer des solistes et des chefs d’orchestre invités.</p>
             <p>La transmission est au cœur de ce face à face. Transmission de la passion, de la technique, du désir
                 d’excellence et du travail poussent l’élève à se dépasser, et aussi à se découvrir.</p>
+            <p>Pour plus d'information contacter lafabrik@o-s-b.fr </p>
             <p>Avec le soutien de La Fondation SNCF et Engie.</p>
         </div>
     </div>

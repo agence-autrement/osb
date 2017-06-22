@@ -23,7 +23,7 @@ Template Name: Page Adhesion en ligne mecene
                 <div class="form__title">
                     // Adhésion en ligne //
                 </div>
-                <div class="ami formule--text formule">
+                <div class="ami formule--text formule" id="mecene-txt">
                     <div class="encadre">60€ et plus</div>
                     <div class="titre">Mécène</div>
                     <div class="sous_titre_cadre">(100€ et plus en duo)</div>
@@ -38,18 +38,9 @@ Template Name: Page Adhesion en ligne mecene
 
                 </div>
 
-                <div class="form__right--text">
+                <div id="visuel-mecene">
 
-                    <div class="titre">Votre adhésion comprend</div>
-                    <ul>
-                        <li>Une cotisation de 30€ à Concerto</li>
-                        <li class="plus">+</li>
-                        <li>Un don qui bénéficie de la déductibilité fiscale à hauteur de 66%, selon l’article 200 du
-                            Code Général des Impôts. La réduction fiscale s’élève à 75% de votre don si vous êtes
-                            imposable à l’impôt de solidarité sur la fortune, dans la limite de 50 000€
-                        </li>
-
-                    </ul>
+                    <img src="<? bloginfo('template_url') ?>/library/images/adhesion-mecene.jpg" alt="">
 
                 </div>
             </div>

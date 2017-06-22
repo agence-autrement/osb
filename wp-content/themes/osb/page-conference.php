@@ -67,7 +67,7 @@ Template Name: Page Conférence / Concert
     </section>
     <section class="contact">
         <div class="contenu_grid">
-            <div class="btn_contact"><a href="###">Réserver</a></div>
+            <div class="btn_contact"><a href="http://www.leschampslibres.fr/pied-de-page/contact/" target="_blank" >Réserver</a></div>
         </div>
     </section>
 </div>

@@ -740,7 +740,7 @@ Template Name: Page Cote Orchestre
                         Renseignements : <a href="mailto:raymond@o-s-b.fr">raymond@o-s-b.fr</a>
                     </p>
 
-                    <a id="postule-fr" class="btn recru__btn">Je postule</a>
+                    <a id="postule-fr" class="btn recru__btn" href="#form_fr">Je postule</a>
                 </div>
 
                 <div class="recru__item">
@@ -769,29 +769,36 @@ Template Name: Page Cote Orchestre
                         Informations : <a href="mailto:raymond@o-s-b.fr">raymond@o-s-b.fr</a>
                     </p>
 
-                    <a id="postule-uk" class="btn recru__btn">Apply</a>
+                    <a id="postule-uk" class="btn recru__btn" href="#form_uk">Apply</a>
                 </div>
 
 
-                <div class="recru__fr">
+                <div class="recru__fr" id="form_fr">
                     <? echo do_shortcode('[contact-form-7 id="671" title="Contact form Recrutement fr"]'); ?>
 
 
                     <div class="recru__docs">
-                        <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/2017-fiche-inscription-violon-super-solo.pdf" class="recru__doc">Fiche d'inscription violon supersoliste</a>
-                        <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/2017-reglement-concours-violon-super-solo.pdf" class="recru__doc">Règlement concours violon supersoliste</a>
-
+                        <div class="contenu_grid">
+                            <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/2017-fiche-inscription-violon-super-solo.pdf" class="recru__doc">Fiche d'inscription violon supersoliste</a>
+                            <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/2017-reglement-concours-violon-super-solo.pdf" class="recru__doc">Règlement concours violon supersoliste</a>
+                            <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/2017_Programme_concours_violon_super-solo.pdf" class="recru__doc">Programme concours violon supersoliste</a>
+                            <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/Traits_d-orchestre-Orchestral_excerpts-audition.pdf" class="recru__doc">Traits d'orchestre concours violon supersoliste</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="recru__uk">
+            <div class="recru__uk" id="form_uk">
                 <? echo do_shortcode('[contact-form-7 id="672" title="Contact form recrutement uk"]'); ?>
 
 
                 <div class="recru__docs">
-                    <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/2017-application-form-konzertmeister.pdf" class="recru__doc">Application Form Konzertmeister</a>
-                    <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/2017_notice-of-audition-konzertmeister.pdf" class="recru__doc">Notice of Audition Konzertmeister</a>
+                    <div class="contenu_grid">
+                        <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/2017-application-form-konzertmeister.pdf" class="recru__doc">Application Form Konzertmeister</a>
+                        <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/2017_notice-of-audition-konzertmeister.pdf" class="recru__doc">Notice of Audition Konzertmeister</a>
+                        <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/2017_Concertmaster_audition_program.pdf" class="recru__doc">Konzertmeister Audition program</a>
+                        <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/Traits_d-orchestre-Orchestral_excerpts-audition.pdf" class="recru__doc">Orchestral Excerpts</a>
+                    </div>
                 </div>
             </div>
 

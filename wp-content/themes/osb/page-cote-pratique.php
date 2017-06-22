@@ -94,7 +94,7 @@ Template Name: Page Cote Pratique
                 <ul class="places__dep__cities">
                     <a class="places__dep__city" href="http://o-s-b.fr/salles/dinan/"><li> <div class="places__dep__city__inner">Dinan <br><span>Théâtre des Jacobins</span></div></li></a>
                     <a class="places__dep__city" href="http://o-s-b.fr/salles/guingamp/"><li> <div class="places__dep__city__inner">Guingamp <br><span>Théâtre du Champ au Roy</span></div></li></a>
-                    <a class="places__dep__city" href="http://o-s-b.fr/salles/saint-brieuc/"><li> <div class="places__dep__city__inner">Saint-Brieux <br><span>La Passerelle</span></div></li></a>
+                    <a class="places__dep__city" href="http://o-s-b.fr/salles/saint-brieuc/"><li> <div class="places__dep__city__inner">Saint-Brieuc <br><span>La Passerelle</span></div></li></a>
                     <a class="places__dep__city" href="http://o-s-b.fr/salles/lehon/"><li> <div class="places__dep__city__inner">Léhon <br><span>Mairie</span></div></li></a>
                     <a class="places__dep__city" href="http://o-s-b.fr/salles/langourla/"><li> <div class="places__dep__city__inner">Langourla <br><span>Mairie</span></div></li></a>
                     <a class="places__dep__city" href="http://o-s-b.fr/salles/lamballe/"><li> <div class="places__dep__city__inner">Lamballe <br><span>Le Quai des rêves</span></div></li></a>
@@ -117,7 +117,7 @@ Template Name: Page Cote Pratique
                     <a class="places__dep__city" href="http://o-s-b.fr/salles/questembert/"><li> <div class="places__dep__city__inner">Questembert <br><span>L’Asphodèle</span></div></li></a>
                     <a class="places__dep__city" href="http://o-s-b.fr/salles/lanester/"><li> <div class="places__dep__city__inner">Lanester <br><span>Quai 9</span></div></li></a>
                     <a class="places__dep__city" href="http://o-s-b.fr/salles/ploemel/"><li> <div class="places__dep__city__inner">Ploemel <br><span>Mairie</span></div></li></a>
-                    <a class="places__dep__city" href="http://o-s-b.fr/salles/lorient-2/"><li> <div class="places__dep__city__inner">Lorient <br><span>Espace Marine</span></div></li></a>
+                    <a class="places__dep__city" href="http://o-s-b.fr/salles/ploermel/"><li> <div class="places__dep__city__inner">Ploërmel <br><span>Centre culturel</span></div></li></a>
                     <a class="places__dep__city" href="http://o-s-b.fr/salles/lorient/"><li> <div class="places__dep__city__inner">Lorient <br><span>Le Grand Théâtre</span></div></li></a>
 
 

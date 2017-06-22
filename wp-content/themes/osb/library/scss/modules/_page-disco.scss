@@ -1,0 +1,154 @@
+.page-template-page-discographie{
+
+  ///////////////////////// TOP PAGE DISCO
+
+  .top_page_disco {
+    padding: 130px 35px 35px;
+    text-align: center;
+    background-image: url(../images/slide-abo.jpg);
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .abonne_plus_book{
+    font-size: 60px;
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  .btn_new{
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 5px;
+    background-color: #E41E27;
+    max-width: 200px;
+    margin: 0 auto 35px;
+    display: inline-block;
+  }
+
+  .limite{
+    font-weight: 100;
+  }
+
+  .disque{
+    padding: 35px;
+    .contenu_grid{
+      overflow: inherit;
+    }
+  }
+
+  .produit{
+    width: 31.33333333%;
+    height: 390px;
+    border: 1px solid #D9D2C4;
+    margin-right: 3%;
+    margin-bottom: 35px;
+    float: left;
+    position: relative;
+    &:nth-of-type(3n){
+      margin-right: 0;
+    }
+
+    #spot{
+      width: 100%;
+      height: 0;
+      position: absolute;
+      z-index: 50;
+      top: 0px;
+      @include transition(0.3s);
+    }
+
+
+  }
+  
+  .visuel_produit{
+    height: 270px;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #D9D2C4;
+    background-color: #E6E0D7;
+    img{
+      height: 100%;
+      width: auto;
+    }
+    &.spot_on{
+      #spot{
+        height: 330px;
+      }
+      .close_spot{
+        height: 40px;
+      }
+    }
+  }
+
+  .prix{
+    position: absolute;
+    right: 20px;
+    bottom: 25px;
+    font-size: 35px;
+    font-family: $font2;
+    font-weight: 700;
+    color: #C2B8A0;
+  }
+
+  .artiste{
+    font-size: 15px;
+    font-family: $font2;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 400;
+  }
+
+  .programme{
+    font-size: 14px;
+    font-family: $font2;
+    font-weight: 100;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .spotify{
+    height: 40px;
+    width: 40px;
+    background: black url('../images/sound_icon.svg') no-repeat center center;
+    -webkit-background-size: 60%;
+    background-size: 60%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+
+  .close_spot{
+    width: 40px;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    z-index: 100;
+    background-color: #000000;
+    background-image: url('../images/spot_close.svg');
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 0;
+    @include transition(0.1s);
+  }
+
+  .acheter{
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    width: 100px;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+
+}

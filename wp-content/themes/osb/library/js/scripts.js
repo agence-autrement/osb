@@ -580,6 +580,18 @@ jQuery(document).ready(function ($) {
         $(this).parent().addClass('full_h');
     });
 
+
+    $('.spotify').on('click', function(){
+
+        $(this).parent().addClass('spot_on');
+    });
+
+
+    $('.close_spot').on('click', function(){
+
+        $(this).parent().removeClass('spot_on');
+    });
+
     //Google Maps JS - Page Salle
 
     //google.maps.event.trigger(map, 'resize');

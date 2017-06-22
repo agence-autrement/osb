@@ -478,11 +478,15 @@
   }
 
   &__doc {
-    width: 21%;
-    display: inline-block;
+    width: 24%;
+    float: left;
+    margin-right: 1.3333333%;
     border: 1px solid #E5E3DA;
     padding: 0.7rem;
     color: #6E6E6E;
+    &:nth-of-type(4){
+      margin-right: 0;
+    }
   }
 
   &__declar {

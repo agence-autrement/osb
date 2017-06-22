@@ -79,6 +79,9 @@ Template Name: Page Ressources Publiques
                     <a class="artistes__dep__city artistes__dep__city--line" href="<?php echo site_url('grant-llewellyn') ?>">
                         <li> <div class="artistes__dep__city__inner">Grant Llewellyn</div></li>
                     </a>
+                    <a class="artistes__dep__city artistes__dep__city--line" href="<?php echo site_url('guillaume-saint-james') ?>">
+                        <li> <div class="artistes__dep__city__inner">Guillaume Saint-James</div></li>
+                    </a>
                     <a class="artistes__dep__city artistes__dep__city--line" href="<?php echo site_url('helen-kearns') ?>">
                         <li> <div class="artistes__dep__city__inner">Helen Kearns</div></li>
                     </a>
