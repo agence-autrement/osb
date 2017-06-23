@@ -17,7 +17,7 @@ Template Name: Page Conférence / Concert
                 <span>Concert</span>
             </div>
             <div class="tag">
-                <div class="btn_red"><a href="###">L'heure musicale aux champs libres</a></div>
+                <div class="btn_red"><a href="http://www.leschampslibres.fr/pied-de-page/contact/">L'heure musicale aux champs libres</a></div>
                 <div class="btn_savoir_plus"><a href="#more">En savoir +</a></div>
             </div>
             <div class="intro_text">

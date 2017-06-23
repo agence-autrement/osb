@@ -89,7 +89,7 @@ Template Name: Page Artistes Associés
                     </div>
                 </div>
                 <div class="en_savoir">
-                    <a href="###">En savoir plus à propos de Aurélien Azan Zielinski</a>
+                    <a href="<?php echo site_url() ?>/ressources-publiques/aurelien-azan-zielinski">En savoir plus à propos de Aurélien Azan Zielinski</a>
                 </div>
             </div>
             <div class="right_content">
@@ -110,12 +110,39 @@ Template Name: Page Artistes Associés
                 </div>
                 <div class="inscrire">
                     <div class="ligne_un">
-                        <div class="date">Samedi 18 Novembre</div><span> // </span><div class="heure">15h00</div>
+                        <div class="date">Ludwig in Langourla</div><span> // </span><div class="heure">Juillet 2017</div>
                     </div>
                     <div class="ligne_deux">
-                        <div class="ville">Rennes</div><span> // </span><div class="salle">Le Tambour</div>
+                        <div class="ville">Langourla</div>
                     </div>
-                    <div class="btn_inscription"><a href="<?php echo site_url('spectacles') ?>/le-leopard-et-le-chasseur/#date">Réserver</a></div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('spectacles') ?>/ludwig-in-langourla/#date">Réserver</a></div>
+                </div>
+                <div class="inscrire">
+                    <div class="ligne_un">
+                        <div class="date">Pastorale Française</div><span> // </span><div class="heure">Octobre 2017</div>
+                    </div>
+                    <div class="ligne_deux">
+                        <div class="ville">Rennes</div>
+                    </div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('spectacles') ?>/pastorale-francaise/#date">Réserver</a></div>
+                </div>
+                <div class="inscrire">
+                    <div class="ligne_un">
+                        <div class="date">Avant Première</div><span> // </span><div class="heure">Décembre 2017</div>
+                    </div>
+                    <div class="ligne_deux">
+                        <div class="ville">Rennes</div>
+                    </div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('spectacles') ?>/avant-premiere/#date">Réserver</a></div>
+                </div>
+                <div class="inscrire">
+                    <div class="ligne_un">
+                        <div class="date">Avis de grand frais</div><span> // </span><div class="heure">Avril 2018</div>
+                    </div>
+                    <div class="ligne_deux">
+                        <div class="ville">Saint-Avé / Janzé / Quimper</div>
+                    </div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('spectacles') ?>/avis-de-grand-frais/#date">Réserver</a></div>
                 </div>
             </div>
         </div>
@@ -136,26 +163,35 @@ Template Name: Page Artistes Associés
                 <div class="txt_right_content">
                     Etoile montante du piano français, François Dumont, lauréat de plusieurs prix internationaux (Concours Chopin de Varsovie, le Concours International de Cleveland aux États-Unis, prix Reine Elisabeth en Belgique) est un véritable compagnon de route de l’OSB. En 2012, le jeune pianiste remplace au pied levé Brigitte Engerer pour un concert de l’OSB dirigé par Arie van Beek. Une véritable complicité musicale naît alors entre François Dumont et l’Orchestre Symphonique de Bretagne. En 2014, l’enregistrement d’un premier disque dédié à Mozart marque le coup d’envoi d’un déﬁ : enregistrer l’intégrale des concerti pour piano du génie de Vienne. En septembre 2017 paraîtront deux nouveaux opus, comprenant respectivement les concerti n°17 et 23 et les concerti n° 1, 24 et 27.
                     <div class="en_savoir">
-                        <a href="###">En savoir plus sur François Dumont</a>
+                        <a href="<?php echo site_url() ?>/ressources-publiques/francois-dumont">En savoir plus sur François Dumont</a>
                     </div>
                 </div>
                 <div class="inscrire">
                     <div class="ligne_un">
-                        <div class="date">Jeudi 9 Novembre</div><span> // </span><div class="heure">20h30</div>
+                        <div class="date">Concert événement</div><span> // </span><div class="heure">Septembre 2017</div>
                     </div>
                     <div class="ligne_deux">
-                        <div class="ville">Dinan</div><span> // </span><div class="salle">Théâtre des Jacobins</div>
+                        <div class="ville">Rennes</div>
                     </div>
-                    <div class="btn_inscription"><a href="###">Réserver</a></div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('spectacles') ?>/francois-dumont-losb/#date">Réserver</a></div>
                 </div>
                 <div class="inscrire">
                     <div class="ligne_un">
-                        <div class="date">Vendredi 10 Novembre</div><span> // </span><div class="heure">15h00</div>
+                        <div class="date">Passionément Mozart</div><span> // </span><div class="heure">Novembre 2017</div>
                     </div>
                     <div class="ligne_deux">
-                        <div class="ville">Lamballe</div><span> // </span><div class="salle">Le Quai des Rêves</div>
+                        <div class="ville">Dinan / Lamballe</div>
                     </div>
-                    <div class="btn_inscription"><a href="###">Réserver</a></div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('spectacles') ?>/passionnement-mozart/#date">Réserver</a></div>
+                </div>
+                <div class="inscrire">
+                    <div class="ligne_un">
+                        <div class="date">40<sup>e</sup> Rugissants</div><span> // </span><div class="heure">Avril 2018</div>
+                    </div>
+                    <div class="ligne_deux">
+                        <div class="ville">Rennes</div>
+                    </div>
+                    <div class="btn_inscription"><a href="<?php echo site_url('spectacles') ?>/40e-rugissants/#date">Réserver</a></div>
                 </div>
             </div>
         </div>
@@ -175,19 +211,27 @@ Template Name: Page Artistes Associés
                 <div class="txt_right_content">
                     Né à Brest, formé auprès de Pierick Houdy, Benoît Menut est compositeur associé à l’OSB depuis 2015. En décembre 2016, l’OSB a créé Symphonie pour une Plume, une œuvre pour toute la famille, en collaboration avec la metteure en scène Florence Lavaud (Cie Chantier Théâtre). En 2018, l’orchestre créera Anita, une pièce inspirée par l’océanographe Anita Conti, à l’occasion de la journée de la Terre, et Alba, une pièce pour trio à cordes, ﬂûte et harpe. Le travail de Benoît Menut est intrinsèquement lié au texte, à l’écriture, qui sont ses sources d’inspiration. En 2016, Benoît Menut a reçu le prix Sacem de la musique symphonique.                    <div class="en_savoir">
                    <div class="en_savoir">
-                       <a href="###">En savoir plus sur Benoît Menut</a>
+                       <a href="<?php echo site_url() ?>/ressources-publiques/benoit-menut">En savoir plus sur Benoît Menut</a>
                    </div>
                 </div>
             </div>
             <div class="inscrire">
                 <div class="ligne_un">
-                    <div class="date">Samedi 18 Novembre</div><span> // </span><div class="heure">15h00</div>
+                    <div class="date">Anne G. et les chambristes de l'OSB</div><span> // </span><div class="heure">Mai 2018</div>
                 </div>
                 <div class="ligne_deux">
-                    <div class="ville">Rennes</div><span> // </span><div class="salle">Le Tambour</div>
+                    <div class="ville">Lehon / Rennes</div>
                 </div>
-                <div class="btn_inscription"><a href="###">Réserver</a></div>
+                <div class="btn_inscription"><a href="<?php echo site_url('spectacles') ?>/carte-blanche-anne-gastinel/#date">Réserver</a></div>
             </div>
+            <div class="inscrire">
+                <div class="ligne_un">
+                    <div class="date">40<sup>e</sup> Rugissants</div><span> // </span><div class="heure">Avril 2018</div>
+                </div>
+                <div class="ligne_deux">
+                    <div class="ville">Rennes</div>
+                </div>
+                <div class="btn_inscription"><a href="<?php echo site_url('spectacles') ?>/40e-rugissants/#date">Réserver</a></div>
             </div>
         </div>
     </section>
@@ -224,7 +268,7 @@ Template Name: Page Artistes Associés
                         Il y a vingt ans déjà l’Express écrivait d’elle « [elle] joue comme elle respire. Avec la même tranquille évidence que d’autres mettent à vivre, à rire ou à aimer. » Lauréate des plus grands concours internationaux (Scheveningen, Prague, Rostropovitch), elle s’est perfectionnée auprès des plus grands (Yo-Yo Ma, Janos Starker ou Paul Tortelier), avant d’entamer une carrière qui l’a menée sur les cinq continents, dans les plus grandes salles et aux côtés des grands maîtres. Anne Gastinel a aussi bien le goût du grand répertoire que de la création contemporaine, autant d’œuvres qu’elle interprète sur un Testore de 1690.
                         <br> <br> Cette saison, elle vous proposera plusieurs rendez-vous allant d’un récital avec sa complice de longue date, la pianiste Claire Désert, aﬁn d’inaugurer la Nef, auditorium dédié aux petites formes du Couvent des Jacobins, jusqu’au grand concert symphonique qui clôturera la saison, sous la direction de Grant Llewellyn. Tout au long de l’année, découvrez toutes les facettes de cette artiste remarquable.                    <div class="en_savoir">
                         <div class="en_savoir">
-                            <a href="###">En savoir plus sur Anne Gastinel</a>
+                            <a href="<?php echo site_url() ?>/ressources-publiques/anne-gastinel">En savoir plus sur Anne Gastinel</a>
                         </div>
                     </div>
                 </div>

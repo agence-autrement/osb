@@ -40,7 +40,7 @@ Template Name: Page Abonnement
                     <li class="plus">+</li>
                     <li>Des réductions et offres spéciales chez nos partenaires<sup>(3)</sup></li>
                 </ul>
-                <div class="btn_don"><a target="_blank" href="https://abo.themisweb.fr/0504/fUserLogin.aspx?idstructure=0504">À réserver au guichet ou par courrier</a></div>
+                <div class="btn_don">À réserver au guichet ou par courrier</div>
             </div>
         </div>
         <div class="ami formule center">
@@ -117,7 +117,8 @@ Template Name: Page Abonnement
                     <div class="txt_pourquoi">
                        <b>4 concerts pour 20€ !</b> <br>
                         Disponible sur l'ensemble des concerts, hors Piccolo
-                   </div>
+                        <div class="btn_don"><a target="_blank" href="https://abo.themisweb.fr/0504/fUserLogin.aspx?idstructure=0504">S'abonner en ligne</a></div>
+                    </div>
                 </div>
             </div>
         </div>

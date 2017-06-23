@@ -252,12 +252,28 @@
 
   .txt_pourquoi{
     font-size: 14px;
+    .btn_don{
+      width: 200px;
+      margin: 0 auto 70px;
+      padding: 5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      background-color: black;
+      color: white;
+      margin-top: 25px;
+      a{
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+    }
   }
 
 
   .norm{
     font-weight: 400;
   }
+  
 
   ///////////////////////// TARIFS RÉDUITS
 

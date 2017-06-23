@@ -369,6 +369,7 @@ function queryEssentiels()
             $instruments_tag    = get_field('instruments_tag');
             $artistes_tag       = get_field('artistes_tag');
             $displayHome        = get_field('displayHome');
+            $image_vignette     = get_field('image_vignette');
 
             if( have_rows('artistes') ){
                 $artistes = array();

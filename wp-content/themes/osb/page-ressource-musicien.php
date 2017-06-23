@@ -3,16 +3,14 @@
 Template Name: Page Ressource Musicien
 */
 ?>
-<?  if ( !is_user_logged_in() ) {
-
-    auth_redirect();
-
-}
-?>
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
 
+<?php if ( post_password_required() ) : ?>
 
+    <?php echo get_the_password_form(); ?>
+
+<?php else : ?>
 
     <div id="content">
         <section class="top_page_disco">
@@ -80,5 +78,5 @@ Template Name: Page Ressource Musicien
             </div>
         </section>
     </div>
-
+<?php endif; ?>
 <?php get_footer(); ?>
