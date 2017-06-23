@@ -360,6 +360,11 @@ function content($limit) {
   return $content;
 }
 
+// logo personnalise
+function childtheme_custom_login() {
+  echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('template_url') . '/library/css/style.css" />';
+}
 
+add_action('login_head', 'childtheme_custom_login');
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

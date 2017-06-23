@@ -3,11 +3,18 @@
 Template Name: Page Ressource Musicien
 */
 ?>
+<?  if ( !is_user_logged_in() ) {
 
+    auth_redirect();
+
+}
+?>
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
-    <div id="content">
 
+
+
+    <div id="content">
         <section class="top_page_disco">
             <div class="contenu_grid">
                 <div class="abonne_plus_book">Ressources Musiciens</div>
@@ -72,13 +79,6 @@ Template Name: Page Ressource Musicien
                 </div>
             </div>
         </section>
-
-        <section class="contact">
-            <div class="contenu_grid">
-                <div class="btn_contact"><a href="###"> Nous Contacter</a></div>
-            </div>
-        </section>
-
     </div>
 
 <?php get_footer(); ?>

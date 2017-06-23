@@ -97,6 +97,9 @@
         <div>
             <ul>
                 <li><a href="<?php echo site_url('ressources-publiques') ?>">Publiques</a></li>
+                <li><a href="<?php echo site_url('ressource-presse') ?>">Presse</a></li>
+                <li><a href="<?php echo site_url('ressource-pedagogique') ?>">Pédagogique</a></li>
+                <li><a href="<?php echo site_url('ressource-musiciens') ?>">Musiciens</a></li>
             </ul>
         </div>
     </div>
@@ -127,7 +130,7 @@
                 </ul>
             </nav>
             <a id="bouton_sidebar">Nous soutenir</a>
-            <div class="ressource"><a href="<?php echo site_url('ressources-publiques') ?>">/// ressources ///</a></div>
+            <div class="ressource" id="ressource"><a href="###">/// ressources ///</a></div>
         </div>
     </div>
 </div>
