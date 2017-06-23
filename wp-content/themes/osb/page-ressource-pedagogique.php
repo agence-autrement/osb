@@ -33,7 +33,7 @@ Template Name: Page Ressource Pédagogique
                         <ul class="musiciens__dep__items musiciens__dep--first__items">
 
                             <li class="musiciens__dep__item">
-                                <a href="http://o-s-b.fr/wp-content/uploads/2017/06/Bill_Whelan_et_les_danses_de_lile_Emeraude.pdf">
+                                <a href="http://o-s-b.fr/wp-content/uploads/2017/06/bill-whelan.pdf">
                                     <img class="musiciens__dep__item__img"
                                          src="<?php echo get_template_directory_uri(); ?>/library/images/pdf.jpg"
                                          alt="">
@@ -41,7 +41,7 @@ Template Name: Page Ressource Pédagogique
                                         Bill Whelan
                                     </h3>
                                     <h4 class="musiciens__dep__item__fct">
-
+                                        Et les danses de l'île Emmeraude
                                     </h4>
                                 </a>
                             </li>
@@ -252,7 +252,7 @@ Template Name: Page Ressource Pédagogique
                         <span class="musiciens__dep__separator"></span>
                         <ul class="musiciens__dep__items">
                             <li class="musiciens__dep__item">
-                                <a href="http://o-s-b.fr/wp-content/uploads/2017/06/5e_symphonie_de_Beethoven.pdf">
+                                <a href="http://o-s-b.fr/wp-content/uploads/2017/06/5e-symphonie-de-Beethoven.pdf">
                                     <img class="musiciens__dep__item__img"
                                          src="<?php echo get_template_directory_uri(); ?>/library/images/pdf.jpg"
                                          alt="">
@@ -278,7 +278,7 @@ Template Name: Page Ressource Pédagogique
                                 </a>
                             </li>
                             <li class="musiciens__dep__item">
-                                <a href="http://o-s-b.fr/wp-content/uploads/2017/06/Brahms_Symphonie_N4.pdf">
+                                <a href="http://o-s-b.fr/wp-content/uploads/2017/06/Brahms-Symphonie-N4.pdf">
                                     <img class="musiciens__dep__item__img"
                                          src="<?php echo get_template_directory_uri(); ?>/library/images/pdf.jpg"
                                          alt="">
@@ -291,7 +291,7 @@ Template Name: Page Ressource Pédagogique
                                 </a>
                             </li>
                             <li class="musiciens__dep__item">
-                                <a href="http://o-s-b.fr/wp-content/uploads/2017/06/Lhistoire_du_soldat.pdf">
+                                <a href="http://o-s-b.fr/wp-content/uploads/2017/06/Lhistoire-du-soldat.pdf">
                                     <img class="musiciens__dep__item__img"
                                          src="<?php echo get_template_directory_uri(); ?>/library/images/pdf.jpg"
                                          alt="">
@@ -304,7 +304,7 @@ Template Name: Page Ressource Pédagogique
                                 </a>
                             </li>
                             <li class="musiciens__dep__item">
-                                <a href="http://o-s-b.fr/wp-content/uploads/2017/06/Quand_le_classique_rencontre_le_jazz.pdf">
+                                <a href="http://o-s-b.fr/wp-content/uploads/2017/06/Quand-le-classique-rencontre-le-jazz.pdf">
                                     <img class="musiciens__dep__item__img"
                                          src="<?php echo get_template_directory_uri(); ?>/library/images/pdf.jpg"
                                          alt="">
@@ -317,7 +317,7 @@ Template Name: Page Ressource Pédagogique
                                 </a>
                             </li>
                             <li class="musiciens__dep__item">
-                                <a href="http://o-s-b.fr/wp-content/uploads/2017/06/Quest_ce_quun_orchestre.pdf">
+                                <a href="http://o-s-b.fr/wp-content/uploads/2017/06/Quest-ce-quun-orchestre.pdf">
                                     <img class="musiciens__dep__item__img"
                                          src="<?php echo get_template_directory_uri(); ?>/library/images/pdf.jpg"
                                          alt="">
@@ -330,7 +330,7 @@ Template Name: Page Ressource Pédagogique
                                 </a>
                             </li>
                             <li class="musiciens__dep__item">
-                                <a href="http://o-s-b.fr/wp-content/uploads/2017/06/Symphonie_de_chambre_n1_John_Adams.pdf">
+                                <a href="http://o-s-b.fr/wp-content/uploads/2017/06/Symphonie-de-chambre-n1-John-Adams.pdf">
                                     <img class="musiciens__dep__item__img"
                                          src="<?php echo get_template_directory_uri(); ?>/library/images/pdf.jpg"
                                          alt="">
@@ -374,7 +374,7 @@ Template Name: Page Ressource Pédagogique
                                 </a>
                             </li>
                             <li class="musiciens__dep__item">
-                                <a href="http://o-s-b.fr/wp-content/uploads/2017/06/Generations_Bach.pdf">
+                                <a href="http://o-s-b.fr/wp-content/uploads/2017/06/Generations-Bach.pdf">
                                     <img class="musiciens__dep__item__img"
                                          src="<?php echo get_template_directory_uri(); ?>/library/images/pdf.jpg"
                                          alt="">
@@ -400,7 +400,7 @@ Template Name: Page Ressource Pédagogique
                                 </a>
                             </li>
                             <li class="musiciens__dep__item">
-                                <a href="http://o-s-b.fr/wp-content/uploads/2017/06/Quintette_de_cuivres.pdf">
+                                <a href="http://o-s-b.fr/wp-content/uploads/2017/06/Quintette-de-cuivres.pdf">
                                     <img class="musiciens__dep__item__img"
                                          src="<?php echo get_template_directory_uri(); ?>/library/images/pdf.jpg"
                                          alt="">
