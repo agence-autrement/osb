@@ -71,4 +71,23 @@
       width: 100%;
     }
   }
+
+  @media screen and (max-width: 768px) {
+
+    .left_content{
+      width: 100% !important;
+      float: none !important;
+      margin-bottom: 35px;
+    }
+
+    .right_content{
+      width: 100% !important;
+      float: none !important;
+      padding-left: 0 !important;
+    }
+
+
+
+
+  }
 }

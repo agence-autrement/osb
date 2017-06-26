@@ -28,7 +28,19 @@
 MEDIA QUERIES
 ******************************/
 
+@media screen and (max-width: 480px) {
+
+  .btn_bulletin{
+    width: inherit !important;
+  }
+
+}
+
 @media screen and (max-width: 767px) {
+
+  .top_page_abo{
+    padding-top: 135px;
+  }
 
   .section-joinorbook {
     padding:4rem 0;

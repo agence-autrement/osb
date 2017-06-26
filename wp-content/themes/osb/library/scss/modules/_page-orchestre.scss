@@ -583,6 +583,20 @@
 MEDIA QUERIES
 ******************************/
 
+@media screen and (max-width: 480px) {
+
+  .orch-bg, .orch-sep {
+    &__left {
+      h3{
+        font-size: 4rem;
+      }
+
+    }
+
+  }
+
+}
+
 @media screen and (max-width: 768px) {
 
   .recru__item{
@@ -617,15 +631,16 @@ MEDIA QUERIES
   }
 
   .orch-bg, .orch-sep {
+
     &__left, &__right {
       margin: 0 0 1rem;
       width: 100%;
       padding: 0;
-
     }
-
+    &__left{
+      padding-top: 135px;
+    }
   }
-
 }
 
 @media screen and (min-width: 768px) {

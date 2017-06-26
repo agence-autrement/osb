@@ -312,9 +312,38 @@ MEDIA QUERIES
 }
 
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 480px) {
 
+  .section-header-ressources{
+    height:auto;
+  }
 
+  .header-ressources__content{
+    margin-bottom: 35px;
+    span{
+      display: block;
+    }
+  }
+
+  .header-ressources__inner{
+    padding-top: 60px;
+  }
+
+  .header-ressources__title{
+    font-size: 4rem;
+    span{
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .access--left{
+    height: 350px;
+  }
+
+  .culture--left{
+    height: 420px;
+  }
 
 }
 

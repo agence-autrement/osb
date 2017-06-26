@@ -421,9 +421,25 @@
   /*768px*/
   @media screen and (max-width: 768px) {
 
-    .top_page_action {
+    .titre_right_text{
+      padding-left: 0;
+    }
+
+    .txt_right_content{
+      padding-left: 0;
+    }
+
+    .interview .content_left{
       padding-top: 35px;
-      height: 540px;
+    }
+
+    .btn_savoir_plus{
+      padding-left: 0;
+    }
+
+    .top_page_action {
+      padding-top: 135px;
+      height: auto;
       .title {
         font-size: 45pxss;
       }
@@ -512,13 +528,19 @@
         img{
           position: inherit;
           top: 0;
-          left: 40px;
+          left: 0;
+          right: 0;
           margin:0 auto;
         }
       }
     }
     .croix_noir{
       display: none;
+    }
+  }
+  @media screen and (max-width: 480px){
+    .title{
+      font-size: 44px;
     }
   }
 }
