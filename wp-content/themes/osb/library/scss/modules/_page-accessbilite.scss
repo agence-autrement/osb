@@ -261,7 +261,7 @@
 MEDIA QUERIES
 ******************************/
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 
   .section-access, .section-culture {
     height: auto;
@@ -269,7 +269,7 @@ MEDIA QUERIES
 
   .access, .culture {
     &--left, &--right {
-      margin:0;
+      margin:0 auto 35px;
       width:100%;
     }
   }
@@ -294,7 +294,7 @@ MEDIA QUERIES
 @media screen and (min-width: 990px) {
 }
 
-@media screen and (max-width: 990px) and (min-width: 768px) {
+@media screen and (max-width: 990px) and (min-width: 769px) {
 
 
   .access, .culture {

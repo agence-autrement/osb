@@ -24,9 +24,9 @@
 						<div class="footer_content">
 							<img src="<?php bloginfo('template_url') ?>/library/images/osb_logo.svg" alt="logo">
 							<div id="reseaux_sociaux">
-								<div><a href="###">Facebook</a></div>
-								<div><a href="###">Twitter</a></div>
-								<div><a href="###">Instagram</a></div>
+								<div><a href="https://www.facebook.com/orchestresymphoniquebretagne/">Facebook</a></div>
+								<div><a href="https://twitter.com/l_osb">Twitter</a></div>
+								<div><a href="https://www.instagram.com/orchestresymphoniquedebretagne/">Instagram</a></div>
 							</div>
 						</div>
 						<div class="footer_content">

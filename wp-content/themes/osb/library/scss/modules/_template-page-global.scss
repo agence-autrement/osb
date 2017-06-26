@@ -406,22 +406,17 @@
   /////////////////////////  RESPONSIVE
 
   /*1024px*/
-  @media screen and (max-width: 1024px) {
 
-    .resultat{
-      .fiche{
-        &__item{
-          width: 50%;
-          float: none;
-          overflow: hidden;
-          margin: 0 auto 35px;
-          &:last-of-type{
-            margin-right: inherit;
-          }
-        }
+  @media screen and (max-width: 1100px){
+    .sub_menu{
+      &.fixed{
+        left: 0;
       }
     }
   }
+
+
+
 
   /*768px*/
   @media screen and (max-width: 768px) {
@@ -509,6 +504,21 @@
       &__item{
         width: 100% !important;
       }
+    }
+    .image_position{
+      position: inherit;
+      margin: 0 auto;
+      .img_content{
+        img{
+          position: inherit;
+          top: 0;
+          left: 40px;
+          margin:0 auto;
+        }
+      }
+    }
+    .croix_noir{
+      display: none;
     }
   }
 }

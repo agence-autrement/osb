@@ -507,11 +507,11 @@ RESPONSIVE
       left:0;
     }
 
-    z-index:9;
+    z-index: 200;
   }
 
   .sidebar__all {
-    z-index:10;
+    z-index:200;
   }
 
 
@@ -527,4 +527,13 @@ RESPONSIVE
 
   }
 
+  #side_nav{
+    ul{
+      li{
+        &:before{
+          display: none;
+        }
+      }
+    }
+  }
 }

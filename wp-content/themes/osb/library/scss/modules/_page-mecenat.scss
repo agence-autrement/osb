@@ -410,12 +410,18 @@ RESPONSIVE
       }
 
       .ami{
-        &:hover{
+        .hover_don{
+          height: 0;
+          top: -80px;
+        }
+        &.full_h{
           .hover_don{
-            opacity: 0;
+            height: 100%;
+            top: 0;
           }
         }
       }
+
     }
     
     .participez_creation{
@@ -496,6 +502,4 @@ RESPONSIVE
       font-size: 45px;
     }
   }
-
-
 }

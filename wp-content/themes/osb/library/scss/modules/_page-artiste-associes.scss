@@ -198,5 +198,11 @@
       color: #FFF;;
     }
   }
+  ///////////////////////// RESPONSIVE
 
+  @media screen and (max-width: 768px) {
+    .top_page_action{
+      padding-top: 135px;
+    }
+  }
 }

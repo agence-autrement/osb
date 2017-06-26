@@ -583,7 +583,13 @@
 MEDIA QUERIES
 ******************************/
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
+
+  .recru__item{
+    width: 100%;
+    padding-top: 50px;
+    margin: 0 auto 35px;
+  }
 
   .section-orch {
     padding: 6rem 0 4rem;

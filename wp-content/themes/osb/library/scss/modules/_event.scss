@@ -5,3 +5,15 @@
   line-height:2.1rem;
   margin-bottom: 3.5rem;
 }
+
+@media screen and (max-width: 768px){
+  .spectacles{
+    .fiche{
+      &__item{
+        width: 100% !important;
+        margin: 0 auto 35px;
+      }
+    }
+  }
+}
+

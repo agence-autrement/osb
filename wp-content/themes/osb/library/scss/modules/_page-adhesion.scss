@@ -201,6 +201,22 @@
     width: 52%;
     float: left;
   }
+
+  @media screen and (max-width: 768px){
+    #mecene-txt{
+      width: 100%;
+      margin: 0 auto 35px;
+    }
+
+    #visuel-mecene{
+      width: 100%;
+      margin: 0 auto 35px;
+    }
+  }
+
+
+
+
 }
 
 
@@ -429,7 +445,6 @@ MEDIA QUERIES
       }
     }
   }
-
 }
 
 @media screen and (min-width: 768px) {
