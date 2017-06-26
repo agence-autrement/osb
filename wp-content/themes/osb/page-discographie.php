@@ -59,7 +59,7 @@ Template Name: Page Discographie
                 <li class="produit">
                     <div class="visuel_produit">
                         <iframe id="spot" src="https://open.spotify.com/embed/album/6QDKKC1hPscmaMpMXGMcvD" width="" height="330" frameborder="0" allowtransparency="true"></iframe>
-                        <img src="<? bloginfo('template_url') ?>/library/images/Didier_squiban_iroise.png" alt="iroise">
+                        <img src="<? bloginfo('template_url') ?>/library/images/Didier_squiban_Iroise.png" alt="iroise">
                         <div class="prix">15€</div>
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
@@ -104,7 +104,7 @@ Template Name: Page Discographie
                 <li class="produit">
                     <div class="visuel_produit">
                         <iframe id="spot" src="https://open.spotify.com/embed/album/4ICINhEIMlGhgQXSnczwgr" width="" height="330" frameborder="0" allowtransparency="true"></iframe>
-                        <img src="<? bloginfo('template_url') ?>/library/images/Tanguy-Sinfonietta.png" alt="sinfonietta">
+                        <img src="<? bloginfo('template_url') ?>/library/images/tanguy-sinfonietta.png" alt="sinfonietta">
                         <div class="prix">15€</div>
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
@@ -273,7 +273,7 @@ Template Name: Page Discographie
                 <li class="produit">
                     <div class="visuel_produit">
                         <iframe id="spot" src="https://open.spotify.com/embed/album/7MrHeYq3De45SuM5tPwe2p" width="" height="330" frameborder="0" allowtransparency="true"></iframe>
-                        <img src="<? bloginfo('template_url') ?>/library/images/philippe-cuper-–-clopland---françaix---nielsen.png" alt="Cuper-Clopland-Nielsen">
+                        <img src="<? bloginfo('template_url') ?>/library/images/philippe-cuper-–-clopland---francaix---nielsen.png" alt="Cuper-Clopland-Nielsen">
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
@@ -287,7 +287,7 @@ Template Name: Page Discographie
                 <li class="produit">
                     <div class="visuel_produit">
                         <iframe id="spot" src="https://open.spotify.com/embed/album/284Ayn4MmuEcWm3mGsdv1h" width="" height="330" frameborder="0" allowtransparency="true"></iframe>
-                        <img src="<? bloginfo('template_url') ?>/library/images/henri-demarquette----jean-françaix-1912.png" alt="Jean-Françaix">
+                        <img src="<? bloginfo('template_url') ?>/library/images/henri-demarquette----jean-francaix-1912.png" alt="Jean-Françaix">
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
@@ -301,7 +301,7 @@ Template Name: Page Discographie
                 <li class="produit">
                     <div class="visuel_produit">
                         <iframe id="spot" src="https://open.spotify.com/embed/album/69tWu4yR84nAq3dRI5KrJO" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
-                        <img src="<? bloginfo('template_url') ?>/library/images/Prokofiev---Pierre-et-le-loup-Bilingue-–-15€.png" alt="Pierre-et-le-Loup">
+                        <img src="<? bloginfo('template_url') ?>/library/images/Francois-joseph-gossec-–-four-symphonies.png" alt="Gossec-four">
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
@@ -314,7 +314,7 @@ Template Name: Page Discographie
 
                 <li class="produit">
                     <div class="visuel_produit">
-                        <img src="<? bloginfo('template_url') ?>/library/images/Prokofiev---Pierre-et-le-loup-Bilingue-–-15€.png" alt="Pierre-et-le-Loup">
+                        <img src="<? bloginfo('template_url') ?>/library/images/francois-joseph-gossec.png" alt="Gossec">
                     </div>
                     <div class="artiste">Jean-François Gossec</div>
                     <div class="programme"></div>
@@ -324,7 +324,7 @@ Template Name: Page Discographie
                 <li class="produit">
                     <div class="visuel_produit">
                         <iframe id="spot" src="https://open.spotify.com/embed/album/1j4uqBRvnBAV4qdOPn7i4E" width="" height="330" frameborder="0" allowtransparency="true"></iframe>
-                        <img src="<? bloginfo('template_url') ?>/library/images/Prokofiev---Pierre-et-le-loup-Bilingue-–-15€.png" alt="Pierre-et-le-Loup">
+                        <img src="<? bloginfo('template_url') ?>/library/images/francois-pollet---berlioz.png" alt="francois-pollet">
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
@@ -337,7 +337,7 @@ Template Name: Page Discographie
 
                 <li class="produit">
                     <div class="visuel_produit">
-                        <img src="<? bloginfo('template_url') ?>/library/images/Prokofiev---Pierre-et-le-loup-Bilingue-–-15€.png" alt="Pierre-et-le-Loup">
+                        <img src="<? bloginfo('template_url') ?>/library/images/paul-ladmirault---poemes-symphoniques.png" alt="Ladmirault">
                     </div>
                     <div class="artiste">Paul Ladmirault</div>
                     <div class="programme">
@@ -349,7 +349,7 @@ Template Name: Page Discographie
                 <li class="produit">
                     <div class="visuel_produit">
                         <iframe id="spot" src="https://open.spotify.com/embed/album/5JciPLNNnWwAzcyHouksnb" width="" height="330" frameborder="0" allowtransparency="true"></iframe>
-                        <img src="<? bloginfo('template_url') ?>/library/images/Prokofiev---Pierre-et-le-loup-Bilingue-–-15€.png" alt="Pierre-et-le-Loup">
+                        <img src="<? bloginfo('template_url') ?>/library/images/andre-ernest-modeste-gretry-–-suites-et-overtures.png" alt="André-Ernest-Modeste">
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
@@ -363,7 +363,7 @@ Template Name: Page Discographie
                 <li class="produit">
                     <div class="visuel_produit">
                         <iframe id="spot" src="https://open.spotify.com/embed/album/6dmEwHmCHvSKRf14FQ9v0B" width="" height="330" frameborder="0" allowtransparency="true"></iframe>
-                        <img src="<? bloginfo('template_url') ?>/library/images/Prokofiev---Pierre-et-le-loup-Bilingue-–-15€.png" alt="Pierre-et-le-Loup">
+                        <img src="<? bloginfo('template_url') ?>/library/images/m.-mehul---overtures.png" alt="Mehul">
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
@@ -377,7 +377,7 @@ Template Name: Page Discographie
                 <li class="produit">
                     <div class="visuel_produit">
                         <iframe id="spot" src="https://open.spotify.com/embed/album/14YGyxQOmkTJkhcGAAVz8G" width="" height="330" frameborder="0" allowtransparency="true"></iframe>
-                        <img src="<? bloginfo('template_url') ?>/library/images/Prokofiev---Pierre-et-le-loup-Bilingue-–-15€.png" alt="Pierre-et-le-Loup">
+                        <img src="<? bloginfo('template_url') ?>/library/images/paul-le-flem.png" alt="Paul-le-flem">
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
@@ -389,7 +389,7 @@ Template Name: Page Discographie
 
                 <li class="produit">
                     <div class="visuel_produit">
-                        <img src="<? bloginfo('template_url') ?>/library/images/Prokofiev---Pierre-et-le-loup-Bilingue-–-15€.png" alt="Pierre-et-le-Loup">
+                        <img src="<? bloginfo('template_url') ?>/library/images/pierre-tchernia-–-histoire-et-babar-le-petit-elephant-et-pierre-et-le-loup.png" alt="Pierre-et-le-Loup">
                     </div>
                     <div class="artiste">Pierre Tchernia</div>
                     <div class="programme">
@@ -401,7 +401,7 @@ Template Name: Page Discographie
 
                 <li class="produit">
                     <div class="visuel_produit">
-                        <img src="<? bloginfo('template_url') ?>/library/images/Prokofiev---Pierre-et-le-loup-Bilingue-–-15€.png" alt="Pierre-et-le-Loup">
+                        <img src="<? bloginfo('template_url') ?>/library/images/ravel-–-respighi-–-bartok--j-strauss-–-schoenberg-–-defalla.strauss-–-schoenberg-–-defalla.png" alt="Orchestre de Bretagne">
                     </div>
                     <div class="artiste">Orchestre de Bretagne</div>
                     <div class="programme">
@@ -416,7 +416,7 @@ Template Name: Page Discographie
                 <li class="produit">
                     <div class="visuel_produit">
                         <iframe id="spot" src="https://open.spotify.com/embed/album/2HMbtvV0g9TWsLRQTdWskg" width="" height="330" frameborder="0" allowtransparency="true"></iframe>
-                        <img src="<? bloginfo('template_url') ?>/library/images/Prokofiev---Pierre-et-le-loup-Bilingue-–-15€.png" alt="Pierre-et-le-Loup">
+                        <img src="<? bloginfo('template_url') ?>/library/images/joseph-guy-ropartz.png" alt="Ropartz">
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
@@ -429,10 +429,13 @@ Template Name: Page Discographie
 
                 <li class="produit">
                     <div class="visuel_produit">
-                        <img src="<? bloginfo('template_url') ?>/library/images/Prokofiev---Pierre-et-le-loup-Bilingue-–-15€.png" alt="Pierre-et-le-Loup">
+                        <img src="<? bloginfo('template_url') ?>/library/images/tchaikovski_chopin_favrekahn.png" alt="Ropartz2">
                     </div>
                     <div class="artiste">Joseph-Guy Ropartz</div>
                     <div class="programme">
+                        Tchaikovsky<br>
+                        Chopin<br>
+                        Favrekahn
                     </div>
                 </li>
 
@@ -440,7 +443,7 @@ Template Name: Page Discographie
                 <li class="produit">
                     <div class="visuel_produit">
                         <iframe id="spot" src="https://open.spotify.com/embed/album/4FgHatoPAXJk17JnkA3E0L" width="" height="330" frameborder="0" allowtransparency="true"></iframe>
-                        <img src="<? bloginfo('template_url') ?>/library/images/Prokofiev---Pierre-et-le-loup-Bilingue-–-15€.png" alt="Pierre-et-le-Loup">
+                        <img src="<? bloginfo('template_url') ?>/library/images/eric-tanguy-–-portrait-xxi.png" alt="Eric Tanguy">
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
@@ -454,7 +457,7 @@ Template Name: Page Discographie
                 <li class="produit">
                     <div class="visuel_produit">
                         <iframe id="spot" src="https://open.spotify.com/embed/album/1AthSSFCbvkN0RTi0LTSZI" width="" height="330" frameborder="0" allowtransparency="true"></iframe>
-                        <img src="<? bloginfo('template_url') ?>/library/images/Prokofiev---Pierre-et-le-loup-Bilingue-–-15€.png" alt="Pierre-et-le-Loup">
+                        <img src="<? bloginfo('template_url') ?>/library/images/henri-texier--azur-quintet-–-strings-spirit.png" alt="Texier">
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
@@ -469,7 +472,7 @@ Template Name: Page Discographie
                 <li class="produit">
                     <div class="visuel_produit">
                         <iframe id="spot" src="https://open.spotify.com/embed/album/3otubTPyTa1TLLA9Ut7Eor" width="" height="330" frameborder="0" allowtransparency="true"></iframe>
-                        <img src="<? bloginfo('template_url') ?>/library/images/Prokofiev---Pierre-et-le-loup-Bilingue-–-15€.png" alt="Pierre-et-le-Loup">
+                        <img src="<? bloginfo('template_url') ?>/library/images/guillaume-sutre-et-miguel-da-silva_max-bruch.png" alt="Sutre">
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
@@ -483,7 +486,7 @@ Template Name: Page Discographie
                 <li class="produit">
                     <div class="visuel_produit">
                         <iframe id="spot" src="https://open.spotify.com/embed/album/3tWCFDwhPovRhYvlj0XlcP" width="" height="330" frameborder="0" allowtransparency="true"></iframe>
-                        <img src="<? bloginfo('template_url') ?>/library/images/Prokofiev---Pierre-et-le-loup-Bilingue-–-15€.png" alt="Pierre-et-le-Loup">
+                        <img src="<? bloginfo('template_url') ?>/library/images/schumann-concerti.png" alt="Schumann concerti">
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
@@ -493,7 +496,7 @@ Template Name: Page Discographie
 
                 <li class="produit">
                     <div class="visuel_produit">
-                        <img src="<? bloginfo('template_url') ?>/library/images/Prokofiev---Pierre-et-le-loup-Bilingue-–-15€.png" alt="Pierre-et-le-Loup">
+                        <img src="<? bloginfo('template_url') ?>/library/images/tubby-le-tuba.png" alt="Tubby">
                     </div>
                     <div class="artiste">Tubby le tuba</div>
                 </li>
@@ -502,7 +505,7 @@ Template Name: Page Discographie
                 <li class="produit">
                     <div class="visuel_produit">
                         <iframe id="spot" src="https://open.spotify.com/embed/album/2FZGV1QlnPFW054gOKTucG" width="" height="330" frameborder="0" allowtransparency="true"></iframe>
-                        <img src="<? bloginfo('template_url') ?>/library/images/Prokofiev---Pierre-et-le-loup-Bilingue-–-15€.png" alt="Pierre-et-le-Loup">
+                        <img src="<? bloginfo('template_url') ?>/library/images/philippe-cuper-–-weber-concertos.png" alt="Philippe CUper">
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
