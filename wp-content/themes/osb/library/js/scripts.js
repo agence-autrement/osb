@@ -562,9 +562,14 @@ jQuery(document).ready(function ($) {
 
     });
 
-
     if ($(window).width() < 768) {
         $('.select_filter').attr('size', '8');
+    }
+
+    if ($(window).width() < 480) {
+        $('.select_filter').attr('size', 'auto');
+
+        $('.first_opt').attr('selected', 'selected');
     }
 
 

@@ -379,6 +379,10 @@ MEDIA QUERIES
     &__left, &__right {
       float: none;
       width: 100%;
+      padding-left: 0;
+    }
+    &__right{
+      margin-bottom: 35px;
     }
   }
 

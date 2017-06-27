@@ -5,16 +5,15 @@
   .post-password-form{
     max-width: 1100px;
     margin: 0 auto;
-    padding: 35px;
+    padding: 135px 35px 35px;
   }
 
 
   .top_page_disco {
     padding: 130px 35px 35px;
     text-align: center;
-    background-image: url(../images/slide-abo.jpg);
     background-size: cover;
-    background-position: center center;
+    background: url(../images/slide-abo.jpg) center center;
   }
 
   .abonne_plus_book{
@@ -205,6 +204,11 @@
       display: block;
       height: 100%;
       width: 100%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .abonne_plus_book{
+      font-size: 50px;
     }
   }
 }
