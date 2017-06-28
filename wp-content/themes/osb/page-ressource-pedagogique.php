@@ -10,7 +10,7 @@ Template Name: Page Ressource Pédagogique
 
         <section class="top_page_disco">
             <div class="contenu_grid">
-                <div class="abonne_plus_book">Ressources Pédagogiques</div>
+                <h1 class="abonne_plus_book">Ressources Pédagogiques</h1>
             </div>
         </section>
 

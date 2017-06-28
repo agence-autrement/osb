@@ -11,7 +11,7 @@ Template Name: Page Mécénat
 
     <section class="top_page_action">
         <div class="contenu_grid">
-            <div class="title">Concerto, <br> <span>le cercle des amis de l'OSB</span></div>
+            <h1 class="title">Concerto, <br> <span>le cercle des amis de l'OSB</span></h1>
             <div class="btn_savoir_plus"><a href="#rejoindre">En savoir +</a></div>
             <div class="intro_text">
                 Spectateur(trice) de l'Orchestre Symphonique de Bretagne, vous souhaitez apporter votre soutien aux activités de l'OSB et bénéficier d'avantages exclusifs ? Rejoignez Concerto, le Cercle des Amis de l'OSB !
@@ -23,9 +23,9 @@ Template Name: Page Mécénat
         <div class="contenu_grid">
             <div class="rejoindre">
                 <div class="align">
-                    <div class="titre_pourquoi">
+                    <h2 class="titre_pourquoi">
                         Pourquoi nous rejoindre ?
-                    </div>
+                    </h2>
                     <div class="txt_pourquoi">
                         Concerto vous propose une relation privilégiée avec l’OSB, et rassemble des membres qui encouragent la démarche citoyenne de l’Orchestre.
                     </div>
@@ -33,9 +33,9 @@ Template Name: Page Mécénat
             </div>
             <div class="rejoindre">
                 <div class="align">
-                    <div class="titre_pourquoi">
+                    <h2 class="titre_pourquoi">
                         À quoi sert votre adhésion ?
-                    </div>
+                    </h2>
                     <div class="txt_pourquoi">
                         L’OSB a besoin de vous pour soutenir deux projets phares de la saison 2017-2018 :<br>
                         <span class="norm">
@@ -52,7 +52,7 @@ Template Name: Page Mécénat
     <section class="don">
         <div class="ami formule">
             <div class="encadre">30€</div>
-            <div class="titre">Ami</div>
+            <h3 class="titre">Ami</h3>
             <ul>
                 <li>Invitation aux soirées + (5 fois par an)</li>
                 <li class="plus">+</li>
@@ -74,7 +74,7 @@ Template Name: Page Mécénat
         <div class="ami formule center">
             <div class="encadre">60€ et plus</div>
             <div class="titre">
-                <div>Mécène</div>
+                <h3>Mécène</h3>
                 <div class="sous_titre_cadre">(100€ et plus en duo)</div>
             </div>
             <ul>
@@ -96,7 +96,7 @@ Template Name: Page Mécénat
             </div>
         </div>
         <div class="ami formule bg_jaune">
-            <div class="titre">Don en ligne</div>
+            <h3 class="titre">Don en ligne</h3>
             <ul>
                 <li>Fidèles spectateurs de l’Orchestre Symphonique de Bretagne, prenez part à la vie de l’orchestre en le soutenant.</li>
 
@@ -116,12 +116,12 @@ Template Name: Page Mécénat
     <section class="participez_creation">
         <div class="contenu_grid">
             <div class="content_titre">
-                <div class="titre_crea">Participez à la création d'une oeuvre <span class="yellow_cross"></span></div>
+                <h3 class="titre_crea">Participez à la création d'une oeuvre <span class="yellow_cross"></span></h3>
                 <div class="sous_titre_crea">aux côté de l'OSB</div>
             </div>
             <div class="content_text">
                 <span class="black_cross"></span>
-            L’Orchestre Symphonique de Bretagne participe tous les ans à l’enrichissement du répertoire symphonique, par une politique de commandes de nouvelles oeuvres à de jeunes compositeurs. Au cours de la saison musicale 2017-2018, l’OSB a notamment le plaisir de travailler avec deux compositeurs en résidence, Benoît Menut et Julien Gauthier. Leurs oeuvres Anita et Symphonie Australe seront créées par l’Orchestre en avril 2018 dans le cadre du concert « Les 40èmes Rugissants », dédié à la mer et à l’océanographe Anita Conti. Associez-vous à cette création et devenez mécène de deux nouvelles oeuvres, dont les premières notes seront entendues en exclusivité à Rennes ! Votre soutien permet de faire vivre la création artistique et d’enrichir le répertoire musical.
+                    L’Orchestre Symphonique de Bretagne participe tous les ans à l’enrichissement du répertoire symphonique, par une politique de commandes de nouvelles oeuvres à de jeunes compositeurs. Au cours de la saison musicale 2017-2018, l’OSB a notamment le plaisir de travailler avec deux compositeurs en résidence, Benoît Menut et Julien Gauthier. Leurs oeuvres Anita et Symphonie Australe seront créées par l’Orchestre en avril 2018 dans le cadre du concert « Les 40èmes Rugissants », dédié à la mer et à l’océanographe Anita Conti. Associez-vous à cette création et devenez mécène de deux nouvelles oeuvres, dont les premières notes seront entendues en exclusivité à Rennes ! Votre soutien permet de faire vivre la création artistique et d’enrichir le répertoire musical.
             </div>
         </div>
     </section>

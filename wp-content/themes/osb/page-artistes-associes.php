@@ -19,9 +19,9 @@ Template Name: Page Artistes Associés
                     <li><a href="#gastinel">Anne Gastinel</a></li>
                 </ul>
             </div>
-            <div class="title">
+            <h1 class="title">
                 Artistes <span>Associés</span>
-            </div>
+            </h1>
             <div class="tag">
                 <div class="btn_red"><a href="###">Carte blanche à Anne Gastinel</a></div>
                 <div class="btn_savoir_plus"><a href="#more">En savoir +</a></div>
@@ -44,7 +44,7 @@ Template Name: Page Artistes Associés
     <section class="content_right"  id="zielinski">
         <div class="image_position">
             <div class="img_content">
-                <img src="<? bloginfo('template_url') ?>/library/images/aurelien_azan_zielinski.jpg" alt="">
+                <img src="<? bloginfo('template_url') ?>/library/images/aurelien_azan_zielinski.jpg" alt="Zielinski">
             </div>
         </div>
         <div class="contenu_grid">
@@ -155,7 +155,7 @@ Template Name: Page Artistes Associés
                     Dumont
                     <span class="croix_rouge"></span>
                 </div>
-                <img src="<? bloginfo('template_url') ?>/library/images/francois-dumont.jpg" alt="">
+                <img src="<? bloginfo('template_url') ?>/library/images/francois-dumont.jpg" alt="Dumont">
             </div>
             <div class="right_content">
                 <span class="croix_noir"></span>
@@ -203,7 +203,7 @@ Template Name: Page Artistes Associés
                     Benoît Menut
                     <span class="croix_rouge"></span>
                 </div>
-                <img src="<? bloginfo('template_url') ?>/library/images/menut.jpg" alt="">
+                <img src="<? bloginfo('template_url') ?>/library/images/menut.jpg" alt="Menut">
             </div>
             <div class="right_content">
                 <span class="croix_noir"></span>
@@ -259,7 +259,7 @@ Template Name: Page Artistes Associés
     <section class="content_right">
         <div class="contenu_grid">
             <div class="left_content">
-                <img src="<? bloginfo('template_url') ?>/library/images/gastinel_portrat.jpg" alt="">
+                <img src="<? bloginfo('template_url') ?>/library/images/gastinel_portrat.jpg" alt="Gastinel">
             </div>
             <div class="right_content">
                 <span class="croix_noir"></span>

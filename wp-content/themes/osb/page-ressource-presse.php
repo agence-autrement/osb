@@ -10,7 +10,7 @@ Template Name: Page Ressource Presses
 
     <section class="top_page_disco">
         <div class="contenu_grid">
-            <div class="abonne_plus_book">Presse</div>
+            <h1 class="abonne_plus_book">Presse</h1>
             <div class="btn_new">Communiqué de presse</div> + <div class="btn_new">Dossier de presse</div>
         </div>
     </section>

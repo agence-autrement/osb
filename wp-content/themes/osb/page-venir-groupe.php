@@ -8,9 +8,9 @@ Template Name: Page Venir en Groupe
 <div id="content">
     <section class="top_page_action">
         <div class="contenu_grid">
-            <div class="title">
+            <h1 class="title">
                 Venir <span>En groupe</span>
-            </div>
+            </h1>
             <div class="tag">
                 <div class="btn_red"><a href="###">Inscription</a></div>
 

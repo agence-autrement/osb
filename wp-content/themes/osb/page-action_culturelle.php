@@ -19,7 +19,9 @@ Template Name: Page Action Culturelle
             </div>
             <? }; ?>
             <div class="title">
-                <? the_field('titre_1'); ?><span> <? the_field('titre_2'); ?></span>
+                <h1>
+                    <? the_field('titre_1'); ?><span> <? the_field('titre_2'); ?></span>
+                </h1>
             </div>
             <div class="tag">
                 <? if( have_rows('boutons_rouges') ){ ?>
@@ -64,7 +66,9 @@ Template Name: Page Action Culturelle
                     <div class="contenu_grid">
                         <div class="left_content">
                             <div class="titre_content">
-                                <? the_sub_field('titre'); ?>
+                                <h2>
+                                    <? the_sub_field('titre'); ?>
+                                </h2>
                                 <span class="croix_rouge"></span>
                             </div>
                         </div>
@@ -110,7 +114,9 @@ Template Name: Page Action Culturelle
                     <div class="contenu_grid">
                         <div class="left_content">
                             <div class="titre_content">
-                                <? the_sub_field('titre'); ?>
+                                <h2>
+                                    <? the_sub_field('titre'); ?>
+                                </h2>
                                 <span class="croix_rouge"></span>
                             </div>
                             <div class="visuel_content">

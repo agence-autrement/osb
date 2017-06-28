@@ -11,7 +11,7 @@ Template Name: Page Don en ligne
 
     <section class="top_page_mecenat">
         <div class="contenu_grid">
-            <div class="title">Don en ligne <br> <span>soutenez les projets <br>de l'OSB</span></div>
+            <h1 class="title">Don en ligne <br> <span>soutenez les projets <br>de l'OSB</span></h1>
 
         </div>
     </section>

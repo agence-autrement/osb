@@ -14,9 +14,9 @@ Template Name: Mecenat pro
 
                 </div>
             <? }; ?>
-            <div class="title">Cercle<br>
+            <h1 class="title">Cercle<br>
                 <span>Symphonia</span>
-            </div>
+            </h1>
             <div class="tag">
                 <div class="btn_red"><a href="<? the_sub_field('lien_du_bouton'); ?>">Club d'entreprises de L'OSB</a>
                 </div>

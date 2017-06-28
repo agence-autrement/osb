@@ -12,10 +12,10 @@ Template Name: Page Conférence / Concert
     <section class="top_page_action">
         <div class="contenu_grid">
 
-            <div class="title">
+            <h1 class="title">
                 Conférence<br>
                 <span>Concert</span>
-            </div>
+            </h1>
             <div class="tag">
                 <div class="btn_red"><a href="http://www.leschampslibres.fr/pied-de-page/contact/">L'heure musicale aux champs libres</a></div>
                 <div class="btn_savoir_plus"><a href="#more">En savoir +</a></div>
@@ -29,8 +29,10 @@ Template Name: Page Conférence / Concert
         <div class="contenu_grid">
             <div class="left_content">
                 <div class="titre_content">
-                    Rhiannon<br>
-                    Giddens
+                    <h2>
+                        Rhiannon<br>
+                        Giddens
+                    </h2>
                     <span class="croix_rouge"></span>
                 </div>
                 <img src="<? bloginfo('template_url') ?>/library/images/giddens_freedom.jpg" alt="">

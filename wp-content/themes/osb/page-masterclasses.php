@@ -25,7 +25,10 @@ Template Name: Page Master Classes
 
             </div>
         <? }; ?>
-        <div class="title">Masterclasses
+        <div class="title">
+            <h1>
+                Masterclasses
+            </h1>
         </div>
         <div class="tag">
             <div class="btn_red"><a href="<? the_sub_field('lien_du_bouton'); ?>">Transmettre son savoir-faire</a></div>

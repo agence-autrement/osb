@@ -9,7 +9,7 @@ Template Name: Page Abonnement
 <div id="content">
     <section class="top_page_abo">
         <div class="contenu_grid">
-            <div class="abonne_plus_book">S'abonner</div><span class="separator"></span><div class="abonne_plus_book">réserver</div>
+            <h1 class="abonne_plus_book">S'abonner</h1><span class="separator"></span><div class="abonne_plus_book">réserver</div>
             <div class="booked_date">à partir du 20 juin 2018</div>
             <div class="btn_new">Nouveau</div>
             <div class="txt_intro">L’OSB vous propose de nouvelles formules d’abonnements. Au programme, toujours plus de privilèges : accès à la billetterie dès le 20 juin, privilège de placement, réductions garanties tout au long de la saison, réductions chez des partenaires sélectionnés… et bien plus encore !</div>
@@ -20,7 +20,7 @@ Template Name: Page Abonnement
         <div class="ami formule">
             <div class="encadre">100% illimité</div>
             <div class="titre">
-                <div>Explorateur</div>
+                <h2>Explorateur</h2>
                 <div class="sous_titre_cadre">L'OSB en illimité</div>
             </div>
             <ul>
@@ -46,7 +46,7 @@ Template Name: Page Abonnement
         <div class="ami formule center">
             <div class="encadre">-50%</div>
             <div class="titre">
-                <div>Voyageur</div>
+                <h3>Voyageur</h3>
                 <div class="sous_titre_cadre">L'OSB à moitié prix, sur tous les concerts, toute la saison !</div>
             </div>
             <ul>
@@ -72,7 +72,7 @@ Template Name: Page Abonnement
         <div class="ami formule">
             <div class="encadre">-35%</div>
             <div class="titre">
-                <div>Découvreur</div>
+                <h2>Découvreur</h2>
                 <div class="sous_titre_cadre">Bénéficiez d'une réduction de 35%, sur tous les concerts, toute la saison !</div>
             </div>
             <ul>
@@ -100,9 +100,9 @@ Template Name: Page Abonnement
         <div class="contenu_grid">
             <div class="rejoindre">
                 <div class="align_join">
-                    <div class="titre_pourquoi">
+                    <h3 class="titre_pourquoi">
                         <div>Carte Aventurier</div>
-                    </div>
+                    </h3>
                     <div class="txt_pourquoi">
                         Une carte de ﬁdélité à 5€ qui vous garantit 10% de réduction sur l’ensemble des concerts, que vous veniez en solo ou en duo ! Disponible au guichet à partir du 1er septembre 2017.
                     </div>
@@ -110,10 +110,10 @@ Template Name: Page Abonnement
             </div>
             <div class="rejoindre">
                 <div class="align_join">
-                    <div class="titre_pourquoi">
+                    <h3 class="titre_pourquoi">
                         <div>Pass Jeunes</div>
                         <div class="sous_titre_pourquoi">Jusqu'à 28 ans</div>
-                    </div>
+                    </h3>
                     <div class="txt_pourquoi">
                        <b>4 concerts pour 20€ !</b> <br>
                         Disponible sur l'ensemble des concerts, hors Piccolo
@@ -125,7 +125,7 @@ Template Name: Page Abonnement
     </section>
     <section class="tarifs_reduits">
         <div class="contenu_grid">
-            <div class="plus"><img src="<? bloginfo('template_url') ?>/library/images/croix_noir.svg" alt=""></div>
+            <div class="plus"><img src="<? bloginfo('template_url') ?>/library/images/croix_noir.svg" alt="croix noir"></div>
             <div class="accroche">VOUS BÉNÉFICIEZ D’UN TARIF RÉDUIT (BÉNÉFICIAIRES DES MINIMAS SOCIAUX, DEMANDEURS D’EMPLOI, MOINS DE 28 ANS) ?</div>
             <div class="texte">Choisissez votre carte aﬁn d’accéder à la billetterie dès le 20 juin 2017, de bénéﬁcier d’une priorité de placement, et de proﬁter des privilèges liés à la carte (places offertes, CD offert, réduction auprès des partenaires de l’OSB…).</div>
         </div>
@@ -176,7 +176,7 @@ Template Name: Page Abonnement
                 </div>
             </div>
             <div class="carte_sortir">
-                <div class="plus"><img src="<? bloginfo('template_url') ?>/library/images/croix_bleu.svg" alt=""></div>
+                <div class="plus"><img src="<? bloginfo('template_url') ?>/library/images/croix_bleu.svg" alt="croix bleu"></div>
                 <div class="carte"><span>CARTE SORTIR !</span> Tarif préférentiel sur présentation.</div>
                 <div class="condition">Conditions et renseignements à la billetterie (hors Piccolo).</div>
             </div>

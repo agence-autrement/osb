@@ -7,9 +7,6 @@ Template Name: Page Saison
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
 <div id="content">
-<!--    <section class="slider_saison">-->
-<!--       --><?// displayEssentiels() ?>
-<!--    </section>-->
     <section class="filtreSelector">
         <div class="contenu_grid">
             <div class="option_filtre">
@@ -34,8 +31,8 @@ Template Name: Page Saison
                 </select>
                 <select name="type" id="type" class="select_filter" size="15">
                     <option value="" class="first_opt">Type de spectacle</option>
-                    <option value="symphonique" <? if($_GET == 'symphonique'){ echo 'selected'; } ?>>Symphonique</option>
-                    <option value="musiq_de_chambre">Musique de chambre</option>
+                    <option value="symphonique" <? if($_GET['type'] == 'symphonique'){ echo 'selected'; } ?>>Symphonique</option>
+                    <option value="musiq_de_chambre" <? if($_GET['type'] == 'musiq_de_chambre'){ echo 'selected'; } ?>>Musique de chambre</option>
                     <option value="chant">Chant</option>
                     <option value="festival">Festival</option>
                 </select>

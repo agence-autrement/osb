@@ -9,7 +9,7 @@ Template Name: Page Discographie
 <div id="content">
     <section class="top_page_disco">
         <div class="contenu_grid">
-            <div class="abonne_plus_book">Discographie</div>
+            <h1 class="abonne_plus_book">Discographie</h1>
             <div class="btn_new">Écoutez l'OSB</div>
             <div class="txt_intro">L’OSB vous propose de nouvelles formules d’abonnements. Au programme, toujours plus de privilèges : accès à la billetterie dès le 20 juin, privilège de placement, réductions garanties tout au long de la saison, réductions chez des partenaires sélectionnés… et bien plus encore !</div>
         </div>
@@ -33,7 +33,7 @@ Template Name: Page Discographie
                         <img src="<? bloginfo('template_url') ?>/library/images/CD-Dumont-mozart.png" alt="mozart">
                         <div class="prix">20€</div>
                     </div>
-                    <div class="artiste">Mozart // Dumont</div>
+                    <h3 class="artiste">Mozart // Dumont</h3>
                     <div class="programme">
                         Concerto N°9 K.271 <br>
                         Concerto N°20 K.466
@@ -50,7 +50,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">Didier Squiban</div>
+                    <h3 class="artiste">Didier Squiban</h3>
                     <div class="programme">Symphonie Bretagne</div>
                     <div class="acheter"><a href="https://indiv.themisweb.fr/0504/fListeManifs.aspx?idstructure=0504">Acheter</a></div>
                 </li>
@@ -64,7 +64,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">Didier Squiban</div>
+                    <h3 class="artiste">Didier Squiban</h3>
                     <div class="programme">Symphonie Iroise</div>
                     <div class="acheter"><a href="https://indiv.themisweb.fr/0504/fListeManifs.aspx?idstructure=0504">Acheter</a></div>
                 </li>
@@ -78,7 +78,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">Eric Aubier</div>
+                    <h3 class="artiste">Eric Aubier</h3>
                     <div class="programme">
                         Concerto<br>
                         pour trompette
@@ -95,7 +95,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">Erice Aubier</div>
+                    <h3 class="artiste">Erice Aubier</h3>
                     <div class="programme">La trompette française</div>
                     <div class="acheter"><a href="">Acheter</a></div>
                 </li>
@@ -109,7 +109,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">Eric Tanguy</div>
+                    <h3 class="artiste">Eric Tanguy</h3>
                     <div class="programme">Sinfonietta</div>
                     <div class="acheter"><a href="https://indiv.themisweb.fr/0504/fListeManifs.aspx?idstructure=0504">Acheter</a></div>
                 </li>
@@ -123,7 +123,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">Haydn / Mozart / Haimovitz</div>
+                    <h3 class="artiste">Haydn / Mozart / Haimovitz</h3>
                     <div class="programme">
                         The Cello Concertos
                     </div>
@@ -139,7 +139,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">Ladmirault</div>
+                    <h3 class="artiste">Ladmirault</h3>
                     <div class="programme">Poèmes symphoniques</div>
                     <div class="acheter"><a href="https://indiv.themisweb.fr/0504/fListeManifs.aspx?idstructure=0504">Acheter</a></div>
                 </li>
@@ -153,7 +153,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">Louise Farrenc</div>
+                    <h3 class="artiste">Louise Farrenc</h3>
                     <div class="programme">3 Symphonies</div>
                     <div class="acheter"><a href="https://indiv.themisweb.fr/0504/fListeManifs.aspx?idstructure=0504">Acheter</a></div>
                 </li>
@@ -167,7 +167,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">Megapolis</div>
+                    <h3 class="artiste">Megapolis</h3>
                     <div class="acheter"><a href="https://indiv.themisweb.fr/0504/fListeManifs.aspx?idstructure=0504">Acheter</a></div>
                 </li>
 
@@ -179,7 +179,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">Mozart</div>
+                    <h3 class="artiste">Mozart</h3>
                     <div class="programme">
                         Concertos pour<br>
                         Hautbois et Clarinette
@@ -196,7 +196,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">Prokofiev</div>
+                    <h3 class="artiste">Prokofiev</h3>
                     <div class="programme">Pierre et le Loup</div>
                     <div class="acheter"><a href="https://indiv.themisweb.fr/0504/fListeManifs.aspx?idstructure=0504">Acheter</a></div>
                 </li>
@@ -226,7 +226,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">Éric Aubiet</div>
+                    <h3 class="artiste">Éric Aubiet</h3>
                     <div class="programme">
                         Resurgences <br>
                         Concertos pour trompette
@@ -238,7 +238,7 @@ Template Name: Page Discographie
                     <div class="visuel_produit">
                         <img src="<? bloginfo('template_url') ?>/library/images/piano-concertos-n-1,-2,-3,-4,-5.png" alt="Piano-Concertos">
                     </div>
-                    <div class="artiste">Piano</div>
+                    <h3 class="artiste">Piano</h3>
                     <div class="programme">
                         Concertos<br>
                         N° 1, 2, 3, 4, 5
@@ -250,7 +250,7 @@ Template Name: Page Discographie
                     <div class="visuel_produit">
                         <img src="<? bloginfo('template_url') ?>/library/images/brothers-in-arts-–-guillaume-saint-james-et-chris-brubeck.png" alt="brother-in-arts">
                     </div>
-                    <div class="artiste">DVD Brothers in Arts</div>
+                    <h3 class="artiste">DVD Brothers in Arts</h3>
                     <div class="programme">
                         Guillaume Saint-James<br>
                         et Chris Brubeck
@@ -262,7 +262,7 @@ Template Name: Page Discographie
                     <div class="visuel_produit">
                         <img src="<? bloginfo('template_url') ?>/library/images/camille-saint-saens-–-symphonie-n2-–-suite-op.49---concerto-pour-violoncelle-n2.png" alt="Saint-Saëns">
                     </div>
-                    <div class="artiste">Camille Saint-Saës</div>
+                    <h3 class="artiste">Camille Saint-Saës</h3>
                     <div class="programme">
                         Symphonie n°2 - Suite op.49<br>
                         Concerto pour Violoncelle n°2
@@ -277,7 +277,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">Philippe Cuper</div>
+                    <h3 class="artiste">Philippe Cuper</h3>
                     <div class="programme">
                         Clopland / Françaix / Nielsen
                     </div>
@@ -291,7 +291,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">Henri Demarquette</div>
+                    <h3 class="artiste">Henri Demarquette</h3>
                     <div class="programme">
                         Jean Françaix 1912
                     </div>
@@ -305,7 +305,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">François-Joseph Gossec</div>
+                    <h3 class="artiste">François-Joseph Gossec</h3>
                     <div class="programme">
                         Four Symphonies
                     </div>
@@ -316,7 +316,7 @@ Template Name: Page Discographie
                     <div class="visuel_produit">
                         <img src="<? bloginfo('template_url') ?>/library/images/francois-joseph-gossec.png" alt="Gossec">
                     </div>
-                    <div class="artiste">Jean-François Gossec</div>
+                    <h3 class="artiste">Jean-François Gossec</h3>
                     <div class="programme"></div>
                 </li>
 
@@ -328,7 +328,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">François Pollet</div>
+                    <h3 class="artiste">François Pollet</h3>
                     <div class="programme">
                         Herminie, les nuits d'été
                     </div>
@@ -339,7 +339,7 @@ Template Name: Page Discographie
                     <div class="visuel_produit">
                         <img src="<? bloginfo('template_url') ?>/library/images/paul-ladmirault---poemes-symphoniques.png" alt="Ladmirault">
                     </div>
-                    <div class="artiste">Paul Ladmirault</div>
+                    <h3 class="artiste">Paul Ladmirault</h3>
                     <div class="programme">
                         Poèmes Symphoniques
                     </div>
@@ -353,7 +353,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">André-Ernest-Modeste Grétry</div>
+                    <h3 class="artiste">André-Ernest-Modeste Grétry</h3>
                     <div class="programme">
                         Suites et Overtures
                     </div>
@@ -367,7 +367,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">M. Méhul</div>
+                    <h3 class="artiste">M. Méhul</h3>
                     <div class="programme">
                         Overtures
                     </div>
@@ -381,7 +381,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">Paul Le Flem</div>
+                    <h3 class="artiste">Paul Le Flem</h3>
                     <div class="programme">
                     </div>
                 </li>
@@ -391,7 +391,7 @@ Template Name: Page Discographie
                     <div class="visuel_produit">
                         <img src="<? bloginfo('template_url') ?>/library/images/pierre-tchernia-–-histoire-et-babar-le-petit-elephant-et-pierre-et-le-loup.png" alt="Pierre-et-le-Loup">
                     </div>
-                    <div class="artiste">Pierre Tchernia</div>
+                    <h3 class="artiste">Pierre Tchernia</h3>
                     <div class="programme">
                        Histoire de Babar, le petit éléphant<br>
                        Et Pierre et Loup
@@ -403,7 +403,7 @@ Template Name: Page Discographie
                     <div class="visuel_produit">
                         <img src="<? bloginfo('template_url') ?>/library/images/ravel-–-respighi-–-bartok--j-strauss-–-schoenberg-–-defalla.strauss-–-schoenberg-–-defalla.png" alt="Orchestre de Bretagne">
                     </div>
-                    <div class="artiste">Orchestre de Bretagne</div>
+                    <h3 class="artiste">Orchestre de Bretagne</h3>
                     <div class="programme">
                        Ravel <br>
                         Respighi <br>Bartok / J. Strauss <br>
@@ -420,7 +420,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">Joseph-Guy Ropartz</div>
+                    <h3 class="artiste">Joseph-Guy Ropartz</h3>
                     <div class="programme">
                         Pêcheur d'islande
                     </div>
@@ -431,7 +431,7 @@ Template Name: Page Discographie
                     <div class="visuel_produit">
                         <img src="<? bloginfo('template_url') ?>/library/images/tchaikovski_chopin_favrekahn.png" alt="Ropartz2">
                     </div>
-                    <div class="artiste">Joseph-Guy Ropartz</div>
+                    <h3 class="artiste">Joseph-Guy Ropartz</h3>
                     <div class="programme">
                         Tchaikovsky<br>
                         Chopin<br>
@@ -447,7 +447,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">Eric Tanguy</div>
+                    <h3 class="artiste">Eric Tanguy</h3>
                     <div class="programme">
                         Portrait XXI
                     </div>
@@ -461,7 +461,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">Henri Texier</div>
+                    <h3 class="artiste">Henri Texier</h3>
                     <div class="programme">
                         Azur Quintet <br>
                         String's Spirit
@@ -476,7 +476,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">Guillaume Sutre <br> Miguel Da Silva</div>
+                    <h3 class="artiste">Guillaume Sutre <br> Miguel Da Silva</h3>
                     <div class="programme">
                         Max Bruch
                     </div>
@@ -490,7 +490,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">Schumann Concerti</div>
+                    <h3 class="artiste">Schumann Concerti</h3>
                 </li>
 
 
@@ -498,7 +498,7 @@ Template Name: Page Discographie
                     <div class="visuel_produit">
                         <img src="<? bloginfo('template_url') ?>/library/images/tubby-le-tuba.png" alt="Tubby">
                     </div>
-                    <div class="artiste">Tubby le tuba</div>
+                    <h3 class="artiste">Tubby le tuba</h3>
                 </li>
 
 
@@ -509,7 +509,7 @@ Template Name: Page Discographie
                         <div class="spotify"></div>
                         <div class="close_spot"></div>
                     </div>
-                    <div class="artiste">Philippe Cuper</div>
+                    <h3 class="artiste">Philippe Cuper</h3>
                     <div class="programme">
                         Weber concertos
                     </div>

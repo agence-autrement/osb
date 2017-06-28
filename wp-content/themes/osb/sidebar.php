@@ -78,10 +78,11 @@
     <div class="sidebar_decouvrir__inner">
         <div>
             <ul>
-                <li><a href="<?php echo site_url('cote-orchestre') ?>/#recrutement">Recrutement</a></li>
+                <li><a href="<?php echo site_url('cote-orchestre') ?>">Côté Orchestre</a></li>
                 <li><a href="<?php echo site_url('cote-pratique') ?>">Côté Pratique</a></li>
                 <li><a href="<?php echo site_url('cote-orga') ?>">Côté Organisation</a></li>
                 <li><a href="<?php echo site_url('discographie') ?>">Discographie</a></li>
+                <li><a href="<?php echo site_url('cote-orchestre') ?>/#recrutement">Recrutement</a></li>
 <!--                <li><a href="--><?php //echo site_url('historique') ?><!--">Historique</a></li>-->
             </ul>
         </div>
@@ -113,11 +114,19 @@
             <a href="<?php echo site_url('abonnement') ?>" id="abonnement">s'abonner</a>
         </div>
         <div class="middle">
-            <div id="logo_sidebar"><a href="<? echo get_home_url(); ?>">OSB</a></div>
+            <div id="logo_sidebar">
+                <? if(is_front_page()){ ?>
+                    <h1><a href="<? echo get_home_url(); ?>">OSB</a></h1>
+                <? }else{ ?>
+
+                    <a href="<? echo get_home_url(); ?>">OSB</a>
+
+                <? } ?>
+            </div>
             <ul id="reseaux_sociaux">
-                <li><a target="_blank" href="https://www.facebook.com/orchestresymphoniquebretagne/"><img src="<? bloginfo('template_url') ?>/library/images/fb_h.svg" alt=""></a></li>
-                <li><a target="_blank" href="https://www.instagram.com/orchestresymphoniquedebretagne/"><img src="<? bloginfo('template_url') ?>/library/images/instagram_h.svg" alt=""></a></li>
-                <li><a target="_blank" href="https://twitter.com/l_osb"><img src="<? bloginfo('template_url') ?>/library/images/tw_h.svg" alt=""></a></li>
+                <li><a target="_blank" href="https://www.facebook.com/orchestresymphoniquebretagne/"><img src="<? bloginfo('template_url') ?>/library/images/fb_h.svg" alt="Facebook"></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/orchestresymphoniquedebretagne/"><img src="<? bloginfo('template_url') ?>/library/images/instagram_h.svg" alt="Instagram"></a></li>
+                <li><a target="_blank" href="https://twitter.com/l_osb"><img src="<? bloginfo('template_url') ?>/library/images/tw_h.svg" alt="Twitter"></a></li>
             </ul>
         </div>
         <div class="bot">

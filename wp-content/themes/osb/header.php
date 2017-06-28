@@ -38,21 +38,15 @@
 		<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/library/images/favicons/manifest.json">
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/favicons/ms-icon-144x144.png">
-		<meta name="theme-color" content="#ffffff »>
-
+		<meta name="theme-color" content="#ffffff">
+		<meta name="description" content="Site internet de l'Orchestre Symphonique de Bretagne. Retrouvez toutes les informations liées à l'Orchestre ainsi que tout le programme de la saison 2017-2018" />
 		<?php // typo  ?>
-		<link href="https://fonts.googleapis.com/css?family=Kanit:100,300,400,500,700" rel="stylesheet">
+		<link href="https//fonts.googleapis.com/css?family=Kanit:100,300,400,500,700" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500" rel="stylesheet">
-
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 		<?php // wordpress head functions ?>
-
 		<?php wp_head(); ?>
 		<?php // end of wordpress head ?>
-
-
-
-
 		<?php // drop Google Analytics Here ?>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -67,7 +61,7 @@
 		<?php // end analytics ?>
 	</head>
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
-	<a href="<?php echo site_url() ?>" class="logo-mobile"><img class="logo-mobile__img" src="<?php echo get_template_directory_uri(); ?>/library/images/osb_jaune.svg" alt=""></a>
+	<a href="<?php echo site_url() ?>" class="logo-mobile"><img class="logo-mobile__img" src="<?php echo get_template_directory_uri(); ?>/library/images/osb_jaune.svg" alt="Logo_OSB"></a>
 	<div class="hamburger-icon"><span></span></div>		<div class="hamburger-icon-desk is-opened"><span></span></div>		<div id="container">
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 				<div id="inner-header" class="wrap cf">

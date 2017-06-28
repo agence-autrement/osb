@@ -23,9 +23,6 @@ Template Name: Page Ressources Publiques
             </div>
         </div>
     </section>
-
-
-
     <section class="section-artistes">
         <div class="artistes__inner">
             <h2 class="artistes__title">// Les Biographies //</h2>

@@ -140,13 +140,6 @@ Template Name: Page Cote Pratique
             </div>
         </div>
     </section>
-
-
-
-
-
-
-
 </div>
 
 <?php get_footer(); ?>

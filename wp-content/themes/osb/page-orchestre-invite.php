@@ -17,10 +17,10 @@ Template Name: Page Orchestre Invité
                 </ul>
             </div>
 
-            <div class="title">
+            <h1 class="title">
                L'Opéra de Rennes <br>
                 &<span> l'OSB</span>
-            </div>
+            </h1>
 
             <div class="intro_text">
                 Partenaire de l’Opéra de Rennes, l’OSB s’associe en 2017-2018 à la représentation de quatre grandes œuvres lyriques, à retrouver tout au long de cette saison.
@@ -40,16 +40,16 @@ Template Name: Page Orchestre Invité
     <section class="content_right content_right--medecin">
         <div class="image_position">
             <div class="img_content">
-                <img src="<? bloginfo('template_url') ?>/library/images/medecin.jpg" alt="">
+                <img src="<? bloginfo('template_url') ?>/library/images/medecin.jpg" alt="le medecin malgré lui">
             </div>
         </div>
         <div class="contenu_grid">
             <div class="left_content" id="medecin">
-                <div class="titre_content">
+                <h2 class="titre_content">
                     Le médecin<br>
                     malgré lui
                     <span class="croix_rouge"></span>
-                </div>
+                </h2>
                 <div class="inscrire">
                     <div class="ligne_un">
                         <div class="date">Mardi 21 Novembre</div><span> // </span><div class="heure">20h00</div>
@@ -125,16 +125,16 @@ Template Name: Page Orchestre Invité
     <section class="content_left katia" id="katia">
         <div class="image_position">
             <div class="img_content">
-                <img src="<? bloginfo('template_url') ?>/library/images/kabanova.jpg" alt="">
+                <img src="<? bloginfo('template_url') ?>/library/images/kabanova.jpg" alt="Katia Kabanova">
             </div>
         </div>
         <div class="contenu_grid">
             <div class="left_content">
-                <div class="titre_content">
+                <h2 class="titre_content">
                     Katia<br>
                     Kabanova
                     <span class="croix_rouge"></span>
-                </div>
+                </h2>
                 <div class="inscrire">
                     <div class="ligne_un">
                         <div class="date">Lundi 5 Février</div><span> // </span><div class="heure">20h00</div>
@@ -203,10 +203,10 @@ Template Name: Page Orchestre Invité
     <section class="content_right nain" id="nain">
         <div class="contenu_grid">
             <div class="left_content">
-                <div class="titre_content">
+                <h2 class="titre_content">
                     Le Nain
                     <span class="croix_rouge"></span>
-                </div>
+                </h2>
                 <div class="inscrire">
                     <div class="ligne_un">
                         <div class="date">Dimanche 25 Mars</div><span> // </span><div class="heure">16h00</div>
@@ -263,10 +263,10 @@ Template Name: Page Orchestre Invité
     <section class="content_left last_opera" id="norma">
         <div class="contenu_grid">
             <div class="left_content">
-                <div class="titre_content">
+                <h2 class="titre_content">
                     Norma
                     <span class="croix_rouge"></span>
-                </div>
+                </h2>
                 <div class="inscrire">
                     <div class="ligne_un">
                         <div class="date">Lundi 28 Mai</div><span> // </span><div class="heure">20h00</div>

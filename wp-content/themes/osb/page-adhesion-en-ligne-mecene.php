@@ -11,7 +11,8 @@ Template Name: Page Adhesion en ligne mecene
 
     <section class="top_page_mecenat">
         <div class="contenu_grid">
-            <div class="title">Concerto, <br> <span>le cercle des amis<br>de l'OSB</span></div>
+
+            <h1 class="title">Concerto, <br> <span>le cercle des amis<br>de l'OSB</span></h1>
 
 
         </div>
@@ -21,7 +22,9 @@ Template Name: Page Adhesion en ligne mecene
         <div class="contenu_grid">
             <div class="form__inner">
                 <div class="form__title">
-                    // Adhésion en ligne //
+                    <h2>
+                        // Adhésion en ligne //
+                    </h2>
                 </div>
                 <div class="ami formule--text formule" id="mecene-txt">
                     <div class="encadre">60€ et plus</div>

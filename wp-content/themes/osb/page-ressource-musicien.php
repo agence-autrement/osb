@@ -15,7 +15,7 @@ Template Name: Page Ressource Musicien
     <div id="content">
         <section class="top_page_disco">
             <div class="contenu_grid">
-                <div class="abonne_plus_book">Ressources Musiciens</div>
+                <h1 class="abonne_plus_book">Ressources Musiciens</h1>
             </div>
         </section>
         <section class="section-musiciens" id="equipe">

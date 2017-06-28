@@ -11,7 +11,7 @@ Template Name: Page Adhesion en ligne ami
 
     <section class="top_page_mecenat">
         <div class="contenu_grid">
-            <div class="title">Concerto, <br> <span>le cercle des amis<br>de l'OSB</span></div>
+            <h1 class="title">Concerto, <br> <span>le cercle des amis<br>de l'OSB</span></h1>
             <p>Le calendrier des activités sera disponible sur<br> notre site web à partir de septembre 2017.
 
             <p>L’adhésion est valable de septembre 2017<br> à juin 2018.</p>

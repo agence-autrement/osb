@@ -7,7 +7,6 @@ Template Name: Page Cote Orchestre
 <?php get_sidebar(); ?>
 
 <div id="content">
-    <!--
     <section class="section-orch">
         <div class="contenu_grid">
 
@@ -76,10 +75,6 @@ Template Name: Page Cote Orchestre
                     <ul class="musiciens__dep__items musiciens__dep--first__items">
 
                         <li class="musiciens__dep__item">
-
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/grant_llewellyn.jpg"
-                                 alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Grant llewllyn
                             </h3>
@@ -101,9 +96,6 @@ Template Name: Page Cote Orchestre
                     <ul class="musiciens__dep__items">
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/anatole_karaev.png"
-                                 alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Anatoli Karaev
                             </h3>
@@ -111,9 +103,7 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/olivier_chauvet.png"
-                                 alt="">
+
                             <h3 class="musiciens__dep__item__title">
                                 Olivier Chauvet
                             </h3>
@@ -121,9 +111,7 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/nicolai_tsygankov.png"
-                                 alt="">
+
                             <h3 class="musiciens__dep__item__title">
                                 Nicolaï Tsygankov
                             </h3>
@@ -131,9 +119,7 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/thomas_presle.png"
-                                 alt="">
+
                             <h3 class="musiciens__dep__item__title">
                                 Thomas Presle
                             </h3>
@@ -141,9 +127,7 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/marie-laure_bescond.png"
-                                 alt="">
+
                             <h3 class="musiciens__dep__item__title">
                                 Marie-Laure Bescond
 
@@ -152,9 +136,6 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/pierre_coulaud.png"
-                                 alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Pierre Coulaud
 
@@ -164,9 +145,7 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/pascal_cocheril.png"
-                                 alt="">
+
                             <h3 class="musiciens__dep__item__title">
                                 Pascal Cocheril
 
@@ -176,9 +155,7 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/laurence_dhoosche.png"
-                                 alt="">
+
                             <h3 class="musiciens__dep__item__title">
                                 Laurence Dhoosche
 
@@ -188,9 +165,6 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/personne_floue.png"
-                                 alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Jocelyne Lemée
 
@@ -201,9 +175,6 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/aline-padiou.png"
-                                 alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Aline Padiou
 
@@ -212,9 +183,7 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/noelle_presle.png"
-                                 alt="">
+
                             <h3 class="musiciens__dep__item__title">
                                 Noëlle Presle
 
@@ -223,9 +192,7 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/nazan_tekinson.png"
-                                 alt="">
+
                             <h3 class="musiciens__dep__item__title">
                                 Esin-Nazan Tekinson
 
@@ -234,9 +201,7 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/virginie_thirot.png"
-                                 alt="">
+
                             <h3 class="musiciens__dep__item__title">
                                 Virginie Thirot
 
@@ -246,9 +211,7 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/anita_toussaint.png"
-                                 alt="">
+
                             <h3 class="musiciens__dep__item__title">
                                 Anita Toussaint
 
@@ -257,9 +220,7 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/kaito_shibata.png"
-                                 alt="">
+
                             <h3 class="musiciens__dep__item__title">
                                 Kaïto Shibata
 
@@ -284,9 +245,7 @@ Template Name: Page Cote Orchestre
                     <ul class="musiciens__dep__items">
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/cyrile_robert.png"
-                                 alt="">
+
                             <h3 class="musiciens__dep__item__title">
                                 Cyrile Robert
                             </h3>
@@ -294,9 +253,6 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/emmanuel_foucher.png"
-                                 alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Emmanuel Foucher
                             </h3>
@@ -304,9 +260,7 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/anne-marie_carbonnel.png"
-                                 alt="">
+
                             <h3 class="musiciens__dep__item__title">
                                 Anne-Marie Carbonnel
                             </h3>
@@ -314,9 +268,7 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/didier_lefebvre.png"
-                                 alt="">
+
                             <h3 class="musiciens__dep__item__title">
                                 Didier Lefebvre
                             </h3>
@@ -340,9 +292,7 @@ Template Name: Page Cote Orchestre
                     <ul class="musiciens__dep__items">
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/olivier_lacour.png"
-                                 alt="">
+
                             <h3 class="musiciens__dep__item__title">
                                 Olivier Lacour
                             </h3>
@@ -350,9 +300,7 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/personne_floue.png"
-                                 alt="">
+
                             <h3 class="musiciens__dep__item__title">
                                 Irène Clément
                             </h3>
@@ -360,9 +308,7 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/stephane_genay.png"
-                                 alt="">
+
                             <h3 class="musiciens__dep__item__title">
                                 Stéphane Genay
                             </h3>
@@ -370,9 +316,6 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/claire_martin-cocher.png"
-                                 alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Claire Martin-Cocher
                             </h3>
@@ -396,9 +339,6 @@ Template Name: Page Cote Orchestre
                     <ul class="musiciens__dep__items">
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/frederic_alcaraz.png"
-                                 alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Frédéric Alcaraz
                             </h3>
@@ -406,9 +346,6 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/camille_mokrani.png"
-                                 alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Camille Mokrani
                             </h3>
@@ -416,9 +353,6 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/manuel_jouen.png"
-                                 alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Manuel Jouen
                             </h3>
@@ -442,9 +376,6 @@ Template Name: Page Cote Orchestre
                     <ul class="musiciens__dep__items">
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/eric_bescond.png"
-                                 alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Eric Bescond
                             </h3>
@@ -452,9 +383,6 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/stella_daoues.png"
-                                 alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Stella Daouès
                             </h3>
@@ -478,9 +406,6 @@ Template Name: Page Cote Orchestre
                     <ul class="musiciens__dep__items">
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/laurent_dhoosche.png"
-                                 alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Laurent Dhoosche
                             </h3>
@@ -488,9 +413,6 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/irving_legros.png"
-                                 alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Irving Legros
                             </h3>
@@ -514,9 +436,6 @@ Template Name: Page Cote Orchestre
                     <ul class="musiciens__dep__items">
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/sonia_borhani.png"
-                                 alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Sonia Borhani
                             </h3>
@@ -524,9 +443,6 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/christine_fourrier.png"
-                                 alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Christine Fourrier
                             </h3>
@@ -550,9 +466,6 @@ Template Name: Page Cote Orchestre
                     <ul class="musiciens__dep__items">
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/marc_mouginot.png"
-                                 alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Marc Mouginot
                             </h3>
@@ -560,9 +473,6 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/pascal_thirot.png"
-                                 alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Pascal Thirot
                             </h3>
@@ -586,9 +496,6 @@ Template Name: Page Cote Orchestre
                     <ul class="musiciens__dep__items">
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/jean-michel_peresse.png"
-                                 alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Jean-Michel Péresse
                             </h3>
@@ -596,9 +503,6 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/vianney_prudhomme.png"
-                                 alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Vianney Prudhomme
                             </h3>
@@ -622,9 +526,6 @@ Template Name: Page Cote Orchestre
                     <ul class="musiciens__dep__items">
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/fabien_bollich.png"
-                                 alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Fabien Bollich
                             </h3>
@@ -632,9 +533,6 @@ Template Name: Page Cote Orchestre
 
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/stephane_michel.png"
-                                 alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Stéphane Michel
                             </h3>
@@ -658,9 +556,6 @@ Template Name: Page Cote Orchestre
                     <ul class="musiciens__dep__items">
                         <li class="musiciens__dep__item">
 
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/jean-pierre_petermann.png"
-                                 alt="">
                             <h3 class="musiciens__dep__item__title">
                                 Jean-Pierre Petermann
                             </h3>
@@ -675,7 +570,6 @@ Template Name: Page Cote Orchestre
 
         </div>
     </section>
-    -->
 
     <section class="section-orch-sep" id="recrutement">
         <div class="contenu_grid">

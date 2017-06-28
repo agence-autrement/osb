@@ -90,7 +90,11 @@ Template Name: Page d'Accueil
         <div class="contenu_grid">
 
             <div id="left_callto">
-                <div>Entreprises, soutenez l'Orchestre</div>
+                <div>
+                    <h2>
+                        Entreprises, soutenez l'Orchestre
+                    </h2>
+                </div>
                 <div>Rejoignez-nous !</div>
                 <a class="btn_savoir" href="<?php echo site_url('mecenat-pro') ?>">En savoir +</a>
                 <div id="slider_callto">
@@ -98,9 +102,9 @@ Template Name: Page d'Accueil
                     <span class="next_btn next_btn--home">right</span>
                     <div class="slideshow slideshow--home">
                         <ul class="slider">
-                            <li><img src="<?php bloginfo("template_url") ?>/library/images/bpo_fondation_entreprise.png" alt=""/></li>
-                            <li><img src="<?php bloginfo("template_url") ?>/library/images/sncf_fondation.png" alt=""/></li>
-                            <li><img src="<?php bloginfo("template_url") ?>/library/images/caisse_depot.jpg" alt=""/></li>
+                            <li><img src="<?php bloginfo("template_url") ?>/library/images/bpo_fondation_entreprise.png" alt="Banque Populaire de l'Ouest "/></li>
+                            <li><img src="<?php bloginfo("template_url") ?>/library/images/sncf_fondation.png" alt="SNCF fondation"/></li>
+                            <li><img src="<?php bloginfo("template_url") ?>/library/images/caisse_depot.jpg" alt="Caisse dépôt"/></li>
                         </ul>
                     </div>
                 </div>
@@ -113,7 +117,11 @@ Template Name: Page d'Accueil
             <div id="first_article">
                 <div class="first_article_thumbnail"></div>
                 <div class="first_article_content">
-                    <div class="titre_article">+ Saison Piccolo</div>
+                    <div class="titre_article">
+                        <h3>
+                            + Saison Piccolo
+                        </h3>
+                    </div>
                     <div class="extrait_1">
                         Piccolo, ce sont des concerts conçus pour toute la famille, adultes comme enfants à partir de 7
                         ans. Commenté par un musicien ou un comédien, qui donne des clés d’écoute de la musique, le
@@ -134,7 +142,11 @@ Template Name: Page d'Accueil
             <div id="second_article">
                 <div class="second_article_thumbnail"></div>
                 <div class="second_article_content">
-                    <div class="titre_article">+ Les Jacobins</div>
+                    <div class="titre_article">
+                        <h3>
+                            + Les Jacobins
+                        </h3>
+                    </div>
                     <div class="extrait_1">
                         La première pierre du Couvent des Jacobins est posée en 1369, dans ce qui est alors le Faubourg Saint Malo, [...]
                     </div>

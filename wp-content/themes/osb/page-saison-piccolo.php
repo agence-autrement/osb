@@ -18,9 +18,9 @@ Template Name: Page Saison Piccolo
                         <li><a href="#piccolino">Piccolino</a></li>
                     </ul>
                 </div>
-            <div class="title">
+            <h1 class="title">
                 Concerts<span> Piccolo</span>
-            </div>
+            </h1>
             <div class="tag">
                 <div class="btn_red"><a href="###">Tarif unique à 5€</a></div>
                 <div class="btn_savoir_plus"><a href="#more">En savoir +</a></div>
@@ -44,17 +44,17 @@ Template Name: Page Saison Piccolo
     <section class="content_right"  id="nouveau_monde">
         <div class="image_position">
             <div class="img_content">
-                <img src="<? bloginfo('template_url') ?>/library/images/nouveaumonde.jpg" alt="">
+                <img src="<? bloginfo('template_url') ?>/library/images/nouveaumonde.jpg" alt="Nouveau Monde">
             </div>
         </div>
         <div class="contenu_grid">
             <div class="left_content">
-                <div class="titre_content">
+                <h2 class="titre_content">
                     Tout un<br>
                     nouveau<br>
                     monde
                     <span class="croix_rouge"></span>
-                </div>
+                </h2>
             </div>
             <div class="right_content">
                 <span class="croix_noir"></span>
@@ -88,12 +88,12 @@ Template Name: Page Saison Piccolo
     <section class="content_left katia" id="leopard">
         <div class="contenu_grid">
             <div class="left_content">
-                <div class="titre_content">
+                <h2 class="titre_content">
                     Le Léopard et<br>
                     le Chasseur
                     <span class="croix_rouge"></span>
-                </div>
-                <img src="<? bloginfo('template_url') ?>/library/images/le-leopard-et-le-chasseur.jpg" alt="">
+                </h2>
+                <img src="<? bloginfo('template_url') ?>/library/images/le-leopard-et-le-chasseur.jpg" alt="Leopard et Chasseur">
             </div>
             <div class="right_content">
                 <span class="croix_noir"></span>
@@ -128,12 +128,12 @@ Template Name: Page Saison Piccolo
     <section class="content_right" id="salzburg">
         <div class="contenu_grid">
             <div class="left_content">
-                <div class="titre_content">
+                <h2 class="titre_content">
                     De Salzburg à<br>
                     San Francisco
                     <span class="croix_rouge"></span>
-                </div>
-                <img src="<? bloginfo('template_url') ?>/library/images/gsj_salzburg.jpg" alt="">
+                </h2>
+                <img src="<? bloginfo('template_url') ?>/library/images/gsj_salzburg.jpg" alt="Salzburg a San Francisco">
             </div>
             <div class="right_content">
                 <span class="croix_noir"></span>
@@ -170,12 +170,12 @@ Template Name: Page Saison Piccolo
     <section class="content_left" id="cinema">
         <div class="contenu_grid">
             <div class="left_content">
-                <div class="titre_content">
+                <h2 class="titre_content">
                     La musique fait<br>
                     Son cinéma
                     <span class="croix_rouge"></span>
-                </div>
-                <img src="<? bloginfo('template_url') ?>/library/images/musique_fait_son_cinema_korcia.jpg" alt="">
+                </h2>
+                <img src="<? bloginfo('template_url') ?>/library/images/musique_fait_son_cinema_korcia.jpg" alt="Musique fait son cinema">
             </div>
             <div class="right_content">
                 <span class="croix_noir"></span>
@@ -209,13 +209,13 @@ Template Name: Page Saison Piccolo
     <section class="special_content" style="background-image: url('<? bloginfo('template_url') ?>/library/images/bg-piccolino.jpg')" id="piccolino">
         <div class="contenu_grid">
             <div class="left_content">
-                <div class="titre_content">
+                <h2 class="titre_content">
                     Piccolino<br>
                     un concert pour<br>
                     les tout-petits<br>
                     de 3 à 6 ans
                     <span class="croix_rouge"></span>
-                </div>
+                </h2>
             </div>
             <div class="right_content">
                 <span class="croix_noir"></span>
