@@ -265,7 +265,8 @@ jQuery(document).ready(function ($) {
     $('.hamburger-icon-desk').on('click', function () {
 
         $(this).hide();
-    })
+
+    });
 
 
     $("#bouton_sidebar").on("click", function () {
@@ -283,7 +284,7 @@ jQuery(document).ready(function ($) {
             }
         } else {
 
-            $('.hamburger-icon-desk').toggle('slow');
+            $('.hamburger-icon-desk').show('slow');
 
             if ($('.sidebar__all').hasClass('active')) {
                 $('.sidebar__all').removeClass('active');
@@ -318,7 +319,8 @@ jQuery(document).ready(function ($) {
         }
         else {
 
-            $('.hamburger-icon-desk').toggle('slow');
+            $('.hamburger-icon-desk').show('slow');
+
             if ($('.sidebar__all').hasClass('active')) {
 
                 $('.sidebar__all').removeClass('active');
@@ -351,7 +353,7 @@ jQuery(document).ready(function ($) {
             }
         } else {
 
-            $('.hamburger-icon-desk').toggle('slow');
+            $('.hamburger-icon-desk').show('slow');
 
             if ($('.sidebar__all').hasClass('active')) {
                 $('.sidebar__all').removeClass('active');
@@ -385,7 +387,7 @@ jQuery(document).ready(function ($) {
         }
 
         else {
-            $('.hamburger-icon-desk').toggle('slow');
+            $('.hamburger-icon-desk').show('slow');
 
             if ($('.sidebar__all').hasClass('active')) {
                 $('.sidebar__all').removeClass('active');
@@ -416,7 +418,7 @@ jQuery(document).ready(function ($) {
                 $('.footer').toggleClass('active');
             }
         } else {
-            $('.hamburger-icon-desk').toggle('slow');
+            $('.hamburger-icon-desk').show('slow');
 
             if ($('.sidebar__all').hasClass('active')) {
                 $('.sidebar__all').removeClass('active');
