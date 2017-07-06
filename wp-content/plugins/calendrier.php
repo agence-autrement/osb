@@ -124,9 +124,17 @@ function getInputByLieu()
     $the_query  = new WP_Query($args);
 
     if ( $the_query->have_posts() ) {
+
+
         $table  = array();
+
+
         while ($the_query->have_posts()) {
             $the_query->the_post();
+
+
+
+
             if( have_rows('representations') ):
                 while ( have_rows('representations') ) : the_row();
                    $departement = get_sub_field('departement');
@@ -136,6 +144,10 @@ function getInputByLieu()
                 // no rows found
             endif;
         };
+
+
+
+        
         $table = unique_multidim_array($table,'0');
         foreach($table as $table_un => $values){
             foreach($values as $value){

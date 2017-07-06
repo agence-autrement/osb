@@ -35,40 +35,97 @@ Template Name: Page Ressource Presses
     </section>
 -->
 
+
     <section class="section-musiciens" id="equipe">
-        <div class="contenu__grid">
-            <div class="musiciens__inner">
 
-                <div class="musiciens__dep musiciens__dep--first">
-                    <h2 class="musiciens__dep__title">
-                        Dossier Presse
+      <?
+         $args       =   array('post_type'       => 'ressource_presse',
+                               'posts_per_page'  => -1,
+                               'meta_key'        => 'type',
+                               'meta_value'       => 'communique_presse',
+                               'meta_compare'     => '==');
+         $the_query  = new WP_Query($args);
 
-                        <span class="musiciens__dep__title__cross musiciens__dep--first__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow musiciens__dep--first__title__arrow"><img
-                                src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
-                                alt=""></span>
-                    </h2>
-                    <span class="musiciens__dep__separator musiciens__dep--first__separator"></span>
-                    <ul class="musiciens__dep__items musiciens__dep--first__items">
-                        <li class="musiciens__dep__item">
-                            <a href="http://o-s-b.fr/wp-content/uploads/2017/06/Dossier-de-presse-2017-2018-vdef.pdf">
-                                <img class="musiciens__dep__item__img"
-                                     src="<?php echo get_template_directory_uri(); ?>/library/images/pdf.jpg"
-                                     alt="">
-                                <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">
-                                    Dossier de presse
-                                </h3>
-                                <h4 class="musiciens__dep__item__fct">
-                                    Saison 2015-2016
-                                </h4>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+      ?>
+      <? if ( $the_query->have_posts() ) { ?>
+        <div class="musiciens__inner">
+            <div class="musiciens__dep musiciens__dep--first">
+                <h2 class="musiciens__dep__title">
+                    Communiqué de Presse
+                    <span class="musiciens__dep__title__cross musiciens__dep--first__title__cross">+</span>
+                    <span class="musiciens__dep__title__arrow musiciens__dep--first__title__arrow"><img
+                          src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
+                          alt=""></span>
+                </h2>
+                <span class="musiciens__dep__separator musiciens__dep--first__separator"></span>
+                <ul class="musiciens__dep__items musiciens__dep--first__items">
+                    <? while (  $the_query->have_posts()) {
+                                $the_query->the_post();
+                    ?>
+                      <li class="musiciens__dep__item">
+                          <a href="<? the_field('fichier'); ?>">
+                              <img class="musiciens__dep__item__img"
+                                   src="<?php echo get_template_directory_uri(); ?>/library/images/pdf.jpg"
+                                   alt="">
+                              <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">
+                                  <? the_title(); ?>
+                              </h3>
+                              <h4 class="musiciens__dep__item__fct">
+                                  <? the_field('saison') ?>
+                              </h4>
+                          </a>
+                      </li>
+                    <? };?>
+                </ul>
             </div>
         </div>
-    </section>
+      <? }; ?>
 
+      <?
+         $args       =   array('post_type'       => 'ressource_presse',
+                               'posts_per_page'  => -1,
+                               'meta_key'        => 'type',
+                               'meta_value'       => 'dossier_presse',
+                               'meta_compare'     => '==');
+
+         $the_query  = new WP_Query($args);
+
+      ?>
+      <? if ( $the_query->have_posts() ) { ?>
+        <div class="musiciens__inner">
+            <div class="musiciens__dep musiciens__dep--first">
+                <h2 class="musiciens__dep__title">
+                    Dossier Presse
+                    <span class="musiciens__dep__title__cross musiciens__dep--first__title__cross">+</span>
+                    <span class="musiciens__dep__title__arrow musiciens__dep--first__title__arrow"><img
+                          src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
+                          alt=""></span>
+                </h2>
+                <span class="musiciens__dep__separator musiciens__dep--first__separator"></span>
+                <ul class="musiciens__dep__items musiciens__dep--first__items">
+                    <? while (  $the_query->have_posts()) {
+                                $the_query->the_post();
+                    ?>
+                      <li class="musiciens__dep__item">
+                          <a href="<? the_field('fichier'); ?>">
+                              <img class="musiciens__dep__item__img"
+                                   src="<?php echo get_template_directory_uri(); ?>/library/images/pdf.jpg"
+                                   alt="">
+                              <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">
+                                  <? the_title(); ?>
+                              </h3>
+                              <h4 class="musiciens__dep__item__fct">
+                                  <? the_field('saison') ?>
+                              </h4>
+                          </a>
+                      </li>
+                    <? };?>
+                </ul>
+            </div>
+        </div>
+      <? }; ?>
+
+    </section>
     <section class="contact">
         <div class="contenu_grid">
             <div class="btn_contact"><a href="###"> Nous Contacter</a></div>

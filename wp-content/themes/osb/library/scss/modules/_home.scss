@@ -39,8 +39,10 @@ LANDING
       padding: 0;
       margin: 0;
       li {
-        float: left;
         list-style-type: none;
+       // position: absolute;
+       // overflow: hidden;
+        top: 0;
         height: 100%;
         font-size: 35px;
         -webkit-background-size:cover;
