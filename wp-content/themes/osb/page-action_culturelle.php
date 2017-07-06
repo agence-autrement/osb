@@ -23,6 +23,9 @@ Template Name: Page Action Culturelle
                     <? the_field('titre_1'); ?><span> <? the_field('titre_2'); ?></span>
                 </h1>
             </div>
+
+
+            
             <div class="tag">
                 <? if( have_rows('boutons_rouges') ){ ?>
                     <? while ( have_rows('boutons_rouges') ) : the_row(); ?>
