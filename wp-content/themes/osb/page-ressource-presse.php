@@ -7,37 +7,13 @@ Template Name: Page Ressource Presses
 <?php get_header(); ?>
 <?php get_sidebar(); ?>
 <div id="content">
-
     <section class="top_page_disco">
         <div class="contenu_grid">
             <h1 class="abonne_plus_book">Presse</h1>
             <div class="btn_new">Communiqué de presse</div> + <div class="btn_new">Dossier de presse</div>
         </div>
     </section>
-<!--
     <section class="section-musiciens" id="equipe">
-        <div class="contenu__grid">
-            <div class="musiciens__inner">
-
-                <div class="musiciens__dep musiciens__dep--first">
-                    <h2 class="musiciens__dep__title">
-                        Communiqué de presse
-
-                        <span class="musiciens__dep__title__cross musiciens__dep--first__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow musiciens__dep--first__title__arrow"><img
-                                src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
-                                alt=""></span>
-                    </h2>
-                    <span class="musiciens__dep__separator musiciens__dep--first__separator"></span>
-                </div>
-            </div>
-        </div>
-    </section>
--->
-
-
-    <section class="section-musiciens" id="equipe">
-
       <?
          $args       =   array('post_type'       => 'ressource_presse',
                                'posts_per_page'  => -1,
@@ -45,7 +21,6 @@ Template Name: Page Ressource Presses
                                'meta_value'       => 'communique_presse',
                                'meta_compare'     => '==');
          $the_query  = new WP_Query($args);
-
       ?>
       <? if ( $the_query->have_posts() ) { ?>
         <div class="musiciens__inner">
@@ -80,7 +55,6 @@ Template Name: Page Ressource Presses
             </div>
         </div>
       <? }; ?>
-
       <?
          $args       =   array('post_type'       => 'ressource_presse',
                                'posts_per_page'  => -1,
@@ -124,14 +98,12 @@ Template Name: Page Ressource Presses
             </div>
         </div>
       <? }; ?>
-
     </section>
     <section class="contact">
         <div class="contenu_grid">
             <div class="btn_contact"><a href="###"> Nous Contacter</a></div>
         </div>
     </section>
-
 </div>
 
 <?php get_footer(); ?>

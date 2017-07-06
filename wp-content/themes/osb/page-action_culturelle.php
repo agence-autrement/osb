@@ -171,7 +171,7 @@ Template Name: Page Action Culturelle
             <? echo do_shortcode('[contact-form-7 id="240" title="Contact Form Concerts Scolaires"]'); ?>
         </div>
     </section>
--->
+
     <? if ( get_field('titre_parcours') ){ ?>
         <section class="parcours">
             <div class="contenu_grid">
