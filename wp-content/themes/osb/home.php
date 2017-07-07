@@ -13,7 +13,7 @@ Template Name: Page d'Accueil
                 <?
                 $table          = queryAllDate();
                 usort($table, "sortByDate");
-                $delete_if_less = date("Y-m-d");
+                $delete_if_less = date("Ymd");
                 $clear_date     = removeElementWithInferiorValue($table,'date_calendrier',$delete_if_less);
                 $sliced         = array_slice($clear_date, 0, 3);
 
@@ -74,7 +74,7 @@ Template Name: Page d'Accueil
             <ul class="slider_landing">
                 <li class="first">
                     <div class="content_slide">
-                        <a href="<? bloginfo('template_url') ?>/library/images/OSB_Brochure1718_BD_96.pdf"" class="download_home">Télécharger la brochure</a>
+                        <a href="<? bloginfo('template_url') ?>/library/images/OSB_Brochure1718_BD_96.pdf" class="download_home">Télécharger la brochure</a>
                         <a href="<? bloginfo('template_url') ?>/library/images/OSB_BULLETIN_ABONNEMENTS.pdf" class="download_home">Télécharger le bulletin d'abonnement</a>
                     </div>
                 </li>
@@ -167,4 +167,4 @@ Template Name: Page d'Accueil
 
 </div>
 
-<?php get_footer(); ?>
+<? get_footer(); ?>

@@ -10,13 +10,13 @@ Template Name: Page Action Culturelle
     <section class="top_page_action" style="background-image: url(<? the_field('visuel_de_la_page'); ?>);">
         <div class="contenu_grid">
             <? if( have_rows('actions') ){ ?>
-            <div class="index">
-                <ul>
-                    <? while ( have_rows('actions') ) : the_row(); ?>
-                        <li class="li_index"><? the_sub_field('titre'); ?></li>
-                    <? endwhile; ?>
-                </ul>
-            </div>
+              <div class="index">
+                  <ul>
+                      <? while ( have_rows('actions') ) : the_row(); ?>
+                          <li class="li_index"><? the_sub_field('titre'); ?></li>
+                      <? endwhile; ?>
+                  </ul>
+              </div>
             <? }; ?>
             <div class="title">
                 <h1>
@@ -53,6 +53,7 @@ Template Name: Page Action Culturelle
             </div>
         </section>
     <? }; ?>
+
     <? if ( have_rows('actions') ){ ?>
         <? while ( have_rows('actions') ) : the_row(); ?>
             <?
@@ -171,7 +172,7 @@ Template Name: Page Action Culturelle
             <? echo do_shortcode('[contact-form-7 id="240" title="Contact Form Concerts Scolaires"]'); ?>
         </div>
     </section>
-
+-->
     <? if ( get_field('titre_parcours') ){ ?>
         <section class="parcours">
             <div class="contenu_grid">

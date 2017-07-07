@@ -147,7 +147,7 @@ function getInputByLieu()
 
 
 
-        
+
         $table = unique_multidim_array($table,'0');
         foreach($table as $table_un => $values){
             foreach($values as $value){
@@ -517,7 +517,10 @@ function displayHomeEventSlide()
 function resultDateDefault()
 {
     $table          = queryAllDate();
-    $sliced         = array_slice($table, 0, 3);
+    usort($table, "sortByDate");
+    $delete_if_less = date("Ymd");
+    $clear_date     = removeElementWithInferiorValue($table,'date_calendrier',$delete_if_less);
+    $sliced         = array_slice($clear_date, 0, 3);
     displayAjax($sliced);
     wp_reset_postdata();
 };

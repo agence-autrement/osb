@@ -24,8 +24,8 @@
   ///////////////////////// CONTENU
 
   .croix_noir{
-    top: 0;
-    left: 30px;
+    top: -15px;
+    left: 5px;
   }
 
   .image_position{
@@ -111,20 +111,18 @@
         }
       }
     }
-    &.katia{
-      padding-top: 90px;
-      background-color: #D9D2C4;
+    padding-top: 90px;
+    background-color: #D9D2C4;
 
-      .inscrire{
-        border-color: #FFFFFF;
+    .inscrire{
+      border-color: #FFFFFF;
 
-        span{
-          color: #ffffff;
-        }
+      span{
+        color: #ffffff;
+      }
 
-        .btn_inscription{
-          border-color: #ffffff;
-        }
+      .btn_inscription{
+        border-color: #ffffff;
       }
     }
   }

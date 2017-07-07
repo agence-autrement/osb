@@ -9,64 +9,148 @@ Template Name: Page Conférence / Concert
 <div id="content">
 
 
-    <section class="top_page_action">
-        <div class="contenu_grid">
+  <section class="top_page_action">
+      <div class="contenu_grid">
+        <? if( have_rows('actions') ){ ?>
+          <div class="index">
+              <ul>
+                  <? while ( have_rows('actions') ) : the_row(); ?>
+                      <li class="li_index"><? the_sub_field('titre'); ?></li>
+                  <? endwhile; ?>
+              </ul>
+          </div>
+        <? }; ?>
 
-            <h1 class="title">
-                Conférence<br>
-                <span>Concert</span>
+        <div class="title">
+            <h1>
+                <? the_field('titre_1'); ?><br>
+                <span> <? the_field('titre_2'); ?></span>
             </h1>
-            <div class="tag">
-                <div class="btn_red"><a href="http://www.leschampslibres.fr/pied-de-page/contact/">L'heure musicale aux champs libres</a></div>
-                <div class="btn_savoir_plus"><a href="#more">En savoir +</a></div>
-            </div>
-            <div class="intro_text">
-                Cette saison, les Champs Libres accueillent l’Orchestre Symphonique de Bretagne pour une nouvelle session de conférence-concert. Quelques jours avant le concert, chefs, solistes et compositeurs viendront partager avec vous leur passion, leur enthousiasme. Ce moment, permettra d’aborder directement avec les interprètes, l’œuvre qu’ils nous offriront.            </div>
         </div>
-    </section>
+        <div class="tag">
+            <? if( have_rows('boutons_rouges') ){ ?>
+                <? while ( have_rows('boutons_rouges') ) : the_row(); ?>
+                    <div class="btn_red"><a href="<? the_sub_field('lien_du_bouton'); ?>"><? the_sub_field('texte_bouton'); ?></a></div>
+                <? endwhile; ?>
+                <? }; ?>
+            <div class="btn_savoir_plus"><a href="<? the_field('lien_en_savoir'); ?>">En savoir +</a></div>
+        </div>
+        <div class="intro_text">
+            <? the_field('texte_sous_le_titre'); ?>
+        </div>
+      </div>
+  </section>
 
-    <section class="content_right">
-        <div class="contenu_grid">
-            <div class="left_content">
-                <div class="titre_content">
-                    <h2>
-                        Rhiannon<br>
-                        Giddens
-                    </h2>
-                    <span class="croix_rouge"></span>
-                </div>
-                <img src="<? bloginfo('template_url') ?>/library/images/giddens_freedom.jpg" alt="">
-            </div>
-            <div class="right_content">
-                <span class="croix_noir"></span>
-                <div class="titre_right_text">Entre blues et ballades irlandaises</div>
-                <div class="txt_right_content">
-                    Ne manquez surtout pas Rhiannon Giddens, artiste incontournable de la saison 2017-2018. C’est à l’invitation de Grant Llewellyn que Rhiannon Giddens, double lauréate des Grammy Awards, viendra en Bretagne interpréter ses chansons, inspirées du gospel, du bluegrass rocailleux des montagnes, du folk américain et de la musique celte. Originaire de Caroline du Nord, Giddens, d’ascendance afro-américaine et irlandaise, s’est tournée vers un répertoire charriant avec lui les histoires douloureuses de l’esclavage, de la guerre civile, de la lutte pour les droits civiques, sans oublier les ballades irlandaises de ses ancêtres. Révélée par les frères Coen dans leur ﬁlm Inside Llewyn Davis, Rhiannon Giddens, qui joue du banjo et du ﬁddle, est surtout une chanteuse à la voix puissante, pleine de virtuosité et de lyrisme.
-                </div>
-                <div class="qui">
-                    <div class="titre_qui">
-                        <b>ORCHESTRE SYMPHONIQUE DE BRETAGNE</b>
-                    </div>
-                    <div class="qui_qui">
-                        <ul>
-                            <li>// Direction : Déborah Waldman</li>
-                            <li>// Chant, Banjo, Fiddle : Rhiannon Giddens</li>
-                            <li>// Animation : Arnaud Wassmer</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="inscrire">
-                    <div class="ligne_un">
-                        <div class="date">Vendredi 22 Septembre</div><span> // </span><div class="heure">12h30</div>
-                    </div>
-                    <div class="ligne_deux">
-                        <div class="ville">Rennes</div><span> // </span><div class="salle">Les Champs Libres</div>
-                    </div>
-                    <div class="btn_inscription"><a href="<?php echo site_url('spectacles') ?>/celtic-blues/#date">Réserver</a></div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <? if ( have_rows('actions') ){ ?>
+      <? while ( have_rows('actions') ) : the_row(); ?>
+          <?
+          $subject = get_sub_field('titre');
+          $search = " ";
+          $replace = '_';
+          $str = str_replace ($search , $replace ,$subject );
+          ?>
+          <? if ( get_sub_field('affichage') == 'special_content' ){ ?>
+              <section class="<? the_sub_field('affichage'); ?>" style="background-image: url('<? the_sub_field('visuel'); ?>')" id="<? echo $str; ?>">
+                  <div class="contenu_grid">
+                      <div class="left_content">
+                          <div class="titre_content">
+                              <h2>
+                                  <? the_sub_field('titre'); ?>
+                              </h2>
+                              <span class="croix_rouge"></span>
+                          </div>
+                      </div>
+                      <div class="right_content">
+                          <div class="titre_right_text">
+                              <? the_sub_field('compositeur')  ?>
+                              <span class="croix_noir"></span>
+                          </div>
+                          <div class="txt_right_content"><? the_sub_field('texte'); ?></div>
+
+                          <div class="qui">
+                              <div class="titre_qui">
+                                  <? the_sub_field('nom_de_lorchestre'); ?>
+                              </div>
+                              <? if ( have_rows('membres') ) { ?>
+                                  <div class="qui_qui">
+                                      <ul>
+                                          <? while ( have_rows('membres') ) : the_row(); ?>
+                                              <li>// <? the_sub_field('role') ?> : <? the_sub_field('nom') ?></li>
+                                          <? endwhile; ?>
+                                      </ul>
+                                  </div>
+                              <? } ?>
+                          </div>
+                          <? if ( have_rows('bouton_dinscription') ) { ?>
+                              <? while ( have_rows('bouton_dinscription') ) : the_row(); ?>
+                                  <div class="inscrire">
+                                      <div class="ligne_un">
+                                          <div class="date"><? the_sub_field('date') ?></div><span> // </span><div class="heure"><? the_sub_field('heure') ?></div>
+                                      </div>
+                                      <div class="ligne_deux">
+                                          <div class="ville"><? the_sub_field('ville') ?></div><span> // </span><div class="salle"><? the_sub_field('lieu') ?></div>
+                                      </div>
+                                      <div class="btn_inscription"><a href="#formulaire">Inscrire sa classe</a></div>
+                                  </div>
+                              <? endwhile; ?>
+                          <? } ?>
+                      </div>
+                  </div>
+              </section>
+
+          <? }else{ ?>
+              <section class="<? the_sub_field('affichage'); ?>" id="<? echo $str; ?>">
+                  <div class="contenu_grid">
+                      <div class="left_content">
+                          <div class="titre_content">
+                              <h2>
+                                  <? the_sub_field('titre'); ?>
+                              </h2>
+                              <span class="croix_rouge"></span>
+                          </div>
+                          <div class="visuel_content">
+                              <img src="<? the_sub_field('visuel'); ?>" alt="">
+                          </div>
+                      </div>
+                      <div class="right_content">
+                          <div class="titre_right_text">
+                              <? the_sub_field('compositeur')  ?>
+                              <span class="croix_noir"></span>
+                          </div>
+                          <div class="txt_right_content"><? the_sub_field('texte'); ?></div>
+
+                          <div class="qui">
+                              <div class="titre_qui">
+                                  <? the_sub_field('nom_de_lorchestre'); ?>
+                              </div>
+                              <? if ( have_rows('membres') ) { ?>
+                                  <div class="qui_qui">
+                                      <ul>
+                                          <? while ( have_rows('membres') ) : the_row(); ?>
+                                              <li>// <? the_sub_field('role') ?> : <? the_sub_field('nom') ?></li>
+                                          <? endwhile; ?>
+                                      </ul>
+                                  </div>
+                              <? } ?>
+                          </div>
+                          <? if ( have_rows('bouton_dinscription') ) { ?>
+                              <? while ( have_rows('bouton_dinscription') ) : the_row(); ?>
+                                  <div class="inscrire">
+                                      <div class="ligne_un">
+                                          <div class="date"><? the_sub_field('date') ?></div><span> // </span><div class="heure"><? the_sub_field('heure') ?></div>
+                                      </div>
+                                      <div class="ligne_deux">
+                                          <div class="ville"><? the_sub_field('ville') ?></div><span> // </span><div class="salle"><? the_sub_field('lieu') ?></div>
+                                      </div>
+                                      <div class="btn_inscription"><a href="#formulaire">Réserver</a></div>
+                                  </div>
+                              <? endwhile; ?>
+                          <? } ?>
+                  </div>
+              </section>
+          <? } ?>
+      <? endwhile; ?>
+  <? }; ?>
     <section class="contact">
         <div class="contenu_grid">
             <div class="btn_contact"><a href="http://www.leschampslibres.fr/pied-de-page/contact/" target="_blank" >Réserver</a></div>
