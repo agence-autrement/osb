@@ -35,327 +35,72 @@ Template Name: Page Cote orga
     </section>
 
 
-    <section class="section-musiciens" id="equipe">
-
-        <div class="contenu__grid">
-            <div class="musiciens__inner">
-
-                <div class="musiciens__dep musiciens__dep--first">
-                    <h2 class="musiciens__dep__title">
-                        Direction
-
-                        <span class="musiciens__dep__title__cross musiciens__dep--first__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow musiciens__dep--first__title__arrow"><img
-                                src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
-                                alt=""></span>
-                    </h2>
-                    <span class="musiciens__dep__separator musiciens__dep--first__separator"></span>
-
-                    <ul class="musiciens__dep__items musiciens__dep--first__items">
-
-                        <li class="musiciens__dep__item">
-
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/marc_feldman.png"
-                                 alt="">
-                            <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">
-                                Marc Feldman
-                            </h3>
-                            <h4 class="musiciens__dep__item__fct">
-                                Administrateur général
-                            </h4>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/nicolas_delvaux.png"
-                                 alt="">
-                            <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">
-                                Nicolas Delvaux
-                            </h3>
-                            <h4 class="musiciens__dep__item__fct">
-                                Administrateur général adjoint
-                            </h4>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/therese_jaslet.png"
-                                 alt="">
-                            <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">
-                                Thérèse Jaslet
-                            </h3>
-                            <h4 class="musiciens__dep__item__fct">
-                                Collaboratrice de direction
-                            </h4>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/grant_llewellyn.jpg"
-                                 alt="">
-                            <h3 class="musiciens__dep__item__title">
-                                Grant llewllyn
-                            </h3>
-                            <h4 class="musiciens__dep__item__fct">
-                                Directeur musical
-                            </h4>
-                        </li>
-
-
-
-                    </ul>
-                </div>
-
-                <div class="musiciens__dep">
-                    <h2 class="musiciens__dep__title">
-                        Administration et finances
-                        <span class="musiciens__dep__title__cross">+</span>
-              <span class="musiciens__dep__title__arrow"><img
-                      src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
-                      alt=""></span>
-                    </h2>
-                    <span class="musiciens__dep__separator"></span>
-                    <ul class="musiciens__dep__items">
-                        <li class="musiciens__dep__item">
-
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/pascaline_chauvin.png"
-                                 alt="">
-                            <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">
-                                Pascaline Chauvin
-                            </h3>
-                            <h4 class="musiciens__dep__item__fct">
-                                Comptable
-                            </h4>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/virginie_le-bars.png"
-                                 alt="">
-                            <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">
-                                Virginie Le Bars
-                            </h3>
-                            <h4 class="musiciens__dep__item__fct">
-                                Attachée d’administration
-                            </h4>
-                        </li>
-
-
-                    </ul>
-
-
-                </div>
-
-
-                <div class="musiciens__dep">
-                    <h2 class="musiciens__dep__title">
-                        Administration artistique et technique
-                        <span class="musiciens__dep__title__cross">+</span>
-                     <span class="musiciens__dep__title__arrow"><img
-                             src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
-                             alt=""></span>
-                    </h2>
-                    <span class="musiciens__dep__separator"></span>
-                    <ul class="musiciens__dep__items">
-                        <li class="musiciens__dep__item">
-
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/benedicte_bescond.png"
-                                 alt="">
-                            <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">
-                                Bénédicte Bescond
-                            </h3>
-                            <h4 class="musiciens__dep__item__fct">
-                                Administratrice de production
-                            </h4>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/florian_raymond.png"
-                                 alt="">
-                            <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">
-                                Florian Raymond
-                            </h3>
-                            <h4 class="musiciens__dep__item__fct">
-                                Bibliothécaire – Attaché de production
-                            </h4>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/mikael_guerin.png"
-                                 alt="">
-                            <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">
-                                Mikaël Guérin
-                            </h3>
-                            <h4 class="musiciens__dep__item__fct">
-                                Régisseur
-                            </h4>
-                        </li>
-
-
-                    </ul>
-
-
-                </div>
-
-                <div class="musiciens__dep">
-                    <h2 class="musiciens__dep__title">
-                        Action culturelle
-                        <span class="musiciens__dep__title__cross">+</span>
-                           <span class="musiciens__dep__title__arrow"><img
-                                   src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
-                                   alt=""></span>
-                    </h2>
-                    <span class="musiciens__dep__separator"></span>
-                    <ul class="musiciens__dep__items">
-                        <li class="musiciens__dep__item">
-
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/anne_boubila.png"
-                                 alt="">
-                            <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">
-                                Anne Boubila
-                            </h3>
-                            <h4 class="musiciens__dep__item__fct">
-                                Responsable de l’action culturelle
-                            </h4>
-                        </li>
-
-
-                    </ul>
-
-
-                </div>
-
-                <div class="musiciens__dep">
-                    <h2 class="musiciens__dep__title">
-                        Communication & Mécénat
-                        <span class="musiciens__dep__title__cross">+</span>
-                       <span class="musiciens__dep__title__arrow"><img
-                               src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
-                               alt=""></span>
-                    </h2>
-                    <span class="musiciens__dep__separator"></span>
-                    <ul class="musiciens__dep__items">
-
-                        <li class="musiciens__dep__item">
-
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/caroline_tith.png"
-                                 alt="">
-                            <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">
-                                Caroline Tith
-                            </h3>
-                            <h4 class="musiciens__dep__item__fct">
-                                Responsable du développement et des partenariats
-                            </h4>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/virginie_penhouet.png"
-                                 alt="">
-                            <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">
-                                Virginie Penhouët
-                            </h3>
-                            <h4 class="musiciens__dep__item__fct">
-                                Chargée de l’accueil-billetterie – développement des publics
-                            </h4>
-                        </li>
-                        <li class="musiciens__dep__item">
-
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/johan_dargel.png"
-                                 alt="">
-                            <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">
-                                Johan Dargel
-                            </h3>
-                            <h4 class="musiciens__dep__item__fct">
-                                Billetterie
-                            </h4>
-                        </li>
-                        <li class="musiciens__dep__item">
-
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/camille_ceysson.png"
-                                 alt="">
-                            <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">
-                                Camille Ceysson
-                            </h3>
-                            <h4 class="musiciens__dep__item__fct">
-                                Chargée de la communication, relations publiques, partenaires et médias
-                            </h4>
-                        </li>
-
-
-                        <li class="musiciens__dep__item">
-
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/personne_floue.png"
-                                 alt="">
-                            <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">
-                                Julie Mercier
-                            </h3>
-                            <h4 class="musiciens__dep__item__fct">
-                                Assistante action culturelle – communication
-                            </h4>
-                        </li>
-
-                    </ul>
-
-
-                </div>
-
-                <div class="musiciens__dep">
-                    <h2 class="musiciens__dep__title">
-                        Entretien
-                        <span class="musiciens__dep__title__cross">+</span>
-                          <span class="musiciens__dep__title__arrow"><img
-                                  src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
-                                  alt=""></span>
-                    </h2>
-                    <span class="musiciens__dep__separator"></span>
-                    <ul class="musiciens__dep__items">
-                        <li class="musiciens__dep__item">
-
-                            <img class="musiciens__dep__item__img"
-                                 src="<?php echo get_template_directory_uri(); ?>/library/images/marie-anne_hoang.png"
-                                 alt="">
-                            <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">
-                                Marie-Anne Hoang
-                            </h3>
-                            <h4 class="musiciens__dep__item__fct">
-
-                            </h4>
-                        </li>
-
-
-                    </ul>
-
-
-                </div>
-
-                <div class="musiciens__contact">
-                    <p class="musiciens__contact__title">Contact Administration</p>
-                    <div class="musiciens__contact__text"><a href="mailto:contact@o-s-b.fr">contact@o-s-b.fr</a> / <a
-                            href="tel:0299275285">02 99 275 285</a></div>
-                </div>
-
-
-            </div>
-
-        </div>
+    <?php if (have_rows('partie')){ ?>
+
+      <section class="section-musiciens" id="equipe">
+
+          <div class="contenu__grid">
+              <div class="musiciens__inner">
+
+                  <div class="musiciens__dep musiciens__dep">
+
+                      <? while ( have_rows('partie') ) : the_row(); ?>
+
+                        <h2 class="musiciens__dep__title">
+                            <? the_sub_field('titre') ?>
+                            <span class="musiciens__dep__title__cross musiciens__dep__title__cross">+</span>
+                            <span class="musiciens__dep__title__arrow musiciens__dep__title__arrow">
+                              <img src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg" alt="">
+                            </span>
+                        </h2>
+
+                        <?php if (have_rows('personne')){ ?>
+
+                          <span class="musiciens__dep__separator musiciens__dep__separator"></span>
+
+                          <ul class="musiciens__dep__items musiciens__dep__items">
+
+                            <? while ( have_rows('personne') ) : the_row(); ?>
+
+                              <li class="musiciens__dep__item">
+
+                                  <img class="musiciens__dep__item__img" src="<? the_sub_field('photo') ?>" alt="">
+                                  <h3 class="musiciens__dep__item__title musiciens__dep__item__title--orga">
+                                      <? the_sub_field('nom') ?>
+                                  </h3>
+                                  <h4 class="musiciens__dep__item__fct">
+                                      <? the_sub_field('role') ?>
+                                  </h4>
+                              </li>
+
+                            <? endwhile; ?>
+
+                          </ul>
+
+                        <?php }; ?>
+
+
+                      <? endwhile; ?>
+
+                  </div>
+
+              </div>
+          </div>
+      </section>
+
+    <?php }; ?>
+
+
+
+
+    <section>
+
+      <div class="musiciens__contact">
+        <p class="musiciens__contact__title">Contact Administration</p>
+        <div class="musiciens__contact__text"><a href="mailto:contact@o-s-b.fr">contact@o-s-b.fr</a> / <a
+                href="tel:0299275285">02 99 275 285</a></div>
+      </div>
+
     </section>
 
     <section class="section-orga-sep">

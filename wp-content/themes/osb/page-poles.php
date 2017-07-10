@@ -7,8 +7,7 @@ Template Name: Page poles
 <?php get_sidebar(); ?>
 <div id="content">
     <section class="top_page_action"
-             style="background-position :center center; background-size: cover; background-image:url('<?php echo get_template_directory_uri(); ?>/library/images/slide_poles.jpg"
-    ');">
+             style="background-position :center center; background-size: cover; background-image:url('<?php echo get_template_directory_uri(); ?>/library/images/slide_poles.jpg');">
     <div class="contenu_grid">
         <? if (have_rows('actions')) { ?>
             <div class="index">
@@ -35,141 +34,109 @@ Template Name: Page poles
     </div>
     </section>
 
-    <section class="poles poles--first" id="poles">
-        <div class="contenu_grid">
-            <div class="poles--first__left">
-                <img class="poles--first__img"
-                     src="<?php echo get_template_directory_uri(); ?>/library/images/le-leopard-et-le-chasseur.jpg" alt="">
 
 
-            </div>
+    <? if (have_rows('pole')) { ?>
 
-            <div class="poles--first__right">
-                <h2 class="poles--first__title">
-                    COMMUNAUTÉ DE COMMUNES AU PAYS DE LA ROCHE AUX FÉES (35)
-                    <span class="croix_noir"></span>
-                </h2>
-                <p class="poles--first__text">
-                    Autour du projet pédagogique du Hang’Art, établissement d’enseignements artistiques, et de son
-                    orchestre, le Symphopop, de la saison culturelle de la Communauté de communes, des établissements
-                    scolaires de secteur et du réseau des bibliothèques, un partenariat fort se construit depuis 2016
-                </p>
-                <p class="poles--first__text">
-                    Cette première année s’est déroulée au rythme de la création du spectacle musical « Le Léopard et le
-                    Chasseur » d’après une fable de Rudyard Kipling avec le comédien Richard Dubelski et un trio de
-                    l’Orchestre. De nombreuses classes ont suivi de près ce cheminement jusqu’à sa création en mai 2017
-                    à la salle Sévigné de Martigné Ferchaud. Pour cette deuxième saison c’est le Symphopop qui sera au
-                    cœur du Pôle et les musiciens de l’OSB accompagneront les jeunes musiciens en herbe jusqu’à ce
-                    qu’ils se présentent en première partie du concert de l’OSB dirigé par Aurélien Azan Zielinski à la
-                    salle du Gentieg de Janzé, le vendredi 13 avril 2018.
-                </p>
-            </div>
+      <? while ( have_rows('pole')) : the_row(); ?>
 
+        <? if(get_sub_field('contenu_droite__gauche') == 'gauche'){ ?>
 
-        </div>
-    </section>
-
-    <section class="poles-fiche">
-
-        <div class="contenu_grid">
-            <p class="section-event-title">// Voir la fiche spectacle //</p>
-
-
-            <div class="poles-fiche__item"
-                 style="background-image: url('<?php echo get_template_directory_uri(); ?>/library/images/poles_1.png')">
-                <div class="left_date">
-                    <div class="type type--blue">Création Jeune Public</div>
-                    <div class="titre">Le léopard et<br>le chasseur</div>
-                    <a href="http://osb.dev:8888/spectacles/beethoven-le-compagnon/" class="link_calendrier">EN SAVOIR
-                        +</a>
-                </div>
-                <div class="right_date">
-                    <div class="date_jours">
-                        18
+            <section class="poles poles--first" id="poles">
+                <div class="contenu_grid">
+                    <div class="poles--first__left">
+                        <img class="poles--first__img"
+                             src="<? the_sub_field('visuel') ?>" alt="">
                     </div>
-                    <div class="date_mois">nov</div>
-                    <div class="lieu">Rennes</div>
-                </div>
-
-                <a class="bot_date bot_date--blue"
-                   href="<?php echo site_url('le-leopard-et-le-chasseur') ?>" target="_blank">
-                    Réserver
-                </a>
-
-            </div>
-        </div>
-
-    </section>
-
-    <section class="poles poles--second">
-        <div class="contenu_grid">
-
-            <div class="poles--second__right">
-                <h2 class="poles--second__title">
-                    DINAN AGGLOMÉRATION (22)
-                    <span class="croix_noir"></span>
-                </h2>
-                <p class="poles--second__text">
-                    Après trois années riches de rencontres musicales autour de l’expérience Classe d’O, l’OSB, le
-                    Kiosque, Conservatoire à rayonnement Intercommunal, et le service culturel de l’agglomération ont
-                    souhaité poursuivre leur jumelage. C’est autour de l’écriture musicale de Benoît Menut, compositeur
-                    associé de l’OSB depuis 3 saisons que se poursuit notre compagnonnage. Les élèves du Kiosque et les
-                    enseignants vibreront tout au long de l’année au son d’une musique écrite spécialement pour eux par
-                    ce jeune compositeur talentueux honoré en 2016 du Grand Prix SACEM de la musique Symphonique. Il
-                    sera en résidence sur l’Agglomération pour plusieurs semaines pendant lesquelles il transmettra son
-                    goût de la musique et de la composition à trois classes situées dans trois écoles de Dinan
-                    Agglomération. De nombreux rendez-vous seront proposés au public dont vous serez informés tout au
-                    long de la saison. L’Orchestre se produira également à Léhon le 17 Mai 2018 pour un concert de
-                    musique de chambre avec la soliste associée à l’Orchestre Anne Gastinel et un programme dans lequel
-                    la musique Benoît Menut aura une place de choix.
-                </p>
-
-            </div>
-
-            <div class="poles--second__left">
-                <img class="poles--second__img"
-                     src="<?php echo get_template_directory_uri(); ?>/library/images/menut.jpg" alt="">
-
-
-            </div>
-
-
-        </div>
-    </section>
-
-
-    <section class="poles-fiche">
-
-        <div class="contenu_grid">
-            <p class="section-event-title">// Voir la fiche spectacle //</p>
-
-
-            <div class="poles-fiche__item"
-                 style="background-image: url('<?php echo get_template_directory_uri(); ?>/library/images/a.gastinel.jpg')">
-                <div class="left_date">
-                    <div class="type type--blue">Musique de chambre</div>
-                    <div class="titre">Carte blanche</div>
-                    <div class="artiste">avec Anne Gastinel</div>
-                    <a href="http://osb.dev:8888/spectacles/beethoven-le-compagnon/" class="link_calendrier">EN SAVOIR
-                        +</a>
-                </div>
-                <div class="right_date">
-                    <div class="date_jours">
-                        17
+                    <div class="poles--first__right">
+                        <h2 class="poles--first__title">
+                            <? the_sub_field('titre') ?>
+                            <span class="croix_noir"></span>
+                        </h2>
+                        <p class="poles--first__text">
+                            <? the_sub_field('texte') ?>
+                        </p>
                     </div>
-                    <div class="date_mois">Mai</div>
-                    <div class="lieu">Léhon</div>
                 </div>
+            </section>
+            <section class="poles-fiche">
+                <div class="contenu_grid">
+                    <p class="section-event-title">// Voir la fiche spectacle //</p>
+                    <div class="poles-fiche__item"
+                         style="background-image: url('<? the_sub_field('visuel_fiche') ?>')">
+                        <div class="left_date">
+                            <div class="type type--blue"><? the_sub_field('type_de_spectacle') ?></div>
+                            <div class="titre"><? the_sub_field('titre_fiche_spectacle') ?></div>
+                            <a href="<? the_sub_field('lien_en_savoir_plus') ?>" class="link_calendrier">EN SAVOIR
+                                +</a>
+                        </div>
+                        <div class="right_date">
+                            <div class="date_jours">
+                                <? the_sub_field('jour_fiche') ?>
+                            </div>
+                            <div class="date_mois"><? the_sub_field('mois_fiche') ?></div>
+                            <div class="lieu"><? the_sub_field('lieu_fiche') ?></div>
+                        </div>
 
-                <a class="bot_date bot_date--blue"
-                   href="<?php echo site_url('carte-blanche-anne-gastinel') ?>" target="_blank">
-                    Réserver
-                </a>
+                        <a class="bot_date bot_date--blue"
+                           href="<? the_sub_field('lien_reserver') ?>" target="_blank">
+                            Réserver
+                        </a>
+                    </div>
+                </div>
+            </section>
 
-            </div>
-        </div>
+          <? }else{ ?>
 
-    </section>
+            <section class="poles poles--second" id="poles">
+                <div class="contenu_grid">
+                    <div class="poles--second__left">
+                        <img class="poles--second__img"
+                             src="<? the_sub_field('visuel') ?>" alt="">
+                    </div>
+                    <div class="poles--second__right">
+                        <h2 class="poles--second__title">
+                            <? the_sub_field('titre') ?>
+                            <span class="croix_noir"></span>
+                        </h2>
+                        <p class="poles--second__text">
+                            <? the_sub_field('texte') ?>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="poles-fiche">
+                <div class="contenu_grid">
+                    <p class="section-event-title">// Voir la fiche spectacle //</p>
+                    <div class="poles-fiche__item"
+                         style="background-image: url('<? the_sub_field('visuel_fiche') ?>')">
+                        <div class="left_date">
+                            <div class="type type--blue"><? the_sub_field('type_de_spectacle') ?></div>
+                            <div class="titre"><? the_sub_field('titre_fiche_spectacle') ?></div>
+                            <a href="<? the_sub_field('lien_en_savoir_plus') ?>" class="link_calendrier">EN SAVOIR
+                                +</a>
+                        </div>
+                        <div class="right_date">
+                            <div class="date_jours">
+                                <? the_sub_field('jour_fiche') ?>
+                            </div>
+                            <div class="date_mois"><? the_sub_field('mois_fiche') ?></div>
+                            <div class="lieu"><? the_sub_field('lieu_fiche') ?></div>
+                        </div>
+
+                        <a class="bot_date bot_date--blue"
+                           href="<? the_sub_field('lien_reserver') ?>" target="_blank">
+                            Réserver
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+          <? }; ?>
+
+        <? endwhile; ?>
+
+    <?  }; ?>
 
     <section class="poles-more">
         <p class="poles-more__text">
@@ -179,4 +146,5 @@ Template Name: Page poles
     </section>
 
 </div>
+
 <?php get_footer(); ?>

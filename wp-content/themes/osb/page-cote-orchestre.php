@@ -56,520 +56,56 @@ Template Name: Page Cote Orchestre
         </div>
     </section>
 
-    <section class="section-musiciens" id="musiciens">
+    <?php if (have_rows('partie')){ ?>
 
-        <div class="contenu__grid">
-            <div class="musiciens__inner">
+      <section class="section-musiciens" id="musiciens">
 
-                <div class="musiciens__dep musiciens__dep--first">
-                    <h2 class="musiciens__dep__title">
-                        Directeur musical
+          <div class="contenu__grid">
+              <div class="musiciens__inner">
 
-                        <span class="musiciens__dep__title__cross musiciens__dep--first__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow musiciens__dep--first__title__arrow"> <img
-                                src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
-                                alt=""></span>
-                    </h2>
-                    <span class="musiciens__dep__separator musiciens__dep--first__separator"></span>
+                  <div class="musiciens__dep musiciens__dep">
 
-                    <ul class="musiciens__dep__items musiciens__dep--first__items">
+                      <? while ( have_rows('partie') ) : the_row(); ?>
 
-                        <li class="musiciens__dep__item">
-                            <h3 class="musiciens__dep__item__title">
-                                Grant llewllyn
-                            </h3>
-                        </li>
+                        <h2 class="musiciens__dep__title">
+                            <? the_sub_field('titre') ?>
+                            <span class="musiciens__dep__title__cross musiciens__dep__title__cross">+</span>
+                            <span class="musiciens__dep__title__arrow musiciens__dep__title__arrow">
+                              <img src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg" alt="">
+                            </span>
+                        </h2>
 
+                        <?php if (have_rows('personne')){ ?>
 
-                    </ul>
-                </div>
+                          <span class="musiciens__dep__separator musiciens__dep__separator"></span>
 
-                <div class="musiciens__dep">
-                    <h2 class="musiciens__dep__title">
-                        Violons
-                        <span class="musiciens__dep__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow"><img
-                                src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
-                                alt=""></span>
-                    </h2>
-                    <span class="musiciens__dep__separator"></span>
-                    <ul class="musiciens__dep__items">
-                        <li class="musiciens__dep__item">
+                          <ul class="musiciens__dep__items musiciens__dep__items">
 
-                            <h3 class="musiciens__dep__item__title">
-                                Anatoli Karaev
-                            </h3>
-                        </li>
+                            <? while ( have_rows('personne') ) : the_row(); ?>
 
-                        <li class="musiciens__dep__item">
+                              <li class="musiciens__dep__item">
+                                  <h3 class="musiciens__dep__item__title">
+                                      <? the_sub_field('nom') ?>
+                                  </h3>
+                              </li>
 
+                            <? endwhile; ?>
 
-                            <h3 class="musiciens__dep__item__title">
-                                Olivier Chauvet
-                            </h3>
-                        </li>
+                          </ul>
 
-                        <li class="musiciens__dep__item">
+                        <?php }; ?>
 
 
-                            <h3 class="musiciens__dep__item__title">
-                                Nicolaï Tsygankov
-                            </h3>
-                        </li>
+                      <? endwhile; ?>
 
-                        <li class="musiciens__dep__item">
+                  </div>
 
+              </div>
+          </div>
+      </section>
 
-                            <h3 class="musiciens__dep__item__title">
-                                Thomas Presle
-                            </h3>
-                        </li>
+    <?php }; ?>
 
-                        <li class="musiciens__dep__item">
-
-
-                            <h3 class="musiciens__dep__item__title">
-                                Marie-Laure Bescond
-
-                            </h3>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-                            <h3 class="musiciens__dep__item__title">
-                                Pierre Coulaud
-
-
-                            </h3>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-
-                            <h3 class="musiciens__dep__item__title">
-                                Pascal Cocheril
-
-
-                            </h3>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-
-                            <h3 class="musiciens__dep__item__title">
-                                Laurence Dhoosche
-
-
-                            </h3>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-                            <h3 class="musiciens__dep__item__title">
-                                Jocelyne Lemée
-
-                            </h3>
-                        </li>
-
-
-
-                        <li class="musiciens__dep__item">
-
-                            <h3 class="musiciens__dep__item__title">
-                                Aline Padiou
-
-                            </h3>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-
-                            <h3 class="musiciens__dep__item__title">
-                                Noëlle Presle
-
-                            </h3>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-
-                            <h3 class="musiciens__dep__item__title">
-                                Esin-Nazan Tekinson
-
-                            </h3>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-
-                            <h3 class="musiciens__dep__item__title">
-                                Virginie Thirot
-
-
-                            </h3>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-
-                            <h3 class="musiciens__dep__item__title">
-                                Anita Toussaint
-
-                            </h3>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-
-                            <h3 class="musiciens__dep__item__title">
-                                Kaïto Shibata
-
-                            </h3>
-                        </li>
-
-                    </ul>
-
-
-                </div>
-
-
-                <div class="musiciens__dep">
-                    <h2 class="musiciens__dep__title">
-                        Altos
-                        <span class="musiciens__dep__title__cross">+</span>
-                   <span class="musiciens__dep__title__arrow"><img
-                           src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
-                           alt=""></span>
-                    </h2>
-                    <span class="musiciens__dep__separator"></span>
-                    <ul class="musiciens__dep__items">
-                        <li class="musiciens__dep__item">
-
-
-                            <h3 class="musiciens__dep__item__title">
-                                Cyrile Robert
-                            </h3>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-                            <h3 class="musiciens__dep__item__title">
-                                Emmanuel Foucher
-                            </h3>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-
-                            <h3 class="musiciens__dep__item__title">
-                                Anne-Marie Carbonnel
-                            </h3>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-
-                            <h3 class="musiciens__dep__item__title">
-                                Didier Lefebvre
-                            </h3>
-                        </li>
-
-                    </ul>
-
-
-                </div>
-
-
-                <div class="musiciens__dep">
-                    <h2 class="musiciens__dep__title">
-                        Violoncelles
-                        <span class="musiciens__dep__title__cross">+</span>
-                   <span class="musiciens__dep__title__arrow"><img
-                           src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
-                           alt=""></span>
-                    </h2>
-                    <span class="musiciens__dep__separator"></span>
-                    <ul class="musiciens__dep__items">
-                        <li class="musiciens__dep__item">
-
-
-                            <h3 class="musiciens__dep__item__title">
-                                Olivier Lacour
-                            </h3>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-
-                            <h3 class="musiciens__dep__item__title">
-                                Irène Clément
-                            </h3>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-
-                            <h3 class="musiciens__dep__item__title">
-                                Stéphane Genay
-                            </h3>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-                            <h3 class="musiciens__dep__item__title">
-                                Claire Martin-Cocher
-                            </h3>
-                        </li>
-
-
-                    </ul>
-
-
-                </div>
-
-                <div class="musiciens__dep">
-                    <h2 class="musiciens__dep__title">
-                        Contrebasse
-                        <span class="musiciens__dep__title__cross">+</span>
-                <span class="musiciens__dep__title__arrow"><img
-                        src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
-                        alt=""></span>
-                    </h2>
-                    <span class="musiciens__dep__separator"></span>
-                    <ul class="musiciens__dep__items">
-                        <li class="musiciens__dep__item">
-
-                            <h3 class="musiciens__dep__item__title">
-                                Frédéric Alcaraz
-                            </h3>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-                            <h3 class="musiciens__dep__item__title">
-                                Camille Mokrani
-                            </h3>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-                            <h3 class="musiciens__dep__item__title">
-                                Manuel Jouen
-                            </h3>
-                        </li>
-
-
-                    </ul>
-
-
-                </div>
-
-                <div class="musiciens__dep">
-                    <h2 class="musiciens__dep__title">
-                        Flûtes
-                        <span class="musiciens__dep__title__cross">+</span>
-                      <span class="musiciens__dep__title__arrow"><img
-                              src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
-                              alt=""></span>
-                    </h2>
-                    <span class="musiciens__dep__separator"></span>
-                    <ul class="musiciens__dep__items">
-                        <li class="musiciens__dep__item">
-
-                            <h3 class="musiciens__dep__item__title">
-                                Eric Bescond
-                            </h3>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-                            <h3 class="musiciens__dep__item__title">
-                                Stella Daouès
-                            </h3>
-                        </li>
-
-
-                    </ul>
-
-
-                </div>
-
-                <div class="musiciens__dep">
-                    <h2 class="musiciens__dep__title">
-                        Hautbois
-                        <span class="musiciens__dep__title__cross">+</span>
-                        <span class="musiciens__dep__title__arrow"><img
-                                src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
-                                alt=""></span>
-                    </h2>
-                    <span class="musiciens__dep__separator"></span>
-                    <ul class="musiciens__dep__items">
-                        <li class="musiciens__dep__item">
-
-                            <h3 class="musiciens__dep__item__title">
-                                Laurent Dhoosche
-                            </h3>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-                            <h3 class="musiciens__dep__item__title">
-                                Irving Legros
-                            </h3>
-                        </li>
-
-
-                    </ul>
-
-
-                </div>
-
-                <div class="musiciens__dep">
-                    <h2 class="musiciens__dep__title">
-                        Clarinettes
-                        <span class="musiciens__dep__title__cross">+</span>
-                       <span class="musiciens__dep__title__arrow"><img
-                               src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
-                               alt=""></span>
-                    </h2>
-                    <span class="musiciens__dep__separator"></span>
-                    <ul class="musiciens__dep__items">
-                        <li class="musiciens__dep__item">
-
-                            <h3 class="musiciens__dep__item__title">
-                                Sonia Borhani
-                            </h3>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-                            <h3 class="musiciens__dep__item__title">
-                                Christine Fourrier
-                            </h3>
-                        </li>
-
-
-                    </ul>
-
-
-                </div>
-
-                <div class="musiciens__dep">
-                    <h2 class="musiciens__dep__title">
-                        Bassons
-                        <span class="musiciens__dep__title__cross">+</span>
-                      <span class="musiciens__dep__title__arrow"><img
-                              src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
-                              alt=""></span>
-                    </h2>
-                    <span class="musiciens__dep__separator"></span>
-                    <ul class="musiciens__dep__items">
-                        <li class="musiciens__dep__item">
-
-                            <h3 class="musiciens__dep__item__title">
-                                Marc Mouginot
-                            </h3>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-                            <h3 class="musiciens__dep__item__title">
-                                Pascal Thirot
-                            </h3>
-                        </li>
-
-
-                    </ul>
-
-
-                </div>
-
-                <div class="musiciens__dep">
-                    <h2 class="musiciens__dep__title">
-                        Cors
-                        <span class="musiciens__dep__title__cross">+</span>
-             <span class="musiciens__dep__title__arrow"><img
-                     src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
-                     alt=""></span>
-                    </h2>
-                    <span class="musiciens__dep__separator"></span>
-                    <ul class="musiciens__dep__items">
-                        <li class="musiciens__dep__item">
-
-                            <h3 class="musiciens__dep__item__title">
-                                Jean-Michel Péresse
-                            </h3>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-                            <h3 class="musiciens__dep__item__title">
-                                Vianney Prudhomme
-                            </h3>
-                        </li>
-
-
-                    </ul>
-
-
-                </div>
-
-                <div class="musiciens__dep">
-                    <h2 class="musiciens__dep__title">
-                        Trompettes
-                        <span class="musiciens__dep__title__cross">+</span>
-                    <span class="musiciens__dep__title__arrow"><img
-                            src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
-                            alt=""></span>
-                    </h2>
-                    <span class="musiciens__dep__separator"></span>
-                    <ul class="musiciens__dep__items">
-                        <li class="musiciens__dep__item">
-
-                            <h3 class="musiciens__dep__item__title">
-                                Fabien Bollich
-                            </h3>
-                        </li>
-
-                        <li class="musiciens__dep__item">
-
-                            <h3 class="musiciens__dep__item__title">
-                                Stéphane Michel
-                            </h3>
-                        </li>
-
-
-                    </ul>
-
-
-                </div>
-
-                <div class="musiciens__dep">
-                    <h2 class="musiciens__dep__title">
-                        Timbales
-                        <span class="musiciens__dep__title__cross">+</span>
-                       <span class="musiciens__dep__title__arrow"><img
-                               src="<?php echo get_template_directory_uri(); ?>/library/images/arrow-rouge.svg"
-                               alt=""></span>
-                    </h2>
-                    <span class="musiciens__dep__separator"></span>
-                    <ul class="musiciens__dep__items">
-                        <li class="musiciens__dep__item">
-
-                            <h3 class="musiciens__dep__item__title">
-                                Jean-Pierre Petermann
-                            </h3>
-                        </li>
-
-
-                    </ul>
-
-
-                </div>
-            </div>
-
-        </div>
-    </section>
 
     <section class="section-orch-sep" id="recrutement">
         <div class="contenu_grid">

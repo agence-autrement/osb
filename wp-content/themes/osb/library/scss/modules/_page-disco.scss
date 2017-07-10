@@ -60,9 +60,11 @@
       @include transition(0.3s);
     }
 
-
+    p{
+      margin-bottom: 0;
+    }
   }
-  
+
   .visuel_produit{
     height: 270px;
     width: 100%;

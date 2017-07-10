@@ -271,7 +271,7 @@
       font-size: 1.4rem;
       margin:3rem 0;
     }
-    
+
     &__btn {
       background-color: #fff;
       text-transform: uppercase;
@@ -315,6 +315,9 @@
     display: inline-block;
     vertical-align: middle;
     margin: 0 0.6rem;
+    img{
+      max-width: 150px;
+    }
   }
 }
 
@@ -434,5 +437,3 @@ only screen and (min-resolution: 2dppx) {
 
 @media print and (min-width: 5in) {
 }
-
-
