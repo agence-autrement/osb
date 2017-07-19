@@ -211,7 +211,7 @@ Template Name: Page Cote Orchestre
                         <div class="contenu_grid">
                             <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/2017-fiche-inscription-violon-super-solo.pdf" class="recru__doc">Fiche d'inscription violon supersoliste</a>
                             <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/2017-reglement-concours-violon-super-solo.pdf" class="recru__doc">Règlement concours violon supersoliste</a>
-                            <!-- <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/2017_Programme_concours_violon_super-solo.pdf" class="recru__doc">Programme concours violon supersoliste</a> -->
+                            <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/07/2017-programme-concours-violon-super-solo.pdf" class="recru__doc">Programme concours violon supersoliste</a>
                             <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/Traits_d-orchestre-Orchestral_excerpts-audition.pdf" class="recru__doc">Traits d'orchestre concours violon supersoliste</a>
                         </div>
                     </div>
@@ -226,7 +226,7 @@ Template Name: Page Cote Orchestre
                     <div class="contenu_grid">
                         <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/2017-application-form-konzertmeister.pdf" class="recru__doc">Application Form Konzertmeister</a>
                         <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/2017_notice-of-audition-konzertmeister.pdf" class="recru__doc">Notice of Audition Konzertmeister</a>
-                       <!-- <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/2017_Concertmaster_audition_program.pdf" class="recru__doc">Konzertmeister Audition program</a> -->
+                        <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/07/2017-concertmaster-audition-program.pdf" class="recru__doc">Konzertmeister Audition program</a>
                         <a target="_blank" href="http://o-s-b.fr/wp-content/uploads/2017/06/Traits_d-orchestre-Orchestral_excerpts-audition.pdf" class="recru__doc">Orchestral Excerpts</a>
                     </div>
                 </div>

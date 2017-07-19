@@ -46,7 +46,7 @@ Template Name: Page Ressources Publiques
                 </h2>
                 <ul class="artistes__dep__cities">
                     <? while (  $the_query->have_posts()) { $the_query->the_post(); ?>
-                        <a class="artistes__dep__city artistes__dep__city--line" href="<?php echo site_url('angelique-kidjo') ?>">
+                        <a class="artistes__dep__city artistes__dep__city--line" href="<?php the_permalink(); ?>">
                             <li> <div class="artistes__dep__city__inner"><? the_title(); ?></div></li>
                         </a>
                     <? };?>
@@ -74,7 +74,7 @@ Template Name: Page Ressources Publiques
                 </h2>
                 <ul class="artistes__dep__cities">
                     <? while (  $the_query->have_posts()) { $the_query->the_post(); ?>
-                        <a class="artistes__dep__city artistes__dep__city--line" href="<?php echo site_url('angelique-kidjo') ?>">
+                        <a class="artistes__dep__city artistes__dep__city--line" href="<?php the_permalink(); ?>">
                             <li> <div class="artistes__dep__city__inner"><? the_title(); ?></div></li>
                         </a>
                     <? };?>

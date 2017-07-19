@@ -8,7 +8,8 @@
 								<li><a href="<?php echo site_url('jeune-public') ?>">Jeune Public</a></li>
 								<li><a href="<?php echo site_url('saison') ?>?type=musiq_de_chambre">Musique de chambre</a></li>
 <!--								<li><a href="--><?php //echo site_url('') ?><!--">Artiste Invité</a></li>-->
-								<li><a href="<?php echo site_url('orchestre-invite') ?>">OSB invité</a></li>
+								<li><a href="<?php echo site_url('orchestre-invite') ?>">OSB & Opéra de Rennes</a></li>
+								<li><a href="<?php echo site_url('artistes-associes') ?>">Artistes associés</a></li>
 							</ul>
 							<ul>
 								<li>Action Culturelle</li>
@@ -71,7 +72,7 @@
 					<div class="contenu_grid">
 						<div class="mentions">
 							<ul>
-								<li><a href="<?php echo site_url('mentions-legales') ?>">Mention légales</a></li>
+								<li><a href="<?php echo site_url('mentions-legales') ?>">Mentions légales</a></li>
 								<li>|</li>
 								<li><a href="<?php echo site_url('mentions-legales') ?>">Crédits</a></li>
 

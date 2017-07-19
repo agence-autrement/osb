@@ -204,6 +204,10 @@ Template Name: Page Artistes Associés
                     <span class="croix_rouge"></span>
                 </div>
                 <img src="<? bloginfo('template_url') ?>/library/images/menut.jpg" alt="Menut">
+                <div class="logo_sacem">
+                    <a href="https://www.sacem.fr/"><img src="<? bloginfo('template_url') ?>/library/images/sacem_blanc.svg" alt="sacem"></a>
+                    <img src="<? bloginfo('template_url') ?>/library/images/copie_prive.svg" alt="sacem">
+                </div>
             </div>
             <div class="right_content">
                 <span class="croix_noir"></span>

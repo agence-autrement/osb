@@ -56,7 +56,7 @@ Template Name: Page Discographie
                          <div class="programme">
                              <? the_field('titre'); ?>
                          </div>
-                         <div class="acheter"><a href="<? the_field('lien_boutique') ?>">Acheter</a></div>
+                         <div class="acheter"><a href="<? the_field('lien_boutique') ?>" target="_blank">Acheter</a></div>
                      </li>
                    <? };?>
                </ul>
@@ -100,7 +100,7 @@ Template Name: Page Discographie
                          <div class="programme">
                              <? the_field('titre'); ?>
                          </div>
-                         <div class="acheter"><a href="<? the_field('lien_boutique') ?>">Acheter</a></div>
+                         <div class="acheter"><a href="<? the_field('lien_boutique') ?>" target="_blank">Acheter</a></div>
                      </li>
                    <? };?>
                </ul>
