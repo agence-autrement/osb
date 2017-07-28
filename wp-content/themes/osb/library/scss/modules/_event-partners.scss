@@ -23,6 +23,7 @@
     overflow: hidden;
     width: 100%;
     &__img {
+      max-width: 205px;
     }
     &__text {
       font-family: $font2;
@@ -129,4 +130,3 @@ only screen and (min-resolution: 2dppx) {
 
 @media print and (min-width: 5in) {
 }
-

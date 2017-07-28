@@ -209,6 +209,15 @@ Event template
                                 <div class="event-focus__image"
                                      style="background-image: url('<?php echo $imgFocus['url']; ?>');">
                                 </div>
+                                <? $text_get = get_the_ID(); ?>
+
+                                <? if($text_get == '351') { ?>
+                                  <div class="logosacem">
+
+                                      <a href="https://www.sacem.fr/"><img src="<? bloginfo('template_url') ?>/library/images/sacem_noire.svg" alt=""></a>
+                                      <a href="https://www.sacem.fr/"><img src="<? bloginfo('template_url') ?>/library/images/copie_prive_noire.svg" alt=""></a>
+                                  </div>
+                                <? }; ?>
 
                             </div>
                             <div class="event-focus--right">
