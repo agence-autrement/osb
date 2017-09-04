@@ -102,9 +102,10 @@ Template Name: Page d'Accueil
                     <span class="next_btn next_btn--home">right</span>
                     <div class="slideshow slideshow--home">
                         <ul class="slider">
-                            <li><img src="<?php bloginfo("template_url") ?>/library/images/bpo_fondation_entreprise.png" alt="Banque Populaire de l'Ouest "/></li>
-                            <li><img src="<?php bloginfo("template_url") ?>/library/images/sncf_fondation.png" alt="SNCF fondation"/></li>
-                            <li><img src="<?php bloginfo("template_url") ?>/library/images/caisse_depot.jpg" alt="Caisse dépôt"/></li>
+                            <li><img src="<?php bloginfo("template_url") ?>/library/images/mecene1.png" alt="Banque Populaire de l'Ouest "/></li>
+                            <li><img src="<?php bloginfo("template_url") ?>/library/images/mecene2.png" alt="SNCF fondation"/></li>
+                            <li><img src="<?php bloginfo("template_url") ?>/library/images/mecene3.png" alt="Caisse dépôt"/></li>
+                            <li><img src="<?php bloginfo("template_url") ?>/library/images/mecene4.png" alt="Caisse dépôt"/></li>
                         </ul>
                     </div>
                 </div>

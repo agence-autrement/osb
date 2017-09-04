@@ -67,9 +67,6 @@ function removeElementWithValue($array, $key, $value)
     return $array;
 };
 
-
-
-
 ///////////////////////////////// Remove Value inferieur
 
 function removeElementWithInferiorValue($array, $key, $value)
@@ -82,18 +79,12 @@ function removeElementWithInferiorValue($array, $key, $value)
     return $array;
 };
 
-
-
-
 ///////////////////////////////// Tri par date
 
 function sortByDate($a,$b)
 {
     return ($a['date_calendrier'] <= $b['date_calendrier']) ? -1 : 1;
 };
-
-
-
 
 ///////////////////////////////// Array sans doublon
 
@@ -113,9 +104,6 @@ function unique_multidim_array($array, $key)
     return $temp_array;
 };
 
-
-
-
 ///////////////////////////////// Généré Input en remontant le CF lieu
 
 function getInputByLieu()
@@ -132,9 +120,6 @@ function getInputByLieu()
         while ($the_query->have_posts()) {
             $the_query->the_post();
 
-
-
-
             if( have_rows('representations') ):
                 while ( have_rows('representations') ) : the_row();
                    $departement = get_sub_field('departement');
@@ -144,9 +129,6 @@ function getInputByLieu()
                 // no rows found
             endif;
         };
-
-
-
 
         $table = unique_multidim_array($table,'0');
         foreach($table as $table_un => $values){
@@ -165,9 +147,6 @@ function getInputByLieu()
         wp_reset_postdata();
     };
 };
-
-
-
 
 ///////////////////////////////// WP_QUERY -> Query ALL DATE
 
@@ -194,9 +173,6 @@ function queryAllDate()
             $instruments_tag    = get_field('instruments_tag');
             $artistes_tag       = get_field('artistes_tag');
             $image_vignette     = get_field('image_vignette');
-
-
-
 
             if( have_rows('artistes') ){
 
@@ -249,7 +225,6 @@ function queryAllDate()
             };
 
         };
-
 
         usort($table, "sortByDate");
         return $table;
@@ -321,21 +296,17 @@ function displayPreFiltre()
     displayAjax($table);
 }
 
-
-
-
-
 ///////////////////////////////// display all date
 
 function displayAllDate()
 {
-    $table = queryAllDate();
-    displayAjax($table);
+    $table      = queryAllDate();
+    $date_event = date("Ymd");
+    $table_date = removeElementWithInferiorValue($table,'date_calendrier',$date_event);
+    //var_dump($table_date);
+    displayAjax($table_date);
     wp_reset_postdata();
 }
-
-
-
 
 ///////////////////////////////// WP_QUERY -> Spectacle
 
@@ -348,9 +319,6 @@ function queryPosts()
     return $table;
 
 };
-
-
-
 
 ///////////////////////////////// Affichage Les Essentiels
 
@@ -447,10 +415,6 @@ function queryEssentiels()
         return $table;
     };
 };
-
-
-
-
 
 function displayHomeEventSlide()
 {
@@ -2145,8 +2109,6 @@ function multiFilter()
 
 
     $count = count($clear_table_final);
-
-
 
     if($count == 0){
 

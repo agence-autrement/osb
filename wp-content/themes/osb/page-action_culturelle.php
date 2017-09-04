@@ -94,7 +94,7 @@ Template Name: Page Action Culturelle
                                     </div>
                                 <? } ?>
                             </div>
-                            <?/* if ( have_rows('bouton_dinscription') ) { ?>
+                            <? if ( have_rows('bouton_dinscription') ) { ?>
                                 <? while ( have_rows('bouton_dinscription') ) : the_row(); ?>
                                     <div class="inscrire">
                                         <div class="ligne_un">
@@ -103,10 +103,10 @@ Template Name: Page Action Culturelle
                                         <div class="ligne_deux">
                                             <div class="ville"><? the_sub_field('ville') ?></div><span> // </span><div class="salle"><? the_sub_field('lieu') ?></div>
                                         </div>
-                                        <div class="btn_inscription"><a href="#formulaire">Inscrire sa classe</a></div>
+                                        <div class="btn_inscription"><a href="#formulaire"><? the_sub_field('texte_du_bouton') ?></a></div>
                                     </div>
                                 <? endwhile; ?>
-                            <? }*/ ?>
+                            <? } ?>
                         </div>
                     </div>
                 </section>
@@ -154,7 +154,7 @@ Template Name: Page Action Culturelle
                                         <div class="ligne_deux">
                                             <div class="ville"><? the_sub_field('ville') ?></div><span> // </span><div class="salle"><? the_sub_field('lieu') ?></div>
                                         </div>
-                                        <div class="btn_inscription"><a href="###">Inscription à partir du 1 <sup>er</sup> Septembre 2017</a></div>
+                                        <div class="btn_inscription"><a href="#formulaire"><? the_sub_field('texte_du_bouton') ?></a></div>
                                     </div>
                                 <? endwhile; ?>
                             <? } ?>
@@ -165,14 +165,14 @@ Template Name: Page Action Culturelle
         <? endwhile; ?>
     <? }; ?>
     <? get_template_part('joinus'); ?>
-<!--
+
     <section class="formulaire" id="formulaire">
         <div class="contenu_grid">
             <div class="titre_formulaire">// Inscription //</div>
             <? echo do_shortcode('[contact-form-7 id="240" title="Contact Form Concerts Scolaires"]'); ?>
         </div>
     </section>
--->
+
     <? if ( get_field('titre_parcours') ){ ?>
         <section class="parcours">
             <div class="contenu_grid">

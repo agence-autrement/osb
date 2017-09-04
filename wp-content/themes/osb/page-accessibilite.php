@@ -43,7 +43,7 @@ Template Name: Page Accessibilite
                             Informations complémentaires dans le guide de l’accessibilité à la vie culturelle
                             rennaise.</p>
 
-
+                        <p><a href="###">Télécharger au format word.</a></p>
                     </div>
                 </div>
 

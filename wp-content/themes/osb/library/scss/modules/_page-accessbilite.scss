@@ -1,7 +1,5 @@
 .section-header-access {
   h1 {
-
-
     span {
       color: $color-6;
 
@@ -39,7 +37,11 @@
     margin: 0 1.1rem;
     position: relative;
     border: 2px solid #fff;
-
+    p{
+      a{
+        color: $color-6;
+      }
+    }
     &__inner {
       position: absolute;
       top: 50%;
@@ -89,7 +91,7 @@
   &__text {
     font-size:1.4rem;
     margin-bottom:0.7rem;
-    
+
     &--blue {
       color: $color-6;
       font-style: italic;
@@ -358,5 +360,3 @@ only screen and (min-resolution: 2dppx) {
 
 @media print and (min-width: 5in) {
 }
-
-

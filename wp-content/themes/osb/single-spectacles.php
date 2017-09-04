@@ -386,6 +386,24 @@ Event template
                     </div>
                 </section>
 
+                <?  if (have_rows('donateurs')): ?>
+                  <section class="donateurs">
+                    <div class="contenu_grid">
+                        <p class="event-media__title section-event-title white">
+                            // Donateurs //
+                        </p>
+
+                        <ul>
+                          <?  while (have_rows('donateurs')) : the_row(); ?>
+                              <li><? the_sub_field('donateur') ?></li>
+                          <?  endwhile; ?>
+                      </ul>
+                    </div>
+                  </section>
+                <? else : ?>
+
+                <? endif; ?>
+
 
                 <? get_template_part('vous-aimerez') ?>
 

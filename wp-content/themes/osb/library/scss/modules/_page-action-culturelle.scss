@@ -116,11 +116,11 @@
       padding-left: 30px;
       padding-top: 15px;
     }
-    
+
     .titre_right_text{
-      color: #FFFFFF;  
+      color: #FFFFFF;
     }
-    
+
     .txt_right_content{
       color: #FFFFFF;
     }
@@ -128,12 +128,12 @@
     .croix_noir{
       background-image: url('../images/croix_blanche.svg');
     }
-    
+
     .inscrire{
       color: #FFFFFF;
       background-color: #000000;
     }
-    
+
     .btn_inscription{
       color: #ED1E24;
     }
@@ -169,6 +169,16 @@
       border-radius: 0;
       font-size: 12px;
       padding: 9px;
+    }
+    textarea#projet{
+      border: none;
+      width: 96%;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      font-size: 12px;
+      padding: 9px;
+      background-color: #F5F5F3;
     }
   }
 

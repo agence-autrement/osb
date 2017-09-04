@@ -91,6 +91,23 @@
 
 }
 
+.donateurs{
+  background-color: $color-2;
+  padding: 35px;
+  .white{
+    color: white;
+  }
+  ul{
+    li{
+      width: 24.5%;
+      display: inline-block;
+      text-align: center;
+      margin-bottom: 15px;
+      color: white;
+    }
+  }
+}
+
 /******************************
 MEDIA QUERIES
 ******************************/
@@ -152,4 +169,3 @@ only screen and (min-resolution: 2dppx) {
 
 @media print and (min-width: 5in) {
 }
-
