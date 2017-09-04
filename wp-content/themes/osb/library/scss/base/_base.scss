@@ -526,7 +526,7 @@ table
     zoom: 1;
     &:before,
     &:after
-    {display: table; 
+    {display: table;
 
         content: '';
     }
@@ -550,6 +550,11 @@ span.amp
     background-size: 150px;
 }
 
+select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+}
 
 
 /**********************
